@@ -21,11 +21,13 @@
 .title {
   font-size: 4.5rem;
   font-weight: normal;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 
 .subtitle {
   font-size: 3.5rem;
-  font-weight:normal;
+  font-weight: normal;
 }
 
 .description a {
@@ -81,7 +83,7 @@
 }
 
 .card h2 {
-  font-weight: 600;
+  font-weight: normal;
   margin-bottom: 0.7rem;
   text-align: center;
 }
@@ -162,7 +164,7 @@
   }
 
   .card {
-    padding: 1rem 2.5rem;
+    padding: 3rem 2.5rem;
   }
 
   .card h2 {
@@ -186,7 +188,11 @@
     padding: 1rem;
   }
 
-  .description p,
+  .title {
+    padding-bottom: 12rem;            /*probably fix this*/
+  }
+
+ 
   .description div {
     display: flex;
     justify-content: center;

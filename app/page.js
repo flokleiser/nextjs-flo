@@ -9,7 +9,7 @@ export default function Home() {
       </h1>
       <h2 className={styles.subtitle}>
         Portfolio
-        </h2>
+      </h2>
       <div className={styles.description}>
 
       </div>
