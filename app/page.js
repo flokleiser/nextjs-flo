@@ -4,7 +4,14 @@ import styles from './page.module.css'
 export default function Home() {
   return (
     <main className={styles.main}>
+      <h1 className={styles.title}>
+        Florian Kleiser
+      </h1>
+      <h2 className={styles.subtitle}>
+        Portfolio
+        </h2>
       <div className={styles.description}>
+
       </div>
       <div className={styles.center}>
         {/* <Image
@@ -15,48 +22,43 @@ export default function Home() {
           height={37}
           priority
         /> */}
-        <h1>
-          Florian Kleiser, Portfolio
-        </h1>
+        
       </div>
 
       <div className={styles.grid}>
         <a
+          href='/skylands'
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Skylands<span>-&gt;</span>
+            Skylands
           </h2>
-          <p>Meta Quest 2 Game. Made with Unity</p>
         </a>
 
         <a
+          href='/creative-coding'
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Creative Coding<span>-&gt;</span>
+            Creative Coding
           </h2>
-          <p>Made with P5JS (JavaScript)</p>
         </a>
 
 
         <a
+          href = '/animations'
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
-            Animations<span>-&gt;</span>
+            Animations
           </h2>
-          <p>Made with Adobe After Effects</p>
         </a>
 
        
-        <a
+        {/* <a
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -67,10 +69,10 @@ export default function Home() {
           <p>
             Made using OnShape
           </p>
-        </a>
+        </a> */}
 
 
-        <a
+        {/* <a
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -81,7 +83,7 @@ export default function Home() {
           <p>
             A collection of Sketches
           </p>
-        </a>
+        </a> */}
       </div>
     </main>
   )

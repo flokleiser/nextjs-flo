@@ -18,6 +18,16 @@
   font-family: var(--font-mono);
 }
 
+.title {
+  font-size: 4.5rem;
+  font-weight: normal;
+}
+
+.subtitle {
+  font-size: 3.5rem;
+  font-weight:normal;
+}
+
 .description a {
   display: flex;
   justify-content: center;
@@ -41,10 +51,18 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(25%, auto));
+  grid-template-columns: repeat(3, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
 }
+
+/* .grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  max-width: 100%;
+  width: var(--max-width);
+} */
 
 .card {
   padding: 1rem 1.2rem;
@@ -62,6 +80,7 @@
 .card h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
+  text-align: center;
 }
 
 .card p {
@@ -70,6 +89,7 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
+  text-align: center;
 }
 
 .center {
