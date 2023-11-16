@@ -16,6 +16,10 @@ const navItems = [
     name: "Projects",
   },
   {
+    path: "/links",
+    name: "Links",
+  },
+  {
     path: "/skylands",
     name: "Skylands",
   },
