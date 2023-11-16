@@ -1,11 +1,11 @@
-To-Do/Ideas List:
+## To-Do/Ideas List:
 
-Navbar:
+## Navbar:
     -folders (projects -> creative-coding, skylands, etc)
 
-Page scrolling:
+## Page scrolling:
     -snap to specific points
     -"divide pages" into segments with that
 
-Videos/Gifs/Images:
+## Videos/Gifs/Images:
     -figure out how
