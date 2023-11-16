@@ -37,9 +37,7 @@ export default function Home() {
         </a>
 
         <a
-          // href='/creative-coding'
-          href = 'https://editor.p5js.org/flokleiser/sketches/1JskqsGtG'
-          target='_blank'
+          href = '/creative-coding'
           className={styles.card}
           rel="noopener noreferrer"
         >

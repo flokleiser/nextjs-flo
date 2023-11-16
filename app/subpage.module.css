@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
   min-height: 100vh;
 }
 
@@ -33,7 +32,9 @@
 .title2 {
   font-size: 2.5rem;
   font-weight: normal;
+  padding-bottom: 1rem;
 }
+
 .description a {
   display: flex;
   justify-content: center;

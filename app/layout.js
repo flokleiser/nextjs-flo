@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Assistant } from 'next/font/google'  
 import Navbar from './components/Navbar'
+import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
 const assistant = Assistant({ subsets: ['latin'] })
