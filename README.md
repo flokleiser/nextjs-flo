@@ -2,16 +2,23 @@
 
 ## Navbar:
     -folders (projects -> creative-coding, skylands, etc)
+    -Change animation to not look like shit
+    -Change background
 
 ## Page scrolling:
-    -snap to specific points
     -"divide pages" into segments with that
 
 ## Videos/Gifs/Images:
-    -figure out how
     -Add titles (for reference in portfolio)
 
 ## Links:
     -Add github links
     -gist embed (?)
-    -
+    -Portfolio Link (google drive)
+    -Check for "list" setting
+
+## Random things:
+    -Figure out page header displaying name (even when 'use client)
+
+## Projects:
+    -Add descriptions

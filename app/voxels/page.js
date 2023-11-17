@@ -1,15 +1,10 @@
 import styles from 'app/subpage.module.css'
 
-export const metadata = {
-    title: 'Links',
-    description: '-',
-  }
-
-export default function links() {
+export default function voxel() {
     return (
         <main className={styles.main}>
             <h1 className={styles.title}>
-              Links
+             Voxel Art 
             </h1>
         </main>
     )

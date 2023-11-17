@@ -32,19 +32,7 @@ export default function projects() {
             </h2>
             </a>
 
-            <a
-            href = '/animations'
-            className={styles.card}
-            rel="noopener noreferrer"
-            >
-            <h2>
-                Animations
-            </h2>
-            </a>
-            </div>
 
-
-            <div className={styles.grid}>
             <a
                 className={styles.card}
                 rel="noopener noreferrer"
@@ -64,6 +52,26 @@ export default function projects() {
                 Sketches
             </h2>
             </a> 
+            
+            <a
+            href = '/animations'
+            className={styles.card}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Animations
+            </h2>
+            </a>
+
+            <a
+            href = '/voxel'
+            className={styles.card}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Voxel Art
+            </h2>
+            </a>
       </div>
     </main>
     )
