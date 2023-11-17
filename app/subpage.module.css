@@ -38,6 +38,10 @@
     padding-bottom: 50vh;
 }
 
+.spacing2 {
+    padding-bottom: 10vh;
+}
+
 .description a {
   display: flex;
   justify-content: center;

@@ -33,13 +33,13 @@ export default function creativeCoding() {
   }, []);
     return (
         <main className={styles.main}>
-            <h1 className={styles.title2}>
+            {/* <h1 className={styles.title2}>
                Creative Coding
             </h1>
             <h1 className={styles.spacing}>
 
 
-            </h1>
+            </h1> */}
             {/* <iframe src="https://editor.p5js.org/flokleiser/full/1JskqsGtG" width="100%" height="850" style={{ border: '1px solid white' }}></iframe> */}
             <iframe
                 src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
@@ -48,7 +48,7 @@ export default function creativeCoding() {
                 allowFullScreen
                 style={{ border: '1px solid white' }}
             />
-            <h1 className={styles.spacing}>
+            <h1 className={styles.spacing2}>
             </h1>
         </main>
     )
