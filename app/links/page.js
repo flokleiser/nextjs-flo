@@ -11,6 +11,17 @@ export default function links() {
             <h1 className={styles.title}>
               Links
             </h1>
+            <div className={styles.subtitle}>
+                <p>
+                    -Github
+                </p>
+                <p>
+                    -Google Drive
+                </p>
+                <p>
+                    -Portfolio
+                </p>
+            </div>
         </main>
     )
 }
