@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 const assistant = Assistant({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Flo Portfolio',
+  title: 'Florian Kleiser - Home',
   description: '-',
 }
 

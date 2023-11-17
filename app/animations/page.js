@@ -4,7 +4,7 @@ export default function animations() {
     return (
         <main className={styles.main}>
            
-            <h1 className={styles.title2}>
+            <h1 className={styles.title}>
               Animations
             </h1>
            
