@@ -4,7 +4,8 @@ import styles from 'app/subpage.module.css'
 export const metadata = {
     title: 'Projects',
     description: '-',
-  }
+}
+
 export default function projects() {
     return (
         <main className={styles.main}>

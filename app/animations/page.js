@@ -1,5 +1,10 @@
 import styles from 'app/subpage.module.css'
 
+export const metadata = {
+    title: 'Animations',
+    description: '-',
+  }
+
 export default function animations() {
     return (
         <main className={styles.main}>

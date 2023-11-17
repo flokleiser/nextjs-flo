@@ -1,12 +1,13 @@
 'use client'
+import React from 'react';
 import { useState, useEffect } from 'react';
-import Image from 'next/image'
 import styles from 'app/subpage.module.css'
 
 
 export default function creativeCoding() {
   const [iframeHeight, setIframeHeight] = useState(0);
   const [iframeWidth, setIframeWidth] = useState(0);
+ 
 
   useEffect(() => {
     function handleResize() {
@@ -32,17 +33,13 @@ export default function creativeCoding() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  useEffect(() => {
+    document.title = 'Creative Coding';
+  }, []);
+
     
     return (
         <main className={styles.main}>
-            {/* <h1 className={styles.title2}>
-               Creative Coding
-            </h1>
-            <h1 className={styles.spacing}>
-
-
-            </h1> */}
-            {/* <iframe src="https://editor.p5js.org/flokleiser/full/1JskqsGtG" width="100%" height="850" style={{ border: '1px solid white' }}></iframe> */}
             <iframe
                 src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
                 width={iframeWidth}
