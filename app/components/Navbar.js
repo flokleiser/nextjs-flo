@@ -19,6 +19,10 @@ const navItems = [
     path: "/links",
     name: "Links",
   },
+  {
+    path: "/about",
+    name: "About",
+  },
 ];
 
 export default function Navbar() {
