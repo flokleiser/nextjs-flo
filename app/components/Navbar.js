@@ -19,18 +19,6 @@ const navItems = [
     path: "/links",
     name: "Links",
   },
-  {
-    path: "/skylands",
-    name: "Skylands",
-  },
-  {
-    path: "/creative-coding",
-    name: "Creative Coding",
-  },
-  {
-    path: "/animations",
-    name: "Animations",
-  },
 ];
 
 export default function Navbar() {

@@ -9,3 +9,9 @@
 
 ## Videos/Gifs/Images:
     -figure out how
+    -Add titles (for reference in portfolio)
+
+## Links:
+    -Add github links
+    -gist embed (?)
+    -
