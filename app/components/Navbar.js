@@ -28,10 +28,22 @@ const navItems = [
 export default function Navbar() {
   let pathname = usePathname() || "/";
 
+  const [showNavbar, setShowNavbar] = useState(false);
   const [hoveredPath, setHoveredPath] = useState(pathname);
-  
+
+  const toggleNavbarVisibility = () => {
+    setShowNavbar(!showNavbar);
+  };
+
   return (
     <div className="border border-stone-800/90 p-[0.4rem] mb-12 sticky top z-[100] bg-stone-900/80 backdrop-blur-md">
+       <button
+        className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 bg-stone-90/80"
+        onClick={toggleNavbarVisibility}
+      >
+        {showNavbar ? "Hide Menu" : "Show Menu"}
+      </button>
+      {showNavbar && (
       <nav className="flex 2 relative justify-start w-full z-[100]  ">
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
@@ -69,6 +81,7 @@ export default function Navbar() {
           );
         })}
       </nav>
+       )}
     </div>
   );
 }
