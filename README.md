@@ -16,6 +16,7 @@
     -gist embed (?)
     -Portfolio Link (google drive)
     -Check for "list" setting
+    -Add Icons
 
 ## Random things:
     -Figure out page header displaying name (even when 'use client)

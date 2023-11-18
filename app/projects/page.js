@@ -14,7 +14,7 @@ export default function projects() {
             </h1>
         <div className={styles.grid}>
             <a
-            href='/skylands'
+            href='/projects/skylands'
             className={styles.card}
             rel="noopener noreferrer"
             >
@@ -24,7 +24,7 @@ export default function projects() {
             </a>
 
             <a
-            href = '/creative-coding'
+            href = '/projects/creative-coding'
             className={styles.card}
             rel="noopener noreferrer"
             >
@@ -37,7 +37,7 @@ export default function projects() {
             <a
                 className={styles.card}
                 rel="noopener noreferrer"
-                href = '/cad'
+                href = '/projects/cad'
             >
             <h2>
                 CAD
@@ -46,7 +46,7 @@ export default function projects() {
 
             <a
             className={styles.card}
-            href = '/sketches'
+            href = '/projects/sketches'
             rel="noopener noreferrer"
             >
             <h2>
@@ -55,7 +55,7 @@ export default function projects() {
             </a> 
             
             <a
-            href = '/animations'
+            href = '/projects/animations'
             className={styles.card}
             rel="noopener noreferrer"
             >
@@ -65,7 +65,7 @@ export default function projects() {
             </a>
 
             <a
-            href = '/voxel'
+            href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
             >
