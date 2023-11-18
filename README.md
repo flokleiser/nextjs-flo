@@ -8,6 +8,8 @@
     -Change animation to not look like shit
     -Change background
 
+## Cards:
+    -Change Background of cards
 
 ## Page scrolling:
     -"divide pages" into segments with that

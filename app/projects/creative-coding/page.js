@@ -47,8 +47,10 @@ export default function creativeCoding() {
                 allowFullScreen
                 style={{ border: '1px solid white' }}
             />
-            <h1 className={styles.spacing2}>
+            <h1 className={styles.subtitle}>
+              Source Code on <a href="https://github.com/flokleiser/Rotations">Github</a>
             </h1>
+            
         </main>
     )
 }
