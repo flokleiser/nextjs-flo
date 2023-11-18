@@ -48,7 +48,7 @@ export default function creativeCoding() {
                 style={{ border: '1px solid white' }}
             />
             <h1 className={styles.subtitle}>
-              Source Code on <a href="https://github.com/flokleiser/Rotations">Github</a>
+              Source Code on <a href="https://github.com/flokleiser/Rotations" target="_blank">Github</a>
             </h1>
             
         </main>
