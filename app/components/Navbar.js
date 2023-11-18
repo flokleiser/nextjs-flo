@@ -38,19 +38,19 @@ export default function Navbar() {
 
 
   return (
-    <div className="border border-stone-800/90 p-[0.4rem] mb-12 sticky top z-[100] bg-stone-900/80 backdrop-blur-md">
-       
-       {/*menu button*/}
+    
+    
+    <div className="flex border border-stone-800/90 p-[0.4rem] mb-12 sticky top z-[100] bg-stone-900/80 backdrop-blur-md">
+    {/*menu button*/}
        <button
-        className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 bg-stone-500/20"
+        className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 bg-stone-500/50"
         onClick={toggleNavbarVisibility}
       >
-        {showNavbar ? "Menu" : "Menu"}
+        {showNavbar ? "Hide" : "Menu"}
       </button>
-
-
       {showNavbar && (
-      <nav className="flex 2 relative justify-start w-full z-[100]  ">
+        
+      <nav className="flex relative justify-start w-full z-[100]  ">
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
 
@@ -58,7 +58,7 @@ export default function Navbar() {
             <Link
               key={item.path}
               className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
-                isActive ? "text-zinc-100" : "text-zinc-500"
+                isActive ? "text-zinc-100" : "text-zinc-300"
               }`}
               data-active={isActive}
               href={item.path}
@@ -68,7 +68,7 @@ export default function Navbar() {
               <span>{item.name}</span>
               {item.path === hoveredPath && (
                 <motion.div
-                  className="absolute bottom-0 left-0 w-full h-0.5 bg-stone-500/20"
+                  className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                   layoutId="navbar"
                   aria-hidden="true"
                   style={{
@@ -76,9 +76,9 @@ export default function Navbar() {
                   }}
                   transition={{
                     type:"spring",
-                    bounce:0.25,
-                    stiffness:130,
-                    damping:9,
+                    bounce:0.1,
+                    stiffness:100,
+                    damping:11,
                     duration:0.5,
                   }}
                   />
