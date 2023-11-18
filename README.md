@@ -1,9 +1,13 @@
 ## To-Do/Ideas List:
 
 ## Navbar:
+    -Navbar toggle on/off
+    -Navbar icon
+    -Navbar change toggle from top to left
     -folders (projects -> creative-coding, skylands, etc)
     -Change animation to not look like shit
     -Change background
+
 
 ## Page scrolling:
     -"divide pages" into segments with that
