@@ -193,7 +193,12 @@
   }
 
   .title {
+    font-size: 2.5rem;
     padding-bottom: 2rem;            /*probably fix this*/
+  }
+
+  .subtitle {
+    font-size: 2rem;
   }
 
  
