@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { useState, useEffect } from 'react';
-import styles from 'app/subpage.module.css'
+import styles from 'app/page.module.css'
 
 
 export default function creativeCoding() {
