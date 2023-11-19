@@ -1,4 +1,4 @@
-## To-Do/Ideas List:
+# To-Do/Ideas List:
 
 ## Background:
     -Figure out colors                                          [ ]
