@@ -1,8 +1,7 @@
 # To-Do/Ideas List:
 
 ## Background:
-    -Figure out colors   
-    >Figure out colors                                      
+    - [ ] Figure out colors   
 
 ## Navbar:
     -Navbar toggle on/off
