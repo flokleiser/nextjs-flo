@@ -30,7 +30,7 @@ export default function animations() {
                 rel="noopener noreferrer"
                 >
                 <h2>
-                    Skateboarding Animations
+                    Skate Animations
                 </h2>
                 </a>
 

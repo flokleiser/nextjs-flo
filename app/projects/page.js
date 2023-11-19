@@ -18,8 +18,10 @@ export default function projects() {
             <a
            href='/projects/skylands'
            className={styles.card}
-           style={{ backgroundImage: 'url("/images/boat.png")' }}
-           rel="noopener noreferrer"
+           style={{ 
+                backgroundImage: 'url("/images/boat.png")'
+           }}
+                rel="noopener noreferrer"
             >
             <h2>
                 Skylands
@@ -52,7 +54,7 @@ export default function projects() {
             <a
             className={styles.card}
             href = '/projects/sketches'
-            style={{ backgroundImage: 'url("/images/BRW7440BB876FAE_002226_Part8-1.png")' }}
+            // style={{ backgroundImage: 'url("/images/BRW7440BB876FAE_002226_Part8-1.png")' }}
             rel="noopener noreferrer"
             >
             <h2>

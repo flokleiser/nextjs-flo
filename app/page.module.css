@@ -5,6 +5,7 @@
   align-items: center;
 }
 
+
 .description {
   display: inherit;
   justify-content: inherit;
@@ -74,14 +75,15 @@
 .card {
   padding: 4rem 2.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 5);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
+  background: rgba(var(--card-rgb), 0.1);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
   transition: transform 200ms, border 200ms;       
   background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  overflow: hidden;
 }
 
 .card span {
@@ -104,6 +106,7 @@
   max-width: 30ch;
   text-align: center;
 }
+
 
 .center {
   display: flex;
@@ -151,8 +154,8 @@
 @media (hover: hover) and (pointer: fine) {      
   .card:hover {
     transform: scale(1.05); 
-    /* background: rgba(var(--card-rgb), 0.1);    */
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);    
+    background-color: rgba(var(--card-rgb), 0.1);   
+    border: 1px solid rgba(var(--card-border-rgb), 15);    
   }
 
   .card:hover span {
