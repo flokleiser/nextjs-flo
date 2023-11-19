@@ -1,7 +1,8 @@
 # To-Do/Ideas List:
 
 ## Background:
-    - [ ] Figure out colors   
+    - [ ] test
+    -[] test
 
 ## Navbar:
     -Navbar toggle on/off
