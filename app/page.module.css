@@ -80,6 +80,16 @@
   transition: background 200ms, border 200ms;
 }
 
+.card2 {
+  padding: 4rem 2.2rem;
+  border-radius: var(--border-radius);
+  background-image: url('/public/images/boat.png');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
 .card span {
   display: inline-block;
   transition: transform 200ms;

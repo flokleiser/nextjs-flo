@@ -12,16 +12,19 @@ export default function projects() {
             <h1 className={styles.title}> 
             Projects
             </h1>
+
         <div className={styles.grid}>
+            
             <a
-            href='/projects/skylands'
-            className={styles.card}
-            rel="noopener noreferrer"
+           href='/projects/skylands'
+           className={styles.card2}
+           rel="noopener noreferrer"
             >
             <h2>
                 Skylands
             </h2>
             </a>
+
 
             <a
             href = '/projects/creative-coding'

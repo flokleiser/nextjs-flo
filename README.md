@@ -12,8 +12,9 @@
 - [x] Skate
 - [x] Train
 - [x] Music
-- [ ] Add descriptions
+- [ ] Add descriptions on cards
 - [ ] Figure out why Google Drive wont work for **some** videos
+- [ ] Decide on Layout when multiple videos per page
 
 #### Skylands
 - [x] Upload Video
@@ -52,6 +53,7 @@
 ### Cards:
 - [ ] Change Background of cards
 - [ ] Figure out individual backgrounds
+- [ ] Add Project descriptions
 
 ### Page scrolling:
 - [ ] "divide pages" into segments (p5js editor)
