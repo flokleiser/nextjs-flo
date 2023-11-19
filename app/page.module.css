@@ -80,16 +80,6 @@
   transition: background 200ms, border 200ms;
 }
 
-.card2 {
-  padding: 4rem 2.2rem;
-  border-radius: var(--border-radius);
-  background-image: url('/public/images/boat.png');
-  background-size: cover;
-  background-position: center;
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
 .card span {
   display: inline-block;
   transition: transform 200ms;
@@ -110,6 +100,35 @@
   text-align: center;
 }
 
+.card2 {
+  padding: 4rem 2.2rem;
+  border-radius: var(--border-radius);
+  background-image: url("/images/boat.png");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.card2 span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card2 h2 {
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.card2 p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  text-align: center;
+}
 
 .center {
   display: flex;
