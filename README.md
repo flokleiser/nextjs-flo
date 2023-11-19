@@ -1,5 +1,8 @@
 ## To-Do/Ideas List:
 
+## Background:
+    -Figure out colors                                          [ ]
+
 ## Navbar:
     -Navbar toggle on/off
     -Navbar icon
