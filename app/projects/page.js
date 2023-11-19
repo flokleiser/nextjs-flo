@@ -30,7 +30,7 @@ export default function projects() {
             <a
             href = '/projects/creative-coding'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/canvas-1301(t, half width screen) copy.jpg")' }}
+            style={{ backgroundImage: 'url("/images/cropped.png")' }}
             rel="noopener noreferrer"
             >
             <h2>
@@ -52,6 +52,7 @@ export default function projects() {
             <a
             className={styles.card}
             href = '/projects/sketches'
+            style={{ backgroundImage: 'url("/images/BRW7440BB876FAE_002226_Part8-1.png")' }}
             rel="noopener noreferrer"
             >
             <h2>

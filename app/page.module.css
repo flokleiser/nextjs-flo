@@ -74,9 +74,9 @@
 .card {
   padding: 4rem 2.2rem;
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
+  background: rgba(var(--card-rgb), 5);
   border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;       /*somethings wrong with this*/
+  transition: background 200ms, border 200ms;       
   background-size: cover;
   background-position: center;
   margin-bottom: 1rem;
@@ -128,23 +128,15 @@
   z-index: -1;
 }
 
-.center::before,
-.center::after {
-  content: '';
-  left: 50%;
-  position: absolute;
-  filter: blur(45px);
-  transform: translateZ(0);
-}
-
 .logo {
   position: relative;
 }
 /* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {      
   .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+    transform: scale(1.05); 
+    /* background: rgba(var(--card-rgb), 0.1);    */
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);    
   }
 
   .card:hover span {

@@ -53,11 +53,13 @@
 - [ ] Figure out gradient
 
 ### Cards:
-- [ ] Figure out how the hover works
+- [x] Figure out how the hover works
 - [ ] border around title text
 - [ ] Add spacing between cards
 - [ ] Change Background of cards
 - [x] Figure out individual backgrounds
+- [ ] Fix Background Creative Coding
+- [ ] Fix Background Animations
 - [ ] Add Project descriptions
 
 ### Page scrolling:
