@@ -1,31 +1,28 @@
 import styles from 'app/page.module.css'
 
 export const metadata = {
-    title: 'Other',
+    title: 'Music',
     description: '-',
   }
 
-export default function other() {
+export default function music() {
     return(
         <main className={styles.main}>
            
             <h1 className={styles.title}>
-              Various other animations
+              Animations to Music
             </h1>
-            <video 
-            src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
+
+            <video
+            src="https://drive.google.com/uc?id=16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug" controls>
             </video>
 
             <video
-            src="" controls>
+            src="https://drive.google.com/uc?id=17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH" controls>
             </video>
 
             <video
-            src="" controls>
-            </video>
-
-            <video
-            src="" controls>
+            src="https://drive.google.com/uc?id=1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV" controls>
             </video>    
         </main>
     )

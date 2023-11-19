@@ -6,8 +6,12 @@
 
 #### Animations:
 - [ ] Upload all animations
-    - maybe seperate pages
-- [ ] Add titles (for reference in portfolio)
+- [x] Kontakt
+- [x] Logo
+- [x] Plasticine
+- [ ] Skate
+- [x] Train
+- [x] Music
 - [ ] Add descriptions
 - [ ] Figure out why Google Drive wont work for **some** videos
 
