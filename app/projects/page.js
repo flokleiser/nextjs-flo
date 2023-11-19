@@ -18,6 +18,7 @@ export default function projects() {
             <a
            href='/projects/skylands'
            className={styles.card2}
+           style={{ backgroundImage: 'url("/images/boat.png")' }}
            rel="noopener noreferrer"
             >
             <h2>
@@ -28,7 +29,8 @@ export default function projects() {
 
             <a
             href = '/projects/creative-coding'
-            className={styles.card}
+            className={styles.card2}
+            style={{ backgroundImage: 'url("/images/canvas-1301(t, half width screen) copy.jpg")' }}
             rel="noopener noreferrer"
             >
             <h2>

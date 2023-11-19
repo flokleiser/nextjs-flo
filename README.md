@@ -27,9 +27,9 @@
 - [x] Github Link
 
 ### Links:
-- [ ] Google Drive Link
-- [ ] Portfolio Link (google drive)
-- [ ] Github Link
+- [x] Google Drive Link
+- [x] Portfolio Link (google drive)
+- [x] Github Link
 
 ## Less Priority (Visual/Layout)
 
@@ -51,15 +51,17 @@
 - [ ] Figure out gradient
 
 ### Cards:
+- [ ] Figure out how the hover works
+- [ ] Add spacing between cards
 - [ ] Change Background of cards
-- [ ] Figure out individual backgrounds
+- [x] Figure out individual backgrounds
 - [ ] Add Project descriptions
 
 ### Page scrolling:
 - [ ] "divide pages" into segments (p5js editor)
 
 ### Links:
-- [ ] Add github links
+- [x] Add github links
 - [ ] Check for "list" setting
 - [ ] Add Icons
 

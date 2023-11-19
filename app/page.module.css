@@ -103,12 +103,23 @@
 .card2 {
   padding: 4rem 2.2rem;
   border-radius: var(--border-radius);
-  background-image: url("/images/boat.png");
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
 }
+
+/* .card2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/boat.png");
+  opacity: 0.2; 
+  z-index: -1;
+} */
 
 .card2 span {
   display: inline-block;
