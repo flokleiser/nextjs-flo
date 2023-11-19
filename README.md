@@ -6,12 +6,14 @@
 
 #### Animations:
 - [ ] Upload all animations
+    - maybe seperate pages
 - [ ] Add titles (for reference in portfolio)
 - [ ] Add descriptions
 - [ ] Figure out why Google Drive wont work for **some** videos
 
 #### Skylands
 - [x] Upload Video
+- [x] Upload apk
 - [ ] Figure out why video wont work
 
 #### Creative-Coding
