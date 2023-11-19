@@ -39,6 +39,7 @@
 - [ ] Fix title not centered on mobile
 
 ### Navbar:
+- [ ] Figure out why it closes on animations
 - [x] Navbar toggle on/off
 - [ ] Navbar animation --> from the side
 - [ ] Navbar icon
@@ -53,6 +54,7 @@
 - [ ] Figure out gradient
 
 ### Cards:
+- [ ] Uniform card logos (maybe stylized)
 - [x] Figure out how the hover works
 - [ ] border around title text
 - [ ] Add spacing between cards
