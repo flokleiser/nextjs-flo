@@ -1,7 +1,28 @@
 # To-Do/Ideas List:
 
-## Structure
-- [ ] Figure out priority list
+## Top Priority (content)
+
+### Videos/Gifs/Images:
+
+#### Animations:
+- [ ] Upload all animations
+- [ ] Add titles (for reference in portfolio)
+- [ ] Add descriptions
+- [ ] Figure out why Google Drive wont work for **some** videos
+
+#### Skylands
+- [x] Upload Video
+- [ ] Figure out why video wont work
+
+#### Creative-Coding
+- [x] p5js editor
+- [ ] Gist embed code
+- [ ] Github Link
+
+### Links:
+- [ ] Portfolio Link (google drive)
+
+## Less Priority (Visual/Layout)
 
 ### General Website issues:
 - [ ] Figure out dark mode on other devices
@@ -27,14 +48,8 @@
 ### Page scrolling:
 - [ ] "divide pages" into segments (p5js editor)
 
-### Videos/Gifs/Images:
-- [ ] Add titles (for reference in portfolio)
-- [ ] Figure out why Google Drive wont work for **some** videos
-
 ### Links:
 - [ ] Add github links
-- [ ] Gist embed (?)
-- [ ] Portfolio Link (google drive)
 - [ ] Check for "list" setting
 - [ ] Add Icons
 
@@ -42,4 +57,9 @@
 - [x] Figure out page header displaying name
 
 ### Projects:
-- [ ] Add descriptions
+- [ ] Add CAD
+    - Onshape embedding
+- [ ] Add Sketches
+- [ ] Add Voxel art
+
+
