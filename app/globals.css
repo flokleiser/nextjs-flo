@@ -9,11 +9,9 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 255, 255, 255;
+  --foreground-rgb: 50, 50, 50;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-  --background-rgb: 50,50,50;
 
   --tile-start-rgb: 239, 245, 249;
   --tile-end-rgb: 228, 232, 233;
@@ -29,7 +27,8 @@
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
+  /* --card-rgb: 180, 185, 188; */
+  --card-rgb: 0, 0, 0;
   --card-border-rgb: 131, 134, 135;
 }
 
@@ -38,8 +37,8 @@
     /* BACKGROUND */
     
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 50, 50, 50;
-    --background-end-rgb: 50, 50, 50;
+    --background-start-rgb: 70, 70, 70;
+    --background-end-rgb: 20, 20, 20;
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
@@ -62,13 +61,13 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
+  background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb)); */
-    background: rgb(var(--background-rgb));
+    rgb(var(--background-start-rgb));
+    min-height: 100vh;
 }
 
 a {

@@ -23,6 +23,7 @@
 
 #### Creative-Coding
 - [x] p5js editor
+- [ ] codepen maybe
 - [ ] Gist embed code
 - [x] Github Link
 
@@ -47,6 +48,7 @@
 - [ ] Change background
 
 ### Background:
+- [ ] Gradient like github page
 - [ ] Change background
 - [ ] Figure out gradient
 

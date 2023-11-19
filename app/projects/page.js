@@ -17,7 +17,7 @@ export default function projects() {
             
             <a
            href='/projects/skylands'
-           className={styles.card2}
+           className={styles.card}
            style={{ backgroundImage: 'url("/images/boat.png")' }}
            rel="noopener noreferrer"
             >
@@ -29,7 +29,7 @@ export default function projects() {
 
             <a
             href = '/projects/creative-coding'
-            className={styles.card2}
+            className={styles.card}
             style={{ backgroundImage: 'url("/images/canvas-1301(t, half width screen) copy.jpg")' }}
             rel="noopener noreferrer"
             >
@@ -38,14 +38,14 @@ export default function projects() {
             </h2>
             </a>
 
-
             <a
-                className={styles.card}
-                rel="noopener noreferrer"
-                href = '/projects/cad'
+            href = '/projects/animations'
+            className={styles.card}
+            style={{ backgroundImage: 'url("/images/public transport website bg.png")' }}
+            rel="noopener noreferrer"
             >
             <h2>
-                CAD
+                Animations
             </h2>
             </a>
 
@@ -58,14 +58,14 @@ export default function projects() {
                 Sketches
             </h2>
             </a> 
-            
+
             <a
-            href = '/projects/animations'
-            className={styles.card}
-            rel="noopener noreferrer"
+                className={styles.card}
+                rel="noopener noreferrer"
+                href = '/projects/cad'
             >
             <h2>
-                Animations
+                CAD
             </h2>
             </a>
 
