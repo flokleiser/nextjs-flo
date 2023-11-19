@@ -12,14 +12,6 @@ export default function animations() {
             <h1 className={styles.title}>
               Animations
             </h1>
-           
-                <a 
-                href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing"
-                target="_blank">
-                    <h2>
-                    All animations (Google Drive)
-                    </h2>
-                </a>
 
             <div className={styles.grid}>
                 <a
@@ -83,7 +75,13 @@ export default function animations() {
                 </a>
             </div>
 
-
+            <a 
+                href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing"
+                target="_blank">
+                    <h2 className={styles.subtitle}>
+                    All animations (Google Drive)
+                    </h2>
+                </a>
     
 
         </main>

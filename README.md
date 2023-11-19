@@ -5,11 +5,11 @@
 ### Videos/Gifs/Images:
 
 #### Animations:
-- [ ] Upload all animations
+- [x] Upload all animations
 - [x] Kontakt
 - [x] Logo
 - [x] Plasticine
-- [ ] Skate
+- [x] Skate
 - [x] Train
 - [x] Music
 - [ ] Add descriptions
@@ -23,10 +23,12 @@
 #### Creative-Coding
 - [x] p5js editor
 - [ ] Gist embed code
-- [ ] Github Link
+- [x] Github Link
 
 ### Links:
+- [ ] Google Drive Link
 - [ ] Portfolio Link (google drive)
+- [ ] Github Link
 
 ## Less Priority (Visual/Layout)
 
