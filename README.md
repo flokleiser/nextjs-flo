@@ -1,7 +1,7 @@
 # To-Do/Ideas List:
 
 ## Background:
-    - [ ] test
+- [ ] test
     -[] test
 
 ## Navbar:
