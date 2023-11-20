@@ -23,7 +23,7 @@ export default function projects() {
            }}
                 rel="noopener noreferrer"
             >
-            <h2>
+            <h2> 
                 Skylands
             </h2>
             </a>

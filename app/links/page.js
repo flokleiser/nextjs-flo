@@ -14,19 +14,20 @@ export default function links() {
             <div className={styles.subtitle}>
                 <p>
                     <a href="https://github.com/flokleiser" target="_blank">
-                        - Github
+                    (github logo)github.com/flokleiser/
                     </a>
                 </p>
+                <br></br>
                 
                 <p>
                     <a href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing" target="_blank">
-                        - Google Drive
+                       (google logo) Drive
                     </a>
                 </p>
-                
+                <br></br>
                 <p>
                     <a href="https://drive.google.com/drive/folders/1iTuoikGpE1WVMLkolIVQ4kmpH4dhQVAP?usp=sharing" target="_blank">
-                    - Portfolio
+                    (pdf logo) Portfolio
                     </a>
                 </p>
             </div>
