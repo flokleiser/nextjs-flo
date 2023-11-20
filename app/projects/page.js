@@ -18,21 +18,33 @@ export default function projects() {
             <a
            href='/projects/skylands'
            className={styles.card}
-           style={{ 
-                backgroundImage: 'url("/images/skylandslogo5.png")'
-           }}
+           style={{ backgroundImage: 'url("/images/skylandslogo5.png")',
+                backgroundSize: '101%',
+                backgroundPosition: 'center',
+                maskImage: 'linear-gradient(to right, transparent, black)',
+                maskSize: '75% 100%',
+                maskPosition: 'right',
+                maskRepeat: 'no-repeat',
+                WebkitMaskImage: 'linear-gradient(to right, transparent, black)',
+                WebkitMaskSize: '75% 100%',
+                WebkitMaskPosition: 'right',
+                WebkitMaskRepeat: 'no-repeat',
+          }}
                 rel="noopener noreferrer"
             >
             <h2> 
                 Skylands
             </h2>
+            <p>VR Game, made with Unity</p>
             </a>
 
 
             <a
             href = '/projects/creative-coding'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/cropped.png")' }}
+            style={{ backgroundImage: 'url("/images/cropped.png")' ,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
             <h2>
@@ -43,7 +55,9 @@ export default function projects() {
             <a
             href = '/projects/animations'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/animlogo2.png")' }}
+            style={{ backgroundImage: 'url("/images/animlogo2.png")',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
             <h2>
@@ -54,13 +68,15 @@ export default function projects() {
             <a
             className={styles.card}
             href = '/projects/sketches'
-            // style={{ backgroundImage: 'url("/images/BRW7440BB876FAE_002226_Part8-1.png")' }}
-            style={{ backgroundImage: 'url("/images/sketches card.png")' }}
+            style={{ backgroundImage: 'url("/images/sketches card.png")',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
             <h2>
                 Sketches
             </h2>
+            <p>Pages from my sketchbook</p>
             </a> 
 
             <a

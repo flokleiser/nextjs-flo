@@ -85,15 +85,14 @@
 
 
 .card {
-  padding: 4rem 2.2rem;
-  color: #ffffffff;
+  padding: 3rem 2.2rem;
+  /* color: #ffffffff; */
   /* color: var(--card-font-rgb); */
   border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0.1);
+  /* background: rgba(var(--card-rgb), 0.1); */
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  transition: transform 200ms, border 200ms;       
-  background-size: cover;
-  background-position: center;
+  transition: transform 200ms, border 200ms;
+  background-position: right;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -110,14 +109,14 @@
   font-size: 1.5rem;
   font-weight: normal;
   /* text-shadow: 0px 0px 20px rgb(28,25,23); */
-  text-shadow: 
+  /* text-shadow: 
     -1px -1px 0px rgba(0, 0, 0, 0.8),
     1px -1px 0px rgba(0, 0, 0, 0.8),
     -1px 1px 0px rgba(0, 0, 0, 0.8),
     1px 1px 0px rgba(0, 0, 0, 0.8);
-  filter: drop-shadow(0px 0px 0px rgba(28,25,2,0.8));
+  filter: drop-shadow(0px 0px 0px rgba(28,25,2,0.8)); */
   margin-bottom: 0.7rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 
@@ -127,7 +126,7 @@
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* 
