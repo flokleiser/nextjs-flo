@@ -43,7 +43,7 @@ export default function projects() {
             <a
             href = '/projects/animations'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/public transport website bg.png")' }}
+            style={{ backgroundImage: 'url("/images/animlogo2.png")' }}
             rel="noopener noreferrer"
             >
             <h2>

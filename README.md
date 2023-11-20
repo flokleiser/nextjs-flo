@@ -35,8 +35,8 @@
 ## Less Priority (Visual/Layout)
 
 ### General Website issues:
-- [ ] Figure out dark mode on other devices
-- [ ] Fix title not centered on mobile
+- [x] Figure out dark mode on other devices
+- [x] Fix title not centered on mobile
 
 ### Navbar:
 - [ ] Figure out why it closes on animations
