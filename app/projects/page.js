@@ -55,6 +55,7 @@ export default function projects() {
             className={styles.card}
             href = '/projects/sketches'
             // style={{ backgroundImage: 'url("/images/BRW7440BB876FAE_002226_Part8-1.png")' }}
+            style={{ backgroundImage: 'url("/images/sketches card.png")' }}
             rel="noopener noreferrer"
             >
             <h2>
@@ -66,6 +67,7 @@ export default function projects() {
                 className={styles.card}
                 rel="noopener noreferrer"
                 href = '/projects/cad'
+                style={{ backgroundImage: 'url("images/cadimage1.png")'}}
             >
             <h2>
                 CAD
@@ -76,6 +78,7 @@ export default function projects() {
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("images/Flo Room Voxel.png")'}}
             >
             <h2>
                 Voxel Art

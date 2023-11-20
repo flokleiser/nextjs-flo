@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.imageBehindText {
+  position: absolute;
+  z-index: -1;
+}
 
 .description {
   display: inherit;
@@ -24,9 +28,17 @@
   padding-top: 2rem;
 }
 
+
 .subtitle {
   font-size: 3.5rem;
   font-weight: normal;
+}
+
+.subtitle a {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  gap: 0.5rem; 
 }
 
 .title2 {
@@ -258,7 +270,6 @@
   .subtitle {
     font-size: 2rem;
   }
-
  
   .description div {
     display: flex;

@@ -16,20 +16,21 @@ export default function links() {
             <div className={styles.subtitle}>
                 <p>
                     <a href="https://github.com/flokleiser" target="_blank">
-                    <DiGithubBadge />github.com/flokleiser/
+                    <DiGithubBadge />Github
                     </a>
                 </p>
                 <br></br>
                 
                 <p>
                     <a href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing" target="_blank">
-                    <DiGoogleDrive />Drive
+                    <DiGoogleDrive />Google Drive
                     </a>
                 </p>
                 <br></br>
                 <p>
-                    <a href="https://drive.google.com/drive/folders/1iTuoikGpE1WVMLkolIVQ4kmpH4dhQVAP?usp=sharing" target="_blank">
-                    <DiIllustrator style={{ verticalAlign: 'middle'}} />  Portfolio
+                    {/* <a href="https://drive.google.com/drive/folders/1iTuoikGpE1WVMLkolIVQ4kmpH4dhQVAP?usp=sharing" target="_blank"> */}
+                    <a href="https://drive.google.com/file/d/1ylYbcAFKfZ9vhhJQ9jcmslIBZf4nxOA6/view?usp=sharing" target="_blank">
+                    <DiIllustrator />  Portfolio
                     </a>
                 </p>
             </div>
