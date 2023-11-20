@@ -56,6 +56,7 @@
 
 ### Cards:
 - [ ] Uniform card logos (maybe stylized)
+
 - [x] Figure out how the hover works
 - [ ] border around title text
 - [ ] Add spacing between cards

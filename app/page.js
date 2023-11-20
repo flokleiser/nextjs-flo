@@ -13,7 +13,6 @@ export default function Home() {
       <h2 className={styles.subtitle}>
         Portfolio
       </h2>
-      <Image src="/images/center image maybe.jpg" alt="Picture of the author" width={500} height={500} className={styles.imageBehindText} />
     </main>
   )
 }
