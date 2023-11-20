@@ -39,6 +39,7 @@
 - [x] Fix title not centered on mobile
 
 ### Navbar:
+- [ ] Top Right Media links
 - [ ] Figure out why it closes on animations
 - [x] Navbar toggle on/off
 - [ ] Navbar animation --> from the side

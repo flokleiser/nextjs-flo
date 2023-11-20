@@ -19,7 +19,7 @@ export default function projects() {
            href='/projects/skylands'
            className={styles.card}
            style={{ 
-                backgroundImage: 'url("/images/boat.png")'
+                backgroundImage: 'url("/images/skylandslogo5.png")'
            }}
                 rel="noopener noreferrer"
             >
