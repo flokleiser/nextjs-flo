@@ -18,78 +18,84 @@ export default function animations() {
                 href='/projects/animations/plasticine'
                 className={styles.card}
                 style={{ backgroundImage: 'url("/images/cards/animations/plasticine card4.png")',
-                    backgroundSize: '101%',
+                    backgroundSize: '102%',
                     backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
                 >
                 <h2>
                     Plasticine (A)life
                 </h2>
+                <p>Stop Motion</p>
                 </a>
 
                 <a
                 href='/projects/animations/skate'
                 className={styles.card}
                 style={{ backgroundImage: 'url("/images/cards/animations/skate transparent2.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
                 >
                 <h2>
-                    Skate Animations
+                    Skate
                 </h2>
+                <p>Rotoscoping, Drawing</p>
                 </a>
 
                 <a
                 href='/projects/animations/escape'
                 className={styles.card}
                 style={{ backgroundImage: 'url("/images/cards/animations/escape transparent3.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
                 >
                 <h2>
                    Escape 
                 </h2>
+                <p>Bringing an image to life</p>
                 </a>
 
                 <a
                 href='/projects/animations/kontakt'
                 className={styles.card}
                 style={{ backgroundImage: 'url("/images/cards/animations/kontakt transparent.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
                 >
                 <h2>
                     Kontakt
                 </h2>
+                <p>Animating physics</p>
                 </a>
 
                 <a
                 href='/projects/animations/logo'
                 className={styles.card}
                 style={{ backgroundImage: 'url("/images/cards/animlogo transparent3.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
                 >
                 <h2>
-                    Logo Animation
+                    Logo 
                 </h2>
+                <p>Variations of a Logo</p>
                 </a>
 
                 <a
                 href='/projects/animations/music'
                 className={styles.card}
                 style={{ backgroundImage: 'url("/images/cards/animations/music transparent3.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
                 >
                 <h2>
                     Music
                 </h2>
+                <p>Music Visualizer</p>
                 </a>
             </div>
 

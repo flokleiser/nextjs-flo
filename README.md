@@ -1,7 +1,7 @@
 # To-Do/Ideas List:
 
 ## Top Priority (content)
-- [ ] Fix or figure out the card background
+- [x] Fix or figure out the card background
 - [ ] Make an interesting title page
 - [ ] Add Background cards behind cards
 

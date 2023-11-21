@@ -19,23 +19,15 @@ export default function projects() {
            href='/projects/skylands'
            className={styles.card}
            style={{ backgroundImage: 'url("/images/cards/skylandslogo5 transparent4.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center',
-                // maskImage: 'linear-gradient(to right, transparent, black)',
-                // maskSize: '75% 100%',
-                // maskPosition: 'right',
-                // maskRepeat: 'no-repeat',
-                // WebkitMaskImage: 'linear-gradient(to right, transparent, black)',
-                // WebkitMaskSize: '75% 100%',
-                // WebkitMaskPosition: 'right',
-                // WebkitMaskRepeat: 'no-repeat',
           }}
                 rel="noopener noreferrer"
             >
             <h2> 
                 Skylands
             </h2>
-            <p>VR Game, made with Unity</p>
+            <p>VR Game, Unity</p>
             </a>
 
 
@@ -43,40 +35,42 @@ export default function projects() {
             href = '/projects/creative-coding'
             className={styles.card}
             style={{ backgroundImage: 'url("/images/cards/creative coding transparent3.png")' ,
-            backgroundSize: '101%',
+            backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
             <h2>
                 Creative Coding
             </h2>
+            <p>Generative Art, p5js</p>
             </a>
 
             <a
             href = '/projects/animations'
             className={styles.card}
             style={{ backgroundImage: 'url("/images/cards/animations/plasticine card4.png")',
-            backgroundSize: '101%',
+            backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
             <h2>
                 Animations
             </h2>
+            <p>Adobe After Effects</p>
             </a>
 
             <a
             className={styles.card}
             href = '/projects/sketches'
             style={{ backgroundImage: 'url("/images/cards/sketches transparent2.png")',
-                    backgroundSize: '101%',
+                    backgroundSize: '102%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
             <h2>
                 Sketches
             </h2>
-            <p>Pages from my sketchbook</p>
+            <p>Sketchbook</p>
             </a> 
 
             <a
@@ -84,12 +78,13 @@ export default function projects() {
                 rel="noopener noreferrer"
                 href = '/projects/cad'
                 style={{ backgroundImage: 'url("images/cards/cad transparent2.png")',
-                backgroundSize: '101%',
+                backgroundSize: '102%',
                 backgroundPosition: 'center'}}
             >
             <h2>
                 CAD
             </h2>
+            <p>Modeling, OnShape</p>
             </a>
 
             <a
@@ -97,12 +92,13 @@ export default function projects() {
             className={styles.card}
             rel="noopener noreferrer"
             style={{ backgroundImage: 'url("images/cards/voxel transparent4.png")',
-            backgroundSize: '101%',
+            backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
             <h2>
                 Voxel Art
             </h2>
+            <p>MagicaVoxel</p>
             </a>
       </div>
     </main>
