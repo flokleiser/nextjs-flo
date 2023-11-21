@@ -62,7 +62,7 @@ export default function projects() {
             <a
             className={styles.card}
             href = '/projects/sketches'
-            style={{ backgroundImage: 'url("/images/cards/sketches transparent2.png")',
+            style={{ backgroundImage: 'url("/images/cards/sketches transparent4.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
