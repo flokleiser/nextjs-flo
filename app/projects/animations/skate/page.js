@@ -18,6 +18,7 @@ export default function skate() {
 
             <video
             src="https://drive.google.com/uc?id=1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0" controls>
+              
             </video>
         </main>
     )
