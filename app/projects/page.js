@@ -55,7 +55,7 @@ export default function projects() {
             <a
             href = '/projects/animations'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/animations/plasticine card3.png")',
+            style={{ backgroundImage: 'url("/images/cards/animations/plasticine card4.png")',
             backgroundSize: '101%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -68,7 +68,7 @@ export default function projects() {
             <a
             className={styles.card}
             href = '/projects/sketches'
-            style={{ backgroundImage: 'url("/images/cards/sketches transparent7.png")',
+            style={{ backgroundImage: 'url("/images/cards/sketches transparent2.png")',
                     backgroundSize: '101%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
