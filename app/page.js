@@ -8,34 +8,37 @@ export default function Home() {
       flex 
       place-items-center 
       before:absolute 
-      before:h-[300px] 
-      before:w-[480px] 
+      before:h-[500px] 
+      before:w-[880px] 
       before:-translate-x-1/2 
+      before:translate-y-1/2
       before:rounded-full 
       before:bg-gradient-radial 
-      before:from-white 
-      before:to-transparent 
+      before:from-[#c45aa3]
+      before:to-transparent
       before:blur-2xl 
       before:content-[''] 
       after:absolute 
       after:-z-20 
       after:h-[180px] 
       after:w-[240px] 
-      after:translate-x-1/3 
+      after:translate-x-2/3 
       after:bg-gradient-conic 
-      after:from-sky-200 
-      after:via-blue-200 
-      after:blur-2xl 
+      after:from-[#d55583]
+      after:via-[#e55061] 
       after:content-[''] 
+
+      /* Dark mode */
+      
       before:dark:bg-gradient-to-br 
       before:dark:from-transparent 
-      before:dark:to-blue-700 
+      before:dark:to-[#c45aa3]
       before:dark:opacity-10 
-      after:dark:from-sky-900 
-      after:dark:via-[#0141ff] 
+      after:dark:from-[#d55583]
+      after:dark:via-[#e55061] 
       after:dark:opacity-40 
       before:lg:h-[360px] 
-      z-[-1]">
+      z-[-1]">  
       </div>
       <h1 className={styles.title}>
         Florian Kleiser
@@ -46,3 +49,9 @@ export default function Home() {
     </main>
   )
 }
+
+/* after first color: */
+/* before:blur-2xl/ */
+
+/* after second color: */
+/* after:blur-2xl/ */
