@@ -2,7 +2,11 @@
 
 ## Top Priority (content)
 - [ ] Make an interesting title page
-- [ ] GOOGLE FOR BACKGROUND
+- [ ] Big card background
+- [ ] Google Layout inspiration for project pages
+- [ ] More Icons
+- [ ] Navbar Dark mode
+- [ ] examples from creative coding + code snippets
 
 ### Videos/Gifs/Images:
 

@@ -21,18 +21,6 @@
   font-family: var(--font-mono);
 }
 
-/* .titlehomepage {
-  font-size: 3.5rem;
-  font-weight: normal;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
-
-.subtitlehomepage {
-  font-size: 3.5rem;
-  font-weight: normal;
-} */
-
 .title {
   font-size: 4.5rem;
   font-weight: normal;
@@ -98,10 +86,7 @@
 
 .card {
   padding: 3rem 2.2rem;
-  /* color: #ffffffff; */
-  /* color: var(--card-font-rgb); */
   border-radius: var(--border-radius);
-  /* background: rgba(var(--card-rgb), 0.1); */
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
   transition: transform 200ms, border 200ms;
   background-position: right;
@@ -132,21 +117,43 @@
   max-width: 30ch;
 }
 
-/* 
-.card::after {
-  content: "";
+.centercard {
+  display:flex;
+}
+
+.center {
+  display:block;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+
+.center::before {
+  background: var(--secondary-glow);
+  border-radius: 50%;
+  width: 480px;
+  height: 360px;
+  margin-left: -400px;
+}
+
+.center::after {
+  background: var(--primary-glow);
+  width: 240px;
+  height: 180px;
+  z-index: -1;
+}
+
+.center::before,
+.center::after {
+  content: '';
+  left: 50%;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff00, #ffff00);
-  opacity: 0;
-  transform: translateX(100%) translateY(100%);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-} */
-
-
+  filter: blur(45px);
+  transform: translateZ(0);
+}
 
 .navbar-contents {
   opacity: 0;
@@ -157,42 +164,16 @@
   opacity: 1;
 }
 
-
-
-
-/* .icon {
-  width:2rem;
-  height:2rem;
-} */
-
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {      
   .card:hover {
     transform: scale(1.05); 
-    /* background-color: rgba(var(--card-rgb), 0.1);    */
     border: 1px solid rgba(var(--card-border-rgb), 15);    
   }
 
   .card:hover span {
     transform: translateX(4px);
   }
-
-  /* .card:hover::after {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-    animation: wave 1s ;
-  }
-
-  @keyframes wave {
-    0% {
-      transform: translateX(100%) translateY(100%);
-    }
-
-    100% {
-      transform: translateX(0) translateY(0);
-    }
-  } */
-
 }
 
 @media (prefers-reduced-motion) {
@@ -273,7 +254,6 @@
 
   .description div {
     align-items: block;
-    /* align-items: flex-end; */
     pointer-events: none;
     inset: auto 0 0;
     padding: 2rem;
@@ -295,6 +275,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+   
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
 }
 
 @keyframes rotate {

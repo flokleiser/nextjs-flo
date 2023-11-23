@@ -9,10 +9,11 @@ export const metadata = {
 export default function projects() {
     return (
         <main className={styles.main}>
+            
             <h1 className={styles.title}> 
             Projects
             </h1>
-
+        
         <div className={styles.grid}>
             
             <a
