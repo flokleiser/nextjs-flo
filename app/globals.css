@@ -9,7 +9,6 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-    /*TITLE COLOR*/
   --foreground-rgb: 50, 50, 50;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -25,12 +24,10 @@
     transparent 360deg
   );
 
-  /* for the font */
   --secondary-glow: radial-gradient(
     rgba(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0)
   );
-
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 225, 225, 225;
@@ -39,7 +36,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* BACKGROUND */
     
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 70, 70, 70;
@@ -47,16 +43,20 @@
 
     --card-font-rgb: 255, 255, 255;
 
-    --primary-glow: radial-gradient(
-      #A63C9F,
-      #180540);
-      
-      --secondary-glow: linear-gradient(
-      to bottom right,
-      #3E0973,
-      #58088C
-      #850FA6, 
-    );
+    
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #A63C9F 0deg,
+    #850FA6 55deg,
+    #58088C 120deg,
+    #3E0973 160deg,
+    transparent 360deg
+  );
+
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
 
     --callout-rgb: 20, 20, 20;
     --callout-border-rgb: 108, 108, 108;
@@ -79,7 +79,6 @@ body {
 }
 
 body {
-
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -94,7 +93,7 @@ body::after {
   content: '';
   position:absolute;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.3;
 }
 
 body::before {
@@ -102,10 +101,10 @@ body::before {
   border-radius: 50%;
   width: 50vw;
   height: 50vw;
-  margin-left: -200px;
   filter:blur(90px);  
+  justify-self: center;
   top: calc(50vh - 50vw/2);
-  left: calc(50vw );
+  left: calc(50vw - 50vw/2);
 }
 
 body::after {
