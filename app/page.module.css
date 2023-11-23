@@ -21,6 +21,18 @@
   font-family: var(--font-mono);
 }
 
+/* .titlehomepage {
+  font-size: 3.5rem;
+  font-weight: normal;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.subtitlehomepage {
+  font-size: 3.5rem;
+  font-weight: normal;
+} */
+
 .title {
   font-size: 4.5rem;
   font-weight: normal;
@@ -134,32 +146,7 @@
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 } */
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  padding: 4rem 0;
-}
 
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
-}
-
-.logo {
-  position: relative;
-}
 
 .navbar-contents {
   opacity: 0;
@@ -236,7 +223,7 @@
   }
 
   .center {
-    padding: 8rem 0 6rem;
+    padding: 2rem 0 2rem;
   }
 
   .center::before {
@@ -285,7 +272,8 @@
   }
 
   .description div {
-    align-items: flex-end;
+    align-items: block;
+    /* align-items: flex-end; */
     pointer-events: none;
     inset: auto 0 0;
     padding: 2rem;
@@ -307,13 +295,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
 }
 
 @keyframes rotate {

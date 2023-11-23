@@ -1,9 +1,8 @@
 # To-Do/Ideas List:
 
 ## Top Priority (content)
-- [x] Fix or figure out the card background
 - [ ] Make an interesting title page
-- [ ] Add Background cards behind cards
+- [ ] GOOGLE FOR BACKGROUND
 
 ### Videos/Gifs/Images:
 
@@ -16,6 +15,7 @@
 - [x] Train
 - [x] Music
 - [ ] Add descriptions on cards
+- [ ] credit maude on plasticine video
 - [ ] Figure out why Google Drive wont work for **some** videos
 - [ ] Decide on Layout when multiple videos per page
 
