@@ -1,12 +1,12 @@
 # To-Do/Ideas List:
 
-## Top Priority (content)
+## Top Priority 
 
 - [ ] Navbar Search function
-- [ ] Navbar icon on the right
+- [ ] Navbar icon on the right
+- [ ] Navbar hide background when closed
 - [ ] Big card background
 - [ ] More Icons
-- [ ] examples from creative coding + code snippets
 
 ### Videos/Gifs/Images:
 
