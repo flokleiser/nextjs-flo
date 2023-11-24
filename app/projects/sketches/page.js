@@ -13,9 +13,12 @@ export default function sketches() {
             <h1 className={styles.title}>
              Sketches 
             </h1>
-       <Image src="/images/sketch test scan website.png"  width={500} height={500} /> 
-       <Image src="/images/sketch test scan website3.png"  width={500} height={500} /> 
-       <Image src="/images/sketch test scan website2.png"  width={500} height={500} /> 
+       <div classname={styles.grid}>
+
+        <Image src="/images/sketch test scan website.png"  width={400} height={400} /> 
+       <Image src="/images/sketch test scan website3.png"  width={400} height={400} /> 
+       <Image src="/images/sketch test scan website2.png"  width={400} height={400} /> 
+       </div>
         </main>
     )
 }
