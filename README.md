@@ -1,12 +1,20 @@
 # To-Do/Ideas List:
 
 ## Top Priority (content)
+- [ ] Copy paste CV to "about me"
 - [ ] Make an interesting title page
+- [ ] Navbar new animations
 - [ ] Big card background
+
 - [ ] Google Layout inspiration for project pages
+
 - [ ] More Icons
-- [ ] Navbar Dark mode
+- [ ] Navbar light mode
 - [ ] examples from creative coding + code snippets
+
+- [ ] Search function
+
+- [ ] Google for voxel art viewer
 
 ### Videos/Gifs/Images:
 
@@ -30,6 +38,7 @@
 
 #### Creative-Coding
 - [x] p5js editor
+- [ ] Add examples with code view + screenshots
 - [ ] codepen maybe
 - [ ] Gist embed code
 - [x] Github Link
@@ -50,27 +59,26 @@
 - [ ] Figure out why it closes on animations
 - [x] Navbar toggle on/off
 - [ ] Navbar animation --> from the side
-- [ ] Navbar icon
-- [ ] Navbar change toggle from top to left
+- [x] Navbar icon
+- [x] Navbar change toggle from top to left
 - [ ] Folders (projects -> creative-coding, skylands, etc)
-- [ ] Change animation to not look like shit
+- [x] Change animation to not look like shit
 - [ ] Change background
 
 ### Background:
 - [ ] Gradient like github page
-- [ ] Change background
-- [ ] Figure out gradient
+- [x] Change background
+- [x] Figure out gradient
 
 ### Cards:
-- [ ] Uniform card logos (maybe stylized)
+- [x] Uniform card logos (maybe stylized)
 
 - [x] Figure out how the hover works
-- [ ] border around title text
-- [ ] Add spacing between cards
-- [ ] Change Background of cards
+- [x] Add spacing between cards
+- [x] Change Background of cards
 - [x] Figure out individual backgrounds
-- [ ] Fix Background Creative Coding
-- [ ] Fix Background Animations
+- [x] Fix Background Creative Coding
+- [x] Fix Background Animations
 - [ ] Add Project descriptions
 
 ### Page scrolling:
@@ -79,7 +87,7 @@
 ### Links:
 - [x] Add github links
 - [ ] Check for "list" setting
-- [ ] Add Icons
+- [x] Add Icons
 
 ### Random things:
 - [x] Figure out page header displaying name

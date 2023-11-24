@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import { FaBars, FaMinus } from "react-icons/fa";
+import { BsXCircle, BsList, BsGrid } from "react-icons/bs";
 
 
 const navItems = [
@@ -24,6 +25,14 @@ const navItems = [
     path: "/about",
     name: "About",
   },
+  // {
+  //   path: "https://github.com/flokleiser",
+  //   name: <DiGithubBadge style={{ fontSize: '1.5rem' }} />
+  // },
+  // {
+  //   path: "https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing",
+  //   name: <DiGoogleDrive style={{ fontSize: '1.5rem' }} />
+  // },
 ];
 
 export default function Navbar() {
@@ -45,7 +54,7 @@ export default function Navbar() {
         className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100"
         onClick={toggleNavbarVisibility}
       >
-        {showNavbar ? <FaMinus style={{ fontSize: '1.5rem' }} /> : <FaBars style={{ fontSize: '1.5rem' }}  />}
+        {showNavbar ? <BsXCircle style={{ fontSize: '1.5rem' }} /> : <BsList style={{ fontSize: '1.5rem' }}  />}
       </button>
       <AnimatePresence>
       {showNavbar && (
@@ -57,7 +66,7 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         >
         
-      <nav className="flex relative justify-start w-full z-[100]  ">
+      <nav className="flex relative justify-left w-full z-[100]  ">
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
 
@@ -93,6 +102,7 @@ export default function Navbar() {
             </Link>
           );
         })}
+
         </nav>
         </motion.div>
        )}

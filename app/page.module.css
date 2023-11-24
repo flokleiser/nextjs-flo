@@ -18,19 +18,34 @@
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
 }
 
-.title {
-  font-size: 4.5rem;
+.titleHomepage {
+  font-size: 6.5rem;
   font-weight: normal;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
 
 
-.subtitle {
+.subtitleHomepage {
   font-size: 3.5rem;
+  font-weight: normal;
+}
+
+.title {
+  font-size: 4.5rem;
+  text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5); 
+  font-weight: normal;
+  padding-bottom: 2rem;
+  padding-top: 0rem;
+}
+
+
+.subtitle {
+
+  padding-top: 2rem;
+  font-size: 3rem;
   font-weight: normal;
 }
 
@@ -220,8 +235,17 @@
     padding: 1rem;
   }
 
-  .title {
+  .titleHomepage {
+    font-size: 3.5rem;
+    padding-bottom: 2rem;            /*probably fix this*/
+  }
+
+  .subtitleHomepage {
     font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 3.5rem;
     padding-bottom: 2rem;            /*probably fix this*/
   }
 

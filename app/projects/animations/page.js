@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import { DiGoogleDrive } from "react-icons/di";
 
 export const metadata = {
     title: 'Animations',
@@ -95,17 +96,15 @@ export default function animations() {
                 <h2>
                     Music
                 </h2>
-                <p>Music Visualizer</p>
+                <p>Music Visualizers</p>
                 </a>
             </div>
 
-            <a 
-                href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing"
-                target="_blank">
-                    <h2 className={styles.subtitle}>
-                    All animations (Google Drive)
-                    </h2>
-                </a>
+            <div className={styles.subtitle}>
+                <a href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing" target="_blank"> 
+                    <DiGoogleDrive /> All videos
+                    </a>
+                </div>
     
 
         </main>

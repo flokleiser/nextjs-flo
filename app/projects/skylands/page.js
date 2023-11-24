@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import { BsUnity } from "react-icons/bs";
 
 export const metadata = {
     title: 'Skylands',
@@ -11,8 +12,9 @@ export default function skylands() {
             <h1 className={styles.title}>
               Skylands 
             </h1>
-            <h2 className = {styles.description}>
+            <h2 >
               A VR game for the Meta Quest 2, made in Unity, using the built in XR Interaction Toolkit.
+            <BsUnity />
             </h2>
         
             <iframe width="560" height="315" src="https://www.youtube.com/embed/ehdOkglKb0o?si=PzmIKV4jRCQDJvDR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>

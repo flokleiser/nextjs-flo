@@ -13,6 +13,9 @@ export default function about() {
             <h1 className={styles.title}>
               About me
             </h1>
+            <h2 className = {styles.description}>
+              test
+            </h2>
         </main>
     )
 }
