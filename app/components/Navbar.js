@@ -98,8 +98,8 @@ export default function Navbar() {
           );
         })}
 
-          <button className="relative px-4 py-2 rounded-md text-sm lg:text-base no-underline text-zinc-100">
-            <BsSearch style={{ fontSize: '1.5rem' }} /> 
+          <button className="px-4 py-2 rounded-md text-sm lg:text-base no-underline text-zinc-100">
+            <BsSearch style={{ fontSize: '1rem' }} /> 
           </button>
 
         </nav>
