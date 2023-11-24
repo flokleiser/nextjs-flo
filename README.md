@@ -1,20 +1,12 @@
 # To-Do/Ideas List:
 
 ## Top Priority (content)
-- [ ] Copy paste CV to "about me"
-- [ ] Make an interesting title page
-- [ ] Navbar new animations
+
+- [ ] Navbar Search function
+- [ ] Navbar icon on the right
 - [ ] Big card background
-
-- [ ] Google Layout inspiration for project pages
-
 - [ ] More Icons
-- [ ] Navbar light mode
 - [ ] examples from creative coding + code snippets
-
-- [ ] Search function
-
-- [ ] Google for voxel art viewer
 
 ### Videos/Gifs/Images:
 
@@ -26,7 +18,8 @@
 - [x] Skate
 - [x] Train
 - [x] Music
-- [ ] Add descriptions on cards
+- [x] Add descriptions on cards
+- [ ] Add descriptions on pages
 - [ ] credit maude on plasticine video
 - [ ] Figure out why Google Drive wont work for **some** videos
 - [ ] Decide on Layout when multiple videos per page
@@ -43,10 +36,28 @@
 - [ ] Gist embed code
 - [x] Github Link
 
+#### Sketches
+- [ ] Add description
+- [ ] Upload screenshots
+
+#### CAD 
+- [ ] Add description
+- [ ] Upload screenshots
+- [ ] Maybe 3d model viewer
+
+#### Voxel Art
+- [ ] Upload screenshots
+- [ ] Add description
+- [ ] Maybe google 3d viewer?
+
 ### Links:
 - [x] Google Drive Link
 - [x] Portfolio Link (google drive)
 - [x] Github Link
+
+### About:
+- [ ] Copy paste CV svg files
+
 
 ## Less Priority (Visual/Layout)
 
@@ -55,6 +66,7 @@
 - [x] Fix title not centered on mobile
 
 ### Navbar:
+- [ ] Search function
 - [ ] Top Right Media links
 - [ ] Figure out why it closes on animations
 - [x] Navbar toggle on/off
@@ -63,12 +75,19 @@
 - [x] Navbar change toggle from top to left
 - [ ] Folders (projects -> creative-coding, skylands, etc)
 - [x] Change animation to not look like shit
-- [ ] Change background
 
 ### Background:
 - [ ] Gradient like github page
 - [x] Change background
 - [x] Figure out gradient
+
+### Page scrolling:
+- [ ] "divide pages" into segments (p5js editor)
+
+### Links:
+- [x] Add github links
+- [ ] Check for "list" setting (for navbar)
+- [x] Add Icons
 
 ### Cards:
 - [x] Uniform card logos (maybe stylized)
@@ -79,23 +98,4 @@
 - [x] Figure out individual backgrounds
 - [x] Fix Background Creative Coding
 - [x] Fix Background Animations
-- [ ] Add Project descriptions
-
-### Page scrolling:
-- [ ] "divide pages" into segments (p5js editor)
-
-### Links:
-- [x] Add github links
-- [ ] Check for "list" setting
-- [x] Add Icons
-
-### Random things:
-- [x] Figure out page header displaying name
-
-### Projects:
-- [ ] Add CAD
-    - Onshape embedding
-- [ ] Add Sketches
-- [ ] Add Voxel art
-
-
+- [x] Add Project descriptions
