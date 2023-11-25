@@ -18,7 +18,7 @@ export default function animations() {
                 <a
                 href='/projects/animations/plasticine'
                 className={styles.card}
-                style={{ backgroundImage: 'url("/images/cards/animations/plasticine card4.png")',
+                style={{ backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
@@ -32,7 +32,7 @@ export default function animations() {
                 <a
                 href='/projects/animations/skate'
                 className={styles.card}
-                style={{ backgroundImage: 'url("/images/cards/animations/skate transparent2.png")',
+                style={{ backgroundImage: 'url("/images/animations/cards/skate transparent2.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
@@ -46,7 +46,7 @@ export default function animations() {
                 <a
                 href='/projects/animations/escape'
                 className={styles.card}
-                style={{ backgroundImage: 'url("/images/cards/animations/escape transparent3.png")',
+                style={{ backgroundImage: 'url("/images/animations/cards/escape transparent3.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
@@ -60,7 +60,7 @@ export default function animations() {
                 <a
                 href='/projects/animations/kontakt'
                 className={styles.card}
-                style={{ backgroundImage: 'url("/images/cards/animations/kontakt transparent.png")',
+                style={{ backgroundImage: 'url("/images/animations/cards/kontakt transparent.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export default function animations() {
                 <a
                 href='/projects/animations/music'
                 className={styles.card}
-                style={{ backgroundImage: 'url("/images/cards/animations/music transparent3.png")',
+                style={{ backgroundImage: 'url("/images/animations/cards/music transparent3.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
