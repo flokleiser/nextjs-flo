@@ -2,11 +2,13 @@
 
 ## Top Priority 
 
-- [ ] Navbar Search function
-- [ ] Navbar icon on the right
-- [ ] Navbar hide background when closed
+- [ ] Proper class for descriptions (under title)
+    - [ ] check mobile view, seems broken
+
+##### - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
+
 - [ ] Big card background
-- [ ] More Icons
+
 
 ### Videos/Gifs/Images:
 
@@ -68,6 +70,7 @@
 ### Navbar:
 - [ ] Search function
 - [ ] Top Right Media links
+- [ ] Hide Background when closed
 - [ ] Figure out why it closes on animations
 - [x] Navbar toggle on/off
 - [ ] Navbar animation --> from the side
@@ -99,3 +102,6 @@
 - [x] Fix Background Creative Coding
 - [x] Fix Background Animations
 - [x] Add Project descriptions
+
+## Checklist before publish:
+- [ ] Updated links (CV, Portfolio)

@@ -62,6 +62,19 @@
   padding-bottom: 3rem;
 }
 
+.subtitledescription {
+  font-size: 1.5rem;
+  font-weight: normal;
+  padding-bottom: 1rem;
+}
+
+.subtitledescription a {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  gap: 0.5rem; 
+}
+
 .spacing {
     padding-bottom: 50vh;
 }
