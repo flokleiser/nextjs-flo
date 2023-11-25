@@ -127,11 +127,11 @@ a {
   }
 }
 
-@media (max-width: 880px) {
+/* @media (max-width: 880px) {
   iframe {
     width: 100%;
     padding: 2rem;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
   }
 }
 
@@ -140,6 +140,6 @@ a {
     width: 900px;
     margin: 0 auto;
     padding: 2rem;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
   }
-}
+} */

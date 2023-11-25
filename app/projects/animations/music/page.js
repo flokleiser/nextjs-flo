@@ -31,7 +31,7 @@ export default function music() {
               </h1> 
         </div>
 
-            <iframe src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" >
+            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" >
             </iframe>
 
         <div className = {styles.subtitle}>
@@ -39,7 +39,7 @@ export default function music() {
                Piano
               </h1>
         </div>
-            <iframe src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" >
+            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" >
             </iframe>
 
         <div className = {styles.subtitle}>
@@ -47,7 +47,7 @@ export default function music() {
                Blurry
               </h1>
         </div>
-            <iframe src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
+            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
            </iframe>
 
         </main>

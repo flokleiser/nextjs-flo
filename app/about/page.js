@@ -41,13 +41,20 @@ export default function about() {
    after:dark:opacity-40 
    before:lg:h-[360px] 
    z-[-1]">
-   </div>
+            </div>
+  
             <h1 className={styles.title}>
               About me
             </h1>
-            <h2 className = {styles.description}>
-              test
-            </h2>
+             
+            <div className={styles.centercard}> 
+            
+            <a className={styles.subtitledescription}>
+            
+            My name is Florian Kleiser
+            
+            </a>
+            </div>
         </main>
     )
 }

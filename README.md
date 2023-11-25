@@ -2,16 +2,23 @@
 
 ## Top Priority 
 
-- [x] Proper class for descriptions (under title)
-    - [x] check mobile view, seems broken
+- [ ] Add all the screenshots
+- [ ] Add all the text
+- [ ] Video quality hd by default
 
-- [ ] Videos --> smaller on web view, on right side
+- [ ] check "spacing" grid --> for screenshots next to each other
+
+- [ ] Card-style background
 
 - [ ] Add "back" button
 
+- [ ] Video embedding --> border
+
 - [ ] Fix Navbar spacing to be dynamic on mobile
 
-- [ ] Card-like background spanning most of the background
+- [ ] Text videos --> on left side, card background
+- [ ] Videos --> smaller on web view, on right side
+
 - [ ] EITHER Subtitles with underlines on individual pages, or
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 
