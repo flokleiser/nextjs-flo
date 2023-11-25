@@ -5,6 +5,8 @@
 - [x] Proper class for descriptions (under title)
     - [x] check mobile view, seems broken
 
+- [ ] Videos --> smaller on web view, on right side
+
 - [ ] Add "back" button
 
 - [ ] Fix Navbar spacing to be dynamic on mobile

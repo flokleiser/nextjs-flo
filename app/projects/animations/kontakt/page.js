@@ -17,10 +17,8 @@ export default function kontakt() {
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
             </video> */}
           
-          <iframe src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview" 
-            width="100%" 
-            style={{ padding: '2rem', aspectRatio: '16/9' }}
-            allow="autoplay"></iframe>
+          <iframe src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview"> 
+            </iframe>
 
 
         </main>

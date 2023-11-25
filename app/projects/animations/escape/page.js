@@ -16,10 +16,8 @@ export default function escape() {
             src="https://drive.google.com/uc?id=1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF" controls>
             </video> */}
 
-<iframe src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview" 
-            width="100%" 
-            style={{ padding: '2rem', aspectRatio: '16/9' }}
-            allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
+          </iframe>
             
         </main>
     )

@@ -126,3 +126,20 @@ a {
     color-scheme: dark;
   }
 }
+
+@media (max-width: 880px) {
+  iframe {
+    width: 100%;
+    padding: 2rem;
+    aspect-ratio: 16/9;
+  }
+}
+
+@media (min-width: 880px) {
+  iframe {
+    width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    aspect-ratio: 16/9;
+  }
+}
