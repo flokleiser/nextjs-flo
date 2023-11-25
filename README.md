@@ -12,7 +12,10 @@
 
 - [ ] Add "back" button
 
+- [ ] Video embedding --> dim background
+
 - [ ] Video embedding --> border
+
 
 - [ ] Fix Navbar spacing to be dynamic on mobile
 
@@ -22,7 +25,6 @@
 - [ ] EITHER Subtitles with underlines on individual pages, or
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 
-- [ ] Big card background
 
 
 ### Videos/Gifs/Images:

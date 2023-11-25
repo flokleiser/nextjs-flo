@@ -1,5 +1,7 @@
+import React from 'react';
 import styles from 'app/page.module.css'
 import { DiGoogleDrive } from "react-icons/di";
+
 
 export const metadata = {
     title: 'Animations',
@@ -42,9 +44,11 @@ export default function animations() {
    before:lg:h-[360px] 
    z-[-1]">
         </div> 
+
             <h1 className={styles.title}>
               Animations
             </h1>
+            
 
             <div className={styles.grid}>
                 <a

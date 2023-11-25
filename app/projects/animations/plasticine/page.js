@@ -16,7 +16,7 @@ export default function plasticine() {
             src="https://drive.google.com/uc?id=10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi" controls>
             </video> */}
            
-            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi/preview"> 
+            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi/preview">
             </iframe>
         </main>
     )
