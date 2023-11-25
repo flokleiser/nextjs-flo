@@ -12,9 +12,17 @@ export default function kontakt() {
             <h1 className={styles.title}>
               Kontakt
             </h1>
+{/*           
             <video
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
-            </video>
+            </video> */}
+          
+          <iframe src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview" 
+            width="100%" 
+            style={{ padding: '2rem', aspectRatio: '16/9' }}
+            allow="autoplay"></iframe>
+
+
         </main>
     )
 }

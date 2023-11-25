@@ -43,7 +43,6 @@
 
 
 .subtitle {
-
   padding-top: 2rem;
   font-size: 3rem;
   font-weight: normal;
@@ -56,16 +55,9 @@
   gap: 0.5rem; 
 }
 
-.title2 {
-  font-size: 2.5rem;
-  font-weight: normal;
-  padding-bottom: 3rem;
-}
-
 .subtitledescription {
   font-size: 1.5rem;
   font-weight: normal;
-  padding-bottom: 1rem;
 }
 
 .subtitledescription a {
@@ -73,10 +65,18 @@
   display: flex;
   justify-content: left;
   gap: 0.5rem; 
+  padding-bottom: 0.5rem;
+}
+
+.subtitledescription h1 {
+  text-decoration: underline 2px rgba(var(--foreground-rgb), 0.5);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .spacing {
-    padding-bottom: 50vh;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .spacing2 {
@@ -192,6 +192,8 @@
   opacity: 1;
 }
 
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {      
   .card:hover {
@@ -258,12 +260,16 @@
   }
 
   .title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     padding-bottom: 2rem;            /*probably fix this*/
   }
 
   .subtitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .subtitledescription {
+    max-width: 30ch;
   }
  
   .description div {

@@ -12,9 +12,15 @@ export default function escape() {
             <h1 className={styles.title}>
               Escape (Animation Homework of 2021)
             </h1>
-            <video 
+            {/* <video 
             src="https://drive.google.com/uc?id=1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF" controls>
-            </video>
+            </video> */}
+
+<iframe src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview" 
+            width="100%" 
+            style={{ padding: '2rem', aspectRatio: '16/9' }}
+            allow="autoplay"></iframe>
+            
         </main>
     )
 }

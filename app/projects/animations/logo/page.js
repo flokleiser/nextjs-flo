@@ -12,9 +12,15 @@ export default function logo() {
             <h1 className={styles.title}>
               Logo
             </h1>
-            <video
+            {/* <video
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
-            </video>
+            </video> */}
+
+          <iframe src="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/preview" 
+            width="100%" 
+            style={{ padding: '2rem', aspectRatio: '16/9' }}
+            allow="autoplay"></iframe>
+
         </main>
     )
 }

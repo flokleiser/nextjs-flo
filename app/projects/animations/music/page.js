@@ -13,7 +13,7 @@ export default function music() {
               Animations to Music
             </h1>
 
-            <video
+            {/* <video
             src="https://drive.google.com/uc?id=16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug" controls>
             </video>
 
@@ -23,7 +23,39 @@ export default function music() {
 
             <video
             src="https://drive.google.com/uc?id=1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV" controls>
-            </video>    
+            </video>     */}
+
+        <div className = {styles.subtitle}>
+              <h1>
+               Public Transport
+              </h1> 
+        </div>
+
+            <iframe src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" 
+            width="100%" 
+            style={{ padding: '2rem', aspectRatio: '16/9' }}
+            allow="autoplay"></iframe>
+
+        <div className = {styles.subtitle}>
+              <h1>
+               Piano
+              </h1>
+        </div>
+            <iframe src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" 
+            width="100%" 
+            style={{ padding: '2rem', aspectRatio: '16/9' }}
+            allow="autoplay"></iframe>
+
+        <div className = {styles.subtitle}>
+              <h1>
+               Blurry
+              </h1>
+        </div>
+            <iframe src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" 
+            width="100%" 
+            style={{ padding: '2rem', aspectRatio: '16/9' }}
+            allow="autoplay"></iframe>
+
         </main>
     )
 }

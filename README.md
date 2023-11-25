@@ -2,10 +2,16 @@
 
 ## Top Priority 
 
-- [ ] Proper class for descriptions (under title)
-    - [ ] check mobile view, seems broken
+- [x] Proper class for descriptions (under title)
+    - [x] check mobile view, seems broken
 
-##### - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
+- [ ] Add "back" button
+
+- [ ] Fix Navbar spacing to be dynamic on mobile
+
+- [ ] Card-like background spanning most of the background
+- [ ] EITHER Subtitles with underlines on individual pages, or
+- [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 
 - [ ] Big card background
 
