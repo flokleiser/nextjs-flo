@@ -1,0 +1,32 @@
+/* :root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  --foreground-rgb: 50, 50, 50;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  --card-font-rgb: 255, 255, 255;
+
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #A63C9F 0deg,
+    #850FA6 55deg,
+    #58088C 120deg,
+    #3E0973 160deg,
+    transparent 360deg
+  );
+
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  --callout-rgb: 238, 240, 241;
+  --callout-border-rgb: 172, 175, 176;
+  --card-rgb:  214, 219, 220;
+  --card-border-rgb: 131, 134, 135;
+
+} */

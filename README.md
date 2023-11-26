@@ -7,7 +7,7 @@
 
 - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
-- [ ] make only dark mode
+- [x] make only dark mode
 
 - [ ] Add "back" button
 
