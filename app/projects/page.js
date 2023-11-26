@@ -47,8 +47,36 @@ export default function projects() {
             </h1>
         
         <div className={styles.grid}>
+
+        <div
+            className={styles.card}
+            href = '/projects/sketches'
+            style={{ backgroundImage: 'url("/images/cards/sketches transparent10.png")',
+                    backgroundSize: '102%',
+                    backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Sketches
+            </h2>
+            <p>Sketchbook</p>
+            </div> 
             
-            <a
+            <div
+            href = '/projects/creative-coding'
+            className={styles.card}
+            style={{ backgroundImage: 'url("/images/cards/creative coding transparent3.png")' ,
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Creative Coding
+            </h2>
+            <p>Generative Art, p5js</p>
+            </div>
+
+            <div
            href='/projects/skylands'
            className={styles.card}
            style={{ backgroundImage: 'url("/images/cards/skylandslogo5 transparent4.png")',
@@ -61,66 +89,10 @@ export default function projects() {
                 Skylands
             </h2>
             <p>VR Game, Unity</p>
-            </a>
+            </div>
 
 
-            <a
-            href = '/projects/creative-coding'
-            className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/creative coding transparent3.png")' ,
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            rel="noopener noreferrer"
-            >
-            <h2>
-                Creative Coding
-            </h2>
-            <p>Generative Art, p5js</p>
-            </a>
-
-            <a
-            href = '/projects/animations'
-            className={styles.card}
-            style={{ backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            rel="noopener noreferrer"
-            >
-            <h2>
-                Animations
-            </h2>
-            <p>Adobe After Effects</p>
-            </a>
-
-            <a
-            className={styles.card}
-            href = '/projects/sketches'
-            style={{ backgroundImage: 'url("/images/cards/sketches transparent10.png")',
-                    backgroundSize: '102%',
-                    backgroundPosition: 'center'}}
-            rel="noopener noreferrer"
-            >
-            <h2>
-                Sketches
-            </h2>
-            <p>Sketchbook</p>
-            </a> 
-
-            <a
-                className={styles.card}
-                rel="noopener noreferrer"
-                href = '/projects/cad'
-                style={{ backgroundImage: 'url("images/cards/cad transparent2.png")',
-                backgroundSize: '102%',
-                backgroundPosition: 'center'}}
-            >
-            <h2>
-                CAD
-            </h2>
-            <p>Modeling, OnShape</p>
-            </a>
-
-            <a
+            <div
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
@@ -132,9 +104,40 @@ export default function projects() {
                 Voxel Art
             </h2>
             <p>MagicaVoxel</p>
-            </a>
+            </div>
 
-            <a
+        
+
+
+            <div
+                className={styles.card}
+                rel="noopener noreferrer"
+                href = '/projects/cad'
+                style={{ backgroundImage: 'url("images/cards/cad transparent2.png")',
+                backgroundSize: '102%',
+                backgroundPosition: 'center'}}
+            >
+            <h2>
+                CAD
+            </h2>
+            <p>Modeling, OnShape</p>
+            </div>
+
+            <div
+            href = '/projects/animations'
+            className={styles.card}
+            style={{ backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Animations
+            </h2>
+            <p>Adobe After Effects</p>
+            </div>
+
+            <div
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
@@ -146,9 +149,24 @@ export default function projects() {
                 Illustrator Designs
             </h2>
             <p>Designs & Artworks </p>
-            </a>
+            </div>
 
-            <a
+            <div
+            href = '/projects/mesh'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("images/cards/mesh card.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Mesh Designs
+            </h2>
+            <p>More Illustrator & P5JS</p>
+            </div>
+
+
+            <div
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
@@ -160,7 +178,8 @@ export default function projects() {
                 Arts & Crafts
             </h2>
             <p>Handcrafted Stuff</p>
-            </a>
+            </div>
+           
 
       </div>
     </main>

@@ -128,13 +128,63 @@
 .grid {
   display: grid;
   justify-self: center;
-  grid-template-columns: repeat(3, minmax(25%, auto));
+  /* grid-template-columns: repeat(3, minmax(25%, auto)); */
+  grid-template-columns: 33% 33% 33%;
   max-width: 100%;
   width: var(--max-width);
+  justify-content: center;
 }
 
 
+@media (min-width: 1120px) {
+    .grid div{
+      width: 100%;
+
+      margin-bottom: 1rem;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; 
+    }
+
+    .card:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    
+    .card:nth-child(3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    .card:nth-child(6) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+
+   
+
+    /* .card:nth-child(3) {
+      grid-row-start: 2;
+      grid-row-end: 4;
+    } */
+    
+
+}
+
+/* makes sure cards are sized evenly when only 2 per row */
+
+@media (max-width: 1120px) {
+  .card {
+    width:350px;
+    height:167px;
+  }
+}
+  
+
 .card {
+ 
+  /* width: 350px;
+  height: 167px; */
+
   padding: 3rem 2.2rem;
   border-radius: var(--border-radius);
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
@@ -144,7 +194,10 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   overflow: hidden;
+  
+  justify-self:center;
 }
+
 
 .card span {
   display: inline-block;
