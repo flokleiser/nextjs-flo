@@ -49,7 +49,15 @@ export default function animations() {
               Animations
             </h1>
             
+            <div className={styles.subtitledescription}>
+            <a>
+            Made mostly with Adobe After Effects. this is a collection of various projects ranging
+            from 2019 to 2023, in which i was experimenting with VFX, stop motion, 
+            sound design, different art styles and simulated physics           
+             </a>
+            </div>
 
+            <div style={{ padding: '2rem' }}>
             <div className={styles.grid}>
                 <a
                 href='/projects/animations/plasticine'
@@ -90,7 +98,7 @@ export default function animations() {
                 <h2>
                    Escape 
                 </h2>
-                <p>Bringing an image to life</p>
+                <p>Animating an image</p>
                 </a>
 
                 <a
@@ -134,6 +142,7 @@ export default function animations() {
                 </h2>
                 <p>Music Visualizers</p>
                 </a>
+            </div>
             </div>
 
             <div className={styles.subtitle}>

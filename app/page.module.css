@@ -62,6 +62,7 @@
 .subtitledescription {
   font-size: 1.5rem;
   font-weight: normal;
+  max-width:70ch;
 }
 
 .subtitledescription a {
@@ -126,6 +127,7 @@
 
 .grid {
   display: grid;
+  justify-self: center;
   grid-template-columns: repeat(3, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
@@ -307,6 +309,7 @@
   .title {
     font-size: 2.5rem;
     padding-bottom: 2rem;            /*probably fix this*/
+    max-width: 20ch;
   }
 
   .subtitle {

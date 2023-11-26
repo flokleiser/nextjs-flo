@@ -13,6 +13,15 @@ export default function sketches() {
             <h1 className={styles.title}>
              Sketches 
             </h1>
+
+            <div className={styles.subtitledescription}>
+            <a>
+            A collection of sketches, designs and artworks ranging from 2018 
+            to 2023.   
+             </a>
+            </div>
+
+
        <div classname={styles.grid}>
 
         <Image src="/images/sketches/sketch test scan website2.png"  width={400} height={400} /> 

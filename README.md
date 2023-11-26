@@ -4,7 +4,8 @@
 
 - [ ] Add all the screenshots
 - [ ] Add all the text
-- [ ] Video quality hd by default
+
+after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
 - [ ] Card-style background
 

@@ -77,15 +77,27 @@ export default function creativeCoding() {
             <h1 className={styles.title}>
               Creative Coding 
             </h1>
+      
+            <div className={styles.subtitledescription}>
+            <a>
+              An online tool for creating generative art using lines, rotations, movement and colors. 
+              Made using P5JS, the JavaScript version of the "Processing" library.
+            </a>
+            </div>
+            
+            <div style={{ padding: '2rem' }}>
             <iframe
                 src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
                 width={iframeWidth}
                 height={iframeHeight}
                 allowFullScreen
-                style={{ border: '1px solid white' }}
+                style={{ border: '1px solid white'}}
             />
+            </div>
+
             <div className={styles.subtitledescription}>
-            <a href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">
+            <a style={{paddingBottom: '2rem'}}
+                      href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">
                     <DiGithubBadge />Source code on Github
                     </a>
             </div>
