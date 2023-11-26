@@ -57,10 +57,10 @@ export default function animations() {
             </div>
 
             <div style={{ padding: '2rem' }}>
-            <div className={styles.grid}>
+            <div className={styles.gridanimation}>
                 <a
                 href='/projects/animations/plasticine'
-                className={styles.card}
+                className={styles.cardanimation}
                 style={{ backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
@@ -74,7 +74,7 @@ export default function animations() {
 
                 <a
                 href='/projects/animations/skate'
-                className={styles.card}
+                className={styles.cardanimation}
                 style={{ backgroundImage: 'url("/images/animations/cards/skate transparent2.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
@@ -88,7 +88,7 @@ export default function animations() {
 
                 <a
                 href='/projects/animations/escape'
-                className={styles.card}
+                className={styles.cardanimation}
                 style={{ backgroundImage: 'url("/images/animations/cards/escape transparent3.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
@@ -102,7 +102,7 @@ export default function animations() {
 
                 <a
                 href='/projects/animations/kontakt'
-                className={styles.card}
+                className={styles.cardanimation}
                 style={{ backgroundImage: 'url("/images/animations/cards/kontakt transparent.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
@@ -116,7 +116,7 @@ export default function animations() {
 
                 <a
                 href='/projects/animations/logo'
-                className={styles.card}
+                className={styles.cardanimation}
                 style={{ backgroundImage: 'url("/images/cards/animlogo transparent3.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
@@ -130,7 +130,7 @@ export default function animations() {
 
                 <a
                 href='/projects/animations/music'
-                className={styles.card}
+                className={styles.cardanimation}
                 style={{ backgroundImage: 'url("/images/animations/cards/music transparent3.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}

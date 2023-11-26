@@ -7,6 +7,10 @@
 
 after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
+- [ ] Why are cards not clickable anymore ;_;
+
+- [x] New Card images for Creative-Coding, Skylands & Animations
+
 - [ ] Card-style background
 
 - [ ] check "spacing" grid --> for screenshots next to each other
