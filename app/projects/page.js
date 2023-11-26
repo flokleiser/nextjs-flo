@@ -179,6 +179,9 @@ export default function projects() {
             <p>Designs & Artworks </p>
             </a>
 
+            <div style={{ padding: '2rem' }}> </div>
+
+          
       </div>
     </main>
     )

@@ -149,6 +149,8 @@ export default function animations() {
                     <DiGoogleDrive /> All videos
                     </a>
                 </div>
+
+                <div style={{ padding: '2rem' }}> </div>
     
 
         </main>

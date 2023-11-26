@@ -5,28 +5,11 @@
 - [ ] Add all the screenshots
 - [ ] Add all the text
 
-after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
+- [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
-- [ ] Why are cards not clickable anymore ;_;
-
-- [x] New Card images for Creative-Coding, Skylands & Animations
-
-- [ ] Card-style background
-
-- [ ] check "spacing" grid --> for screenshots next to each other
-
+- [ ] make only dark mode
 
 - [ ] Add "back" button
-
-- [ ] Video embedding --> dim background
-
-- [ ] Video embedding --> border
-
-
-- [ ] Fix Navbar spacing to be dynamic on mobile
-
-- [ ] Text videos --> on left side, card background
-- [ ] Videos --> smaller on web view, on right side
 
 - [ ] EITHER Subtitles with underlines on individual pages, or
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
@@ -34,6 +17,9 @@ after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacin
 
 
 ### Videos/Gifs/Images:
+
+#### General:
+- [ ] Video embedding --> dim background
 
 #### Animations:
 - [x] Upload all animations
@@ -45,14 +31,14 @@ after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacin
 - [x] Music
 - [x] Add descriptions on cards
 - [ ] Add descriptions on pages
-- [ ] credit maude on plasticine video
-- [ ] Figure out why Google Drive wont work for **some** videos
+- [x] credit maude on plasticine video
+- [x] Figure out why Google Drive wont work for **some** videos
 - [ ] Decide on Layout when multiple videos per page
 
 #### Skylands
 - [x] Upload Video
 - [x] Upload apk
-- [ ] Figure out why video wont work
+- [x] Figure out why video wont work
 
 #### Creative-Coding
 - [x] p5js editor
@@ -75,6 +61,19 @@ after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacin
 - [ ] Add description
 - [ ] Maybe google 3d viewer?
 
+#### Arts & Crafts
+- [ ] Upload screenshots
+- [ ] Add description
+
+#### Mesh Designs
+- [ ] p5js embedd
+- [ ] Upload Screenshots
+- [ ] Add description
+
+#### Illustrator
+- [ ] Upload Screenshots
+- [ ] Add description
+
 ### Links:
 - [x] Google Drive Link
 - [x] Portfolio Link (google drive)
@@ -82,7 +81,6 @@ after all that is done: - [ ] Figure out how to hide navbar, fix dynamic spacin
 
 ### About:
 - [ ] Copy paste CV svg files
-
 
 ## Less Priority (Visual/Layout)
 

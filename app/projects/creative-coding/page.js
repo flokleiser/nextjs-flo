@@ -102,6 +102,7 @@ export default function creativeCoding() {
                     </a>
             </div>
             
+            <div style={{ padding: '2rem' }}> </div>
             {/* <code>
               test.js
             </code> */}
