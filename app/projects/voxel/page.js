@@ -11,6 +11,13 @@ export default function voxel() {
             <h1 className={styles.title}>
              Voxel Art 
             </h1>
+
+            <div className={styles.subtitledescription}>
+            <a>
+            Voxel art, made in MagicaVoxel.
+             </a>
+            </div>
+
         </main>
     )
 }

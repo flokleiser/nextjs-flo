@@ -134,11 +134,11 @@ export default function projects() {
             <p>MagicaVoxel</p>
             </a>
 
-            {/* <a
+            <a
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("images/crafts/spaceship new1.png")',
+            style={{ backgroundImage: 'url("images/cards/illustrator card.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -146,13 +146,13 @@ export default function projects() {
                 Illustrator Designs
             </h2>
             <p>Designs & Artworks </p>
-            </a> */}
+            </a>
 
-            {/* <a
+            <a
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("images/crafts/spaceship new1.png")',
+            style={{ backgroundImage: 'url("images/cards/craft card.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -160,7 +160,7 @@ export default function projects() {
                 Arts & Crafts
             </h2>
             <p>Handcrafted Stuff</p>
-            </a> */}
+            </a>
 
       </div>
     </main>
