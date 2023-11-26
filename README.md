@@ -6,9 +6,10 @@
 - [ ] Add all the text
 - [ ] Video quality hd by default
 
+- [ ] Card-style background
+
 - [ ] check "spacing" grid --> for screenshots next to each other
 
-- [ ] Card-style background
 
 - [ ] Add "back" button
 
@@ -114,7 +115,7 @@
 
 - [x] Figure out how the hover works
 - [x] Add spacing between cards
-- [x] Change Background of cards
+- [x] Change Backgroud of cards
 - [x] Figure out individual backgrounds
 - [x] Fix Background Creative Coding
 - [x] Fix Background Animations

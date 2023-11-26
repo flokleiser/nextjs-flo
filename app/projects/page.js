@@ -133,6 +133,21 @@ export default function projects() {
             </h2>
             <p>MagicaVoxel</p>
             </a>
+
+            <a
+            href = '/projects/crafts'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("images/crafts/spaceship new1.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Arts & Crafts
+            </h2>
+            <p>Handcrafted Stuff</p>
+            </a>
+
       </div>
     </main>
     )

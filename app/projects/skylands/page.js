@@ -52,7 +52,7 @@ export default function skylands() {
             <a>
              <BsUnity /> VR game for the Meta Quest 2, made in Unity
             </a>
-            <p className={styles.spacing} />
+      
             </div>
         
           
@@ -60,7 +60,8 @@ export default function skylands() {
             {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ehdOkglKb0o?si=PzmIKV4jRCQDJvDR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen ></iframe> */}
 
             {/* Google Drive */}
-            <iframe src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
+            <iframe className={styles.iframevideo} 
+            src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
               </iframe>
 
             <div className = {styles.subtitledescription}>

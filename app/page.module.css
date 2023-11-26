@@ -55,6 +55,10 @@
   gap: 0.5rem; 
 }
 
+.subtitle p {
+  padding-bottom: 2rem;
+}
+
 .subtitledescription {
   font-size: 1.5rem;
   font-weight: normal;
@@ -164,10 +168,10 @@
 .centercard {
   display:flex;
   padding: 3rem 2.2rem;
-  border-radius: var(--border-radius);
+  background-color: rgba(var(--card-rgb), 0.5);
+  border-radius: var(--border-radius); 
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  transition: transform 200ms, border 200ms;
-  background-position: right;
+  background-position: center;
   margin-bottom: 1rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
