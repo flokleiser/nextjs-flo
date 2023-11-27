@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Skate',
@@ -41,15 +42,20 @@ export default function skate() {
    before:lg:h-[360px] 
    z-[-1]">
           </div> 
+
+          <div className={styles.backbutton}>
+            <h1> <Link href="/projects/animations"> Back to Animations </Link> </h1>
+            </div>
+
             <h1 className={styles.title}>
               Skate Animations
             </h1>
 
-            <div className={styles.subtitledescription}>
-              <p>
-                placeholder
-              </p>
-            </div>
+          {/* <div className={styles.subtitledescription}>
+            <p>
+              placeholder
+            </p>
+          </div> */}
 
 
           {/* <video

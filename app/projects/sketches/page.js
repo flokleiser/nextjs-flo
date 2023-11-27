@@ -44,19 +44,29 @@ export default function sketches() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
+            
+            <div className={styles.backbutton}>
+            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
+            </div>
+            
             <h1 className={styles.title}>
              Sketches
             </h1>
+
+            {/* <div className={styles.container}>
+              <div className={styles.header}>
+                <h1 className={styles.title}> Sketches </h1>
+                  <div className={styles.backbutton}> 
+                    <h1> <Link href="/projects"> Back to Projects </Link> </h1> 
+                </div> 
+              </div>              
+            </div> */}
 
             <div className={styles.subtitledescription}>
             <p>
             A collection of sketches, designs and artworks ranging from 2018 
             to 2023.   
              </p>
-            </div>
-
-            <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back </Link> </h1>
             </div>
 
 

@@ -1,6 +1,7 @@
 import styles from 'app/page.module.css'
 import { BsUnity } from "react-icons/bs";
 import { BiSolidFileBlank, BiLink, BiLinkExternal } from "react-icons/bi";
+import Link from 'next/link';
 
 
 export const metadata = {
@@ -44,6 +45,12 @@ export default function skylands() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
+
+           
+          <div className={styles.backbutton}>
+            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
+            </div>
+
             <h1 className={styles.title}>
               Skylands 
             </h1>
@@ -74,7 +81,7 @@ export default function skylands() {
             <div className = {styles.subtitledescription}>
             <p>
             <a href="https://drive.google.com/file/d/1Kg5mvFeOzfIsQm974Fk5bhWUzK3I6VP3/view?usp=drive_link" target="_blank">
-            <BiSolidFileBlank />.apk
+            <BiSolidFileBlank />.apk file
             </a>  
             </p>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from 'app/page.module.css'
 import { DiGoogleDrive } from "react-icons/di";
+import Link from 'next/link';
 
 
 export const metadata = {
@@ -44,6 +45,12 @@ export default function animations() {
    before:lg:h-[360px] 
    z-[-1]">
         </div> 
+
+           
+            <div className={styles.backbutton}>
+            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
+            </div>
+
 
             <h1 className={styles.title}>
               Animations

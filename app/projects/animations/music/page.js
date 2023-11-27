@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Music',
@@ -41,14 +42,19 @@ export default function music() {
    before:lg:h-[360px] 
    z-[-1]">
           </div> 
+
+          <div className={styles.backbutton}>
+            <h1> <Link href="/projects/animations"> Back to Animations</Link> </h1>
+            </div>
+
             <h1 className={styles.title}>
               Animations to Music
             </h1>
-            <div className={styles.subtitledescription}>
+            {/* <div className={styles.subtitledescription}>
             <p>
                 placeholder
             </p>
-            </div>
+            </div> */}
 
             {/* <video
             src="https://drive.google.com/uc?id=16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug" controls>

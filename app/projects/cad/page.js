@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Image from 'next/image'
+import Link from 'next/link';
 
 export const metadata = {
     title: 'CAD',
@@ -42,6 +43,11 @@ export default function cad() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
+                     
+          <div className={styles.backbutton}>
+            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
+            </div>
+            
             <h1 className={styles.title}>
              Computer Aided Design
             </h1>

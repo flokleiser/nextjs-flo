@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Link from 'next/link'
 
 
 export const metadata = {
@@ -42,6 +43,12 @@ export default function projects() {
    before:lg:h-[360px] 
    z-[-1]">
             </div>
+
+           
+            <div className={styles.backbutton}>
+            <h1> <Link href="/"> Back to Homepage</Link> </h1>
+            </div>
+
             <h1 className={styles.title}> 
             Projects
             </h1>
