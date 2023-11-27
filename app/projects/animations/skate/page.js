@@ -64,6 +64,12 @@ export default function skate() {
                 Skate Loop
               </h1>
         </div>
+
+        <div className={styles.subtitledescription}>
+            <p>
+            A short sequence of myself, edited and rotoscoped in Adobe After Effects.
+            </p>
+            </div>
        
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0/preview"> 
             </iframe>
@@ -72,7 +78,15 @@ export default function skate() {
               <h1>
              Skate Doodles 
               </h1>
-        </div>
+            </div>
+
+              <div className={styles.subtitledescription}>
+            <p>
+            4 stop-motion sequences, sketched  on semi transparent paper and edited in Premiere Pro.            
+            </p>
+            </div>
+        
+      
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E/preview">
             </iframe>
 

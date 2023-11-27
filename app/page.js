@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-
+import { CiGrid32 } from "react-icons/ci";
 
 export default function Home() {
   return (
@@ -38,15 +38,20 @@ export default function Home() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-     {/* <div  className={styles.center}> */}
       <h1 className={styles.titleHomepage}>
         Florian Kleiser
       </h1>
       
       <h2 className={styles.subtitleHomepage}>
-        Portfolio
+      <span className="border rounded-lg"> <a href="/projects"><CiGrid32/> Portfolio </a> </span> 
       </h2>
-      {/* </div> */}
+
+      <div style={{ padding: '8rem' }}> </div>
+      
+      {/* <h2 className={styles.subtitleHomepage}>
+        <a href="/projects"><CiGrid32/></a>
+      </h2> */}
+   
     </main>
 
   )

@@ -46,7 +46,7 @@ export default function logo() {
             </h1>
             <div className={styles.subtitledescription}>
               <p> 
-                placeholder
+              A small project where i designed a logo for the first letter in my name, “F”, and animated 3 iterations in Adobe After Effects.
               </p>
             </div>
             {/* <video

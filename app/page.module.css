@@ -31,6 +31,16 @@
 .subtitleHomepage {
   font-size: 3.5rem;
   font-weight: normal;
+  display:flex;
+  align-items: center;
+}
+
+
+.subtitleHomepage a {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  gap: 0.5rem; 
 }
 
 .title {
@@ -169,6 +179,27 @@
   justify-self: center;
 }
 
+
+.cardanimation span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.cardanimation h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+
+.cardanimation p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+
 .grid {
   display: grid;
   justify-self: center;
@@ -202,6 +233,11 @@
     .card:nth-child(6) {
       grid-column-start: 2;
       grid-column-end: 4;
+    }
+
+    .card:nth-child(7) {
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
 }
 
@@ -335,7 +371,8 @@
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
     width: 900px;
     margin: 0 auto;
-    aspect-ratio: 7.5/5 ;
+    /* aspect-ratio: 7.5/5 ; */
+    aspect-ratio: 16/9;
   }
 } 
 

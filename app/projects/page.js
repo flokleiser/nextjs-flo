@@ -141,7 +141,7 @@ export default function projects() {
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("images/cards/craft card.png")',
+            style={{ backgroundImage: 'url("images/cards/craft card 4.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -151,19 +151,6 @@ export default function projects() {
             <p>Handcrafted Stuff</p>
             </a>
 
-            <a
-            href = '/projects/mesh'
-            className={styles.card}
-            rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("images/cards/mesh card.png")',
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            >
-            <h2>
-                Mesh Designs
-            </h2>
-            <p>More Illustrator & P5JS</p>
-            </a>
 
             <a
             href = '/projects/illustrator'

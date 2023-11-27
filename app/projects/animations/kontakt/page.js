@@ -47,7 +47,7 @@ export default function kontakt() {
 
             <div className={styles.subtitledescription}>
               <p>
-                Animations using a Physics Simulation Plugin, made in Adobe After Effects
+                Animations using the "Physics Now" plugin, made in Adobe After Effects
               </p>
             </div>
 

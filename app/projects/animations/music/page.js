@@ -68,6 +68,12 @@ export default function music() {
               </h1> 
         </div>
 
+        <div className={styles.subtitledescription}>
+            <p>
+            An animation to the song “Funk For Food” by Moderator. Drawn in Photoshop, animated in Adobe After Effects.
+            </p>
+            </div>
+
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" >
             </iframe>
 
@@ -76,6 +82,13 @@ export default function music() {
                Piano
               </h1>
         </div>
+            
+            <div className={styles.subtitledescription}>
+            <p>
+            An animation of my room, drawn in Photoshop and animated in Adobe After Effects. To the song “Be Encouraged” by Kiefer.
+            </p>
+            </div>
+           
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" >
             </iframe>
 
@@ -84,6 +97,13 @@ export default function music() {
                Blurry
               </h1>
         </div>
+
+        <div className={styles.subtitledescription}>
+            <p>
+            An animation/visualizer to Milky Chances “Flashed Junk Mind”, made in Adobe After Effects.
+            </p>
+            </div>
+
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
            </iframe>
 
