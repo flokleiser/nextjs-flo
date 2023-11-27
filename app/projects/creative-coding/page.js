@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from 'app/page.module.css'
-import { DiGithubBadge } from "react-icons/di";
+import { DiGit, DiGithubBadge } from "react-icons/di";
 
 
 export default function creativeCoding() {
@@ -77,6 +77,11 @@ export default function creativeCoding() {
             <h1 className={styles.title}>
               Creative Coding 
             </h1>
+
+            <div className={styles.subtitle}>
+             {/* <a href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">Rotations<DiGithubBadge /></a> */}
+             <h1> Rotations </h1>
+            </div>
       
             <div className={styles.subtitledescription}>
             <p>
@@ -91,7 +96,7 @@ export default function creativeCoding() {
                 width={iframeWidth}
                 height={iframeHeight}
                 allowFullScreen
-                style={{ border: '1px solid white'}}
+                style={{ border: '2px solid white'}}
             />
             </div>
 
@@ -100,6 +105,9 @@ export default function creativeCoding() {
                       href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">
                     <DiGithubBadge />Source code on Github
                     </a>
+            </div>
+            <div className={styles.subtitledescription}>
+            <p> Examples: </p>
             </div>
             
             <div style={{ padding: '2rem' }}> </div>

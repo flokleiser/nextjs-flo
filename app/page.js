@@ -41,12 +41,19 @@ export default function Home() {
       <h1 className={styles.titleHomepage}>
         Florian Kleiser
       </h1>
+  
+      {/* <h1 className={styles.titleHomepage}>
+       Center Element
+      </h1> */}
+      <div style={{ padding: '8rem' }}> </div>
       
       <h2 className={styles.subtitleHomepage}>
-      <span className="border rounded-lg"> <a href="/projects"><CiGrid32/> Portfolio </a> </span> 
+      {/* <span className="border rounded-lg">  */}
+        <a href="/projects"><CiGrid32/> Portfolio </a> 
+      {/* </span>  */}
       </h2>
 
-      <div style={{ padding: '8rem' }}> </div>
+      {/* <div style={{ padding: '8rem' }}> </div> */}
       
       {/* <h2 className={styles.subtitleHomepage}>
         <a href="/projects"><CiGrid32/></a>
