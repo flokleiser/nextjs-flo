@@ -5,6 +5,8 @@
 - [ ] Add all the screenshots
 - [ ] Add all the text
 
+- [ ] Visualizer & Skate Animations (more than one video) --> Figure out video to the side
+
 - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
 - [x] make only dark mode

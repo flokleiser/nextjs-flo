@@ -44,6 +44,14 @@ export default function kontakt() {
             <h1 className={styles.title}>
               Kontakt
             </h1>
+
+            <div className={styles.subtitledescription}>
+              <p>
+                Animations using a Physics Simulation Plugin, made in Adobe After Effects
+              </p>
+            </div>
+
+
 {/*           
             <video
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
@@ -52,7 +60,7 @@ export default function kontakt() {
           <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview"> 
             </iframe>
 
-
+            <div style={{ padding: '2rem' }}> </div>
         </main>
     )
 }

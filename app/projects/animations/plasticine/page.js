@@ -49,15 +49,19 @@ export default function plasticine() {
             </video> */}
            
            <div className={styles.subtitledescription}>
-            <a>
+            <p>
             Stop-motion animation made in collaboration with Maude Tiril in 2021 (link) <br />
             Figures made out of plasticine, edited with Dragonframe 4 and Adobe Premiere Pro
-            </a>
+            </p>
       
             </div>
 
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi/preview">
             </iframe>
+        
+            <div style={{ padding: '2rem' }}> </div>
+
         </main>
+
     )
 }

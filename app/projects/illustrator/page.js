@@ -44,6 +44,11 @@ export default function illustrator() {
             <h1 className={styles.title}>
              Illustrator Artworks
             </h1>
+            <div className={styles.subtitledescription}>
+            <p>
+                placeholder
+            </p>
+            </div>
         </main>
     )
 }

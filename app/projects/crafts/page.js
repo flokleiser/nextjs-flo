@@ -44,6 +44,11 @@ export default function crafts() {
             <h1 className={styles.title}>
              Crafts
             </h1>
+            <div className={styles.subtitledescription}>
+            <p>
+                placeholder
+            </p>
+            </div>
         </main>
     )
 }

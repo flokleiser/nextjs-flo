@@ -49,9 +49,9 @@ export default function skylands() {
             </h1>
             
             <div className={styles.subtitledescription}>
-            <a>
+            <p>
              <BsUnity /> VR game for the Meta Quest 2, made in Unity
-            </a>
+            </p>
       
             </div>
         

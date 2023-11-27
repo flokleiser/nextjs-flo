@@ -49,11 +49,11 @@ export default function about() {
              
             {/* <div className={styles.centercard}>  */}
             
-            <a className={styles.subtitledescription}>
+            <p className={styles.subtitledescription}>
             
             My name is Florian Kleiser
             
-            </a>
+            </p>
             {/* </div> */}
         </main>
     )

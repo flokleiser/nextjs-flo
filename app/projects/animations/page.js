@@ -50,10 +50,10 @@ export default function animations() {
             </h1>
             
             <div className={styles.subtitledescription}>
-            <a>
+            <p>
             A collection of various projects ranging from 2019 to 2023. Experiments with VFX, stop motion, 
             sound design, different art styles and simulated physics. Made mostly in Adobe After Effects.
-             </a>
+             </p>
             </div>
 
             <div style={{ padding: '2rem' }}>
@@ -144,10 +144,10 @@ export default function animations() {
             </div>
             </div>
 
-            <div className={styles.subtitle}>
+            <div className={styles.subtitledescription} >
                 <a href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing" target="_blank"> 
                     <DiGoogleDrive /> All videos
-                    </a>
+                </a>
                 </div>
 
                 <div style={{ padding: '2rem' }}> </div>

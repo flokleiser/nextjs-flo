@@ -44,6 +44,14 @@ export default function skate() {
             <h1 className={styles.title}>
               Skate Animations
             </h1>
+
+            <div className={styles.subtitledescription}>
+              <p>
+                placeholder
+              </p>
+            </div>
+
+
           {/* <video
             src="https://drive.google.com/uc?id=10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E" controls height={10}>
             </video>
@@ -68,6 +76,7 @@ export default function skate() {
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E/preview">
             </iframe>
 
+            <div style={{ padding: '2rem' }}> </div>
         </main>
     )
 }

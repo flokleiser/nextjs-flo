@@ -44,6 +44,11 @@ export default function music() {
             <h1 className={styles.title}>
               Animations to Music
             </h1>
+            <div className={styles.subtitledescription}>
+            <p>
+                placeholder
+            </p>
+            </div>
 
             {/* <video
             src="https://drive.google.com/uc?id=16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug" controls>
@@ -82,6 +87,9 @@ export default function music() {
             <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
            </iframe>
 
+           <div style={{ padding: '2rem' }}> </div>
+
         </main>
+
     )
 }

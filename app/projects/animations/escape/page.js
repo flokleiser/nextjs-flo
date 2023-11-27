@@ -48,17 +48,19 @@ export default function escape() {
             src="https://drive.google.com/uc?id=1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF" controls>
             </video> */}
 
-          <a className={styles.subtitledescription}>
-            
+          <div className={styles.subtitledescription}>
+           <p>
             Homework for the application to the Propädeutikum ZHdK 2021
-            
-            </a>
+           </p> 
+            </div>
 
 
         <iframe className={styles.iframevideo}
          src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
           </iframe>
             
+          <div style={{ padding: '2rem' }}> </div>
+
         </main>
     )
 }

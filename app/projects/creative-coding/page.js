@@ -79,10 +79,10 @@ export default function creativeCoding() {
             </h1>
       
             <div className={styles.subtitledescription}>
-            <a>
+            <p>
               An online tool for creating generative art using lines, rotations, movement and colors. 
               Made using P5JS, the JavaScript version of the "Processing" library.
-            </a>
+            </p>
             </div>
             
             <div style={{ padding: '2rem' }}>

@@ -1,14 +1,47 @@
+'use client'
+import React from 'react';
+import { useState, useEffect } from 'react';
 import styles from 'app/page.module.css'
+import { DiGithubBadge } from "react-icons/di";
 
-export const metadata = {
-    title: 'Mesh Design',
-    description: '-',
-  }
 
-export default function mesh() {
+export default function creativeCoding() {
+  const [iframeHeight, setIframeHeight] = useState(0);
+  const [iframeWidth, setIframeWidth] = useState(0);
+ 
+
+  useEffect(() => {
+    function handleResize() {
+      const aspectRatio = 16 / 9; // replace with your desired aspect ratio
+      const maxWidth = window.innerWidth -100; // replace with your desired maximum width
+      const maxHeight = window.innerHeight - 100; // replace with your desired maximum height
+
+      const maxWidthByHeight = maxHeight * aspectRatio;
+      const maxHeightByWidth = maxWidth / aspectRatio;
+
+      const width = Math.min(maxWidth, maxWidthByHeight);
+      const height = Math.min(maxHeight, maxHeightByWidth);
+
+      setIframeWidth(width);
+      setIframeHeight(height);
+    }
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  useEffect(() => {
+    document.title = 'Mesh Designs ';
+  }, []);
+
+    
     return (
         <main className={styles.main}>
-              <div className="relative 
+            <div className="relative 
    flex 
    place-items-center 
    before:absolute 
@@ -42,8 +75,36 @@ export default function mesh() {
    z-[-1]">
           </div>
             <h1 className={styles.title}>
-                Mesh Design
+              Mesh
             </h1>
+      
+            <div className={styles.subtitledescription}>
+            <p>
+             Placeholder
+            </p>
+            </div>
+            
+            <div style={{ padding: '2rem' }}>
+            <iframe
+                src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
+                width={iframeWidth}
+                height={iframeHeight}
+                allowFullScreen
+                style={{ border: '1px solid white'}}
+            />
+            </div>
+
+            <div className={styles.subtitledescription}>
+            <a style={{paddingBottom: '2rem'}}
+                      href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">
+                    <DiGithubBadge />Source code on Github
+                    </a>
+            </div>
+            
+            <div style={{ padding: '2rem' }}> </div>
+            {/* <code>
+              test.js
+            </code> */}
         </main>
     )
 }

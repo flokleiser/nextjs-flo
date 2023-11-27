@@ -46,9 +46,9 @@ export default function cad() {
             </h1>
              
             <div className={styles.subtitledescription}>
-            <a>
+            <p>
             A balisong (butterfly knife) designed in onshape.com, rendered in Blender, and built using popsicle sticks and hot glue.
-            </a>
+            </p>
             </div> 
         </main>
     )

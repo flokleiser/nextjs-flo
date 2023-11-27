@@ -48,10 +48,10 @@ export default function sketches() {
             </h1>
 
             <div className={styles.subtitledescription}>
-            <a>
+            <p>
             A collection of sketches, designs and artworks ranging from 2018 
             to 2023.   
-             </a>
+             </p>
             </div>
 
 
