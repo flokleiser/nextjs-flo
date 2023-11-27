@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'Crafts',
@@ -49,6 +50,15 @@ export default function crafts() {
                 placeholder
             </p>
             </div>
+
+            <Image src="/images/crafts/crafts 1.png"width={800} height={800}/> 
+            <Image src="/images/crafts/crafts 2.png"width={800} height={800}/> 
+            <Image src="/images/crafts/crafts 3.png"width={800} height={800}/> 
+            <Image src="/images/crafts/crafts 5.png"width={800} height={800}/> 
+            <Image src="/images/crafts/crafts 6.png"width={800} height={800}/> 
+            <Image src="/images/crafts/crafts 4.png"width={800} height={800}/> 
+
+
         </main>
     )
 }

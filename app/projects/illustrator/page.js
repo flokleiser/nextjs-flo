@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'Illustrator Art',
@@ -44,11 +45,29 @@ export default function illustrator() {
             <h1 className={styles.title}>
              Illustrator Artworks
             </h1>
-            <div className={styles.subtitledescription}>
+            <div className={styles.subtitle}>
             <p>
-                placeholder
+            How To'nt    
             </p>
             </div>
+            <Image src="/images/illustrator/howton't/HOW-TON'T final version_Page_1.jpg"width={800} height={800}/> 
+            <Image src="/images/illustrator/howton't/HOW-TON'T final version_Page_2.jpg"width={800} height={800}/> 
+            <Image src="/images/illustrator/howton't/HOW-TON'T final version_Page_3.jpg"width={800} height={800}/> 
+            <Image src="/images/illustrator/howton't/HOW-TON'T final version_Page_4.jpg"width={800} height={800}/> 
+            <Image src="/images/illustrator/howton't/HOW-TON'T final version_Page_5.jpg"width={800} height={800}/> 
+            <Image src="/images/illustrator/howton't/HOW-TON'T final version_Page_6.jpg"width={800} height={800}/> 
+            
+            <div className={styles.subtitle}>
+            <p>
+            Reduce To The Max 
+            </p>
+            </div>
+            <Image src="/images/illustrator/reduce to the max/Reduce To The Max_Page_1.png"width={800} height={800}/> 
+            <Image src="/images/illustrator/reduce to the max/Reduce To The Max_Page_2.png"width={800} height={800}/> 
+            <Image src="/images/illustrator/reduce to the max/Reduce To The Max_Page_3.png"width={800} height={800}/> 
+            <Image src="/images/illustrator/reduce to the max/Reduce To The Max_Page_4.png"width={800} height={800}/> 
+            <Image src="/images/illustrator/reduce to the max/Reduce To The Max_Page_5.png"width={800} height={800}/> 
+            <Image src="/images/illustrator/reduce to the max/Reduce To The Max_Page_6.png"width={800} height={800}/> 
         </main>
     )
 }

@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'CAD',
@@ -50,6 +51,7 @@ export default function cad() {
             A balisong (butterfly knife) designed in onshape.com, rendered in Blender, and built using popsicle sticks and hot glue.
             </p>
             </div> 
+            <Image src="/images/cad/cad website test.png"width={800} height={800}/> 
         </main>
     )
 }

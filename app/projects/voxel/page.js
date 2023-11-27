@@ -1,4 +1,5 @@
 import styles from 'app/page.module.css'
+import Image from 'next/image'
 
 export const metadata = {
     title: 'Voxel Art',
@@ -50,6 +51,9 @@ export default function voxel() {
             Voxel art, made in MagicaVoxel.
              </p>
             </div>
+
+            <Image src="/images/voxel/voxel room transparent.png"width={800} height={800}/> 
+            <Image src="/images/voxel/voxel space transparent.png"width={800} height={800}/> 
 
         </main>
     )

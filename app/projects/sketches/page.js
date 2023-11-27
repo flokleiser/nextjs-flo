@@ -1,6 +1,7 @@
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Sketches',
@@ -44,7 +45,7 @@ export default function sketches() {
    z-[-1]">
           </div>
             <h1 className={styles.title}>
-             Sketches 
+             Sketches
             </h1>
 
             <div className={styles.subtitledescription}>
@@ -54,8 +55,12 @@ export default function sketches() {
              </p>
             </div>
 
+            <div className={styles.backbutton}>
+            <h1> <Link href="/projects"> Back </Link> </h1>
+            </div>
 
-       <div classname={styles.grid}>
+
+       <div styles={'image-container'}>
 
         <Image src="/images/sketches/sketch test scan website2.png"  width={400} height={400} /> 
        <Image src="/images/sketches/sketch test scan website3.png"  width={400} height={400} /> 

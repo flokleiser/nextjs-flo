@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {AnimatePresence, motion} from "framer-motion";
-import { FaBars, FaMinus } from "react-icons/fa";
 import { BsXCircle, BsList, BsX,  BsGrid, BsSearch } from "react-icons/bs";
 
 
@@ -67,12 +66,14 @@ export default function Navbar() {
 
           return (
             <Link
+            // <button
               key={item.path}
               className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
                 isActive ? "text-zinc-100" : "text-zinc-300"
               }`}
               data-active={isActive}
               href={item.path}
+              // onClick={() => scrollTo(item.path)}
               onMouseOver={() => setHoveredPath(item.path)}
               onMouseLeave={() => setHoveredPath(pathname)}
             >
@@ -94,6 +95,7 @@ export default function Navbar() {
                   }}
                   />
               )}
+            {/* </button> */}
             </Link>
           );
         })}

@@ -1,5 +1,6 @@
 import styles from './page.module.css'
 import { CiGrid32 } from "react-icons/ci";
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -47,13 +48,17 @@ export default function Home() {
       </h1> */}
       <div style={{ padding: '8rem' }}> </div>
       
-      <h2 className={styles.subtitleHomepage}>
-      {/* <span className="border rounded-lg">  */}
-        <a href="/projects"><CiGrid32/> Portfolio </a> 
-      {/* </span>  */}
-      </h2>
+      {/* <h2 className={styles.subtitleHomepage}>
 
-      {/* <div style={{ padding: '8rem' }}> </div> */}
+        <Link  className="link-hover" href="/projects"> <CiGrid32/> Portfolio </Link> 
+   
+      </h2> */}
+
+     <div className={styles.buttonGeneral}>
+        <h2 className={styles.subtitleHomepage}>
+          <Link  className="link-hover" href="/projects"> <CiGrid32/> Portfolio </Link> 
+        </h2>
+     </div>
       
       {/* <h2 className={styles.subtitleHomepage}>
         <a href="/projects"><CiGrid32/></a>
