@@ -1,6 +1,8 @@
+import ExpandableButton from 'app/components/ExpandableButton.js';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
+
 
 export const metadata = {
     title: 'Testing',
@@ -43,10 +45,6 @@ export default function testing() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-{/* 
-          <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div> */}
 
             <h1 className={styles.title}>
             Testing 
@@ -54,7 +52,9 @@ export default function testing() {
 
             <div className = {styles.subtitle}>
               <h1>
-                subtitle 
+               <span>subtitle 
+                <ExpandableButton />    
+                </span>
               </h1> 
             </div> 
 
@@ -66,7 +66,7 @@ export default function testing() {
 
             <div className = {styles.subtitle}>
                 <p>
-                    no underline
+                    no underline 
                 </p>
             </div>
 

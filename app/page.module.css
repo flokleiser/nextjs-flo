@@ -32,6 +32,13 @@
   align-items: center;
 }
 
+.buttonNew {
+  transition: transform 200ms, border 200ms;
+  font-size: 3.5rem;
+  font-weight: normal;
+  align-items:center;
+}
+
 .image-container {
  display:flex;
  flex-wrap:wrap;
@@ -92,7 +99,8 @@
 }
 .subtitle {
   font-size: 3rem;
-  font-weight: normal;
+  display:flex;
+  align-items:center;
 }
 .subtitle a {
   align-items: center;
@@ -107,6 +115,12 @@
   text-decoration: underline 4px rgba(var(--foreground-rgb), 0.5);
   padding-bottom: 2rem;
   padding-top: 1rem;
+  align-items: center;
+  font-weight: normal;
+}
+.subtitle h1 svg {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 /* SUBTITLE DESCRIPTION */
@@ -387,6 +401,9 @@
   }
   
   .backbutton:hover {
+    transform: scale(1.07);
+  }
+  .buttonNew:hover {
     transform: scale(1.07);
   }
 

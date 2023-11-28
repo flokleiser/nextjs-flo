@@ -16,6 +16,8 @@
 
 - [ ] Working image gallery
 
+- [ ] Search function --> look into type='search' (in layout.css)
+
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 
 - [ ] Dim button ?
