@@ -2,16 +2,19 @@
 
 ## Top Priority (important)
 
-- [ ] Add all the screenshots
-- [ ] Add all the text
 
 - [ ] Descriptions (under subtitle) --> collapsable (like navbar)
+
+- [ ] Add all the screenshots
+- [ ] Add all the text
 
 - [ ] Visualizer & Skate Animations (more than one video) --> Figure out video to the side
 
 ## Almost Top Priority (nice to have, when bored)
 
 - [ ] Page Transitions
+
+- [ ] Working image gallery
 
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 

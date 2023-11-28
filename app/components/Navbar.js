@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {AnimatePresence, motion} from "framer-motion";
 import { BsXCircle, BsList, BsX,  BsGrid, BsSearch } from "react-icons/bs";
-
+import { RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
 
 const navItems = [
   {
@@ -46,6 +46,8 @@ export default function Navbar() {
         onClick={toggleNavbarVisibility}
       >
         {showNavbar ? <BsX style={{ fontSize: '1.5rem' }} /> : <BsList style={{ fontSize: '1.5rem' }}  />}
+        {/* {showNavbar ? <RiMenuFoldLine style={{ fontSIze: '1.5rem'}} /> : <RiMenuUnfoldLine style={{ fontSize: '1.5rem' }} />} */}
+
       </button>
       
       

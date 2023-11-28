@@ -91,7 +91,6 @@
   padding-top: 0rem;
 }
 .subtitle {
-  padding-top: 2rem;
   font-size: 3rem;
   font-weight: normal;
 }
@@ -103,6 +102,11 @@
 }
 .subtitle p {
   padding-bottom: 2rem;
+}
+.subtitle h1 {
+  text-decoration: underline 4px rgba(var(--foreground-rgb), 0.5);
+  padding-bottom: 2rem;
+  padding-top: 1rem;
 }
 
 /* SUBTITLE DESCRIPTION */
