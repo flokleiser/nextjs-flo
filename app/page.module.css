@@ -62,22 +62,19 @@
   z-index: 2;
 }
 
+/* HOMEPAGE */
 .titleHomepage {
   font-size: 6.5rem;
   font-weight: normal;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
-
-
 .subtitleHomepage {
   font-size: 3.5rem;
   font-weight: normal;
   display:flex;
   align-items: center;
 }
-
-
 .subtitleHomepage a {
   align-items: center;
   display: flex;
@@ -85,6 +82,7 @@
   gap: 0.5rem; 
 }
 
+/* TITLES */
 .title {
   font-size: 4.5rem;
   text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5); 
@@ -92,31 +90,27 @@
   padding-bottom: 2rem;
   padding-top: 0rem;
 }
-
-
 .subtitle {
   padding-top: 2rem;
   font-size: 3rem;
   font-weight: normal;
 }
-
 .subtitle a {
   align-items: center;
   display: flex;
   justify-content: left;
   gap: 0.5rem; 
 }
-
 .subtitle p {
   padding-bottom: 2rem;
 }
 
+/* SUBTITLE DESCRIPTION */
 .subtitledescription {
   font-size: 1.5rem;
   font-weight: normal;
   max-width:70ch;
 }
-
 .subtitledescription a {
   align-items: center;
   display: flex;
@@ -126,7 +120,6 @@
 
   text-decoration: underline 2px rgba(var(--foreground-rgb), 0.5);
 }
-
 .subtitledescription p {
   align-items: center;
   display: flex;
@@ -134,7 +127,6 @@
   gap: 0.5rem; 
   padding-bottom: 1.5rem;
 }
-
 .subtitledescription h1 {
   text-decoration: underline 2px rgba(var(--foreground-rgb), 0.5);
  
@@ -201,6 +193,7 @@
   width: var(--max-width);
 }
 
+/* Card Animation */
 .cardanimation {
  
   width: 350px;
@@ -219,19 +212,15 @@
 
   justify-self: center;
 }
-
-
 .cardanimation span {
   display: inline-block;
   transition: transform 200ms;
 }
-
 .cardanimation h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
 }
-
 .cardanimation p {
   margin: 0;
   opacity: 0.6;
@@ -282,6 +271,7 @@
     }
 }
 
+/* Card */
 .card {
  
   width: 350px;
@@ -293,25 +283,19 @@
   transition: transform 200ms, border 200ms;
   background-position: right;
   margin-bottom: 1.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
   overflow: hidden;
 
   justify-self:center;
 }
-
-
 .card span {
   display: inline-block;
   transition: transform 200ms;
 }
-
 .card h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
 }
-
 .card p {
   margin: 0;
   opacity: 0.6;
@@ -320,6 +304,7 @@
   max-width: 30ch;
 }
 
+/* Center Stuff*/
 .centercard {
   display:flex;
   padding: 3rem 2.2rem;
@@ -342,7 +327,7 @@
   text-align: center;
 }
 
-
+/* CENTER COLORS */
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
@@ -350,14 +335,12 @@
   height: 360px;
   margin-left: -400px;
 }
-
 .center::after {
   background: var(--primary-glow);
   width: 240px;
   height: 180px;
   z-index: -1;
 }
-
 .center::before,
 .center::after {
   content: '';
@@ -367,11 +350,11 @@
   transform: translateZ(0);
 }
 
+/* NAVBAR OPACITY ETC */
 .navbar-contents {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
 }
-
 .navbar-contents.show {
   opacity: 1;
 }

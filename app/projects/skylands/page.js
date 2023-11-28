@@ -57,9 +57,9 @@ export default function skylands() {
           </div>
 
            
-          <div className={styles.backbutton}>
+          {/* <div className={styles.backbutton}>
             <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div>
+            </div> */}
 
             <h1 className={styles.title}>
               Skylands 

@@ -45,10 +45,10 @@ export default function sketches() {
    z-[-1]">
           </div>
             
-            <div className={styles.backbutton}>
+            {/* <div className={styles.backbutton}>
             <h1> <Link href="/projects"> Back to Projects </Link> </h1>
             </div>
-            
+             */}
             <h1 className={styles.title}>
              Sketches
             </h1>

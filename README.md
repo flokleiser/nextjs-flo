@@ -1,20 +1,30 @@
 # To-Do/Ideas List:
 
-## Top Priority 
+## Top Priority (important)
 
 - [ ] Add all the screenshots
 - [ ] Add all the text
 
+- [ ] Descriptions (under subtitle) --> collapsable (like navbar)
+
 - [ ] Visualizer & Skate Animations (more than one video) --> Figure out video to the side
+
+## Almost Top Priority (nice to have, when bored)
+
+- [ ] Page Transitions
+
+- [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
+
+- [ ] Dim button ?
+
+- [ ] Title Page: Interactable onHover things --> text bigger or something
 
 - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
-- [x] make only dark mode
 
-- [ ] Add "back" button
+- [ ] Desktop view --> center button for grid
 
-- [ ] EITHER Subtitles with underlines on individual pages, or
-- [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
+- [ ] Projects grid --> spacing dynamic for different displays
 
 
 
