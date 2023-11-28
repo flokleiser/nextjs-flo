@@ -82,7 +82,7 @@ export default function creativeCoding() {
             </div>
 
             <h1 className={styles.title}>
-              Creative Coding 
+              Creative Coding
             </h1>
 
             <div className={styles.subtitle}>

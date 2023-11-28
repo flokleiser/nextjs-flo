@@ -2,12 +2,22 @@ import styles from 'app/page.module.css'
 import { BsUnity } from "react-icons/bs";
 import { BiSolidFileBlank, BiLink, BiLinkExternal } from "react-icons/bi";
 import Link from 'next/link';
+// import { Gallery } from "react-grid-gallery"
 
 
-export const metadata = {
-    title: 'Skylands',
-    description: '-',
-  }
+// export const metadata = {
+//     title: 'Skylands',
+//     description: '-',
+//   }
+
+//   const images = [
+//     {
+//        src: "public/images/cards/animlogo transparent3.png",
+//        width: 320,
+//        height: 174,
+//     },
+//  ];
+ 
 
 export default function skylands() {
     return (
@@ -61,16 +71,12 @@ export default function skylands() {
             </p>
       
             </div>
-        
+            
+            {/* <Gallery images={images} />  */}
           
-            {/* Youtube */}
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/ehdOkglKb0o?si=PzmIKV4jRCQDJvDR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen ></iframe> */}
-
-            {/* Google Drive */}
             <iframe className={styles.iframevideo}
             src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
               </iframe>
-     
 
             <div className = {styles.subtitledescription}>
               <h1>
