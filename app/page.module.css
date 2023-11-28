@@ -34,9 +34,15 @@
 
 .buttonNew {
   transition: transform 200ms, border 200ms;
+  border: 1px solid rgba(var(--card-border-rgb), 0.15); 
+  border-radius: var(--border-radius);
+  transition: transform 200ms, border 200ms;
   font-size: 3.5rem;
   font-weight: normal;
   align-items:center;
+  position:relative;
+  padding:5px;
+  margin-left:5px;
 }
 
 .image-container {
@@ -121,6 +127,10 @@
 .subtitle h1 svg {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.subtitle span {
+  display: flex;
 }
 
 /* SUBTITLE DESCRIPTION */

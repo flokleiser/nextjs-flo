@@ -5,10 +5,10 @@ import Link from 'next/link';
 // import { Gallery } from "react-grid-gallery"
 
 
-// export const metadata = {
-//     title: 'Skylands',
-//     description: '-',
-//   }
+export const metadata = {
+    title: 'Skylands',
+    description: '-',
+  }
 
 //   const images = [
 //     {

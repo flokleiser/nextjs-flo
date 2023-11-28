@@ -1,3 +1,4 @@
+import React from 'react';
 import ExpandableButton from 'app/components/ExpandableButton.js';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
@@ -8,6 +9,19 @@ export const metadata = {
     title: 'Testing',
     description: '-',
   }
+
+const images = [
+  {
+    src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",  
+    width: 320,
+    height: 174,
+  },
+{
+    src: "public/images/crafts/crafts 2.png",  
+    width: 320,
+    height: 174,
+  }
+]
 
 export default function testing() {
     return (
@@ -62,12 +76,7 @@ export default function testing() {
             <p>
               placeholder
              </p>
-            </div>
 
-            <div className = {styles.subtitle}>
-                <p>
-                    no underline 
-                </p>
             </div>
 
         </main>
