@@ -8,8 +8,6 @@
 - [ ] Add all the screenshots
 - [ ] Add all the text
 
-- [ ] image gallery WHY ARE COMMENTS NOT SHOWING
-
 - [ ] Visualizer & Skate Animations (more than one video) --> Figure out video to the side
 
 ## Almost Top Priority (nice to have, when bored)
@@ -49,45 +47,39 @@
 - [x] Train
 - [x] Music
 - [x] Add descriptions on cards
-- [ ] Add descriptions on pages
+- [x] Add descriptions on pages
 - [x] credit maude on plasticine video
 - [x] Figure out why Google Drive wont work for **some** videos
-- [ ] Decide on Layout when multiple videos per page
+- [x] Decide on Layout when multiple videos per page
 
 #### Skylands
+- [x] Upload Screenshots
 - [x] Upload Video
 - [x] Upload apk
 - [x] Figure out why video wont work
 
 #### Creative-Coding
 - [x] p5js editor
-- [ ] Add examples with code view + screenshots
-- [ ] codepen maybe
-- [ ] Gist embed code
+- [x] Add examples with code view + screenshots
 - [x] Github Link
+- [x] image gallery
 
 #### Sketches
-- [ ] Add description
-- [ ] Upload screenshots
+- [x] Add description
+- [x] Upload screenshots
 
 #### CAD 
-- [ ] Add description
-- [ ] Upload screenshots
-- [ ] Maybe 3d model viewer
+- [x] Add description
+- [x] Upload screenshots
+- [ ] Check description style --> not "blocky"
 
 #### Voxel Art
-- [ ] Upload screenshots
-- [ ] Add description
-- [ ] Maybe google 3d viewer?
+- [x] Upload screenshots
+- [x] Add description
 
 #### Arts & Crafts
-- [ ] Upload screenshots
-- [ ] Add description
-
-#### Mesh Designs
-- [ ] p5js embedd
-- [ ] Upload Screenshots
-- [ ] Add description
+- [x] Upload screenshots
+- [x] Add description
 
 #### Illustrator
 - [ ] Upload Screenshots

@@ -8,9 +8,22 @@ import Image from 'next/image'
 
 
 const data = [
-  { image : '/images/creative-coding/creativecoding1.png'},
+  { image : '/images/creative-coding/creativecoding white.png'},
+  { image : '/images/creative-coding/creativecoding twocolor.png'},
+  { image : '/images/creative-coding/creativecoding green.png'},
+];
+
+const data2 = [
   { image : '/images/creative-coding/creativecoding2.png'},
   { image : '/images/creative-coding/creativecoding3.png'},
+  { image : '/images/creative-coding/creativecoding4.png'},
+  { image : '/images/creative-coding/creativecoding6.png'},
+];
+
+
+const data3 = [
+  { image : '/images/creative-coding/creativecoding5.png'},
+  { image : '/images/creative-coding/creativecoding9.png'},
 ];
 
 export default function creativeCoding() {
@@ -132,6 +145,66 @@ export default function creativeCoding() {
                 </div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) => {
+                      return (
+                        <>
+                 
+                  <article
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        src={x.image}
+                        alt=""
+                      />
+                    </div>
+                  </article>
+                  
+                  </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            
+            <div className="">
+              <div className="p-3 container mx-auto">
+                <div className="py-2">
+                </div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    {data2.map((x) => {
+                      return (
+                        <>
+                 
+                  <article
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        src={x.image}
+                        alt=""
+                      />
+                    </div>
+                  </article>
+                  
+                  </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <div className="p-3 container mx-auto">
+                <div className="py-2">
+                </div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    {data3.map((x) => {
                       return (
                         <>
                  
