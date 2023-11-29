@@ -132,6 +132,7 @@ export default function cad() {
             </div>
 
             <div className={styles.subtitledescription}>
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
             <a style={{paddingBottom: '2rem'}}
                       href="https://cad.onshape.com/documents/74ceed200a5aa4f63a77c82e/w/2cd4c25834f626e76cd4c9af/e/d0d97ca62557a0c79fb7dfc5?renderMode=0&uiState=6567658f98467778680c9faf" target="_blank">
                     <Image
@@ -145,6 +146,7 @@ export default function cad() {
                     />  
                    Project on OnShape
                     </a>
+            </div>
             </div>
 
             <div style={{ padding: '2rem' }}> </div>

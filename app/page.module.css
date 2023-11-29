@@ -219,6 +219,7 @@
   grid-template-columns: 33% 33% 33%;
   max-width: 100%;
   width: var(--max-width);
+  justify-content: center;
 }
 
 /* Card Animation */
@@ -236,12 +237,10 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   overflow: hidden;
-
-
   justify-self: center;
 }
 .cardanimation span {
-  display: inline-block;
+  display: flex;
   transition: transform 200ms;
 }
 .cardanimation h2 {
@@ -468,7 +467,8 @@
   .gridanimation {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
-    max-width: 320px;
+    max-width: 300px;
+    align-items: center;
     text-align: left;
   }
 

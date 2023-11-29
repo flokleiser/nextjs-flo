@@ -130,10 +130,12 @@ export default function creativeCoding() {
             </div>
 
             <div className={styles.subtitledescription}>
+              <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
             <a style={{paddingBottom: '2rem'}}
                       href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">
                     <DiGithubBadge />Source code on Github
                     </a>
+                    </div>
             </div>
             <div className={styles.subtitledescription}>
             <p> Examples: </p>

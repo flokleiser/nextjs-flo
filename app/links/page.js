@@ -47,8 +47,8 @@ export default function links() {
             <h1 className={styles.title}>
               Links
             </h1>
+            <div className={styles.buttonGeneral}>
             <div className={styles.subtitle}>
-
                 <p>
         
                     {/* <a href="https://drive.google.com/drive/folders/1iTuoikGpE1WVMLkolIVQ4kmpH4dhQVAP?usp=sharing" target="_blank"> */}
@@ -56,27 +56,36 @@ export default function links() {
                     <BiSolidFilePdf/> Portfolio
                     </a>
                 </p>
-        
+            </div>
+            </div>
+            <div className={styles.buttonGeneral}>
+                <div className={styles.subtitle}>
                 <p>
                     <a href="https://github.com/flokleiser" target="_blank">
                     <DiGithubBadge />Github
                     </a>
                 </p>
                </div> 
-<div className={styles.subtitle}>
+               </div>
+               <div className={styles.buttonGeneral}>
+                <div className={styles.subtitle}>
                 <p>
                     <a href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing" target="_blank">
                     <DiGoogleDrive />Google Drive
                     </a>
                 </p>
-             
             </div>
+            </div>
+
+            <div className={styles.buttonGeneral}>
             <div className={styles.subtitle}>
                 <p>
                     <a href="https://drive.google.com/file/d/16NBQjV3BtpM_I0j3xOTWSksGIu0zpR-Q/view" target="_blank">
                     <BiSolidFile />CV 
                     </a>
                 </p>
+            </div>
+
             </div>
         </main>
     )

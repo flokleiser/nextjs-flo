@@ -146,20 +146,24 @@ export default function skylands() {
         
 
             <div className = {styles.subtitledescription}>
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
             <p>
             <a href="https://drive.google.com/file/d/1Kg5mvFeOzfIsQm974Fk5bhWUzK3I6VP3/view?usp=drive_link" target="_blank">
             <BiSolidFileBlank />.apk file
             </a>  
             </p>
             </div>
+            </div>
 
             <div className = {styles.subtitledescription}>
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
             <p>
 
               <a href="https://sidequestvr.com/setup-howto" target="_blank">
                 <BiLinkExternal/> SideQuest (to install .apk file)
               </a>
             </p>
+            </div>
             </div>
 
             <div style={{ padding: '2rem' }}> </div>

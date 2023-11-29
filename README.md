@@ -2,17 +2,21 @@
 
 ## Top Priority (important)
 
+- [x] Add all the screenshots
+- [ ] Add all the text --> about me
 
-- [ ] Descriptions (under subtitle) --> collapsable (like navbar)
+## TO FIX:
 
-- [ ] Add all the screenshots
-- [ ] Add all the text
-
-- [ ] Visualizer & Skate Animations (more than one video) --> Figure out video to the side
+- [ ] Gridanimation & Cardanimation smaller displays not centered
+- [ ] subtitles center and not boxed
 
 ## Almost Top Priority (nice to have, when bored)
 
+- [ ] Animation card --> Gif on hover
+
 - [ ] Page Transitions
+
+- [ ] Images clickeable
 
 - [ ] Working image gallery
 
@@ -37,6 +41,7 @@
 
 #### General:
 - [ ] Video embedding --> dim background
+- [ ] Descriptions (under subtitle) --> collapsable (like navbar)
 
 #### Animations:
 - [x] Upload all animations
