@@ -7,8 +7,13 @@
 
 ## TO FIX:
 
+- [ ] FIX GIF & BACKGROUND IMAGE FOR EACH CARD
+
 - [ ] Gridanimation & Cardanimation smaller displays not centered
+
 - [ ] subtitles center and not boxed
+
+- [ ] Images not loading when going back to projects page without reloading
 
 ## Almost Top Priority (nice to have, when bored)
 

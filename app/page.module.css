@@ -238,6 +238,7 @@
   margin-right: 0.5rem;
   overflow: hidden;
   justify-self: center;
+  background-image: url("/images/animations/cards/plasticine card4.png");
 }
 .cardanimation span {
   display: flex;
@@ -402,7 +403,7 @@
   .cardanimation:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);    
-
+    background-image: url("/images/animations/plasticine-gif4.gif");
   }
 
   .cardanimation:hover span {

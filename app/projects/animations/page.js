@@ -68,9 +68,11 @@ export default function animations() {
                 <a
                 href='/projects/animations/plasticine'
                 className={styles.cardanimation}
-                style={{ backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
+                style={{ 
+                    // backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
+                    
                 rel="noopener noreferrer"
                 >
                 <h2>
