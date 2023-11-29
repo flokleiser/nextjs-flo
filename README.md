@@ -8,6 +8,8 @@
 - [ ] Add all the screenshots
 - [ ] Add all the text
 
+- [ ] image gallery WHY ARE COMMENTS NOT SHOWING
+
 - [ ] Visualizer & Skate Animations (more than one video) --> Figure out video to the side
 
 ## Almost Top Priority (nice to have, when bored)

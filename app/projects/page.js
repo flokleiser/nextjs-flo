@@ -113,9 +113,6 @@ export default function projects() {
             <p>MagicaVoxel</p>
             </a>
 
-        
-
-
             <a
                 className={styles.card}
                 rel="noopener noreferrer"
@@ -174,9 +171,17 @@ export default function projects() {
             </a>
 
             <div style={{ padding: '2rem' }}> </div>
-
           
       </div>
+      <div className = {styles.subtitledescription}>
+            <p>
+            <a href='/projects/testing' >
+            testing
+            </a>  
+            </p>
+            </div>
+
+            <div style={{ padding: '2rem' }}> </div>
     </main>
     )
 }

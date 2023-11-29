@@ -8,6 +8,46 @@ export const metadata = {
     description: '-',
   }
 
+
+const data = [
+  {
+    image: '/images/sketches/sketch test scan website2.png',
+  },
+  {
+  image: '/images/sketches/sketch test scan website.png',
+  },
+  {
+  image: '/images/sketches/sketch test scan website3.png',
+  },
+  {
+  image: '/images/sketches/sketch test scan website4.png',
+  },
+  {
+  image: '/images/sketches/sketch test scan website5.png',
+  },
+];
+
+const data2 = [
+  {
+    image: '/images/sketches/metal2.png',
+  },
+  {
+    image: '/images/sketches/cat3.png',
+  },
+  {
+    image: '/images/sketches/dragon2.png',
+  },
+  {
+  image: '/images/sketches/illusions2.png',
+  },
+];
+
+const data3 = [
+{ image: '/images/sketches/cartoon2.png' },
+{ image: '/images/sketches/corona memory3.png' },
+{ image: '/images/sketches/spaceship sketch2.png' },
+]
+
 export default function sketches() {
     return (
         <main className={styles.main}>
@@ -44,11 +84,7 @@ export default function sketches() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-            
-            {/* <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div>
-             */}
+      
             <h1 className={styles.title}>
              Sketches
             </h1>
@@ -69,15 +105,100 @@ export default function sketches() {
              </p>
             </div>
 
+            <div className="">
+              <div className="p-3 container mx-auto">
+                <div className="py-2">
+                </div>
 
-       <div styles={'image-container'}>
+ {/* for media resizing */}
 
-        <Image src="/images/sketches/sketch test scan website2.png"  width={400} height={400} /> 
-       <Image src="/images/sketches/sketch test scan website3.png"  width={400} height={400} /> 
-       <Image src="/images/sketches/sketch test scan website.png"  width={400} height={400} /> 
-       <Image src="/images/sketches/sketch test scan website4.png"  width={400} height={400} /> 
-       <Image src="/images/sketches/sketch test scan website5.png"  width={400} height={400} /> 
-       </div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-2">
+                    {data.map((x) => {
+                      return (
+                        <>
+                 
+                  <article
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        src={x.image}
+                        alt=""
+                      />
+                    </div>
+                  </article>
+                  
+                  </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+            
+            <div className="">
+              <div className="p-3 container mx-auto">
+                <div className="py-2">
+                </div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    {data2.map((x) => {
+                      return (
+                        <>
+                 
+                  <article
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        src={x.image}
+                        alt=""
+                      />
+                    </div>
+                  </article>
+                  
+                  </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <div className="p-3 container mx-auto">
+                <div className="py-2">
+                </div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    {data3.map((x) => {
+                      return (
+                        <>
+                 
+                  <article
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        src={x.image}
+                        alt=""
+                      />
+                    </div>
+                  </article>
+                  
+                  </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+   
         </main>
     )
 }
