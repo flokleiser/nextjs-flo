@@ -7,7 +7,7 @@
 
 ## TO FIX:
 
-- [ ] FIX GIF & BACKGROUND IMAGE FOR EACH CARD
+- [ ] FIX GIF (not transparent) & BACKGROUND IMAGE FOR EACH CARD
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 

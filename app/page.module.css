@@ -222,12 +222,10 @@
   justify-content: center;
 }
 
-/* Card Animation */
+/* Card Animation (Plasticine */
 .cardanimation {
- 
   width: 350px;
   height: 167px;
-
   padding: 3rem 2.2rem;
   border-radius: var(--border-radius);
   border: 1px solid rgba(var(--card-border-rgb), 0.15);
@@ -240,6 +238,8 @@
   justify-self: center;
   background-image: url("/images/animations/cards/plasticine card4.png");
 }
+
+
 .cardanimation span {
   display: flex;
   transition: transform 200ms;
@@ -257,6 +257,172 @@
   max-width: 30ch;
 }
 
+
+/* Card Skate */
+
+.cardanimationSkate {
+  width: 350px;
+  height: 167px;
+  padding: 3rem 2.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  transition: transform 200ms, border 200ms;
+  background-position: right;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  justify-self: center;
+  background-image: url("/images/animations/cards/skate transparent2.png");
+}
+.cardanimationSkate span {
+  display: flex;
+  transition: transform 200ms;
+}
+.cardanimationSkate h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.cardanimationSkate p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+/* Card Escape */
+.cardanimationEscape{
+  width: 350px;
+  height: 167px;
+  padding: 3rem 2.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  transition: transform 200ms, border 200ms;
+  background-position: right;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  justify-self: center;
+  background-image: url("/images/animations/cards/escape transparent3.png");
+}
+.cardanimationEscape span {
+  display: flex;
+  transition: transform 200ms;
+}
+.cardanimationEscape h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.cardanimationEscape p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+/* Card Kontakt */
+.cardanimationKontakt{
+  width: 350px;
+  height: 167px;
+  padding: 3rem 2.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  transition: transform 200ms, border 200ms;
+  background-position: right;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  justify-self: center;
+  background-image: url("/images/animations/cards/kontakt transparent.png");
+}
+.cardanimationKontakt span {
+  display: flex;
+  transition: transform 200ms;
+}
+.cardanimationKontakt h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.cardanimationKontakt p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+/* Card Logo */
+.cardanimationLogo{
+  width: 350px;
+  height: 167px;
+  padding: 3rem 2.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  transition: transform 200ms, border 200ms;
+  background-position: right;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  justify-self: center;
+  background-image: url("/images/cards/animlogo transparent3.png");
+}
+.cardanimationLogo span {
+  display: flex;
+  transition: transform 200ms;
+}
+.cardanimationLogo h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.cardanimationLogo p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
+
+/* Card Music */
+.cardanimationMusic {
+  width: 350px;
+  height: 167px;
+  padding: 3rem 2.2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  transition: transform 200ms, border 200ms;
+  background-position: right;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  justify-self: center;
+  background-image: url("/images/animations/cards/music transparent3.png");
+}
+.cardanimationMusic span {
+  display: flex;
+  transition: transform 200ms;
+}
+.cardanimationMusic h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.cardanimationMusic p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+}
 
 .grid {
   display: grid;
@@ -400,13 +566,39 @@
     transform: translateX(4px);
   }
 
+  /* Cardanimation Normal */
   .cardanimation:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);    
-    background-image: url("/images/animations/plasticine-gif4.gif");
+  
+    /* background-size:140%;
+    background-position: center; */
+    
+    background-image: url("/images/animations/gifs/plasticine-gif-half.gif"); 
+  }
+  .cardanimation:hover span {
+    transform: translateX(4px);
   }
 
-  .cardanimation:hover span {
+  /* Card Skate */
+  .cardanimationSkate:hover {
+    transform: scale(1.08); 
+    border: 1px solid rgba(var(--card-border-rgb), 15);  
+    background-position: left;  
+    background-image: url("/images/animations/gifs/skate.gif"); 
+  }
+  .cardanimationSkate:hover span {
+    transform: translateX(4px);
+  }
+
+  /* Card Escape */
+  .cardanimationEscape:hover {
+    transform: scale(1.08); 
+    border: 1px solid rgba(var(--card-border-rgb), 15);  
+    background-position: left;  
+    background-image: url("/images/animations/gifs/skate.gif"); 
+  }
+  .cardanimationEscape:hover span {
     transform: translateX(4px);
   }
   
