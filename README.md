@@ -7,7 +7,9 @@
 
 ## TO FIX:
 
-- [ ] cardanimation:hover --> dropshadow for title text
+- [ ] Add clickable images --> fullscreen
+
+- [ ] Illustrator files grid layout or something
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 
