@@ -10,7 +10,11 @@
 
 ## TO FIX:
 
-- [ ] Add clickable images --> fullscreen
+- [ ] Image gallery left/right arrow not working --> fix
+
+- [ ] Also arrows are very broken but its doing something at least
+
+- [x] Add clickable images --> fullscreen
 
 - [ ] Add 404 page§
 
