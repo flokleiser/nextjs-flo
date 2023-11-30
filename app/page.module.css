@@ -370,7 +370,7 @@
   margin-right: 0.5rem;
   overflow: hidden;
   justify-self: center;
-  background-image: url("/images/cards/animlogo transparent3.png");
+  background-image: url("/images/animations/cards/logo new small4.png");
 }
 .cardanimationLogo span {
   display: flex;
@@ -583,7 +583,7 @@
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-position: left;  
-    background-image: url("/images/animations/gifs/skatenew2.gif"); 
+    background-image: url("/images/animations/gifs/skatenew7.gif"); 
     transition: transform 200ms;
   }
   .cardanimationSkate:hover h2,
@@ -614,7 +614,7 @@
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-position: left;  
-    background-image: url("/images/animations/gifs/skate.gif"); 
+    background-image: url("/images/animations/gifs/kontakt-v1.gif"); 
   }
   .cardanimationKontakt:hover span {
     transform: translateX(4px);
@@ -625,7 +625,7 @@
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-position: left;  
-    background-image: url("/images/animations/gifs/skate.gif"); 
+    background-image: url("/images/animations/gifs/logotest3.gif"); 
   }
   .cardanimationLogo:hover span {
     transform: translateX(4px);
@@ -636,7 +636,7 @@
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-position: left;  
-    background-image: url("/images/animations/gifs/skate.gif"); 
+    background-image: url("/images/animations/gifs/public-transport2.gif"); 
   }
   .cardanimationMusic:hover span {
     transform: translateX(4px);
