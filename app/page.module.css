@@ -128,7 +128,6 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
-
 .subtitle span {
   display: flex;
 }
@@ -222,6 +221,9 @@
   justify-content: center;
 }
 
+
+/* CARD ANIMATION CSS */
+
 /* Card Animation (Plasticine */
 .cardanimation {
   width: 350px;
@@ -238,8 +240,6 @@
   justify-self: center;
   background-image: url("/images/animations/cards/plasticine card4.png");
 }
-
-
 .cardanimation span {
   display: flex;
   transition: transform 200ms;
@@ -257,9 +257,7 @@
   max-width: 30ch;
 }
 
-
 /* Card Skate */
-
 .cardanimationSkate {
   width: 350px;
   height: 167px;
@@ -587,6 +585,10 @@
     background-position: left;  
     background-image: url("/images/animations/gifs/skate.gif"); 
   }
+  .cardanimationSkate:hover h2,
+  .cardanimationSkate:hover p {
+   color: black; 
+  }
   .cardanimationSkate:hover span {
     transform: translateX(4px);
   }
@@ -602,6 +604,40 @@
     transform: translateX(4px);
   }
   
+  /* Card Kontakt */
+  .cardanimationKontakt:hover {
+    transform: scale(1.08); 
+    border: 1px solid rgba(var(--card-border-rgb), 15);  
+    background-position: left;  
+    background-image: url("/images/animations/gifs/skate.gif"); 
+  }
+  .cardanimationKontakt:hover span {
+    transform: translateX(4px);
+  }
+
+  /* Card Logo */
+  .cardanimationLogo:hover {
+    transform: scale(1.08); 
+    border: 1px solid rgba(var(--card-border-rgb), 15);  
+    background-position: left;  
+    background-image: url("/images/animations/gifs/skate.gif"); 
+  }
+  .cardanimationLogo:hover span {
+    transform: translateX(4px);
+  }
+
+  /* Card Music */ 
+  .cardanimationMusic:hover {
+    transform: scale(1.08); 
+    border: 1px solid rgba(var(--card-border-rgb), 15);  
+    background-position: left;  
+    background-image: url("/images/animations/gifs/skate.gif"); 
+  }
+  .cardanimationMusic:hover span {
+    transform: translateX(4px);
+  } 
+
+
   .backbutton:hover {
     transform: scale(1.07);
   }
@@ -660,8 +696,8 @@
   .gridanimation {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
-    max-width: 300px;
-    align-items: center;
+    max-width: 320px;
+    /* align-items: center; */
     text-align: left;
   }
 

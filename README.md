@@ -7,7 +7,7 @@
 
 ## TO FIX:
 
-- [ ] FIX GIF (not transparent) & BACKGROUND IMAGE FOR EACH CARD
+- [ ] cardanimation:hover --> dropshadow for title text
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 
