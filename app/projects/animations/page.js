@@ -167,7 +167,7 @@ export default function animations() {
 
             <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-                <a href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing" target="_blank"> 
+                <a href="https://drive.google.com/drive/folders/1tV3FvfgCulwlXBDga_Jf9pJH1nuoTqvK?usp=drive_link" target="_blank"> 
                     <DiGoogleDrive /> All videos
                 </a>
                 </div>

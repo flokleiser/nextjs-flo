@@ -15,24 +15,39 @@ const data = [
   { image: '/images/sketches/illusions2.png', id: 3}
 ];
 
-export default function testing() {
+export default function testing2() {
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
   };
 
-  const handleResetClick = () => {
+const handleResetClick = () => {
     setSelectedImage(null);
-   };
+};
+
+const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
+    setSelectedImage(data[currentIndex === 0 ? data.length - 1 : currentIndex - 1].image);
+  };
+
+const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
+    setSelectedImage(data[currentIndex === data.length - 1 ? 0 : currentIndex + 1].image);
+  };
 
 
   useEffect(() => {
     const handleKeyDown = (event) => {
     if (event.key === 'Escape') {
-     handleResetClick();
-    } 
+        handleResetClick();
+    } else if (event.key === 'ArrowLeft') {
+      handleNextClick();
+    } else if (event.key === 'ArrowRight') {
+      handlePrevClick();
+    }
   };
   window.addEventListener('keydown', handleKeyDown);
 
@@ -111,13 +126,31 @@ export default function testing() {
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>
+          <div className="absolute left-5 ">
+            <button
+              className="bg-white text-black px-0 py-4 rounded-l shadow-lg bg-opacity-50"
+              onClick={handlePrevClick}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+            <div className="absolute right-5">
+            <button
+              className="bg-white text-black px-0 py-4 rounded-r shadow-lg bg-opacity-50"
+              onClick={handleNextClick}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
+          </div>
         </div>
+        
       )}
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data.map((x) =>  (
+                    {data.map((x, index) =>  (
                   <article
+                  key={x.id}
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl active:bg-gray-400 cursor-pointer"
                   >
                     <div className="relative mb-4 rounded-2xl">

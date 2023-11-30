@@ -17,14 +17,19 @@ const data = [
 
 export default function testing() {
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [isVisible, setVisible] = useState(false);
+  // const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImages, setSelectedImages] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
+    setSelectedImages(imageSrc);
+    setCurrentIndex(0);
+    setVisible(true);
   };
 
   const handleResetClick = () => {
-    setSelectedImage(null);
+    setSelectedImages(null);
    };
 
 
@@ -96,7 +101,7 @@ export default function testing() {
             </div>
 
             <div className="">
-            {selectedImage && (
+            {selectedImages && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
           <img
             src={selectedImage}
