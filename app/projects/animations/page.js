@@ -74,6 +74,7 @@ export default function animations() {
                     backgroundPosition: 'center'}}
                     
                 rel="noopener noreferrer"
+                priority = {true}
                 >
                 <h2>
                     Plasticine (A)life
@@ -90,6 +91,7 @@ export default function animations() {
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
+                priority = {true}
                 >
                 <h2>
                     Skate
@@ -105,6 +107,7 @@ export default function animations() {
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
+                priority = {true}
                 >
                 <h2>
                    Escape 
@@ -120,6 +123,7 @@ export default function animations() {
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
+                priority = {true}
                 >
                 <h2>
                     Kontakt
@@ -135,6 +139,7 @@ export default function animations() {
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
+                priority = {true}
                 >
                 <h2>
                     Logo 
@@ -150,6 +155,7 @@ export default function animations() {
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
+                priority = {true}
                 >
                 <h2>
                     Music

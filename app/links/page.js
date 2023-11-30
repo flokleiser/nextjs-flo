@@ -47,6 +47,9 @@ export default function links() {
             <h1 className={styles.title}>
               Links
             </h1>
+
+            <div style={{ padding: '2rem' }}> </div>
+
             <div className={styles.buttonGeneral}>
             <div className={styles.subtitle}>
                 <p>

@@ -62,6 +62,7 @@ export default function projects() {
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
+            priority = {true}
             >
             <h2>
                 Sketches
@@ -76,6 +77,7 @@ export default function projects() {
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
+            priority = {true}
             >
             <h2>
                 Creative Coding
@@ -91,6 +93,7 @@ export default function projects() {
                 backgroundPosition: 'center',
           }}
                 rel="noopener noreferrer"
+                priority = {true}
             >
             <h2> 
                 Skylands
@@ -103,6 +106,7 @@ export default function projects() {
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
+            priority = {true}
             style={{ backgroundImage: 'url("images/cards/voxel transparentwide.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
@@ -116,6 +120,7 @@ export default function projects() {
             <a
                 className={styles.card}
                 rel="noopener noreferrer"
+                priority = {true}
                 href = '/projects/cad'
                 style={{ backgroundImage: 'url("images/cards/cad transparent2.png")',
                 backgroundSize: '102%',
@@ -134,6 +139,7 @@ export default function projects() {
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
+            priority = {true}
             >
             <h2>
                 Animations
@@ -145,6 +151,7 @@ export default function projects() {
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
+            priority = {true}
             style={{ backgroundImage: 'url("images/cards/craft card 4.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
@@ -160,6 +167,7 @@ export default function projects() {
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
+            priority = {true}
             style={{ backgroundImage: 'url("images/cards/illustrator card2.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
@@ -173,13 +181,13 @@ export default function projects() {
             <div style={{ padding: '2rem' }}> </div>
           
       </div>
-      <div className = {styles.subtitledescription}>
+      {/* <div className = {styles.subtitledescription}>
             <p>
             <a href='/projects/testing' >
             testing
             </a>  
             </p>
-            </div>
+            </div> */}
 
             <div style={{ padding: '2rem' }}> </div>
     </main>

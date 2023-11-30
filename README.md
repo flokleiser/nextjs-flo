@@ -3,11 +3,16 @@
 ## Top Priority (important)
 
 - [x] Add all the screenshots
-- [ ] Add all the text --> about me
+
+- [ ] Add all the text --> about me (maybe images or logos of apps etc)
+
+- [ ] Style title page
 
 ## TO FIX:
 
 - [ ] Add clickable images --> fullscreen
+
+- [ ] Add 404 page§
 
 - [ ] Illustrator files grid layout or something
 
@@ -15,7 +20,7 @@
 
 - [ ] subtitles center and not boxed
 
-- [ ] Images not loading when going back to projects page without reloading
+- [ ] Images not loading when going back to projects page without reloading --> google?
 
 ## Almost Top Priority (nice to have, when bored)
 

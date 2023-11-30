@@ -3,7 +3,7 @@ import './globals.css';
 import { Assistant } from 'next/font/google';  
 import Navbar from './components/Navbar';
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 const assistant = Assistant({ subsets: ['latin'] })
 
 export const metadata = {
