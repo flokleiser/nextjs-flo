@@ -109,7 +109,7 @@ export default function animations() {
                 <h2>
                    Escape 
                 </h2>
-                <p>Animating an image</p>
+                <p>Image animation</p>
                 </a>
 
                 <a

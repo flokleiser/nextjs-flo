@@ -583,7 +583,8 @@
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-position: left;  
-    background-image: url("/images/animations/gifs/skate.gif"); 
+    background-image: url("/images/animations/gifs/skatenew2.gif"); 
+    transition: transform 200ms;
   }
   .cardanimationSkate:hover h2,
   .cardanimationSkate:hover p {
@@ -598,7 +599,11 @@
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-position: left;  
-    background-image: url("/images/animations/gifs/skate.gif"); 
+    background-image: url("/images/animations/gifs/escape-short4.gif"); 
+  }
+  .cardanimationEscape:hover h2,
+  .cardanimationEscape:hover p {
+   color: black; 
   }
   .cardanimationEscape:hover span {
     transform: translateX(4px);
