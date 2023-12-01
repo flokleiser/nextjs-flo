@@ -4,8 +4,6 @@
 
 - [ ] Style title page
 
-- [ ] Make page not scrollable when big image overlay
-
 ## TO FIX:
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
@@ -26,8 +24,6 @@
 
 - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
-- [ ] Image gallery left/right arrow not working --> fix
-
 - [ ] Desktop view --> center button for grid
 
 - [ ] Projects grid --> spacing dynamic for different displays
@@ -37,7 +33,7 @@
 ### Videos/Gifs/Images:
 
 #### General:
-- [ ] Video embedding --> dim background
+- [x] Video embedding --> dim background
 - [ ] Descriptions (under subtitle) --> collapsable (like navbar)
 
 #### Animations:

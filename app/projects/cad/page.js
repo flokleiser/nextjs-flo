@@ -35,10 +35,14 @@ export default function cad() {
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   };
 
 const handleResetClick = () => {
     setSelectedImage(null);
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
 };
 
 const handlePrevClick = () => {

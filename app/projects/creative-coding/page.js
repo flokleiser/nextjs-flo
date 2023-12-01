@@ -34,10 +34,14 @@ export default function creativeCoding() {
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   };
 
 const handleResetClick = () => {
     setSelectedImage(null);
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
 };
 
 useEffect(() => {
