@@ -6,46 +6,67 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { AnimatePresence, motion } from "framer-motion";
-import { IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
   
 
 const data = [
-  { image: '/images/sketches/sketch test scan website3.png', id: 1},  
-  { image: '/images/sketches/sketch test scan website2.png', id: 2},
-  { image: '/images/sketches/illusions2.png', id: 3}
-];
-
-const data2 = [
+  { image: '/images/sketches/sketch test scan website3.png', id: 0},  
+  { image: '/images/sketches/sketch test scan website2.png', id: 1},
+  { image: '/images/sketches/illusions2.png', id: 2},
   { image: '/images/sketches/sketch test scan website4.png', id: 3},  
   { image: '/images/sketches/sketch test scan website5.png', id: 4},
-  { image: '/images/sketches/cat3.png', id: 5}
+];
+const data2 = [
+  
+  { image: '/images/sketches/cat3.png', id: 5},
+  { image: '/images/sketches/sketch test scan website4.png', id: 6},  
+  { image: '/images/sketches/sketch test scan website5.png', id: 7},
+  { image: '/images/sketches/cat3.png', id: 8}
 ];
 
-export default function testing() {
+export default function testing3() {
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleImageClick = (imageSrc) => {
     setSelectedImage(imageSrc);
   };
 
-  const handleResetClick = () => {
+const handleResetClick = () => {
     setSelectedImage(null);
-   };
+};
+
+const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
+    setSelectedImage(data[currentIndex === 0 ? data.length - 1 : currentIndex - 1].image);
+  };
+
+const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
+    setSelectedImage(data[currentIndex === data.length - 1 ? 0 : currentIndex + 1].image);
+  };
 
 
   useEffect(() => {
     const handleKeyDown = (event) => {
     if (event.key === 'Escape') {
-     handleResetClick();
-    } 
+        handleResetClick();
+    } else if (event.key === 'ArrowLeft') {
+      handleNextClick();
+    } else if (event.key === 'ArrowRight') {
+      handlePrevClick();
+    }
   };
+
+  
   window.addEventListener('keydown', handleKeyDown);
 
   return () => {
     window.removeEventListener('keydown', handleKeyDown);
   };
 }, []);
+
 
     return (
         <main className={styles.main}>
@@ -186,6 +207,7 @@ export default function testing() {
                   </div>
                 </div>
               </div>
+
        
         </main>
     )

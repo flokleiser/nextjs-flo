@@ -1,6 +1,8 @@
 import styles from './page.module.css'
 import { CiGrid32 } from "react-icons/ci";
 import Link from 'next/link';
+import { ImFilePdf } from "react-icons/im";
+import { PiFilePdfLight } from "react-icons/pi";
 
 export default function Home() {
   return (
@@ -55,7 +57,13 @@ export default function Home() {
 
      <div className={styles.buttonGeneral}>
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="/projects"> <CiGrid32/> Portfolio </Link> 
+          <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
+        </h2>
+     </div>
+
+     <div className={styles.buttonGeneral}>
+        <h2 className={styles.subtitleHomepage}>
+          <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> <PiFilePdfLight/> Portfolio </Link> 
         </h2>
      </div>
       

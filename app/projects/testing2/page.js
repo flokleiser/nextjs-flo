@@ -13,7 +13,11 @@ const data = [
   { image: '/images/sketches/sketch test scan website3.png', id: 0},  
   { image: '/images/sketches/sketch test scan website2.png', id: 1},
   { image: '/images/sketches/illusions2.png', id: 2},
+  
 
+];
+const data2 = [
+  
   { image: '/images/sketches/sketch test scan website4.png', id: 3},  
   { image: '/images/sketches/sketch test scan website5.png', id: 4},
   { image: '/images/sketches/cat3.png', id: 5},
@@ -160,8 +164,144 @@ const handleNextClick = () => {
       )}
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-2">
                     {data.map((x, index) =>  (
+                      
+                  <article
+                  key={x.id}
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl active:bg-gray-400 cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                          selectedImage ? 'z-0' : ''
+                        }`}
+                        src={x.image}
+                        alt=""
+                        onClick={() => handleImageClick(x.image)}
+                      />
+                    </div>
+                  </article>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+              <div className="">
+            {selectedImage && (
+        <div id="overlay" className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+          <img
+            src={selectedImage}
+            alt=""
+            className="max-w-full max-h-full"
+            style={{ maxHeight: '80vh', zIndex: 9990 }}
+          />
+           <button
+            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            onClick={handleResetClick}
+            style={{ zIndex: 9999 }}
+          >
+            <PiXCircle style={{ fontSize: '2rem' }} />
+          </button>
+          <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              className= "text-black px-0 py-4 rounded-r"
+              onClick={handlePrevClick}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+            {/* <div className="absolute right-5"> */}
+            <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              className=" text-black px-0 py-4 rounded-r"
+              onClick={handleNextClick}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
+          </div>
+        </div>
+        
+      )}
+              <div className="p-3 container mx-auto">
+                <div className="py-2"></div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+                    {data2.map((x, index) =>  (
+                  <article
+                  key={x.id}
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl active:bg-gray-400 cursor-pointer"
+                  >
+                    <div className="relative mb-4 rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                          selectedImage ? 'z-0' : ''
+                        }`}
+                        src={x.image}
+                        alt=""
+                        onClick={() => handleImageClick(x.image)}
+                      />
+                    </div>
+                  </article>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              {/* <div className="">
+            {selectedImage && (
+        <div id="overlay" className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+          <img
+            src={selectedImage}
+            alt=""
+            className="max-w-full max-h-full"
+            style={{ maxHeight: '80vh', zIndex: 9990 }}
+          />
+           <button
+            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            onClick={handleResetClick}
+            style={{ zIndex: 9999 }}
+          >
+            <PiXCircle style={{ fontSize: '2rem' }} />
+          </button>
+          <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              className= "text-black px-0 py-4 rounded-r"
+              onClick={handlePrevClick}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+           
+            <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              className=" text-black px-0 py-4 rounded-r"
+              onClick={handleNextClick}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
+          </div>
+        </div>
+        
+      )}
+              <div className="p-3 container mx-auto">
+                <div className="py-2"></div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12" style={{ flexWrap: 'wrap', justifyContent: 'center' }}>
+                    {data2.map((x, index) =>  (
                         <React.Fragment key={x.id}>
                   <article
                   key={x.id}
@@ -180,13 +320,13 @@ const handleNextClick = () => {
                       />
                     </div>
                   </article>
-                  {index === 2 && <br />} {/* Add a line break after the third iteration */}
+                  {index === 2 && <br />} 
                   {index === 5 && <br />}
                   </React.Fragment>
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
        
 {/* 
               <div className="">

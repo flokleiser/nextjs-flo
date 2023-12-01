@@ -55,7 +55,7 @@ export default function links() {
                 <p>
         
                     {/* <a href="https://drive.google.com/drive/folders/1iTuoikGpE1WVMLkolIVQ4kmpH4dhQVAP?usp=sharing" target="_blank"> */}
-                    <a href="https://drive.google.com/file/d/1ylYbcAFKfZ9vhhJQ9jcmslIBZf4nxOA6/view?usp=sharing" target="_blank">
+                    <a href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank">
                     <BiSolidFilePdf/> Portfolio
                     </a>
                 </p>

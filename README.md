@@ -8,6 +8,12 @@
 
 - [ ] Style title page
 
+- [ ] Click anywhere to close --> not on mobile tho
+
+- [ ] if i want to fix the prev/next image --> reset current id on handlereset
+
+- [ ] projects images --> failed to load when using next/link (?)
+
 ## TO FIX:
 
 - [ ] Image gallery left/right arrow not working --> fix

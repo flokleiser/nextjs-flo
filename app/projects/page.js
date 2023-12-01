@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link'
+import Image from 'next/image'
 
 
 export const metadata = {
@@ -8,6 +9,7 @@ export const metadata = {
 }
 
 export default function projects() {
+    
     return (
         <main className={styles.main}>
             <div className="relative 
@@ -58,11 +60,11 @@ export default function projects() {
         <a
             className={styles.card}
             href = '/projects/sketches'
-            style={{ backgroundImage: 'url("/images/cards/sketches transparent10.png")',
+            style={{ 
+                    backgroundImage: 'url("/images/cards/sketches transparent10.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
-            priority = {true}
             >
             <h2>
                 Sketches
@@ -77,7 +79,6 @@ export default function projects() {
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
-            priority = {true}
             >
             <h2>
                 Creative Coding
@@ -93,7 +94,6 @@ export default function projects() {
                 backgroundPosition: 'center',
           }}
                 rel="noopener noreferrer"
-                priority = {true}
             >
             <h2> 
                 Skylands
@@ -106,7 +106,6 @@ export default function projects() {
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
-            priority = {true}
             style={{ backgroundImage: 'url("images/cards/voxel transparentwide.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
@@ -120,7 +119,6 @@ export default function projects() {
             <a
                 className={styles.card}
                 rel="noopener noreferrer"
-                priority = {true}
                 href = '/projects/cad'
                 style={{ backgroundImage: 'url("images/cards/cad transparent2.png")',
                 backgroundSize: '102%',
@@ -139,7 +137,6 @@ export default function projects() {
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
-            priority = {true}
             >
             <h2>
                 Animations
@@ -151,7 +148,6 @@ export default function projects() {
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
-            priority = {true}
             style={{ backgroundImage: 'url("images/cards/craft card 4.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
@@ -167,7 +163,6 @@ export default function projects() {
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
-            priority = {true}
             style={{ backgroundImage: 'url("images/cards/illustrator card2.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
