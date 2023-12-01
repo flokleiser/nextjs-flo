@@ -4,6 +4,8 @@
 
 - [ ] Style title page
 
+- [ ] add some "scroll resistance" ? scrolling slower etc
+
 ## TO FIX:
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
@@ -17,6 +19,8 @@
 - [ ] Page Transitions
 
 - [ ] Search function --> look into type='search' (in layout.css)
+
+- [ ] Dynamic scrolling elements
 
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 

@@ -5,6 +5,8 @@
   align-items: center;
 }
 
+
+
 .imageBehindText {
   position: absolute;
   z-index: -1;

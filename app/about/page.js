@@ -47,8 +47,7 @@ export default function about() {
             <h1 className={styles.title}>
               About me
             </h1>
-            <Image src="/images/flo4.png"width={400} height={400}/>              
-            {/* <div className={styles.centercard}>  */}
+            
 
             <div style={{ padding: '2rem' }}> </div>
             
@@ -59,6 +58,13 @@ export default function about() {
             I am currently applying to study Interaction Design / Digital Ideation.
             
             </p>
+
+            <div style={{ padding: '2rem' }}> </div>
+
+            <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>              
+
+            <div style={{ padding: '2rem' }}> </div>
+            
             {/* </div> */}
         </main>
     )

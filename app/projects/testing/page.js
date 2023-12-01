@@ -19,6 +19,8 @@ const data = [
 
 export default function testing() {
 
+  
+
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (imageSrc) => {
