@@ -18,6 +18,8 @@
 
 ## Almost Top Priority (nice to have, when bored)
 
+- [ ] Illustrator description
+
 - [ ] Page Transitions
 
 - [ ] Search function --> look into type='search' (in layout.css)
@@ -87,7 +89,7 @@
 - [x] Add description
 
 #### Illustrator
-- [ ] Upload Screenshots
+- [x] Upload Screenshots
 - [ ] Add description
 
 ### Links:

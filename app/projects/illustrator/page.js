@@ -14,11 +14,11 @@ const data = [
 ];
 
 const data2 = [
-  { image: '/images/illustrator/reduce to the max/Reduce To The Max_Page_2.png', id: 7},
-  { image: '/images/illustrator/reduce to the max/Reduce To The Max_Page_3.png', id: 8},
-  { image: '/images/illustrator/reduce to the max/Reduce To The Max_Page_4.png', id: 9},
-  { image: '/images/illustrator/reduce to the max/Reduce To The Max_Page_5.png', id: 10},
-  { image: '/images/illustrator/reduce to the max/Reduce To The Max_Page_6.png', id: 11},
+  { image: '/images/illustrator/reduce to the max/reduce5.png', id: 7},
+  { image: '/images/illustrator/reduce to the max/reduce3.png', id: 8},
+  { image: '/images/illustrator/reduce to the max/reduce3.png', id: 9},
+  { image: '/images/illustrator/reduce to the max/reduce2.png', id: 10},
+  { image: '/images/illustrator/reduce to the max/reduce1.png', id: 11},
 ];
 
 export default function illustrator() {
