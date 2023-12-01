@@ -8,6 +8,8 @@
 
 - [ ] Style title page
 
+- [ ] Video Player dynamic scaling
+
 - [ ] if i want to fix the prev/next image --> reset current id on handlereset
 
 - [ ] projects images --> failed to load when using next/link (?)
@@ -41,8 +43,6 @@
 
 - [ ] Add 404 page§
 
-- [ ] Illustrator files grid layout or something
-
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 
 - [ ] subtitles center and not boxed
@@ -51,13 +51,13 @@
 
 ## Almost Top Priority (nice to have, when bored)
 
-- [ ] Animation card --> Gif on hover
+- [x] Animation card --> Gif on hover
 
 - [ ] Page Transitions
 
-- [ ] Images clickeable
+- [x] Images clickeable
 
-- [ ] Working image gallery
+- [x] Working image gallery
 
 - [ ] Search function --> look into type='search' (in layout.css)
 
@@ -115,7 +115,6 @@
 #### CAD 
 - [x] Add description
 - [x] Upload screenshots
-- [ ] Check description style --> not "blocky"
 
 #### Voxel Art
 - [x] Upload screenshots
@@ -145,7 +144,6 @@
 
 ### Navbar:
 - [ ] Search function
-- [ ] Top Right Media links
 - [ ] Hide Background when closed
 - [ ] Figure out why it closes on animations
 - [x] Navbar toggle on/off
@@ -156,7 +154,7 @@
 - [x] Change animation to not look like shit
 
 ### Background:
-- [ ] Gradient like github page
+- [x] Gradient like github page
 - [x] Change background
 - [x] Figure out gradient
 
