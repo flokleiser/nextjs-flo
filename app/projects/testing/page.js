@@ -14,13 +14,7 @@ const data = [
   { image: '/images/sketches/sketch test scan website4.png', id: 3},  
   { image: '/images/sketches/sketch test scan website5.png', id: 4},
 ];
-const data2 = [
-  
-  { image: '/images/sketches/cat3.png', id: 5},
-  { image: '/images/sketches/sketch test scan website4.png', id: 6},  
-  { image: '/images/sketches/sketch test scan website5.png', id: 7},
-  { image: '/images/sketches/cat3.png', id: 8}
-];
+
 
 export default function testing() {
 
@@ -175,34 +169,11 @@ useEffect(() => {
                 </div>
               </div>
 
-              
+              <iframe className={styles.iframevideo}
+              src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
+              </iframe>
 
-              <div className="">
-              <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data2.map((x) =>  (
-                  <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-                  >
-                    <div className="relative mb-4 rounded-2xl">
-                      <Image
-                        width={400}
-                        height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
-                        src={x.image}
-                        alt=""
-                        onClick={() => handleImageClick(x.image)}
-                      />
-                    </div>
-                  </article>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
+              <div style={{ padding: '2rem' }}> </div>
        
         </main>
     )

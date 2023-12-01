@@ -2,11 +2,10 @@
 
 ## Top Priority (important)
 
-- [ ] Add all the text --> about me (image)
+- [ ] Add all the text
+    - [ ] About me
 
 - [ ] Style title page
-
-- [ ] Video Player dynamic scaling
 
 ## TO FIX:
 
@@ -17,8 +16,6 @@
 - [ ] Images not loading when going back to projects page without reloading --> google?
 
 ## Almost Top Priority (nice to have, when bored)
-
-- [ ] Illustrator description
 
 - [ ] Page Transitions
 

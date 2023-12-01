@@ -15,7 +15,7 @@ const data = [
 
 const data2 = [
   { image: '/images/illustrator/reduce to the max/reduce5.png', id: 7},
-  { image: '/images/illustrator/reduce to the max/reduce3.png', id: 8},
+  { image: '/images/illustrator/reduce to the max/reduce4.png', id: 8},
   { image: '/images/illustrator/reduce to the max/reduce3.png', id: 9},
   { image: '/images/illustrator/reduce to the max/reduce2.png', id: 10},
   { image: '/images/illustrator/reduce to the max/reduce1.png', id: 11},
@@ -127,6 +127,12 @@ useEffect(() => {
             How To'nt    
             </p>
             </div>
+
+            <div className={styles.subtitledescription}>
+            <p>
+            A project inspired by Ikea instructions, with a twist.           
+            </p>
+            </div>
            
             <div className="">
             {selectedImage && (
@@ -177,6 +183,13 @@ useEffect(() => {
             Reduce To The Max 
             </p>
             </div>
+
+            <div className={styles.subtitledescription}>
+            <p>
+             Depictions of 5 sports, reduced to their most basic shapes.
+            </p>
+            </div>
+
             <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>

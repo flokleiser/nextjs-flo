@@ -137,7 +137,7 @@ useEffect(() => {
             <div className={styles.subtitledescription}>
             <p>
               An online tool for creating generative art using lines, rotations, movement and colors. 
-              Made using P5JS, the JavaScript version of the "Processing" library.
+              Made using p5js, the JavaScript version of the "Processing" library.
             </p>
             </div>
             

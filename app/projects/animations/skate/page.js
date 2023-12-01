@@ -66,9 +66,9 @@ export default function skate() {
             src="https://drive.google.com/uc?id=1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0" controls>
             </video> */}
         <div className = {styles.subtitle}>
-              <h1>
+              <p>
                 Skate Loop
-              </h1>
+              </p>
         </div>
 
         <div className={styles.subtitledescription}>
@@ -81,9 +81,9 @@ export default function skate() {
             </iframe>
 
         <div className = {styles.subtitle}>
-              <h1>
+              <p>
              Skate Doodles 
-              </h1>
+              </p>
             </div>
 
               <div className={styles.subtitledescription}>

@@ -672,7 +672,8 @@
 @media (min-width: 880px) {
   .iframevideo {
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
-    width: 900px;
+    /* width: 900px; */
+    width: 80vw; 
     margin: 0 auto;
     /* aspect-ratio: 7.5/5 ; */
     aspect-ratio: 16/9;

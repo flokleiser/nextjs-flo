@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import React from 'react';
+import Image from 'next/image'
 
 export const metadata = {
     title: 'About',
@@ -46,9 +47,8 @@ export default function about() {
             <h1 className={styles.title}>
               About me
             </h1>
-             
+            <Image src="/images/flo4.png"width={400} height={400}/>              
             {/* <div className={styles.centercard}>  */}
-            
 
             <div style={{ padding: '2rem' }}> </div>
             
@@ -56,7 +56,8 @@ export default function about() {
             
             My name is Florian Kleiser, im 24 years old and i come from Zürich, Switzerland.
             <div style={{ padding: '2rem' }}> </div>
-            My passions include (but are not limited to) programming, drawing, editing, gaming and music.
+            My passions include (but are not limited to) programming, drawing, editing, gaming, skating and music.
+
             <div style={{ padding: '2rem' }}> </div> 
             I am currently applying to study Interaction Design / Digital Ideation.
             

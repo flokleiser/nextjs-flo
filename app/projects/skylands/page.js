@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, {useState, useEffect} from 'react';
 import { PiXCircle } from "react-icons/pi"; 
+import { DiGithubBadge } from "react-icons/di";
 
 
 
@@ -215,6 +216,16 @@ useEffect(() => {
             <p>
             <a href="https://drive.google.com/file/d/1Kg5mvFeOzfIsQm974Fk5bhWUzK3I6VP3/view?usp=drive_link" target="_blank">
             <BiSolidFileBlank />.apk file
+            </a>  
+            </p>
+            </div>
+            </div>
+
+            <div className = {styles.subtitledescription}>
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+            <p>
+            <a href="https://github.com/flokleiser/FLO-VR-ROOM" target="_blank">
+            <DiGithubBadge /> Code files on Github
             </a>  
             </p>
             </div>
