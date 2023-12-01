@@ -6,13 +6,30 @@
 
 - [ ] Add all the text --> about me (image)
 
-- [ ] Click anywhere to close --> implement
-
 - [ ] Style title page
 
 - [ ] if i want to fix the prev/next image --> reset current id on handlereset
 
 - [ ] projects images --> failed to load when using next/link (?)
+
+## PAGES:
+
+- [ ] CAD --> Popsicle Sticks images
+
+- [x] Crafts
+
+- [x] Creative Coding
+
+- [x] Illustrator
+
+- [x] Sketches
+
+- [x] Skylands
+
+- [x] Voxel
+
+- [x] Animations
+
 
 ## TO FIX:
 

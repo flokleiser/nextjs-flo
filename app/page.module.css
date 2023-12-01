@@ -553,6 +553,9 @@
 
 
 
+
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {      
   .card:hover {
@@ -828,3 +831,7 @@
     transform: rotate(0deg);
   }
 }
+
+
+
+

@@ -65,6 +65,31 @@ const handleNextClick = () => {
   };
 }, []);
 
+useEffect(() => {
+  const handleOutsideClick = (event) => {
+    const imageElement = document.querySelector("#overlay img");
+
+    if (imageElement) {
+       const imageRect = imageElement.getBoundingClientRect();
+
+    if (
+      event.clientX < imageRect.left ||
+      event.clientX > imageRect.right ||
+      event.clientY < imageRect.top ||
+      event.clientY > imageRect.bottom
+      ) {
+        handleResetClick();
+      }
+    }
+  };
+
+  document.addEventListener("mouseup", handleOutsideClick);
+
+  return () => {
+    document.removeEventListener("mouseup", handleOutsideClick);
+  };
+}, []);
+
   useEffect(() => {
     document.title = 'CAD';
   }, []);
@@ -120,9 +145,12 @@ const handleNextClick = () => {
             </div> 
             {/* <Image src="/images/cad/cad website.png"width={800} height={800}/>  */}
 
-<div className="">
+
+
+            <div className="">
             {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+        <div id="overlay" 
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none bg-black bg-opacity-75 transition-transform duration-300 z-50">
           <img
             src={selectedImage}
             alt=""
@@ -130,7 +158,7 @@ const handleNextClick = () => {
             style={{ maxHeight: '80vh', zIndex: 9990 }}
           />
            <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             onClick={handleResetClick}
             style={{ zIndex: 9999 }}
           >
@@ -143,13 +171,13 @@ const handleNextClick = () => {
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) =>  (
                   <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl  cursor-pointer"
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative mb-4 rounded-2xl">
                       <Image
                         width={600}
                         height={400}
-                        className={`max-h-800 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                        className={`max-h-600 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                           selectedImage ? 'z-0' : ''
                         }`}
                         src={x.image}
@@ -163,30 +191,15 @@ const handleNextClick = () => {
                 </div>
               </div>
 
+              
+
               <div className="">
-            {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
-          <img
-            src={selectedImage}
-            alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
-          />
-           <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
-          >
-            <PiXCircle style={{ fontSize: '2rem' }} />
-          </button>
-        </div>
-      )}
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data3.map((x) =>  (
                   <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl  cursor-pointer"
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative mb-4 rounded-2xl">
                       <Image
@@ -207,23 +220,6 @@ const handleNextClick = () => {
               </div>
 
               <div className="">
-            {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
-          <img
-            src={selectedImage}
-            alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
-          />
-           <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
-          >
-            <PiXCircle style={{ fontSize: '2rem' }} />
-          </button>
-        </div>
-      )}
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -247,7 +243,12 @@ const handleNextClick = () => {
                     ))}
                   </div>
                 </div>
-              </div>    
+              </div>
+
+              <div className={styles.subtitledescription}>
+            <p> Photos here </p>
+            </div>
+
 
             <div className={styles.subtitledescription}>
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 

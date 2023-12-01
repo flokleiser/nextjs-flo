@@ -22,7 +22,7 @@ const data2 = [
   { image: '/images/sketches/cat3.png', id: 8}
 ];
 
-export default function testing3() {
+export default function testing() {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -33,21 +33,6 @@ export default function testing3() {
 const handleResetClick = () => {
     setSelectedImage(null);
 };
-
-// useEffect(() => {
-//   const handleOutsideClick = (event) => {
-//     const imageElement = document.querySelector("#overlay img");
-//     if (event.target.id !== "overlay" && !event.target.closest("#overlay")) {
-//       handleResetClick();
-//     }
-//   };
-
-//   document.addEventListener("mouseup", handleOutsideClick);
-
-//   return () => {
-//     document.removeEventListener("mouseup", handleOutsideClick);
-//   };
-// }, []);
 
 useEffect(() => {
   const handleOutsideClick = (event) => {
@@ -144,9 +129,12 @@ useEffect(() => {
              </p>
             </div>
 
+
+
             <div className="">
             {selectedImage && (
-        <div id="overlay" className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+        <div id="overlay" 
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none bg-black bg-opacity-75 transition-transform duration-300 z-50">
           <img
             src={selectedImage}
             alt=""
@@ -154,7 +142,7 @@ useEffect(() => {
             style={{ maxHeight: '80vh', zIndex: 9990 }}
           />
            <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             onClick={handleResetClick}
             style={{ zIndex: 9999 }}
           >
@@ -167,7 +155,7 @@ useEffect(() => {
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) =>  (
                   <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl active:bg-gray-400 cursor-pointer"
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative mb-4 rounded-2xl">
                       <Image
@@ -187,30 +175,15 @@ useEffect(() => {
                 </div>
               </div>
 
+              
+
               <div className="">
-            {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
-          <img
-            src={selectedImage}
-            alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
-          />
-           <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
-          >
-            <PiXCircle style={{ fontSize: '2rem' }} />
-          </button>
-        </div>
-      )}
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data2.map((x) =>  (
                   <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl active:bg-gray-400 cursor-pointer"
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative mb-4 rounded-2xl">
                       <Image
