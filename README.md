@@ -2,46 +2,13 @@
 
 ## Top Priority (important)
 
-- [x] Add all the screenshots
-
 - [ ] Add all the text --> about me (image)
 
 - [ ] Style title page
 
 - [ ] Video Player dynamic scaling
 
-- [ ] if i want to fix the prev/next image --> reset current id on handlereset
-
-- [ ] projects images --> failed to load when using next/link (?)
-
-## PAGES:
-
-- [ ] CAD --> Popsicle Sticks images
-
-- [x] Crafts
-
-- [x] Creative Coding
-
-- [x] Illustrator
-
-- [x] Sketches
-
-- [x] Skylands
-
-- [x] Voxel
-
-- [x] Animations
-
-
 ## TO FIX:
-
-- [ ] Image gallery left/right arrow not working --> fix
-
-- [ ] Also arrows are very broken but its doing something at least
-
-- [x] Add clickable images --> fullscreen
-
-- [ ] Add 404 page§
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 
@@ -51,13 +18,7 @@
 
 ## Almost Top Priority (nice to have, when bored)
 
-- [x] Animation card --> Gif on hover
-
 - [ ] Page Transitions
-
-- [x] Images clickeable
-
-- [x] Working image gallery
 
 - [ ] Search function --> look into type='search' (in layout.css)
 
@@ -69,12 +30,13 @@
 
 - [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 
+- [ ] Image gallery left/right arrow not working --> fix
 
 - [ ] Desktop view --> center button for grid
 
 - [ ] Projects grid --> spacing dynamic for different displays
 
-
+- [ ] Add 404 page
 
 ### Videos/Gifs/Images:
 
