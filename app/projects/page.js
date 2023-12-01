@@ -176,13 +176,13 @@ export default function projects() {
             <div style={{ padding: '2rem' }}> </div>
           
       </div>
-      {/* <div className = {styles.subtitledescription}>
+      <div className = {styles.subtitledescription}>
             <p>
             <a href='/projects/testing' >
             testing
             </a>  
             </p>
-            </div> */}
+            </div>
 
             <div style={{ padding: '2rem' }}> </div>
     </main>

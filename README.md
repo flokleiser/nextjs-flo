@@ -4,11 +4,11 @@
 
 - [x] Add all the screenshots
 
-- [ ] Add all the text --> about me (maybe images or logos of apps etc)
+- [ ] Add all the text --> about me (image)
+
+- [ ] Click anywhere to close --> implement
 
 - [ ] Style title page
-
-- [ ] Click anywhere to close --> not on mobile tho
 
 - [ ] if i want to fix the prev/next image --> reset current id on handlereset
 

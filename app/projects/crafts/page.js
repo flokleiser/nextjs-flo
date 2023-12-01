@@ -20,7 +20,7 @@ const images2 = [
 export default function crafts() {
   
   useEffect(() => {
-    document.title = 'Crafts';
+    document.title = 'Arts & Crafts';
   }, []);
 
     return (

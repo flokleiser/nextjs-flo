@@ -3,25 +3,26 @@ import React, {useState, useEffect} from 'react';
 import ExpandableButton from 'app/components/ExpandableButton.js';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
-import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { AnimatePresence, motion } from "framer-motion";
-import { IoIosArrowDown, IoIosArrowUp, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
   
 
 const data = [
-  { image: '/images/sketches/sketch test scan website3.png', id: 1},  
-  { image: '/images/sketches/sketch test scan website2.png', id: 2},
-  { image: '/images/sketches/illusions2.png', id: 3}
-];
-
-const data2 = [
+  { image: '/images/sketches/sketch test scan website3.png', id: 0},  
+  { image: '/images/sketches/sketch test scan website2.png', id: 1},
+  { image: '/images/sketches/illusions2.png', id: 2},
   { image: '/images/sketches/sketch test scan website4.png', id: 3},  
   { image: '/images/sketches/sketch test scan website5.png', id: 4},
-  { image: '/images/sketches/cat3.png', id: 5}
+];
+const data2 = [
+  
+  { image: '/images/sketches/cat3.png', id: 5},
+  { image: '/images/sketches/sketch test scan website4.png', id: 6},  
+  { image: '/images/sketches/sketch test scan website5.png', id: 7},
+  { image: '/images/sketches/cat3.png', id: 8}
 ];
 
-export default function testing() {
+export default function testing3() {
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -29,23 +30,65 @@ export default function testing() {
     setSelectedImage(imageSrc);
   };
 
-  const handleResetClick = () => {
+const handleResetClick = () => {
     setSelectedImage(null);
-   };
+};
 
+// useEffect(() => {
+//   const handleOutsideClick = (event) => {
+//     const imageElement = document.querySelector("#overlay img");
+//     if (event.target.id !== "overlay" && !event.target.closest("#overlay")) {
+//       handleResetClick();
+//     }
+//   };
+
+//   document.addEventListener("mouseup", handleOutsideClick);
+
+//   return () => {
+//     document.removeEventListener("mouseup", handleOutsideClick);
+//   };
+// }, []);
+
+useEffect(() => {
+  const handleOutsideClick = (event) => {
+    const imageElement = document.querySelector("#overlay img");
+
+    if (imageElement) {
+       const imageRect = imageElement.getBoundingClientRect();
+
+    if (
+      event.clientX < imageRect.left ||
+      event.clientX > imageRect.right ||
+      event.clientY < imageRect.top ||
+      event.clientY > imageRect.bottom
+      ) {
+        handleResetClick();
+      }
+    }
+  };
+
+  document.addEventListener("mouseup", handleOutsideClick);
+
+  return () => {
+    document.removeEventListener("mouseup", handleOutsideClick);
+  };
+}, []);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
     if (event.key === 'Escape') {
-     handleResetClick();
-    } 
+        handleResetClick();
+    }
   };
+
+  
   window.addEventListener('keydown', handleKeyDown);
 
   return () => {
     window.removeEventListener('keydown', handleKeyDown);
   };
 }, []);
+
 
     return (
         <main className={styles.main}>
@@ -103,7 +146,7 @@ export default function testing() {
 
             <div className="">
             {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+        <div id="overlay" className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
           <img
             src={selectedImage}
             alt=""
@@ -186,6 +229,7 @@ export default function testing() {
                   </div>
                 </div>
               </div>
+
        
         </main>
     )
