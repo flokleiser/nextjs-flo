@@ -1,11 +1,10 @@
+'use client'
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
+import React, {useState, useEffect} from 'react';
 
-export const metadata = {
-    title: 'Voxel Art',
-    description: '-',
-  }
+
 
   const image1 = [ 
     { image : '/images/voxel/voxel room transparent.png'},
@@ -16,6 +15,11 @@ export const metadata = {
   ];
 
 export default function voxel() {
+
+  useEffect(() => {
+    document.title = 'Voxel';
+  }, []);
+
     return (
         <main className={styles.main}>
               <div className="relative 

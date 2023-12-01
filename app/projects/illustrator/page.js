@@ -1,13 +1,15 @@
+'use client'
+import React, {useState, useEffect} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export const metadata = {
-    title: 'Illustrator Art',
-    description: '-',
-  }
-
 export default function illustrator() {
+
+  useEffect(() => {
+    document.title = 'Illustrator';
+  }, []);
+
     return (
         <main className={styles.main}>
               <div className="relative 

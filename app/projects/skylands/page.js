@@ -1,15 +1,12 @@
+'use client'
 import styles from 'app/page.module.css'
 import { BsUnity } from "react-icons/bs";
 import { BiSolidFileBlank, BiLink, BiLinkExternal } from "react-icons/bi";
 import Link from 'next/link';
 import Image from 'next/image';
+import React, {useState, useEffect} from 'react';
 
 
-
-export const metadata = {
-    title: 'Skylands',
-    description: '-',
-  }
 
   const images = [
     { image : '/images/skylands/skylands1.png'},
@@ -24,6 +21,11 @@ export const metadata = {
       ]
 
 export default function skylands() {
+
+  useEffect(() => {
+    document.title = 'Skylands';
+  }, []);
+
     return (
         <main className={styles.main}>
           <div className="relative 

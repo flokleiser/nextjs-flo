@@ -1,11 +1,10 @@
+'use client'
+import React, {useState, useEffect} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 
-export const metadata = {
-    title: 'Crafts',
-    description: '-',
-  }
+
 
 const images = [
 { image : '/images/crafts/crafts 1.png'},
@@ -19,6 +18,11 @@ const images2 = [
 ]
 
 export default function crafts() {
+  
+  useEffect(() => {
+    document.title = 'Crafts';
+  }, []);
+
     return (
         <main className={styles.main}>
               <div className="relative 

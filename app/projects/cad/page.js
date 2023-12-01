@@ -1,11 +1,9 @@
+'use client'
+import React, {useState, useEffect} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 
-export const metadata = {
-    title: 'CAD',
-    description: '-',
-  }
 
 const image1 = [
   { image : '/images/cad/cad website.png'},
@@ -24,6 +22,11 @@ const images2 = [
   { image: '/images/cad/cad parts3.png'}
 ]
 export default function cad() {
+
+  useEffect(() => {
+    document.title = 'CAD';
+  }, []);
+
     return (
         <main className={styles.main}>
               <div className="relative 
