@@ -5,7 +5,6 @@ import styles from 'app/page.module.css'
 import { DiGit, DiGithubBadge } from "react-icons/di";
 import Link from 'next/link';
 import Image from 'next/image'
-import { PiXCircle } from "react-icons/pi"; 
 
 
 const data = [
@@ -28,33 +27,36 @@ const data3 = [
 ];
 
 export default function creativeCoding() {
+  const [iframeHeight, setIframeHeight] = useState(0);
+  const [iframeWidth, setIframeWidth] = useState(0);
 
-
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
-  };
-
-const handleResetClick = () => {
-    setSelectedImage(null);
-};
 
   useEffect(() => {
-    const handleKeyDown = (event) => {
-    if (event.key === 'Escape') {
-        handleResetClick();
+    function handleResize() {
+      const aspectRatio = 16 / 9; // replace with your desired aspect ratio
+      const maxWidth = window.innerWidth -100; // replace with your desired maximum width
+      const maxHeight = window.innerHeight - 100; // replace with your desired maximum height
+
+      const maxWidthByHeight = maxHeight * aspectRatio;
+      const maxHeightByWidth = maxWidth / aspectRatio;
+
+      const width = Math.min(maxWidth, maxWidthByHeight);
+      const height = Math.min(maxHeight, maxHeightByWidth);
+
+      setIframeWidth(width);
+      setIframeHeight(height);
     }
-  };
 
-  
-  window.addEventListener('keydown', handleKeyDown);
+    handleResize();
 
-  return () => {
-    window.removeEventListener('keydown', handleKeyDown);
-  };
-}, []);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, 
   
+  []);
   useEffect(() => {
     document.title = 'Creative Coding';
   }, []);
@@ -105,9 +107,10 @@ const handleResetClick = () => {
               Creative Coding
             </h1>
 
-            {/* <div className={styles.subtitle}>
+            <div className={styles.subtitle}>
+             {/* <a href="https://github.com/flokleiser/Rotations-P5JS" target="_blank">Rotations<DiGithubBadge /></a> */}
              <h1> Rotations </h1>
-            </div> */}
+            </div>
       
             <div className={styles.subtitledescription}>
             <p>
@@ -117,16 +120,14 @@ const handleResetClick = () => {
             </div>
             
             <div style={{ padding: '2rem' }}>
-              <div>
             <iframe
                 src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
-                width= '100vw'
+                width={iframeWidth}
+                height={iframeHeight}
                 allowFullScreen
-                style={{ border: '2px solid white', width: '80vw', aspectRatio: '16/9'}}
+                style={{ border: '2px solid white'}}
             />
             </div>
-            </div>
-
 
             <div className={styles.subtitledescription}>
               <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
@@ -140,28 +141,15 @@ const handleResetClick = () => {
             <p> Examples: </p>
             </div>
             
-           
-        <div className="">
-            {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
-          <img
-            src={selectedImage}
-            alt=""
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
-          />
-           <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
-          >
-            <PiXCircle style={{ fontSize: '2rem' }} />
-          </button>
-        </div>
-      )}
+            <div className="">
               <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
+                <div className="py-2">
+                </div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data.map((x) =>  (
+                    {data.map((x) => {
+                      return (
+                        <>
+                 
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
@@ -169,42 +157,29 @@ const handleResetClick = () => {
                       <Image
                         width={400}
                         height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
                         src={x.image}
                         alt=""
-                        onClick={() => handleImageClick(x.image)}
                       />
                     </div>
                   </article>
-                    ))}
-                  </div>
+                  
+                  </>
+                    );
+                  })}
                 </div>
               </div>
-
-              <div className="">
-            {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
-          <img
-            src={selectedImage}
-            alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
-          />
-           <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
-          >
-            <PiXCircle style={{ fontSize: '2rem' }} />
-          </button>
-        </div>
-      )}
+            </div>
+            
+            <div className="">
               <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
+                <div className="py-2">
+                </div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data2.map((x) =>  (
+                    {data2.map((x) => {
+                      return (
+                        <>
+                 
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
@@ -212,42 +187,29 @@ const handleResetClick = () => {
                       <Image
                         width={400}
                         height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
                         src={x.image}
                         alt=""
-                        onClick={() => handleImageClick(x.image)}
                       />
                     </div>
                   </article>
-                    ))}
-                  </div>
+                  
+                  </>
+                    );
+                  })}
                 </div>
               </div>
+            </div>
 
-              <div className="">
-            {selectedImage && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
-          <img
-            src={selectedImage}
-            alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
-          />
-           <button
-            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
-          >
-            <PiXCircle style={{ fontSize: '2rem' }} />
-          </button>
-        </div>
-      )}
+            <div className="">
               <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
+                <div className="py-2">
+                </div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data3.map((x) =>  (
+                    {data3.map((x) => {
+                      return (
+                        <>
+                 
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
@@ -255,19 +217,19 @@ const handleResetClick = () => {
                       <Image
                         width={400}
                         height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
+                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
                         src={x.image}
                         alt=""
-                        onClick={() => handleImageClick(x.image)}
                       />
                     </div>
                   </article>
-                    ))}
-                  </div>
+                  
+                  </>
+                    );
+                  })}
                 </div>
-              </div>    
+              </div>
+            </div>
 
             <div style={{ padding: '2rem' }}> </div>
             {/* <code>

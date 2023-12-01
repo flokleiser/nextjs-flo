@@ -5,22 +5,64 @@ import { BiSolidFileBlank, BiLink, BiLinkExternal } from "react-icons/bi";
 import Link from 'next/link';
 import Image from 'next/image';
 import React, {useState, useEffect} from 'react';
+import { PiXCircle } from "react-icons/pi"; 
 
 
 
-  const images = [
+  const data = [
     { image : '/images/skylands/skylands1.png'},
     { image : '/images/skylands/skylandsfull.png'},
     { image : '/images/skylands/skylands2.png'},
     ]
 
-  const images2 = [
+  const data2 = [
       { image : '/images/skylands/skylands3.png'},
       { image : '/images/skylands/skylands4.png'},
       { image : '/images/skylands/skylands5.png'},
       ]
 
 export default function skylands() {
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleImageClick = (imageSrc) => {
+    setSelectedImage(imageSrc);
+  };
+
+const handleResetClick = () => {
+    setSelectedImage(null);
+};
+
+const handlePrevClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
+    setSelectedImage(data[currentIndex === 0 ? data.length - 1 : currentIndex - 1].image);
+  };
+
+const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
+    setSelectedImage(data[currentIndex === data.length - 1 ? 0 : currentIndex + 1].image);
+  };
+
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+    if (event.key === 'Escape') {
+        handleResetClick();
+    } else if (event.key === 'ArrowLeft') {
+      handleNextClick();
+    } else if (event.key === 'ArrowRight') {
+      handlePrevClick();
+    }
+  };
+
+  
+  window.addEventListener('keydown', handleKeyDown);
+
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+  };
+}, []);
 
   useEffect(() => {
     document.title = 'Skylands';
@@ -87,14 +129,27 @@ export default function skylands() {
               <div style={{ padding: '2rem' }}> </div>
 
               <div className="">
+            {selectedImage && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+          <img
+            src={selectedImage}
+            alt=""
+            className="max-w-4/5 max-h-4/5"
+            style={{ maxHeight: '80vh', zIndex: 9990 }}
+          />
+           <button
+            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            onClick={handleResetClick}
+            style={{ zIndex: 9999 }}
+          >
+            <PiXCircle style={{ fontSize: '2rem' }} />
+          </button>
+        </div>
+      )}
               <div className="p-3 container mx-auto">
-                <div className="py-2">
-                </div>
+                <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {images.map((x) => {
-                      return (
-                        <>
-                 
+                    {data.map((x) =>  (
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
@@ -102,50 +157,62 @@ export default function skylands() {
                       <Image
                         width={400}
                         height={400}
-                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                          selectedImage ? 'z-0' : ''
+                        }`}
                         src={x.image}
                         alt=""
+                        onClick={() => handleImageClick(x.image)}
                       />
                     </div>
                   </article>
-                  
-                  </>
-                    );
-                  })}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="">
+              <div className="">
+            {selectedImage && (
+        <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75  z-50">
+          <img
+            src={selectedImage}
+            alt=""
+            className="max-w-4/5 max-h-4/5"
+            style={{ maxHeight: '80vh', zIndex: 9990 }}
+          />
+           <button
+            className="absolute top-20 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            onClick={handleResetClick}
+            style={{ zIndex: 9999 }}
+          >
+            <PiXCircle style={{ fontSize: '2rem' }} />
+          </button>
+        </div>
+      )}
               <div className="p-3 container mx-auto">
-                <div className="py-2">
-                </div>
+                <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {images2.map((x) => {
-                      return (
-                        <>
-                 
+                    {data2.map((x) =>  (
                   <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl active:bg-gray-400 cursor-pointer"
                   >
                     <div className="relative mb-4 rounded-2xl">
                       <Image
                         width={400}
                         height={400}
-                        className="max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105"
+                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                          selectedImage ? 'z-0' : ''
+                        }`}
                         src={x.image}
                         alt=""
+                        onClick={() => handleImageClick(x.image)}
                       />
                     </div>
                   </article>
-                  
-                  </>
-                    );
-                  })}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-        
 
             <div className = {styles.subtitledescription}>
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
