@@ -54,11 +54,8 @@ export default function about() {
             
             <p className={styles.subtitledescription}>
             
-            My name is Florian Kleiser, im 24 years old and i come from Zürich, Switzerland.
-            <div style={{ padding: '2rem' }}> </div>
+            Hi, im Florian Kleiser, im 24 years old and i come from Zürich, Switzerland.
             My passions include (but are not limited to) programming, drawing, editing, gaming, skating and music.
-
-            <div style={{ padding: '2rem' }}> </div> 
             I am currently applying to study Interaction Design / Digital Ideation.
             
             </p>
