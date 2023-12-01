@@ -6,11 +6,11 @@ import Link from 'next/link'
 import { PiXCircle } from "react-icons/pi"; 
 
 const data = [
-  { image: '/images/illustrator/howtont/howtont2.jpg', id: 1},
-  { image: '/images/illustrator/howtont/howtont3.jpg', id: 2},
-  { image: '/images/illustrator/howtont/howtont4.jpg', id: 3},
-  { image: '/images/illustrator/howtont/howtont5.jpg', id: 4},
-  { image: '/images/illustrator/howtont/howtont6.jpg', id: 5},
+  { image: '/images/illustrator/howtont/howtont2.png', id: 1},
+  { image: '/images/illustrator/howtont/howtont3.png', id: 2},
+  { image: '/images/illustrator/howtont/howtont4.png', id: 3},
+  { image: '/images/illustrator/howtont/howtont5.png', id: 4},
+  { image: '/images/illustrator/howtont/howtont6.png', id: 5},
 ];
 
 const data2 = [
