@@ -5,6 +5,7 @@ import styles from 'app/page.module.css'
 import Image from 'next/image'
 import { PiXCircle } from "react-icons/pi"; 
 import { AnimatePresence, motion } from "framer-motion";
+import LightButton from 'app/components/LightButton.js';
   
 
 const data = [
@@ -27,6 +28,7 @@ export default function testing() {
 const handleResetClick = () => {
     setSelectedImage(null);
 };
+
 
 useEffect(() => {
   const handleOutsideClick = (event) => {
@@ -132,13 +134,12 @@ useEffect(() => {
           <img
             src={selectedImage}
             alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
+            className="max-w-4/5 max-h-4/5 z-9990"
+            style={{ maxHeight: '80vh'}}
           />
            <button
-            className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded z-9999"
             onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>
@@ -169,12 +170,21 @@ useEffect(() => {
                 </div>
               </div>
 
-              <iframe className={styles.iframevideo}
-              src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
-              </iframe>
+
+              <div className='flex align-center'>
+                <LightButton/>
+                <iframe className={styles.iframevideo} 
+                style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+
+                src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
+                </iframe>
+              </div>
 
               <div style={{ padding: '2rem' }}> </div>
        
         </main>
     )
 }
+
+
+// track of z levels: lightbutton button: 52, lightbutton overlay: 50, video: 50, image: 9990, image button: 9999

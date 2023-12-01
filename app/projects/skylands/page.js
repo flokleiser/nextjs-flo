@@ -7,6 +7,7 @@ import Image from 'next/image';
 import React, {useState, useEffect} from 'react';
 import { PiXCircle } from "react-icons/pi"; 
 import { DiGithubBadge } from "react-icons/di";
+import LightButton from 'app/components/LightButton.js';
 
 
 
@@ -114,11 +115,6 @@ useEffect(() => {
    z-[-1]">
           </div>
 
-           
-          {/* <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div> */}
-
             <h1 className={styles.title}>
               Skylands 
             </h1>
@@ -127,14 +123,15 @@ useEffect(() => {
             <p>
              <BsUnity /> VR game for the Meta Quest 2, made in Unity
             </p>
-      
             </div>
             
-            {/* <Gallery images={images} />  */}
-          
-            <iframe className={styles.iframevideo}
+            <div className='flex align-center'> 
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+            
             src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
               </iframe>
+            </div>
 
               <div style={{ padding: '2rem' }}> </div>
 
@@ -147,12 +144,12 @@ useEffect(() => {
             src={selectedImage}
             alt=""
             className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
+            style={{ maxHeight: '80vh', zIndex: 9999 }}
           />
            <button
             className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             onClick={handleResetClick}
-            style={{ zIndex: 9999 }}
+            style={{ zIndex: 9979 }}
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>

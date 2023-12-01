@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
+import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
     title: 'Music',
@@ -69,9 +70,9 @@ export default function music() {
             </video>     */}
 
         <div className = {styles.subtitle}>
-              <h1>
+              <p>
                Public Transport
-              </h1> 
+              </p> 
         </div>
 
         <div className={styles.subtitledescription}>
@@ -80,13 +81,17 @@ export default function music() {
             </p>
             </div>
 
-            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" >
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
+            src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" >
             </iframe>
+            </div>
 
         <div className = {styles.subtitle}>
-              <h1>
+              <p>
                Piano
-              </h1>
+              </p>
         </div>
             
             <div className={styles.subtitledescription}>
@@ -95,13 +100,16 @@ export default function music() {
             </p>
             </div>
            
-            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" >
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" >
             </iframe>
+            </div>
 
         <div className = {styles.subtitle}>
-              <h1>
+              <p>
                Blurry
-              </h1>
+              </p>
         </div>
 
         <div className={styles.subtitledescription}>
@@ -110,8 +118,11 @@ export default function music() {
             </p>
             </div>
 
-            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
            </iframe>
+           </div>
 
            <div style={{ padding: '2rem' }}> </div>
 

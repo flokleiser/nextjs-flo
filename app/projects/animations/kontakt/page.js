@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
+import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
     title: 'Kontakt',
@@ -62,9 +63,13 @@ export default function kontakt() {
             <video
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
             </video> */}
-          
-          <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview"> 
+         
+         <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
+            src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview"> 
             </iframe>
+            </div>
 
             <div style={{ padding: '2rem' }}> </div>
         </main>

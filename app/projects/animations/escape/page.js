@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link'
+import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
     title: 'Escape',
@@ -60,10 +61,12 @@ export default function escape() {
            </p> 
             </div>
 
-
-        <iframe className={styles.iframevideo}
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
          src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
           </iframe>
+          </div>
             
           <div style={{ padding: '2rem' }}> </div>
 

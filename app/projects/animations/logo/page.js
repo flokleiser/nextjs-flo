@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
+import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
     title: 'Logo',
@@ -60,8 +61,12 @@ export default function logo() {
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}
 
-          <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/preview"> 
+<div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
+          src="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/preview"> 
           </iframe>
+          </div>
           <div style={{ padding: '2rem' }}> </div>
         </main>
     )

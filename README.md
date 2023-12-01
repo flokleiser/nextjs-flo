@@ -2,10 +2,9 @@
 
 ## Top Priority (important)
 
-- [ ] Add all the text
-    - [ ] About me
-
 - [ ] Style title page
+
+- [ ] Make page not scrollable when big image overlay
 
 ## TO FIX:
 
@@ -22,8 +21,6 @@
 - [ ] Search function --> look into type='search' (in layout.css)
 
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
-
-- [ ] Dim button ?
 
 - [ ] Title Page: Interactable onHover things --> text bigger or something
 

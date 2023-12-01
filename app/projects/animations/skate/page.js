@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
+import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
     title: 'Skate',
@@ -77,8 +78,11 @@ export default function skate() {
             </p>
             </div>
        
-            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0/preview"> 
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0/preview"> 
             </iframe>
+            </div>
 
         <div className = {styles.subtitle}>
               <p>
@@ -93,8 +97,11 @@ export default function skate() {
             </div>
         
       
-            <iframe className={styles.iframevideo} src="https://drive.google.com/file/d/10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E/preview">
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E/preview">
             </iframe>
+            </div>
 
             <div style={{ padding: '2rem' }}> </div>
         </main>
