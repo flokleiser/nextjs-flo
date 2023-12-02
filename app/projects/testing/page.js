@@ -40,22 +40,26 @@ export default function testing() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-          
-      <div className="absolute z-60 opacity-50 hover:-scroll-m-10">
-          <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>         
-      </div>
+      
+    
       <h1 className={styles.titleHomepage} style={{zIndex:60}}>
         Florian Kleiser
       </h1>
-  
+
+      {/* <div className="w-full h-full"> */}
+      <div className="absolute top-20 z--9999 opacity-5">
+          <Image src="/images/Artboard 1.png"width={1000} height={400} className='shadow-2xl rounded-2xl'/>         
+      </div>
+      {/* </div> */}
+
       <div style={{ padding: '6rem' }}> </div>
+  
+  <div className={styles.buttonGeneralHomepage} style={{zIndex:60}} >
+      <h2 className={styles.subtitleHomepage}>
+            <Link  className="link-hover " href="/projects"> <CiGrid32/> Projects </Link> 
+      </h2>
+  </div>
 
-
-     <div className={styles.buttonGeneralHomepage} style={{zIndex:60}}>
-        <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover " href="/projects"> <CiGrid32/> Projects </Link> 
-        </h2>
-     </div>
 
      <div style={{ padding: '1rem' }}> </div>
 
@@ -69,6 +73,8 @@ export default function testing() {
            </Link> 
         </h2>
      </div>
+
+
 
     </main>
 

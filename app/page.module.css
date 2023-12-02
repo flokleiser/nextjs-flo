@@ -41,7 +41,7 @@
   display:flex;
   align-items: center;
   cursor:pointer;
-  color: rgb(210,210,210);
+  color: white;
 }
 
 .buttonNew {
@@ -680,7 +680,8 @@
 
   .buttonGeneralHomepage:hover {
     transform: scale(1.2);
-   color: white;
+    text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5);
+    /* text-shadow: gray 0px 0px 10px; */
   }
 
   .link-hover:hover {

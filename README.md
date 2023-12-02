@@ -4,7 +4,9 @@
 
 - [ ] Style title page
 
-    - [ ] Florian Kleiser 3d maybe?
+    - [ ] cards skiced like image + big on hover
+
+    - [ ] Projects/Portfolio next to each other
 
     - [ ] Project cards floating by, or scrolling by
 
@@ -23,6 +25,8 @@
 - [ ] add some "scroll resistance" ? scrolling slower etc
 
 ## TO FIX:
+
+- [ ] Background color on mobile (globals.css)
 
 - [ ] Navbar smaller on mobile
 
