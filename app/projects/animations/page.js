@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 
 export const metadata = {
-    title: 'Animations',
+    title: 'Projects - Animations',
     description: '-',
   }
 
@@ -46,10 +46,9 @@ export default function animations() {
    z-[-1]">
         </div> 
 
-           
-            {/* <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div> */}
+        <div className={styles.backbutton}>
+            <h1> <Link href="/projects">All Projects </Link> </h1>
+            </div> 
 
 
             <h1 className={styles.title}>

@@ -54,7 +54,7 @@ export default function projects() {
             <h1 className={styles.title}> 
             Projects
             </h1>
-        
+
         <div className={styles.grid}>
 
         <a

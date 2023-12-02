@@ -3,7 +3,13 @@
 ## Top Priority (important)
 
 - [ ] Style title page
-    - [ ] General: links transform more on hover
+
+    - [ ] General 1: Links in the middle, split on left/right?
+
+    - [ ] General 2: Links more like a scrollwheel (?)
+
+    - [ ] General 3: links transform more on hover
+
     - [ ] idea 1: Background card
     - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
     - [ ] idea 3: scrolling down to projects page? --> test with testing --> google how to divide single page, one to 100vh, next one starting below
@@ -11,14 +17,13 @@
 
 - [ ] Look into cursor pointer (why does it work on navbar)
 
-- [ ]
-
-
 - [ ] add some "scroll resistance" ? scrolling slower etc
 
 ## TO FIX:
 
-- [ ] Back Button --> top left under navbar
+- [ ] Back Button hidden when navbar is extended
+
+- [ ] Navbar scaling dynamically on mobile view
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 

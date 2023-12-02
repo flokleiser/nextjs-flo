@@ -74,7 +74,7 @@ useEffect(() => {
 }, []);
 
   useEffect(() => {
-    document.title = 'Arts & Crafts';
+    document.title = 'Projects - Arts & Crafts';
   }, []);
 
     return (
@@ -112,6 +112,10 @@ useEffect(() => {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
+
+          <div className={styles.backbutton}>
+            <h1> <Link href="/projects">All Projects </Link> </h1>
+            </div>
 
            
           {/* <div className={styles.backbutton}>

@@ -72,7 +72,7 @@ useEffect(() => {
 }, []);
 
   useEffect(() => {
-    document.title = 'Voxel';
+    document.title = 'Projects - Voxel';
   }, []);
 
     return (
@@ -110,10 +110,10 @@ useEffect(() => {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-{/* 
+
           <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div> */}
+            <h1> <Link href="/projects">All Projects </Link> </h1>
+            </div>
 
             <h1 className={styles.title}>
              Voxel Art 

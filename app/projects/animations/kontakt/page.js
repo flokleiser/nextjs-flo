@@ -3,7 +3,7 @@ import Link from 'next/link';
 import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
-    title: 'Kontakt',
+    title: 'Animations - Kontakt',
     description: '-',
   }
 
@@ -45,7 +45,7 @@ export default function kontakt() {
           </div> 
          
           <div className={styles.backbutton}>
-            <h1> <Link href="/projects/animations"> Back to Animations</Link> </h1>
+            <h1> <Link href="/projects/animations">All Animations</Link> </h1>
             </div>
 
             <h1 className={styles.title}>

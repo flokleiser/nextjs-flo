@@ -3,7 +3,7 @@ import Link from 'next/link'
 import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
-    title: 'Escape',
+    title: 'Animations - Escape',
     description: '-',
   }
 
@@ -46,7 +46,8 @@ export default function escape() {
 
           <div className={styles.backbutton}>
           {/* <div className="absolute top-20 left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"> */}
-          <h1> <Link  href="/projects/animations">Animations</Link> </h1>
+          <h1> <Link  href="/projects/animations">All Animations</Link> </h1>
+         
           </div>
 
             <h1 className={styles.title}>

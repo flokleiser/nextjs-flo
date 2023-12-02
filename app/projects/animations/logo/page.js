@@ -3,7 +3,7 @@ import Link from 'next/link';
 import LightButton from 'app/components/LightButton.js';
 
 export const metadata = {
-    title: 'Logo',
+    title: 'Animations - Logo',
     description: '-',
   }
 
@@ -46,7 +46,7 @@ export default function logo() {
 
 
           <div className={styles.backbutton}>
-            <h1> <Link href="/projects/animations"> Back to Animations</Link> </h1>
+            <h1> <Link href="/projects/animations">All Animations</Link> </h1>
             </div>
           
             <h1 className={styles.title}>
