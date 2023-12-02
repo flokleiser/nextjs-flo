@@ -61,7 +61,7 @@ export default function projects() {
             className={styles.card}
             href = '/projects/sketches'
             style={{ 
-                    backgroundImage: 'url("/images/cards/sketches transparent10.png")',
+                    backgroundImage: 'url("/images/cards/sketch1.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -75,7 +75,8 @@ export default function projects() {
             <a
             href = '/projects/creative-coding'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
+            style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.png")' ,
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -106,7 +107,8 @@ export default function projects() {
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/voxel transparentwide.png")',
+            // style={{ backgroundImage: 'url("/images/cards/voxel transparentwide.png")',
+            style={{ backgroundImage: 'url("/images/cards/voxelwhite5.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -120,7 +122,8 @@ export default function projects() {
                 className={styles.card}
                 rel="noopener noreferrer"
                 href = '/projects/cad'
-                style={{ backgroundImage: 'url("/images/cards/cad transparent2.png")',
+                // style={{ backgroundImage: 'url("/images/cards/cad transparent2.png")',
+                style={{ backgroundImage: 'url("/images/cards/cadwhite.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
             >
@@ -163,7 +166,7 @@ export default function projects() {
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/illustrator card2.png")',
+            style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
