@@ -1,18 +1,14 @@
 import styles from 'app/page.module.css'
-import Link from 'next/link'
-import Image from 'next/image'
+import { CiGrid32 } from "react-icons/ci";
+import Link from 'next/link';
+import { ImFilePdf } from "react-icons/im";
+import { PiFilePdfLight } from "react-icons/pi";
 
+export default function testing2() {
+  return (
 
-export const metadata = {
-    title: 'Projects',
-    description: '-',
-}
-
-export default function projects() {
-    
-    return (
-        <main className={styles.main}>
-            <div className="relative 
+    <main className={styles.main}>
+        <div className="relative 
    flex 
    place-items-center 
    before:absolute 
@@ -44,14 +40,28 @@ export default function projects() {
    after:dark:opacity-40 
    before:lg:h-[360px] 
    z-[-1]">
-            </div>
+          </div>
+      <h1 className={styles.titleHomepage}>
+        Florian Kleiser
+      </h1>
+  
+      <div style={{ padding: '8rem' }}> </div>
 
-{/*            
-            <div className={styles.backbutton}>
-            <h1> <Link href="/"> Back to Homepage</Link> </h1>
-            </div> */}
 
-            <h1 className={styles.title}> 
+     <div className={styles.buttonGeneral}>
+        <h2 className={styles.subtitleHomepage}>
+          <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
+        </h2>
+     </div>
+
+     <div className={styles.buttonGeneral}>
+        <h2 className={styles.subtitleHomepage}>
+          <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> <PiFilePdfLight/> Portfolio </Link> 
+        </h2>
+     </div>
+
+
+     <h1 className={styles.title}> 
             Projects
             </h1>
         
@@ -100,7 +110,7 @@ export default function projects() {
             </h2>
             <p>VR Game, Unity</p>
             </a>
-
+       
 
             <a
             href = '/projects/voxel'
@@ -185,6 +195,8 @@ export default function projects() {
             </div> */}
 
             <div style={{ padding: '2rem' }}> </div>
+   
     </main>
-    )
+
+  )
 }

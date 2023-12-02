@@ -3,6 +3,11 @@
 ## Top Priority (important)
 
 - [ ] Style title page
+    - [ ] idea 1: Background card
+    - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
+    - [ ] idea 3: scrolling down to projects page? --> test with testing
+    - [ ] idea 4: projects images scrolling by (in the background or in the middle)
+
 
 - [ ] add some "scroll resistance" ? scrolling slower etc
 
@@ -11,8 +16,6 @@
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 
 - [ ] subtitles center and not boxed
-
-- [ ] Images not loading when going back to projects page without reloading --> google?
 
 ## Almost Top Priority (nice to have, when bored)
 
