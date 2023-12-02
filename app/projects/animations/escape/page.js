@@ -45,15 +45,13 @@ export default function escape() {
           </div> 
 
           <div className={styles.backbutton}>
-          <h1> <Link href="/projects/animations"> Back to Animations</Link> </h1>
+          {/* <div className="absolute top-20 left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"> */}
+          <h1> <Link  href="/projects/animations">Animations</Link> </h1>
           </div>
 
             <h1 className={styles.title}>
               Escape 
             </h1>
-            {/* <video 
-            src="https://drive.google.com/uc?id=1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF" controls>
-            </video> */}
 
           <div className={styles.subtitledescription}>
            <p>
