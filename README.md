@@ -21,15 +21,19 @@
 
 ## TO FIX:
 
-- [ ] Back Button hidden when navbar is extended
+- [ ] Navbar smaller on mobile
 
-- [ ] Navbar scaling dynamically on mobile view
+- [ ] OR: navbar expandable on mobile
+
+- [ ] Navbar centered horizontally on mobile
 
 - [ ] Gridanimation & Cardanimation smaller displays not centered
 
 - [ ] subtitles center and not boxed
 
 ## Almost Top Priority (nice to have, when bored)
+
+- [ ] "progress bar" thingy on the left (on desktop view, shows full page and clickable circles for video, images etc)
 
 - [ ] Page Transitions
 

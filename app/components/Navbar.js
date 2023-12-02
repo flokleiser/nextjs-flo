@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {AnimatePresence, motion} from "framer-motion";
-import { BsXCircle, BsList, BsX,  BsGrid, BsSearch } from "react-icons/bs";
-import { RiMenuUnfoldLine, RiMenuFoldLine } from "react-icons/ri";
+import { BsList, BsX, BsSearch } from "react-icons/bs";
+
 
 const navItems = [
   {
@@ -37,7 +37,6 @@ export default function Navbar() {
   };
 
 
-
   return (
     <div className="flex border border-stone-800/90 p-[0.4rem] mb-3 sticky top bg-stone-900/80 backdrop-blur-md ">
     {/*menu button*/}
@@ -62,20 +61,19 @@ export default function Navbar() {
         >
         
       <nav className="flex justify-start items-center w-full z-[100]" >
+   
       
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
 
           return (
             <Link
-            // <button
               key={item.path}
-              className={`px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
+              className={`px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
                 isActive ? "text-zinc-100" : "text-zinc-300"
               }`}
               data-active={isActive}
               href={item.path}
-              // onClick={() => scrollTo(item.path)}
               onMouseOver={() => setHoveredPath(item.path)}
               onMouseLeave={() => setHoveredPath(pathname)}
             >
@@ -86,7 +84,7 @@ export default function Navbar() {
                   layoutId="navbar"
                   aria-hidden="true"
                   style={{
-                    width:"100%",
+                    width:'100%'
                   }}
                   transition={{
                     type:"spring",
