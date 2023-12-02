@@ -47,13 +47,13 @@ export default function Home() {
       <div style={{ padding: '8rem' }}> </div>
 
 
-     <div className={styles.buttonGeneral}>
+     <div className={styles.buttonGeneralHomepage}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
         </h2>
      </div>
 
-     <div className={styles.buttonGeneral}>
+     <div className={styles.buttonGeneralHomepage}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> 
           {/* <PiFilePdfLight/>  */}
