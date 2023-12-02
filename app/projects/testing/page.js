@@ -1,10 +1,9 @@
 import styles from "app/page.module.css"
-import { CiGrid32 } from "react-icons/ci";
+import { CiGrid32, CiStickyNote } from "react-icons/ci";
 import Link from 'next/link';
-import { ImFilePdf } from "react-icons/im";
-import { PiFilePdfLight } from "react-icons/pi";
+import Image from 'next/image'
 
-export default function testingtitle() {
+export default function testing() {
   return (
 
     <main className={styles.main}>
@@ -41,36 +40,36 @@ export default function testingtitle() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-      <h1 className={styles.titleHomepage}>
+          
+      <div className="absolute z-60 opacity-50 hover:-scroll-m-10">
+          <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>         
+      </div>
+      <h1 className={styles.titleHomepage} style={{zIndex:60}}>
         Florian Kleiser
       </h1>
   
-      {/* <div className={styles.subtitleHomepage}>
-         <h1> maybe floaty thing here?
-         </h1>
-      </div> */}
-      {/* <h1 className={styles.titleHomepage}>
-       Center Element
-      </h1> */}
-      <div style={{ padding: '8rem' }}> </div>
+      <div style={{ padding: '6rem' }}> </div>
 
 
-     <div className={styles.buttonGeneral}>
+     <div className={styles.buttonGeneralHomepage} style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
+          <Link  className="link-hover " href="/projects"> <CiGrid32/> Projects </Link> 
         </h2>
      </div>
 
-     <div className={styles.buttonGeneral}>
+     <div style={{ padding: '1rem' }}> </div>
+
+     <div className={styles.buttonGeneralHomepage} style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> <PiFilePdfLight/> Portfolio </Link> 
+          <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> 
+          <div className={styles.mirrorIcon}>
+          <CiStickyNote/>
+          </div>
+          Portfolio
+           </Link> 
         </h2>
      </div>
-      
-      {/* <h2 className={styles.subtitleHomepage}>
-        <a href="/projects"><CiGrid32/></a>
-      </h2> */}
-   
+
     </main>
 
   )

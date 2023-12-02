@@ -57,11 +57,19 @@ export default function plasticine() {
            
            <div className={styles.subtitledescription}>
             <p>
-            Stop-motion animation made in collaboration with Maude Tiril in 2021 (link) <br />
-            Figures made out of plasticine, edited with Dragonframe 4 and Adobe Premiere Pro
+            Stop-motion animation made in in 2021. 
+            Figures made out of plasticine, edited with Dragonframe 4 and Adobe Premiere Pro.
             </p>
-      
             </div>
+            <div className={styles.subtitledescription}>
+              <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+                <a style={{paddingBottom: '2rem'}}
+                href="https://www.instagram.com/tiriltattoo/" target="_blank">
+            Made in collaboration with Maude Tiril.
+            </a>
+            </div>
+            </div>
+
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi/preview">

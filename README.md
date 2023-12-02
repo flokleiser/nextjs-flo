@@ -4,6 +4,10 @@
 
 - [ ] Style title page
 
+    - [ ] Florian Kleiser 3d maybe?
+
+    - [ ] Project cards floating by, or scrolling by
+
     - [ ] General 1: Links in the middle, split on left/right?
 
     - [ ] General 2: Links more like a scrollwheel (?)
@@ -12,7 +16,6 @@
 
     - [ ] idea 1: Background card
     - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
-    - [ ] idea 3: scrolling down to projects page? --> test with testing --> google how to divide single page, one to 100vh, next one starting below
     - [ ] idea 4: projects images scrolling by (in the background or in the middle)
 
 - [ ] Look into cursor pointer (why does it work on navbar)

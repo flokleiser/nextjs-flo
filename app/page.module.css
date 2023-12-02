@@ -10,6 +10,7 @@
   z-index: -1;
 }
 
+
 .container {
   display: flex;
   align-items: center;
@@ -31,6 +32,16 @@
   display:flex;
   align-items: center;
   cursor:pointer;
+}
+
+.buttonGeneralHomepage {
+  transition: transform 200ms, border 200ms;
+  font-size: 3.5rem;
+  font-weight: normal;
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+  color: rgb(210,210,210);
 }
 
 .buttonNew {
@@ -656,7 +667,6 @@
     transform: translateX(4px);
   } 
 
-
   .backbutton:hover {
     transform: scale(1.07);
   }
@@ -667,6 +677,11 @@
   .buttonGeneral:hover {
     transform: scale(1.07);
   } 
+
+  .buttonGeneralHomepage:hover {
+    transform: scale(1.2);
+   color: white;
+  }
 
   .link-hover:hover {
     transform: scale(1.07);

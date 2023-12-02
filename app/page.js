@@ -44,13 +44,6 @@ export default function Home() {
         Florian Kleiser
       </h1>
   
-      {/* <div className={styles.subtitleHomepage}>
-         <h1> maybe floaty thing here?
-         </h1>
-      </div> */}
-      {/* <h1 className={styles.titleHomepage}>
-       Center Element
-      </h1> */}
       <div style={{ padding: '8rem' }}> </div>
 
 
