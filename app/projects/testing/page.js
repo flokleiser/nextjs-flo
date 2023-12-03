@@ -1,12 +1,14 @@
-import styles from "app/page.module.css"
-import { CiGrid32, CiStickyNote } from "react-icons/ci";
+import styles from '/app/page.module.css'
+import { CiGrid32, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image'
 
+
+
 export default function testing() {
   return (
-
-    <main className={styles.main}>
+    
+    <main className={styles.main}style={{zIndex:60, boxShadow:10}}>
         <div className="relative 
    flex 
    place-items-center 
@@ -40,42 +42,62 @@ export default function testing() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-      
-    
-      <h1 className={styles.titleHomepage} style={{zIndex:60}}>
+      <h1 className={styles.titleHomepage}>
         Florian Kleiser
       </h1>
 
-      {/* <div className="w-full h-full"> */}
-      <div className="absolute top-20 z--9999 opacity-5">
-          <Image src="/images/Artboard 1.png"width={1000} height={400} className='shadow-2xl rounded-2xl'/>         
+      {/* <span>
+
+      <div className={styles.cardHomepage}
+          style={{
+            backgroundImage: 'url("/images/homepage/1.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center',
+            }}>
       </div>
-      {/* </div> */}
+      
+      </span> */}
 
-      <div style={{ padding: '6rem' }}> </div>
-  
-  <div className={styles.buttonGeneralHomepage} style={{zIndex:60}} >
-      <h2 className={styles.subtitleHomepage}>
-            <Link  className="link-hover " href="/projects"> <CiGrid32/> Projects </Link> 
-      </h2>
-  </div>
+    <div className="flex">
+
+      {/* <div className={styles.cardHomepage}>
+      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/1.png" width={0} height={0} sizes="500px" />  
+      </div> */}
+      <div className={styles.cardHomepage}>
+      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/2.png" width={0} height={0} sizes="500px" />  
+      </div>
+      {/* <div className={styles.cardHomepage}>
+      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/3.png" width={0} height={0} sizes="500px" />  
+      </div> */}
+      <div className={styles.cardHomepage}>
+      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/4.png" width={0} height={0} sizes="500px" />  
+      </div>
+      {/* <div className={styles.cardHomepage}>
+      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/5.png" width={0} height={0} sizes="500px" />  
+      </div> */}
+      {/* <div className={styles.cardHomepage}>
+      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/6.png" width={0} height={0} sizes="500px" />  
+      </div> */}
+    </div>
 
 
-     <div style={{ padding: '1rem' }}> </div>
+     <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
+        <h2 className={styles.subtitleHomepage}>
+          <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
+        </h2>
+     </div>
 
-     <div className={styles.buttonGeneralHomepage} style={{zIndex:60}}>
+     <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> 
           <div className={styles.mirrorIcon}>
           <CiStickyNote/>
           </div>
-          Portfolio
-           </Link> 
+          Portfolio 
+          </Link> 
         </h2>
      </div>
-
-
-
+      
     </main>
 
   )

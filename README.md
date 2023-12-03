@@ -4,6 +4,8 @@
 
 - [ ] Style title page
 
+    - [ ] CARDS HOMEPAGE PROBLEMS --> set width of card is messing with it (?)
+
     - [ ] cards skiced like image + big on hover
 
     - [ ] Projects/Portfolio next to each other
