@@ -4,6 +4,10 @@
 
 - [ ] Style title page
 
+    - [ ] Auto hover on page reload
+
+    - [ ] Change to image on small screen
+
     - [ ] Idea: make sliced cards fly in
 
     - [ ] Look into alpha masks using css --> only non transparent part hoverable
