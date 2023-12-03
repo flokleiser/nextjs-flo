@@ -246,11 +246,13 @@ transition: transform 200ms, opacity 200ms;
 .gridanimation {
   display: grid;
   justify-self: center;
-  /* grid-template-columns: repeat(3, minmax(25%, auto)); */
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3, minmax(25%, auto));
+  /* grid-template-columns: 33% 33% 33%; */
+ 
   max-width: 100%;
   width: var(--max-width);
   justify-content: center;
+
 }
 
 
@@ -854,7 +856,8 @@ transition: transform 200ms, opacity 200ms;
   }
 
   .gridanimation {
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(1, 50%);
+    padding-left: 2rem;
   }
 }
 

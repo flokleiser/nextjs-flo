@@ -1,5 +1,5 @@
 import styles from '/app/page.module.css'
-import { CiGrid32, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
+import { CiGrid32,CiImageOn, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image'
 
@@ -58,11 +58,11 @@ export default function Home() {
       <Image className={styles.cardHomepage} style={{marginLeft: '-6.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
       
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={600} height={600} />  
       
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
       <Image className={styles.cardHomepage} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
-      
+
     </div>
 
     {/* <div style={{ padding: '2rem' }}> </div> */}
@@ -76,9 +76,10 @@ export default function Home() {
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/1wO83IUSZOoHywbHAPXMUuf5oEhLLAwMu/view?usp=sharing" target="_blank"> 
-          <div className={styles.mirrorIcon}>
+          {/* <div className={styles.mirrorIcon}>
           <CiStickyNote/>
-          </div>
+          </div> */}
+          <CiImageOn />
           Portfolio 
           </Link> 
         </h2>

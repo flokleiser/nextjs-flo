@@ -6,18 +6,14 @@
 
     - [ ] Auto hover on page reload
 
-    - [ ] Change to image on small screen
-
     - [ ] Idea: make sliced cards fly in
 
     - [ ] Look into alpha masks using css --> only non transparent part hoverable
-    - [ ] Make image not squished when small screen
 
     - [ ] General 3: links transform more on hover
 
     - [ ] idea 1: Background card
     - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
-    - [ ] idea 4: projects images scrolling by (in the background or in the middle)
 
 - [ ] Look into cursor pointer (why does it work on navbar)
 
