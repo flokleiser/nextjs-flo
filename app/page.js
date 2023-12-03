@@ -54,21 +54,15 @@ export default function Home() {
 
     <div className={styles.homepageSlices}>
   
-      {/* <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '0rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{marginLeft: '-4.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '0rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />   */}
-
-
-      <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '-5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginRight: '-10.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginRight: '-10.5rem', width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginRight: '-9.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ zIndex:1, marginLeft:'-0.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
-
+      <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '1rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{marginLeft: '-6.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
+      
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={300} height={300} />  
+      
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
+      
     </div>
 
     {/* <div style={{ padding: '2rem' }}> </div> */}
