@@ -10,6 +10,11 @@
   z-index: -1;
 }
 
+.cardHomepage {
+opacity:0.1;
+transition: transform 200ms, opacity 200ms;
+}
+
 
 .container {
   display: flex;
@@ -587,6 +592,16 @@
 
   .card:hover span {
     transform: translateX(4px);
+  }
+
+  .cardHomepage:hover {
+    transform: scale(1.07); 
+    opacity:0.5;    
+  }
+
+  .cardHomepage2:hover {
+    transform:scale(1.07);
+    opacity:0.5;
   }
 
   /* Cardanimation Normal */
