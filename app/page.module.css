@@ -15,6 +15,24 @@ opacity:0.1;
 transition: transform 200ms, opacity 200ms;
 }
 
+.cardHomepage img {
+  width: 'auto';
+height: '400px'
+}
+
+@media (max-width: 600px) {
+  .cardHomepage img {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .cardHomepage img {
+    width: 40%;
+    height: auto;
+  }
+}
 
 .container {
   display: flex;
@@ -108,7 +126,7 @@ transition: transform 200ms, opacity 200ms;
   font-size: 6.5rem;
   font-weight: normal;
   padding-bottom: 2rem;
-  padding-top: 2rem;
+  /* padding-top: 1rem; */
 }
 .subtitleHomepage {
   font-size: 3.5rem;
@@ -596,12 +614,7 @@ transition: transform 200ms, opacity 200ms;
 
   .cardHomepage:hover {
     transform: scale(1.07); 
-    opacity:0.5;    
-  }
-
-  .cardHomepage2:hover {
-    transform:scale(1.07);
-    opacity:0.5;
+    opacity:0.8;    
   }
 
   /* Cardanimation Normal */

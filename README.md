@@ -4,17 +4,10 @@
 
 - [ ] Style title page
 
-    - [ ] CARDS HOMEPAGE PROBLEMS --> set width of card is messing with it (?)
+    - [ ] Idea: make sliced cards fly in
 
-    - [ ] cards skiced like image + big on hover
-
-    - [ ] Projects/Portfolio next to each other
-
-    - [ ] Project cards floating by, or scrolling by
-
-    - [ ] General 1: Links in the middle, split on left/right?
-
-    - [ ] General 2: Links more like a scrollwheel (?)
+    - [ ] Look into alpha masks using css --> only non transparent part hoverable
+    - [ ] Make image not squished when small screen
 
     - [ ] General 3: links transform more on hover
 

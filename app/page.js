@@ -1,8 +1,9 @@
-import styles from './page.module.css'
+import styles from '/app/page.module.css'
 import { CiGrid32, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image'
-import { PiFilePdfLight } from "react-icons/pi";
+
+
 
 export default function Home() {
   return (
@@ -44,13 +45,36 @@ export default function Home() {
       <h1 className={styles.titleHomepage}>
         Florian Kleiser
       </h1>
-  
-      <div className="absolute top-20 z--9999 opacity-10">
+
+      {/* <div className="absolute top-20 z--9999 opacity-10">
           <Image src="/images/Artboard 5.png" width={850} height={50}  />         
+      </div> */}
+
+ <div style={{ margin: '-1rem' }}> </div>
+
+    <div className="flex">
+
+      <div className={styles.cardHomepage} style={{ zIndex:1,  marginRight: '0rem' }}>
+      <Image style={{width: 'auto', height: '400px', }} src="/images/homepage/new/1.png" width={300} height={300} />  
       </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4.5rem' }}>
+      <Image style={{width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4.5rem' }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4rem' }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4rem' }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '0rem', zIndex:1 }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
+      </div>
+    </div>
 
-      <div style={{ padding: '8rem' }}> </div>
-
+    {/* <div style={{ padding: '2rem' }}> </div> */}
 
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>

@@ -46,40 +46,29 @@ export default function testing() {
         Florian Kleiser
       </h1>
 
-      {/* <span>
-
-      <div className={styles.cardHomepage}
-          style={{
-            backgroundImage: 'url("/images/homepage/1.png")',
-            backgroundSize: '102%',
-            backgroundPosition: 'center',
-            }}>
-      </div>
-      
-      </span> */}
-
     <div className="flex">
 
-      {/* <div className={styles.cardHomepage}>
-      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/1.png" width={0} height={0} sizes="500px" />  
-      </div> */}
-      <div className={styles.cardHomepage}>
-      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/2.png" width={0} height={0} sizes="500px" />  
+      <div className={styles.cardHomepage} style={{ zIndex:1,  marginRight: '0rem' }}>
+      <Image style={{width: 'auto', height: '400px', }} src="/images/homepage/new/1.png" width={300} height={300} />  
       </div>
-      {/* <div className={styles.cardHomepage}>
-      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/3.png" width={0} height={0} sizes="500px" />  
-      </div> */}
-      <div className={styles.cardHomepage}>
-      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/4.png" width={0} height={0} sizes="500px" />  
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4.5rem' }}>
+      <Image style={{width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
       </div>
-      {/* <div className={styles.cardHomepage}>
-      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/5.png" width={0} height={0} sizes="500px" />  
-      </div> */}
-      {/* <div className={styles.cardHomepage}>
-      <Image style={{width: 'auto', height: 'auto'}} src="/images/homepage/new/6.png" width={0} height={0} sizes="500px" />  
-      </div> */}
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4.5rem' }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4rem' }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '-4rem', marginRight: '-4rem' }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
+      </div>
+      <div className={styles.cardHomepage} style={{ marginLeft: '0rem', zIndex:1 }}>
+      <Image style={{width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
+      </div>
     </div>
 
+    <div style={{ padding: '2rem' }}> </div>
 
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
