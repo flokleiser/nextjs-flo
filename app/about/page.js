@@ -1,6 +1,8 @@
 import styles from 'app/page.module.css'
 import React from 'react';
 import Image from 'next/image'
+import { SiAdobeaftereffects,SiAdobephotoshop,SiAdobepremierepro,SiBlender,SiUnity,SiAdobeillustrator,SiVisualstudiocode,SiAdobeindesign,SiXcode } from "react-icons/si";
+
 
 export const metadata = {
     title: 'About',
@@ -15,7 +17,7 @@ export default function about() {
    place-items-center 
    before:absolute 
    before:h-[300px] 
-   before:w-[480px] 
+   before:w-[460px] 
    before:-translate-x-1/2 
    before:rounded-full 
    before:bg-gradient-radial 
@@ -25,7 +27,7 @@ export default function about() {
    before:content-[''] 
    after:absolute 
    after:-z-20 
-   after:h-[180px] 
+   after:h-[160px] 
    after:w-[240px] 
    after:translate-x-1/3 
    after:bg-gradient-conic 
@@ -47,7 +49,6 @@ export default function about() {
             <h1 className={styles.title}>
               About me
             </h1>
-            
 
             <div style={{ padding: '2rem' }}> </div>
             
@@ -62,6 +63,45 @@ export default function about() {
             <div style={{ padding: '2rem' }}> </div>
 
             <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>              
+
+            <div style={{ padding: '2rem' }}> </div>
+
+            {/* <h1 className={styles.subtitle}>
+             Education & work so far 
+            </h1> */}
+
+            <div style={{ padding: '2rem' }}> </div>
+            <Image
+                      src="/svg/timeline.svg"
+                      alt="timeline"
+                      className={styles.vercelLogo}
+                      width={500}
+                      height={24}
+                    />  
+            <div style={{ padding: '2rem' }}> </div>
+            
+            <div className="flex ">
+            {/* <Image src="/svg/illustrator.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}}/>
+            <Image src="/svg/vscode.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
+            <Image src="/svg/photoshop.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
+            <Image src="/svg/premierepro.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
+            <Image src="/svg/aftereffects.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
+            <Image src="/svg/unity.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} /> */}
+
+            <SiAdobeillustrator size={60} />
+            <SiAdobephotoshop size={60} />
+            <SiAdobeindesign size={60} />
+            <SiAdobepremierepro size={60} />
+            <SiAdobeaftereffects size={60} />
+
+            <SiVisualstudiocode size={60} />
+            <SiBlender size={60} /> 
+            <SiUnity size={60} />
+            <SiXcode size={60} />
+            <Image src="/svg/logic.svg" width={60} height={24} className={styles.vercelLogo} style={{filter: 'invert(1)'}} />
+
+
+            </div>
 
             <div style={{ padding: '2rem' }}> </div>
             

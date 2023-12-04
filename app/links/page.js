@@ -1,7 +1,7 @@
 import styles from 'app/page.module.css'
 import { DiGithubBadge , DiGoogleDrive } from "react-icons/di";
 import { BiSolidFilePdf, BiSolidFile  } from "react-icons/bi";
-import { CiStickyNote, CiViewTimeline} from "react-icons/ci";
+import { CiStickyNote, CiViewTimeline, CiImageOn} from "react-icons/ci";
 
 
 export const metadata = {
@@ -59,9 +59,9 @@ export default function links() {
         
                     {/* <a href="https://drive.google.com/drive/folders/1iTuoikGpE1WVMLkolIVQ4kmpH4dhQVAP?usp=sharing" target="_blank"> */}
                     <a href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank">
-                    <div className={styles.mirrorIcon}>
-                    <CiStickyNote/> 
-                    </div>
+                    {/* <div className={styles.mirrorIcon}> */}
+                    <CiImageOn/> 
+                    {/* </div> */}
                     Portfolio
                     </a>
                 </p>
