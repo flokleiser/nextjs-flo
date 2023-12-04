@@ -30,6 +30,7 @@ transition: all 0.5s ease-in-out;
 }
 
 
+/* CardHomepage Animation */
 .cardHomepage:first-child {
   animation: grow-in 1s ease-in-out forwards ;
 }
@@ -933,6 +934,7 @@ transition: all 0.5s ease-in-out;
     display:flex;
     transform: scale(1);
     margin-bottom:2rem;
+    margin-top:-0.5rem;
     justify-content:center;
   }
 

@@ -2,8 +2,6 @@ import styles from '/app/page.module.css'
 import { CiGrid32,CiImageOn, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image'
-import motion from 'framer-motion'
-
 
 export default function Home() {
   return (
@@ -47,13 +45,12 @@ export default function Home() {
       </h1>
 
     <div style={{ margin: '-1.5rem' }}> </div>
-    {/* <div style={{ margin: '-1rem' }}> </div> */}
 
     <div className={styles.homepageSlicesTest}>
 
 {/*less gap */}
 
-      <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '1rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '0.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
       <Image className={styles.cardHomepage} style={{marginLeft: '-6.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
       
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
@@ -62,6 +59,7 @@ export default function Home() {
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
       <Image className={styles.cardHomepage} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
 
+{/* more gap */}
 
       {/* <Image className={styles.cardHomepage} style={{
         zIndex:1,  marginRight: '0rem' ,width: 'auto', height: '400px'}} 
@@ -89,8 +87,8 @@ export default function Home() {
 
     </div> 
 
-    {/* <div style={{ padding: '2rem' }}> </div> */}
     <div style={{ margin: '-1rem' }}> </div>
+
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
