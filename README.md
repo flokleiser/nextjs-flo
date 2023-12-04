@@ -158,3 +158,12 @@
 
 ## Checklist before publish:
 - [ ] Updated links (CV, Portfolio)
+
+
+
+
+
+- Digital ideation anpassen
+- index: about rein
+- links in pdf einbinden
+- creative coding description fertig
