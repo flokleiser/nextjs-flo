@@ -51,6 +51,8 @@ export default function links() {
 
             <div style={{ padding: '2rem' }}> </div>
 
+            {/* <div className={styles.backgroundCard} style={{marginTop:'10rem' ,padding:'15rem',paddingBottom:'15rem'}}></div> */}
+
             <div className={styles.buttonGeneral}>
             <div className={styles.subtitle}>
                 <p>
@@ -92,6 +94,7 @@ export default function links() {
                     </a>
                 </p>
             </div>
+
 
             </div>
         </main>
