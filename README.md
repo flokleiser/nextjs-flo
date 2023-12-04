@@ -4,6 +4,10 @@
 
 - [ ] Style title page
 
+    - [ ] Fix animationo
+
+    - [ ] Vertical slices on mobile view?
+
     - [ ] Idea: make sliced cards fly in
 
     - [ ] General 3: links transform more on hover

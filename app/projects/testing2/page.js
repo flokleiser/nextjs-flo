@@ -5,7 +5,7 @@ import Image from 'next/image'
 import motion from 'framer-motion'
 
 
-export default function Home() {
+export default function testing2() {
   return (
     
     <main className={styles.main}style={{zIndex:60, boxShadow:10}}>
@@ -62,34 +62,8 @@ export default function Home() {
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
       <Image className={styles.cardHomepage} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
 
-
-      {/* <Image className={styles.cardHomepage} style={{
-        zIndex:1,  marginRight: '0rem' ,width: 'auto', height: '400px'}} 
-        src="/images/homepage/new/1.png" width={300} height={300} />  
-     
-      <Image className={styles.cardHomepage} style={{
-        marginLeft: '-4rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px' }} 
-        src="/images/homepage/new/2.png" width={300} height={300} />  
-      
-      <Image className={styles.cardHomepage} style={{ 
-        marginLeft: '-5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} 
-        src="/images/homepage/new/3.png" width={300} height={300} />  
-     
-      <Image className={styles.cardHomepage} style={{ 
-        marginLeft: '-5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} 
-        src="/images/homepage/new/4.png" width={300} height={300} />  
-     
-      <Image className={styles.cardHomepage} style={{ 
-        marginLeft: '-4rem', marginRight: '-4rem' ,width: 'auto', height: '400px'}} 
-        src="/images/homepage/new/5.png" width={300} height={300} />  
-     
-      <Image className={styles.cardHomepage} style={{ 
-        marginLeft: '0rem', zIndex:1 ,width: 'auto', height: '400px'}} 
-        src="/images/homepage/new/6.png" width={300} height={300} />   */}
-
     </div> 
 
-    {/* <div style={{ padding: '2rem' }}> </div> */}
     <div style={{ margin: '-1rem' }}> </div>
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
@@ -100,9 +74,6 @@ export default function Home() {
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank"> 
-          {/* <div className={styles.mirrorIcon}>
-          <CiStickyNote/>
-          </div> */}
           <CiImageOn />
           Portfolio 
           </Link> 
