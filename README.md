@@ -6,6 +6,8 @@
 
     - [ ] Fix animationo
 
+    - [ ] Animation when hovering links
+
     - [ ] Vertical slices on mobile view?
 
     - [ ] Idea: make sliced cards fly in

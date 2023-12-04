@@ -51,20 +51,44 @@ export default function testing2() {
 
     <div className={styles.homepageSlicesTest}>
 
-{/*less gap */}
+    {/* <div className={styles.cardHomepage}
+    style={{zIndex:1, position:'absolute' ,width: '400px', height: 'auto'}} >
+        <Image src="/images/homepage/new2/1.png" width={300} height={300} alt="Card Image" />   
+    </div>
+    <div className={styles.cardHomepage}
+    style={{zIndex:1, position:'absolute' ,width: '400px', height: 'auto'}} >
+        <Image src="/images/homepage/new2/2.png" width={300} height={300} alt="Card Image" />   
+    </div>
+    <div className={styles.cardHomepage}
+    style={{zIndex:1, position:'absolute' ,width: '400px', height: 'auto'}} >
+        <Image src="/images/homepage/new2/3.png" width={300} height={300} alt="Card Image" />   
+    </div>
+    <div className={styles.cardHomepage}
+    style={{zIndex:1, position:'absolute' ,width: '400px', height: 'auto'}} >
+        <Image src="/images/homepage/new2/4.png" width={300} height={300} alt="Card Image" />   
+    </div>
+    <div className={styles.cardHomepage}
+    style={{zIndex:1, position:'absolute' ,width: '400px', height: 'auto'}} >
+        <Image src="/images/homepage/new2/5.png" width={300} height={300} alt="Card Image" />   
+    </div>
+    <div className={styles.cardHomepage}
+    style={{zIndex:1, position:'absolute' ,width: '400px', height: 'auto'}} >
+        <Image src="/images/homepage/new2/6.png" width={300} height={300} alt="Card Image" />   
+    </div> */}
 
-      <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '1rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{marginLeft: '-6.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
+    <Image className={styles.cardHomepageTest} style={{zIndex:1,  marginRight: '1rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new2/1.png" width={300} height={300} />  
+
+      <Image className={styles.cardHomepageTest} style={{marginLeft: '-6.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new2/2.png" width={300} height={300} />  
       
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={600} height={600} />  
+      <Image className={styles.cardHomepageTest} style={{ marginLeft: '-5.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new2/3.png" width={300} height={300} />  
+      <Image className={styles.cardHomepageTest} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new2/4.png" width={600} height={600} />  
       
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
+      <Image className={styles.cardHomepageTest} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new2/5.png" width={300} height={300} />  
+      <Image className={styles.cardHomepageTest} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new2/6.png" width={300} height={300} />  
+
 
     </div> 
 
-    <div style={{ margin: '-1rem' }}> </div>
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
