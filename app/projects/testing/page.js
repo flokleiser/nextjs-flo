@@ -161,3 +161,7 @@ export default function testing() {
       </div> */}
 
 {/* //bigger gap */}
+
+   {/* <div className="absolute top-20 z--9999 opacity-10">
+          <Image src="/images/Artboard 5.png" width={850} height={50}  />         
+      </div> */}

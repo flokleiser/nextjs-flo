@@ -4,11 +4,7 @@
 
 - [ ] Style title page
 
-    - [ ] Auto hover on page reload
-
     - [ ] Idea: make sliced cards fly in
-
-    - [ ] Look into alpha masks using css --> only non transparent part hoverable
 
     - [ ] General 3: links transform more on hover
 
@@ -142,7 +138,6 @@
 
 ### Links:
 - [x] Add github links
-- [ ] Check for "list" setting (for navbar)
 - [x] Add Icons
 
 ### Cards:
@@ -157,13 +152,4 @@
 - [x] Add Project descriptions
 
 ## Checklist before publish:
-- [ ] Updated links (CV, Portfolio)
-
-
-
-
-
-- Digital ideation anpassen
-- index: about rein
-- links in pdf einbinden
-- creative coding description fertig
+- [x] Updated links (CV, Portfolio)
