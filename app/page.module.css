@@ -30,6 +30,24 @@ transition: all 0.5s ease-in-out;
 /* transition: all 0.5s ease-in-out; */
 }
 
+
+@keyframes grow-in-and-out {
+  from {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.07);
+  }
+
+  from {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+}
+
 .homepageSlices {
   margin-left:1rem;
   margin-right:1rem;
@@ -46,6 +64,31 @@ transition: all 0.5s ease-in-out;
   margin-top:25rem;
   }
 
+  .cardHomepageTest:first-child {
+    animation: grow-in-and-out 2s ease-in-out 0.2s forwards;
+  }
+  
+  .cardHomepageTest:nth-child(2) {
+    animation: grow-in-and-out 2.2s ease-in-out 0.4s forwards;
+  }
+  
+  .cardHomepageTest:nth-child(3) {
+    animation: grow-in-and-out 2.4s ease-in-out 0.6s forwards;
+  }
+  
+  .cardHomepageTest:nth-child(4) {
+    animation: grow-in-and-out 2.6s ease-in-out 0.8s forwards;
+  }
+  
+  .cardHomepageTest:nth-child(5) {
+    animation: grow-in-and-out 2.8s ease-in-out 1s forwards;
+  }
+  
+  .cardHomepageTest:nth-child(6) {
+    animation: grow-in-and-out 3s ease-in-out 1.2s forwards;
+  }
+
+/* 
   .cardHomepageTest:first-child {
     animation: grow-in 1s ease-in-out 0.2s forwards ;
   }
@@ -68,7 +111,7 @@ transition: all 0.5s ease-in-out;
   
   .cardHomepageTest:nth-child(6) {
     animation: grow-in 2.4s ease-in-out 1.2s forwards ;
-  }
+  } */
   
 
 
@@ -123,7 +166,7 @@ transition: all 0.5s ease-in-out;
 
 
 
-@keyframes grow-in {
+/* @keyframes grow-in {
   from {
     opacity: 0.1;
     transform: scale(1);
@@ -138,7 +181,7 @@ transition: all 0.5s ease-in-out;
     opacity: 0.1;
     transform: scale(1);
   }
-}
+} */
 
 .homepageSlicesTest {
   margin-top: 2rem;
