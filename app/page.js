@@ -43,7 +43,7 @@ export default function testing2() {
           </div>
 
   
-      <h1 className={styles.titleHomepage}style={{zIndex:60, textShadow:'5px'}}>
+      <h1 className={styles.titleHomepage} style={{zIndex:60}}>
         Florian Kleiser
       </h1>
 

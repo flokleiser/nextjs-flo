@@ -6,6 +6,8 @@
 
     - [ ] Add more gap between cards?
 
+    - [ ] Add shadow behind text
+
     - [ ] Fix animation
 
     - [ ] Animation when hovering links
