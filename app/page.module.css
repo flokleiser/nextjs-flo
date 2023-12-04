@@ -14,6 +14,7 @@
 opacity:0.1;
 /* transition: transform 200ms, opacity 200ms; */
 transition: all 0.5s ease-in-out;
+/* transition: all 0.5s ease-in-out; */
 }
 
 
@@ -21,6 +22,7 @@ transition: all 0.5s ease-in-out;
   position:absolute;
   opacity:0.1;
   /* transition: transform 200ms, opacity 200ms; */
+  
   transition: all 0.5s ease-in-out;
   }
 
@@ -31,28 +33,52 @@ transition: all 0.5s ease-in-out;
 
 
 /* CardHomepage Animation */
+/* .cardHomepage:first-child {
+  animation: grow-in 1.5s ease-in-out 0.2 forwards ;
+}
+
+.cardHomepage:nth-child(2) {
+  animation: grow-in 1.5s ease-in-out 0.4s forwards ;
+}
+
+.cardHomepage:nth-child(3) {
+  animation: grow-in 1.5s ease-in-out 0.6s forwards ;
+}
+
+.cardHomepage:nth-child(4) {
+  animation: grow-in 1.5s ease-in-out 0.8s forwards ;
+}
+
+.cardHomepage:nth-child(5) {
+  animation: grow-in 1.5s ease-in-out 1s forwards;
+}
+
+.cardHomepage:nth-child(6) {
+  animation: grow-in 1.5s ease-in-out 1.2s forwards ;
+} */
+
 .cardHomepage:first-child {
   animation: grow-in 1s ease-in-out forwards ;
 }
 
 .cardHomepage:nth-child(2) {
-  animation: grow-in 1.2s ease-in-out forwards;
+  animation: grow-in 1.3s ease-in-out forwards ;
 }
 
 .cardHomepage:nth-child(3) {
-  animation: grow-in 1.4s ease-in-out forwards;
+  animation: grow-in 1.7s ease-in-out forwards ;
 }
 
 .cardHomepage:nth-child(4) {
-  animation: grow-in 1.6s ease-in-out forwards;
+  animation: grow-in 2s ease-in-out forwards ;
 }
 
 .cardHomepage:nth-child(5) {
-  animation: grow-in 1.8s ease-in-out forwards;
+  animation: grow-in 2.2s ease-in-out forwards;
 }
 
 .cardHomepage:nth-child(6) {
-  animation: grow-in 2.0s ease-in-out forwards;
+  animation: grow-in 2.6s ease-in-out forwards ;
 }
 
 
@@ -174,8 +200,9 @@ transition: all 0.5s ease-in-out;
 .titleHomepage {
   font-size: 6.5rem;
   font-weight: normal;
-  padding-bottom: 2rem;
-  /* padding-top: 1rem; */
+  /* padding-bottom: 2rem; */
+  /* margin-top:2rem; */
+  padding-top:2rem;
 }
 .subtitleHomepage {
   font-size: 3.5rem;
@@ -794,9 +821,9 @@ transition: all 0.5s ease-in-out;
   } 
 
   .homepageSlicesTest {
-    display:flex;
-    transform: scale(0.8);
+    transform: scale(0.7);
     justify-content:center;
+    margin-bottom:2rem;
   }
 
   /* .navbar-contents nav {
@@ -937,8 +964,6 @@ transition: all 0.5s ease-in-out;
     margin-top:-0.5rem;
     justify-content:center;
   }
-
-
 
 }
 

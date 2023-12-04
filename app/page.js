@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Home() {
   return (
     
-    <main className={styles.main}style={{zIndex:60, boxShadow:10}}>
+    <main className={styles.main}>
         <div className="relative 
    flex 
    place-items-center 
@@ -40,7 +40,8 @@ export default function Home() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-      <h1 className={styles.titleHomepage}>
+
+      <h1 className={styles.titleHomepage} style={{zIndex:60}}> 
         Florian Kleiser
       </h1>
 
@@ -50,14 +51,25 @@ export default function Home() {
 
 {/*less gap */}
 
-      <Image className={styles.cardHomepage} style={{zIndex:1,  marginRight: '0.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{ marginRight: '0.3rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
       <Image className={styles.cardHomepage} style={{marginLeft: '-6.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
       
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-5.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={600} height={600} />  
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={600} height={600} />  
       
       <Image className={styles.cardHomepage} style={{ marginLeft: '-5.5rem', marginRight: '-4.5rem' ,width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
-      <Image className={styles.cardHomepage} style={{ marginLeft: '-1rem', zIndex:1 ,width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{ marginLeft: '-1.5rem', width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />  
+
+      {/* <Image className={styles.cardHomepage} style={{width: 'auto', height: '400px'}} src="/images/homepage/new/1.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{width: 'auto', height: '400px' }} src="/images/homepage/new/2.png" width={300} height={300} />  
+      
+      <Image className={styles.cardHomepage} style={{width: 'auto', height: '400px'}} src="/images/homepage/new/3.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{width: 'auto', height: '400px'}} src="/images/homepage/new/4.png" width={600} height={600} />  
+      
+      <Image className={styles.cardHomepage} style={{width: 'auto', height: '400px'}} src="/images/homepage/new/5.png" width={300} height={300} />  
+      <Image className={styles.cardHomepage} style={{width: 'auto', height: '400px'}} src="/images/homepage/new/6.png" width={300} height={300} />   */}
+
+
 
 {/* more gap */}
 
@@ -89,14 +101,14 @@ export default function Home() {
 
     <div style={{ margin: '-1rem' }}> </div>
 
-     <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
-        <h2 className={styles.subtitleHomepage}>
+     <div className={styles.buttonGeneralHomepage}>
+        <h2 className={styles.subtitleHomepage} style={{zIndex:60}}>
           <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
         </h2>
      </div>
 
-     <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
-        <h2 className={styles.subtitleHomepage}>
+     <div className={styles.buttonGeneralHomepage}>
+        <h2 className={styles.subtitleHomepage} style={{zIndex:60}}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank"> 
           {/* <div className={styles.mirrorIcon}>
           <CiStickyNote/>

@@ -4,7 +4,7 @@
 -
 - [ ] Style title page
 
-    - [ ] Fix animationo
+    - [ ] Fix animation
 
     - [ ] Animation when hovering links
 
