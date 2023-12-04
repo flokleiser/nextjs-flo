@@ -4,20 +4,18 @@
 -
 - [ ] Style title page
 
+    - [ ] Add more gap between cards?
+
     - [ ] Fix animation
 
     - [ ] Animation when hovering links
 
     - [ ] Vertical slices on mobile view?
 
-    - [ ] Idea: make sliced cards fly in
-
     - [ ] General 3: links transform more on hover
 
     - [ ] idea 1: Background card
     - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
-
-- [ ] Look into cursor pointer (why does it work on navbar)
 
 - [ ] add some "scroll resistance" ? scrolling slower etc
 
