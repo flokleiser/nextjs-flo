@@ -65,26 +65,32 @@ transition: all 0.5s ease-in-out;
   }
   .cardHomepageTest:first-child {
     animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+    animation-delay: 0.5s;
   }
   
   .cardHomepageTest:nth-child(2) {
     animation: grow-in-and-out 2s ease-in-out 0.3s forwards;
+    animation-delay: 0.6s;
   }
   
   .cardHomepageTest:nth-child(3) {
     animation: grow-in-and-out 2.2s ease-in-out 0.45s forwards;
+    animation-delay: 0.7s;
   }
   
   .cardHomepageTest:nth-child(4) {
     animation: grow-in-and-out 2.4s ease-in-out 0.6s forwards;
+    animation-delay: 0.8s;
   }
   
   .cardHomepageTest:nth-child(5) {
     animation: grow-in-and-out 2.6s ease-in-out 0.75s forwards;
+    animation-delay: 0.9s;
   }
   
   .cardHomepageTest:nth-child(6) {
     animation: grow-in-and-out 2.8s ease-in-out 0.9s forwards;
+    animation-delay: 1s;
   }
 
 /* 
