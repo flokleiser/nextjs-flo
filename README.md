@@ -3,23 +3,16 @@
 
 ## Currently working on:
 
-- [ ] Cardanimation: transition more smoothly
+- [ ] Card background different approach based on state? --> google
 
 - [x] Card background changing for each link?
     - [ ] Change into whole background changing instead
-
-- [ ] If im really dumb -> animate icons falling down on about me
 
 ## Top Priority (important)
 
 - [ ] Page Loading bar?
 
-- [ ] Style title page
-    - [ ] Add more gap between cards?
-    - [ ] General 3: links transform more on hover
-    - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
-
-- [ ] Add elements to about me --> cv
+- [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
 
 ## TO FIX:
 

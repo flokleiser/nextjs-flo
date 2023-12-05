@@ -85,10 +85,9 @@ useEffect(() => {
 
             <div style={{ padding: '2rem' }}> </div>
 
+<div className="flex flex-col">
 
-
-
-            <div className={`${styles.backgroundCard} ${isHovered ? styles.backgroundCardPortfolioHovered : ''}`} style={{marginTop:'10rem' ,padding:'15rem',paddingBottom:'13rem'}}></div>
+            <div className={`${styles.backgroundCard} ${isHovered ? styles.backgroundCardPortfolioHovered : ''}`}></div>
        
          <div className={styles.buttonGeneral} 
          onMouseEnter={handleMouseEnter}
@@ -147,6 +146,7 @@ useEffect(() => {
                 </p>
             </div>
 
+</div>
 
             </div>
         </main>
