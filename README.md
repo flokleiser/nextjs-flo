@@ -8,6 +8,8 @@
 - [x] Card background changing for each link?
     - [ ] Change into whole background changing instead
 
+- [ ] finish about me page
+
 ## Top Priority (important)
 
 - [ ] Page Loading bar?

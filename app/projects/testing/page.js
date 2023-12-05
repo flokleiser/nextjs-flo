@@ -79,22 +79,29 @@ useEffect(() => {
    before:lg:h-[360px] 
    z-[-1]">
    </div>
+   
+   
             <h1 className={styles.title}>
               Links
             </h1>
 
             <div style={{ padding: '2rem' }}> </div>
 
-<div className="flex flex-col">
-
-            <div className={`${styles.backgroundCard} ${isHovered ? styles.backgroundCardPortfolioHovered : ''}`}></div>
-       
-         <div className={styles.buttonGeneral} 
+<div className={styles.linkContainer}>
+      
+          <div className={`${styles.backgroundCard} 
+              ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
+              ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
+              ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
+              ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
+          </div>
+         
+     
+         <div className={styles.buttonGeneral}
          onMouseEnter={handleMouseEnter}
          onMouseLeave={handleMouseLeave}>
             <div className={styles.subtitle}>
                 <p>
-        
                     <a href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank">
                     <CiImageOn/> 
                     Portfolio
@@ -103,10 +110,7 @@ useEffect(() => {
             </div>
             </div>
 
-            <div className={`${styles.backgroundCard} ${isHovered2 ? styles.backgroundCardGithubHovered : ''}`} style={{marginTop:'10rem' ,padding:'15rem',paddingBottom:'13rem'}}></div>
-
-
-            <div  className={styles.buttonGeneral}
+            <div  className={styles.buttonGeneral} 
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}>
                 <div className={styles.subtitle}>
@@ -117,9 +121,6 @@ useEffect(() => {
                 </p>
                </div> 
                </div>
-
-
-            <div className={`${styles.backgroundCard} ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}`} style={{marginTop:'10rem' ,padding:'15rem',paddingBottom:'13rem'}}></div>
                
                <div className={styles.buttonGeneral}
                 onMouseEnter={handleMouseEnter3}
@@ -133,8 +134,6 @@ useEffect(() => {
             </div>
             </div>
 
-            <div className={`${styles.backgroundCard} ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} style={{marginTop:'10rem' ,padding:'15rem',paddingBottom:'13rem'}}></div>
-
             <div className={styles.buttonGeneral}
             onMouseEnter={handleMouseEnter4}
             onMouseLeave={handleMouseLeave4}>
@@ -145,8 +144,8 @@ useEffect(() => {
                     </a>
                 </p>
             </div>
-
-</div>
+          </div>
+   
 
             </div>
         </main>

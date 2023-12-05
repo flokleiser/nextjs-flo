@@ -10,42 +10,45 @@
   z-index: -1;
 }
 
+.linkContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50%;
+}
+
 .backgroundCard {
   position: absolute;
+  
+  top:11rem;
+  left: 11rem;
   z-index: -100;
-  width: 80vw;
-  height: 50vh;
+  /* width: 80vw; */
+  width:5rem;
+  /* height: 50vh; */
   border-radius: 4rem;
-
   padding: 20rem;
   padding-top: 15rem;
-  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); */
-  background-position: top;
-  /* background-image: radial-gradient(circle at center, rgba(var(--background-start-rgb),1), rgba(var(--background-end-rgb),0.1)); */
-
+  background-color: rgba(var(--background-end-rgb), 0.5);
 }
 
 .backgroundCardPortfolioHovered {
   background-image: url("/images/links/portfolio1.png");
-  opacity: 0.05; 
-  transition: background-image 2s;
-  background-size: cover;
-
-  /* background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0));  */
-
+  opacity: 1; 
+  
 }
 
 .backgroundCardGithubHovered{
   background-image: url("/images/links/github1.png");
-  opacity: 0.05; 
+  opacity: 1; 
 }
 .backgroundCardGoogledriveHovered{
   background-image: url("/images/links/googledrive1.png");
-  opacity: 0.05; 
+  opacity: 1; 
 }
 .backgroundCardCVHovered{
   background-image: url("/images/links/cv1.png");
-  opacity: 0.05;
+  opacity: 1;
 }
 
 .cardHomepage {
