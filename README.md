@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Cardanimation: transition more smoothly
+
 - [x] Card background changing for each link?
     - [ ] Change into whole background changing instead
 
