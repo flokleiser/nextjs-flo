@@ -5,10 +5,10 @@ import { BiSolidFilePdf, BiSolidFile  } from "react-icons/bi";
 import { CiStickyNote, CiViewTimeline, CiImageOn} from "react-icons/ci";
 import { React, useState, useEffect} from 'react';
 
-export default function testing() {
+export default function links() {
 
 useEffect(() => {
-    document.title = 'testing';
+    document.title = 'Links';
   }, []);
 
   const [isHovered, setIsHovered] = useState(false);
