@@ -13,7 +13,7 @@
 .linkContainer {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .imageLinksPage {
@@ -110,7 +110,8 @@ transition: all 0.5s ease-in-out;
 .cardHomepageTest {
   position:absolute;
   opacity:0.1;
-  margin-top:25rem;
+  /* margin-top:25rem; */
+  margin-top:10rem;
   }
   .cardHomepageTest:first-child {
     animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
@@ -269,7 +270,7 @@ transition: all 0.5s ease-in-out;
   font-size: 6.5rem;
   font-weight: normal;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
-  padding-top:2rem;
+  padding-top:7rem;
 }
 .subtitleHomepage {
   font-size: 3.5rem;

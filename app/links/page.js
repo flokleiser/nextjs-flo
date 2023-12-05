@@ -96,7 +96,7 @@ useEffect(() => {
 
     <div className="flex">
             
-            <Image src="/images/flo5.png"width={640} height={402}className={styles.imageLinkPage}/>            
+            <Image src="/images/flo5.png" width={640} height={402}className={styles.imageLinkPage}/>            
 
     <div className={styles.linkContainer}>
         <div className={styles.buttonGeneral} 
@@ -166,7 +166,7 @@ useEffect(() => {
                   <div style={{ padding: '2rem' }}> </div>
 
 
-              <div className="flex flex-wrap justify-center gap-2">
+              {/* <div className="flex flex-wrap justify-center gap-2">
                   <SiAdobeillustrator size={60} />
                   <SiAdobephotoshop size={60}/> 
                   <SiAdobeindesign size={60}/> 
@@ -176,7 +176,7 @@ useEffect(() => {
                   <SiBlender size={60} /> 
                   <SiUnity size={60} /> 
                   <Image src="/svg/logic.svg" width={60} height={24} style={{filter: 'invert(1)'}} />
-              </div>
+              </div> */}
 
             <div style={{ padding: '2rem' }}> </div>
 

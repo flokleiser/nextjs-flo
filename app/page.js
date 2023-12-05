@@ -47,7 +47,7 @@ export default function Home() {
         Florian Kleiser
       </h1>
 
-    <div style={{ margin: '-1.5rem' }}> </div>
+
 
 
     <div className={styles.homepageSlices}>
@@ -61,7 +61,7 @@ export default function Home() {
 
     </div>
 
-    <div style={{ margin: '10rem' }}> </div>
+    <div style={{ margin: '5rem' }}> </div>
 
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
@@ -77,6 +77,15 @@ export default function Home() {
           </Link> 
         </h2>
      </div>
+
+     <div style={{ margin: '3rem' }}> </div>
+
+     <div className={styles.subtitledescription}>
+    <p>
+      Disclaimer: this website is still under construction. 
+      <Image src="/images/happysad.png" width={25} height={25} className={styles.emoji}/>
+    </p>
+    </div>
 
     </main>
 

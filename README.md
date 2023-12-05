@@ -10,18 +10,20 @@
 
 - [ ] combine links & about me
     - [ ] finish about me page
+    - [ ] Links picture hover --> overlay my picture when hovered?
 
+- [ ] Homepage Card animation on "projects" hover?
 - [ ] homepage title centered
 - [ ] title above/below cards
 - [ ] animation repeatable
 - [ ] homepage cards clickable & hoverable
 
-- [ ] picture take up full card --> no weird space at bottom
+- [ ] picture take up full card --> no weird space at bottom --> delete the "mb-4", but figure out if i want to keep it
 
 - [x] Card background changing for each link?
 
 - [ ] navbar hover animation faster 
-- [ ] navbar box update wenn nicht über navbar
+- [ ] navbar box update hovering pages?
 
 ## TO FIX:
 
@@ -31,6 +33,8 @@
 - [ ] Search function --> look into type='search' (in layout.css)
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 - [ ] Add 404 page
+
+- [ ] Add image "roster" for cycling through when hovering on projects
 
 ### Videos/Gifs/Images:
 
