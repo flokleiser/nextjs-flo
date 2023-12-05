@@ -3,25 +3,26 @@
 
 ## Currently working on:
 
-- [ ] Card background different approach based on state? --> google
-
-- [x] Card background changing for each link?
-    - [ ] Change into whole background changing instead
-
-- [ ] finish about me page
 
 ## Top Priority (important)
 
-- [ ] Page Loading bar?
+- [ ] unify font sizes
 
-- [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
+- [ ] combine links & about me
+    - [ ] finish about me page
+
+- [ ] homepage title centered
+- [ ] animation repeatable
+- [ ] homepage cards clickable & hoverable
+
+- [ ] picture take up full card --> no weird space at bottom
+
+- [x] Card background changing for each link?
+
+- [ ] navbar hover animation faster 
+- [ ] navbar box update wenn nicht über navbar
 
 ## TO FIX:
-
-- [ ] Background color on mobile (globals.css)
-- [ ] Navbar smaller on mobile
-- [ ] OR: navbar expandable on mobile
-- [ ] Navbar centered horizontally on mobile
 
 ## Almost Top Priority (nice to have, when bored)
 

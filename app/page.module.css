@@ -47,21 +47,21 @@
 
 .backgroundCardPortfolioHovered {
   background-image: url("/images/links/portfolio1.png");
-  opacity: 1; 
+  opacity: 0.5; 
   
 }
 
 .backgroundCardGithubHovered{
   background-image: url("/images/links/github1.png");
-  opacity: 1; 
+  opacity: 0.5; 
 }
 .backgroundCardGoogledriveHovered{
   background-image: url("/images/links/googledrive1.png");
-  opacity: 1; 
+  opacity: 0.5; 
 }
 .backgroundCardCVHovered{
   background-image: url("/images/links/cv1.png");
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .cardHomepage {
