@@ -3,10 +3,10 @@
 
 ## Currently working on:
 
-- [ ] Card element for about me and links page
+- [x] Card background changing for each link?
+    - [ ] Change into whole background changing instead
 
-- [ ] Card background changing for each link?
-
+- [ ] If im really dumb -> animate icons falling down on about me
 
 ## Top Priority (important)
 
@@ -25,7 +25,6 @@
 - [ ] Navbar smaller on mobile
 - [ ] OR: navbar expandable on mobile
 - [ ] Navbar centered horizontally on mobile
-- [ ] subtitles center and not boxed
 
 ## Almost Top Priority (nice to have, when bored)
 

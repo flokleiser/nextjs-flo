@@ -2,6 +2,7 @@ import styles from 'app/page.module.css'
 import React from 'react';
 import Image from 'next/image'
 import { SiAdobeaftereffects,SiAdobephotoshop,SiAdobepremierepro,SiBlender,SiUnity,SiAdobeillustrator,SiVisualstudiocode,SiAdobeindesign,SiXcode } from "react-icons/si";
+import { BiRotateRight } from 'react-icons/bi';
 
 
 export const metadata = {
@@ -49,32 +50,51 @@ export default function about() {
             <h1 className={styles.title}>
               About me
             </h1>
-
-            <div style={{ padding: '2rem' }}> </div>
             
             <p className={styles.subtitledescription}>
             
             Hi, im Florian Kleiser, im 24 years old and i come from Zürich, Switzerland.
-            My passions include (but are not limited to) programming, drawing, editing, gaming, skating and music.
+            My passions include programming, drawing, editing, gaming, skating and music. <br></br>
             I am currently applying to study Interaction Design / Digital Ideation.
             
             </p>
 
             <div style={{ padding: '2rem' }}> </div>
-
-            <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>              
-
+            <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>            
             <div style={{ padding: '2rem' }}> </div>
 
-            {/* <h1 className={styles.subtitle}>
-             Education & work so far 
-            </h1> */}
 
-           
+        <div className={styles.title}>
+            <h1>
+             Education/Experience
+            </h1>
+        </div>
+
+        <div style={{ padding: '2rem' }}> </div>
+
+        <div className="flex flex-wrap justify-center gap-2">
+            <SiAdobeillustrator size={60} />
+            <SiAdobephotoshop size={60}/> 
+            <SiAdobeindesign size={60}/> 
+            <SiAdobepremierepro size={60}/> 
+            <SiAdobeaftereffects size={60}/> 
+            <SiVisualstudiocode size={60}/> 
+            <SiBlender size={60} /> 
+            <SiUnity size={60} /> 
+            <Image src="/svg/logic.svg" width={60} height={24} style={{filter: 'invert(1)'}} />
+</div>
 
             <div style={{ padding: '2rem' }}> </div>
+            <Image
+                      src="/svg/timeline4.svg"
+                      alt="timeline"
+                      width={900}
+                      height={24}
+                      style={{margin:20}}
+                    />  
+            <div style={{ padding: '2rem' }}> </div>
+
             
-            {/* </div> */}
         </main>
     )
 }
