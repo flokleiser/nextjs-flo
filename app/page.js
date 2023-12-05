@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 
 
-export default function testing2() {
+export default function Home() {
   return (
     
     <main className={styles.main}>
@@ -71,7 +71,7 @@ export default function testing2() {
 
      <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank"> 
+          <Link  className="link-hover" href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view" target="_blank"> 
           <CiImageOn />
           Portfolio 
           </Link> 

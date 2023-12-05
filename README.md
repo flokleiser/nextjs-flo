@@ -1,18 +1,21 @@
 # To-Do/Ideas List:
 
+
+## Currently working on:
+
+- [ ] Card element for about me and links page
+
+- [ ] Card background changing for each link?
+
+
 ## Top Priority (important)
--
+
+- [ ] Page Loading bar?
+
 - [ ] Style title page
     - [ ] Add more gap between cards?
-    - [ ] Animation when hovering links
-    - [ ] Vertical slices on mobile view?
     - [ ] General 3: links transform more on hover
-    - [ ] idea 1: Background card
     - [ ] idea 2: mouse cursor effects? background gradient changing on mouse hover etc
-
-- [ ] add some "scroll resistance" ? scrolling slower etc
-
-- [ ] Change navbar animation
 
 - [ ] Add elements to about me --> cv
 
@@ -28,16 +31,15 @@
 
 - [ ] "progress bar" thingy on the left (on desktop view, shows full page and clickable circles for video, images etc)
 - [ ] Search function --> look into type='search' (in layout.css)
-- [ ] Dynamic scrolling elements
 - [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
-- [ ] Figure out how to hide navbar, fix dynamic spacing on mobile
 - [ ] Add 404 page
 
 ### Videos/Gifs/Images:
 
 #### General:
 - [x] Video embedding --> dim background
-- [ ] Descriptions (under subtitle) --> collapsable (like navbar)
+- [ ] add some "scroll resistance" ? scrolling slower etc
+- [ ] Dynamic scrolling elements?
 
 #### Animations:
 - [x] Upload all animations
@@ -92,6 +94,7 @@
 
 ### About:
 - [ ] Copy paste CV svg files
+- [ ] Style app icons
 
 ## Less Priority (Visual/Layout)
 
@@ -127,4 +130,4 @@
 - [x] Add Project descriptions
 
 ## Checklist before publish:
-- [ ] Updated links (CV, Portfolio)
+- [x] Updated links (CV, Portfolio)
