@@ -70,38 +70,7 @@ export default function about() {
              Education & work so far 
             </h1> */}
 
-            <div style={{ padding: '2rem' }}> </div>
-            <Image
-                      src="/svg/timeline.svg"
-                      alt="timeline"
-                      className={styles.vercelLogo}
-                      width={500}
-                      height={24}
-                    />  
-            <div style={{ padding: '2rem' }}> </div>
-            
-            <div className="flex ">
-            {/* <Image src="/svg/illustrator.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}}/>
-            <Image src="/svg/vscode.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
-            <Image src="/svg/photoshop.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
-            <Image src="/svg/premierepro.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
-            <Image src="/svg/aftereffects.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} />
-            <Image src="/svg/unity.svg" width={60} height={24} className={styles.vercelLogo} style={{margin:20}} /> */}
-
-            <SiAdobeillustrator size={60} />
-            <SiAdobephotoshop size={60} />
-            <SiAdobeindesign size={60} />
-            <SiAdobepremierepro size={60} />
-            <SiAdobeaftereffects size={60} />
-
-            <SiVisualstudiocode size={60} />
-            <SiBlender size={60} /> 
-            <SiUnity size={60} />
-            <SiXcode size={60} />
-            <Image src="/svg/logic.svg" width={60} height={24} className={styles.vercelLogo} style={{filter: 'invert(1)'}} />
-
-
-            </div>
+           
 
             <div style={{ padding: '2rem' }}> </div>
             
