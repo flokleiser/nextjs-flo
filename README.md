@@ -12,6 +12,7 @@
     - [ ] finish about me page
 
 - [ ] homepage title centered
+- [ ] title above/below cards
 - [ ] animation repeatable
 - [ ] homepage cards clickable & hoverable
 

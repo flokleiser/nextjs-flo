@@ -1,14 +1,15 @@
 'use client'
 import styles from 'app/page.module.css'
 import { DiGithubBadge , DiGoogleDrive } from "react-icons/di";
-import { BiSolidFilePdf, BiSolidFile  } from "react-icons/bi";
 import { CiStickyNote, CiViewTimeline, CiImageOn} from "react-icons/ci";
 import { React, useState, useEffect} from 'react';
+import { SiAdobeaftereffects,SiAdobephotoshop,SiAdobepremierepro,SiBlender,SiUnity,SiAdobeillustrator,SiVisualstudiocode,SiAdobeindesign,SiXcode } from "react-icons/si";
+import Image from 'next/image'
 
 export default function links() {
 
 useEffect(() => {
-    document.title = 'Links';
+    document.title = 'Links/Info';
   }, []);
 
   const [isHovered, setIsHovered] = useState(false);
@@ -78,31 +79,28 @@ useEffect(() => {
    after:dark:opacity-40 
    before:lg:h-[360px] 
    z-[-1]">
-   </div>
-   
-   
-            <h1 className={styles.title}>
-              Links
-            </h1>
+            </div>
 
-            <div style={{ padding: '2rem' }}> </div>
+            <h1 className={styles.title}>
+              Links/Info
+            </h1>
+            
+            <p className={styles.subtitledescription}>
+            Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland.
+            My passions include drawing, editing, programming, gaming, skating and music. <br></br>
+            I am currently applying to study Interaction Design / Digital Ideation.
+            </p>
 
 <div className={styles.linkContainer}>
-      
-          <div className={`${styles.backgroundCard} 
-              ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
-              ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
-              ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
-              ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
-          </div>
-         
-     
-         <div className={styles.buttonGeneral}
+            <div style={{ padding: '2rem' }}> </div>
+            <Image src="/images/flo5.png"width={400} height={400} className='shadow-2xl rounded-2xl'/>            
+
+        <div className={styles.buttonGeneral} 
          onMouseEnter={handleMouseEnter}
          onMouseLeave={handleMouseLeave}>
-            <div className={styles.subtitle}>
+            <div className={styles.subtitledescription}>
                 <p>
-                    <a href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank">
+                            <a href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank">
                     <CiImageOn/> 
                     Portfolio
                     </a>
@@ -110,10 +108,10 @@ useEffect(() => {
             </div>
             </div>
 
-            <div  className={styles.buttonGeneral} 
+            <div  className={styles.buttonGeneral}
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}>
-                <div className={styles.subtitle}>
+                <div className={styles.subtitledescription}>
                 <p>
                     <a href="https://github.com/flokleiser" target="_blank">
                     <DiGithubBadge />Github
@@ -125,7 +123,7 @@ useEffect(() => {
                <div className={styles.buttonGeneral}
                 onMouseEnter={handleMouseEnter3}
                 onMouseLeave={handleMouseLeave3}>
-                <div className={styles.subtitle}>
+                <div className={styles.subtitledescription}>
                 <p>
                     <a href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing" target="_blank">
                     <DiGoogleDrive />Google Drive
@@ -137,17 +135,55 @@ useEffect(() => {
             <div className={styles.buttonGeneral}
             onMouseEnter={handleMouseEnter4}
             onMouseLeave={handleMouseLeave4}>
-            <div className={styles.subtitle}>
+            <div className={styles.subtitledescription}>
                 <p>
                     <a href="https://drive.google.com/file/d/16NBQjV3BtpM_I0j3xOTWSksGIu0zpR-Q/view" target="_blank">
                     <CiViewTimeline />CV 
                     </a>
                 </p>
             </div>
-          </div>
-   
-
             </div>
+</div> 
+
+            {/* <div className={styles.subtitle}>
+                <h1>
+                Education/Experience
+                </h1>
+            </div> */}
+
+                  <Image
+                            src="/svg/timeline4.svg"
+                            alt="timeline"
+                            width={900}
+                            height={24}
+                            style={{margin:20}}
+                          />  
+                  <div style={{ padding: '2rem' }}> </div>
+
+
+              <div className="flex flex-wrap justify-center gap-2">
+                  <SiAdobeillustrator size={60} />
+                  <SiAdobephotoshop size={60}/> 
+                  <SiAdobeindesign size={60}/> 
+                  <SiAdobepremierepro size={60}/> 
+                  <SiAdobeaftereffects size={60}/> 
+                  <SiVisualstudiocode size={60}/> 
+                  <SiBlender size={60} /> 
+                  <SiUnity size={60} /> 
+                  <Image src="/svg/logic.svg" width={60} height={24} style={{filter: 'invert(1)'}} />
+              </div>
+
+            <div style={{ padding: '2rem' }}> </div>
+
+      
+      {/* <div className={`${styles.backgroundCard} 
+          ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
+          ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
+          ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
+          ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
+      </div> */}
+       
+       
         </main>
     )
 }
