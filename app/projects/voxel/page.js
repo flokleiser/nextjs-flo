@@ -155,7 +155,7 @@ useEffect(() => {
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-                    <div className="relative mb-4 rounded-2xl">
+                    <div className="relative  rounded-2xl">
                       <Image
                         width={800}
                         height={400}
@@ -183,7 +183,7 @@ useEffect(() => {
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-                    <div className="relative mb-4 rounded-2xl">
+                    <div className="relative rounded-2xl">
                       <Image
                         width={800}
                         height={400}

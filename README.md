@@ -3,6 +3,7 @@
 
 ## Currently working on:
 
+- [ ] Decide if all descriptions with cards or not --> like animations
 
 ## Top Priority (important)
 
@@ -13,8 +14,6 @@
 - [ ] title above/below cards
 - [ ] animation repeatable
 - [ ] homepage cards clickable & hoverable
-
-- [ ] picture take up full card --> no weird space at bottom --> delete the "mb-4", but figure out if i want to keep it
 
 - [ ] navbar hover animation faster 
 - [ ] navbar box update hovering pages?

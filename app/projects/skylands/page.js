@@ -133,14 +133,15 @@ useEffect(() => {
             </p>
             </div>
             
-            <div className='flex align-center'> 
+
+            <div className='flex align-center border'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
             
             src="https://drive.google.com/file/d/11t2V2fNRhP-PGdSNn318-IaCXGwou5uD/preview"> 
               </iframe>
             </div>
-
+          
               <div style={{ padding: '2rem' }}> </div>
 
              
@@ -170,7 +171,7 @@ useEffect(() => {
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-                    <div className="relative mb-4 rounded-2xl">
+                    <div className="relative rounded-2xl">
                       <Image
                         width={400}
                         height={400}
@@ -198,7 +199,7 @@ useEffect(() => {
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-                    <div className="relative mb-4 rounded-2xl">
+                    <div className="relative  rounded-2xl">
                       <Image
                         width={400}
                         height={400}
