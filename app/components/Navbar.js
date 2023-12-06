@@ -96,9 +96,9 @@ export default function Navbar() {
           );
         })}
 
-          <button className="px-4 py-2 rounded-md text-sm lg:text-base no-underline text-zinc-100">
+          {/* <button className="px-4 py-2 rounded-md text-sm lg:text-base no-underline text-zinc-100">
             <BsSearch style={{ fontSize: '1rem' }} /> 
-          </button>
+          </button> */}
 
         </nav>
         </motion.div>
