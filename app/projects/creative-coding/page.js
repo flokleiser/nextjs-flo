@@ -164,9 +164,9 @@ useEffect(() => {
                     </a>
                     </div>
             </div>
-            <div className={styles.subtitledescription}>
+            {/* <div className={styles.subtitledescription}>
             <p> Examples: </p>
-            </div>
+            </div> */}
             
            
        
