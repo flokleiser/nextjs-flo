@@ -78,9 +78,9 @@ export default function Home() {
         </h2>
      </div>
 
-     <div style={{ margin: '3.5rem' }}> </div>
+     <div style={{ margin: '3rem' }}> </div>
 
-     <div className={styles.subtitledescription} style={{opacity:0.1}}>
+     <div className={styles.subtitledescription} style={{opacity:0.3, zIndex:-9999}}>
     <p>
       Disclaimer: this website is still under construction. 
       <Image src="/images/happysad.png" width={25} height={25} className={styles.emoji}/>
