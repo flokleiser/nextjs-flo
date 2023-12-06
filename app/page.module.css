@@ -18,7 +18,7 @@
   
     flex-direction: column;
     justify-content: center;
-  align-items: center;
+    align-items: center;
     border-radius: 24px;      
     background-color: rgba(var(--background-end-rgb), 0.5);
 }
@@ -31,10 +31,10 @@
 }
 
 .linkContainerImage {
-
   height: auto;
   border-radius: 1rem;
   justify-self: center;
+  margin-bottom: 2rem;
 }
 
 .backgroundCard {
@@ -46,7 +46,6 @@
   border-radius: 4rem;
   background-color: rgba(var(--background-end-rgb), 0.5); */
   position: absolute;
-  width: 100%;
   height: auto;
   border-radius: 1rem;
 

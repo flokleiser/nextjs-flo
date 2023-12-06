@@ -93,8 +93,6 @@ useEffect(() => {
                         
                   <div className={styles.linkContainer}>
 
-                  {/* <Image src="/images/flo5.png" width={640} height={402}className={styles.imageLinkPage}/>             */}
-
 
                   <div className={styles.linkContainerLinks}>
                     <div className={styles.buttonGeneral} 
@@ -152,14 +150,14 @@ useEffect(() => {
                 
                   <div className={styles.linkContainerImage}>
                   {/* <Image src="/images/flo8.png" width={640} height={402} /> */}
-                  <Image src="/images/flo8.png" width={440} height={402} />
+                  <Image src="/images/flo9.png" width={640} height={402} />
                     
-                    <div className={`${styles.backgroundCard} 
-                    ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
-                    ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
-                    ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
-                    ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
-                    </div>
+                  <div className={`${styles.backgroundCard} 
+                  ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
+                  ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
+                  ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
+                  ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
+                  </div>
                
                   </div>
                 
