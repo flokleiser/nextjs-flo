@@ -1,6 +1,7 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
 import LightButton from 'app/components/LightButton.js';
+import { DiGoogleDrive } from "react-icons/di";
 
 export const metadata = {
     title: 'Animations - Kontakt',
@@ -69,6 +70,14 @@ export default function kontakt() {
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
             src="https://drive.google.com/file/d/1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ/preview"> 
             </iframe>
+            </div>
+
+            <div className={styles.subtitledescription} >
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+                <a href="https://drive.google.com/drive/folders/1NccG3Wectcz_LwCiUN_UdF0Hb6ifUBMW?usp=sharing" target="_blank"> 
+                    <DiGoogleDrive /> Video on Google Drive
+                </a>
+                </div>
             </div>
 
             <div style={{ padding: '2rem' }}> </div>

@@ -1,6 +1,7 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
 import LightButton from 'app/components/LightButton.js';
+import { DiGoogleDrive } from "react-icons/di";
 
 export const metadata = {
     title: 'Animations - Skate',
@@ -84,6 +85,8 @@ export default function skate() {
             </iframe>
             </div>
 
+            <div style={{ padding: '2rem' }}> </div>
+
         <div className = {styles.subtitle}>
               <p>
              Skate Doodles 
@@ -101,6 +104,14 @@ export default function skate() {
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E/preview">
             </iframe>
+            </div>
+
+            <div className={styles.subtitledescription} >
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+                <a href="https://drive.google.com/drive/folders/1iLXs6Nq4P4xim8TtD9pt7Rt66jx3em-l?usp=sharing" target="_blank"> 
+                    <DiGoogleDrive /> Videos on Google Drive
+                </a>
+                </div>
             </div>
 
             <div style={{ padding: '2rem' }}> </div>

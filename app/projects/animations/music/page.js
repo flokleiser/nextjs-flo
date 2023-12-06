@@ -1,6 +1,7 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
 import LightButton from 'app/components/LightButton.js';
+import { DiGoogleDrive } from "react-icons/di";
 
 export const metadata = {
     title: 'Animations - Music',
@@ -88,6 +89,8 @@ export default function music() {
             </iframe>
             </div>
 
+            <div style={{ padding: '2rem' }}> </div>
+
         <div className = {styles.subtitle}>
               <p>
                Piano
@@ -106,6 +109,8 @@ export default function music() {
             </iframe>
             </div>
 
+            <div style={{ padding: '2rem' }}> </div>
+
         <div className = {styles.subtitle}>
               <p>
                Blurry
@@ -123,6 +128,14 @@ export default function music() {
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
            </iframe>
            </div>
+
+           <div className={styles.subtitledescription} >
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+                <a href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing" target="_blank"> 
+                    <DiGoogleDrive /> Videos on Google Drive
+                </a>
+                </div>
+            </div>
 
            <div style={{ padding: '2rem' }}> </div>
 

@@ -12,7 +12,8 @@
 
 .linkContainer {
     display: flex;
-
+    padding-left:5rem;
+    padding-right:5rem;
     flex-direction: column;
     justify-content: center;
     border-radius: 24px;      
@@ -31,19 +32,6 @@
   height: auto;
   border-radius: 1rem;
 }
-
-/* .backgroundCard {
-  position: absolute;
-  
-  top:11rem;
-  left: 11rem;
-  z-index: -100;
-  width:5rem;
-  border-radius: 4rem;
-  padding: 20rem;
-  padding-top: 15rem;
-  background-color: rgba(var(--background-end-rgb), 0.5);
-} */
 
 .backgroundCard {
   position: absolute;

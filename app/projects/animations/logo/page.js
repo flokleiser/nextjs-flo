@@ -1,6 +1,7 @@
 import styles from 'app/page.module.css'
 import Link from 'next/link';
 import LightButton from 'app/components/LightButton.js';
+import { DiGoogleDrive } from "react-icons/di";
 
 export const metadata = {
     title: 'Animations - Logo',
@@ -67,6 +68,15 @@ export default function logo() {
           src="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/preview"> 
           </iframe>
           </div>
+
+          <div className={styles.subtitledescription} >
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+                <a href="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/view?usp=sharing" target="_blank"> 
+                    <DiGoogleDrive /> Video on Google Drive
+                </a>
+                </div>
+            </div>
+
           <div style={{ padding: '2rem' }}> </div>
         </main>
     )

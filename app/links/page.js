@@ -151,24 +151,28 @@ useEffect(() => {
                     </div>
                 
                   <div className={styles.imageLinkPage}>
-                  <Image src="/images/flo5.png" width={640} height={402} />
+                  <Image src="/images/flo7.png" width={640} height={402} />
                     
-                    {/* <div className={`${styles.backgroundCard} 
+                    <div className={`${styles.backgroundCard} 
                     ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
                     ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
                     ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
                     ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
-                    </div> */}
+                    </div>
                  
                   
                   </div>
-                  
-                   {/* <Image src="/images/flo5.png" width={640} height={402}className={styles.imageLinkPage}/>             */}
                 
                   </div>
 
-
               <div style={{ padding: '2rem' }}> </div>
+
+            <div className={styles.subtitledescription}>
+            <h1>
+            Education/Experience
+            </h1>
+            </div>
+
 
               <Image
                 src="/svg/timeline4.svg"
