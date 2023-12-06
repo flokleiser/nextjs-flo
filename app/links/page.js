@@ -150,8 +150,9 @@ useEffect(() => {
                       </div>
                     </div>
                 
-                  <div className={styles.imageLinkPage}>
-                  <Image src="/images/flo7.png" width={640} height={402} />
+                  <div className={styles.linkContainerImage}>
+                  {/* <Image src="/images/flo8.png" width={640} height={402} /> */}
+                  <Image src="/images/flo8.png" width={440} height={402} />
                     
                     <div className={`${styles.backgroundCard} 
                     ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
@@ -159,8 +160,7 @@ useEffect(() => {
                     ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
                     ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
                     </div>
-                 
-                  
+               
                   </div>
                 
                   </div>
