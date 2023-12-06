@@ -84,10 +84,10 @@ export default function Navbar() {
                   }}
                   transition={{
                     type:"spring",
-                    bounce:0.1,
+                    bounce:0.01,
                     stiffness:100,
-                    damping:11,
-                    duration:0.5,
+                    damping:9,
+                    duration:0.1,
                   }}
                   />
               )}
