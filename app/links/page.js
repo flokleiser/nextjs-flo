@@ -78,21 +78,28 @@ useEffect(() => {
    z-[-1]">
             </div>
 
+
               <h1 className={styles.title}>
                   Links/Info
               </h1>
                         
+            <div className={styles.linkContainer}>
+            <div style={{ padding: '1rem' }}> </div>
                   <p className={styles.subtitledescription}>
                         Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland. <br></br>
                         My passions include drawing, editing, programming, gaming, skating and music. <br></br>
                         I am currently applying to study Interaction Design / Digital Ideation.
                   </p>
-
+                  <div style={{ padding: '1rem' }}> </div>
+            </div>
+            
+            <div style={{ padding: '1rem' }}> </div>
+            
+            <div className={styles.linkContainer}>
                                   
               <div style={{ padding: '1rem' }}> </div>
                         
-                  <div className={styles.linkContainer}>
-
+                  {/* <div className={styles.linkContainer}> */}
 
                   <div className={styles.linkContainerLinks}>
                     <div className={styles.buttonGeneral} 
@@ -148,11 +155,12 @@ useEffect(() => {
                       </div>
                     </div>
                 
-                  <div className={styles.linkContainerImage}>
-                  {/* <Image src="/images/flo8.png" width={640} height={402} /> */}
-                  <Image src="/images/flo9.png" width={640} height={402} />
-                    
-                  <div className={`${styles.backgroundCard} 
+                  <div className={styles.linkContainerImage} 
+                  style={{backgroundImage: "url(/images/flo0.png)",opacity:0.5 }}>
+
+                  {/* <Image src="/images/flo9.png" width={640} height={402} /> */} 
+
+                  <div className={`${styles.linkContainerImage} 
                   ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
                   ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
                   ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
@@ -163,7 +171,11 @@ useEffect(() => {
                 
                   </div>
 
-              <div style={{ padding: '2rem' }}> </div>
+                  <div style={{ padding: '1rem' }}> </div>
+
+            <div className={styles.linkContainer}>
+
+            <div style={{ padding: '1rem' }}> </div>
 
             <div className={styles.subtitledescription}>
             <h1>
@@ -181,18 +193,16 @@ useEffect(() => {
               />  
                               
                               
+                              
               <div style={{ padding: '2rem' }}> </div>
 
-        </main>
-    )
-}
+              <div className={styles.subtitledescription}>
+            <h1>
+              Skills
+            </h1>
+            </div>
 
-
-
-
-{/* Icons */}
-
-     {/* <div className="flex flex-wrap justify-center gap-2">
+ <div className="flex flex-wrap justify-center gap-2">
                   <SiAdobeillustrator size={60} />
                   <SiAdobephotoshop size={60}/> 
                   <SiAdobeindesign size={60}/> 
@@ -202,13 +212,13 @@ useEffect(() => {
                   <SiBlender size={60} /> 
                   <SiUnity size={60} /> 
                   <Image src="/svg/logic.svg" width={60} height={24} style={{filter: 'invert(1)'}} />
-              </div> */}
+              </div>
 
 
-{/* Links background cards */}
-{/* <div className={`${styles.backgroundCard} 
-          ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
-          ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
-          ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
-          ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
-      </div> */}
+            <div style={{ padding: '2rem' }}> </div>
+
+            </div>
+            <div style={{ padding: '2rem' }}> </div>
+        </main>
+    )
+}

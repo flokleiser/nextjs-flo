@@ -21,6 +21,7 @@
     align-items: center;
     border-radius: 24px;      
     background-color: rgba(var(--background-end-rgb), 0.5);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 
 .linkContainerLinks {
@@ -31,10 +32,22 @@
 }
 
 .linkContainerImage {
-  height: auto;
+  /* height: auto; */
+
+  width: 50vw;
+  height: 50vh;
+/* 
+  width: 2362px;;
+  height: 1666px; */
+  
+  /* background-size: cover; */
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 1rem;
   justify-self: center;
   margin-bottom: 2rem;
+  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);  */
 }
 
 .backgroundCard {
@@ -48,27 +61,29 @@
   position: absolute;
   height: auto;
   border-radius: 1rem;
-
-
 }
 
 .backgroundCardPortfolioHovered {
   background-image: url("/images/links/portfolio2.png");
-  opacity: 0.5; 
+  opacity: 1; 
+  /* scale: 1.1; */
   
 }
 
 .backgroundCardGithubHovered{
   background-image: url("/images/links/github2.png");
-  opacity: 0.5; 
+  opacity: 1; 
+  /* scale: 1.1; */
 }
 .backgroundCardGoogledriveHovered{
   background-image: url("/images/links/googledrive2.png");
-  opacity: 0.5; 
+  opacity: 1; 
+  /* scale: 1.1; */
 }
 .backgroundCardCVHovered{
   background-image: url("/images/links/cv2.png");
-  opacity: 0.5;
+  opacity: 1;
+  /* scale: 1.1; */
 }
 
 .cardHomepage {
@@ -896,6 +911,18 @@ transition: all 0.5s ease-in-out;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .linkContainerImage {
+    width: 70vw;
+    /* height: 50vh; */
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 1rem;
+    justify-self: center;
+    margin-bottom: 2rem;
+  
   }
 
 .cardHomepageTest {

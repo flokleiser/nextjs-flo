@@ -6,39 +6,41 @@ import { React, useState, useEffect} from 'react';
 import { SiAdobeaftereffects,SiAdobephotoshop,SiAdobepremierepro,SiBlender,SiUnity,SiAdobeillustrator,SiVisualstudiocode,SiAdobeindesign,SiXcode } from "react-icons/si";
 import Image from 'next/image'
 
-  
-const imageUrls = [
-    '/images/links/cv1',
-    '/images/links/github1',
-    '/images/links/googledrive1',
-    '/images/links/portfolio1',
-  ]
-
-function handleMouseEnter() {
-  setCurrentImageUrl(imageUrl);
-}
-
-function handleMouseLeave() {
-  setCurrentImageUrl('/images/flo5.png');
-}
-
-
 export default function links() {
 
 useEffect(() => {
     document.title = 'Links/Info';
   }, []);
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered3, setIsHovered3] = useState(false);
+  const [isHovered4, setIsHovered4] = useState(false);
 
-  const [currentImageUrl, setCurrentImageUrl] = useState('');
-
-
-  // const handleMouseEnter = () => {
-  //   setIsHovered(true);
-  // };
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false);
-  // };
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+ const handleMouseEnter2 = () => {
+    setIsHovered2(true);
+  };
+  const handleMouseLeave2 = () => {
+    setIsHovered2(false);
+  };
+  const handleMouseEnter3 = () => {
+    setIsHovered3(true);
+  };
+  const handleMouseLeave3 = () => {
+    setIsHovered3(false);
+  };
+  const handleMouseEnter4 = () => {
+    setIsHovered4(true);
+  };
+  const handleMouseLeave4 = () => {
+    setIsHovered4(false);
+  };
  
     return (
         <main className={styles.main}>
@@ -76,42 +78,138 @@ useEffect(() => {
    z-[-1]">
             </div>
 
+
               <h1 className={styles.title}>
                   Links/Info
               </h1>
                         
-              <div>
-                {imageUrls.map((imageUrl,index) => (
+            <div className={styles.linkContainer}>
+            <div style={{ padding: '1rem' }}> </div>
+                  <p className={styles.subtitledescription}>
+                        Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland. <br></br>
+                        My passions include drawing, editing, programming, gaming, skating and music. <br></br>
+                        I am currently applying to study Interaction Design / Digital Ideation.
+                  </p>
 
-                  <a
-                  key={index}
-                  href="#"
-                  onMouseEnter={() => handleMouseEnter(imageUrl)}
-                  onMouseLeave={handleMouseLeave} >
-                  
-                  <Image
-                  src={imageUrl}
-                  alt={`Image ${index + 1}`}
-                  // layout="fill"
-                  objectFit='cover'
-                  style={{width:'100px', height:'100px'}}
-                  />
-                  </a>
-                ))}
+                                  
+              <div style={{ padding: '1rem' }}> </div>
+                        
+                  {/* <div className={styles.linkContainer}> */}
+
+
+                  <div className={styles.linkContainerLinks}>
+                    <div className={styles.buttonGeneral} 
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}>
+                          <div className={styles.subtitledescription}>
+                            <p>
+                              <a href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view" target="_blank">
+                                <CiImageOn/> 
+                                Portfolio
+                              </a>
+                            </p>
+                          </div>
+                      </div>
+
+
+                      <div className={styles.buttonGeneral}
+                        onMouseEnter={handleMouseEnter2}
+                        onMouseLeave={handleMouseLeave2}>
+                          <div className={styles.subtitledescription}>
+                            <p>
+                                <a href="https://github.com/flokleiser" target="_blank">
+                                  <DiGithubBadge />Github
+                                </a>
+                            </p>
+                          </div> 
+                      </div>
+
+
+                      <div className={styles.buttonGeneral}
+                        onMouseEnter={handleMouseEnter3}
+                        onMouseLeave={handleMouseLeave3}>
+                          <div className={styles.subtitledescription}>
+                            <p>
+                                <a href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing" target="_blank">
+                                  <DiGoogleDrive />Google Drive
+                                </a>
+                            </p>
+                          </div>
+                      </div>
+
+
+                      <div className={styles.buttonGeneral}
+                        onMouseEnter={handleMouseEnter4}
+                        onMouseLeave={handleMouseLeave4}>
+                          <div className={styles.subtitledescription}>
+                            <p>
+                                <a href="https://drive.google.com/file/d/16NBQjV3BtpM_I0j3xOTWSksGIu0zpR-Q/view" target="_blank">
+                                  <CiViewTimeline />CV 
+                                </a>
+                            </p>
+                          </div>
+                      </div>
+                    </div>
+                
+                  <div className={styles.linkContainerImage} 
+                  style={{backgroundImage: "url(/images/flo0.png)",opacity:0.5 }}>
+
+                  {/* <Image src="/images/flo9.png" width={640} height={402} /> */} 
+
+                  <div className={`${styles.linkContainerImage} 
+                  ${isHovered ? styles.backgroundCardPortfolioHovered : ''}
+                  ${isHovered2 ? styles.backgroundCardGithubHovered : ''}
+                  ${isHovered3 ? styles.backgroundCardGoogledriveHovered: ''}
+                  ${isHovered4 ? styles.backgroundCardCVHovered: ''}`} >
+                  </div>
+               
+                  </div>
+                
+                  {/* </div> */}
+
+              <div style={{ padding: '2rem' }}> </div>
+
+            <div className={styles.subtitledescription}>
+            <h1>
+            Education/Experience
+            </h1>
+            </div>
+
+
+              <Image
+                src="/svg/timeline4.svg"
+                alt="timeline"
+                width={900}
+                height={24}
+                style={{margin:20}}
+              />  
+                              
+                              
+                              
+              <div style={{ padding: '2rem' }}> </div>
+
+              <div className={styles.subtitledescription}>
+            <h1>
+              Skills
+            </h1>
+            </div>
+
+ <div className="flex flex-wrap justify-center gap-2">
+                  <SiAdobeillustrator size={60} />
+                  <SiAdobephotoshop size={60}/> 
+                  <SiAdobeindesign size={60}/> 
+                  <SiAdobepremierepro size={60}/> 
+                  <SiAdobeaftereffects size={60}/> 
+                  <SiVisualstudiocode size={60}/> 
+                  <SiBlender size={60} /> 
+                  <SiUnity size={60} /> 
+                  <Image src="/svg/logic.svg" width={60} height={24} style={{filter: 'invert(1)'}} />
               </div>
 
-<div
-style={{
-  backgroundImage: `url(${currentImageUrl})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  width: '100%',
-  height: '300px',
-}}>
 
-</div>
+            <div style={{ padding: '2rem' }}> </div>
 
-
+            </div>
         </main>
     )
 }
