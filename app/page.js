@@ -80,7 +80,7 @@ export default function Home() {
 
      <div style={{ margin: '3rem' }}> </div>
 
-     <div className={styles.subtitledescription}>
+     <div className={styles.subtitledescription} style={{opacity:0.1}}>
     <p>
       Disclaimer: this website is still under construction. 
       <Image src="/images/happysad.png" width={25} height={25} className={styles.emoji}/>

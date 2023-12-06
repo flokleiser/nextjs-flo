@@ -8,14 +8,6 @@
 
 - [ ] Make pages scale down on smaller displays
 
-- [ ] unify font sizes
-
-- [ ] combine links & about me
-    - [ ] finish about me page
-    - [ ] Links picture hover --> overlay my picture when hovered?
-
-    - [ ] Links/info --> card with image & Links
-
 - [ ] Homepage Card animation on "projects" hover?
 - [ ] homepage title centered
 - [ ] title above/below cards
@@ -23,8 +15,6 @@
 - [ ] homepage cards clickable & hoverable
 
 - [ ] picture take up full card --> no weird space at bottom --> delete the "mb-4", but figure out if i want to keep it
-
-- [x] Card background changing for each link?
 
 - [ ] navbar hover animation faster 
 - [ ] navbar box update hovering pages?
