@@ -52,12 +52,12 @@ export default function Home() {
 
     <div className={styles.homepageSlices}>
 
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/1.png" width={800} height={800} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/2.png" width={800} height={800} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/3.png" width={800} height={800} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/4.png" width={800} height={800} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/5.png" width={800} height={800} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/6.png" width={800} height={800} /> 
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/1.png" width={1100} height={1000} />
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/2.png" width={1100} height={1000} />
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/3.png" width={1100} height={1000} />
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/4.png" width={1100} height={1000} />
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/5.png" width={1100} height={1000} />
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/6.png" width={1100} height={1000} /> 
 
     </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
         </h2>
      </div>
 
-     <div style={{ margin: '3rem' }}> </div>
+     <div style={{ margin: '3.5rem' }}> </div>
 
      <div className={styles.subtitledescription} style={{opacity:0.1}}>
     <p>
