@@ -218,7 +218,7 @@ useEffect(() => {
             <div style={{ padding: '2rem' }}> </div>
 
             </div>
-            <div style={{ padding: '2rem' }}> </div>
+             <div style={{ padding: '2rem' }}> </div>
         </main>
     )
 }
