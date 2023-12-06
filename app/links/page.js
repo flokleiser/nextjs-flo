@@ -82,16 +82,16 @@ useEffect(() => {
               <h1 className={styles.title}>
                   Links/Info
               </h1>
-                        
-            <div className={styles.linkContainer}>
-            <div style={{ padding: '1rem' }}> </div>
+ 
+       {/* <div className={styles.linkContainer}> */}
+       <div style={{ padding: '1rem' }}> </div>
                   <p className={styles.subtitledescription}>
                         Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland. <br></br>
                         My passions include drawing, editing, programming, gaming, skating and music. <br></br>
                         I am currently applying to study Interaction Design / Digital Ideation.
                   </p>
                   <div style={{ padding: '1rem' }}> </div>
-            </div>
+            {/* </div> */}
             
             <div style={{ padding: '1rem' }}> </div>
             
@@ -102,7 +102,7 @@ useEffect(() => {
                   {/* <div className={styles.linkContainer}> */}
 
                   <div className={styles.linkContainerLinks}>
-                    <div className={styles.buttonGeneral} 
+                    <div className={styles.buttonLinksPage}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}>
                           <div className={styles.subtitledescription}>
@@ -116,7 +116,7 @@ useEffect(() => {
                       </div>
 
 
-                      <div className={styles.buttonGeneral}
+                      <div className={styles.buttonLinksPage}
                         onMouseEnter={handleMouseEnter2}
                         onMouseLeave={handleMouseLeave2}>
                           <div className={styles.subtitledescription}>
@@ -129,7 +129,7 @@ useEffect(() => {
                       </div>
 
 
-                      <div className={styles.buttonGeneral}
+                      <div className={styles.buttonLinksPage}
                         onMouseEnter={handleMouseEnter3}
                         onMouseLeave={handleMouseLeave3}>
                           <div className={styles.subtitledescription}>
@@ -142,7 +142,7 @@ useEffect(() => {
                       </div>
 
 
-                      <div className={styles.buttonGeneral}
+                      <div className={styles.buttonLinksPage}
                         onMouseEnter={handleMouseEnter4}
                         onMouseLeave={handleMouseLeave4}>
                           <div className={styles.subtitledescription}>
@@ -154,6 +154,8 @@ useEffect(() => {
                           </div>
                       </div>
                     </div>
+
+                    <div style={{ padding: '1rem' }}> </div>
                 
                   <div className={styles.linkContainerImage} 
                   style={{backgroundImage: "url(/images/flo0.png)",opacity:0.5 }}>
@@ -171,9 +173,19 @@ useEffect(() => {
                 
                   </div>
 
+                        {/* <div className={styles.linkContainer}> */}
+            {/* <div style={{ padding: '1rem' }}> </div>
+                  <p className={styles.subtitledescription}>
+                        Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland. <br></br>
+                        My passions include drawing, editing, programming, gaming, skating and music. <br></br>
+                        I am currently applying to study Interaction Design / Digital Ideation.
+                  </p>
+                  <div style={{ padding: '1rem' }}> </div> */}
+            {/* </div> */}
+
                   <div style={{ padding: '1rem' }}> </div>
 
-            <div className={styles.linkContainer}>
+            {/* <div className={styles.linkContainer}> */}
 
             <div style={{ padding: '1rem' }}> </div>
 
@@ -217,7 +229,7 @@ useEffect(() => {
 
             <div style={{ padding: '2rem' }}> </div>
 
-            </div>
+            {/* </div> */}
              <div style={{ padding: '2rem' }}> </div>
         </main>
     )

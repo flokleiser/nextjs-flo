@@ -55,7 +55,7 @@ export default function animations() {
               Animations
             </h1>
             
-            <div className={styles.linkContainerAnimations}>
+            {/* <div className={styles.linkContainerAnimations}> */}
             <div style={{ padding: '1rem' }}> </div>
             <div className={styles.subtitledescription}>
             <p>
@@ -64,7 +64,7 @@ export default function animations() {
              </p>
             </div>
       
-            </div>
+            {/* </div> */}
 
             <div style={{ padding: '2rem' }}>
             <div className={styles.gridanimation}>

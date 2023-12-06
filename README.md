@@ -3,11 +3,9 @@
 
 ## Currently working on:
 
-- [ ] Decide if all descriptions with cards or not --> like animations
+- [ ] About/Links page, with card background or not
 
 ## Top Priority (important)
-
-- [ ] Make pages scale down on smaller displays
 
 - [ ] Homepage Card animation on "projects" hover?
 - [ ] homepage title centered
