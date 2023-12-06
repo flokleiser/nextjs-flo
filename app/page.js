@@ -57,7 +57,7 @@ export default function Home() {
     <Image className={styles.cardHomepageTest} src="/images/homepage/new2/3.png" width={800} height={800} />
     <Image className={styles.cardHomepageTest} src="/images/homepage/new2/4.png" width={800} height={800} />
     <Image className={styles.cardHomepageTest} src="/images/homepage/new2/5.png" width={800} height={800} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/6.png" width={800} height={800} />
+    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/6.png" width={800} height={800} /> 
 
     </div>
 
