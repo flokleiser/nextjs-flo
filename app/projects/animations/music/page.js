@@ -81,6 +81,7 @@ export default function music() {
             An animation to the song “Funk For Food” by Moderator. Drawn in Photoshop, animated in Adobe After Effects.
             </p>
             </div>
+            <div style={{ padding: '1rem' }}> </div> 
 
             <div className='flex align-center'>
             <LightButton />
@@ -102,6 +103,7 @@ export default function music() {
             An animation of my room, drawn in Photoshop and animated in Adobe After Effects. To the song “Be Encouraged” by Kiefer.
             </p>
             </div>
+            <div style={{ padding: '1rem' }}> </div> 
            
             <div className='flex align-center'>
             <LightButton />
@@ -122,6 +124,7 @@ export default function music() {
             An animation/visualizer to Milky Chances “Flashed Junk Mind”, made in Adobe After Effects.
             </p>
             </div>
+            <div style={{ padding: '1rem' }}> </div> 
 
             <div className='flex align-center'>
             <LightButton />

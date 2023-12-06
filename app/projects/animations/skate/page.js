@@ -78,7 +78,7 @@ export default function skate() {
             A short sequence of myself, edited and rotoscoped in Adobe After Effects.
             </p>
             </div>
-       
+            <div style={{ padding: '1rem' }}> </div> 
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0/preview"> 
@@ -98,7 +98,7 @@ export default function skate() {
             4 stop-motion sequences, sketched  on semi transparent paper and edited in Premiere Pro.            
             </p>
             </div>
-        
+            <div style={{ padding: '1rem' }}> </div> 
       
             <div className='flex align-center'>
             <LightButton />

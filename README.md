@@ -3,7 +3,21 @@
 
 ## Currently working on:
 
-- [ ] About/Links page, with card background or not
+- [ ] change video embed to youtube (?) --> upload rest of videos (skate)
+
+- [ ] Navbar drop down menus (for sub categories)
+
+- [ ] Blur background on full screen image/dim
+
+- [ ] Dim switch fade in and out, same with full screen images
+
+- [ ] make animation play twice  
+
+- [ ] Fix sentences etc
+
+- [ ] About/Links page, with card background or not
+
+- [ ] CAD picture better resolution
 
 ## Top Priority (important)
 

@@ -8,9 +8,11 @@ import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 
 export default function LightButton() {
     const [isDim, setDim] = useState(false);
+    let isNewDim = true;
    
     const handleToggleClick = () => {
         setDim(!isDim);
+        isNewDim = true;
         };
 
   return (
@@ -24,8 +26,19 @@ export default function LightButton() {
       {isDim && (
         <div
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75 transition-transform duration-300 z-50">
+        {/* style={{
+          backdropFilter: `blur(${isDim ? '10px' : '0px'}px)`,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          opacity: 0.75,
+        }}> */}
         </div>
+       
       )}
+
     </div>
   );
 };

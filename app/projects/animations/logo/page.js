@@ -58,6 +58,8 @@ export default function logo() {
               A small project where i designed a logo for the first letter in my name, “F”, and animated 3 iterations in Adobe After Effects.
               </p>
             </div>
+
+            <div style={{ padding: '1rem' }}> </div>
             {/* <video
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}
@@ -65,7 +67,7 @@ export default function logo() {
 <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
-          src="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/preview"> 
+          src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt"> 
           </iframe>
           </div>
 

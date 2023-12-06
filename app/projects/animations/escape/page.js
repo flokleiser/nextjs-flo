@@ -61,10 +61,13 @@ export default function escape() {
            </p> 
             </div>
 
+            <div style={{ padding: '1rem' }}> </div> 
+
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
-         src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
+        //  src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
+            src="https://www.youtube.com/embed/F1f6YaIqRZI?si=9flICqQyXYAAeEGu">
           </iframe>
           </div>
 
@@ -75,6 +78,7 @@ export default function escape() {
                 </a>
                 </div>
             </div>
+            
             
           <div style={{ padding: '2rem' }}> </div>
 

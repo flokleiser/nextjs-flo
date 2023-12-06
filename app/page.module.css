@@ -181,39 +181,44 @@ transition: all 0.5s ease-in-out;
   }
   
   .cardHomepageTest:nth-child(5) {
-    animation: grow-in-and-out 2.6s ease-in-out 0.75s forwards;
+    animation: grow-in-and-out 2.55s ease-in-out 0.75s forwards;
     animation-delay: 0.9s;
   }
   
   .cardHomepageTest:nth-child(6) {
-    animation: grow-in-and-out 2.8s ease-in-out 0.9s forwards;
+    animation: grow-in-and-out 2.6s ease-in-out 0.9s forwards;
     animation-delay: 1s;
   }
 
-
-.cardHomepage:first-child {
-  animation: grow-in 1s ease-in-out forwards ;
-}
-
-.cardHomepage:nth-child(2) {
-  animation: grow-in 1.3s ease-in-out forwards ;
-}
-
-.cardHomepage:nth-child(3) {
-  animation: grow-in 1.7s ease-in-out forwards ;
-}
-
-.cardHomepage:nth-child(4) {
-  animation: grow-in 2s ease-in-out forwards ;
-}
-
-.cardHomepage:nth-child(5) {
-  animation: grow-in 2.2s ease-in-out forwards;
-}
-
-.cardHomepage:nth-child(6) {
-  animation: grow-in 2.6s ease-in-out forwards ;
-}
+  /* .cardHomepageTest:first-child {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
+    animation-delay: 0.5s;
+  }
+  
+  .cardHomepageTest:nth-child(2) {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
+    animation-delay: 0.6s;
+  }
+  
+  .cardHomepageTest:nth-child(3) {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
+    animation-delay: 0.7s;
+  }
+  
+  .cardHomepageTest:nth-child(4) {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
+    animation-delay: 0.8s;
+  }
+  
+  .cardHomepageTest:nth-child(5) {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
+    animation-delay: 0.9s;
+  }
+  
+  .cardHomepageTest:nth-child(6) {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
+    animation-delay: 1s;
+  } */
 
 
 .homepageSlicesTest {

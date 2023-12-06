@@ -132,9 +132,9 @@ useEffect(() => {
              <BsUnity /> VR game for the Meta Quest 2, made in Unity
             </p>
             </div>
-            
+            <div style={{ margin: '1rem' }}> </div> 
 
-            <div className='flex align-center border'> 
+            {/* <div className='flex align-center border'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
             
@@ -142,8 +142,16 @@ useEffect(() => {
               </iframe>
             </div>
           
-              <div style={{ padding: '2rem' }}> </div>
+              <div style={{ padding: '2rem' }}> </div> */}
 
+
+            <div className='flex align-center border'> 
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+            src="https://www.youtube.com/embed/ehdOkglKb0o?si=diIzQwaQ9w1WKTU0"> 
+              </iframe>
+            </div>
+            <div style={{ padding: '2rem' }}> </div>
              
             <div className="">
             {selectedImage && (
