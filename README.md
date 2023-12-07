@@ -3,7 +3,11 @@
 
 ## Currently working on:
 
+- [ ] Fix mess with z indexes on homepage
+
 - [x] Navbar drop down menus (for sub categories)
+
+- [ ] Creative coding --> "hints" , "try out "d, 2, t, q" etc
 
 - [ ] completely rework navbar
 
@@ -17,11 +21,9 @@
 
 - [ ] Right/Left arrow for cycling through photos
 
-- [ ] Maybeeeeeeee change Links/Info to be seperate in navbar again, and have navbar links just take you to bottom/top half of page etc
 
 ## Top Priority (important)
 
-- [ ] navbar box update hovering pages?
 
 ## TO FIX:
 

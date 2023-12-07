@@ -43,7 +43,9 @@ export default function Home() {
           </div>
 
   
-      <h1 className={styles.titleHomepage} style={{zIndex:60}}>
+      <h1 className={styles.titleHomepage} 
+      style={{zIndex:60}}
+      >
         Florian Kleiser
       </h1>
 
@@ -63,13 +65,17 @@ export default function Home() {
 
     <div style={{ margin: '5rem' }}> </div>
 
-     <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
+     <div className={styles.buttonGeneralHomepage}
+     style={{zIndex:60}}
+     >
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
         </h2>
      </div>
 
-     <div className={styles.buttonGeneralHomepage}style={{zIndex:60}}>
+     <div className={styles.buttonGeneralHomepage}
+     style={{zIndex:60}}
+     >
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view" target="_blank"> 
           <CiImageOn />

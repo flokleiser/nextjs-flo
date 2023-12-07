@@ -16,12 +16,12 @@ const navItems = [
     name: "Home",
   },
   {
-    path: "/projects",
-    name: "Projects",
-  },
-  {
     path: "/links",
     name: "Links/Info",
+  },
+  {
+    path: "/projects",
+    name: "Projects",
   },
 ];
 
@@ -100,14 +100,7 @@ export default function Navbar() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-
-        <div className="flex justify-start items-center w-full z-9999" >
-        <button
-            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100"
-            onClick={toggleSubNavbarVisibility}>
-            {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
-            </button>
-
+     
       <nav className="flex justify-start items-center w-full z-9999" >
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
@@ -134,26 +127,75 @@ export default function Navbar() {
                     width:'100%'
                   }}
                   transition={{
-                    type:"spring",
+                    // type:"spring",
                     bounce:0.01,
                     stiffness:100,
                     damping:20,
-                    duration:0.1,
+                    duration:0.3,
                   }}
                   />
               )}
             </Link>
 
+);
+})}
 
-          );
-        })}
- 
-              {showSubNavbar && (
+             {showSubNavbar && (
                 <div className={styles.subNavbar}>
                   {navSubItems.map((subItem) => (
                     <Link
                       key={subItem.path}
                       className={`px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999 ${
+                        // className={`z-10 ${
+                        subItem.path === pathname ? "text-zinc-100" : "text-zinc-300"
+                      }`}
+                      data-active={subItem.path === pathname}
+                      href={subItem.path}
+                      onMouseOver={() => setHoveredPath(subItem.path)}
+                      onMouseLeave={() => setHoveredPath(pathname)}
+                      onClick={handleSubNavbarItemClick}
+                 
+
+                    >
+                      <span>{subItem.name}</span>
+                      {subItem.path === hoveredPath && (
+                        <motion.div
+                          // className="absolute bottom-0 left-0 h-full bg-stone-900/30 rounded-md z-10"
+                          className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
+                          layoutId="navbar"
+                          aria-hidden="true"
+                          style={{
+                            width: '100%',
+                           
+                          }}
+                          transition={{
+                            // type:"spring",
+                            bounce:0.01,
+                            stiffness:100,
+                            damping:20,
+                            duration:0.3,
+                          }}
+                        />
+                      )}
+                    </Link>
+                  ))}
+                </div> 
+                )}
+
+
+            <button
+            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100"
+            onClick={toggleSubNavbarVisibility}>
+            {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
+            </button>
+
+              {/* {showSubNavbar && (
+                <div className={styles.subNavbar}>
+                  {navSubItems.map((subItem) => (
+                    <Link
+                      key={subItem.path}
+                      className={`px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999 ${
+                        // className={`z-10 ${
                         subItem.path === pathname ? "text-zinc-100" : "text-zinc-300"
                       }`}
                       data-active={subItem.path === pathname}
@@ -186,12 +228,12 @@ export default function Navbar() {
                       )}
                     </Link>
                   ))}
-                </div>
-              )}
+                </div> 
+                )} */}
 
 
            </nav>
-           </div>
+        
         </motion.div>
        )}
         </AnimatePresence>
