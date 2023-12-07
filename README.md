@@ -7,8 +7,6 @@
 
 - [ ] Right/Left arrow for cycling through photos
 
-- [ ] make animation play twice  
-
 ## Top Priority (important)
 
 - [ ] navbar box update hovering pages?
@@ -38,6 +36,8 @@
 - [ ] Add 404 page
 
 - [ ] Add image "roster" for cycling through when hovering on projects
+
+- [ ] make animation play twice  
 
 ### Videos/Gifs/Images:
 
