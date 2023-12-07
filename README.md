@@ -3,10 +3,14 @@
 
 ## Currently working on:
 
-- [ ] Navbar drop down menus (for sub categories)
+- [x] Navbar drop down menus (for sub categories)
+
+- [ ] completely rework navbar
+
+    - [ ] Placement below --> probably not possible
+
     - [ ] better placement?
     - [ ] Fix background being over gray box
-    - [ ] Fix button being at the end of navbar, OR place projects at the end of navbar
 
     - [ ] Make navbar animations not so bouncy
 

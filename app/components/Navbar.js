@@ -16,12 +16,12 @@ const navItems = [
     name: "Home",
   },
   {
-    path: "/links",
-    name: "Links/Info",
-  },
-  {
     path: "/projects",
     name: "Projects",
+  },
+  {
+    path: "/links",
+    name: "Links/Info",
   },
 ];
 
@@ -83,12 +83,11 @@ export default function Navbar() {
 
   return (
     <div className="flex border border-stone-800/90 p-[0.4rem] mb-1 sticky top bg-stone-900/80 backdrop-blur-md ">
-       <button
+      <button
         className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out text-zinc-100"
         onClick={toggleNavbarVisibility}
       >
         {showNavbar ? <BsX style={{ fontSize: '1.5rem' }} /> : <BsList style={{ fontSize: '1.5rem' }}  />}
-
       </button>
       
       
@@ -101,12 +100,20 @@ export default function Navbar() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         >
-        
+
+        <div className="flex justify-start items-center w-full z-9999" >
+        <button
+            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100"
+            onClick={toggleSubNavbarVisibility}>
+            {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
+            </button>
+
       <nav className="flex justify-start items-center w-full z-9999" >
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
 
           return (
+
             <Link
               key={item.path}
               className={`px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
@@ -136,20 +143,11 @@ export default function Navbar() {
                   />
               )}
             </Link>
+
+
           );
         })}
-
-
-              <button
-                className="px-0 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100"
-                onClick={toggleSubNavbarVisibility}
-              >
-                {/* {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />} */}
-                {/* {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />} */}
-                {showSubNavbar ? <CiSquareChevLeft style={{ fontSize: '1.5rem' }} /> : <CiSquareChevRight style={{ fontSize: '1.5rem' }}  />}
-                {/* {showSubNavbar ? <CiSquareMinus style={{ fontSize: '1.5rem' }} /> : <CiSquarePlus style={{ fontSize: '1.5rem' }}  />} */}
-              </button>
-
+ 
               {showSubNavbar && (
                 <div className={styles.subNavbar}>
                   {navSubItems.map((subItem) => (
@@ -162,12 +160,15 @@ export default function Navbar() {
                       href={subItem.path}
                       onMouseOver={() => setHoveredPath(subItem.path)}
                       onMouseLeave={() => setHoveredPath(pathname)}
-                      onClick={handleSubNavbarItemClick} 
+                      onClick={handleSubNavbarItemClick}
+                 
+
                     >
                       <span>{subItem.name}</span>
                       {subItem.path === hoveredPath && (
                         <motion.div
-                          className="absolute bottom-0 left-0 h-full bg-stone-500/30 rounded-md -z-10"
+                          // className="absolute bottom-0 left-0 h-full bg-stone-900/30 rounded-md z-10"
+                          className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                           layoutId="navbar"
                           aria-hidden="true"
                           style={{
@@ -190,6 +191,7 @@ export default function Navbar() {
 
 
            </nav>
+           </div>
         </motion.div>
        )}
         </AnimatePresence>
