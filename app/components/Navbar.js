@@ -20,6 +20,10 @@ const navItems = [
     name: "Projects",
   },
   {
+    path: "/toggle-navbar",
+    name: "Toggle Navbar",
+  },
+  {
     path: "/links",
     name: "Links/Info",
   },
@@ -117,7 +121,7 @@ export default function Navbar() {
             isActive ? "text-zinc-100" : "text-zinc-300"
           }`}
           href={item.path}
-          onMouseOver={() => setHoveredPath(item.path)}
+          onMouseOver={() => setHoveredPath(pathname)}
           onMouseLeave={() => setHoveredPath(pathname)}
         >
           <span>{item.name}</span>
@@ -141,7 +145,7 @@ export default function Navbar() {
         </Link>
             
             <button
-            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 opacity-20"
+            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 "
             onClick={toggleSubNavbarVisibility}>
 
             {showSubNavbar ? (
@@ -193,7 +197,13 @@ export default function Navbar() {
 })}
 
              {showSubNavbar && (
-                <div className={styles.subNavbar}>
+                <motion.div className={styles.subNavbar}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5}}
+                  >
+                 <nav className="flex justify-start items-center w-full z-9999">
                   {navSubItems.map((subItem) => (
                     <Link
                       key={subItem.path}
@@ -227,11 +237,12 @@ export default function Navbar() {
                             damping:20,
                             duration:0.3,
                           }}
-                        />
-                      )}
+                          />
+                          )}
                     </Link>
                   ))}
-                </div> 
+                  </nav>
+                  </motion.div> 
                 )}
 
 
