@@ -5,11 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 
-// export const metadata = {
-//     title: 'Sketches',
-//     description: '-',
-//   }
-
 
 const data = [
   {
@@ -155,15 +150,6 @@ useEffect(() => {
             <h1 className={styles.title}>
              Sketches
             </h1>
-
-            {/* <div className={styles.container}>
-              <div className={styles.header}>
-                <h1 className={styles.title}> Sketches </h1>
-                  <div className={styles.backbutton}> 
-                    <h1> <Link href="/projects"> Back to Projects </Link> </h1> 
-                </div> 
-              </div>              
-            </div> */}
 
             <div className={styles.subtitledescription}>
             <p>
