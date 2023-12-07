@@ -104,14 +104,54 @@ export default function Navbar() {
 
       <nav className="flex justify-start items-center w-full z-9999" >
 
-      <button
-          className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 opacity-20"
-          onClick={toggleSubNavbarVisibility}>
-          {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
-          </button> 
-
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
+
+          if (index === 1) {
+            return (
+              <>
+               <Link
+          key={item.path}
+          className={`px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
+            isActive ? "text-zinc-100" : "text-zinc-300"
+          }`}
+          href={item.path}
+          onMouseOver={() => setHoveredPath(item.path)}
+          onMouseLeave={() => setHoveredPath(pathname)}
+        >
+          <span>{item.name}</span>
+              {item.path === hoveredPath && (
+                <motion.div
+                  className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
+                  layoutId="navbar"
+                  aria-hidden="true"
+                  style={{
+                    width:'100%'
+                  }}
+                  transition={{
+                    // type:"spring",
+                    bounce:0.01,
+                    stiffness:100,
+                    damping:20,
+                    duration:0.3,
+                  }}
+                  />
+              )} 
+        </Link>
+            
+            <button
+            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 opacity-20"
+            onClick={toggleSubNavbarVisibility}>
+
+            {showSubNavbar ? (
+            <CiSquareChevDown style={{ fontSize: '1.5rem' }} />
+         ) : ( 
+         <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />
+          )}
+            </button>  
+            </>
+            );
+         }
   
          
           return (
@@ -126,12 +166,6 @@ export default function Navbar() {
               onMouseOver={() => setHoveredPath(item.path)}
               onMouseLeave={() => setHoveredPath(pathname)}
             >
-
-          {/* <button
-          className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 opacity-20"
-          onClick={toggleSubNavbarVisibility}>
-          {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
-          </button>  */}
 
               <span>{item.name}</span>
               {item.path === hoveredPath && (
@@ -198,13 +232,6 @@ export default function Navbar() {
                   ))}
                 </div> 
                 )}
-
-
-            {/* <button
-            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 opacity-20"
-            onClick={toggleSubNavbarVisibility}>
-            {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
-            </button> */}
 
 
            </nav>
