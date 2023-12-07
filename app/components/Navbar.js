@@ -184,7 +184,7 @@ export default function Navbar() {
 
 
             <button
-            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100"
+            className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 opacity-20"
             onClick={toggleSubNavbarVisibility}>
             {showSubNavbar ? <CiSquareChevDown style={{ fontSize: '1.5rem' }} /> : <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />}
             </button>
