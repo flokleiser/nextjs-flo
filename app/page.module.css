@@ -10,6 +10,10 @@
   z-index: -1;
 }
 
+/* .subNavbar {
+  margin-left: 0.1rem;
+} */
+
 .linkContainerVideos {
   position:relative;
     display: flex;
@@ -148,9 +152,11 @@ transition: all 0.5s ease-in-out;
   margin-right:1rem;
   margin-top:1.5rem;
   display:flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  /* z-index: -9999; */
 }
 
 
@@ -960,6 +966,20 @@ transition: all 0.5s ease-in-out;
   aspect-ratio: 16/9;
 }
 
+@media (max-width: 1120px) {
+  .subNavbar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgb(28 25 23 / 0.8);
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  z-index: -11;
+}
+}
 
 /* Mobile */
 @media (max-width: 700px) {

@@ -4,8 +4,16 @@
 ## Currently working on:
 
 - [ ] Navbar drop down menus (for sub categories)
+    - [ ] better placement?
+    - [ ] Fix background being over gray box
+    - [ ] Fix button being at the end of navbar, OR place projects at the end of navbar
+
+    - [ ] Make navbar animations not so bouncy
+
 
 - [ ] Right/Left arrow for cycling through photos
+
+- [ ] Maybeeeeeeee change Links/Info to be seperate in navbar again, and have navbar links just take you to bottom/top half of page etc
 
 ## Top Priority (important)
 
