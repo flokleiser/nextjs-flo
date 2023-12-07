@@ -3,7 +3,7 @@
 
 ## Currently working on:
 
-- [ ] Fix mess with z indexes on homepage
+- [ ] Make navbar after projects at the very least
 
 - [x] Navbar drop down menus (for sub categories)
 

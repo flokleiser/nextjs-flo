@@ -20,8 +20,9 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   background-color: rgb(28 25 23 / 0.8);
+  border-radius: 0 0 24px 24px;
   padding: 0.5rem;
   display: flex;
   flex-wrap: wrap;
