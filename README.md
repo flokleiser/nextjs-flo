@@ -3,34 +3,31 @@
 
 ## Currently working on:
 
-- [ ] change video embed to youtube (?) --> upload rest of videos (skate)
-
 - [ ] Navbar drop down menus (for sub categories)
-
-- [ ] Blur background on full screen image/dim
-
-- [ ] Dim switch fade in and out, same with full screen images
 
 - [ ] make animation play twice  
 
-- [ ] Fix sentences etc
-
-- [ ] About/Links page, with card background or not
-
-- [ ] CAD picture better resolution
 
 ## Top Priority (important)
+
+- [ ] navbar box update hovering pages?
+
+## TO FIX:
+
+- [ ] change video embed to youtube (?) --> upload rest of videos (skate)
+- [ ] CAD picture better resolution
+- [ ] Fix sentences
+
+## Maybe:
+
+- [ ] Blur background on full screen image/dim
+- [ ] Dim switch fade in and out, same with full screen images
 
 - [ ] Homepage Card animation on "projects" hover?
 - [ ] homepage title centered
 - [ ] title above/below cards
 - [ ] animation repeatable
 - [ ] homepage cards clickable & hoverable
-
-- [ ] navbar hover animation faster 
-- [ ] navbar box update hovering pages?
-
-## TO FIX:
 
 ## Almost Top Priority (nice to have, when bored)
 

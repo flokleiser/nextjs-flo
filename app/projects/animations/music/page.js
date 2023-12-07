@@ -75,7 +75,6 @@ export default function music() {
                Public Transport
               </p> 
         </div>
-
         <div className={styles.subtitledescription}>
             <p>
             An animation to the song “Funk For Food” by Moderator. Drawn in Photoshop, animated in Adobe After Effects.
@@ -86,10 +85,9 @@ export default function music() {
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
-            src="https://drive.google.com/file/d/16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug/preview" >
+            src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0" >
             </iframe>
             </div>
-
             <div style={{ padding: '2rem' }}> </div>
 
         <div className = {styles.subtitle}>
@@ -107,10 +105,9 @@ export default function music() {
            
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH/preview" >
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx" >
             </iframe>
             </div>
-
             <div style={{ padding: '2rem' }}> </div>
 
         <div className = {styles.subtitle}>
@@ -128,7 +125,7 @@ export default function music() {
 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://drive.google.com/file/d/1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV/preview" >
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5" >
            </iframe>
            </div>
 
