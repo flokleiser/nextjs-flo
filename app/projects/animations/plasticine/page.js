@@ -50,7 +50,7 @@ export default function plasticine() {
             </div>
 
             <h1 className={styles.title}>
-              Plasticine (A)life
+              Plasticine (A)live
             </h1>
             {/* <video
             src="https://drive.google.com/uc?id=10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi" controls>
