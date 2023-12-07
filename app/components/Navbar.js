@@ -95,14 +95,15 @@ export default function Navbar() {
       {showNavbar && (
         
         <motion.div
-        className={"navbar-contents show "} 
+        // className={"navbar-contents show "} 
+        className={`navbar-contents ${showSubNavbar ? 'expanded' : ''}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         >
 
-      <nav className="flex justify-start items-center w-full z-9999" >
+      <nav className="flex justify-start items-center w-full z-9999">
 
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;

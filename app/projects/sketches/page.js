@@ -49,18 +49,39 @@ export default function sketches() {
 
   
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const totalImages = data.length + data2.length + data3.length;
 
-  const handleImageClick = (imageSrc) => {
+
+  const handleImageClick = (imageSrc, id) => {
     setSelectedImage(imageSrc);
+    setSelectedImageIndex(id);
+
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   };
 
 const handleResetClick = () => {
     setSelectedImage(null);
+    setSelectedImageIndex(null);
     document.documentElement.style.overflow = 'auto';
     document.body.style.overflow = 'auto';
 };
+
+const handleNextImage = () => {
+  if (selectedImageIndex < totalImages) {
+    setSelectedImageIndex((prevId) => prevId + 1);
+  }
+  console.log('Right arrow key pressed');
+};
+
+const handlePreviousImage = () => {
+  if (selectedImageIndex > 1) {
+    setSelectedImageIndex((prevId) => prevId - 1);
+  }
+  console.log('Right arrow key pressed');
+};
+
 
 useEffect(() => {
   const handleOutsideClick = (event) => {
@@ -91,8 +112,12 @@ useEffect(() => {
     const handleKeyDown = (event) => {
     if (event.key === 'Escape') {
         handleResetClick();
-    }
+    } else if (event.key === 'ArrowRight') {
+      handleNextImage();
+    } else if (event.key === 'ArrowLeft') {
+      handlePreviousImage();
   };
+};
 
   
   window.addEventListener('keydown', handleKeyDown);

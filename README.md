@@ -3,27 +3,17 @@
 
 ## Currently working on:
 
-- [ ] Make navbar after projects at the very least
+- [ ] Navbar fix on homepage
 
-- [x] Navbar drop down menus (for sub categories)
+- [ ] Better youtube thumbnails maybe
 
 - [ ] Creative coding --> "hints" , "try out "d, 2, t, q" etc
 
-- [ ] completely rework navbar
-
-    - [ ] Placement below --> probably not possible
-
-    - [ ] better placement?
-    - [ ] Fix background being over gray box
-
-    - [ ] Make navbar animations not so bouncy
-
-
 - [ ] Right/Left arrow for cycling through photos
-
 
 ## Top Priority (important)
 
+- [ ] Add arrow keys for cycling through photos
 
 ## TO FIX:
 

@@ -10,11 +10,21 @@
   z-index: -1;
 }
 
-/* .subNavbar {
-  background-color: rgb(120 113 108 / 0.5);
-  padding: 0.45rem;
-  border-radius: 0.375rem
+/* .navbar {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
 } */
+
+.expanded {
+  height: 1000px; 
+ 
+}
 
 .subNavbar {
   position: absolute;
