@@ -5,8 +5,9 @@
 
 - [ ] Navbar drop down menus (for sub categories)
 
-- [ ] make animation play twice  
+- [ ] Right/Left arrow for cycling through photos
 
+- [ ] make animation play twice  
 
 ## Top Priority (important)
 
@@ -42,8 +43,6 @@
 
 #### General:
 - [x] Video embedding --> dim background
-- [ ] add some "scroll resistance" ? scrolling slower etc
-- [ ] Dynamic scrolling elements?
 
 #### Animations:
 - [x] Upload all animations
@@ -97,8 +96,8 @@
 - [x] Github Link
 
 ### About:
-- [ ] Copy paste CV svg files
-- [ ] Style app icons
+- [x] Copy paste CV svg files
+- [x] Style app icons
 
 ## Less Priority (Visual/Layout)
 
@@ -109,6 +108,7 @@
 ### Navbar:
 - [ ] Search function
 - [ ] Navbar animation --> from the side
+- [ ] Sub-Navbar (Projects)
 - [x] Navbar icon
 - [x] Navbar change toggle from top to left
 - [x] Change animation to not look like shit
