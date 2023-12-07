@@ -10,9 +10,9 @@ const data = [
   {
     image: '/images/sketches/sketch test scan website2.png', id: 0
   },
-  {
-  image: '/images/sketches/sketch test scan website.png', id: 1
-  },
+  // {
+  // image: '/images/sketches/sketch test scan website.png', id: 1
+  // },
   {
   image: '/images/sketches/sketch test scan website3.png', id: 2
   },
