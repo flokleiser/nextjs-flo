@@ -21,8 +21,8 @@
 
 - [ ] Fix navbar on mobile
 
-- [ ] Blur background on full screen image/dim
-- [ ] Dim switch fade in and out, same with full screen images
+- [x] Blur background on full screen image/dim
+- [x] Dim switch fade in and out, same with full screen images
 
 - [ ] Add image "roster" for cycling through when hovering on projects
 
@@ -96,7 +96,7 @@
 ### Navbar:
 - [ ] Search function
 - [ ] Navbar animation --> from the side
-- [ ] Sub-Navbar (Projects)
+- [x] Sub-Navbar (Projects)
 - [x] Navbar icon
 - [x] Navbar change toggle from top to left
 - [x] Change animation to not look like shit

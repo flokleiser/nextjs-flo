@@ -36,7 +36,7 @@
   top: 5;
   left: 0;
   width: 100%;
-  background-color: rgb(28 25 23 / 0.8);
+  /* background-color: rgb(28 25 23 / 0.8); */
   border-radius: 12px;
 /*  padding: 0.5rem; */
   display: flex;
@@ -81,7 +81,7 @@
     display: flex;
 
     /* max-width: 100%; */
-    /* width:80vw; */
+    width:80vw;
     /* width:var(--max-width); */
   
     flex-direction: column;

@@ -83,7 +83,7 @@ useEffect(() => {
                   Links/Info
               </h1>
  
-       {/* <div className={styles.linkContainer}> */}
+       <div className={styles.linkContainer}>
        <div style={{ padding: '1rem' }}> </div>
                   <p className={styles.subtitledescription}>
                         Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland. <br></br>
@@ -93,9 +93,9 @@ useEffect(() => {
                   <div style={{ padding: '1rem' }}> </div>
             {/* </div> */}
             
-            {/* <div style={{ padding: '1rem' }}> </div> */}
+            {/* <div style={{ padding: '1rem' }}> </div>
             
-            {/* <div className={styles.linkContainer}> */}
+            <div className={styles.linkContainer}> */}
                                   
               <div style={{ padding: '1rem' }}> </div>
                         
@@ -176,6 +176,7 @@ useEffect(() => {
 
                   <div style={{ padding: '1rem' }}> </div>
 
+</div>
 
             <div style={{ padding: '1rem' }}> </div>
 

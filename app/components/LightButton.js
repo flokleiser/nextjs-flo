@@ -18,7 +18,8 @@ export default function LightButton() {
   return (
     <div>
       <button className="absolute mt-4 ml-4 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 52}}
+      style={{ zIndex: 52, backdropFilter: `blur(${isDim ? '10px' : '0px'})`,}}
+      
       onClick={handleToggleClick}>
         {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
       </button>
@@ -36,8 +37,8 @@ export default function LightButton() {
         
         style={{
           backdropFilter: `blur(${isDim ? '10px' : '0px'}px)`,
-          position: 'fixed',
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          pointerEvents: isDim ? 'auto' : 'none',
         }}>
       
         </motion.div>

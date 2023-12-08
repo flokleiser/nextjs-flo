@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
+import LightButton from 'app/components/LightButton.js';
 
 const data = [
   {
@@ -288,6 +289,15 @@ useEffect(() => {
                   </div>
                 </div>
            
+                <div className='flex align-center border'> 
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+            src="https://www.youtube.com/embed/ehdOkglKb0o?si=diIzQwaQ9w1WKTU0"> 
+              </iframe>
+            </div>
+            <div style={{ padding: '2rem' }}> </div>
+
+
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
