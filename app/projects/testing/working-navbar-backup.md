@@ -81,9 +81,6 @@ export default function Navbar() {
 
 
   return (
-
-<div className={styles.navbarContainer}>
-
     <div className="flex border-stone-900/80 p-[0.4rem] mb-1 sticky top bg-stone-900/80 backdrop-blur-md ">
       <button
         className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out text-zinc-100"
@@ -107,7 +104,6 @@ export default function Navbar() {
 
       <nav className="flex justify-start items-center w-full z-9999">
 
-   
         {navItems.map((item, index) => {
           const isActive = item.path === pathname;
           return (
@@ -148,8 +144,6 @@ export default function Navbar() {
 );
 })}
 
-
-
 <button
 className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100 "
 onClick={toggleSubNavbarVisibility}>
@@ -160,10 +154,6 @@ onClick={toggleSubNavbarVisibility}>
 <CiSquareChevUp style={{ fontSize: '1.5rem' }}  />
 )}
 </button>  
-
-
-
-
              {showSubNavbar && (
 
                 <motion.div className={styles.subNavbar}
@@ -172,12 +162,7 @@ onClick={toggleSubNavbarVisibility}>
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5}}
                   >
-                 <nav className="flex flex-col justify-start w-full z-9999">
-
-                 {/* <div 
-                 className={styles.navbarSubContainer}
-                 > */}
-
+                 <nav className="flex justify-start items-center w-full z-9999">
                   {navSubItems.map((subItem) => (
                     <Link
                       key={subItem.path}
@@ -193,9 +178,7 @@ onClick={toggleSubNavbarVisibility}>
                  
 
                     >
-                      <span>
-                        {subItem.name}
-                        </span>
+                      <span>{subItem.name}</span>
                       {subItem.path === hoveredPath && (
                         <motion.div
                           // className="absolute bottom-0 left-0 h-full bg-stone-900/30 rounded-md z-10"
@@ -230,7 +213,5 @@ onClick={toggleSubNavbarVisibility}>
        )}
         </AnimatePresence>
     </div>
-
-  </div>
   );
 }

@@ -93,7 +93,7 @@ useEffect(() => {
                   <div style={{ padding: '1rem' }}> </div>
             {/* </div> */}
             
-            <div style={{ padding: '1rem' }}> </div>
+            {/* <div style={{ padding: '1rem' }}> </div> */}
             
             {/* <div className={styles.linkContainer}> */}
                                   
@@ -172,25 +172,14 @@ useEffect(() => {
                
                   </div>
                 
-                  {/* </div> */}
-
-                        {/* <div className={styles.linkContainer}> */}
-            {/* <div style={{ padding: '1rem' }}> </div>
-                  <p className={styles.subtitledescription}>
-                        Hi, im Florian Kleiser, im 24 years old and I come from Zürich, Switzerland. <br></br>
-                        My passions include drawing, editing, programming, gaming, skating and music. <br></br>
-                        I am currently applying to study Interaction Design / Digital Ideation.
-                  </p>
-                  <div style={{ padding: '1rem' }}> </div> */}
-            {/* </div> */}
+               
 
                   <div style={{ padding: '1rem' }}> </div>
 
-            {/* <div className={styles.linkContainer}> */}
 
             <div style={{ padding: '1rem' }}> </div>
 
-            <div className={styles.subtitledescription}>
+            {/* <div className={styles.subtitledescription}>
             <h1>
             Education/Experience
             </h1>
@@ -230,8 +219,7 @@ useEffect(() => {
 
             <div style={{ padding: '2rem' }}> </div>
 
-            {/* </div> */}
-             <div style={{ padding: '2rem' }}> </div>
+             <div style={{ padding: '2rem' }}> </div> */}
         </main>
     )
 }
