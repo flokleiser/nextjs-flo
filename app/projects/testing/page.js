@@ -58,31 +58,36 @@ export default function testing() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const selectedIndex = data.findIndex((item) => item.image === imageSrc);
-    setSelectedImage(imageSrc);
-    setCurrentIndex(data[selectedIndex].id);
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
+    const dataArray = [...data, ...data2, ...data3];
+    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
+    if (selectedIndex !== -1) {
+      setSelectedImage(imageSrc);
+      setCurrentIndex(dataArray[selectedIndex].id);
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const prevIndex = data.findIndex((item) => item.id === currentIndex);
-      const newIndex = prevIndex === 0 ? data.length - 1 : prevIndex - 1;
-      setCurrentIndex(data[newIndex].id);
-      setSelectedImage(data[newIndex].image);
-      console.log(`Previous button clicked. Index: ${data[newIndex].id}`);
+      const dataArray = [...data, ...data2, ...data3];
+      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const prevIndex = data.findIndex((item) => item.id === currentIndex);
-      const newIndex = prevIndex === data.length - 1 ? 0 : prevIndex + 1;
-      setCurrentIndex(data[newIndex].id);
-      setSelectedImage(data[newIndex].image);
-      console.log(`Next button clicked. Index: ${data[newIndex].id}`);
+      const dataArray = [...data, ...data2, ...data3];
+      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
