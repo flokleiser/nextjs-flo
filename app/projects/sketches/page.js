@@ -4,6 +4,7 @@ import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 const data = [
@@ -98,18 +99,27 @@ export default function sketches() {
 useEffect(() => {
   const handleOutsideClick = (event) => {
     const imageElement = document.querySelector("#overlay img");
+    const leftButton = document.querySelector("#leftButton");
+    const rightButton = document.querySelector("#rightButton");
  
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
 
-    if (
-      event.clientX < imageRect.left ||
-      event.clientX > imageRect.right ||
-      event.clientY < imageRect.top ||
-      event.clientY > imageRect.bottom
-      ) {
+      if (
+        event.clientX < imageRect.left ||
+        event.clientX > imageRect.right ||
+        event.clientY < imageRect.top ||
+        event.clientY > imageRect.bottom
+        ) {
+        if (
+          event.target !== leftButton &&
+          event.target !== rightButton &&
+          !leftButton.contains(event.target) &&
+          !rightButton.contains(event.target)
+        ) {
         handleResetClick();
+        }
       }
     }
   };
@@ -139,6 +149,7 @@ return () => {
   window.removeEventListener('keydown', handleKeyDown);
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
+
 
 
 useEffect(() => {
@@ -197,7 +208,7 @@ useEffect(() => {
              </p>
             </div>
 
-            <div className="">
+         
             {selectedImage && (
         <div id="overlay" 
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none bg-black bg-opacity-75 transition-transform duration-300 z-50">
@@ -214,8 +225,31 @@ useEffect(() => {
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>
+          <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="leftButton"
+              className= "text-black px-0 py-4 rounded-r"
+              onClick={handlePrevImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+            {/* <div className="absolute right-5"> */}
+            <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="rightButton"
+              className=" text-black px-0 py-4 rounded-r"
+              onClick={handleNextImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
+          </div>
         </div>
       )}
+       
+       <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -240,6 +274,7 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
+            
 
               
 
@@ -268,8 +303,8 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
-   
-              <div className="">
+
+             <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -294,6 +329,7 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
+        
    
 
         </main>

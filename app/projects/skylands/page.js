@@ -8,51 +8,96 @@ import React, {useState, useEffect} from 'react';
 import { PiXCircle } from "react-icons/pi"; 
 import { DiGithubBadge } from "react-icons/di";
 import LightButton from 'app/components/LightButton.js';
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 
   const data = [
-    { image : '/images/skylands/skylands1.png'},
-    { image : '/images/skylands/skylandsfull.png'},
-    { image : '/images/skylands/skylands2.png'},
+    { image : '/images/skylands/skylands1.png',  id: 0},
+    { image : '/images/skylands/skylandsfull.png', id: 1},
+    { image : '/images/skylands/skylands2.png', id: 2},
     ]
 
   const data2 = [
-      { image : '/images/skylands/skylands3.png'},
-      { image : '/images/skylands/skylands4.png'},
-      { image : '/images/skylands/skylands5.png'},
+      { image : '/images/skylands/skylands3.png', id: 3},
+      { image : '/images/skylands/skylands4.png', id: 4},
+      { image : '/images/skylands/skylands5.png', id: 5},
       ]
 
 export default function skylands() {
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-  };
-
-const handleResetClick = () => {
+  const handleResetClick = () => {
     setSelectedImage(null);
+    setCurrentIndex(0);
     document.documentElement.style.overflow = 'auto';
     document.body.style.overflow = 'auto';
-};
+  };
 
+  /* make image big */
+  const handleImageClick = (imageSrc) => {
+    const dataArray = [...data, ...data2];
+    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
+    if (selectedIndex !== -1) {
+      setSelectedImage(imageSrc);
+      setCurrentIndex(dataArray[selectedIndex].id);
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (selectedImage !== null) {
+      const dataArray = [...data, ...data2];
+      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
+    }
+  };
+
+
+  const handleNextImage = () => {
+    if (selectedImage !== null) {
+      const dataArray = [...data, ...data2];
+      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
+    }
+  };
+
+
+
+/* handleoutsideclick*/
 useEffect(() => {
   const handleOutsideClick = (event) => {
     const imageElement = document.querySelector("#overlay img");
+    const leftButton = document.querySelector("#leftButton");
+    const rightButton = document.querySelector("#rightButton");
+ 
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
 
-    if (
-      event.clientX < imageRect.left ||
-      event.clientX > imageRect.right ||
-      event.clientY < imageRect.top ||
-      event.clientY > imageRect.bottom
-      ) {
+      if (
+        event.clientX < imageRect.left ||
+        event.clientX > imageRect.right ||
+        event.clientY < imageRect.top ||
+        event.clientY > imageRect.bottom
+        ) {
+        if (
+          event.target !== leftButton &&
+          event.target !== rightButton &&
+          !leftButton.contains(event.target) &&
+          !rightButton.contains(event.target)
+        ) {
         handleResetClick();
+        }
       }
     }
   };
@@ -64,20 +109,24 @@ useEffect(() => {
   };
 }, []);
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-    if (event.key === 'Escape') {
-        handleResetClick();
-    }
-  };
+/* handlekeydown*/
+useEffect(() => {
+  const handleKeyDown = (event) => {
+  if (event.key === 'Escape') {
+      handleResetClick();
+  } else if (event.key === 'ArrowLeft') {
+    handlePrevImage();
+  } else if (event.key === 'ArrowRight') {
+    handleNextImage();
+  }
+};
 
-  
-  window.addEventListener('keydown', handleKeyDown);
+window.addEventListener('keydown', handleKeyDown);
 
-  return () => {
-    window.removeEventListener('keydown', handleKeyDown);
-  };
-}, []);
+return () => {
+  window.removeEventListener('keydown', handleKeyDown);
+};
+}, [handleResetClick, handlePrevImage, handleNextImage]);
 
   useEffect(() => {
     document.title = 'Projects - Skylands';
@@ -153,7 +202,7 @@ useEffect(() => {
             </div>
             <div style={{ padding: '2rem' }}> </div>
              
-            <div className="">
+           
             {selectedImage && (
         <div id="overlay" 
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none bg-black bg-opacity-75 transition-transform duration-300 z-50">
@@ -170,8 +219,32 @@ useEffect(() => {
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>
+            {/* prev and next buttons */}
+            <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="leftButton"
+              className= "text-black px-0 py-4 rounded-r"
+              onClick={handlePrevImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+            {/* <div className="absolute right-5"> */}
+            <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="rightButton"
+              className=" text-black px-0 py-4 rounded-r"
+              onClick={handleNextImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
+          </div>
         </div>
       )}
+
+          <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -196,6 +269,7 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
+           
 
               
 
