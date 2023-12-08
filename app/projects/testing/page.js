@@ -58,30 +58,34 @@ export default function testing() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
+    const selectedIndex = data.findIndex((item) => item.image === imageSrc);
     setSelectedImage(imageSrc);
+    setCurrentIndex(data[selectedIndex].id);
     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   };
 
-  /* select previous image */
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? data.length - 1 : prevIndex - 1));
-    setSelectedImage(data[currentIndex === 0 ? data.length - 1 : currentIndex - 1].image)
-    console.log(`Previous button clicked. Index: ${currentIndex}`);
-    }          
-  };
-
-
-
-  /* select next image */
-  const handleNextImage = () => {
-    if (selectedImage !== null) {
-    setCurrentIndex((prevIndex) => (prevIndex === data.length - 1 ? 0 : prevIndex + 1));
-    setSelectedImage(data[currentIndex === data.length - 1 ? 0 : currentIndex + 1].image);
-    console.log(`Next button clicked. Index: ${currentIndex}`);
+      const prevIndex = data.findIndex((item) => item.id === currentIndex);
+      const newIndex = prevIndex === 0 ? data.length - 1 : prevIndex - 1;
+      setCurrentIndex(data[newIndex].id);
+      setSelectedImage(data[newIndex].image);
+      console.log(`Previous button clicked. Index: ${data[newIndex].id}`);
     }
   };
+
+
+  const handleNextImage = () => {
+    if (selectedImage !== null) {
+      const prevIndex = data.findIndex((item) => item.id === currentIndex);
+      const newIndex = prevIndex === data.length - 1 ? 0 : prevIndex + 1;
+      setCurrentIndex(data[newIndex].id);
+      setSelectedImage(data[newIndex].image);
+      console.log(`Next button clicked. Index: ${data[newIndex].id}`);
+    }
+  };
+
 
 
 /* handleoutsideclick*/
