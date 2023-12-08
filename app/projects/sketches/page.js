@@ -47,25 +47,58 @@ const data3 = [
 
 export default function sketches() {
 
-  
   const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-  };
-
-const handleResetClick = () => {
+  const handleResetClick = () => {
     setSelectedImage(null);
+    setCurrentIndex(0);
     document.documentElement.style.overflow = 'auto';
     document.body.style.overflow = 'auto';
-};
+  };
 
+  /* make image big */
+  const handleImageClick = (imageSrc) => {
+    const dataArray = [...data, ...data2, ...data3];
+    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
+    if (selectedIndex !== -1) {
+      setSelectedImage(imageSrc);
+      setCurrentIndex(dataArray[selectedIndex].id);
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (selectedImage !== null) {
+      const dataArray = [...data, ...data2, ...data3];
+      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
+    }
+  };
+
+
+  const handleNextImage = () => {
+    if (selectedImage !== null) {
+      const dataArray = [...data, ...data2, ...data3];
+      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
+    }
+  };
+
+
+
+/* handleoutsideclick*/
 useEffect(() => {
   const handleOutsideClick = (event) => {
     const imageElement = document.querySelector("#overlay img");
+ 
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
@@ -88,20 +121,25 @@ useEffect(() => {
   };
 }, []);
 
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-    if (event.key === 'Escape') {
-        handleResetClick();
-    } 
+/* handlekeydown*/
+useEffect(() => {
+  const handleKeyDown = (event) => {
+  if (event.key === 'Escape') {
+      handleResetClick();
+  } else if (event.key === 'ArrowLeft') {
+    handlePrevImage();
+  } else if (event.key === 'ArrowRight') {
+    handleNextImage();
+  }
 };
 
-  
-  window.addEventListener('keydown', handleKeyDown);
+window.addEventListener('keydown', handleKeyDown);
 
-  return () => {
-    window.removeEventListener('keydown', handleKeyDown);
-  };
-}, []);
+return () => {
+  window.removeEventListener('keydown', handleKeyDown);
+};
+}, [handleResetClick, handlePrevImage, handleNextImage]);
+
 
 useEffect(() => {
   document.title = 'Projects - Sketches';
