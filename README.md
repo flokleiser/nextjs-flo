@@ -3,9 +3,13 @@
 
 ## Currently working on:
 
+- [ ] Homepage --> background blurry on link hover
+
 ## Top Priority (important)
 
 ## TO FIX:
+
+- [ ] Creative coding pic nr 3 not the same size
 
 - [ ] CAD picture better resolution
 

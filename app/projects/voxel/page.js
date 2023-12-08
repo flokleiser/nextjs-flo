@@ -5,6 +5,7 @@ import Link from 'next/link';
 import React, {useState, useEffect} from 'react';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { AnimatePresence, motion} from 'framer-motion';
 
 
 
@@ -179,9 +180,22 @@ return () => {
 
             
 <div className="">
-            {selectedImage && (
-        <div id="overlay" 
-        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none bg-black bg-opacity-75 transition-transform duration-300 z-50">
+
+<AnimatePresence>
+              {selectedImage && (
+               <motion.div
+                id="overlay" 
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+        style={{
+          backdropFilter: `blur(${selectedImage ? '10px' : '0px'})`,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        }}
+          >
+  
           <img
             src={selectedImage}
             alt=""
@@ -216,8 +230,9 @@ return () => {
               <IoIosArrowForward style={{ fontSize: '2rem' }}/>
             </button>
           </div>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
