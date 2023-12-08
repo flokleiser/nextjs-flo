@@ -12,16 +12,16 @@ const data = [
 ]
 
 const data2 = [
-  { image : '/images/cad/cadknife4.png', id: 1},
-  { image : '/images/cad/cadknife2.png', id: 2},
-  { image : '/images/cad/cadknife1.png', id: 3},
-  { image : '/images/cad/cadknife3.png', id: 4},
+  { image: '/images/cad/cad parts2.png', id: 1},
+  { image: '/images/cad/cad parts1.png', id: 2},
+  { image: '/images/cad/cad parts3.png', id: 3},
 ]
 
 const data3 = [
-  { image: '/images/cad/cad parts2.png', id: 5},
-  { image: '/images/cad/cad parts1.png', id: 6},
-  { image: '/images/cad/cad parts3.png', id: 7},
+  { image : '/images/cad/cadknife4.png', id: 4},
+  { image : '/images/cad/cadknife2.png', id: 5},
+  { image : '/images/cad/cadknife1.png', id: 6},
+  { image : '/images/cad/cadknife3.png', id: 7},
 ]
 
 const data4 = [
@@ -242,7 +242,7 @@ return () => {
                       <Image
                         width={600}
                         height={400}
-                        className={`max-h-600 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                        className={`rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                           selectedImage ? 'z-0' : ''
                         }`}
                         src={x.image}
@@ -262,7 +262,7 @@ return () => {
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data3.map((x) =>  (
+                    {data2.map((x) =>  (
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
@@ -288,7 +288,7 @@ return () => {
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data2.map((x) =>  (
+                    {data3.map((x) =>  (
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >

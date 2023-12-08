@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import {AnimatePresence, m, motion} from "framer-motion";
 import { BsList, BsX, BsXSquare, BsSearch } from "react-icons/bs";
-import { CiMenuKebab } from "react-icons/ci";
 import { CiSquareChevDown, CiSquareChevUp,  CiSquareChevLeft, CiSquareChevRight, CiSquarePlus, CiSquareMinus, CiSquareMore, CiCircleChevUp} from "react-icons/ci";
 
 
@@ -19,10 +18,6 @@ const navItems = [
     path: "/projects",
     name: "Projects",
   },
-  // {
-  //   path: "/toggle-navbar",
-  //   name: "Toggle Navbar",
-  // },
   {
     path: "/links",
     name: "Links/Info",

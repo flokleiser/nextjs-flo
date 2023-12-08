@@ -3,52 +3,39 @@
 
 ## Currently working on:
 
+- [ ] Navbar projects not hoverable anymore ?
 
-- [ ] Better youtube thumbnails maybe
-
-
-- [ ] Nuclear option -> get rid of gray hover box, and just have the items get bigger on hover
-
-- [ ] Navbar Open/Close gray on hover too (change current path to onclick or something?)
+- [ ] Navbar change onhover to make bigger or something idk
 
 - [ ] SubNavBar animation down and up
-
 - [ ] Navbar expandable button selectable 
-
 - [ ] Navbar fix on homepage
-
-- [ ] Creative coding --> "hints" , "try out "d, 2, t, q" etc
 
 ## Top Priority (important)
 
-- [ ] Links/Info links to the side of photo maybe
+- [ ] Better youtube thumbnails maybe
 
 ## TO FIX:
 
 - [ ] CAD picture better resolution
-- [ ] Fix sentences
 
 ## Maybe:
 
-- [ ] Blur background on full screen image/dim
-- [ ] Dim switch fade in and out, same with full screen images
+- [ ] Nuclear option -> get rid of gray hover box, and just have the items get bigger on hover
+- [ ] Navbar Open/Close gray on hover too (change current path to onclick or something?)
 
-- [ ] Homepage Card animation on "projects" hover?
-- [ ] homepage title centered
-- [ ] title above/below cards
-- [ ] animation repeatable
-- [ ] homepage cards clickable & hoverable
 
 ## Almost Top Priority (nice to have, when bored)
 
 - [ ] "progress bar" thingy on the left (on desktop view, shows full page and clickable circles for video, images etc)
 - [ ] Search function --> look into type='search' (in layout.css)
-- [ ] Individual Sites: Navigation menu (Overview, Description, Links) etc
 - [ ] Add 404 page
+
+- [ ] Blur background on full screen image/dim
+- [ ] Dim switch fade in and out, same with full screen images
 
 - [ ] Add image "roster" for cycling through when hovering on projects
 
-- [ ] make animation play twice  
 
 ### Videos/Gifs/Images:
 
