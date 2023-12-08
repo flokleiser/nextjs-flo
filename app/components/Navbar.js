@@ -155,9 +155,9 @@ className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline durat
 onClick={toggleSubNavbarVisibility}>
 
 {showSubNavbar ? (
-<CiSquareChevDown style={{ fontSize: '1.5rem' }} />
+<CiSquareChevLeft style={{ fontSize: '1.5rem' }} />
 ) : ( 
-<CiSquareChevUp style={{ fontSize: '1.5rem' }}  />
+<CiSquareChevRight style={{ fontSize: '1.5rem' }}  />
 )}
 </button>  
 
@@ -172,7 +172,7 @@ onClick={toggleSubNavbarVisibility}>
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5}}
                   >
-                 <nav className="flex flex-col justify-start w-full z-9999">
+                 <nav className="flex flex-row justify-start w-full z-9999">
 
                  {/* <div 
                  className={styles.navbarSubContainer}

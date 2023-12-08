@@ -19,17 +19,13 @@
 
 - [ ] CAD picture better resolution
 
-## Maybe:
-
-- [ ] Nuclear option -> get rid of gray hover box, and just have the items get bigger on hover
-- [ ] Navbar Open/Close gray on hover too (change current path to onclick or something?)
-
-
 ## Almost Top Priority (nice to have, when bored)
 
 - [ ] "progress bar" thingy on the left (on desktop view, shows full page and clickable circles for video, images etc)
 - [ ] Search function --> look into type='search' (in layout.css)
 - [ ] Add 404 page
+
+- [ ] Fix navbar on mobile
 
 - [ ] Blur background on full screen image/dim
 - [ ] Dim switch fade in and out, same with full screen images
