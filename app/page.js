@@ -44,7 +44,7 @@ export default function Home() {
 
   
       <h1 className={styles.titleHomepage} 
-      style={{zIndex:60}}
+      // style={{zIndex:60}}
       >
         Florian Kleiser
       </h1>
@@ -52,7 +52,7 @@ export default function Home() {
 
 
 
-    <div className={styles.homepageSlices}>
+    <div className={styles.homepageSlices} style={{zIndex:-900}}>
 
     <Image className={styles.cardHomepageTest} src="/images/homepage/new2/1.png" width={1100} height={1000} />
     <Image className={styles.cardHomepageTest} src="/images/homepage/new2/2.png" width={1100} height={1000} />

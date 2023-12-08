@@ -95,7 +95,7 @@ useEffect(() => {
             
             <div style={{ padding: '1rem' }}> </div>
             
-            <div className={styles.linkContainer}>
+            {/* <div className={styles.linkContainer}> */}
                                   
               <div style={{ padding: '1rem' }}> </div>
                         
@@ -157,7 +157,8 @@ useEffect(() => {
 
                     <div style={{ padding: '1rem' }}> </div>
                 
-                  <div className={styles.linkContainerImage} 
+                  <div 
+                  className={styles.linkContainerImage} 
                   style={{backgroundImage: "url(/images/flo0.png)",opacity:0.5 }}>
 
                   {/* <Image src="/images/flo9.png" width={640} height={402} /> */} 
@@ -171,7 +172,7 @@ useEffect(() => {
                
                   </div>
                 
-                  </div>
+                  {/* </div> */}
 
                         {/* <div className={styles.linkContainer}> */}
             {/* <div style={{ padding: '1rem' }}> </div>

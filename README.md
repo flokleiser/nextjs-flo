@@ -3,6 +3,14 @@
 
 ## Currently working on:
 
+- [ ] Nuclear option -> get rid of gray hover box, and just have the items get bigger on hover
+
+- [ ] Navbar Open/Close gray on hover too (change current path to onclick or something?)
+
+- [ ] SubNavBar animation down and up
+
+- [ ] Navbar expandable button selectable 
+
 - [ ] Navbar fix on homepage
 
 - [ ] Better youtube thumbnails maybe
@@ -15,9 +23,10 @@
 
 - [ ] Add arrow keys for cycling through photos
 
+- [ ] Links/Info links to the side of photo maybe
+
 ## TO FIX:
 
-- [ ] change video embed to youtube (?) --> upload rest of videos (skate)
 - [ ] CAD picture better resolution
 - [ ] Fix sentences
 

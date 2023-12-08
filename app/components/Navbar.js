@@ -19,10 +19,10 @@ const navItems = [
     path: "/projects",
     name: "Projects",
   },
-  {
-    path: "/toggle-navbar",
-    name: "Toggle Navbar",
-  },
+  // {
+  //   path: "/toggle-navbar",
+  //   name: "Toggle Navbar",
+  // },
   {
     path: "/links",
     name: "Links/Info",
