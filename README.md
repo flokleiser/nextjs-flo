@@ -3,8 +3,6 @@
 
 ## Currently working on:
 
-- [ ] SubNavBar animation fix
-
 ## Top Priority (important)
 
 ## TO FIX:
