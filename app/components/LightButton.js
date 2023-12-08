@@ -38,7 +38,6 @@ export default function LightButton() {
         style={{
           backdropFilter: `blur(${isDim ? '10px' : '0px'}px)`,
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
-          pointerEvents: isDim ? 'auto' : 'none',
         }}>
       
         </motion.div>

@@ -1,10 +1,20 @@
+'use client'
+import { useState } from 'react';
 import styles from '/app/page.module.css'
 import { CiGrid32,CiImageOn, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image'
+import { AnimatePresence, motion} from 'framer-motion';
 
 
 export default function Home() {
+
+  const [isHovering, setIsHovering] = useState(false);
+  
+  const handleHover = () => {
+    setIsHovering(!isHovering);
+  };
+
   return (
     
     <main className={styles.main}>
@@ -69,7 +79,9 @@ export default function Home() {
      style={{zIndex:60}}
      >
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="/projects"> <CiGrid32/> Projects </Link> 
+          <Link  className="link-hover" href="/projects"
+             onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
+          > <CiGrid32/> Projects </Link> 
         </h2>
      </div>
 
@@ -77,12 +89,30 @@ export default function Home() {
      style={{zIndex:60}}
      >
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view" target="_blank"> 
+          <Link  className="link-hover" href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view" target="_blank"
+                 onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
+          > 
           <CiImageOn />
           Portfolio 
           </Link> 
         </h2>
      </div>
+
+        <AnimatePresence>
+              {isHovering && (
+               <motion.div
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+        style={{
+          backdropFilter: `blur(${isHovering? '5px' : '0px'})`,
+        }}
+          >
+        </motion.div>
+        )}
+        </AnimatePresence>
 
      <div style={{ margin: '3rem' }}> </div>
 

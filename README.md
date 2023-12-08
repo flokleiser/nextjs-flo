@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Fix video background blurry
+
 - [ ] Homepage --> background blurry on link hover
 
 ## Top Priority (important)
