@@ -3,17 +3,9 @@
 
 ## Currently working on:
 
-- [ ] Navbar projects not hoverable anymore ?
-
-- [ ] Navbar change onhover to make bigger or something idk
-
-- [ ] SubNavBar animation down and up
-- [ ] Navbar expandable button selectable 
-- [ ] Navbar fix on homepage
+- [ ] SubNavBar animation fix
 
 ## Top Priority (important)
-
-- [ ] Better youtube thumbnails maybe
 
 ## TO FIX:
 

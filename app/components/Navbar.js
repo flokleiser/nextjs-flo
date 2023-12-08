@@ -161,9 +161,7 @@ onClick={toggleSubNavbarVisibility}>
 )}
 </button>  
 
-
-
-
+          <AnimatePresence>
              {showSubNavbar && (
 
                 <motion.div className={styles.subNavbar}
@@ -222,6 +220,7 @@ onClick={toggleSubNavbarVisibility}>
                   </nav>
                   </motion.div> 
                 )}
+                </AnimatePresence>
 
 
            </nav>
