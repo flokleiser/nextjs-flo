@@ -3,6 +3,10 @@
 
 ## Currently working on:
 
+
+- [ ] Better youtube thumbnails maybe
+
+
 - [ ] Nuclear option -> get rid of gray hover box, and just have the items get bigger on hover
 
 - [ ] Navbar Open/Close gray on hover too (change current path to onclick or something?)
@@ -13,15 +17,9 @@
 
 - [ ] Navbar fix on homepage
 
-- [ ] Better youtube thumbnails maybe
-
 - [ ] Creative coding --> "hints" , "try out "d, 2, t, q" etc
 
-- [ ] Right/Left arrow for cycling through photos
-
 ## Top Priority (important)
-
-- [ ] Add arrow keys for cycling through photos
 
 - [ ] Links/Info links to the side of photo maybe
 

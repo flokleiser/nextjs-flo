@@ -97,18 +97,27 @@ export default function testing() {
 useEffect(() => {
   const handleOutsideClick = (event) => {
     const imageElement = document.querySelector("#overlay img");
+    const leftButton = document.querySelector("#leftButton");
+    const rightButton = document.querySelector("#rightButton");
  
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
 
-    if (
-      event.clientX < imageRect.left ||
-      event.clientX > imageRect.right ||
-      event.clientY < imageRect.top ||
-      event.clientY > imageRect.bottom
-      ) {
+      if (
+        event.clientX < imageRect.left ||
+        event.clientX > imageRect.right ||
+        event.clientY < imageRect.top ||
+        event.clientY > imageRect.bottom
+        ) {
+        if (
+          event.target !== leftButton &&
+          event.target !== rightButton &&
+          !leftButton.contains(event.target) &&
+          !rightButton.contains(event.target)
+        ) {
         handleResetClick();
+        }
       }
     }
   };
@@ -208,6 +217,29 @@ useEffect(() => {
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>
+
+          {/* prev and next buttons */}
+          <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="leftButton"
+              className= "text-black px-0 py-4 rounded-r"
+              onClick={handlePrevImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+            {/* <div className="absolute right-5"> */}
+            <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="rightButton"
+              className=" text-black px-0 py-4 rounded-r"
+              onClick={handleNextImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
+          </div>
 
         </div>
               )}
