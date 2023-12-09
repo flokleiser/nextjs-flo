@@ -192,7 +192,7 @@ export default function Home() {
 
       <div style={{ margin: "3.5rem" }}> </div>
 
-      <div
+      {/* <div
         className={styles.subtitledescription}
         style={{ opacity: 0.3, zIndex: -9999 }}
       >
@@ -205,7 +205,7 @@ export default function Home() {
             className={styles.emoji}
           />
         </p>
-      </div>
+      </div> */}
     </main>
   );
 }

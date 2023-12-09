@@ -1086,6 +1086,7 @@ transition: all 0.5s ease-in-out;
 .cardHomepageTest {
   transform:scale(0.8);
   margin-bottom:4.5rem;
+  filter:blur(0px);
 }
 @keyframes grow-in {
   from {
