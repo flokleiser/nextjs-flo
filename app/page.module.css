@@ -176,16 +176,19 @@ transition: all 0.5s ease-in-out;
   from {
     opacity: 0.1;
     transform: scale(1);
+    filter: blur(5px);
   }
 
   50% {
     opacity: 0.8;
     transform: scale(1.07);
+    filter: blur(0px);
   }
 
-  from {
+  to {
     opacity: 0.1;
     transform: scale(1);
+    filter: blur(5px);
   }
 }
 
@@ -207,6 +210,7 @@ transition: all 0.5s ease-in-out;
   opacity:0.1;
   /* margin-top:25rem; */
   margin-top:10rem;
+  filter: blur(5px);
   }
 
 .cardHomepageTestAnimation1 {
