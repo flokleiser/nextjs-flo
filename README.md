@@ -7,19 +7,16 @@
 
 - [ ] Fix video background blurry
 
-- [ ] Homepage --> background blurry on link hover
-
 ## Top Priority (important)
 
 ## TO FIX:
-
-- [ ] Creative coding pic nr 3 not the same size
 
 - [ ] CAD picture better resolution
 
 ## Almost Top Priority (nice to have, when bored)
 
 - [ ] "progress bar" thingy on the left (on desktop view, shows full page and clickable circles for video, images etc)
+
 - [ ] Search function --> look into type='search' (in layout.css)
 - [ ] Add 404 page
 
