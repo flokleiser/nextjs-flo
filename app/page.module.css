@@ -10,37 +10,48 @@
   z-index: -1;
 }
 
-/* .mainNavbar {
-  height: calc(100% + var(--subnavbar-height));
-  flex-shrink:1;
-} */
-
-/* .expanded {
-  height: 1000px; 
- 
-} */
-
-/* .navbarContainer{
-  display:flex;
-  flex-direction: column;
+.homepageOverlayProjects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.navbarSubContainer {
-  display:flex;
-  flex-direction:row;
-} */
+.scale-110 {
+  transform: scale(1.1);
+}
+
+.homepageOverlayPortfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--secondary-glow);
+  opacity: 0.2; /* Adjust the opacity as needed */
+  z-index: -1;
+}
+.homepageOverlayPortfolio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--primary-glow);
+  border-radius: 50%;
+  width: 50vw;
+  height: 50vw;
+  filter: blur(90px);
+}
 
 .subNavbar {
   position: sticky;
-  /* flex-grow:1; */
   top: 5;
   left: 0;
   width: 100%;
-  /* background-color: rgb(28 25 23 / 0.8); */
   border-radius: 12px;
-/*  padding: 0.5rem; */
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction:column;
   justify-content: flex-start;
   z-index: 11;
@@ -52,7 +63,6 @@
     /* <div className="p-3 container mx-auto"> */
     width:100vw;
 
-  
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -198,7 +208,33 @@ transition: all 0.5s ease-in-out;
   /* margin-top:25rem; */
   margin-top:10rem;
   }
-  .cardHomepageTest:first-child {
+
+.cardHomepageTestAnimation1 {
+    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+  }
+.cardHomepageTestAnimation2 {
+  animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+    animation-delay:0.3s;
+  }
+.cardHomepageTestAnimation3 {
+  animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+    animation-delay:0.6s;
+  }
+.cardHomepageTestAnimation4 {
+  animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+    animation-delay:0.8s;
+  }
+.cardHomepageTestAnimation5 {
+  animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+    animation-delay:1s;
+  }
+.cardHomepageTestAnimation6 {
+  animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
+    animation-delay:1.1s;
+  }
+  
+  
+  /* .cardHomepageTest:first-child {
     animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards;
     animation-delay: 0.5s;
   }
@@ -226,47 +262,7 @@ transition: all 0.5s ease-in-out;
   .cardHomepageTest:nth-child(6) {
     animation: grow-in-and-out 2.6s ease-in-out 0.9s forwards;
     animation-delay: 1s;
-  }
-
-  /* .cardHomepageTest:first-child {
-    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
-    animation-delay: 0.5s;
-  }
-  
-  .cardHomepageTest:nth-child(2) {
-    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
-    animation-delay: 0.6s;
-  }
-  
-  .cardHomepageTest:nth-child(3) {
-    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
-    animation-delay: 0.7s;
-  }
-  
-  .cardHomepageTest:nth-child(4) {
-    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
-    animation-delay: 0.8s;
-  }
-  
-  .cardHomepageTest:nth-child(5) {
-    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
-    animation-delay: 0.9s;
-  }
-  
-  .cardHomepageTest:nth-child(6) {
-    animation: grow-in-and-out 1.8s ease-in-out 0.15s forwards 2;
-    animation-delay: 1s;
   } */
-
-
-.homepageSlicesTest {
-  margin-top: 2rem;
-  margin-left:3rem;
-  margin-right:3rem;
-  display:flex;
-  transform: scale(1.75);
-  gap: 1.5rem;
-}
 
 .container {
   display: flex;
@@ -307,6 +303,16 @@ transition: all 0.5s ease-in-out;
 }
 
 .buttonGeneralHomepage {
+  transition: transform 200ms, border 200ms;
+  font-size: 3.5rem;
+  font-weight: normal;
+  display:flex;
+  align-items: center;
+  cursor:pointer;
+  color: white;
+}
+
+.buttonGeneralHomepageProjects {
   transition: transform 200ms, border 200ms;
   font-size: 3.5rem;
   font-weight: normal;
@@ -869,6 +875,7 @@ transition: all 0.5s ease-in-out;
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {      
+ 
   .card:hover {
     transform: scale(1.07); 
     border: 1px solid rgba(var(--card-border-rgb), 5);    
@@ -877,11 +884,6 @@ transition: all 0.5s ease-in-out;
   .card:hover span {
     transform: translateX(4px);
   }
-
-  /* .cardHomepage:hover {
-    transform: scale(1.07); 
-    opacity:0.8;    
-  } */
 
   /* Cardanimation Normal */
   .cardanimation:hover {
@@ -980,13 +982,17 @@ transition: all 0.5s ease-in-out;
   .buttonGeneralHomepage:hover {
     transform: scale(1.2);
     text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5);
-    /* text-shadow: gray 0px 0px 10px; */
   }
+
+  .buttonGeneralHomepageProjects:hover {
+    transform: scale(1.2);
+    text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5);
+  }
+
 
   .link-hover:hover {
     transform: scale(1.07);
   }
-
 }
 
 @media (prefers-reduced-motion) {

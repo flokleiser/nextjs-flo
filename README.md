@@ -3,8 +3,11 @@
 
 ## Currently working on:
 
-- [ ] Homepage color change on hover for different links
+- [ ] Fix homepage animation timings
 
+- [ ] homepage: cards element stationary, and only animated on isHoverProjects
+
+- [ ] Homepage projects hover --> cards bigger, more spread out, on click --> fly in
 - [ ] Fix video background blurry
 
 ## Top Priority (important)

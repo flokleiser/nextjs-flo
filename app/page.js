@@ -1,24 +1,43 @@
-'use client'
-import { useState } from 'react';
-import styles from '/app/page.module.css'
-import { CiGrid32,CiImageOn, CiFileOn, CiViewList, CiStickyNote} from "react-icons/ci";
-import Link from 'next/link';
-import Image from 'next/image'
-import { AnimatePresence, motion} from 'framer-motion';
-
+"use client";
+import { useState } from "react";
+import styles from "/app/page.module.css";
+import {
+  CiGrid32,
+  CiImageOn,
+  CiFileOn,
+  CiViewList,
+  CiStickyNote,
+} from "react-icons/ci";
+import Link from "next/link";
+import Image from "next/image";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Home() {
+  const [isHoveringProjects, setIsHoveringProjects] = useState(false);
+  const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
 
-  // const [isHovering, setIsHovering] = useState(false);
-  
-  // const handleHover = () => {
-  //   setIsHovering(!isHovering);
-  // };
+  const handleHoverProjects = () => {
+    setIsHoveringProjects(!isHoveringProjects);
+  };
+
+  const handleHoverPortfolio = () => {
+    setIsHoveringPortfolio(!isHoveringPortfolio);
+  };
+
+  const getClassName = (isHoveringProjects) => {
+    if (isHoveringProjects) {
+      return 'cardHomepageTestAnimation';
+    }
+    else if (!isHoveringProjects) {
+    return 'cardHomepageTest';
+  }
+  };
+
 
   return (
-    
     <main className={styles.main}>
-        <div className="relative 
+      <div
+        className="relative 
    flex 
    place-items-center 
    before:absolute 
@@ -49,81 +68,144 @@ export default function Home() {
    after:dark:via-[#0141ff] 
    after:dark:opacity-40 
    before:lg:h-[360px] 
-   z-[-1]">
-          </div>
+   z-[-1]"
+      ></div>
 
-  
-      <h1 className={styles.titleHomepage} 
-      style={{zIndex:60}}
-      >
+      <h1 className={styles.titleHomepage} style={{ zIndex: 60 }}>
         Florian Kleiser
       </h1>
 
 
+<AnimatePresence>
+      <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+        <Image
+          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation1: ''}`}
+          src="/images/homepage/new2/1.png"
+          width={1100}
+          height={1000}
+    />
+        <Image
+          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation2: ''}`}
+          src="/images/homepage/new2/2.png"
+          width={1100}
+          height={1000}
+            />
+        <Image
+          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation3: ''}`}
+          src="/images/homepage/new2/3.png"
+          width={1100}
+          height={1000}
+        />
+        <Image
+          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation4: ''}`}
+          src="/images/homepage/new2/4.png"
+          width={1100}
+          height={1000}
+        />
+        <Image
+          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation5: ''}`}
+          src="/images/homepage/new2/5.png"
+          width={1100}
+          height={1000}
+        />
+        <Image
+          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation6: ''}`}
+          src="/images/homepage/new2/6.png"
+          width={1100}
+          height={1000}
+        />
+      </div>
+    </AnimatePresence>
+   
 
+      <div style={{ margin: "5rem" }}> </div>
 
-    <div className={styles.homepageSlices} style={{zIndex:-900}}>
-
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/1.png" width={1100} height={1000} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/2.png" width={1100} height={1000} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/3.png" width={1100} height={1000} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/4.png" width={1100} height={1000} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/5.png" width={1100} height={1000} />
-    <Image className={styles.cardHomepageTest} src="/images/homepage/new2/6.png" width={1100} height={1000} /> 
-
-    </div>
-
-    <div style={{ margin: '5rem' }}> </div>
-
-     <div className={styles.buttonGeneralHomepage}
-     style={{zIndex:60}}
-     >
+      <div
+        className={styles.buttonGeneralHomepageProjects}
+        onMouseOver={handleHoverProjects}
+        onMouseMove={() => setIsHoveringProjects(true)}
+        onMouseLeave={() => setIsHoveringProjects(false)}
+        style={{ zIndex: 60 }}
+      >
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="/projects"
-            //  onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
-          > <CiGrid32/> Projects </Link> 
+          <Link className="link-hover" href="/projects">
+            {" "}
+            <CiGrid32 /> Projects
+          </Link>
         </h2>
-     </div>
+      </div>
 
-     <div className={styles.buttonGeneralHomepage}
-     style={{zIndex:60}}
-     >
+      <div
+        className={styles.buttonGeneralHomepage}
+        style={{ zIndex: 60 }}
+        onMouseOver={handleHoverPortfolio}
+        onMouseMove={() => setIsHoveringPortfolio(true)}
+        onMouseLeave={() => setIsHoveringPortfolio(false)}
+      >
         <h2 className={styles.subtitleHomepage}>
-          <Link  className="link-hover" href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view" target="_blank"
-                //  onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
-          > 
-          <CiImageOn />
-          Portfolio 
-          </Link> 
-        </h2>
-     </div>
-
-        {/* <AnimatePresence>
-              {isHovering && (
-               <motion.div
-        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5}}
-        style={{
-          backdropFilter: `blur(${isHovering? '5px' : '0px'})`,
-        }}
+          <Link
+            className="link-hover"
+            href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view"
+            target="_blank"
           >
-        </motion.div>
+            <CiImageOn />
+            Portfolio
+          </Link>
+        </h2>
+      </div>
+
+      {/* Projects hover */}
+      <AnimatePresence>
+        {isHoveringProjects && (
+          <motion.div
+            className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center -z-[901]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              backdropFilter: "blur(5px)"
+            }}
+          >
+        
+       </motion.div>
         )}
-        </AnimatePresence> */}
+      </AnimatePresence>
 
-     <div style={{ margin: '3rem' }}> </div>
+      {/* Portfolio hover */}
+      <AnimatePresence>
+        {isHoveringPortfolio && (
+          <motion.div
+            className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center -z-[800]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              backdropFilter: "blur(10px)",
+            }}
+          >
+                <div className={styles.homepageOverlayPortfolio}></div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-     <div className={styles.subtitledescription} style={{opacity:0.3, zIndex:-9999}}>
-    <p>
-      Disclaimer: this website is still under construction. 
-      <Image src="/images/happysad.png" width={25} height={25} className={styles.emoji}/>
-    </p>
-    </div>
+      <div style={{ margin: "3.5rem" }}> </div>
 
+      <div
+        className={styles.subtitledescription}
+        style={{ opacity: 0.3, zIndex: -9999 }}
+      >
+        <p>
+          Disclaimer: this website is still under construction.
+          <Image
+            src="/images/happysad.png"
+            width={25}
+            height={25}
+            className={styles.emoji}
+          />
+        </p>
+      </div>
     </main>
-
-  )
+  );
 }
