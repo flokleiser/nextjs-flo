@@ -9,11 +9,11 @@ import { AnimatePresence, motion} from 'framer-motion';
 
 export default function Home() {
 
-  const [isHovering, setIsHovering] = useState(false);
+  // const [isHovering, setIsHovering] = useState(false);
   
-  const handleHover = () => {
-    setIsHovering(!isHovering);
-  };
+  // const handleHover = () => {
+  //   setIsHovering(!isHovering);
+  // };
 
   return (
     
@@ -54,7 +54,7 @@ export default function Home() {
 
   
       <h1 className={styles.titleHomepage} 
-      // style={{zIndex:60}}
+      style={{zIndex:60}}
       >
         Florian Kleiser
       </h1>
@@ -80,7 +80,7 @@ export default function Home() {
      >
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="/projects"
-             onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
+            //  onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
           > <CiGrid32/> Projects </Link> 
         </h2>
      </div>
@@ -90,7 +90,7 @@ export default function Home() {
      >
         <h2 className={styles.subtitleHomepage}>
           <Link  className="link-hover" href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view" target="_blank"
-                 onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
+                //  onMouseOver={handleHover} onMouseLeave={() => setIsHovering(false)}
           > 
           <CiImageOn />
           Portfolio 
@@ -98,7 +98,7 @@ export default function Home() {
         </h2>
      </div>
 
-        <AnimatePresence>
+        {/* <AnimatePresence>
               {isHovering && (
                <motion.div
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50"
@@ -112,7 +112,7 @@ export default function Home() {
           >
         </motion.div>
         )}
-        </AnimatePresence>
+        </AnimatePresence> */}
 
      <div style={{ margin: '3rem' }}> </div>
 

@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Homepage color change on hover for different links
+
 - [ ] Fix video background blurry
 
 - [ ] Homepage --> background blurry on link hover
