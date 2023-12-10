@@ -16,7 +16,16 @@ export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
 
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    if (isHoveringProjects) {
+      setAnimationClass(styles.animationTestClassHalf1);
+    } else if (animationClass === styles.animationTestClassHalf1) {
+      setAnimationClass(styles.animationTestClassHalf2);
+    }
+  }, [isHoveringProjects]);
+ 
 
   const handleHoverProjects = () => {
     setIsHoveringProjects(!isHoveringProjects);
@@ -26,12 +35,6 @@ export default function Home() {
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
-  const handleAnimation = () => {
-    setIsAnimating(true);
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 3000);
-  };
 
   return (
     <main className={styles.main}>
@@ -76,44 +79,69 @@ export default function Home() {
 
 
 <AnimatePresence>
-      <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+      <div className={styles.homepageSlices} style={{ zIndex: -700 }}>
     
+    <div className={`${styles.cardHomepageTest} ${animationClass}`} 
+    // style={{animationDelay:'0s'}}
+    style={{animationDuration:'0.5s'}}
+    
+    >
         <Image
-          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation1: ''}`}
           src="/images/homepage/new2/1.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
+        // style={{animationDelay:'0.1s'}}
+        style={{animationDuration:'0.9s'}}   
+       >
           <Image
-          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation2: ''}`}
           src="/images/homepage/new2/2.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
+        // style={{animationDelay: '0.2s'}}
+        style={{animationDuration:'1.3s'}} 
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation3: ''}`}
           src="/images/homepage/new2/3.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
+        // style={{animationDelay:'0.3s'}}
+        style={{animationDuration:'1.7s'}} 
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation4: ''}`}
           src="/images/homepage/new2/4.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
+        // style={{animationDelay:'0.4s'}}
+        style={{animationDuration:'2s'}}
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation5: ''}`}
           src="/images/homepage/new2/5.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
+        // style={{animationDelay: '0.5s'}}
+        style={{animationDuration:'2.3s'}} 
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation6: ''}`}
           src="/images/homepage/new2/6.png"
           width={1100}
           height={1000}
         />
+        </div>
       </div>
     </AnimatePresence>
    
@@ -123,7 +151,7 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepageProjects}
         // onMouseOver={handleHoverProjects}
-        onMouseOver={() => {handleHoverProjects(); handleAnimation();} }
+        onMouseOver={handleHoverProjects}
         onMouseMove={() => setIsHoveringProjects(true)}
         onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}

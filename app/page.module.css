@@ -1307,3 +1307,75 @@ transition: all 0.5s ease-in-out;
 .animationClassHalf2 {
   animation: animationHalf2 0.5s forwards;
 }
+
+
+
+/* 
+@keyframes animationTestHalf1 {
+  from {
+    opacity: 0.1;
+    filter: blur(5px);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0.8;
+    filter: blur(0px);
+    transform: scale(1.07);
+  }
+}
+
+@keyframes animationTestHalf2 {
+  from{
+    opacity: 0.8;
+    filter: blur(0px);
+    transform: scale(1.07);
+  }
+  to{
+    opacity: 0.1;
+    filter: blur(5px);
+    transform: scale(1);
+  }
+} */
+
+@keyframes animationTestHalf1 {
+  0% {
+    opacity: 0.1;
+    filter: blur(5px);
+    transform: scale(1);
+  }
+  /* 50% {
+    opacity: 0.8;
+    filter: blur(0px);
+    transform: scale(1.07);
+  } */
+  100% {
+    opacity: 0.8;
+    filter: blur(0px);
+    transform: scale(1.07);
+  }
+}
+
+@keyframes animationTestHalf2 {
+  0%{
+    opacity: 0.8;
+    filter: blur(0px);
+    transform: scale(1.07);
+  }
+  /* 50%{
+    opacity: 0.8;
+    filter: blur(0px);
+    transform: scale(1.07);} */
+  100%{
+    opacity: 0.1;
+    filter: blur(5px);
+    transform: scale(1);
+  }
+}
+
+.animationTestClassHalf1 {
+  animation: animationTestHalf1 0.5s forwards;
+}
+
+.animationTestClassHalf2 {
+  animation: animationTestHalf2 0.5s forwards;
+}
