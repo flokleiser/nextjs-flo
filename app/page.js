@@ -78,25 +78,15 @@ export default function Home() {
         Florian Kleiser
       </h1>
 
-      {/* <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
-            <Image
-           className={styles.cardHomepagePortfolio} 
-          src="/images/homepage/portfolio homepage.png"
-          width={1100}
-          height={1000}
-            /> 
-      </div> */}
-
 <AnimatePresence>
-      <div className={styles.homepagePortfolio} style={{ zIndex: -799 }}>
-    
+      <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
+        <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
         <Image
-          className={`${styles.cardHomepagePortfolio} ${animationClass}`}
-          src="/images/homepage/portfolio homepage.png"
+          src="/images/homepage/portfolio homepage2.png"
           width={1100}
-          height={1000}
-    />
-
+          height={1000}     
+        />
+    </div>
     </div>
   </AnimatePresence>
 
