@@ -18,7 +18,7 @@ export default function LightButton() {
   return (
     <div>
       <button className="absolute mt-4 ml-4 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 52, backdropFilter: `blur(${isDim ? '10px' : '0px'})`,}}
+      style={{ zIndex: 52}}
       
       onClick={handleToggleClick}>
         {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
@@ -28,7 +28,6 @@ export default function LightButton() {
 <AnimatePresence>
       {isDim && (
         <motion.div
-        // className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-75 z-50"
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -36,7 +35,7 @@ export default function LightButton() {
         transition={{ duration: 0.5}}
         
         style={{
-          backdropFilter: `blur(${isDim ? '10px' : '0px'}px)`,
+          backdropFilter: `blur(10px)`,
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
         }}>
       

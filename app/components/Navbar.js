@@ -86,7 +86,7 @@ export default function Navbar() {
 
     <div className="flex border-stone-900/80 p-[0.4rem] mb-1 sticky top bg-stone-900/80 backdrop-blur-md ">
       <button
-        className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out text-zinc-100"
+        className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100"
         onClick={toggleNavbarVisibility}
       >
         {showNavbar ? <BsX style={{ fontSize: '1.5rem' }} /> : <BsList style={{ fontSize: '1.5rem' }}  />}
@@ -97,12 +97,31 @@ export default function Navbar() {
       {showNavbar && (
         
         <motion.div
-        // className={"navbar-contents show "} 
         className={`navbar-contents ${showSubNavbar ? 'expanded' : ''}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
+        // style={{
+        //   position: 'relative',
+        //   transform: 'translateX(-100%)', 
+        // }}
+        // initial={{
+        //   transform: 'translateX(-100%)',
+        //   opacity: 0,
+        // }}
+        // animate={{
+        //   transform: 'translateX(0)', 
+        //   opacity: 1,
+        // }}
+        // exit={{
+        //   transform: 'translateX(-100%)',
+        //   opacity: 0,
+        // }}
+        // transition={{
+        //   duration: 0.5,
+        //   ease: "easeInOut",
+        // }}
         >
 
       <nav className="flex justify-start items-center w-full z-9999">
@@ -155,9 +174,11 @@ className="px-2 py-2 rounded-md text-sm lg:text-base relative no-underline durat
 onClick={toggleSubNavbarVisibility}>
 
 {showSubNavbar ? (
-<CiSquareChevLeft style={{ fontSize: '1.5rem' }} />
+/* <CiSquareChevLeft style={{ fontSize: '1.5rem' }} /> */
+<CiSquareChevDown style={{ fontSize: '1.5rem' }} />
 ) : ( 
-<CiSquareChevRight style={{ fontSize: '1.5rem' }}  />
+/* <CiSquareChevRight style={{ fontSize: '1.5rem' }}  /> */
+<CiSquareChevUp style={{ fontSize: '1.5rem' }}  />
 )}
 </button>  
 
@@ -165,10 +186,30 @@ onClick={toggleSubNavbarVisibility}>
              {showSubNavbar && (
 
                 <motion.div className={styles.subNavbar}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5}}
+                // initial={{ opacity: 0 }}
+                // animate={{ opacity: 1 }}
+                // exit={{ opacity: 0 }}
+                // transition={{ duration: 0.5}}
+                style={{
+                  position: 'relative',
+                  transform: 'translateY(-100%)', 
+                }}
+                initial={{
+                  transform: 'translateY(-100%)',
+                  opacity: 0,
+                }}
+                animate={{
+                  transform: 'translateX(0)', 
+                  opacity: 1,
+                }}
+                exit={{
+                  transform: 'translateY(-100%)',
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }} 
                   >
                  <nav className="flex flex-row justify-start w-full z-9999">
 

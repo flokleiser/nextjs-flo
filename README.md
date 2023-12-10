@@ -3,7 +3,9 @@
 
 ## Currently working on:
 
-- [ ] Fix video background blurry
+- [ ] Links page picture hover --> animations, with animatepresence etc
+
+- [ ] Navbar animation
 
 ## Top Priority (important)
 
@@ -11,20 +13,13 @@
 
 - [ ] CAD picture better resolution
 
+- [ ] Figure out navbar problem (below, mobile etc) maybe, if i feel like it
+
 ## Almost Top Priority (nice to have, when bored)
 
-- [ ] "progress bar" thingy on the left (on desktop view, shows full page and clickable circles for video, images etc)
-
-- [ ] Search function --> look into type='search' (in layout.css)
 - [ ] Add 404 page
 
-- [ ] Fix navbar on mobile
-
-- [x] Blur background on full screen image/dim
-- [x] Dim switch fade in and out, same with full screen images
-
 - [ ] Add image "roster" for cycling through when hovering on projects
-
 
 ### Videos/Gifs/Images:
 
@@ -93,7 +88,7 @@
 - [x] Fix title not centered on mobile
 
 ### Navbar:
-- [ ] Search function
+- [ ] Search function --> look into type='search' (in layout.css)
 - [ ] Navbar animation --> from the side
 - [x] Sub-Navbar (Projects)
 - [x] Navbar icon

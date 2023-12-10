@@ -1018,12 +1018,12 @@ transition: all 0.5s ease-in-out;
 
 @media (max-width: 900px) {
   .subNavbar {
-  position: absolute;
-  top: 100%;
+  position: relative;
+  top: 80%;
   left: 0;
   /* width: 100%; */
   border-radius: 0px;
-  background-color: rgb(28 25 23 / 0.8);
+  /* background-color: rgb(28 25 23 / 0.8); */
   /* padding: 0.5rem; */
   /* display: flex;
   align-items:center;
