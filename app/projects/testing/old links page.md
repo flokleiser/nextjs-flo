@@ -190,25 +190,21 @@ useEffect(() => {
                     <div style={{ padding: '1rem' }}> </div>
                 
                   <div 
-                  // className={styles.linkContainerImage} 
-                  // style={{backgroundImage: "url(/images/flo0.png)",opacity:0.5 }}
-                  >
+                  className={styles.linkContainerImage} 
+                  style={{backgroundImage: "url(/images/flo0.png)",opacity:0.5 }}>
 
                   {/* <Image src="/images/flo9.png" width={640} height={402} /> */} 
 
 
                 <AnimatePresence>
-                  <div className={styles.linkContainerImage}> 
+                  <div className={styles.linkPageAnimationDiv}>
+                  <div className={`${styles.linkContainerImage} 
                   
-                  {/* <div className={styles.linkPageAnimationDiv}>
-               <Image
-               src="/images/links/portfolio2.png"
-               width={640}
-                height={402}
-               >
-                </Image>
-                  </div> */}
-                  <div className={styles.backgroundCardPortfolioHovered}/>
+                  ${isHoveringPortfolio ? styles.backgroundCardPortfolioHovered : ''}
+                  ${isHoveringGithub? styles.backgroundCardGithubHovered : ''}
+                  ${isHoveringGoogleDrive? styles.backgroundCardGoogledriveHovered: ''}
+                  ${isHoveringCV? styles.backgroundCardCVHovered: ''}`} >
+                  </div>
                   </div>
                 </AnimatePresence>
                

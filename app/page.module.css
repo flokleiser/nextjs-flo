@@ -145,6 +145,7 @@
   background-image: url("/images/links/portfolio2.png");
   opacity: 1; 
   /* scale: 1.1; */
+  animation: linkPageAnimation 1s forwards;
   
 }
 
@@ -1341,4 +1342,18 @@ transition: all 0.5s ease-in-out;
 
 .animationTestClassHalf2 {
   animation: animationTestHalf2 0.5s backwards;
+}
+
+.linkPageAnimationDiv {
+  animation: linkPageAnimation 1s forwards;
+  
+}
+
+@keyframes linkPageAnimation {
+  0% {
+    opacity:0;
+  }
+   100% {
+    opacity: 1;
+  }
 }
