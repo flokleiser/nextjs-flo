@@ -257,13 +257,10 @@ onClick={toggleSubNavbarVisibility}>
 
                     </Link>
                   ))}
-                
                   </nav>
                   </motion.div> 
                 )}
                 </AnimatePresence>
-
-
            </nav>
         
         </motion.div>

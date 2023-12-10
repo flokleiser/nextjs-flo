@@ -46,7 +46,7 @@
 }
 
 .subNavbar {
-  position: sticky;
+  /* position: sticky; */
   top: 5;
   left: 0;
   width: 100%;
@@ -1019,9 +1019,9 @@ transition: all 0.5s ease-in-out;
 @media (max-width: 900px) {
   .subNavbar {
   position: relative;
-  top: 80%;
+  /* top: 100%; */
   left: 0;
-  /* width: 100%; */
+  width: 100%;
   border-radius: 0px;
   /* background-color: rgb(28 25 23 / 0.8); */
   /* padding: 0.5rem; */
@@ -1273,9 +1273,6 @@ transition: all 0.5s ease-in-out;
 
 /* kinda cool looking */
 /* background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)); */
-
-
-
 
 
 @keyframes animationHalf1 {

@@ -3,21 +3,17 @@
 
 ## Currently working on:
 
-- [ ] Homepage different animations for each card segment?
+- [ ] Disable subnavbar on mobile
 
 - [ ] Links page picture hover --> animations, with animatepresence etc
 
 - [ ] Navbar animation
 
-## Top Priority (important)
-
 ## TO FIX:
 
 - [ ] CAD picture better resolution
 
-- [ ] Figure out navbar problem (below, mobile etc) maybe, if i feel like it
-
-## Almost Top Priority (nice to have, when bored)
+## Ideas for when bored:
 
 - [ ] Add 404 page
 
@@ -39,7 +35,7 @@
 - [x] Add descriptions on cards
 - [x] Add descriptions on pages
 - [x] credit maude on plasticine video
-- [x] Figure out why Google Drive wont work for **some** videos
+- [x] Figure out why Google Drive wont work for some videos
 - [x] Decide on Layout when multiple videos per page
 
 #### Skylands
@@ -90,7 +86,6 @@
 - [x] Fix title not centered on mobile
 
 ### Navbar:
-- [ ] Search function --> look into type='search' (in layout.css)
 - [x] Navbar animation --> from the side
 - [x] Sub-Navbar (Projects)
 - [x] Navbar icon
