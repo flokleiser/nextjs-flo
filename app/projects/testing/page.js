@@ -82,8 +82,7 @@ export default function Home() {
       <div className={styles.homepageSlices} style={{ zIndex: -700 }}>
     
     <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-    // style={{animationDelay:'0s'}}
-    style={{animationDuration:'0.5s'}}
+    style={{animationDelay:'0s'}}
     
     >
         <Image
@@ -93,8 +92,7 @@ export default function Home() {
         />
         </div>
         <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        // style={{animationDelay:'0.1s'}}
-        style={{animationDuration:'0.9s'}}   
+        style={{animationDelay:'0.1s'}}
        >
           <Image
           src="/images/homepage/new2/2.png"
@@ -103,8 +101,7 @@ export default function Home() {
         />
         </div>
         <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        // style={{animationDelay: '0.2s'}}
-        style={{animationDuration:'1.3s'}} 
+        style={{animationDelay: '0.2s'}}
         >
         <Image
           src="/images/homepage/new2/3.png"
@@ -113,8 +110,7 @@ export default function Home() {
         />
         </div>
         <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        // style={{animationDelay:'0.3s'}}
-        style={{animationDuration:'1.7s'}} 
+        style={{animationDelay:'0.3s'}}
         >
         <Image
           src="/images/homepage/new2/4.png"
@@ -123,8 +119,7 @@ export default function Home() {
         />
         </div>
         <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        // style={{animationDelay:'0.4s'}}
-        style={{animationDuration:'2s'}}
+        style={{animationDelay:'0.4s'}}
         >
         <Image
           src="/images/homepage/new2/5.png"
@@ -133,8 +128,7 @@ export default function Home() {
         />
         </div>
         <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        // style={{animationDelay: '0.5s'}}
-        style={{animationDuration:'2.3s'}} 
+        style={{animationDelay: '0.5s'}}
         >
         <Image
           src="/images/homepage/new2/6.png"

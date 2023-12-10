@@ -1343,12 +1343,7 @@ transition: all 0.5s ease-in-out;
     filter: blur(5px);
     transform: scale(1);
   }
-  /* 50% {
-    opacity: 0.8;
-    filter: blur(0px);
-    transform: scale(1.07);
-  } */
-  100% {
+   100% {
     opacity: 0.8;
     filter: blur(0px);
     transform: scale(1.07);
@@ -1361,10 +1356,6 @@ transition: all 0.5s ease-in-out;
     filter: blur(0px);
     transform: scale(1.07);
   }
-  /* 50%{
-    opacity: 0.8;
-    filter: blur(0px);
-    transform: scale(1.07);} */
   100%{
     opacity: 0.1;
     filter: blur(5px);
@@ -1377,5 +1368,5 @@ transition: all 0.5s ease-in-out;
 }
 
 .animationTestClassHalf2 {
-  animation: animationTestHalf2 0.5s forwards;
+  animation: animationTestHalf2 0.5s backwards;
 }

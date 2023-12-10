@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Homepage different animations for each card segment?
+
 - [ ] Links page picture hover --> animations, with animatepresence etc
 
 - [ ] Navbar animation
@@ -89,7 +91,7 @@
 
 ### Navbar:
 - [ ] Search function --> look into type='search' (in layout.css)
-- [ ] Navbar animation --> from the side
+- [x] Navbar animation --> from the side
 - [x] Sub-Navbar (Projects)
 - [x] Navbar icon
 - [x] Navbar change toggle from top to left

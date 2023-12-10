@@ -18,6 +18,7 @@ export default function Home() {
 
 
   const [animationClass, setAnimationClass] = useState("");
+  const [animationClass2, setAnimationClass2] = useState("");
 
   useEffect(() => {
     if (isHoveringPortfolio) {
@@ -26,6 +27,14 @@ export default function Home() {
       setAnimationClass(styles.animationClassHalf2);
     }
   }, [isHoveringPortfolio]);
+
+  useEffect(() => {
+    if (isHoveringProjects) {
+      setAnimationClass2(styles.animationTestClassHalf1);
+    } else if (animationClass2 === styles.animationTestClassHalf1) {
+      setAnimationClass2(styles.animationTestClassHalf2);
+    }
+  }, [isHoveringProjects]);
 
 
   const handleHoverProjects = () => {
@@ -92,44 +101,63 @@ export default function Home() {
 
 
 
-<AnimatePresence>
+  <AnimatePresence>
       <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+    
+    <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
+    style={{animationDelay:'0s'}}
+    >
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation1: ''}`}
           src="/images/homepage/new2/1.png"
           width={1100}
           height={1000}
-            />
-        <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation2: ''}`}
+        />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
+        style={{animationDelay:'0.1s'}}
+       >
+          <Image
           src="/images/homepage/new2/2.png"
           width={1100}
           height={1000}
-            />
+        />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
+        style={{animationDelay: '0.2s'}}
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation3: ''}`}
           src="/images/homepage/new2/3.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
+        style={{animationDelay:'0.3s'}}
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation4: ''}`}
           src="/images/homepage/new2/4.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
+        style={{animationDelay:'0.4s'}}
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation5: ''}`}
           src="/images/homepage/new2/5.png"
           width={1100}
           height={1000}
         />
+        </div>
+        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
+        style={{animationDelay: '0.5s'}}
+        >
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation6: ''}`}
           src="/images/homepage/new2/6.png"
           width={1100}
           height={1000}
         />
+        </div>
       </div>
     </AnimatePresence>
    
