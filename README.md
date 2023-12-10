@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] homepage animation shorter
+
 - [ ] Fix homepage animation timings
 
 - [ ] homepage: cards element stationary, and only animated on isHoverProjects

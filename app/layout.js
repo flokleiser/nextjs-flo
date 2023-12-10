@@ -10,21 +10,18 @@ const assistant = Assistant({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Florian Kleiser - Home',
-  description: '-',
+  description: 'Home',
+
 }
 
 export default function RootLayout({ children }) {
 
-  // const [showSubNavbar, setShowSubNavbar] = useState(false);
 
   return (
     <html lang="en">
-      {/* <body className={inter.className}>{children}</body> */}
       <head />
       <body className={assistant.className}>
       <Navbar />
-       {/* showSubNavbar={showSubNavbar}
-      transform={showSubNavbar ? 'scale(1.1)' : 'scale(1)'} */}
       {children}
       </body>
     </html>

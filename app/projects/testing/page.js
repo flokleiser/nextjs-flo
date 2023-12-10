@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "/app/page.module.css";
 import {
   CiGrid32,
@@ -16,6 +16,8 @@ export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
 
+  const [isAnimating, setIsAnimating] = useState(false);
+
   const handleHoverProjects = () => {
     setIsHoveringProjects(!isHoveringProjects);
   };
@@ -24,15 +26,12 @@ export default function Home() {
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
-  const getClassName = (isHoveringProjects) => {
-    if (isHoveringProjects) {
-      return 'cardHomepageTestAnimation';
-    }
-    else if (!isHoveringProjects) {
-    return 'cardHomepageTest';
-  }
+  const handleAnimation = () => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 3000);
   };
-
 
   return (
     <main className={styles.main}>
@@ -78,38 +77,39 @@ export default function Home() {
 
 <AnimatePresence>
       <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+    
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation1: ''}`}
+          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation1: ''}`}
           src="/images/homepage/new2/1.png"
           width={1100}
           height={1000}
-    />
-        <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation2: ''}`}
+        />
+          <Image
+          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation2: ''}`}
           src="/images/homepage/new2/2.png"
           width={1100}
           height={1000}
-            />
+        />
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation3: ''}`}
+          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation3: ''}`}
           src="/images/homepage/new2/3.png"
           width={1100}
           height={1000}
         />
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation4: ''}`}
+          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation4: ''}`}
           src="/images/homepage/new2/4.png"
           width={1100}
           height={1000}
         />
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation5: ''}`}
+          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation5: ''}`}
           src="/images/homepage/new2/5.png"
           width={1100}
           height={1000}
         />
         <Image
-          className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation6: ''}`}
+          className={`${styles.cardHomepageTest} ${isAnimating ? styles.cardHomepageTestAnimation6: ''}`}
           src="/images/homepage/new2/6.png"
           width={1100}
           height={1000}
@@ -122,7 +122,8 @@ export default function Home() {
 
       <div
         className={styles.buttonGeneralHomepageProjects}
-        onMouseOver={handleHoverProjects}
+        // onMouseOver={handleHoverProjects}
+        onMouseOver={() => {handleHoverProjects(); handleAnimation();} }
         onMouseMove={() => setIsHoveringProjects(true)}
         onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
@@ -192,20 +193,6 @@ export default function Home() {
 
       <div style={{ margin: "3.5rem" }}> </div>
 
-      <div
-        className={styles.subtitledescription}
-        style={{ opacity: 0.3, zIndex: -9999 }}
-      >
-        <p>
-          Disclaimer: this website is still under construction.
-          <Image
-            src="/images/happysad.png"
-            width={25}
-            height={25}
-            className={styles.emoji}
-          />
-        </p>
-      </div>
     </main>
   );
 }

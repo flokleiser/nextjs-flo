@@ -24,15 +24,6 @@ export default function Home() {
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
-  const getClassName = (isHoveringProjects) => {
-    if (isHoveringProjects) {
-      return 'cardHomepageTestAnimation';
-    }
-    else if (!isHoveringProjects) {
-    return 'cardHomepageTest';
-  }
-  };
-
 
   return (
     <main className={styles.main}>
