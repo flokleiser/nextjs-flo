@@ -186,7 +186,7 @@ export default function Home() {
               backdropFilter: "blur(10px)",
             }}
           >
-                <div className={styles.homepageOverlayPortfolio}></div>
+                {/* <div className={styles.homepageOverlayPortfolio}></div> */}
           </motion.div>
         )}
       </AnimatePresence>

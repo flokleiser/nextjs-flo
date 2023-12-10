@@ -5,10 +5,6 @@
 
 - [ ] homepage animation shorter
 
-- [ ] Fix homepage animation timings
-
-- [ ] homepage: cards element stationary, and only animated on isHoverProjects
-
 - [ ] Homepage projects hover --> cards bigger, more spread out, on click --> fly in
 - [ ] Fix video background blurry
 

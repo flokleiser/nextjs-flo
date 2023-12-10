@@ -204,6 +204,31 @@ transition: all 0.5s ease-in-out;
   /* z-index: -9999; */
 }
 
+.homepagePortfolio {
+  position:absolute;
+  margin-left:1rem;
+  margin-right:1rem;
+  margin-top:1.5rem;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  /* z-index: -9999; */
+}
+.cardHomepagePortfolio1 {
+  position:absolute;
+  opacity:0;
+  margin-top: 10rem;
+  /* filter: blur(5px); */
+  }
+
+/* .cardHomepagePortfolio2 {
+  position:absolute;
+  opacity:0.8;
+  margin-top: 10rem; 
+} */
+
 
 .cardHomepageTest {
   position:absolute;
@@ -1260,15 +1285,13 @@ transition: all 0.5s ease-in-out;
 
 
 
-/* @keyframes animationHalf1 {
+@keyframes animationHalf1 {
   from {
-    opacity: 0.1;
-    transform: scale(1);
+    opacity: 0;
     filter: blur(5px);
   }
   to {
     opacity: 0.8;
-    transform: scale(1.07);
     filter: blur(0px);
   }
 }
@@ -1276,12 +1299,10 @@ transition: all 0.5s ease-in-out;
 @keyframes animationHalf2 {
   from{
     opacity: 0.8;
-    transform: scale(1.07);
     filter: blur(0px);
   }
   to{
-    opacity: 0.1;
-    transform: scale(1);
+    opacity: 0;
     filter: blur(5px);
   }
 }
@@ -1292,4 +1313,4 @@ transition: all 0.5s ease-in-out;
 
 .animationClassHalf2 {
   animation: animationHalf2 0.5s forwards;
-} */
+}

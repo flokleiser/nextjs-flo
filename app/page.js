@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "/app/page.module.css";
 import {
   CiGrid32,
@@ -15,6 +15,18 @@ import { AnimatePresence, motion } from "framer-motion";
 export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
+
+
+  const [animationClass, setAnimationClass] = useState("");
+
+  useEffect(() => {
+    if (isHoveringPortfolio) {
+      setAnimationClass(styles.animationClassHalf1);
+    } else if (animationClass === styles.animationClassHalf1) {
+      setAnimationClass(styles.animationClassHalf2);
+    }
+  }, [isHoveringPortfolio]);
+
 
   const handleHoverProjects = () => {
     setIsHoveringProjects(!isHoveringProjects);
@@ -66,6 +78,29 @@ export default function Home() {
         Florian Kleiser
       </h1>
 
+      {/* <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+            <Image
+           className={styles.cardHomepagePortfolio} 
+          src="/images/homepage/portfolio homepage.png"
+          width={1100}
+          height={1000}
+            /> 
+      </div> */}
+
+<AnimatePresence>
+      <div className={styles.homepagePortfolio} style={{ zIndex: -799 }}>
+    
+        <Image
+          className={`${styles.cardHomepagePortfolio} ${animationClass}`}
+          src="/images/homepage/portfolio homepage.png"
+          width={1100}
+          height={1000}
+    />
+
+    </div>
+  </AnimatePresence>
+
+
 
 <AnimatePresence>
       <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
@@ -74,7 +109,7 @@ export default function Home() {
           src="/images/homepage/new2/1.png"
           width={1100}
           height={1000}
-    />
+            />
         <Image
           className={`${styles.cardHomepageTest} ${isHoveringProjects ? styles.cardHomepageTestAnimation2: ''}`}
           src="/images/homepage/new2/2.png"
@@ -176,27 +211,12 @@ export default function Home() {
               backdropFilter: "blur(10px)",
             }}
           >
-                <div className={styles.homepageOverlayPortfolio}></div>
-          </motion.div>
+        </motion.div>
         )}
       </AnimatePresence>
 
       <div style={{ margin: "3.5rem" }}> </div>
 
-      {/* <div
-        className={styles.subtitledescription}
-        style={{ opacity: 0.3, zIndex: -9999 }}
-      >
-        <p>
-          Disclaimer: this website is still under construction.
-          <Image
-            src="/images/happysad.png"
-            width={25}
-            height={25}
-            className={styles.emoji}
-          />
-        </p>
-      </div> */}
     </main>
   );
 }
