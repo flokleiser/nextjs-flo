@@ -3,9 +3,6 @@
 
 ## Currently working on:
 
-- [ ] homepage animation shorter
-
-- [ ] Homepage projects hover --> cards bigger, more spread out, on click --> fly in
 - [ ] Fix video background blurry
 
 ## Top Priority (important)

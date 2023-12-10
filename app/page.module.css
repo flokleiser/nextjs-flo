@@ -1301,7 +1301,7 @@ transition: all 0.5s ease-in-out;
 }
 
 .animationClassHalf1 {
-  animation: animationHalf1 2s forwards;
+  animation: animationHalf1 1s forwards;
 }
 
 .animationClassHalf2 {
