@@ -133,7 +133,9 @@ export default function links() {
         <div className={styles.linkContainerLinks}>
           <div
             className={styles.buttonLinksPage}
-       
+            onMouseOver={handleHoverPortfolio}
+            onMouseMove={() => setIsHoveringPortfolio(true)}
+            onMouseLeave={() => setIsHoveringPortfolio(false)}
           >
             <div className={styles.subtitledescription}>
               <p>
@@ -142,7 +144,7 @@ export default function links() {
                   target="_blank"
                 >
                   <CiImageOn />
-                  Portfolio (.pdf)
+                  Portfolio
                 </a>
               </p>
             </div>
@@ -150,13 +152,15 @@ export default function links() {
 
           <div
             className={styles.buttonLinksPage}
-      
+            onMouseOver={handleHoverGithub}
+            onMouseMove={() => setIsHoveringGithub(true)}
+            onMouseLeave={() => setIsHoveringGithub(false)}
           >
             <div className={styles.subtitledescription}>
               <p>
                 <a href="https://github.com/flokleiser" target="_blank">
                   <DiGithubBadge />
-                  Github.com
+                  Github
                 </a>
               </p>
             </div>
@@ -164,7 +168,9 @@ export default function links() {
 
           <div
             className={styles.buttonLinksPage}
-         
+            onMouseOver={handleHoverGoogleDrive}
+            onMouseMove={() => setIsHoveringGoogleDrive(true)}
+            onMouseLeave={() => setIsHoveringGoogleDrive(false)}
           >
             <div className={styles.subtitledescription}>
               <p>
@@ -181,7 +187,9 @@ export default function links() {
 
           <div
             className={styles.buttonLinksPage}
-
+            onMouseOver={handleHoverCV}
+            onMouseMove={() => setIsHoveringCV(true)}
+            onMouseLeave={() => setIsHoveringCV(false)}
           >
             <div className={styles.subtitledescription}>
               <p>
@@ -190,7 +198,7 @@ export default function links() {
                   target="_blank"
                 >
                   <CiViewTimeline />
-                  CV (.pdf)
+                  CV
                 </a>
               </p>
             </div>
@@ -201,10 +209,20 @@ export default function links() {
 
         <div
           className={styles.linkContainerImage}
-          style={{ backgroundImage: "url(/images/flo0.png)", opacity: 0.5 }}
+          style={{ backgroundImage: "url(/images/flo0.png)"}}
           >
-      
-         
+            <div
+                className={`${styles.linkContainerImage} ${
+                  isHoveringPortfolio ? styles.backgroundCardPortfolioHovered : ""}
+                   }
+                  ${isHoveringGithub ? styles.backgroundCardGithubHovered : ""}
+                  ${
+                    isHoveringGoogleDrive
+                      ? styles.backgroundCardGoogledriveHovered
+                      : ""
+                  }
+                  ${isHoveringCV ? styles.backgroundCardCVHovered : ""}`}
+              ></div>
         </div>
 
         <div style={{ padding: "1rem" }}> </div>
