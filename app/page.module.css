@@ -45,7 +45,7 @@
 
 .linkContainer {
   position:relative;
-    display: flex;
+  display: flex;
 
     /* max-width: 100%; */
     width:80vw;
@@ -68,6 +68,7 @@
 
 .linkContainerImage {
   width: 50vw;
+  transition: background-image 200ms;
   opacity:0.5;
   height: 50vh;
   background-size:contain;
@@ -76,8 +77,6 @@
   border-radius: 1rem;
   justify-self: center;
   margin-bottom: 2rem;
-  /* transition:opacity 0.5s ease-in-out; */
-  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);  */
 }
 
 .backgroundCard {
@@ -86,35 +85,10 @@
   border-radius: 1rem;
 }
 
-.backgroundCardPortfolioHovered {
-  background-image: url("/images/links/portfolio2.png");
-  opacity: 1; 
-  transition:opacity 0.5s ease;
-}
-
-.backgroundCardGithubHovered{
-  background-image: url("/images/links/github2.png");
-  transition:opacity 0.5s ease;
-  opacity:1;
-}
-.backgroundCardGoogledriveHovered{
-  background-image: url("/images/links/googledrive2.png");
-  transition:opacity 0.5s ease;
-  opacity:1;
-}
-.backgroundCardCVHovered{
-  background-image: url("/images/links/cv2.png");
-  transition:opacity 0.5s ease;
-  opacity:1;
-}
-
 .cardHomepage {
 opacity:0.1;
-/* transition: transform 200ms, opacity 200ms; */
 transition: all 0.5s ease-in-out;
-/* transition: all 0.5s ease-in-out; */
 }
-
 
 @keyframes grow-in-and-out {
   from {
@@ -260,7 +234,7 @@ transition: all 0.5s ease-in-out;
 .buttonNew {
   transition: transform 200ms, border 200ms;
   border: 1px solid rgba(var(--card-border-rgb), 0.15); 
-  border-radius: var(--border-radius);
+  border-radius: 12px; 
   transition: transform 200ms, border 200ms;
   font-size: 3.5rem;
   font-weight: normal;
@@ -1000,6 +974,7 @@ transition: all 0.5s ease-in-out;
 
   .linkContainerImage {
     width: 70vw;
+    transition: background-image 500ms;
     /* height: 50vh; */
     background-size:contain;
     background-repeat: no-repeat;
