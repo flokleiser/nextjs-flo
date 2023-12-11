@@ -3,7 +3,7 @@
 
 ## Currently working on:
 
-- [ ] Page Transitions
+- [ ] Look into .sass
 
 - [ ] Links page --> have one card with changing background instead of 4, or vice versa
 
@@ -12,6 +12,8 @@
 - [ ] Animation onSelect (on clicking projects/portfolio)
 
 - [ ] Links page
+
+- [ ] Page Transitions
 
 ## TO FIX:
 

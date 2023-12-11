@@ -13,28 +13,6 @@
   bottom: 0;
 }
 
-.homepageOverlayPortfolio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--secondary-glow);
-  opacity: 0.2; /* Adjust the opacity as needed */
-  z-index: -1;
-}
-.homepageOverlayPortfolio::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--primary-glow);
-  border-radius: 50%;
-  width: 50vw;
-  height: 50vw;
-  filter: blur(90px);
-}
 
 .linkContainerVideos {
   position:relative;
@@ -90,7 +68,6 @@
 
 .linkContainerImage {
   width: 50vw;
- 
   opacity:0.5;
   height: 50vh;
   background-size:contain;

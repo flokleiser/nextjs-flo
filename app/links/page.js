@@ -21,36 +21,6 @@ export default function links() {
     document.title = "Links/Info";
   }, []);
 
-  // const [isHovered, setIsHovered] = useState(false);
-  // const [isHovered2, setIsHovered2] = useState(false);
-  // const [isHovered3, setIsHovered3] = useState(false);
-  // const [isHovered4, setIsHovered4] = useState(false);
-
-  //   const handleMouseEnter = () => {
-  //     setIsHovered(true);
-  //   };
-  //   const handleMouseLeave = () => {
-  //     setIsHovered(false);
-  //   };
-  //  const handleMouseEnter2 = () => {
-  //     setIsHovered2(true);
-  //   };
-  //   const handleMouseLeave2 = () => {
-  //     setIsHovered2(false);
-  //   };
-  //   const handleMouseEnter3 = () => {
-  //     setIsHovered3(true);
-  //   };
-  //   const handleMouseLeave3 = () => {
-  //     setIsHovered3(false);
-  //   };
-  //   const handleMouseEnter4 = () => {
-  //     setIsHovered4(true);
-  //   };
-  //   const handleMouseLeave4 = () => {
-  //     setIsHovered4(false);
-  //   };
-
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
   const [isHoveringGithub, setIsHoveringGithub] = useState(false);
   const [isHoveringGoogleDrive, setIsHoveringGoogleDrive] = useState(false);
@@ -135,7 +105,9 @@ export default function links() {
         <div className={styles.linkContainerLinks}>
           <div
             className={styles.buttonLinksPage}
-       
+            onMouseOver={handleHoverPortfolio}
+            onMouseMove={() => setIsHoveringPortfolio(true)}
+            onMouseLeave={() => setIsHoveringPortfolio(false)}
           >
             <div className={styles.subtitledescription}>
               <p>
@@ -203,10 +175,12 @@ export default function links() {
 
         <div
           className={styles.linkContainerImage}
-          style={{ backgroundImage: "url(/images/flo0.png)", opacity: 0.5 }}
+          style={{
+            backgroundImage: "url(/images/flo0.png)", 
+            opacity: 0.5, 
+            ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio2.png)" } : null),
+          }}
           >
-      
-         
         </div>
 
         <div style={{ padding: "1rem" }}> </div>
