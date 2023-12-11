@@ -226,7 +226,8 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             style={{
-              backdropFilter: "blur(10px)",
+              backdropFilter: "blur(100px)",
+              // backgroundColor: "rgba(0,0,0,0.4)",
             }}
           >
         </motion.div>

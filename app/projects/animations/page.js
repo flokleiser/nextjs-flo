@@ -50,7 +50,6 @@ export default function animations() {
             <h1> <Link href="/projects">All Projects </Link> </h1>
             </div> 
 
-
             <h1 className={styles.title}>
               Animations
             </h1>

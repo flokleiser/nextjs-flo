@@ -1,40 +1,82 @@
 "use client";
-import { useEffect, useState } from "react";
-import styles from "/app/page.module.css";
+import styles from "app/page.module.css";
+import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
+import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
+import { React, useState, useEffect } from "react";
 import {
-  CiGrid32,
-  CiImageOn,
-  CiFileOn,
-  CiViewList,
-  CiStickyNote,
-} from "react-icons/ci";
-import Link from "next/link";
+  SiAdobeaftereffects,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiBlender,
+  SiUnity,
+  SiAdobeillustrator,
+  SiVisualstudiocode,
+  SiAdobeindesign,
+} from "react-icons/si";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function Home() {
-  const [isHoveringProjects, setIsHoveringProjects] = useState(false);
-  const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
-
-  const [animationClass, setAnimationClass] = useState("");
-
+export default function links() {
   useEffect(() => {
-    if (isHoveringProjects) {
-      setAnimationClass(styles.animationTestClassHalf1);
-    } else if (animationClass === styles.animationTestClassHalf1) {
-      setAnimationClass(styles.animationTestClassHalf2);
-    }
-  }, [isHoveringProjects]);
- 
+    document.title = "Links/Info";
+  }, []);
 
-  const handleHoverProjects = () => {
-    setIsHoveringProjects(!isHoveringProjects);
-  };
+  // const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered2, setIsHovered2] = useState(false);
+  // const [isHovered3, setIsHovered3] = useState(false);
+  // const [isHovered4, setIsHovered4] = useState(false);
+
+  //   const handleMouseEnter = () => {
+  //     setIsHovered(true);
+  //   };
+  //   const handleMouseLeave = () => {
+  //     setIsHovered(false);
+  //   };
+  //  const handleMouseEnter2 = () => {
+  //     setIsHovered2(true);
+  //   };
+  //   const handleMouseLeave2 = () => {
+  //     setIsHovered2(false);
+  //   };
+  //   const handleMouseEnter3 = () => {
+  //     setIsHovered3(true);
+  //   };
+  //   const handleMouseLeave3 = () => {
+  //     setIsHovered3(false);
+  //   };
+  //   const handleMouseEnter4 = () => {
+  //     setIsHovered4(true);
+  //   };
+  //   const handleMouseLeave4 = () => {
+  //     setIsHovered4(false);
+  //   };
+
+  const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
+  const [isHoveringGithub, setIsHoveringGithub] = useState(false);
+  const [isHoveringGoogleDrive, setIsHoveringGoogleDrive] = useState(false);
+  const [isHoveringCV, setIsHoveringCV] = useState(false);
 
   const handleHoverPortfolio = () => {
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
+  const handleHoverGithub = () => {
+    setIsHoveringGithub(!isHoveringGithub);
+  };
+  const handleHoverGoogleDrive = () => {
+    setIsHoveringGoogleDrive(!isHoveringGoogleDrive);
+  };
+  const handleHoverCV = () => {
+    setIsHoveringCV(!isHoveringCV);
+  };
 
+  const [animationClass, setAnimationClass] = useState("");
+  useEffect(() => {
+    if (isHoveringPortfolio) {
+      setAnimationClass(styles.linkPageAnimationDiv1);
+    } else if (animationClass === styles.linkPageAnimationDiv1) {
+      setAnimationClass(styles.linkPageAnimationDiv2);
+    }
+  }, [isHoveringPortfolio]);
 
   return (
     <main className={styles.main}>
@@ -73,148 +115,159 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-      <h1 className={styles.titleHomepage} style={{ zIndex: 60 }}>
-        Florian Kleiser
-      </h1>
+      <h1 className={styles.title}>Links/Info</h1>
 
+      <div className={styles.linkContainer}>
+        <div style={{ padding: "1rem" }}> </div>
+        <p className={styles.subtitledescription}>
+          Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
+          Switzerland. <br></br>
+          My passions include drawing, editing, programming, gaming, skating and
+          music. <br></br>I am currently applying to study Interaction Design /
+          Digital Ideation.
+        </p>
+        <div style={{ padding: "1rem" }}> </div>
 
-<AnimatePresence>
-      <div className={styles.homepageSlices} style={{ zIndex: -700 }}>
-    
-    <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-    style={{animationDelay:'0s'}}
-    
-    >
-        <Image
-          src="/images/homepage/new2/1.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        style={{animationDelay:'0.1s'}}
-       >
-          <Image
-          src="/images/homepage/new2/2.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        style={{animationDelay: '0.2s'}}
-        >
-        <Image
-          src="/images/homepage/new2/3.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        style={{animationDelay:'0.3s'}}
-        >
-        <Image
-          src="/images/homepage/new2/4.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        style={{animationDelay:'0.4s'}}
-        >
-        <Image
-          src="/images/homepage/new2/5.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass}`} 
-        style={{animationDelay: '0.5s'}}
-        >
-        <Image
-          src="/images/homepage/new2/6.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-      </div>
-    </AnimatePresence>
-   
+        <div style={{ padding: "1rem" }}> </div>
 
-      <div style={{ margin: "5rem" }}> </div>
-
-      <div
-        className={styles.buttonGeneralHomepageProjects}
-        // onMouseOver={handleHoverProjects}
-        onMouseOver={handleHoverProjects}
-        onMouseMove={() => setIsHoveringProjects(true)}
-        onMouseLeave={() => setIsHoveringProjects(false)}
-        style={{ zIndex: 60 }}
-      >
-        <h2 className={styles.subtitleHomepage}>
-          <Link className="link-hover" href="/projects">
-            {" "}
-            <CiGrid32 /> Projects
-          </Link>
-        </h2>
-      </div>
-
-      <div
-        className={styles.buttonGeneralHomepage}
-        style={{ zIndex: 60 }}
-        onMouseOver={handleHoverPortfolio}
-        onMouseMove={() => setIsHoveringPortfolio(true)}
-        onMouseLeave={() => setIsHoveringPortfolio(false)}
-      >
-        <h2 className={styles.subtitleHomepage}>
-          <Link
-            className="link-hover"
-            href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view"
-            target="_blank"
+        <div className={styles.linkContainerLinks}>
+          <div
+            className={styles.buttonLinksPage}
+            onMouseOver={handleHoverPortfolio}
+            onMouseMove={() => setIsHoveringPortfolio(true)}
+            onMouseLeave={() => setIsHoveringPortfolio(false)}
           >
-            <CiImageOn />
-            Portfolio
-          </Link>
-        </h2>
+            <div className={styles.subtitledescription}>
+              <p>
+                <a
+                  href="https://drive.google.com/file/d/16pP5-QeRobbIaPl6GKzlcJCqClgF8gMK/view"
+                  target="_blank"
+                >
+                  <CiImageOn />
+                  Portfolio
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={styles.buttonLinksPage}
+            onMouseOver={handleHoverGithub}
+            onMouseMove={() => setIsHoveringGithub(true)}
+            onMouseLeave={() => setIsHoveringGithub(false)}
+          >
+            <div className={styles.subtitledescription}>
+              <p>
+                <a href="https://github.com/flokleiser" target="_blank">
+                  <DiGithubBadge />
+                  Github
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={styles.buttonLinksPage}
+            onMouseOver={handleHoverGoogleDrive}
+            onMouseMove={() => setIsHoveringGoogleDrive(true)}
+            onMouseLeave={() => setIsHoveringGoogleDrive(false)}
+          >
+            <div className={styles.subtitledescription}>
+              <p>
+                <a
+                  href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing"
+                  target="_blank"
+                >
+                  <DiGoogleDrive />
+                  Google Drive
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div
+            className={styles.buttonLinksPage}
+            onMouseOver={handleHoverCV}
+            onMouseMove={() => setIsHoveringCV(true)}
+            onMouseLeave={() => setIsHoveringCV(false)}
+          >
+            <div className={styles.subtitledescription}>
+              <p>
+                <a
+                  href="https://drive.google.com/file/d/16NBQjV3BtpM_I0j3xOTWSksGIu0zpR-Q/view"
+                  target="_blank"
+                >
+                  <CiViewTimeline />
+                  CV
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style={{ padding: "1rem" }}> </div>
+
+        <div
+          className={styles.linkContainerImage}
+          style={{ backgroundImage: "url(/images/flo0.png)"}}
+          >
+            <div
+                className={`${styles.linkContainerImage} ${
+                  isHoveringPortfolio ? styles.backgroundCardPortfolioHovered : ""}
+                   }
+                  ${isHoveringGithub ? styles.backgroundCardGithubHovered : ""}
+                  ${
+                    isHoveringGoogleDrive
+                      ? styles.backgroundCardGoogledriveHovered
+                      : ""
+                  }
+                  ${isHoveringCV ? styles.backgroundCardCVHovered : ""}`}
+              ></div>
+        </div>
+
+        <div style={{ padding: "1rem" }}> </div>
       </div>
 
-      {/* Projects hover */}
-      <AnimatePresence>
-        {isHoveringProjects && (
-          <motion.div
-            className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center -z-[901]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{
-              backdropFilter: "blur(5px)"
-            }}
-          >
-        
-       </motion.div>
-        )}
-      </AnimatePresence>
+      <div style={{ padding: "1rem" }}> </div>
 
-      {/* Portfolio hover */}
-      <AnimatePresence>
-        {isHoveringPortfolio && (
-          <motion.div
-            className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center -z-[800]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            style={{
-              backdropFilter: "blur(10px)",
-            }}
-          >
-                {/* <div className={styles.homepageOverlayPortfolio}></div> */}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className={styles.subtitledescription}>
+        <h1>Education/Experience</h1>
+      </div>
 
-      <div style={{ margin: "3.5rem" }}> </div>
+      <Image
+        src="/svg/timeline4.svg"
+        alt="timeline"
+        width={900}
+        height={24}
+        style={{ margin: 20 }}
+      />
 
+      <div style={{ padding: "2rem" }}> </div>
+
+      <div className={styles.subtitledescription}>
+        <h1>Skills</h1>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-2">
+        <SiAdobeillustrator size={60} />
+        <SiAdobephotoshop size={60} />
+        <SiAdobeindesign size={60} />
+        <SiAdobepremierepro size={60} />
+        <SiAdobeaftereffects size={60} />
+        <SiVisualstudiocode size={60} />
+        <SiBlender size={60} />
+        <SiUnity size={60} />
+        <Image
+          src="/svg/logic.svg"
+          width={60}
+          height={24}
+          style={{ filter: "invert(1)" }}
+        />
+      </div>
+
+      <div style={{ padding: "2rem" }}> </div>
+
+      <div style={{ padding: "2rem" }}> </div>
     </main>
   );
 }

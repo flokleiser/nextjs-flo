@@ -3,21 +3,32 @@
 
 ## Currently working on:
 
-- [ ] Disable subnavbar on mobile
+- [ ] Links page --> have one card with changing background instead of 4, or vice versa
 
-- [ ] Links page picture hover --> animations, with animatepresence etc
+- [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
 
-- [ ] Navbar animation
+- [ ] Animation onSelect (on clicking projects/portfolio)
+
+- [ ] Links page
 
 ## TO FIX:
 
+- [ ] Homepage animation --> cards transparent when hovering over portfolio
+
 - [ ] CAD picture better resolution
+
+- [ ] Navbar animation
+
+- [ ] Links page picture hover --> animations, with animatepresence etc
 
 ## Ideas for when bored:
 
 - [ ] Add 404 page
 
 - [ ] Add image "roster" for cycling through when hovering on projects
+
+## Checklist before publish:
+- [ ] Updated links (CV, Portfolio)
 
 ### Videos/Gifs/Images:
 
@@ -111,6 +122,3 @@
 - [x] Fix Background Creative Coding
 - [x] Fix Background Animations
 - [x] Add Project descriptions
-
-## Checklist before publish:
-- [x] Updated links (CV, Portfolio)
