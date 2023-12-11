@@ -17,11 +17,12 @@ export default function ExpandableButton() {
     <div>
       <button className={styles.buttonNew} 
       onClick={handleToggleClick}>
-        {isVisible ? <IoIosArrowUp style={{ fontSize: '1.5rem' }}/> : <IoIosArrowDown style={{ fontSize: '1.5rem' }} />}
+        {isVisible ? <IoIosArrowDown style={{ fontSize: '1.5rem' }}/> : <IoIosArrowUp style={{ fontSize: '1.5rem' }} />}
       </button>
 
       {isVisible && (
-        <div>
+        <div className={styles.subtitledescription}>
+          test
         </div>
       )}
     </div>

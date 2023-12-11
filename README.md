@@ -2,36 +2,22 @@
 
 
 ## Currently working on:
-
+- [ ] Make "backbutton" centered in navbar 
 - [ ] Look into .sass
-
-- [ ] Links page --> have one card with changing background instead of 4, or vice versa
-
 - [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
-
 - [ ] Animation onSelect (on clicking projects/portfolio)
-
-- [ ] Links page
-
 - [ ] Page Transitions
 
 ## TO FIX:
-
 - [ ] Homepage animation --> cards transparent when hovering over portfolio
-
 - [ ] CAD picture better resolution
-
 - [ ] Navbar animation
 
-- [ ] Links page picture hover --> animations, with animatepresence etc
-
 ## Ideas for when bored:
-
 - [ ] Add 404 page
 
-- [ ] Add image "roster" for cycling through when hovering on projects
-
 ## Checklist before publish:
+- [ ] Fix texts
 - [ ] Updated links (CV, Portfolio)
 
 ### Videos/Gifs/Images:

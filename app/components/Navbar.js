@@ -171,10 +171,10 @@ export default function Navbar() {
                   >
                     {showSubNavbar ? (
                       /* <CiSquareChevLeft style={{ fontSize: '1.5rem' }} /> */
-                      <CiSquareChevDown style={{ fontSize: "1.5rem" }} />
+                      <CiSquareMinus style={{ opacity:0.4, fontSize: "1.5rem" }} />
                     ) : (
                       /* <CiSquareChevRight style={{ fontSize: '1.5rem' }}  /> */
-                      <CiSquareChevUp style={{ fontSize: "1.5rem" }} />
+                      <CiSquarePlus style={{ opacity:0.4, fontSize: "1.5rem" }} />
                     )}
                   </button>
 
