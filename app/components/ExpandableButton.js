@@ -17,13 +17,15 @@ export default function ExpandableButton() {
     <div>
       <button className={styles.buttonNew} 
       onClick={handleToggleClick}>
-        {isVisible ? <IoIosArrowDown style={{ fontSize: '1.5rem' }}/> : <IoIosArrowUp style={{ fontSize: '1.5rem' }} />}
+        {isVisible ? <IoIosArrowDown style={{filter:'invert(100%)', fontSize: '1.5rem' }}/> : <IoIosArrowUp style={{filter:'invert(100%)', fontSize: '1.5rem' }} />}
       </button>
 
       {isVisible && (
-        <div className={styles.subtitledescription}>
-          test
-        </div>
+        <AnimatePresence>
+        <motion.div className={styles.subtitledescription}>
+         why does the button not stay centered
+        </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );
