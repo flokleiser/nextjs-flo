@@ -45,6 +45,10 @@ export default function Home() {
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
+  useEffect(() => {
+    document.title = "Florian Kleiser - Home";
+  }, []);
+
 
   return (
     <main className={styles.main}>

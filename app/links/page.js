@@ -78,6 +78,8 @@ export default function links() {
     }
   }, [isHoveringPortfolio]);
 
+
+
   return (
     <main className={styles.main}>
       <div
@@ -208,7 +210,10 @@ export default function links() {
         </div>
 
         <div style={{ padding: "1rem" }}> </div>
-      </div>
+      </div>  
+      <div style={{ padding: "1rem" }}> </div>
+      
+      <div className={styles.linkContainer}>
 
       <div style={{ padding: "1rem" }}> </div>
 
@@ -225,6 +230,10 @@ export default function links() {
       />
 
       <div style={{ padding: "2rem" }}> </div>
+     </div>
+      <div style={{ padding: "1rem" }}/>
+      <div className={styles.linkContainer}>
+      <div style={{ padding: "1rem" }}/> 
 
       <div className={styles.subtitledescription}>
         <h1>Skills</h1>
@@ -248,7 +257,7 @@ export default function links() {
       </div>
 
       <div style={{ padding: "2rem" }}> </div>
-
+      </div>
       <div style={{ padding: "2rem" }}> </div>
     </main>
   );

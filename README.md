@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Page Transitions
+
 - [ ] Links page --> have one card with changing background instead of 4, or vice versa
 
 - [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
