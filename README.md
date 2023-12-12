@@ -3,6 +3,9 @@
 
 ## Currently working on:
 - [ ] Make "Education/Experience" and "Skills" collapsable?
+    - [ ] framer motion for smooth animation?
+    - [ ] actual button on same line as title
+    - [ ] 
 
 ## TO FIX:
 - [ ] CAD picture better resolution

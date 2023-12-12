@@ -400,8 +400,9 @@ transition: all 0.5s ease-in-out;
   /* display:flex;
   align-items: center; */
   
-  padding-bottom: 2rem;
-  padding-top: 1rem;
+  padding-bottom:1rem;
+  /* padding-top: 1rem;  */
+  /* padding-bottom: 2rem; */
 }
 
 .text-container {
@@ -983,6 +984,8 @@ transition: all 0.5s ease-in-out;
       height:auto;
       padding-left:1rem;
       padding-right:1rem;
+      padding-top:1rem;
+      padding-bottom:1rem;
       flex-direction: column;
       justify-content: center;
       align-items: center;

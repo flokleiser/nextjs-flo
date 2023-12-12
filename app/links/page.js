@@ -15,6 +15,7 @@ import {
 } from "react-icons/si";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import ExpandableButton from "../components/ExpandableButton";
 
 export default function links() {
   useEffect(() => {
@@ -100,7 +101,6 @@ export default function links() {
         </p>
         <div style={{ padding: "1rem" }}> </div>
 
-        <div style={{ padding: "1rem" }}> </div>
 
         <div className={styles.linkContainerLinks}>
           <div
@@ -202,17 +202,20 @@ export default function links() {
 
       <div className={styles.subtitledescription}>
         <h1>Education/Experience</h1>
+        <ExpandableButton>
+
+<Image
+  src="/svg/timeline4.svg"
+  alt="timeline"
+  width={900}
+  height={24}
+  style={{ margin: 20 }}
+/>
+
+      </ExpandableButton>
       </div>
 
-      <Image
-        src="/svg/timeline4.svg"
-        alt="timeline"
-        width={900}
-        height={24}
-        style={{ margin: 20 }}
-      />
-
-      <div style={{ padding: "2rem" }}> </div>
+      <div style={{ padding: "1rem" }}> </div>
      </div>
       <div style={{ padding: "1rem" }}/>
       <div className={styles.linkContainer}>
@@ -220,26 +223,31 @@ export default function links() {
 
       <div className={styles.subtitledescription}>
         <h1>Skills</h1>
+        <ExpandableButton>
+
+<div style={{ padding: "1rem" }}></div>
+<div className="flex flex-wrap justify-center gap-2">
+<SiAdobeillustrator size={60} />
+<SiAdobephotoshop size={60} />
+<SiAdobeindesign size={60} />
+<SiAdobepremierepro size={60} />
+<SiAdobeaftereffects size={60} />
+<SiVisualstudiocode size={60} />
+<SiBlender size={60} />
+<SiUnity size={60} />
+<Image
+src="/svg/logic.svg"
+width={60}
+height={24}
+style={{ filter: "invert(1)" }}
+/>
+</div>
+<div style={{ padding: "1rem" }}></div>
+
+</ExpandableButton>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2">
-        <SiAdobeillustrator size={60} />
-        <SiAdobephotoshop size={60} />
-        <SiAdobeindesign size={60} />
-        <SiAdobepremierepro size={60} />
-        <SiAdobeaftereffects size={60} />
-        <SiVisualstudiocode size={60} />
-        <SiBlender size={60} />
-        <SiUnity size={60} />
-        <Image
-          src="/svg/logic.svg"
-          width={60}
-          height={24}
-          style={{ filter: "invert(1)" }}
-        />
-      </div>
-
-      <div style={{ padding: "2rem" }}> </div>
+      <div style={{ padding: "1rem" }}> </div>
       </div>
       <div style={{ padding: "2rem" }}> </div>
     </main>
