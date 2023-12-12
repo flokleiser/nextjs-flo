@@ -2,19 +2,19 @@
 
 
 ## Currently working on:
-- [ ] Make "backbutton" centered in navbar 
-- [ ] Look into .sass
-- [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
-- [ ] Animation onSelect (on clicking projects/portfolio)
-- [ ] Page Transitions
+
+- [ ] "hints/tips" button on creative coding page
 
 ## TO FIX:
-- [ ] Homepage animation --> cards transparent when hovering over portfolio
-- [ ] CAD picture better resolution
-- [ ] Navbar animation
+ [ ] CAD picture better resolution
 
 ## Ideas for when bored:
 - [ ] Add 404 page
+- [ ] Look into .sass
+
+- [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
+- [ ] Animation onSelect (on clicking projects/portfolio)
+- [ ] Page Transitions
 
 ## Checklist before publish:
 - [ ] Fix texts

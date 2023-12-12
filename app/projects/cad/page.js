@@ -272,8 +272,16 @@ return () => {
                   </div>
                 </div>
               </div>
+            
+            {/* <div styles={{ padding: '2rem' }}> </div>
 
-              
+            <div className={styles.subtitledescription}>
+            <p>
+              Assembly process/individual parts
+            </p>
+            </div>  
+
+            <div styles={{ padding: '2rem' }}> </div> */}
 
               <div className="">
               <div className="p-3 container mx-auto">
@@ -301,6 +309,18 @@ return () => {
                 </div>
               </div>
 
+
+              <div styles={{ padding: '2rem' }}> </div>
+
+{/* <div className={styles.subtitledescription}>
+<p>
+Completed CAD design:
+</p>
+</div>  
+
+<div styles={{ padding: '2rem' }}> </div> */}
+
+
               <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
@@ -326,6 +346,17 @@ return () => {
                   </div>
                 </div>
               </div>
+
+              <div styles={{ padding: '2rem' }}> </div>
+
+{/* <div className={styles.subtitledescription}>
+<p>
+Prototypes out of popsicle sticks
+</p>
+</div>  
+
+<div styles={{ padding: '2rem' }}> </div> */}
+
 
             <div className="">
               <div className="p-3 container mx-auto">

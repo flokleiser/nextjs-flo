@@ -16,7 +16,6 @@ export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
 
-
   const [animationClass, setAnimationClass] = useState("");
   const [animationClass2, setAnimationClass2] = useState("");
 
@@ -36,7 +35,6 @@ export default function Home() {
     }
   }, [isHoveringProjects]);
 
-
   const handleHoverProjects = () => {
     setIsHoveringProjects(!isHoveringProjects);
   };
@@ -48,7 +46,6 @@ export default function Home() {
   useEffect(() => {
     document.title = "Florian Kleiser - Home";
   }, []);
-
 
   return (
     <main className={styles.main}>
@@ -87,88 +84,93 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-        <div className={styles.backbutton}>
-            <h1> <Link href="/projects/testing">Testing</Link> </h1>
-        </div> 
+      <div className={styles.backbuttonHomepage}>
+        <h1>
+          {" "}
+          <Link href="/projects/testing">Testing</Link>{" "}
+        </h1>
+      </div>
 
       <h1 className={styles.titleHomepage} style={{ zIndex: 60 }}>
         Florian Kleiser
       </h1>
 
-<AnimatePresence>
-      <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
-        <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
-        <Image
-          src="/images/homepage/portfolio homepage2.png"
-          width={1100}
-          height={1000}     
-        />
-    </div>
-    </div>
-  </AnimatePresence>
+      <AnimatePresence>
+        <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
+          <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
+            <Image
+              src="/images/homepage/portfolio homepage2.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
+        </div>
+      </AnimatePresence>
 
-
-
-  <AnimatePresence>
-      <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
-    
-    <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
-    style={{animationDelay:'0s'}}
-    >
-        <Image
-          src="/images/homepage/new2/1.png"
-          width={1100}
-          height={1000}
-        />
+      <AnimatePresence>
+        <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+          <div
+            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            style={{ animationDelay: "0s" }}
+          >
+            <Image
+              src="/images/homepage/new2/1.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
+          <div
+            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            style={{ animationDelay: "0.1s" }}
+          >
+            <Image
+              src="/images/homepage/new2/2.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
+          <div
+            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            style={{ animationDelay: "0.2s" }}
+          >
+            <Image
+              src="/images/homepage/new2/3.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
+          <div
+            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            style={{ animationDelay: "0.3s" }}
+          >
+            <Image
+              src="/images/homepage/new2/4.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
+          <div
+            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            style={{ animationDelay: "0.4s" }}
+          >
+            <Image
+              src="/images/homepage/new2/5.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
+          <div
+            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            style={{ animationDelay: "0.5s" }}
+          >
+            <Image
+              src="/images/homepage/new2/6.png"
+              width={1100}
+              height={1000}
+            />
+          </div>
         </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
-        style={{animationDelay:'0.1s'}}
-       >
-          <Image
-          src="/images/homepage/new2/2.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
-        style={{animationDelay: '0.2s'}}
-        >
-        <Image
-          src="/images/homepage/new2/3.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
-        style={{animationDelay:'0.3s'}}
-        >
-        <Image
-          src="/images/homepage/new2/4.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
-        style={{animationDelay:'0.4s'}}
-        >
-        <Image
-          src="/images/homepage/new2/5.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-        <div className={`${styles.cardHomepageTest} ${animationClass2}`} 
-        style={{animationDelay: '0.5s'}}
-        >
-        <Image
-          src="/images/homepage/new2/6.png"
-          width={1100}
-          height={1000}
-        />
-        </div>
-      </div>
-    </AnimatePresence>
-   
+      </AnimatePresence>
 
       <div style={{ margin: "5rem" }}> </div>
 
@@ -216,11 +218,9 @@ export default function Home() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             style={{
-              backdropFilter: "blur(5px)"
+              backdropFilter: "blur(5px)",
             }}
-          >
-        
-       </motion.div>
+          ></motion.div>
         )}
       </AnimatePresence>
 
@@ -237,13 +237,11 @@ export default function Home() {
               backdropFilter: "blur(100px)",
               // backgroundColor: "rgba(0,0,0,0.4)",
             }}
-          >
-        </motion.div>
+          ></motion.div>
         )}
       </AnimatePresence>
 
       <div style={{ margin: "3.5rem" }}> </div>
-
     </main>
   );
 }

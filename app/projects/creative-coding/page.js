@@ -8,6 +8,7 @@ import Image from "next/image";
 import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
+import ExpandableButton from "@/app/components/ExpandableButton";
 
 const data = [
   { image: "/images/creative-coding/creativecoding white.png", id: 0 },
@@ -190,6 +191,23 @@ export default function creativeCoding() {
         </p>
       </div>
 
+      <div style={{ padding: "1rem" }}></div>
+
+      <div className={styles.linkContainer} 
+        style={{
+          // paddingLeft:"2rem", paddingRight:"2rem"  
+          width:"90vw",
+          }}
+          >
+
+      <div style={{ padding: "1rem" }}></div>
+
+      <div className={styles.subtitledescription}>
+        <p>
+          Try it out:
+        </p>
+      </div>
+
       <div style={{ padding: "2rem" }}>
         <div>
           <iframe
@@ -198,12 +216,17 @@ export default function creativeCoding() {
             allowFullScreen
             style={{
               border: "2px solid white",
-              width: "80vw",
-              aspectRatio: "16/9",
+              width: "85vw",
+              aspectRatio: "16/9"
             }}
           />
         </div>
       </div>
+
+      <ExpandableButton />
+
+      <div style={{ padding: "1rem" }}> </div>
+</div>
 
       <div className={styles.subtitledescription}>
         <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
