@@ -2,7 +2,7 @@
 
 
 ## Currently working on:
-- [ ] "hints/tips" button on creative coding page
+- [ ] Make "Education/Experience" and "Skills" collapsable?
 
 ## TO FIX:
 - [ ] CAD picture better resolution

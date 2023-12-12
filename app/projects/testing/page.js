@@ -4,115 +4,26 @@ import { useState, useEffect } from "react";
 import styles from "app/page.module.css";
 import { DiGit, DiGithubBadge } from "react-icons/di";
 import Link from "next/link";
-import Image from "next/image";
-import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
-import TipsButton from "@/app/components/TipsButton";
+import ExpandableButton from "@/app/components/ExpandableButton";
+import {
+  SiAdobeaftereffects,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiBlender,
+  SiUnity,
+  SiAdobeillustrator,
+  SiVisualstudiocode,
+  SiAdobeindesign,
+} from "react-icons/si";
+import Image from "next/image";
 
-export default function creativeCoding() {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleResetClick = () => {
-    setSelectedImage(null);
-    setCurrentIndex(0);
-    document.documentElement.style.overflow = "auto";
-    document.body.style.overflow = "auto";
-  };
-
-  /* make image big */
-  const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3];
-    const selectedIndex = dataArray.findIndex(
-      (item) => item.image === imageSrc
-    );
-    if (selectedIndex !== -1) {
-      setSelectedImage(imageSrc);
-      setCurrentIndex(dataArray[selectedIndex].id);
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
-    }
-  };
-
-  const handlePrevImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
-      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
-      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
-    }
-  };
-
-  const handleNextImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
-      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
-      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
-    }
-  };
-
-  /* handleoutsideclick*/
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      const imageElement = document.querySelector("#overlay img");
-      const leftButton = document.querySelector("#leftButton");
-      const rightButton = document.querySelector("#rightButton");
-
-      if (imageElement) {
-        const imageRect = imageElement.getBoundingClientRect();
-
-        if (
-          event.clientX < imageRect.left ||
-          event.clientX > imageRect.right ||
-          event.clientY < imageRect.top ||
-          event.clientY > imageRect.bottom
-        ) {
-          if (
-            event.target !== leftButton &&
-            event.target !== rightButton &&
-            !leftButton.contains(event.target) &&
-            !rightButton.contains(event.target)
-          ) {
-            handleResetClick();
-          }
-        }
-      }
-    };
-
-    document.addEventListener("mouseup", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mouseup", handleOutsideClick);
-    };
-  }, []);
-
-  /* handlekeydown*/
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        handleResetClick();
-      } else if (event.key === "ArrowLeft") {
-        handlePrevImage();
-      } else if (event.key === "ArrowRight") {
-        handleNextImage();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleResetClick, handlePrevImage, handleNextImage]);
+export default function test() {
+  
 
   useEffect(() => {
-    document.title = "Creative Coding";
+    document.title = "test";
   }, []);
 
   return (
@@ -155,48 +66,73 @@ export default function creativeCoding() {
       <div className={styles.backbutton}>
         <h1>
           {" "}
-          <Link href="/projects">All Projects </Link>{" "}
+          <Link href="/">Home </Link>{" "}
         </h1>
       </div>
 
-      <h1 className={styles.title}>Creative Coding</h1>
+      <h1 className={styles.title}>Testing the button</h1>
 
-      
+      <div className={styles.linkContainer}>
+      <div style={{ padding: "1rem" }}></div>
+        <div className={styles.subtitledescription}>
+            <div className={styles.subtitledescription}>
+        <h1>Education/Experience</h1>
+            <ExpandableButton>
 
-      <div className={styles.linkContainer} 
-        style={{
-          width:"90vw",
-          }}
-          >
+      <Image
+        src="/svg/timeline4.svg"
+        alt="timeline"
+        width={900}
+        height={24}
+        style={{ margin: 20 }}
+      />
+
+            </ExpandableButton>
+      </div>
+        </div>
 
       <div style={{ padding: "1rem" }}></div>
 
-      <div className={styles.subtitledescription}>
-        <p>
-          Try it out:
-        </p>
       </div>
 
-      <div style={{ padding: "2rem" }}>
-        <div>
-          <iframe
-            src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
-            width="100vw"
-            allowFullScreen
-            style={{
-              border: "2px solid white",
-              width: "85vw",
-              aspectRatio: "16/9"
-            }}
-          />
+      <div style={{ padding: "1rem" }}></div>
+    
+      <div className={styles.linkContainer}>
+      <div style={{ padding: "1rem" }}></div>
+        <div className={styles.subtitledescription}>
+            <div className={styles.subtitledescription}>
+        <h1>Skills</h1>
+            <ExpandableButton>
+
+            <div style={{ padding: "1rem" }}></div>
+            <div className="flex flex-wrap justify-center gap-2">
+        <SiAdobeillustrator size={60} />
+        <SiAdobephotoshop size={60} />
+        <SiAdobeindesign size={60} />
+        <SiAdobepremierepro size={60} />
+        <SiAdobeaftereffects size={60} />
+        <SiVisualstudiocode size={60} />
+        <SiBlender size={60} />
+        <SiUnity size={60} />
+        <Image
+          src="/svg/logic.svg"
+          width={60}
+          height={24}
+          style={{ filter: "invert(1)" }}
+        />
+      </div>
+      <div style={{ padding: "1rem" }}></div>
+
+            </ExpandableButton>
+      </div>
         </div>
+        
+      <div style={{ padding: "1rem" }}></div>
+
       </div>
 
-      <TipsButton />
+      <div style={{ padding: "2rem" }}></div>
 
-      <div style={{ padding: "1rem" }}> </div>
-</div>
-      <div style={{padding:"4rem"}}></div>
-</main>
+      </main>
   );
 }

@@ -5,7 +5,7 @@ import { useState } from "react";
 import styles from 'app/page.module.css'
 import {AnimatePresence, motion} from "framer-motion";
 
-export default function ExpandableButton() {
+export default function ExpandableButton({ children }) {
     const [isVisible, setVisible] = useState(false);
    
     const handleToggleClick = () => {
@@ -21,8 +21,8 @@ export default function ExpandableButton() {
 
       {isVisible && (
         <AnimatePresence>
-        <motion.div className={styles.subtitledescription}>
-         why does the button not stay centered
+        <motion.div>
+      {children}
         </motion.div>
         </AnimatePresence>
       )}
