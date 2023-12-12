@@ -2,11 +2,12 @@
 
 
 ## Currently working on:
-
 - [ ] "hints/tips" button on creative coding page
 
 ## TO FIX:
- [ ] CAD picture better resolution
+- [ ] CAD picture better resolution
+- [ ] Look into error messages that i get :nervous:
+
 
 ## Ideas for when bored:
 - [ ] Add 404 page

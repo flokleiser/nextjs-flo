@@ -8,7 +8,7 @@ import Image from "next/image";
 import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
-import ExpandableButton from "@/app/components/ExpandableButton";
+import TipsButton from "@/app/components/TipsButton";
 
 const data = [
   { image: "/images/creative-coding/creativecoding white.png", id: 0 },
@@ -223,10 +223,11 @@ export default function creativeCoding() {
         </div>
       </div>
 
-      <ExpandableButton />
+      <TipsButton />
 
-      <div style={{ padding: "1rem" }}> </div>
+       <div style={{ padding: "1rem" }}> </div>
 </div>
+<div style={{ padding: "1rem" }}> </div>
 
       <div className={styles.subtitledescription}>
         <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
