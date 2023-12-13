@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Image gallery : image swiping animations, exit animation
+
 - [ ] Portfolio hover --> make title bigger and move title
 
 - [x] Make "Education/Experience" and "Skills" collapsable?

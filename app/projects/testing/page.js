@@ -2,27 +2,133 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styles from "app/page.module.css";
-import { DiGit, DiGithubBadge } from "react-icons/di";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
-import ExpandableButton from "@/app/components/ExpandableButton";
-import {
-  SiAdobeaftereffects,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
-  SiBlender,
-  SiUnity,
-  SiAdobeillustrator,
-  SiVisualstudiocode,
-  SiAdobeindesign,
-} from "react-icons/si";
 import Image from "next/image";
+import { PiXCircle } from "react-icons/pi"; 
 
 export default function test() {
   useEffect(() => {
     document.title = "test";
   }, []);
+
+  const data = [
+    {
+      image: '/images/sketches/sketch test scan website2.png', id: 0
+    },
+    {
+    image: '/images/sketches/sketch test website.png', id: 1
+    },
+    {
+    image: '/images/sketches/sketch test scan website3.png', id: 2
+    },
+    {
+    image: '/images/sketches/sketch test scan website4.png', id: 3
+    },
+  ];
+
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleResetClick = () => {
+    setSelectedImage(null);
+    setCurrentIndex(0);
+    document.documentElement.style.overflow = 'auto';
+    document.body.style.overflow = 'auto';
+  };
+
+  /* make image big */
+  const handleImageClick = (imageSrc) => {
+    const dataArray = [...data];
+    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
+    if (selectedIndex !== -1) {
+      setSelectedImage(imageSrc);
+      setCurrentIndex(dataArray[selectedIndex].id);
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (selectedImage !== null) {
+      const dataArray = [...data];
+      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
+    }
+  };
+
+
+  const handleNextImage = () => {
+    if (selectedImage !== null) {
+      const dataArray = [...data];
+      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
+      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
+      setCurrentIndex(dataArray[newIndex].id);
+      setSelectedImage(dataArray[newIndex].image);
+      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
+    }
+  };
+
+
+
+/* handleoutsideclick*/
+useEffect(() => {
+  const handleOutsideClick = (event) => {
+    const imageElement = document.querySelector("#overlay img");
+    const leftButton = document.querySelector("#leftButton");
+    const rightButton = document.querySelector("#rightButton");
+ 
+
+    if (imageElement) {
+       const imageRect = imageElement.getBoundingClientRect();
+
+      if (
+        event.clientX < imageRect.left ||
+        event.clientX > imageRect.right ||
+        event.clientY < imageRect.top ||
+        event.clientY > imageRect.bottom
+        ) {
+        if (
+          event.target !== leftButton &&
+          event.target !== rightButton &&
+          !leftButton.contains(event.target) &&
+          !rightButton.contains(event.target)
+        ) {
+        handleResetClick();
+        }
+      }
+    }
+  };
+
+  document.addEventListener("mouseup", handleOutsideClick);
+
+  return () => {
+    document.removeEventListener("mouseup", handleOutsideClick);
+  };
+}, []);
+
+/* handlekeydown*/
+useEffect(() => {
+  const handleKeyDown = (event) => {
+  if (event.key === 'Escape') {
+      handleResetClick();
+  } else if (event.key === 'ArrowLeft') {
+    handlePrevImage();
+  } else if (event.key === 'ArrowRight') {
+    handleNextImage();
+  }
+};
+
+window.addEventListener('keydown', handleKeyDown);
+
+return () => {
+  window.removeEventListener('keydown', handleKeyDown);
+};
+}, [handleResetClick, handlePrevImage, handleNextImage]);
 
   const text = "Testing the button".split("");
 
@@ -80,104 +186,88 @@ export default function test() {
         <h1> Testing the button </h1>
       </div>
 
-      <div className={styles.title}>
-        {text.map((el, i) => (
-          <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            // duration: 0.25,
-            delay: i / 10,
-          }}
-          key= {i} >
-            {el}{""}
-          </motion.span>
-        ))} 
-        </div>
-
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1rem" }}></div>
-
-        <div className={styles.subtitledescription}>
-          {/* <div className="flex row"> */}
-          <h1>Education/Experience</h1>
-          <ExpandableButton>
-            <Image
-              src="/svg/timeline4.svg"
-              alt="timeline"
-              width={900}
-              height={24}
-              style={{ margin: 20 }}
-            />
-          </ExpandableButton>
-          {/* </div> */}
-        </div>
-
-        <div style={{ padding: "1rem" }}></div>
-      </div>
-
-      <div style={{ padding: "1rem" }}></div>
-
-      <div className={styles.subtitledescription}>
-        <h1>Skills</h1>
-        <ExpandableButton>
-          <div style={{ padding: "1rem" }}></div>
-          <div className="flex flex-wrap justify-center gap-2">
-            <SiAdobeillustrator size={60} />
-            <SiAdobephotoshop size={60} />
-            <SiAdobeindesign size={60} />
-            <SiAdobepremierepro size={60} />
-            <SiAdobeaftereffects size={60} />
-            <SiVisualstudiocode size={60} />
-            <SiBlender size={60} />
-            <SiUnity size={60} />
-            <Image
-              src="/svg/logic.svg"
-              width={60}
-              height={24}
-              style={{ filter: "invert(1)" }}
-            />
+      <AnimatePresence>
+              {selectedImage && (
+               <motion.div
+                id="overlay" 
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50"
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+        style={{
+          backdropFilter: `blur(${selectedImage ? '10px' : '0px'})`,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        }}
+          >
+          <motion.img
+            initial={{ scale:0 }}
+            animate={{ scale:1 }}
+            exit={{ scale:0 }}
+            transition={{ duration: 0.3}}
+            src={selectedImage}
+            alt=""
+            className="max-w-4/5 max-h-4/5"
+            style={{ maxHeight: '80vh', zIndex: 9990 }}
+          />
+           <button
+            className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            onClick={handleResetClick}
+            style={{ zIndex: 9999 }}
+          >
+            <PiXCircle style={{ fontSize: '2rem' }} />
+          </button>
+          <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="leftButton"
+              className= "text-black px-0 py-4 rounded-r"
+              onClick={handlePrevImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowBack style={{ fontSize: '2rem' }}/>
+            </button>
+            </div>
+            <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
+            <button
+              id="rightButton"
+              className=" text-black px-0 py-4 rounded-r"
+              onClick={handleNextImage}
+              style={{ zIndex: 9999 }}
+            >
+              <IoIosArrowForward style={{ fontSize: '2rem' }}/>
+            </button>
           </div>
-          <div style={{ padding: "1rem" }}></div>
-        </ExpandableButton>
-      </div>
+        </motion.div>
+      )}
+      </AnimatePresence>
+       
+       <div className="">
+              <div className="p-3 container mx-auto">
+                <div className="py-2"></div>
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                    {data.map((x) =>  (
+                  <article
+                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                  >
+                    <div className="relative rounded-2xl">
+                      <Image
+                        width={400}
+                        height={400}
+                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                          selectedImage ? 'z-0' : ''
+                        }`}
+                        src={x.image}
+                        alt=""
+                        onClick={() => handleImageClick(x.image)}
+                      />
+                    </div>
+                  </article>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
-      {/* <div className={styles.grid}
-      >
-      
-        <motion.a
-            className={styles.card}
-            href = '/projects/sketches'
-            style={{ 
-                    backgroundImage: 'url("/images/cards/sketch1.png")',
-                    backgroundSize: '102%',
-                    backgroundPosition: 'center',
-                  whileTap:"scale: 0.9"
-                  }}
-            rel="noopener noreferrer"
-            >
-            <h2>
-                Sketches
-            </h2>
-            <p>Sketchbook</p>
-            </motion.a> 
-            
-            <a
-            href = '/projects/creative-coding'
-            className={styles.card}
-            // style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
-            style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.png")' ,
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            rel="noopener noreferrer"
-            >
-            <h2>
-                Creative Coding
-            </h2>
-            <p>Generative Art, p5js</p>
-            </a>
-
-</div> */}
+     
       <div style={{ padding: "2rem" }}></div>
     </main>
   );
