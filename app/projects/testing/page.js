@@ -47,6 +47,7 @@ export default function test() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
+      setShouldAnimateOut(false);
     }
   };
 
@@ -58,6 +59,7 @@ export default function test() {
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
+      setShouldAnimateOut("left");
     }
   };
 
@@ -70,9 +72,11 @@ export default function test() {
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
+      setShouldAnimateOut("right");
     }
   };
 
+  const [shouldAnimateOut, setShouldAnimateOut] = useState(false);
 
 
 /* handleoutsideclick*/
@@ -81,7 +85,7 @@ useEffect(() => {
     const imageElement = document.querySelector("#overlay img");
     const leftButton = document.querySelector("#leftButton");
     const rightButton = document.querySelector("#rightButton");
- 
+    setShouldAnimateOut(false); 
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
@@ -99,6 +103,7 @@ useEffect(() => {
           !rightButton.contains(event.target)
         ) {
         handleResetClick();
+
         }
       }
     }
@@ -200,15 +205,32 @@ return () => {
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
         }}
           >
+
           <motion.img
-            initial={{ scale:0 }}
-            animate={{ scale:1 }}
-            exit={{ scale:0 }}
+            // initial={{ scale:0}}
+            // animate={{ scale:1 }}
+            // exit={{ scale:0 }}
+
+            // initial={{x:-1000}}
+            // animate={{x:0}}
+            // exit={{x:1000}}
+
+            // initial={shouldAnimateOut ? { x: 1000 } : { x: -1000 }}
+            // animate={{ x: 0 }}
+            // exit={shouldAnimateOut ? { x: -1000 } : { x: 1000 }}
+         
+            initial={shouldAnimateOut === "right" ? { x: 1000 } : shouldAnimateOut === "left" ? { x: -1000 } : { opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={shouldAnimateOut === "right" ? { x: -1000 } : shouldAnimateOut === "left" ? { x: 1000 } : { opacity: 0 }}
             transition={{ duration: 0.3}}
+            key={selectedImage} 
             src={selectedImage}
             alt=""
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990 }}
+
+        
+
           />
            <button
             className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
