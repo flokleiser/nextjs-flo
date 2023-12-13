@@ -101,34 +101,22 @@ export default function Home() {
         </h1>
       </div>
 
-      {/* <h1 className={styles.titleHomepage} style={{ zIndex: 60 }}>
-        Florian Kleiser
-      </h1> */}
-
       <div className={styles.titleHomepage}>
-          {isHoveringProjects ? (
-          <AnimatePresence>
-              {text.map(({el, i}) => (
-              <motion.span
-              
-              initial={{ opacity: 1 }}
-                    animate={{ opacity: 0 }}
-                    exit= {{ opacity: 1 }}
-                    transition={{
-                      duration: 0.25,
-                      delay: i / 50,
-                    }}
-                     key= {i} >
-                       {el}{""}
-             </motion.span>
-          ))}
-          ) : ({
-              text.map((el, i) => (
-                  <span key={i}>{el}{""}</span>
-                  ))}
-                  </AnimatePresence>
-                  ))}
-             </div>
+        <AnimatePresence>
+        {text.map((el, i) => (
+          <motion.span
+          initial={{ opacity: isHoveringProjects? 1:0 }}
+          animate={{ opacity: isHoveringProjects? 0:1 }}
+          transition={{
+            duration: 0.25,
+            delay: i / 40,
+          }}
+          key= {i} >
+            {el}{""}
+          </motion.span>
+        ))}
+        </AnimatePresence>
+        </div>
 
       <AnimatePresence>
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
