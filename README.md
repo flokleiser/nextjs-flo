@@ -3,9 +3,7 @@
 
 ## Currently working on:
 
-- [ ] Framer Motion --> text typing animated=
-
-- [ ] Title text animation -> "unroll" when hovering projects, reroll when not hovering anymore
+- [ ] Portfolio hover --> make title bigger and move title
 
 - [x] Make "Education/Experience" and "Skills" collapsable?
     - [x] framer motion for smooth animation?
