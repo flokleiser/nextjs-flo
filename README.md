@@ -5,6 +5,8 @@
 
 - [ ] Image gallery : image swiping animations, exit animation
 
+- [ ] Why are image opening animations so damn laggy
+
 - [ ] Portfolio hover --> make title bigger and move title
 
 - [x] Make "Education/Experience" and "Skills" collapsable?

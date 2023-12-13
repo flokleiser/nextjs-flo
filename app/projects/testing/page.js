@@ -47,7 +47,7 @@ export default function test() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-      setShouldAnimateOut(false);
+      setShouldAnimateOut("none");
     }
   };
 
@@ -59,7 +59,7 @@ export default function test() {
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
-      setShouldAnimateOut("left");
+      // setShouldAnimateOut("left");
     }
   };
 
@@ -72,7 +72,7 @@ export default function test() {
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
-      setShouldAnimateOut("right");
+      // setShouldAnimateOut("right");
     }
   };
 
@@ -85,7 +85,7 @@ useEffect(() => {
     const imageElement = document.querySelector("#overlay img");
     const leftButton = document.querySelector("#leftButton");
     const rightButton = document.querySelector("#rightButton");
-    setShouldAnimateOut(false); 
+    // setShouldAnimateOut(false); 
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
@@ -207,9 +207,9 @@ return () => {
           >
 
           <motion.img
-            // initial={{ scale:0}}
-            // animate={{ scale:1 }}
-            // exit={{ scale:0 }}
+            initial={{ scale:0.5}}
+            animate={{ scale:1 }}
+            exit={{ scale:0.5}}
 
             // initial={{x:-1000}}
             // animate={{x:0}}
@@ -219,11 +219,11 @@ return () => {
             // animate={{ x: 0 }}
             // exit={shouldAnimateOut ? { x: -1000 } : { x: 1000 }}
          
-            initial={shouldAnimateOut === "right" ? { x: 1000 } : shouldAnimateOut === "left" ? { x: -1000 } : { opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={shouldAnimateOut === "right" ? { x: -1000 } : shouldAnimateOut === "left" ? { x: 1000 } : { opacity: 0 }}
+            // initial={shouldAnimateOut === "right" ? { x: 1000 } : shouldAnimateOut === "left" ? { x: -1000 } : shouldAnimateOut === "none" ? { opacity: 0 } : { x: 0 }}
+            // animate={{ x: 0, opacity: 1 }}
+            // exit={shouldAnimateOut === "right" ? { x: -1000 } : shouldAnimateOut === "left" ? { x: 1000 } : { opacity: 0 }}
             transition={{ duration: 0.3}}
-            key={selectedImage} 
+            // key={selectedImage} 
             src={selectedImage}
             alt=""
             className="max-w-4/5 max-h-4/5"
