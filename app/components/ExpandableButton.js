@@ -1,31 +1,50 @@
-'use client'
-import React from 'react';
+"use client";
+import React from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { useState } from "react";
-import styles from 'app/page.module.css'
-import {AnimatePresence, motion} from "framer-motion";
+import { useState,} from "react";
+import styles from "app/page.module.css";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 export default function ExpandableButton({ children }) {
-    const [isVisible, setVisible] = useState(false);
-   
-    const handleToggleClick = () => {
-        setVisible(!isVisible);
-        };
+  const [isExpanded, setExpanded] = useCycle(false, true);
+
+  const childrenVariants = {
+    open: {opacity: 1, 
+      // width:"100%"
+      width:"auto"
+    },
+    closed: { opacity:0, width:"0%"}
+  };
 
   return (
     <div>
-      <button className={styles.buttonNew} 
-      onClick={handleToggleClick}>
-        {isVisible ? <IoIosArrowDown style={{filter:'invert(100%)', fontSize: '1.5rem' }}/> : <IoIosArrowUp style={{filter:'invert(100%)', fontSize: '1.5rem' }} />}
+      <button
+        className={styles.buttonNew}
+        // onClick={() => setExpanded((isExpanded) => !isExpanded)}>
+        onClick={setExpanded}>
+         {isExpanded ? 
+          <IoIosArrowDown style={{ fontSize: "1.5rem" }} />
+         : 
+          <IoIosArrowUp style={{ fontSize: "1.5rem" }} />
+        }
       </button>
 
-      {isVisible && (
-        <AnimatePresence>
-        <motion.div>
-      {children}
+      <AnimatePresence>
+        {isExpanded && (
+      <motion.div 
+      // className={styles.linkContainer}
+      initial="closed"
+      animate="open"
+      exit="closed"
+      variants={childrenVariants}
+      >
+        <motion.div 
+        animate={{}}>
+          {children}
         </motion.div>
+      </motion.div>
+        )}
         </AnimatePresence>
-      )}
     </div>
   );
-};
+}

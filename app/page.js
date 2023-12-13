@@ -199,7 +199,7 @@ export default function Home() {
         <h2 className={styles.subtitleHomepage}>
           <Link
             className="link-hover"
-            href="https://drive.google.com/file/d/1ie6MWhrbnUPSAtZAVg1rsde08PLT4qqe/view"
+            href="https://drive.google.com/file/d/1Np6IwGFmij4aCnuPW_C_E2SXuyrAt6nV/view?usp=sharing"
             target="_blank"
           >
             <CiImageOn />

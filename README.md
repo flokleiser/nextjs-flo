@@ -2,15 +2,17 @@
 
 
 ## Currently working on:
+
+- [ ] Framer Motion --> text typing animated=
+
 - [ ] Make "Education/Experience" and "Skills" collapsable?
     - [ ] framer motion for smooth animation?
     - [ ] actual button on same line as title
-    - [ ] 
+    - [ ] page transitions
 
 ## TO FIX:
 - [ ] CAD picture better resolution
 - [ ] Look into error messages that i get :nervous:
-
 
 ## Ideas for when bored:
 - [ ] Add 404 page

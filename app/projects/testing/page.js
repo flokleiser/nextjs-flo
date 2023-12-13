@@ -20,8 +20,6 @@ import {
 import Image from "next/image";
 
 export default function test() {
-  
-
   useEffect(() => {
     document.title = "test";
   }, []);
@@ -73,66 +71,89 @@ export default function test() {
       <h1 className={styles.title}>Testing the button</h1>
 
       <div className={styles.linkContainer}>
-      <div style={{ padding: "1rem" }}></div>
+        <div style={{ padding: "1rem" }}></div>
+
         <div className={styles.subtitledescription}>
-            <div className={styles.subtitledescription}>
-        <h1>Education/Experience</h1>
-            <ExpandableButton>
-
-      <Image
-        src="/svg/timeline4.svg"
-        alt="timeline"
-        width={900}
-        height={24}
-        style={{ margin: 20 }}
-      />
-
-            </ExpandableButton>
-      </div>
+          {/* <div className="flex row"> */}
+          <h1>Education/Experience</h1>
+          <ExpandableButton>
+            <Image
+              src="/svg/timeline4.svg"
+              alt="timeline"
+              width={900}
+              height={24}
+              style={{ margin: 20 }}
+            />
+          </ExpandableButton>
+          {/* </div> */}
         </div>
 
-      <div style={{ padding: "1rem" }}></div>
-
+        <div style={{ padding: "1rem" }}></div>
       </div>
 
       <div style={{ padding: "1rem" }}></div>
-    
-      <div className={styles.linkContainer}>
-      <div style={{ padding: "1rem" }}></div>
-        <div className={styles.subtitledescription}>
-            <div className={styles.subtitledescription}>
+
+      <div className={styles.subtitledescription}>
         <h1>Skills</h1>
-            <ExpandableButton>
-
-            <div style={{ padding: "1rem" }}></div>
-            <div className="flex flex-wrap justify-center gap-2">
-        <SiAdobeillustrator size={60} />
-        <SiAdobephotoshop size={60} />
-        <SiAdobeindesign size={60} />
-        <SiAdobepremierepro size={60} />
-        <SiAdobeaftereffects size={60} />
-        <SiVisualstudiocode size={60} />
-        <SiBlender size={60} />
-        <SiUnity size={60} />
-        <Image
-          src="/svg/logic.svg"
-          width={60}
-          height={24}
-          style={{ filter: "invert(1)" }}
-        />
-      </div>
-      <div style={{ padding: "1rem" }}></div>
-
-            </ExpandableButton>
-      </div>
-        </div>
-        
-      <div style={{ padding: "1rem" }}></div>
-
+        <ExpandableButton>
+          <div style={{ padding: "1rem" }}></div>
+          <div className="flex flex-wrap justify-center gap-2">
+            <SiAdobeillustrator size={60} />
+            <SiAdobephotoshop size={60} />
+            <SiAdobeindesign size={60} />
+            <SiAdobepremierepro size={60} />
+            <SiAdobeaftereffects size={60} />
+            <SiVisualstudiocode size={60} />
+            <SiBlender size={60} />
+            <SiUnity size={60} />
+            <Image
+              src="/svg/logic.svg"
+              width={60}
+              height={24}
+              style={{ filter: "invert(1)" }}
+            />
+          </div>
+          <div style={{ padding: "1rem" }}></div>
+        </ExpandableButton>
       </div>
 
+      {/* <div className={styles.grid}
+      >
+      
+        <motion.a
+            className={styles.card}
+            href = '/projects/sketches'
+            style={{ 
+                    backgroundImage: 'url("/images/cards/sketch1.png")',
+                    backgroundSize: '102%',
+                    backgroundPosition: 'center',
+                  whileTap:"scale: 0.9"
+                  }}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Sketches
+            </h2>
+            <p>Sketchbook</p>
+            </motion.a> 
+            
+            <a
+            href = '/projects/creative-coding'
+            className={styles.card}
+            // style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
+            style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.png")' ,
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Creative Coding
+            </h2>
+            <p>Generative Art, p5js</p>
+            </a>
+
+</div> */}
       <div style={{ padding: "2rem" }}></div>
-
-      </main>
+    </main>
   );
 }
