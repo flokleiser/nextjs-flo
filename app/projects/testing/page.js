@@ -24,6 +24,8 @@ export default function test() {
     document.title = "test";
   }, []);
 
+  const text = "Testing the button".split("");
+
   return (
     <main className={styles.main}>
       <div
@@ -68,7 +70,21 @@ export default function test() {
         </h1>
       </div>
 
-      <h1 className={styles.title}>Testing the button</h1>
+      <div className={styles.title}>
+        {text.map((el, i) => (
+          <motion.span
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            opacity: { duration: 0.25 },
+            duration: 0.25,
+            delay: i / 10,
+          }}
+          key= {i} >
+            {el}{""}
+          </motion.span>
+        ))} 
+        </div>
 
       <div className={styles.linkContainer}>
         <div style={{ padding: "1rem" }}></div>
