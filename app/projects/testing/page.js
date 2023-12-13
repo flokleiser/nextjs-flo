@@ -69,6 +69,16 @@ export default function test() {
           <Link href="/">Home </Link>{" "}
         </h1>
       </div>
+      <div className={styles.backbutton} style={{right:"6rem"}}>
+        <h1>
+          {" "}
+          <Link href="/projects/testing/testing2">Testing 2 </Link>{" "}
+        </h1>
+      </div>
+      
+      <div className={styles.title}>
+        <h1> Testing the button </h1>
+      </div>
 
       <div className={styles.title}>
         {text.map((el, i) => (
@@ -76,8 +86,7 @@ export default function test() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            opacity: { duration: 0.25 },
-            duration: 0.25,
+            // duration: 0.25,
             delay: i / 10,
           }}
           key= {i} >

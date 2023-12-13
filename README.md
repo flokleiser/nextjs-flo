@@ -5,14 +5,15 @@
 
 - [ ] Framer Motion --> text typing animated=
 
-- [ ] Make "Education/Experience" and "Skills" collapsable?
-    - [ ] framer motion for smooth animation?
-    - [ ] actual button on same line as title
+- [ ] Title text animation -> "unroll" when hovering projects, reroll when not hovering anymore
+
+- [x] Make "Education/Experience" and "Skills" collapsable?
+    - [x] framer motion for smooth animation?
+    - [ ] more smootherer animation
     - [ ] page transitions
 
 ## TO FIX:
 - [ ] CAD picture better resolution
-- [ ] Look into error messages that i get :nervous:
 
 ## Ideas for when bored:
 - [ ] Add 404 page

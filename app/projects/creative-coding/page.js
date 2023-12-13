@@ -185,7 +185,7 @@ export default function creativeCoding() {
 
       <div className={styles.subtitledescription}>
         <p>
-          An online tool for creating generative art using lines, rotations,
+          An online tool for creating art using lines, rotations,
           movement and colors. Made using p5js, the JavaScript version of the
           "Processing" library.
         </p>
