@@ -122,7 +122,7 @@ export default function Home() {
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
           <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
             <Image
-              src="/images/homepage/portfolio homepage2.png"
+              src="/images/homepage/portfolio homepage3.png"
               width={1100}
               height={1000}
             />

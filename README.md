@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Look into "key" elements --> maybe it will make website faster?
+
 - [ ] Animation gifs --> not weird stretching
 
 - [ ] Image gallery : image swiping animations, exit animation
