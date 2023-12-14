@@ -103,18 +103,32 @@ export default function Home() {
 
       <div className={styles.titleHomepage}>
         <AnimatePresence>
+          <motion.span
+          initial={{ x:  isHoveringPortfolio ? -1000 : 0}}
+          animate={{ x: isHoveringPortfolio ? 0 : 1000}}>
+
+        
         {text.map((el, i) => (
           <motion.span
-          initial={{ opacity: isHoveringProjects? 1:0}}
-          animate={{ opacity: isHoveringProjects? 0:1}}
+          initial={{ 
+            opacity: isHoveringProjects? 1:1,
+            // x:  isHoveringPortfolio ? 1000 : 1000
+            x: 1000
+          }}
+          animate={{ 
+            opacity: isHoveringProjects? 0:1,
+            // x: isHoveringPortfolio ? 100 : 0,
+            x:0
+          }}
           transition={{
             duration: 0.25,
             delay:  i / 40
           }}
-          key= {i} >
+          key={i} >
             {el}{""}
-          </motion.span>
-        ))}
+            </motion.span>
+            ))}
+            </motion.span>
         </AnimatePresence>
         </div>
 
@@ -206,15 +220,17 @@ export default function Home() {
         style={{ zIndex: 60 }}
       >
         <div className={styles.subtitleHomepage}>
+           <motion.span
+           initial={{ opacity: isHoveringPortfolio ? 1:1}}
+           animate={{ opacity: isHoveringPortfolio ? 0:1}} >
             <CiGrid32 />
-             {/* Projects */}
+            </motion.span>
              {projectstext.map((el, i) => (
                  <motion.span
-                 initial={{ opacity: isHoveringPortfolio ? 1:0 }}
+                 initial={{ opacity: isHoveringPortfolio ? 1:1 }}
                  animate={{ opacity: isHoveringPortfolio ? 0:1 }}
           transition={{
               duration: 0.25,
-              // delay: i / 30,
             }}
           key={i} >
             {el}
@@ -233,10 +249,15 @@ export default function Home() {
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
         <div className={styles.subtitleHomepage}>
+          <motion.span 
+          initial={{ opacity: isHoveringProjects ? 1:1 }}
+          animate={{ opacity: isHoveringProjects ? 0:1 }}
+          >
             <CiImageOn />
+            </motion.span>
             {portfoliotext.map((el, i) => (
               <motion.span
-              initial={{ opacity: isHoveringProjects ? 1:0 }}
+              initial={{ opacity: isHoveringProjects ? 1:1 }}
               animate={{ opacity: isHoveringProjects ? 0:1 }}
               transition={{
                 duration: 0.25,

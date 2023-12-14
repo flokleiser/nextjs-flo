@@ -10,11 +10,12 @@ import {
 } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
+//   const [hoveringPortfolioCycle, setHoveringPortfolioCycle] = useCycle(false, true);
 
   const [animationClass, setAnimationClass] = useState("");
   const [animationClass2, setAnimationClass2] = useState("");
@@ -48,6 +49,13 @@ export default function Home() {
   }, []);
 
   const text= "Florian Kleiser".split("");
+  const projectstext= "Projects".split("");
+  const portfoliotext= "Portfolio".split('');
+
+  const titleVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  }
 
   return (
     <main className={styles.main}>
@@ -97,13 +105,13 @@ export default function Home() {
         <AnimatePresence>
         {text.map((el, i) => (
           <motion.span
-          initial={{ opacity: isHoveringProjects? 1:0 }}
-          animate={{ opacity: isHoveringProjects? 0:1 }}
+          initial={{ opacity: isHoveringProjects? 1:1}}
+          animate={{ opacity: isHoveringProjects? 0:1}}
           transition={{
             duration: 0.25,
-            delay: i / 40,
+            delay:  i / 40
           }}
-          key= {i} >
+          key={i} >
             {el}{""}
           </motion.span>
         ))}
@@ -191,17 +199,32 @@ export default function Home() {
 
       <div
         className={styles.buttonGeneralHomepageProjects}
-        onMouseOver={handleHoverProjects}
+
+        onMouseOver={() => {handleHoverProjects()}}
         onMouseMove={() => setIsHoveringProjects(true)}
         onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
       >
-        <h2 className={styles.subtitleHomepage}>
-          <Link className="link-hover" href="/projects">
-            {" "}
-            <CiGrid32 /> Projects
+        <div className={styles.subtitleHomepage}>
+           <motion.span
+           initial={{ opacity: isHoveringPortfolio ? 1:1 }}
+           animate={{ opacity: isHoveringPortfolio ? 0:1 }} >
+            <CiGrid32 />
+            </motion.span>
+             {projectstext.map((el, i) => (
+                 <motion.span
+                 initial={{ opacity: isHoveringPortfolio ? 1:1 }}
+                 animate={{ opacity: isHoveringPortfolio ? 0:1 }}
+          transition={{
+              duration: 0.25,
+            }}
+          key={i} >
+            {el}
+          </motion.span>
+         ))}   
+            <Link className="link-hover" href="/projects">
           </Link>
-        </h2>
+        </div>
       </div>
 
       <div
@@ -211,16 +234,33 @@ export default function Home() {
         onMouseMove={() => setIsHoveringPortfolio(true)}
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
-        <h2 className={styles.subtitleHomepage}>
-          <Link
-            className="link-hover"
-            href="https://drive.google.com/file/d/1Np6IwGFmij4aCnuPW_C_E2SXuyrAt6nV/view?usp=sharing"
-            target="_blank"
+        <div className={styles.subtitleHomepage}>
+          <motion.span 
+          initial={{ opacity: isHoveringProjects ? 1:1 }}
+          animate={{ opacity: isHoveringProjects ? 0:1 }}
           >
             <CiImageOn />
-            Portfolio
+            </motion.span>
+            {portfoliotext.map((el, i) => (
+              <motion.span
+              initial={{ opacity: isHoveringProjects ? 1:1 }}
+              animate={{ opacity: isHoveringProjects ? 0:1 }}
+              transition={{
+                duration: 0.25,
+                delay: i / 30
+              }}
+              key={i} >
+            {el}
+          </motion.span>
+        ))}  
+            <Link
+              className="link-hover"
+              href="https://drive.google.com/file/d/1Np6IwGFmij4aCnuPW_C_E2SXuyrAt6nV/view?usp=sharing"
+              target="_blank"
+            >
           </Link>
-        </h2>
+        </div>
+
       </div>
 
       {/* Projects hover */}

@@ -3,7 +3,7 @@
 
 ## Currently working on:
 
-- [ ] Homepage --> make portfolio dissapear on hover projects, make projects dissapear on hover portfolio
+- [ ] Animation gifs --> not weird stretching
 
 - [ ] Image gallery : image swiping animations, exit animation
 

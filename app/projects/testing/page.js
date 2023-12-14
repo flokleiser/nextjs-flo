@@ -8,25 +8,30 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { PiXCircle } from "react-icons/pi"; 
 
+const data = [
+  {
+    image: '/images/sketches/sketch test scan website2.png', id: 0
+  },
+  {
+  image: '/images/sketches/sketch test website.png', id: 1
+  },
+  {
+  image: '/images/sketches/sketch test scan website3.png', id: 2
+  },
+  {
+  image: '/images/sketches/sketch test scan website4.png', id: 3
+  },
+  {
+    image: '/images/sketches/sketch test scan website5.png', id: 3
+    },
+];
 export default function test() {
   useEffect(() => {
     document.title = "test";
   }, []);
 
-  const data = [
-    {
-      image: '/images/sketches/sketch test scan website2.png', id: 0
-    },
-    {
-    image: '/images/sketches/sketch test website.png', id: 1
-    },
-    {
-    image: '/images/sketches/sketch test scan website3.png', id: 2
-    },
-    {
-    image: '/images/sketches/sketch test scan website4.png', id: 3
-    },
-  ];
+  
+
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
