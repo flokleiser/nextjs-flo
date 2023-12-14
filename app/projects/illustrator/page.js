@@ -207,8 +207,12 @@ return () => {
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
         }}
           >
-          <img
+             <motion.img
             src={selectedImage}
+            initial={{scale:0.5}}
+            animate={{scale:1}}
+            exit={{scale:0.5}}
+            transition={{duration:0.3}}
             alt=""
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990 }}
