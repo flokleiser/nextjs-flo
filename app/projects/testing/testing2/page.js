@@ -105,11 +105,11 @@ export default function Home() {
         <AnimatePresence>
         {text.map((el, i) => (
           <motion.span
-          initial={{ opacity: isHoveringProjects? 1:0 }}
-          animate={{ opacity: isHoveringProjects? 0:1 }}
+          initial={{ opacity: isHoveringProjects? 1:0}}
+          animate={{ opacity: isHoveringProjects? 0:1}}
           transition={{
             duration: 0.25,
-            delay: i / 40,
+            delay:  i / 40
           }}
           key= {i} >
             {el}{""}
@@ -201,26 +201,25 @@ export default function Home() {
         className={styles.buttonGeneralHomepageProjects}
 
         onMouseOver={() => {handleHoverProjects()}}
-            //  setHoveringPortfolioCycle()}}
         onMouseMove={() => setIsHoveringProjects(true)}
         onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
       >
         <div className={styles.subtitleHomepage}>
             <CiGrid32 />
-             Projects
-             {/* {projectstext.map((el1, i1) => (
+             {/* Projects */}
+             {projectstext.map((el, i) => (
                  <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+                 initial={{ opacity: isHoveringPortfolio ? 1:0 }}
+                 animate={{ opacity: isHoveringPortfolio ? 0:1 }}
           transition={{
-              // duration: 0.25,
-              delay: i1 / 50,
+              duration: 0.25,
+              // delay: i / 30,
             }}
-          key={i1} >
-            {el1}
+          key={i} >
+            {el}
           </motion.span>
-        ))}   */}
+         ))}   
             <Link className="link-hover" href="/projects">
           </Link>
         </div>
@@ -234,21 +233,19 @@ export default function Home() {
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
         <div className={styles.subtitleHomepage}>
-
             <CiImageOn />
-            Portfolio
-            {/* {portfoliotext.map((el, i) => (
-                <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-              // duration: 0.25,
-              delay: i / 50,
-            }}
-          key={i} >
+            {portfoliotext.map((el, i) => (
+              <motion.span
+              initial={{ opacity: isHoveringProjects ? 1:0 }}
+              animate={{ opacity: isHoveringProjects ? 0:1 }}
+              transition={{
+                duration: 0.25,
+                delay: i / 30
+              }}
+              key={i} >
             {el}
           </motion.span>
-        ))}   */}
+        ))}  
             <Link
               className="link-hover"
               href="https://drive.google.com/file/d/1Np6IwGFmij4aCnuPW_C_E2SXuyrAt6nV/view?usp=sharing"
@@ -256,6 +253,7 @@ export default function Home() {
             >
           </Link>
         </div>
+
       </div>
 
       {/* Projects hover */}

@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Homepage --> make portfolio dissapear on hover projects, make projects dissapear on hover portfolio
+
 - [ ] Image gallery : image swiping animations, exit animation
 
 - [ ] Why are image opening animations so damn laggy
