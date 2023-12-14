@@ -142,6 +142,9 @@ return () => {
 
   const text = "Testing the button".split("");
 
+  const [hovering, setHovering] = useState(false);
+  const handleHover = () => setHovering(!hovering);
+
   return (
     <main className={styles.main}>
       <div
@@ -195,6 +198,58 @@ return () => {
       <div className={styles.title}>
         <h1> Testing the button </h1>
       </div>
+
+      <div style={{ padding: '2rem' }}/>
+            <div className={styles.gridanimation}>
+                <a
+                href='/projects/animations/plasticine'
+                className={styles.cardanimation}
+                style={{ 
+                     backgroundImage: 'url("/images/animations/cards/escape transparent3.png")',
+                    backgroundSize: '102%',
+                    backgroundPosition: 'center'}}
+                rel="noopener noreferrer"
+                >
+                <h2>
+                    Testing Card
+                </h2>
+                <p>testing</p>
+                </a>
+
+                <a
+                href='/projects/animations/plasticine'
+                className={styles.cardanimation}
+                style={{ 
+                    backgroundImage: 'url("/images/animations/gifs/plasticine-gif-half.gif")',
+                    backgroundSize: '102%',
+                    backgroundPosition: 'center'}}
+                rel="noopener noreferrer"  
+                onHover={handleHover}
+                // {whileHover ?  {backgroundImage : 'url("/images/animations/gifs/escape-short4.gif")'} : {backgroundImage : 'url("/images/animations/cards/escape transparent3.png")'}}
+                >
+                <h2>
+                    Plasticine (A)life
+                </h2>
+                <p>Stop Motion</p>
+                </a>
+
+
+                {/* Control card to make sure i dont break shit*/}
+                <a
+                href='/projects/animations/skate'
+                className={styles.cardanimationSkate}               
+                style={{ 
+                backgroundSize: '102%',
+                backgroundPosition: 'center'}}
+                rel="noopener noreferrer"
+                >
+                <h2>
+                    Skate
+                </h2>
+                <p>Rotoscoping, Drawing</p>
+                </a>
+
+                </div>
 
       <AnimatePresence>
               {selectedImage && (

@@ -69,7 +69,7 @@ export default function animations() {
             <div className={styles.gridanimation}>
                 <a
                 href='/projects/animations/plasticine'
-                className={styles.cardanimation}
+                className={styles.cardanimationplasticine}
                 style={{ 
                     // backgroundImage: 'url("/images/animations/cards/plasticine card4.png")',
                     backgroundSize: '102%',

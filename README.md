@@ -5,17 +5,11 @@
 
 - [ ] Look into ways to optimize website
 
-- [ ] Homepage Projects hover --> small background card behind "projects button/link"
-
 - [ ] Look into "key" elements --> maybe it will make website faster?
 
 - [ ] Animation gifs --> not weird stretching
 
 - [ ] Image gallery : image swiping animations, exit animation
-
-- [ ] Why are image opening animations so damn laggy
-
-- [ ] Portfolio hover --> make title bigger and move title
 
 - [x] Make "Education/Experience" and "Skills" collapsable?
     - [x] framer motion for smooth animation?
