@@ -3,6 +3,8 @@
 
 ## Currently working on:
 
+- [ ] Look into ways to optimize website
+
 - [ ] Homepage Projects hover --> small background card behind "projects button/link"
 
 - [ ] Look into "key" elements --> maybe it will make website faster?

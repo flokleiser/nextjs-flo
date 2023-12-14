@@ -205,11 +205,13 @@ export default function Home() {
         onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
       >
+        <Link className="link-hover" href="/projects">
         <div className={styles.subtitleHomepage}>
            <motion.span
            initial={{ opacity: isHoveringPortfolio ? 1:1 }}
            animate={{ opacity: isHoveringPortfolio ? 0:1 }} >
             <CiGrid32 />
+              
             </motion.span>
              {projectstext.map((el, i) => (
                  <motion.span
@@ -218,13 +220,12 @@ export default function Home() {
           transition={{
               duration: 0.25,
             }}
-          key={i} >
+            key={i} >
             {el}
           </motion.span>
          ))}   
-            <Link className="link-hover" href="/projects">
-          </Link>
         </div>
+        </Link>
       </div>
 
       <div
@@ -234,6 +235,11 @@ export default function Home() {
         onMouseMove={() => setIsHoveringPortfolio(true)}
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
+         <Link
+              className="link-hover"
+              href="https://drive.google.com/file/d/1IRlfFEqz_UfcFKjCFb_0BjUDrxBTYy2E/view"
+              target="_blank"
+            >
         <div className={styles.subtitleHomepage}>
           <motion.span 
           initial={{ opacity: isHoveringProjects ? 1:1 }}
@@ -253,13 +259,9 @@ export default function Home() {
             {el}
           </motion.span>
         ))}  
-            <Link
-              className="link-hover"
-              href="https://drive.google.com/file/d/1Np6IwGFmij4aCnuPW_C_E2SXuyrAt6nV/view?usp=sharing"
-              target="_blank"
-            >
-          </Link>
+         
         </div>
+        </Link>
 
       </div>
 
