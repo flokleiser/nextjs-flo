@@ -106,7 +106,8 @@ export default function Home() {
         {text.map((el, i) => (
           <motion.span
           initial={{ opacity: isHoveringProjects? 1:1}}
-          animate={{ opacity: isHoveringProjects? 0:1}}
+          animate={{ opacity: isHoveringProjects? 1:1}}
+          // animate={{ opacity: isHoveringProjects? 0:1}}
           transition={{
             duration: 0.25,
             delay:  i / 40

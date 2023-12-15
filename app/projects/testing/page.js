@@ -52,7 +52,7 @@ export default function test() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-      setShouldAnimateOut("none");
+      // setShouldAnimateOut("none");
     }
   };
 
@@ -140,8 +140,6 @@ return () => {
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
 
-  const text = "Testing the button".split("");
-
   const [isHovering, setHovering] = useState(false);
   // const handleHover = () => setHovering(!hovering);
 
@@ -199,11 +197,11 @@ return () => {
         <h1> Testing the button </h1>
       </div>
 
-      <div style={{ padding: '2rem' }}/>
-            <div className={styles.gridanimation}>
+      {/* <div style={{ padding: '2rem' }}/>
+            <div className={styles.gridanimation}> */}
 
               {/*first test card*/}
-                <a
+                {/* <a
                 href='/projects/animations/plasticine'
                 className={styles.cardanimation}
                 style={{ 
@@ -222,12 +220,10 @@ return () => {
                 href='/projects/animations/plasticine'
                 className={styles.cardanimation}
                 style={{ 
-                    // backgroundImage:  'url("images/animations/cards/plasticine card4.png',
                     backgroundImage: !isHovering ? 'url("images/animations/cards/plasticine card4.png' :  'url("/images/animations/gifs/plasticine-gif-half.gif")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
                 rel="noopener noreferrer"  
-                // whileHover={{ backgroundImage: 'url("/images/animations/gifs/plasticine-gif-half.gif")'}}
                 onHover={() => setHovering(true)}
                 onLeave={() => setHovering(false)}
                 >
@@ -235,11 +231,11 @@ return () => {
                     Plasticine (A)life
                 </h2>
                 <p>Stop Motion</p>
-                </motion.a>
+                </motion.a> */}
 
 
                 {/* Control card to make sure i dont break shit*/}
-                <a
+                {/* <a
                 href='/projects/animations/skate'
                 className={styles.cardanimationSkate}               
                 style={{ 
@@ -251,9 +247,9 @@ return () => {
                     Skate
                 </h2>
                 <p>Rotoscoping, Drawing</p>
-                </a>
+                </a> */}
 
-                </div>
+                {/* </div> */}
 
       <AnimatePresence>
               {selectedImage && (
@@ -271,13 +267,13 @@ return () => {
           >
 
           <motion.img
-            initial={{ scale:0.5}}
-            animate={{ scale:1 }}
-            exit={{ scale:0.5}}
+            // initial={{ scale:0.5}}
+            // animate={{ scale:1 }}
+            // exit={{ scale:0.5}}
 
-            // initial={{x:-1000}}
-            // animate={{x:0}}
-            // exit={{x:1000}}
+            initial={{x:-1000}}
+            animate={{x:0}}
+            exit={{x:1000}}
 
             // initial={shouldAnimateOut ? { x: 1000 } : { x: -1000 }}
             // animate={{ x: 0 }}

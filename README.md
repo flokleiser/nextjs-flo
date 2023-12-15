@@ -4,13 +4,10 @@
 ## Currently working on:
 
 
-- [ ] Animation gifs --> not weird stretching
-    - [ ] Half fixed, hacky workaround by making the animation duration so short it hopefully is not noticeable, still needs some fixing probably
+- [ ] page transitions
 
 
 ## TO FIX:
-
-- [ ] CAD picture better resolution
 
 - [ ] Look into ways to optimize website
 
@@ -21,7 +18,9 @@
 - [x] Make "Education/Experience" and "Skills" collapsable?
     - [x] framer motion for smooth animation?
     - [ ] more smootherer animation
-    - [ ] page transitions
+
+- [ ] Animation gifs --> not weird stretching
+    - [ ] Half fixed, hacky workaround by making the animation duration so short it hopefully is not noticeable, still needs some fixing probably
 
 ## Ideas for when bored:
 - [ ] Add 404 page
@@ -29,7 +28,6 @@
 
 - [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
 - [ ] Animation onSelect (on clicking projects/portfolio)
-- [ ] Page Transitions
 
 ## Checklist before publish:
 - [ ] Fix texts
