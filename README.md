@@ -4,16 +4,11 @@
 ## Currently working on:
 
 
-- [ ] page transitions
-
-
 ## TO FIX:
 
 - [ ] Look into ways to optimize website
-
 - [ ] Look into "key" elements --> maybe it will make website faster?
-
-- [ ] Image gallery : image swiping animations, exit animation
+- [ ] Image gallery : image swiping animations 
 
 - [x] Make "Education/Experience" and "Skills" collapsable?
     - [x] framer motion for smooth animation?
@@ -24,10 +19,12 @@
 
 ## Ideas for when bored:
 - [ ] Add 404 page
+
 - [ ] Look into .sass
 
-- [ ] Homepage cards scrolling up when hovering over portfolio and portfolio card scrolling from below
 - [ ] Animation onSelect (on clicking projects/portfolio)
+
+- [ ] page transitions
 
 ## Checklist before publish:
 - [ ] Fix texts

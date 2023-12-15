@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import { useState, useEffect } from "react";
-import styles from "app/page.module.css";
-import Link from "next/link";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
+'use client'
+import React, {useState, useEffect} from 'react';
+import styles from 'app/page.module.css'
+import Image from 'next/image'
+import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { AnimatePresence, motion} from 'framer-motion';
+
 
 const data = [
   {
@@ -22,16 +22,12 @@ const data = [
   image: '/images/sketches/sketch test scan website4.png', id: 3
   },
   {
-    image: '/images/sketches/sketch test scan website5.png', id: 3
-    },
+  image: '/images/sketches/sketch test scan website5.png', id: 4
+  },
 ];
-export default function test() {
-  useEffect(() => {
-    document.title = "test";
-  }, []);
 
-  
 
+export default function sketches() {
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,7 +48,6 @@ export default function test() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
-      // setShouldAnimateOut("none");
     }
   };
 
@@ -64,7 +59,6 @@ export default function test() {
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
-      // setShouldAnimateOut("left");
     }
   };
 
@@ -77,11 +71,9 @@ export default function test() {
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
-      // setShouldAnimateOut("right");
     }
   };
 
-  const [shouldAnimateOut, setShouldAnimateOut] = useState(false);
 
 
 /* handleoutsideclick*/
@@ -90,7 +82,7 @@ useEffect(() => {
     const imageElement = document.querySelector("#overlay img");
     const leftButton = document.querySelector("#leftButton");
     const rightButton = document.querySelector("#rightButton");
-    // setShouldAnimateOut(false); 
+ 
 
     if (imageElement) {
        const imageRect = imageElement.getBoundingClientRect();
@@ -108,7 +100,6 @@ useEffect(() => {
           !rightButton.contains(event.target)
         ) {
         handleResetClick();
-
         }
       }
     }
@@ -140,13 +131,16 @@ return () => {
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
 
-  const [isHovering, setHovering] = useState(false);
-  // const handleHover = () => setHovering(!hovering);
 
-  return (
-    <main className={styles.main}>
-      <div
-        className="relative 
+
+useEffect(() => {
+  document.title = 'Projects - Sketches';
+}, []);
+
+
+    return (
+        <main className={styles.main}>
+              <div className="relative 
    flex 
    place-items-center 
    before:absolute 
@@ -177,87 +171,32 @@ return () => {
    after:dark:via-[#0141ff] 
    after:dark:opacity-40 
    before:lg:h-[360px] 
-   z-[-1]"
-      ></div>
+   z-[-1]">
+          </div>
 
-      <div className={styles.backbutton}>
-        <h1>
-          {" "}
-          <Link href="/">Home </Link>{" "}
-        </h1>
-      </div>
-      <div className={styles.backbutton} style={{right:"6rem"}}>
-        <h1>
-          {" "}
-          <Link href="/projects/testing/testing2">Testing 2 </Link>{" "}
-        </h1>
-      </div>
+          <div className={styles.backbutton}>
+            <h1> <Link href="/projects">All Projects </Link> </h1>
+            </div>
       
-      <div className={styles.title}>
-        <h1> Testing the button </h1>
-      </div>
+            <h1 className={styles.title}>
+             Sketches
+            </h1>
 
-      {/* <div style={{ padding: '2rem' }}/>
-            <div className={styles.gridanimation}> */}
+            <div className={styles.subtitledescription}>
+            <p>
+            A collection of sketches, designs and artworks ranging from 2018 
+            to 2023.   
+             </p>
+            </div>
 
-              {/*first test card*/}
-                {/* <a
-                href='/projects/animations/plasticine'
-                className={styles.cardanimation}
-                style={{ 
-                    backgroundImage: 'url("/images/animations/cards/escape transparent3.png")',
-                    backgroundSize: '102%',
-                    backgroundPosition: 'center'}}
-                rel="noopener noreferrer"
-                >
-                <h2>
-                    Testing Card
-                </h2>
-                <p>testing</p>
-                </a>
-
-                <motion.a
-                href='/projects/animations/plasticine'
-                className={styles.cardanimation}
-                style={{ 
-                    backgroundImage: !isHovering ? 'url("images/animations/cards/plasticine card4.png' :  'url("/images/animations/gifs/plasticine-gif-half.gif")',
-                    backgroundSize: '102%',
-                    backgroundPosition: 'center'}}
-                rel="noopener noreferrer"  
-                onHover={() => setHovering(true)}
-                onLeave={() => setHovering(false)}
-                >
-                <h2>
-                    Plasticine (A)life
-                </h2>
-                <p>Stop Motion</p>
-                </motion.a> */}
-
-
-                {/* Control card to make sure i dont break shit*/}
-                {/* <a
-                href='/projects/animations/skate'
-                className={styles.cardanimationSkate}               
-                style={{ 
-                backgroundSize: '102%',
-                backgroundPosition: 'center'}}
-                rel="noopener noreferrer"
-                >
-                <h2>
-                    Skate
-                </h2>
-                <p>Rotoscoping, Drawing</p>
-                </a> */}
-
-                {/* </div> */}
-
-      <AnimatePresence>
+         
+            <AnimatePresence>
               {selectedImage && (
                <motion.div
                 id="overlay" 
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50"
-        initial={{ opacity: 0}}
-        animate={{ opacity: 1}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5}}
         style={{
@@ -265,32 +204,15 @@ return () => {
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
         }}
           >
-
           <motion.img
-            // initial={{ scale:0.5}}
-            // animate={{ scale:1 }}
-            // exit={{ scale:0.5}}
-
-            initial={{x:-1000}}
-            animate={{x:0}}
-            exit={{x:1000}}
-
-            // initial={shouldAnimateOut ? { x: 1000 } : { x: -1000 }}
-            // animate={{ x: 0 }}
-            // exit={shouldAnimateOut ? { x: -1000 } : { x: 1000 }}
-         
-            // initial={shouldAnimateOut === "right" ? { x: 1000 } : shouldAnimateOut === "left" ? { x: -1000 } : shouldAnimateOut === "none" ? { opacity: 0 } : { x: 0 }}
-            // animate={{ x: 0, opacity: 1 }}
-            // exit={shouldAnimateOut === "right" ? { x: -1000 } : shouldAnimateOut === "left" ? { x: 1000 } : { opacity: 0 }}
-            transition={{ duration: 0.3}}
-            // key={selectedImage} 
             src={selectedImage}
+            initial={{scale:0.5}}
+            animate={{scale:1}}
+            exit={{scale:0.5}}
+            transition={{duration:0.3}}
             alt=""
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990 }}
-
-        
-
           />
            <button
             className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
@@ -309,6 +231,7 @@ return () => {
               <IoIosArrowBack style={{ fontSize: '2rem' }}/>
             </button>
             </div>
+            {/* <div className="absolute right-5"> */}
             <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="rightButton"
@@ -348,8 +271,9 @@ return () => {
                   </div>
                 </div>
               </div>
-
-     
-    </main>
-  );
+              
+        </main>
+    )
 }
+
+
