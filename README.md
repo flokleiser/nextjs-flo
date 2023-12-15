@@ -3,11 +3,17 @@
 
 ## Currently working on:
 
+
+- [ ] Animation gifs --> not weird stretching
+
+
+## TO FIX:
+
+- [ ] CAD picture better resolution
+
 - [ ] Look into ways to optimize website
 
 - [ ] Look into "key" elements --> maybe it will make website faster?
-
-- [ ] Animation gifs --> not weird stretching
 
 - [ ] Image gallery : image swiping animations, exit animation
 
@@ -15,9 +21,6 @@
     - [x] framer motion for smooth animation?
     - [ ] more smootherer animation
     - [ ] page transitions
-
-## TO FIX:
-- [ ] CAD picture better resolution
 
 ## Ideas for when bored:
 - [ ] Add 404 page

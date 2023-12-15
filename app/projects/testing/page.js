@@ -142,8 +142,8 @@ return () => {
 
   const text = "Testing the button".split("");
 
-  const [hovering, setHovering] = useState(false);
-  const handleHover = () => setHovering(!hovering);
+  const [isHovering, setHovering] = useState(false);
+  // const handleHover = () => setHovering(!hovering);
 
   return (
     <main className={styles.main}>
@@ -201,11 +201,13 @@ return () => {
 
       <div style={{ padding: '2rem' }}/>
             <div className={styles.gridanimation}>
+
+              {/*first test card*/}
                 <a
                 href='/projects/animations/plasticine'
                 className={styles.cardanimation}
                 style={{ 
-                     backgroundImage: 'url("/images/animations/cards/escape transparent3.png")',
+                    backgroundImage: 'url("/images/animations/cards/escape transparent3.png")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
                 rel="noopener noreferrer"
@@ -216,22 +218,24 @@ return () => {
                 <p>testing</p>
                 </a>
 
-                <a
+                <motion.a
                 href='/projects/animations/plasticine'
                 className={styles.cardanimation}
                 style={{ 
-                    backgroundImage: 'url("/images/animations/gifs/plasticine-gif-half.gif")',
+                    // backgroundImage:  'url("images/animations/cards/plasticine card4.png',
+                    backgroundImage: !isHovering ? 'url("images/animations/cards/plasticine card4.png' :  'url("/images/animations/gifs/plasticine-gif-half.gif")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
                 rel="noopener noreferrer"  
-                onHover={handleHover}
-                // {whileHover ?  {backgroundImage : 'url("/images/animations/gifs/escape-short4.gif")'} : {backgroundImage : 'url("/images/animations/cards/escape transparent3.png")'}}
+                // whileHover={{ backgroundImage: 'url("/images/animations/gifs/plasticine-gif-half.gif")'}}
+                onHover={() => setHovering(true)}
+                onLeave={() => setHovering(false)}
                 >
                 <h2>
                     Plasticine (A)life
                 </h2>
                 <p>Stop Motion</p>
-                </a>
+                </motion.a>
 
 
                 {/* Control card to make sure i dont break shit*/}
@@ -350,7 +354,6 @@ return () => {
               </div>
 
      
-      <div style={{ padding: "2rem" }}></div>
     </main>
   );
 }
