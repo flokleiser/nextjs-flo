@@ -112,7 +112,7 @@ export default function links() {
             <div className={styles.subtitledescription}>
               <p>
                 <a
-                  href="https://drive.google.com/file/d/1IRlfFEqz_UfcFKjCFb_0BjUDrxBTYy2E/view"
+                  href="https://drive.google.com/file/d/1G_JRNsiLIcLivX81ja_k4CBO7dyyWM_k/view"
                   target="_blank"
                 >
                   <CiImageOn />
@@ -184,10 +184,10 @@ export default function links() {
           style={{
             backgroundImage: "url(/images/flo1.png)", 
             opacity: 0.5, 
-            ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio2.png)" } : null),
+            ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio3.png)" } : null),
             ...(isHoveringGithub? { backgroundImage: "url(/images/links/github2.png)" } : null),
             ...(isHoveringGoogleDrive? { backgroundImage: "url(/images/links/googledrive2.png)" } : null),
-            ...(isHoveringCV? { backgroundImage: "url(/images/links/cv2.png)" } : null),
+            ...(isHoveringCV? { backgroundImage: "url(/images/links/cv3.png)" } : null),
           }}
           >
         </div>

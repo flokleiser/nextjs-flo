@@ -5,6 +5,7 @@
 
 
 - [ ] Animation gifs --> not weird stretching
+    - [ ] Half fixed, hacky workaround by making the animation duration so short it hopefully is not noticeable, still needs some fixing probably
 
 
 ## TO FIX:
