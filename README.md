@@ -3,6 +3,10 @@
 
 ## Currently working on:
 
+-same line --> check subtitledescription a
+
+- [ ] 404 page --> link back to home, projects and links?
+
 
 ## TO FIX:
 
@@ -18,12 +22,9 @@
     - [ ] Half fixed, hacky workaround by making the animation duration so short it hopefully is not noticeable, still needs some fixing probably
 
 ## Ideas for when bored:
-- [ ] Add 404 page
-
+- [x] Add 404 page
 - [ ] Look into .sass
-
 - [ ] Animation onSelect (on clicking projects/portfolio)
-
 - [ ] page transitions
 
 ## Checklist before publish:
