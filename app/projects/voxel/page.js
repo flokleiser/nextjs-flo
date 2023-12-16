@@ -241,7 +241,7 @@ return () => {
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) =>  (
-                  <article
+                  <article key="v1"
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative  rounded-2xl">
@@ -269,7 +269,7 @@ return () => {
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data2.map((x) =>  (
-                  <article
+                  <article key="v2"
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative rounded-2xl">

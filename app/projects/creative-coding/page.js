@@ -306,7 +306,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data.map((x) => (
-              <article className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+              <article key="cc" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
                 <div className="relative rounded-2xl">
                   <Image
                     width={400}
@@ -330,7 +330,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data2.map((x) => (
-              <article className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+              <article key="cc2" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
                 <div className="relative rounded-2xl">
                   <Image
                     width={400}
@@ -354,7 +354,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data3.map((x) => (
-              <article className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+              <article key="cc3" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
                 <div className="relative  rounded-2xl">
                   <Image
                     width={400}
