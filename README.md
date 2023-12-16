@@ -1,10 +1,9 @@
 # To-Do/Ideas List:
 
 
-## Currently working on:
+## Currently working on: 
 
-- [ ] This:         Warning: Each child in a list should have a unique "key" prop.
-                    Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
+- [ ] 
 
 ## TO FIX:
 
@@ -13,10 +12,9 @@
 
 - [x] Make "Education/Experience" and "Skills" collapsable?
     - [x] framer motion for smooth animation?
-    - [ ] more smootherer animation
 
 - [ ] Animation gifs --> not weird stretching
-    - [ ] Half fixed, hacky workaround by making the animation duration so short it hopefully is not noticeable, still needs some fixing probably
+    - [x] Half fixed, hacky workaround by making the animation duration so short it hopefully is not noticeable, still needs some fixing probably
 
 ## Ideas for when bored:
 
