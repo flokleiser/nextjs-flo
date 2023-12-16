@@ -55,7 +55,7 @@ export default function animations() {
             </h1>
             
             {/* <div className={styles.linkContainerAnimations}> */}
-            <div style={{ padding: '1rem' }}> </div>
+            {/* <div style={{ padding: '1rem' }}> </div> */}
             <div className={styles.subtitledescription}>
             <p>
             A collection of various projects ranging from 2019 to 2023. Experiments with VFX, stop motion, 

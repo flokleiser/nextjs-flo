@@ -871,7 +871,7 @@ transition: all 0.5s ease-in-out;
     /* background-size:140%;
     background-position: center; */
     
-    background-image: url("/images/animations/gifs/plasticine-gif-half.gif"); 
+    background-image: url("/images/animations/gifs/plasticine-gif-new.gif"); 
   }
   .cardanimation:hover span {
     transform: translateX(4px);
@@ -881,7 +881,7 @@ transition: all 0.5s ease-in-out;
   .cardanimationSkate:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
-    background-image: url("/images/animations/gifs/skatenew7.gif"); 
+    background-image: url("/images/animations/gifs/skatenew8.gif"); 
   }
   .cardanimationSkate:hover h2,
   .cardanimationSkate:hover p {
