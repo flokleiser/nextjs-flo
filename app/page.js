@@ -238,7 +238,7 @@ export default function Home() {
       >
          <Link
               className="link-hover"
-              href="https://drive.google.com/file/d/1kKeHKBDgWBfSznIK7fKuiCeOY_TfFxTH/view"
+              href="https://drive.google.com/file/d/18BgStJfH1kMUhbdCVxVErcoIbp_N_Drc/view"
               target="_blank"
             >
         <div className={styles.subtitleHomepage}>
