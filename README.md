@@ -3,7 +3,8 @@
 
 ## Currently working on:
 
--same line --> check subtitledescription a
+- [ ] This:         Warning: Each child in a list should have a unique "key" prop.
+                    Check the top-level render call using <div>. See https://reactjs.org/link/warning-keys for more information.
 
 - [ ] 404 page --> link back to home, projects and links?
 
@@ -11,7 +12,6 @@
 ## TO FIX:
 
 - [ ] Look into ways to optimize website
-- [ ] Look into "key" elements --> maybe it will make website faster?
 - [ ] Image gallery : image swiping animations 
 
 - [x] Make "Education/Experience" and "Skills" collapsable?
