@@ -1,5 +1,6 @@
 import styles from 'app/page.module.css'
 import Image from 'next/image'
+import Link from 'next/link'
 export default function notfound () {
     return( 
         <main className={styles.main}>
@@ -48,6 +49,15 @@ export default function notfound () {
                 <div className={styles.subtitleHomepage} style={{marginLeft:'4rem'}}>
                     page not found
                 </div>
+            </div>
+
+            <div className={styles.buttonLinksPage} style={{paddingLeft:'2rem',paddingRight:'2rem',paddingBottom:'0.5rem',paddingTop:'0.5rem'}}>
+            <div className={styles.buttonGeneralHomepage}>
+            <div className={styles.subtitleHomepage}>
+                <Link href="/"> Home
+                </Link>
+            </div>
+            </div>
             </div>
 
 
