@@ -2,6 +2,10 @@
 
 ## Currently working on: 
 
+- [ ] Loading.js file
+
+- [ ] Page transition/animation
+
 ## TO FIX:
 
 - [ ] Look into ways to optimize website

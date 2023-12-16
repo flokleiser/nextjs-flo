@@ -3,7 +3,9 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Assistant } from 'next/font/google';  
 import Navbar from './components/Navbar';
+import { Suspense } from 'react';
 // import { useState } from 'react';
+import Loading from './loading.js'
 
 // const inter = Inter({ subsets: ['latin'] })
 const assistant = Assistant({ subsets: ['latin'] })
@@ -17,7 +19,9 @@ export default function RootLayout({ children }) {
       <head />
       <body className={assistant.className}>
       <Navbar />
+      <Suspense fallback={<Loading />}>
       {children}
+      </Suspense>
       </body>
     </html>
   )
