@@ -2,6 +2,10 @@
 
 ## Currently working on: 
 
+- [ ] Keep page from displaying until fully loaded (?)
+
+- [ ] Blur image placeholder until fully loaded maybe
+
 - [ ] Loading.js file
 
 - [ ] Page transition/animation
