@@ -185,8 +185,9 @@ export default function creativeCoding() {
 
       <div className={styles.subtitledescription}>
         <p>
-          An online tool for creating art using lines, rotations,
-          movement and colors. Made using p5js, the JavaScript version of the
+        A creative tool for interactively creating visual artworks by
+manipulating lines, rotations and movement using mathematical
+functions or directly with the mouse movement. Made using p5js, the JavaScript version of the
           "Processing" library.
         </p>
       </div>

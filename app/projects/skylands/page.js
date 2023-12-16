@@ -179,7 +179,14 @@ return () => {
             
             <div className={styles.subtitledescription}>
             <p>
-             <BsUnity /> VR game for the Meta Quest 2, made in Unity
+            {/* VR game for the Meta Quest 2, made in Unity */}
+          A VR game/experience for the Meta Quest 2 Headset.
+Built in Unity, C# and Blender.
+{/*
+This project was focused on creating an immersive and
+interactive experience, exploring the capabilities and tools
+used to create virtual reality worlds. It features 8 islands
+with a variety of interactive objects to explore. */}
             </p>
             </div>
             <div style={{ margin: '1rem' }}> </div> 

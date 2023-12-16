@@ -58,8 +58,8 @@ export default function animations() {
             {/* <div style={{ padding: '1rem' }}> </div> */}
             <div className={styles.subtitledescription}>
             <p>
-            A collection of various projects ranging from 2019 to 2023. Experiments with VFX, stop motion, 
-            sound design, different art styles and simulated physics. Made mostly in Adobe After Effects.
+            A collection of various animations ranging from 2019 to 2023, including experiments with VFX, stop motion, 
+            sound design, different art styles and simulated physics. Made in Adobe After Effects and Premiere Pro.
              </p>
             </div>
       
