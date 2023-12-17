@@ -22,7 +22,7 @@ const data = [
   image: '/images/sketches/sketch test scan website4.png', id: 3
   },
   {
-  image: '/images/sketches/sketch test scan website5.png', id: 4
+  image: '/images/sketches/sketch test scan website6.png', id: 4
   },
 ];
 
