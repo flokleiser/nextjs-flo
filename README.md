@@ -4,13 +4,11 @@
 
 - [ ] Skylands page: pair images with specific video clips: (boat, scene switches, mirror wave etc)
 
+- [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
+
 - [ ] Keep page from displaying until fully loaded (?)
-
-- [ ] Blur image placeholder until fully loaded maybe
-
 - [ ] Loading.js file
-
-- [ ] Page transition/animation
+- [ ] Blur image placeholder until fully loaded maybe
 
 ## TO FIX:
 

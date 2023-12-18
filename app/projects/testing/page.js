@@ -1,5 +1,5 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
@@ -131,6 +131,16 @@ return () => {
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
 
+const [isLoading, setIsLoading] = useState(false);
+
+const handleClick = (event) => {
+  if (event.target.tagName === 'BUTTON') {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }
+};
 
 
 useEffect(() => {
@@ -271,7 +281,16 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
-      
+
+          <div className={styles.buttonGeneral}>
+            <h1> 
+              <Link href="/"
+              onClick={handleClick}
+              >
+                Home
+              </Link>
+            </h1>
+          </div>
 
         </main>
     )
