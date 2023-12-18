@@ -4,7 +4,9 @@ import styles from 'app/page.module.css'
 export default function Loading(){
     return (
     <main className={styles.main}>
-        <div className={styles.titleHomepage}>
+
+        <div style={{paddingTop:'5rem'}}/>
+        <div className={styles.subtitleHomepage}>
         Loading
         </div>
 

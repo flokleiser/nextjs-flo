@@ -175,7 +175,7 @@ useEffect(() => {
           </div>
 
           <div className={styles.backbutton}>
-            <h1> <Link href="/projects">All Projects </Link> </h1>
+            <h1> <Link href="/">Home</Link> </h1>
             </div>
       
             <h1 className={styles.title}>
@@ -184,8 +184,7 @@ useEffect(() => {
 
             <div className={styles.subtitledescription}>
             <p>
-            A collection of sketches, designs and artworks ranging from 2018 
-            to 2023.   
+              this page is for testing purposes  
              </p>
             </div>
 
@@ -208,7 +207,7 @@ useEffect(() => {
             src={selectedImage}
             initial={{scale:0.5}}
             animate={{scale:1}}
-            exit={{scale:0.5}}
+            exit={{scale:0.45}}
             transition={{duration:0.3}}
             alt=""
             className="max-w-4/5 max-h-4/5"
@@ -272,7 +271,8 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
-              
+      
+
         </main>
     )
 }

@@ -264,7 +264,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
             src={selectedImage}
             initial={{scale:0.5}}
             animate={{scale:1}}
-            exit={{scale:0.5}}
+            exit={{scale:0.45}}
             transition={{duration:0.3}}
               alt=""
               className="max-w-4/5 max-h-4/5"

@@ -2,6 +2,8 @@
 
 ## Currently working on: 
 
+- [ ] Skylands page: pair images with specific video clips: (boat, scene switches, mirror wave etc)
+
 - [ ] Keep page from displaying until fully loaded (?)
 
 - [ ] Blur image placeholder until fully loaded maybe
