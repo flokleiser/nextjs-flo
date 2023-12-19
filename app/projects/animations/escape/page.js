@@ -69,7 +69,7 @@ export default function escape() {
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
         //  src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
-            src="https://www.youtube.com/embed/F1f6YaIqRZI?si=9flICqQyXYAAeEGu">
+            src="https://www.youtube.com/embed/F1f6YaIqRZI?si=9flICqQyXYAAeEGu&rel=0">
           </iframe>
           </div>
           <div style={{ padding: '1rem' }}> </div>
