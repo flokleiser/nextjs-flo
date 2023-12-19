@@ -187,6 +187,11 @@ useEffect(() => {
           <div className={styles.backbutton}>
             <h1> <Link href="/">Home</Link> </h1>
             </div>
+
+
+          <div className={styles.backbutton} style={{marginRight:'4rem'}}>
+            <h1> <Link href="/projects/testing/testing2">Testing 2 </Link> </h1>
+            </div>
       
             <h1 className={styles.title}>
              Testing

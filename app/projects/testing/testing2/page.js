@@ -269,13 +269,13 @@ export default function skylands() {
         </div>
 
       <div className="">
-        <div className="p-1 container mx-auto">
+        <div className="p-3 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data.map((x) => (
               <article
                 key="s1"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
               >
                 <div className="relative rounded-2xl">
                   <Image
@@ -315,13 +315,13 @@ export default function skylands() {
         </div>
 
       <div className="">
-        <div className="p-1 container mx-auto">
+        <div className="p-3 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data2.map((x) => (
               <article
                 key="s2"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
               >
                 <div className="relative  rounded-2xl">
                   <Image
@@ -362,13 +362,13 @@ export default function skylands() {
         </div>
 
         <div className="">
-        <div className="p-1 container mx-auto">
+        <div className="p-3 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {data3.map((x) => (
               <article
                 key="s2"
-                className="pt-3 pl-3 pr-3 pb-0  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+                className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
               >
                 <div className="relative  rounded-2xl">
                   <Image

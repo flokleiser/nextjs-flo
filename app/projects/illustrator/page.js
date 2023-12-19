@@ -179,6 +179,10 @@ return () => {
             <h1 className={styles.title}>
              Illustrator Artworks
             </h1>
+            
+            {/* <div className={styles.linkContainer}>
+        <div style={{ padding: "1rem" }}> </div> */}
+
             <div className={styles.subtitle}>
             <p>
             How To'nt    
@@ -275,8 +279,13 @@ return () => {
                   </div>
                 </div>
               </div>
-             
+              {/* </div> */}
+
+              <div styles={{margin:'2rem'}} />
               
+            {/* <div className={styles.linkContainer}>
+            <div style={{ padding: "1rem" }}> </div> */}
+
             <div className={styles.subtitle}>
             <p>
             Reduce To The Max 
@@ -314,7 +323,7 @@ return () => {
                   </div>
                 </div>
               </div>
-            
+           {/* </div>  */}
            
         </main>
     )
