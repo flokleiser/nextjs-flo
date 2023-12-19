@@ -84,7 +84,7 @@ export default function skate() {
 <div style={{ padding: "1rem" }}> </div> 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI"> 
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"> 
             </iframe>
             </div>
             <div style={{padding:'1rem'}}/>
@@ -109,7 +109,7 @@ export default function skate() {
 <div style={{ padding: "1rem" }}> </div> 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc">
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0">
             </iframe>
             </div>
             <div style={{padding:'1rem'}}/>

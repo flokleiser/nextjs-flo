@@ -86,7 +86,7 @@ export default function music() {
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
-            src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0" >
+            src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0&rel=0" >
             </iframe>
             </div>
             <div style={{ padding: '1rem' }}> </div>
@@ -110,7 +110,7 @@ export default function music() {
 <div style={{ padding: "1rem" }}> </div> 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx" >
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx&rel=0" >
             </iframe>
             </div>
             <div style={{ padding: '1rem' }}> </div>
@@ -134,7 +134,7 @@ export default function music() {
 <div style={{ padding: "1rem" }}> </div> 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5" >
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5&rel=0" >
            </iframe>
            </div>
             <div style={{padding:'1rem'}}/>

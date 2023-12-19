@@ -69,7 +69,7 @@ export default function logo() {
 <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
-          src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt"> 
+          src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt&rel=0"> 
           </iframe>
           </div>
           <div style={{ padding: '1rem' }}> </div>
