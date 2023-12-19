@@ -65,12 +65,16 @@ export default function kontakt() {
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
             </video> */}
          
+         <div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div>
          <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
             src="https://www.youtube.com/embed/VAPNv4HEvw8?si=0Acev4IzeaTSiAZ3"> 
             </iframe>
             </div>
+            <div style={{ padding: '1rem' }}> </div>
+         </div>
 
             <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 

@@ -269,14 +269,14 @@ export default function skylands() {
         </div>
 
         <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
+<div style={{ padding: "1rem" }}> </div>
       <div className='flex align-center'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM"> 
               </iframe>
             </div>
-            <div style={{ padding: "2rem" }}> </div>
+            <div style={{ padding: "1rem" }}> </div>
 </div>
 
       <div className="">
@@ -321,19 +321,19 @@ export default function skylands() {
 
       <div className = {styles.subtitle}>
               <p>
-                Environments
+                Environment
               </p>
         </div>
 
         <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
+<div style={{ padding: "1rem" }}> </div>
       <div className='flex align-center'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
             src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG"> 
               </iframe>
             </div>
-        <div style={{ padding: '2rem' }}> </div>
+        <div style={{ padding: '1rem' }}> </div>
          </div>
 
       <div className="">
@@ -379,19 +379,19 @@ export default function skylands() {
 
       <div className = {styles.subtitle}>
               <p>
-                Boat showcase
+                Boat Showcase
               </p>
         </div>
 
         <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
+<div style={{ padding: "1rem" }}> </div>
     <div className='flex align-center'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
             src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY"> 
               </iframe>
             </div>
-        <div style={{ padding: '2rem' }}> </div>
+        <div style={{ padding: '1rem' }}> </div>
 
  </div>
 

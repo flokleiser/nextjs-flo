@@ -63,6 +63,8 @@ export default function escape() {
 
             <div style={{ padding: '1rem' }}> </div> 
 
+            <div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div>
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
@@ -70,6 +72,8 @@ export default function escape() {
             src="https://www.youtube.com/embed/F1f6YaIqRZI?si=9flICqQyXYAAeEGu">
           </iframe>
           </div>
+          <div style={{ padding: '1rem' }}> </div>
+         </div>
 
           <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 

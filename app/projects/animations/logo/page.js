@@ -64,13 +64,16 @@ export default function logo() {
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}
 
+<div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div>
 <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}
           src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt"> 
           </iframe>
           </div>
-
+          <div style={{ padding: '1rem' }}> </div>
+         </div>
           <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
                 <a href="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/view?usp=sharing" target="_blank"> 

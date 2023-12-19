@@ -986,7 +986,7 @@ transition: all 0.5s ease-in-out;
 
 .iframevideo {
   /* border: 10px solid rgba(var(black), 0.15); */
-  width: 70vw; 
+  width: 75vw; 
   margin: 0 auto;
   aspect-ratio: 16/9;
 }

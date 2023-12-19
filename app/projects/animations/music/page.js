@@ -81,14 +81,17 @@ export default function music() {
             </p>
             </div>
             <div style={{ padding: '1rem' }}> </div> 
-
+            <div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div>
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
             src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0" >
             </iframe>
             </div>
-            <div style={{ padding: '2rem' }}> </div>
+            <div style={{ padding: '1rem' }}> </div>
+            </div>
+            <div style={{padding:'2rem'}} />
 
         <div className = {styles.subtitle}>
               <p>
@@ -102,13 +105,17 @@ export default function music() {
             </p>
             </div>
             <div style={{ padding: '1rem' }}> </div> 
-           
+
+            <div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div> 
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx" >
             </iframe>
             </div>
-            <div style={{ padding: '2rem' }}> </div>
+            <div style={{ padding: '1rem' }}> </div>
+</div>
+            <div style={{ padding: "2rem" }}> </div> 
 
         <div className = {styles.subtitle}>
               <p>
@@ -123,12 +130,17 @@ export default function music() {
             </div>
             <div style={{ padding: '1rem' }}> </div> 
 
+            <div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div> 
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5" >
            </iframe>
            </div>
-
+            <div style={{padding:'1rem'}}/>
+            </div>
+            {/* <div style={{padding:'1rem'}}/> */}
+            
            <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
                 <a href="https://drive.google.com/drive/folders/1hs6amskQ3A8BmUvoEel6KlbXPeIVsO_5?usp=sharing" target="_blank"> 
