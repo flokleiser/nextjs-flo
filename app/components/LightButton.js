@@ -17,7 +17,7 @@ export default function LightButton() {
 
   return (
     <div>
-      <button className="absolute mt-4 ml-4 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+      <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
       style={{ zIndex: 52}}
       
       onClick={handleToggleClick}>

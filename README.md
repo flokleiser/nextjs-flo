@@ -2,14 +2,9 @@
 
 ## Currently working on: 
 
-- [ ] All videos linkContainer card background/border
+- [ ] Add "&rel=0" to all links -> stops video suggestions, but displays "my mix" -> idk hwo to fix
 
 - [ ] Skylands page --> Lightswitch button behind image fullscreen element
-- [ ] Skylands page --> video or image first?
-
-- [ ] All pages with 2 or more "sections" --> card background or not?
-
-- [ ] Skylands page: pair images with specific video clips: (boat, scene switches, mirror wave etc)
 
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 
