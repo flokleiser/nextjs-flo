@@ -2,6 +2,8 @@
 
 ## Currently working on: 
 
+- [ ] All videos linkContainer card background/border
+
 - [ ] Skylands page --> Lightswitch button behind image fullscreen element
 - [ ] Skylands page --> video or image first?
 

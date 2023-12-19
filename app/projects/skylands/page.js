@@ -187,7 +187,7 @@ export default function skylands() {
         </p>
       </div>
 
-        <div style={{padding:'1rem'}} />
+        <div style={{padding:'2rem'}} />
 
           {/* <div style={{ margin: "1rem" }}> </div> */}
 
@@ -268,6 +268,17 @@ export default function skylands() {
               </p>
         </div>
 
+        <div className={styles.linkContainer}>
+<div style={{ padding: "2rem" }}> </div>
+      <div className='flex align-center'> 
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+            src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM"> 
+              </iframe>
+            </div>
+            <div style={{ padding: "2rem" }}> </div>
+</div>
+
       <div className="">
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
@@ -295,7 +306,7 @@ export default function skylands() {
         </div>
       </div>
 
-<div className={styles.linkContainer}>
+{/* <div className={styles.linkContainer}>
 <div style={{ padding: "2rem" }}> </div>
       <div className='flex align-center'> 
             <LightButton />
@@ -304,7 +315,7 @@ export default function skylands() {
               </iframe>
             </div>
             <div style={{ padding: "2rem" }}> </div>
-</div>
+</div> */}
 
             <div style={{ padding: '2rem' }}> </div> 
 
@@ -313,6 +324,17 @@ export default function skylands() {
                 Environments
               </p>
         </div>
+
+        <div className={styles.linkContainer}>
+<div style={{ padding: "2rem" }}> </div>
+      <div className='flex align-center'> 
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+            src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG"> 
+              </iframe>
+            </div>
+        <div style={{ padding: '2rem' }}> </div>
+         </div>
 
       <div className="">
         <div className="p-1 container mx-auto">
@@ -340,7 +362,7 @@ export default function skylands() {
           </div>
         </div>
       </div>
-      <div className={styles.linkContainer}>
+      {/* <div className={styles.linkContainer}>
 <div style={{ padding: "2rem" }}> </div>
       <div className='flex align-center'> 
             <LightButton />
@@ -349,17 +371,29 @@ export default function skylands() {
               </iframe>
             </div>
         <div style={{ padding: '2rem' }}> </div>
-         </div>
+         </div> */}
         {/*<div style={{ padding: '2rem' }}> </div> */}
 
         {/* <div className={styles.linkContainer}> */}
-        <div style={{ padding: "1rem" }}> </div>
+        <div style={{ padding: "2rem" }}> </div>
 
       <div className = {styles.subtitle}>
               <p>
                 Boat showcase
               </p>
         </div>
+
+        <div className={styles.linkContainer}>
+<div style={{ padding: "2rem" }}> </div>
+    <div className='flex align-center'> 
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+            src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY"> 
+              </iframe>
+            </div>
+        <div style={{ padding: '2rem' }}> </div>
+
+ </div>
 
         <div className="">
         <div className="p-1 container mx-auto">
@@ -388,7 +422,7 @@ export default function skylands() {
         </div>
       </div>
 
-      <div className={styles.linkContainer}>
+      {/* <div className={styles.linkContainer}>
 <div style={{ padding: "2rem" }}> </div>
     <div className='flex align-center'> 
             <LightButton />
@@ -398,7 +432,7 @@ export default function skylands() {
             </div>
         <div style={{ padding: '2rem' }}> </div>
 
- </div>
+ </div> */}
 
         {/* <div style={{padding:'1rem'}} /> */}
 
