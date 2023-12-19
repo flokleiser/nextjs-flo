@@ -2,17 +2,14 @@
 
 import React from 'react';
 import { useState } from "react";
-import styles from 'app/page.module.css'
 import {AnimatePresence, motion} from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 
 export default function LightButton() {
     const [isDim, setDim] = useState(false);
-    // let isNewDim = true;
    
     const handleToggleClick = () => {
         setDim(!isDim);
-        // isNewDim = true;
         };
 
   return (

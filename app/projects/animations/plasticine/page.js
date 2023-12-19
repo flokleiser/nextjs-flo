@@ -71,12 +71,12 @@ export default function plasticine() {
             </div>
             </div>
 
-            <div className={styles.linkContainer}>
+            <div className={styles.linkContainer} style={{zIndex:59}}>
 <div style={{ padding: "1rem" }}> </div> 
 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792&rel=0">
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792&rel=0">
             </iframe>
             </div>
             <div style={{padding:'1rem'}}/>

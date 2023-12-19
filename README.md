@@ -2,9 +2,9 @@
 
 ## Currently working on: 
 
-- [ ] Add "&rel=0" to all links -> stops video suggestions, but displays "my mix" -> idk hwo to fix
+- [ ] Light button --> maybe have the card background of iframe videos not dimmed? looks kinda cool
 
-- [ ] Skylands page --> Lightswitch button behind image fullscreen element
+- [ ] Try out framer motion scroll animations (useViewportScroll)
 
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 

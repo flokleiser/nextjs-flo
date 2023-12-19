@@ -69,7 +69,7 @@ export default function kontakt() {
 <div style={{ padding: "1rem" }}> </div>
          <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}} 
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}} 
             src="https://www.youtube.com/embed/VAPNv4HEvw8?si=0Acev4IzeaTSiAZ3&rel=0"> 
             </iframe>
             </div>
