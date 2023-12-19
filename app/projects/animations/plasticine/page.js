@@ -76,7 +76,7 @@ export default function plasticine() {
 
             <div className='flex align-center'>
             <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792">
+            <iframe className={styles.iframevideo} style={{ zIndex: 51, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792&rel=0">
             </iframe>
             </div>
             <div style={{padding:'1rem'}}/>
@@ -85,7 +85,7 @@ export default function plasticine() {
 
             <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-                <a href="https://drive.google.com/file/d/10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi/view?usp=sharing&rel=0" target="_blank"> 
+                <a href="https://drive.google.com/file/d/10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi/view?usp=sharing" target="_blank"> 
                     <DiGoogleDrive /> Video on Google Drive
                 </a>
                 </div>
