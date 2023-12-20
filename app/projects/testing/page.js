@@ -135,17 +135,6 @@ return () => {
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
 
-const [isLoading, setIsLoading] = useState(false);
-
-const handleClick = (event) => {
-  if (event.target.tagName === 'BUTTON') {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }
-};
-
 
 useEffect(() => {
   document.title = 'Projects - testing';
@@ -210,15 +199,8 @@ useEffect(() => {
          
             <div style={{padding:'1rem'}} />
 
-{/* <div style={{ margin: "1rem" }}> </div> */}
+            <div style={{padding:'2rem'}} />
 
-{/* <div className='flex align-center border'> 
-  <LightButton />
-  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
-  src="https://www.youtube.com/embed/ehdOkglKb0o?si=diIzQwaQ9w1WKTU0"> 
-    </iframe>
-  </div>
-<div style={{ padding: '2rem' }}> </div> */}
 
 <div className="">
 <AnimatePresence>
@@ -279,9 +261,6 @@ useEffect(() => {
 </AnimatePresence>
 </div>
 
-{/* <div style={{ padding: "1rem" }}> </div>
-<div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div> */}
 
 <div className = {styles.subtitle}>
     <p>
@@ -289,14 +268,25 @@ useEffect(() => {
     </p>
 </div>
 
+<div className={styles.linkContainer}>
+<div style={{ padding: "1.25rem" }}> </div>
+<div className='flex align-center'> 
+  <LightButton/>
+  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
+  src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"> 
+    </iframe>
+  </div>
+  <div style={{ padding: "1.25rem" }}> </div>
+</div>
+
 <div className="">
-<div className="p-3 container mx-auto">
+<div className="p-1 container mx-auto">
 <div className="py-2"></div>
 <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
   {data.map((x) => (
     <article
       key="s1"
-      className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+      className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
     >
       <div className="relative rounded-2xl">
         <Image
@@ -316,80 +306,103 @@ useEffect(() => {
 </div>
 </div>
 
-<div className={styles.linkContainer}>
+{/* <div className={styles.linkContainer}>
 <div style={{ padding: "2rem" }}> </div>
 <div className='flex align-center'> 
   <LightButton />
-  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
-  src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"> 
+  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+  src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM"> 
     </iframe>
   </div>
   <div style={{ padding: "2rem" }}> </div>
-</div>
+</div> */}
 
   <div style={{ padding: '2rem' }}> </div> 
 
 <div className = {styles.subtitle}>
     <p>
-      Environments
+      Environment
     </p>
 </div>
 
-<div className="">
-<div className="p-3 container mx-auto">
-<div className="py-2"></div>
-<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-  {data2.map((x) => (
-    <article
-      key="s2"
-      className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-    >
-      <div className="relative  rounded-2xl">
-        <Image
-          width={400}
-          height={400}
-          className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-            selectedImage ? "z-0" : ""
-          }`}
-          src={x.image}
-          alt=""
-          onClick={() => handleImageClick(x.image)}
-        />
-      </div>
-    </article>
-  ))}
-</div>
-</div>
-</div>
 <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
+<div style={{ padding: "1rem" }}> </div>
 <div className='flex align-center'> 
   <LightButton />
   <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
   src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"> 
     </iframe>
   </div>
-<div style={{ padding: '2rem' }}> </div>
-</div>
-{/*<div style={{ padding: '2rem' }}> </div> */}
-
-{/* <div className={styles.linkContainer}> */}
-<div style={{ padding: "1rem" }}> </div>
-
-<div className = {styles.subtitle}>
-    <p>
-      Boat showcase
-    </p>
+<div style={{ padding: '1rem' }}> </div>
 </div>
 
 <div className="">
-<div className="p-3 container mx-auto">
+<div className="p-1 container mx-auto">
+<div className="py-2"></div>
+<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+  {data2.map((x) => (
+    <article
+      key="s2"
+      className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+    >
+      <div className="relative  rounded-2xl">
+        <Image
+          width={400}
+          height={400}
+          className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+            selectedImage ? "z-0" : ""
+          }`}
+          src={x.image}
+          alt=""
+          onClick={() => handleImageClick(x.image)}
+        />
+      </div>
+    </article>
+  ))}
+</div>
+</div>
+</div>
+{/* <div className={styles.linkContainer}>
+<div style={{ padding: "2rem" }}> </div>
+<div className='flex align-center'> 
+  <LightButton />
+  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+  src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG"> 
+    </iframe>
+  </div>
+<div style={{ padding: '2rem' }}> </div>
+</div> */}
+{/*<div style={{ padding: '2rem' }}> </div> */}
+
+{/* <div className={styles.linkContainer}> */}
+<div style={{ padding: "2rem" }}> </div>
+
+<div className = {styles.subtitle}>
+    <p>
+      Boat Showcase
+    </p>
+</div>
+
+<div className={styles.linkContainer}>
+<div style={{ padding: "1rem" }}> </div>
+<div className='flex align-center'> 
+  <LightButton />
+  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
+  src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"> 
+    </iframe>
+  </div>
+<div style={{ padding: '1rem' }}> </div>
+
+</div>
+
+<div className="">
+<div className="p-1 container mx-auto">
 <div className="py-2"></div>
 <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
   {data3.map((x) => (
     <article
       key="s2"
-      className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+      className="pt-3 pl-3 pr-3 pb-0  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
     >
       <div className="relative  rounded-2xl">
         <Image
@@ -409,17 +422,17 @@ useEffect(() => {
 </div>
 </div>
 
-<div className={styles.linkContainer}>
+{/* <div className={styles.linkContainer}>
 <div style={{ padding: "2rem" }}> </div>
 <div className='flex align-center'> 
   <LightButton />
-  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
-  src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"> 
+  <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
+  src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY"> 
     </iframe>
   </div>
 <div style={{ padding: '2rem' }}> </div>
 
-</div>
+</div> */}
 
 {/* <div style={{padding:'1rem'}} /> */}
 
@@ -462,5 +475,4 @@ useEffect(() => {
 </main>
 );
 }
-
 

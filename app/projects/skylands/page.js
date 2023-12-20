@@ -189,16 +189,6 @@ export default function skylands() {
 
         <div style={{padding:'2rem'}} />
 
-          {/* <div style={{ margin: "1rem" }}> </div> */}
-
-    {/* <div className='flex align-center border'> 
-            <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
-            src="https://www.youtube.com/embed/ehdOkglKb0o?si=diIzQwaQ9w1WKTU0"> 
-              </iframe>
-            </div>
-        <div style={{ padding: '2rem' }}> </div> */}
-
       <div className="">
         <AnimatePresence>
           {selectedImage && (
@@ -258,10 +248,6 @@ export default function skylands() {
         </AnimatePresence>
       </div>
 
-        {/* <div style={{ padding: "1rem" }}> </div>
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1rem" }}> </div> */}
-
         <div className = {styles.subtitle}>
               <p>
                 Interactables
@@ -269,14 +255,14 @@ export default function skylands() {
         </div>
 
         <div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div>
+        <div style={{ padding: "1.25rem" }}> </div>
       <div className='flex align-center'> 
             <LightButton/>
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"> 
               </iframe>
             </div>
-            <div style={{ padding: "1rem" }}> </div>
+            <div style={{ padding: "1.25rem" }}> </div>
 </div>
 
       <div className="">
@@ -306,16 +292,6 @@ export default function skylands() {
         </div>
       </div>
 
-{/* <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
-      <div className='flex align-center'> 
-            <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
-            src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM"> 
-              </iframe>
-            </div>
-            <div style={{ padding: "2rem" }}> </div>
-</div> */}
 
             <div style={{ padding: '2rem' }}> </div> 
 
@@ -326,14 +302,14 @@ export default function skylands() {
         </div>
 
         <div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div>
+        <div style={{ padding: "1.25rem" }}> </div>
       <div className='flex align-center'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
             src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"> 
               </iframe>
             </div>
-        <div style={{ padding: '1rem' }}> </div>
+            <div style={{ padding: "1.25rem" }}> </div>
          </div>
 
       <div className="">
@@ -362,19 +338,7 @@ export default function skylands() {
           </div>
         </div>
       </div>
-      {/* <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
-      <div className='flex align-center'> 
-            <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
-            src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG"> 
-              </iframe>
-            </div>
-        <div style={{ padding: '2rem' }}> </div>
-         </div> */}
-        {/*<div style={{ padding: '2rem' }}> </div> */}
 
-        {/* <div className={styles.linkContainer}> */}
         <div style={{ padding: "2rem" }}> </div>
 
       <div className = {styles.subtitle}>
@@ -384,14 +348,14 @@ export default function skylands() {
         </div>
 
         <div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div>
+        <div style={{ padding: "1.25rem" }}> </div>
     <div className='flex align-center'> 
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 48, position:'relative'}}
             src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"> 
               </iframe>
             </div>
-        <div style={{ padding: '1rem' }}> </div>
+            <div style={{ padding: "1.25rem" }}> </div>
 
  </div>
 
@@ -421,20 +385,6 @@ export default function skylands() {
           </div>
         </div>
       </div>
-
-      {/* <div className={styles.linkContainer}>
-<div style={{ padding: "2rem" }}> </div>
-    <div className='flex align-center'> 
-            <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: selectedImage ? 1 : 51, position:'relative'}}
-            src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY"> 
-              </iframe>
-            </div>
-        <div style={{ padding: '2rem' }}> </div>
-
- </div> */}
-
-        {/* <div style={{padding:'1rem'}} /> */}
 
 
       <div className={styles.subtitledescription}>

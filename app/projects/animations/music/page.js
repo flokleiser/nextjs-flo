@@ -82,14 +82,14 @@ export default function music() {
             </div>
             <div style={{ padding: '1rem' }}> </div> 
             <div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div>
+            <div style={{ padding: "1.25rem" }}> </div>
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}} 
             src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0&rel=0" >
             </iframe>
             </div>
-            <div style={{ padding: '1rem' }}> </div>
+            <div style={{ padding: "1.25rem" }}> </div>
             </div>
             <div style={{padding:'2rem'}} />
 
@@ -107,13 +107,13 @@ export default function music() {
             <div style={{ padding: '1rem' }}> </div> 
 
             <div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div> 
+            <div style={{ padding: "1.25rem" }}> </div>
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx&rel=0" >
             </iframe>
             </div>
-            <div style={{ padding: '1rem' }}> </div>
+            <div style={{ padding: "1.25rem" }}> </div>
 </div>
             <div style={{ padding: "2rem" }}> </div> 
 
@@ -131,13 +131,13 @@ export default function music() {
             <div style={{ padding: '1rem' }}> </div> 
 
             <div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div> 
+            <div style={{ padding: "1.25rem" }}> </div>
             <div className='flex align-center'>
             <LightButton />
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5&rel=0" >
            </iframe>
            </div>
-            <div style={{padding:'1rem'}}/>
+           <div style={{ padding: "1.25rem" }}> </div>
             </div>
             {/* <div style={{padding:'1rem'}}/> */}
             

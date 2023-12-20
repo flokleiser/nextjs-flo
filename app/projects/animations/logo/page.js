@@ -1,17 +1,18 @@
-import styles from 'app/page.module.css'
-import Link from 'next/link';
-import LightButton from 'app/components/LightButton.js';
+import styles from "app/page.module.css";
+import Link from "next/link";
+import LightButton from "app/components/LightButton.js";
 import { DiGoogleDrive } from "react-icons/di";
 
 export const metadata = {
-    title: 'Animations - Logo',
-    description: '-',
-  }
+  title: "Animations - Logo",
+  description: "-",
+};
 
 export default function logo() {
-    return(
-        <main className={styles.main}>
-             <div className="relative 
+  return (
+    <main className={styles.main}>
+      <div
+        className="relative 
    flex 
    place-items-center 
    before:absolute 
@@ -42,47 +43,53 @@ export default function logo() {
    after:dark:via-[#0141ff] 
    after:dark:opacity-40 
    before:lg:h-[360px] 
-   z-[-1]">
-          </div>
+   z-[-1]"
+      ></div>
 
+      <div className={styles.backbutton}>
+        <h1>
+          {" "}
+          <Link href="/projects/animations">All Animations</Link>{" "}
+        </h1>
+      </div>
 
-          <div className={styles.backbutton}>
-            <h1> <Link href="/projects/animations">All Animations</Link> </h1>
-            </div>
-          
-            <h1 className={styles.title}>
-              Logo
-            </h1>
-            <div className={styles.subtitledescription}>
-              <p> 
-              A small project where i designed a logo for the first letter in my name, “F”, and animated 3 iterations in Adobe After Effects.
-              </p>
-            </div>
+      <h1 className={styles.title}>Logo</h1>
+      <div className={styles.subtitledescription}>
+        <p>
+          A small project where i designed a logo for the first letter in my
+          name, “F”, and animated 3 iterations in Adobe After Effects.
+        </p>
+      </div>
 
-            <div style={{ padding: '1rem' }}> </div>
-            {/* <video
+      <div style={{ padding: "1rem" }}> </div>
+      {/* <video
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}
 
-<div className={styles.linkContainer}>
-<div style={{ padding: "1rem" }}> </div>
-<div className='flex align-center'>
-            <LightButton />
-            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}
-          src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt&rel=0"> 
-          </iframe>
-          </div>
-          <div style={{ padding: '1rem' }}> </div>
-         </div>
-          <div className={styles.subtitledescription} >
-            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-                <a href="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/view?usp=sharing" target="_blank"> 
-                    <DiGoogleDrive /> Video on Google Drive
-                </a>
-                </div>
-            </div>
+      <div className={styles.linkContainer}>
+        <div style={{ padding: "1.25rem" }}> </div>
+        <div className="flex align-center">
+          <LightButton />
+          <iframe
+            className={styles.iframevideo}
+            style={{ zIndex: 48, position: "relative" }}
+            src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt&rel=0"
+          ></iframe>
+        </div>
+        <div style={{ padding: "1.25rem" }}> </div>
+      </div>
+      <div className={styles.subtitledescription}>
+        <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
+          <a
+            href="https://drive.google.com/file/d/1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F/view?usp=sharing"
+            target="_blank"
+          >
+            <DiGoogleDrive /> Video on Google Drive
+          </a>
+        </div>
+      </div>
 
-          <div style={{ padding: '2rem' }}> </div>
-        </main>
-    )
+      <div style={{ padding: "2rem" }}> </div>
+    </main>
+  );
 }
