@@ -112,7 +112,7 @@ export default function links() {
             <div className={styles.subtitledescription}>
               <p>
                 <a
-                  href="https://drive.google.com/file/d/1klbBeILj50MX9QvFZCk4sFSt0oU4ayDP/view"
+                  href="https://drive.google.com/file/d/1eyzSs2tW0JRo98I_Y8RThvqRDnnGUh6M/view"
                   target="_blank"
                 >
                   <CiImageOn />
