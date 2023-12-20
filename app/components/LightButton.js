@@ -15,7 +15,7 @@ export default function LightButton() {
   return (
     <div>
       <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 52}}
+      style={{ zIndex: 53}}
       
       onClick={handleToggleClick}>
         {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}

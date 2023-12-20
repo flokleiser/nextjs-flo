@@ -202,7 +202,7 @@ export default function skylands() {
               style={{
                 backdropFilter: `blur(${selectedImage ? "10px" : "0px"})`,
                 backgroundColor: "rgba(0, 0, 0, 0.75)",
-                zIndex:53
+                zIndex:54
               }}
             >
               <motion.img
@@ -259,7 +259,7 @@ export default function skylands() {
           <LightButton />
           <iframe
             className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 51, position: "relative" }}
+            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
           ></iframe>
         </div>
@@ -299,13 +299,13 @@ export default function skylands() {
         <p>Environment</p>
       </div>
 
-      <div className={styles.linkContainer}>
+      <div className={styles.linkContainer} >
         <div style={{ padding: "1.25rem" }}> </div>
         <div className="flex align-center">
           <LightButton />
           <iframe
             className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 51, position: "relative" }}
+            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"
           ></iframe>
         </div>
@@ -351,7 +351,7 @@ export default function skylands() {
           <LightButton />
           <iframe
             className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 51, position: "relative" }}
+            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"
           ></iframe>
         </div>
