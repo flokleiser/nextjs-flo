@@ -33,6 +33,8 @@ const data3 = [
 
 export default function testing() {
 
+  const [isDim, setDim] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -195,9 +197,7 @@ useEffect(() => {
               this page is for testing purposes  
              </p>
             </div>
-
-         
-
+            
             <div className="">
         <AnimatePresence>
           {selectedImage && (
@@ -265,7 +265,7 @@ useEffect(() => {
       <div className={styles.linkContainer}>
         <div style={{ padding: "1.25rem" }}> </div>
         <div className="flex align-center">
-          <LightButton />
+        <LightButton isDim={isDim} setDim={setDim} />
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}

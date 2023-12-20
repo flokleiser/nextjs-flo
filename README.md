@@ -5,13 +5,12 @@
 - [ ] Fix texts
 - [ ] Updated links (CV, Portfolio)
 
-
 ## Currently working on: 
 
-- [ ] :Jimmy: lightbutton 3 kinda works with images 1 and 2
+- [ ] Look into stacking context of component elements (overlays) to fix issue with lightbutton overlay messing with other videos
+
 
 - [ ] Light button --> maybe have the card background of iframe videos not dimmed? looks kinda cool
-
 - [ ] Try out framer motion scroll animations (useViewportScroll)
 - [ ] Loading.js file
 
