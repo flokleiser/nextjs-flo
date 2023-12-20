@@ -7,7 +7,7 @@ export default function Loading(){
 
         <div style={{paddingTop:'5rem'}}/>
         <div className={styles.subtitleHomepage}>
-        Loading
+        Loading...
         </div>
 
     </main>

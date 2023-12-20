@@ -1,32 +1,33 @@
 # To-Do/Ideas List:
 
+
+## Checklist before publish:
+- [ ] Fix texts
+- [ ] Updated links (CV, Portfolio)
+
+
 ## Currently working on: 
 
 - [ ] Light button --> maybe have the card background of iframe videos not dimmed? looks kinda cool
 
 - [ ] Try out framer motion scroll animations (useViewportScroll)
-
-- [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
-
-- [ ] Keep page from displaying until fully loaded (?)
 - [ ] Loading.js file
-- [ ] Blur image placeholder until fully loaded maybe
 
 ## TO FIX:
 
 - [ ] Look into ways to optimize website
 - [ ] Image gallery : image left/right animations 
 - [ ] Animation gifs --> not weird stretching
+- [ ] Blur image placeholder until fully loaded maybe
+- [ ] Keep page from displaying until fully loaded (?)
 
 ## Ideas for when bored:
 
+- [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 - [ ] Look into .sass
 - [ ] Animation onSelect (on clicking projects/portfolio)
-- [ ] page transitions
 
-## Checklist before publish:
-- [ ] Fix texts
-- [ ] Updated links (CV, Portfolio)
+
 
 ### Videos/Gifs/Images:
 
