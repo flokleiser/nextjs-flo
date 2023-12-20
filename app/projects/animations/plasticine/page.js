@@ -71,7 +71,7 @@ export default function plasticine() {
             </div>
             </div>
 
-            <div className={styles.linkContainer} style={{zIndex:59}}>
+            <div className={styles.linkContainer}>
             <div style={{ padding: "1.25rem" }}> </div>
 
             <div className='flex align-center'>

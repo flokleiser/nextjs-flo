@@ -6,9 +6,9 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { PiXCircle } from "react-icons/pi";
 import { DiGithubBadge } from "react-icons/di";
-import LightButton from "app/components/LightButton.js";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
+import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 
 const data = [
   { image: "/images/skylands/skylands3.png", id: 0 },
@@ -30,6 +30,12 @@ const data3 = [
 ];
 
 export default function skylands() {
+
+  const [isDim, setDim] = useState(false);
+  const handleToggleClick = () => {
+    setDim(!isDim);
+    };
+
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -189,7 +195,25 @@ export default function skylands() {
 
       <div style={{ padding: "2rem" }} />
 
-      <div className="">
+      <AnimatePresence>
+      {isDim && (
+        <motion.div
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+        
+        style={{
+          backdropFilter: `blur(10px)`,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        }}>
+      
+        </motion.div>
+      )}
+      </AnimatePresence>
+            
+            <div className="">
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -256,7 +280,12 @@ export default function skylands() {
       <div className={styles.linkContainer}>
         <div style={{ padding: "1.25rem" }}> </div>
         <div className="flex align-center">
-          <LightButton />
+        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+      style={{ zIndex: 53}}
+      
+      onClick={handleToggleClick}>
+        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
+      </button>
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
@@ -299,10 +328,17 @@ export default function skylands() {
         <p>Environment</p>
       </div>
 
-      <div className={styles.linkContainer} >
+      <div className={styles.linkContainer} 
+      // style={{zIndex: 52}}
+      >
         <div style={{ padding: "1.25rem" }}> </div>
         <div className="flex align-center">
-          <LightButton />
+        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+      style={{ zIndex: 53}}
+      
+      onClick={handleToggleClick}>
+        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
+      </button>
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
@@ -348,7 +384,12 @@ export default function skylands() {
       <div className={styles.linkContainer}>
         <div style={{ padding: "1.25rem" }}> </div>
         <div className="flex align-center">
-          <LightButton />
+        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+      style={{ zIndex: 53}}
+      
+      onClick={handleToggleClick}>
+        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
+      </button>
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}

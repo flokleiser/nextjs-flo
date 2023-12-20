@@ -7,6 +7,10 @@
 
 ## Currently working on: 
 
+- [ ] Lightbutton isDim -> viewpoint centered on video
+
+- [ ] Figure out lightbutton background card not working on animations
+
 - [ ] Look into stacking context of component elements (overlays) to fix issue with lightbutton overlay messing with other videos
 
 

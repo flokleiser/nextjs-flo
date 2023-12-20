@@ -25,7 +25,7 @@ export default function LightButton() {
 <AnimatePresence>
       {isDim && (
         <motion.div
-        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[47]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
