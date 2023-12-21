@@ -1,20 +1,20 @@
 # To-Do/Ideas List:
 
-
 ## Checklist before publish:
 - [ ] Fix texts
 - [ ] Updated links (CV, Portfolio)
 
 ## Currently working on: 
 
-- [ ] Lightbutton isDim -> viewpoint centered on video
+- [ ] Test if the viewpoint centering even will work, and if it does, change lightbutton background element for each video individually
 
-- [ ] Figure out lightbutton background card not working on animations
+- [ ] Figure out why background card is not over lightButton background
 
-- [ ] Look into stacking context of component elements (overlays) to fix issue with lightbutton overlay messing with other videos
+- [ ] Either: fix the stacking issue with the LightButton background, or
+- [ ] Seperate lightbutton background element for animation pages with 2 videos, like skylands,
 
+- [ ] Framer motion progress bar thingy for scrolling
 
-- [ ] Light button --> maybe have the card background of iframe videos not dimmed? looks kinda cool
 - [ ] Try out framer motion scroll animations (useViewportScroll)
 - [ ] Loading.js file
 

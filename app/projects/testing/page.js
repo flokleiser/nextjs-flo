@@ -7,8 +7,7 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
 import LightButton from '@/app/components/LightButton';
-import { BiSolidFileBlank, BiLink, BiLinkExternal } from "react-icons/bi";
-import { DiGithubBadge } from "react-icons/di";
+import { DiGoogleDrive } from 'react-icons/di';
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 
 
@@ -182,6 +181,23 @@ useEffect(() => {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
+          <AnimatePresence>
+      {isDim && (
+        <motion.div
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+        
+        style={{
+          backdropFilter: `blur(10px)`,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        }}>
+      
+        </motion.div>
+      )}
+      </AnimatePresence>
 
           <div className={styles.backbutton}>
             <h1> <Link href="/">Home</Link> </h1>
@@ -202,272 +218,68 @@ useEffect(() => {
              </p>
             </div>
 
-            <AnimatePresence>
-      {isDim && (
-        <motion.div
-        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5}}
-        
-        style={{
-          backdropFilter: `blur(10px)`,
-          backgroundColor: 'rgba(0, 0, 0, 0.75)',
-        }}>
+            <div className = {styles.subtitle}>
+              <p>
+                Skate Loop
+              </p>
+        </div>
+
+        <div className={styles.subtitledescription}>
+            <p>
+            A short sequence of myself, edited and rotoscoped in Adobe After Effects.
+            </p>
+            </div>
+            <div style={{ padding: '1rem' }}> </div> 
+
+            <div className={styles.linkContainer}>
+            <div style={{ padding: "1.25rem" }}> </div>
+            <div className='flex align-center'>
+            <LightButton />
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"> 
+            </iframe>
+            </div>
+            <div style={{ padding: "1.25rem" }}> </div>
+            </div>
+
+            <div style={{ padding: '2rem' }}> </div>
+
+        <div className = {styles.subtitle}>
+              <p>
+             Skate Doodles 
+              </p>
+            </div>
+
+              <div className={styles.subtitledescription}>
+            <p>
+            4 stop-motion sequences, sketched  on semi transparent paper and edited in Premiere Pro.            
+            </p>
+            </div>
+            <div style={{ padding: '1rem' }}> </div> 
       
-        </motion.div>
-      )}
-      </AnimatePresence>
-            
-            <div className="">
-        <AnimatePresence>
-          {selectedImage && (
-            <motion.div
-              id="overlay"
-              className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              style={{
-                backdropFilter: `blur(${selectedImage ? "10px" : "0px"})`,
-                backgroundColor: "rgba(0, 0, 0, 0.75)",
-                zIndex:54
-              }}
-            >
-              <motion.img
-                src={selectedImage}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.45 }}
-                transition={{ duration: 0.3 }}
-                alt=""
-                className="max-w-4/5 max-h-4/5"
-                style={{ maxHeight: "80vh", zIndex: 9999 }}
-              />
-              <button
-                className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-                onClick={handleResetClick}
-                style={{ zIndex: 9979 }}
-              >
-                <PiXCircle style={{ fontSize: "2rem" }} />
-              </button>
-              {/* prev and next buttons */}
-              <div className="absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
-                <button
-                  id="leftButton"
-                  className="text-black px-0 py-4 rounded-r"
-                  onClick={handlePrevImage}
-                  style={{ zIndex: 9999 }}
-                >
-                  <IoIosArrowBack style={{ fontSize: "2rem" }} />
-                </button>
-              </div>
-              {/* <div className="absolute right-5"> */}
-              <div className="absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
-                <button
-                  id="rightButton"
-                  className=" text-black px-0 py-4 rounded-r"
-                  onClick={handleNextImage}
-                  style={{ zIndex: 9999 }}
-                >
-                  <IoIosArrowForward style={{ fontSize: "2rem" }} />
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
-      <div className={styles.subtitle}>
-        <p>Interactables</p>
-      </div>
-
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1.25rem" }}> </div>
-        <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            <div className={styles.linkContainer}>
+            <div style={{ padding: "1.25rem" }}> </div>
+            <div className='flex align-center'>
+            <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
       style={{ zIndex: 53}}
       
       onClick={handleToggleClick}>
         {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
       </button>
-          <iframe
-            className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-            src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
-          ></iframe>
-        </div>
-        <div style={{ padding: "1.25rem" }}> </div>
-      </div>
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0">
+            </iframe>
+            </div>
+            <div style={{ padding: "1.25rem" }}> </div>
+            </div>
 
-      <div className="">
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data.map((x) => (
-              <article
-                key="s1"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
+            <div className={styles.subtitledescription} >
+            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
+                <a href="https://drive.google.com/drive/folders/1iLXs6Nq4P4xim8TtD9pt7Rt66jx3em-l?usp=sharing" target="_blank"> 
+                    <DiGoogleDrive /> Videos on Google Drive
+                </a>
                 </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
+            </div>
 
-      <div style={{ padding: "2rem" }}> </div>
-
-      <div className={styles.subtitle}>
-        <p>Environment</p>
-      </div>
-
-      <div className={styles.linkContainer} 
-      // style={{zIndex: 52}}
-      >
-        <div style={{ padding: "1.25rem" }}> </div>
-        <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
-          <iframe
-            className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-            src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"
-          ></iframe>
-        </div>
-        <div style={{ padding: "1.25rem" }}> </div>
-      </div>
-
-      <div className="">
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data2.map((x) => (
-              <article
-                key="s2"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative  rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div style={{ padding: "2rem" }}> </div>
-
-      <div className={styles.subtitle}>
-        <p>Boat Showcase</p>
-      </div>
-
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1.25rem" }}> </div>
-        <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
-          <iframe
-            className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-            src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"
-          ></iframe>
-        </div>
-        <div style={{ padding: "1.25rem" }}> </div>
-      </div>
-
-      <div className="">
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data3.map((x) => (
-              <article
-                key="s2"
-                className="pt-3 pl-3 pr-3 pb-0  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative  rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.subtitledescription}>
-        <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
-          <p>
-            <a
-              href="https://drive.google.com/file/d/1Kg5mvFeOzfIsQm974Fk5bhWUzK3I6VP3/view?usp=drive_link"
-              target="_blank"
-            >
-              <BiSolidFileBlank />
-              .apk file
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div className={styles.subtitledescription}>
-        <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
-          <p>
-            <a href="https://github.com/flokleiser/FLO-VR-ROOM" target="_blank">
-              <DiGithubBadge /> Code files on Github
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div className={styles.subtitledescription}>
-        <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
-          <p>
-            <a href="https://sidequestvr.com/setup-howto" target="_blank">
-              <BiLinkExternal /> SideQuest (to install .apk file)
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <div style={{ padding: "2rem" }}> </div>
-    </main>
-  );
+            <div style={{ padding: '2rem' }}> </div>
+        </main>
+    )
 }
