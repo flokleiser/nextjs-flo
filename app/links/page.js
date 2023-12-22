@@ -112,7 +112,7 @@ export default function links() {
             <div className={styles.subtitledescription}>
               <p>
                 <a
-                  href="https://drive.google.com/file/d/1eyzSs2tW0JRo98I_Y8RThvqRDnnGUh6M/view"
+                  href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
                   target="_blank"
                 >
                   <CiImageOn />
@@ -166,7 +166,7 @@ export default function links() {
             <div className={styles.subtitledescription}>
               <p>
                 <a
-                  href="https://drive.google.com/file/d/1YPBUDULNo70bTaqGH45tPWVFzF31QZVF/view"
+                  href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
                   target="_blank"
                 >
                   <CiViewTimeline />
@@ -182,7 +182,7 @@ export default function links() {
         <div
           className={styles.linkContainerImage}
           style={{
-            backgroundImage: "url(/images/flotest.png)", 
+            backgroundImage: "url(/images/flo11.png)", 
             opacity: 0.5, 
             ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio3.png)" } : null),
             ...(isHoveringGithub? { backgroundImage: "url(/images/links/github2.png)" } : null),

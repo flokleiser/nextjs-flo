@@ -8,11 +8,6 @@
 
 - [ ] Test if the viewpoint centering even will work, and if it does, change lightbutton background element for each video individually
 
-- [ ] Figure out why background card is not over lightButton background
-
-- [ ] Either: fix the stacking issue with the LightButton background, or
-- [ ] Seperate lightbutton background element for animation pages with 2 videos, like skylands,
-
 - [ ] Framer motion progress bar thingy for scrolling
 
 - [ ] Try out framer motion scroll animations (useViewportScroll)
@@ -31,8 +26,6 @@
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 - [ ] Look into .sass
 - [ ] Animation onSelect (on clicking projects/portfolio)
-
-
 
 ### Videos/Gifs/Images:
 
