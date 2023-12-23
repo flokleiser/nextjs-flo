@@ -382,8 +382,9 @@ export default function testing() {
        id="interactables"
       >
          <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex ml-1 place-self-start"
+        <div className="flex ml-1 "
         >
+        {/* place-self-start */}
           
         <button  className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
       style={{ zIndex: 53}}
@@ -395,7 +396,7 @@ export default function testing() {
 
         <Link className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
           style={{ zIndex: 53}} 
-          href="#interactables" rel="noopener noreferrer" onClick={handleToggleClick}
+          href="#interactables" rel="noopener noreferrer" onClick={handleScroll}
           > <MdFilterCenterFocus style={{fontSize:'1.5rem'}}/> 
           </Link>
       </div>
