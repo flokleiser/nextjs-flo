@@ -4,11 +4,11 @@
 
 ## Currently working on: 
 
-- [ ] Video Focus button aligned to left/right, Dim button aswell
-- [ ] Implement smooth scrolling (scrollIntoView etc)
-- [ ] Implement focus button on all pages
+- [ ] get some padding on top of id for focus button? or
+- [ ] instead of alligning the top with the top of viewport --> make it centered, equal spacing top and bottom
 
-- [ ] If i hate myself enough -> exlude title from dim overlay?
+- [ ] Video Focus button aligned to left/right, Dim button aswell
+- [ ] Implement focus button on all pages
 
 - [ ] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 
@@ -19,11 +19,13 @@
 
 ## TO FIX:
 
+- [ ] Blur image placeholder until fully loaded maybe
+
+- [ ] Keep page from displaying until fully loaded (?)
+
 - [ ] Look into ways to optimize website
 - [ ] Image gallery : image left/right animations 
 - [ ] Animation gifs --> not weird stretching
-- [ ] Blur image placeholder until fully loaded maybe
-- [ ] Keep page from displaying until fully loaded (?)
 
 ## Ideas for when bored:
 

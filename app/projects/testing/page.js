@@ -36,7 +36,7 @@ export default function testing() {
   const { scrollYProgress } = useScroll();
 
   const [isDim, setDim] = useState(false);
-  const handleToggleClick = (event) => {
+  const handleToggleClick = () => {
     setDim(!isDim);
   };
 
@@ -373,25 +373,29 @@ export default function testing() {
       </div>
 
       <div className={styles.subtitle}
-     id="interactables"
+
       >
         <p>Interactables</p>
       </div>
 
       <div className={styles.linkContainer}
+       id="interactables"
       >
          <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex ">
+        <div className="flex ml-1 place-self-start"
+        >
           
         <button  className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
       style={{ zIndex: 53}}
-      onClick={handleToggleClick}>
+      onClick ={handleToggleClick}
+      href="#intereactables"
+      >
         {isDim? <LuLightbulb style={{ fontSize: '1.5rem' }}/> : <LuLightbulbOff style={{ fontSize: '1.5rem' }} />}
       </button>
 
         <Link className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
           style={{ zIndex: 53}} 
-          href="#interactables" rel="noopener noreferrer" onClick={handleScroll}
+          href="#interactables" rel="noopener noreferrer" onClick={handleToggleClick}
           > <MdFilterCenterFocus style={{fontSize:'1.5rem'}}/> 
           </Link>
       </div>
