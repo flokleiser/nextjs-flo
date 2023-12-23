@@ -179,6 +179,14 @@ return () => {
             <h1 className={styles.title}>
              Illustrator Artworks
             </h1>
+
+            <div className={styles.subtitledescription}>
+        <p>
+          Artworks created with Adobe Illustrator
+        </p>
+      </div>
+
+      <div style={{padding:'2rem'}} />
             
             {/* <div className={styles.linkContainer}>
         <div style={{ padding: "1rem" }}> </div> */}

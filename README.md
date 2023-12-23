@@ -1,12 +1,13 @@
 # To-Do/Ideas List:
 
-## Checklist before publish:
-- [ ] Fix texts
-- [x] Updated links (CV, Portfolio)
+
 
 ## Currently working on: 
 
+- [ ] Add a "page divider", a half transparent thin line to "section" different parts of a page?
+
 - [ ] Test if the viewpoint centering even will work, and if it does, change lightbutton background element for each video individually
+---> try element.scrollIntoView({ behavior: 'smooth' });
 
 - [ ] Framer motion progress bar thingy for scrolling
 
@@ -26,6 +27,10 @@
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 - [ ] Look into .sass
 - [ ] Animation onSelect (on clicking projects/portfolio)
+
+## Checklist before publish:
+- [x] Fix texts
+- [x] Updated links (CV, Portfolio)
 
 ### Videos/Gifs/Images:
 
