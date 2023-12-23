@@ -11,6 +11,7 @@ import { DiGoogleDrive } from "react-icons/di";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import { BiSolidFileBlank, BiLinkExternal } from "react-icons/bi";
 import { DiGithubBadge } from "react-icons/di";
+import { MdFilterCenterFocus } from "react-icons/md";
 
 const data = [
   { image: "/images/skylands/skylands3.png", id: 0 },
@@ -35,8 +36,17 @@ export default function testing() {
   const { scrollYProgress } = useScroll();
 
   const [isDim, setDim] = useState(false);
-  const handleToggleClick = () => {
+  const handleToggleClick = (event) => {
     setDim(!isDim);
+  };
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView ({behavior:"smooth"
+    });
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -362,20 +372,34 @@ export default function testing() {
         </AnimatePresence>
       </div>
 
-      <div className={styles.subtitle}>
+      <div className={styles.subtitle}
+     id="interactables"
+      >
         <p>Interactables</p>
       </div>
 
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1.25rem" }}> </div>
-        <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+      <div className={styles.linkContainer}
+      >
+         <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ">
+          
+        <button  className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
       style={{ zIndex: 53}}
-      
       onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
+        {isDim? <LuLightbulb style={{ fontSize: '1.5rem' }}/> : <LuLightbulbOff style={{ fontSize: '1.5rem' }} />}
       </button>
+
+        <Link className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+          style={{ zIndex: 53}} 
+          href="#interactables" rel="noopener noreferrer" onClick={handleScroll}
+          > <MdFilterCenterFocus style={{fontSize:'1.5rem'}}/> 
+          </Link>
+      </div>
+
+      <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex align-center">
           <iframe
+            
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
@@ -413,22 +437,40 @@ export default function testing() {
 
       <div style={{ padding: "2rem" }}> </div>
 
-      <div className={styles.subtitle}>
+      <div className={styles.subtitle}
+      id="environment"
+      >
+        
         <p>Environment</p>
+       
       </div>
 
+
       <div className={styles.linkContainer} 
+      
       // style={{zIndex: 52}}
       >
-        <div style={{ padding: "1.25rem" }}> </div>
-        <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+           <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ">
+          
+        <button  className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
       style={{ zIndex: 53}}
-      
       onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
+        {isDim? <LuLightbulb style={{ fontSize: '1.5rem' }}/> : <LuLightbulbOff style={{ fontSize: '1.5rem' }} />}
       </button>
+
+        <Link className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+          style={{ zIndex: 53}} 
+          href="#environment" rel="noopener noreferrer" onClick={handleScroll}
+          > <MdFilterCenterFocus style={{fontSize:'1.5rem'}}/> 
+          </Link>
+      </div>
+
+      <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex align-center">
+      
           <iframe
+       
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"
@@ -465,55 +507,6 @@ export default function testing() {
       </div>
 
       <div style={{ padding: "2rem" }}> </div>
-
-      <div className={styles.subtitle}>
-        <p>Boat Showcase</p>
-      </div>
-
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1.25rem" }}> </div>
-        <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
-          <iframe
-            className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-            src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"
-          ></iframe>
-        </div>
-        <div style={{ padding: "1.25rem" }}> </div>
-      </div>
-
-      <div className="">
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data3.map((x) => (
-              <article
-                key="s2"
-                className="pt-3 pl-3 pr-3 pb-0  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative  rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <div className={styles.subtitledescription}>
         <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">

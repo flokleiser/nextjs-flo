@@ -4,10 +4,13 @@
 
 ## Currently working on: 
 
-- [ ] Add a "page divider", a half transparent thin line to "section" different parts of a page?
+- [ ] Video Focus button aligned to left/right, Dim button aswell
+- [ ] Implement smooth scrolling (scrollIntoView etc)
+- [ ] Implement focus button on all pages
 
-- [ ] Test if the viewpoint centering even will work, and if it does, change lightbutton background element for each video individually
----> try element.scrollIntoView({ behavior: 'smooth' });
+- [ ] If i hate myself enough -> exlude title from dim overlay?
+
+- [ ] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 
 - [ ] Framer motion progress bar thingy for scrolling
 
