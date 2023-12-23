@@ -193,7 +193,7 @@ export default function skylands() {
         </p>
       </div>
 
-      <div style={{ padding: "2rem" }} />
+      <div style={{ padding: "1rem" }} />
 
       <AnimatePresence>
       {isDim && (
@@ -322,7 +322,7 @@ export default function skylands() {
         </div>
       </div>
 
-      <div style={{ padding: "2rem" }}> </div>
+      <div style={{ padding: "1rem" }}> </div>
 
       <div className={styles.subtitle}>
         <p>Environment</p>
@@ -375,7 +375,7 @@ export default function skylands() {
         </div>
       </div>
 
-      <div style={{ padding: "2rem" }}> </div>
+      <div style={{ padding: "1rem" }}> </div>
 
       <div className={styles.subtitle}>
         <p>Boat Showcase</p>

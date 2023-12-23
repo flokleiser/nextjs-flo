@@ -2,7 +2,7 @@
 
 ## Checklist before publish:
 - [ ] Fix texts
-- [ ] Updated links (CV, Portfolio)
+- [x] Updated links (CV, Portfolio)
 
 ## Currently working on: 
 
