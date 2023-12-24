@@ -23,14 +23,15 @@
 ### Page Transitions:
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 - [ ] Animation onSelect (on clicking projects/portfolio)
+- [ ] Page transitions seem to be broken on nextjs13 using the app router for some weird reason, figure out why -> useRouter/usePath etc
 ### Loading.js
 - [ ] Loading.js page more betterer
 ### Footer
 - [ ] Make website footer?
 
-## Checklist before publish:
-- [x] Fix texts
-- [x] Updated links (CV, Portfolio)
+## Checklist before final publish:
+- [ ] Fix texts
+- [ ] Updated links (CV, Portfolio)
 
 ### Videos/Gifs/Images:
 
