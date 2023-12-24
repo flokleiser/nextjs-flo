@@ -1,37 +1,32 @@
 # To-Do/Ideas List:
 
-
-
 ## Currently working on: 
-
-- [ ] get some padding on top of id for focus button? or
+### Focus/Dim Buttons:
+- [ ] get some padding on top of id for focus button? (make new <div> with 1rem padding and take away 1rem padding from subtitle div) or
 - [ ] instead of alligning the top with the top of viewport --> make it centered, equal spacing top and bottom
-
-- [ ] Video Focus button aligned to left/right, Dim button aswell
 - [ ] Implement focus button on all pages
-
+### Page Divider:
 - [ ] Add a "page divider", a half transparent thin line to "section" different parts of a page?
-
+### Scrolling Progress Bar:
 - [ ] Framer motion progress bar thingy for scrolling
-
 - [ ] Try out framer motion scroll animations (useViewportScroll)
-- [ ] Loading.js file
 
 ## TO FIX:
-
+### Image/Page loading:
 - [ ] Blur image placeholder until fully loaded maybe
-
 - [ ] Keep page from displaying until fully loaded (?)
-
-- [ ] Look into ways to optimize website
+### Image/Gif Animations:
 - [ ] Image gallery : image left/right animations 
 - [ ] Animation gifs --> not weird stretching
 
 ## Ideas for when bored:
-
+### Page Transitions:
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
-- [ ] Look into .sass
 - [ ] Animation onSelect (on clicking projects/portfolio)
+### Loading.js
+- [ ] Loading.js page more betterer
+### Footer
+- [ ] Make website footer?
 
 ## Checklist before publish:
 - [x] Fix texts

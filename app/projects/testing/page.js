@@ -45,8 +45,7 @@ export default function testing() {
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
-    elem?.scrollIntoView ({behavior:"smooth"
-    });
+    elem?.scrollIntoView({ behavior: "smooth" });
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -290,29 +289,27 @@ export default function testing() {
         <p>this page is for testing purposes</p>
       </div>
 
-      <div style={{padding:'1rem'}} />
+      <div style={{ padding: "1rem" }} />
 
-{/* <div style={{ margin: "1rem" }}> </div> */}
+      {/* <div style={{ margin: "1rem" }}> </div> */}
 
-<AnimatePresence>
-      {isDim && (
-        <motion.div
-        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.5}}
-        
-        style={{
-          backdropFilter: `blur(10px)`,
-          backgroundColor: 'rgba(0, 0, 0, 0.75)',
-        }}>
-      
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {isDim && (
+          <motion.div
+            className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              backdropFilter: `blur(10px)`,
+              backgroundColor: "rgba(0, 0, 0, 0.75)",
+            }}
+          ></motion.div>
+        )}
       </AnimatePresence>
-            
-            <div className="">
+
+      <div className="">
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -325,7 +322,7 @@ export default function testing() {
               style={{
                 backdropFilter: `blur(${selectedImage ? "10px" : "0px"})`,
                 backgroundColor: "rgba(0, 0, 0, 0.75)",
-                zIndex:54
+                zIndex: 54,
               }}
             >
               <motion.img
@@ -372,39 +369,43 @@ export default function testing() {
         </AnimatePresence>
       </div>
 
-      <div className={styles.subtitle}
-
-      >
+      <div className={styles.subtitle}>
         <p>Interactables</p>
       </div>
 
-      <div className={styles.linkContainer}
-       id="interactables"
-      >
-         <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex ml-1 "
-        >
-        {/* place-self-start */}
-          
-        <button  className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      onClick ={handleToggleClick}
-      href="#intereactables"
-      >
-        {isDim? <LuLightbulb style={{ fontSize: '1.5rem' }}/> : <LuLightbulbOff style={{ fontSize: '1.5rem' }} />}
-      </button>
+      <div className={styles.linkContainer} id="interactables">
+        <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
 
-        <Link className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-          style={{ zIndex: 53}} 
-          href="#interactables" rel="noopener noreferrer" onClick={handleScroll}
-          > <MdFilterCenterFocus style={{fontSize:'1.5rem'}}/> 
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+            href="#intereactables"
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#interactables"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
           </Link>
-      </div>
+        </div>
 
-      <div style={{ padding: "0.125rem" }}> </div>
+        <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
           <iframe
-            
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
@@ -442,40 +443,44 @@ export default function testing() {
 
       <div style={{ padding: "2rem" }}> </div>
 
-      <div className={styles.subtitle}
-      id="environment"
-      >
-        
+      <div className={styles.subtitle} id="environment">
         <p>Environment</p>
-       
       </div>
 
+      <div
+        className={styles.linkContainer}
 
-      <div className={styles.linkContainer} 
-      
-      // style={{zIndex: 52}}
+        // style={{zIndex: 52}}
       >
-           <div style={{ padding: "0.125rem" }}> </div>
+        <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
-          
-        <button  className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '1.5rem' }}/> : <LuLightbulbOff style={{ fontSize: '1.5rem' }} />}
-      </button>
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
 
-        <Link className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-          style={{ zIndex: 53}} 
-          href="#environment" rel="noopener noreferrer" onClick={handleScroll}
-          > <MdFilterCenterFocus style={{fontSize:'1.5rem'}}/> 
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#environment"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
           </Link>
-      </div>
+        </div>
 
-      <div style={{ padding: "0.125rem" }}> </div>
+        <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
-      
           <iframe
-       
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"
