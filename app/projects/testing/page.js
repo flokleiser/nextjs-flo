@@ -370,10 +370,14 @@ export default function testing() {
       </div>
 
       <div className={styles.subtitle}>
-        <p>Interactables</p>
+        <p2>Interactables</p2>
       </div>
+    
+    <div style={{paddingBottom:'1rem'}} id='interactables' />
 
-      <div className={styles.linkContainer} id="interactables">
+      <div className={styles.linkContainer} 
+      // id="interactables"
+      >
         <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
           {/* place-self-start */}
@@ -382,7 +386,6 @@ export default function testing() {
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
             onClick={handleToggleClick}
-            href="#intereactables"
           >
             {isDim ? (
               <LuLightbulb style={{ fontSize: "1.5rem" }} />
@@ -443,9 +446,13 @@ export default function testing() {
 
       <div style={{ padding: "2rem" }}> </div>
 
-      <div className={styles.subtitle} id="environment">
-        <p>Environment</p>
+      <div className={styles.subtitle} 
+      // id="environment"
+      >
+        <p2>Environment</p2>
       </div>
+
+      <div style={{paddingBottom:'1rem'}} id="environment" />
 
       <div
         className={styles.linkContainer}
