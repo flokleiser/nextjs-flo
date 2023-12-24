@@ -2,7 +2,7 @@
 
 ## Currently working on: 
 ### Focus/Dim Buttons:
-- [ ] get some padding on top of id for focus button? (make new <div> with 1rem padding and take away 1rem padding from subtitle div) or
+- [ ] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
 - [ ] instead of alligning the top with the top of viewport --> make it centered, equal spacing top and bottom
 - [ ] Implement focus button on all pages
 ### Page Divider:
