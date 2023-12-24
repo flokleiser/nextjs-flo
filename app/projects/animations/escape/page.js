@@ -6,6 +6,7 @@ import { DiGoogleDrive } from "react-icons/di";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import React, { useState, useEffect } from "react";
+import { MdFilterCenterFocus } from "react-icons/md";
 
 // export const metadata = {
 //     title: 'Animations - Escape',
@@ -20,6 +21,14 @@ export default function escape() {
   const handleToggleClick = () => {
     setDim(!isDim);
     };
+
+   const handleScroll = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({ behavior: "smooth" });
+  }; 
 
   useEffect(() => {
     document.title = "Animations - Escape";
@@ -95,17 +104,38 @@ export default function escape() {
            </p> 
             </div>
 
-            <div style={{ padding: '1rem' }}> </div> 
+            <div style={{ padding: '1rem' }} id="escape" /> 
 
             <div className={styles.linkContainer}>
-            <div style={{ padding: "1.25rem" }}> </div>
+            <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
+
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#escape"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+        <div style={{ padding: "0.125rem" }}> </div>
             <div className='flex align-center'>
-            <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}
         //  src="https://drive.google.com/file/d/1kJvpWzJHuDWREHTwNt2n_IL_YdrhjusF/preview"> 
             src="https://www.youtube.com/embed/F1f6YaIqRZI?si=9flICqQyXYAAeEGu&rel=0">

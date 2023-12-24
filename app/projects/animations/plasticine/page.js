@@ -6,6 +6,7 @@ import { DiGoogleDrive } from "react-icons/di";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import React, { useState, useEffect } from "react";
+import { MdFilterCenterFocus } from "react-icons/md";
 
 // export const metadata = {
 //     title: 'Animations - Plasticine (A)life',
@@ -18,6 +19,14 @@ export default function plasticine() {
   const handleToggleClick = () => {
     setDim(!isDim);
     };
+  
+    const handleScroll = (e) => {
+      e.preventDefault();
+      const href = e.currentTarget.href;
+      const targetId = href.replace(/.*\#/, "");
+      const elem = document.getElementById(targetId);
+      elem?.scrollIntoView({ behavior: "smooth" });
+    }; 
 
   useEffect(() => {
     document.title = "Animations - Plasticine (A)life";
@@ -96,23 +105,47 @@ export default function plasticine() {
             </div>
             <div className={styles.subtitledescription}>
               <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-                <a style={{paddingBottom: '2rem'}}
+                <a style={{paddingBottom: '0rem'}}
                 href="https://www.instagram.com/tiriltattoo/" target="_blank">
             Made in collaboration with Maude Tiril.
             </a>
             </div>
             </div>
 
+            <div style={{padding:'1rem'}} id="plasticine" />
+
             <div className={styles.linkContainer}>
-            <div style={{ padding: "1.25rem" }}> </div>
+            <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
+
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#plasticine"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+        <div style={{ padding: "0.125rem" }}> </div>
 
             <div className='flex align-center'>
-            <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
+          
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792&rel=0">
             </iframe>
             </div>

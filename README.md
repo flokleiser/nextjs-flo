@@ -10,6 +10,7 @@
 ### Scrolling Progress Bar:
 - [ ] Framer motion progress bar thingy for scrolling
 - [ ] Try out framer motion scroll animations (useViewportScroll)
+- [ ] "back to top" button?
 
 ## TO FIX:
 ### Image/Page loading:

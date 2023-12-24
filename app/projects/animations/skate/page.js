@@ -6,6 +6,7 @@ import { DiGoogleDrive } from "react-icons/di";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import React, { useState, useEffect } from "react";
+import { MdFilterCenterFocus } from "react-icons/md";
 
 // export const metadata = {
 //     title: 'Animations - Skate',
@@ -18,6 +19,14 @@ export default function skate() {
   const handleToggleClick = () => {
     setDim(!isDim);
     };
+
+    const handleScroll = (e) => {
+      e.preventDefault();
+      const href = e.currentTarget.href;
+      const targetId = href.replace(/.*\#/, "");
+      const elem = document.getElementById(targetId);
+      elem?.scrollIntoView({ behavior: "smooth" });
+    }; 
 
   useEffect(() => {
     document.title = "Animations - Skate";
@@ -100,9 +109,9 @@ export default function skate() {
             src="https://drive.google.com/uc?id=1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0" controls>
             </video> */}
         <div className = {styles.subtitle}>
-              <p>
+              <p2>
                 Skate Loop
-              </p>
+              </p2>
         </div>
 
         <div className={styles.subtitledescription}>
@@ -110,17 +119,39 @@ export default function skate() {
             A short sequence of myself, edited and rotoscoped in Adobe After Effects.
             </p>
             </div>
-            <div style={{ padding: '1rem' }}> </div> 
+            <div style={{ padding: '1rem' }} id="loop"> </div> 
 
             <div className={styles.linkContainer}>
-            <div style={{ padding: "1.25rem" }}> </div>
+            <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
+
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#loop"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+        <div style={{ padding: "0.125rem" }}> </div> 
             <div className='flex align-center'>
-            <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
+           
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"> 
             </iframe>
             </div>
@@ -130,9 +161,9 @@ export default function skate() {
             <div style={{ padding: '2rem' }}> </div>
 
         <div className = {styles.subtitle}>
-              <p>
+              <p2>
              Skate Doodles 
-              </p>
+              </p2>
             </div>
 
               <div className={styles.subtitledescription}>
@@ -140,17 +171,39 @@ export default function skate() {
             4 stop-motion sequences, sketched  on semi transparent paper and edited in Premiere Pro.            
             </p>
             </div>
-            <div style={{ padding: '1rem' }}> </div> 
+            <div style={{ padding: '1rem' }} id="doodle"> </div> 
       
             <div className={styles.linkContainer}>
-            <div style={{ padding: "1.25rem" }}> </div>
+            <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
+
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#doodle"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+        <div style={{ padding: "0.125rem" }}> </div>
             <div className='flex align-center'>
-            <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
+           
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0">
             </iframe>
             </div>
