@@ -1,22 +1,25 @@
 # To-Do/Ideas List:
 
 ## Currently working on: 
-### Loading.js
-- [ ] make work on projects page
+### Back to top button
+- [ ] Implement on testing page
 ### Page Divider:
 - [ ] Figure out if needed on all pages or not
 ### Scrolling Progress Bar:
 - [ ] Framer motion progress bar thingy for scrolling
 - [ ] Try out framer motion scroll animations (useViewportScroll)
-- [ ] "back to top" button?
+
 
 ## TO FIX:
+### Suspense/Loading.js
+- [ ] Figure out why it doesnt work on deployment
 ### Image/Page loading:
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
 ### Image/Gif Animations:
 - [ ] Image gallery : image left/right animations 
 - [ ] Animation gifs --> not weird stretching
+
 
 ## Ideas for when bored:
 ### Page Transitions:
