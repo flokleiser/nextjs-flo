@@ -13,6 +13,15 @@
   bottom: 0;
 }
 
+.pageDivider {
+  position:relative;
+  height:2px;
+  width:80vw;
+  opacity:0.3;
+  color: white;
+
+}
+
 .progress-bar {
   position: fixed;
   top: 100;

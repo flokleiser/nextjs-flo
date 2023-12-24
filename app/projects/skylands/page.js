@@ -202,7 +202,10 @@ export default function skylands() {
         </p>
       </div>
 
-      <div style={{ padding: "1rem" }} />
+      <div style={{padding:'1rem'}} />
+            <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
 
       <AnimatePresence>
       {isDim && (
@@ -355,7 +358,9 @@ export default function skylands() {
         </div>
       </div>
 
-      <div style={{ padding: "1rem" }}> </div>
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
 
       <div className={styles.subtitle}>
         <p2>Environment</p2>
@@ -429,7 +434,9 @@ export default function skylands() {
         </div>
       </div>
 
-      <div style={{ padding: "1rem" }}> </div>
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
 
       <div className={styles.subtitle}>
         <p2>Boat Showcase</p2>

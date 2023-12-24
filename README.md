@@ -1,12 +1,8 @@
 # To-Do/Ideas List:
 
 ## Currently working on: 
-### Focus/Dim Buttons:
-- [ ] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
-- [ ] instead of alligning the top with the top of viewport --> make it centered, equal spacing top and bottom
-- [ ] Implement focus button on all pages
 ### Page Divider:
-- [ ] Add a "page divider", a half transparent thin line to "section" different parts of a page?
+- [ ] Figure out if needed on all pages or not
 ### Scrolling Progress Bar:
 - [ ] Framer motion progress bar thingy for scrolling
 - [ ] Try out framer motion scroll animations (useViewportScroll)
@@ -29,6 +25,11 @@
 - [ ] Loading.js page more betterer
 ### Footer
 - [ ] Make website footer?
+### Page Divider:
+- [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
+### Focus/Dim Buttons:
+- [x] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
+- [x] Implement focus button on all pages
 
 ## Checklist before final publish:
 - [ ] Fix texts

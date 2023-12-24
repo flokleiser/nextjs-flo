@@ -177,6 +177,10 @@ return () => {
             </p>
             </div>
 
+            <div style={{padding:'1rem'}} />
+            <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
            
             <div className="">
 

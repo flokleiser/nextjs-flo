@@ -190,7 +190,10 @@ return () => {
             </div> 
             {/* <Image src="/images/cad/cad website.png"width={800} height={800}/>  */}
 
-
+            {/* <div style={{padding:'1rem'}} />
+            <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} /> */}
 
             <div className="">
 
@@ -305,6 +308,10 @@ return () => {
                     </a>
             </div>
             </div>
+
+            <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
 
               <div className="">
               <div className="p-3 container mx-auto">

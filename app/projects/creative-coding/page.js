@@ -246,6 +246,11 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
             <p> Examples: </p>
             </div> */}
 
+
+            <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
       <AnimatePresence>
         {selectedImage && (
           <motion.div
