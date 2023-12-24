@@ -1,11 +1,12 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Suspense} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
+
 
 
 const data = [
@@ -162,6 +163,7 @@ useEffect(() => {
 
 
     return (
+
         <main className={styles.main}>
               <div className="relative 
    flex 
@@ -196,7 +198,7 @@ useEffect(() => {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-
+ 
           <div className={styles.backbutton}>
             <h1> <Link href="/projects">All Projects </Link> </h1>
             </div>
@@ -355,8 +357,9 @@ useEffect(() => {
               </div>
         
    
-
+                     
         </main>
+
     )
 }
 
