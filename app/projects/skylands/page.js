@@ -9,6 +9,7 @@ import { DiGithubBadge } from "react-icons/di";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
+import { MdFilterCenterFocus } from "react-icons/md";
 
 const data = [
   { image: "/images/skylands/skylands3.png", id: 0 },
@@ -35,6 +36,14 @@ export default function skylands() {
   const handleToggleClick = () => {
     setDim(!isDim);
     };
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -274,23 +283,47 @@ export default function skylands() {
       </div>
 
       <div className={styles.subtitle}>
-        <p>Interactables</p>
+        <p2>Interactables</p2>
       </div>
 
+      <div style={{paddingBottom:'1rem'}} id='interactables' />
+
       <div className={styles.linkContainer}>
-        <div style={{ padding: "1.25rem" }}> </div>
+      <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+        <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#interactables"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+
+        <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
+
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
           ></iframe>
+
         </div>
         <div style={{ padding: "1.25rem" }}> </div>
       </div>
@@ -325,20 +358,41 @@ export default function skylands() {
       <div style={{ padding: "1rem" }}> </div>
 
       <div className={styles.subtitle}>
-        <p>Environment</p>
+        <p2>Environment</p2>
       </div>
+      <div style={{paddingBottom:'1rem'}} id='environment' />
 
-      <div className={styles.linkContainer} 
-      // style={{zIndex: 52}}
-      >
-        <div style={{ padding: "1.25rem" }}> </div>
+      <div className={styles.linkContainer} >
+      <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
+
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#environment"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+        <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
+    
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
@@ -378,18 +432,42 @@ export default function skylands() {
       <div style={{ padding: "1rem" }}> </div>
 
       <div className={styles.subtitle}>
-        <p>Boat Showcase</p>
+        <p2>Boat Showcase</p2>
       </div>
+      <div style={{paddingBottom:'1rem'}} id='boat' />
 
       <div className={styles.linkContainer}>
-        <div style={{ padding: "1.25rem" }}> </div>
+      <div style={{ padding: "0.125rem" }}> </div>
+        <div className="flex ml-1 ">
+          {/* place-self-start */}
+
+          <button
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            onClick={handleToggleClick}
+          >
+            {isDim ? (
+              <LuLightbulb style={{ fontSize: "1.5rem" }} />
+            ) : (
+              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+            )}
+          </button>
+
+          <Link
+            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            style={{ zIndex: 53 }}
+            href="#boat"
+            rel="noopener noreferrer"
+            onClick={handleScroll}
+          >
+            {" "}
+            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+          </Link>
+        </div>
+
+        <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
-        <button className="absolute mt-3 ml-3 align-right bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-      style={{ zIndex: 53}}
-      
-      onClick={handleToggleClick}>
-        {isDim? <LuLightbulb style={{ fontSize: '2rem' }}/> : <LuLightbulbOff style={{ fontSize: '2rem' }} />}
-      </button>
+
           <iframe
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
