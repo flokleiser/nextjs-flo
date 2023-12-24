@@ -1,6 +1,8 @@
 # To-Do/Ideas List:
 
 ## Currently working on: 
+### Loading.js
+- [ ] make work on projects page
 ### Page Divider:
 - [ ] Figure out if needed on all pages or not
 ### Scrolling Progress Bar:

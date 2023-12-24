@@ -12,6 +12,7 @@ import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import { BiSolidFileBlank, BiLinkExternal } from "react-icons/bi";
 import { DiGithubBadge } from "react-icons/di";
 import { MdFilterCenterFocus } from "react-icons/md";
+import { Puff } from "react-loader-spinner";
 
 const data = [
   { image: "/images/skylands/skylands3.png", id: 0 },
@@ -188,6 +189,16 @@ export default function testing() {
    before:lg:h-[360px] 
    z-[-1]"
       ></div>
+        
+        {/* <Puff
+  visible={true}
+  height="80"
+  width="80"
+  color="white"
+  ariaLabel="puff-loading"
+  wrapperStyle={{}}
+  wrapperClass=""
+  /> */}
 
       <motion.div
         className="progress-bar"
