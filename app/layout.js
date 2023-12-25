@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Assistant } from 'next/font/google';  
 import Navbar from './components/Navbar';
-import NavbarTest from './components/NavbarTest';
 import { Suspense } from 'react';
 // import { useState } from 'react';
 import Loading from './loading.js'
@@ -19,8 +18,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body className={assistant.className}>
-      {/* <Navbar /> */}
-      <NavbarTest />
+      <Navbar />
+      {/* <NavbarTest /> */}
       <Suspense fallback={<Loading />}>
         <div className="pt-[60px]">
       {children}
