@@ -5,9 +5,10 @@
 - [x] Navbar fixed on top of screen?
 - [ ] adjust spacing for focus button based on new navbar
 
+- [ ] Fix linkpage expandable animations (cv/skills)
 
-
-- [ ] Titles sticky until scroll by?
+- [ ] Preload gifs on animation projects page
+- [ ] figure out how preloading works for images (cards)
 
 - [ ] Figure out on what pages the page divider makes sense
 
@@ -27,16 +28,23 @@
 
 
 ## Ideas for when bored:
+
+- [ ] Titles sticky until scroll by?
+
 ### Page Transitions:
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 - [ ] Animation onSelect (on clicking projects/portfolio)
 - [ ] Page transitions seem to be broken on nextjs13 using the app router for some weird reason, figure out why -> useRouter/usePath etc
+
 ### Loading.js
 - [ ] Loading.js page more betterer
+
 ### Footer
 - [ ] Make website footer?
+
 ### Page Divider:
 - [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
+
 ### Focus/Dim Buttons:
 - [x] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
 - [x] Implement focus button on all pages
