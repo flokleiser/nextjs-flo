@@ -121,7 +121,7 @@ export default function music() {
             An animation to the song “Funk For Food” by Moderator. Drawn in Photoshop, animated in Adobe After Effects.
             </p>
             </div>
-            <div style={{ padding: '1rem' }} id="publictransport"> </div> 
+            <div style={{ padding: '1rem', scrollMargin:'60px' }} id="publictransport"> </div> 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
@@ -175,7 +175,7 @@ export default function music() {
             An animation of my room, drawn in Photoshop and animated in Adobe After Effects. To the song “Be Encouraged” by Kiefer.
             </p>
             </div>
-            <div style={{ padding: '1rem' }}id="piano"> </div> 
+            <div style={{ padding: '1rem', scrollMargin:'60px' }}id="piano"> </div> 
 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>
@@ -229,7 +229,7 @@ export default function music() {
             An animation/visualizer to Milky Chances “Flashed Junk Mind”, made in Adobe After Effects.
             </p>
             </div>
-            <div style={{ padding: '1rem' }} id="blurry"> </div> 
+            <div style={{ padding: '1rem', scrollMargin:'60px'}} id="blurry"> </div> 
 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>

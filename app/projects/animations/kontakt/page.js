@@ -100,7 +100,7 @@ export default function kontakt() {
               </p>
             </div>
 
-            <div style={{ padding: '1rem' }} id="kontakt"> </div> 
+            <div style={{ padding: '1rem', scrollMargin:'60px' }} id="kontakt"> </div> 
 {/*           
             <video
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>

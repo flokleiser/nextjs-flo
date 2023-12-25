@@ -94,7 +94,9 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-      <div className={styles.backbuttonHomepage}>
+      <div className={styles.backbuttonHomepage} 
+      style={{position:'fixed', zIndex:9999}}
+      >
         <h1>
           {" "}
           <Link href="/projects/testing">Testing</Link>{" "}

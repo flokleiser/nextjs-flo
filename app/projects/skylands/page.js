@@ -289,7 +289,7 @@ export default function skylands() {
         <p2>Interactables</p2>
       </div>
 
-      <div style={{paddingBottom:'1rem'}} id='interactables' />
+      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='interactables' />
 
       <div className={styles.linkContainer}>
       <div style={{ padding: "0.125rem" }}> </div>
@@ -365,7 +365,7 @@ export default function skylands() {
       <div className={styles.subtitle}>
         <p2>Environment</p2>
       </div>
-      <div style={{paddingBottom:'1rem'}} id='environment' />
+      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='environment' />
 
       <div className={styles.linkContainer} >
       <div style={{ padding: "0.125rem" }}> </div>
@@ -441,7 +441,7 @@ export default function skylands() {
       <div className={styles.subtitle}>
         <p2>Boat Showcase</p2>
       </div>
-      <div style={{paddingBottom:'1rem'}} id='boat' />
+      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='boat' />
 
       <div className={styles.linkContainer}>
       <div style={{ padding: "0.125rem" }}> </div>

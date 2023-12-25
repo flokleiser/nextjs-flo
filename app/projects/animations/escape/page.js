@@ -104,7 +104,7 @@ export default function escape() {
            </p> 
             </div>
 
-            <div style={{ padding: '1rem' }} id="escape" /> 
+            <div style={{ padding: '1rem', scrollMargin:'60px'}} id="escape" /> 
 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>

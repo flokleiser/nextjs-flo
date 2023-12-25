@@ -112,7 +112,7 @@ export default function plasticine() {
             </div>
             </div>
 
-            <div style={{padding:'1rem'}} id="plasticine" />
+            <div style={{padding:'1rem', scrollMargin:'60px'}} id="plasticine" />
 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>

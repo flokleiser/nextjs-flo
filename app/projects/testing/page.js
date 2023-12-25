@@ -280,14 +280,18 @@ export default function testing() {
         </AnimatePresence>
       </div>
 
-      <div className={styles.backbutton} style={{zIndex:9999,position:"fixed"}}>
+      <div className={styles.backbutton} style={{zIndex:9999,
+        position:"fixed"
+        }}>
         <h1>
           {" "}
           <Link href="/">Home</Link>{" "}
         </h1>
       </div>
 
-      <div className={styles.backbutton} style={{ marginRight: "4rem", zIndex:9999, position:"fixed"}}>
+      <div className={styles.backbutton} style={{ marginRight: "4rem", zIndex:9999, 
+      position:"fixed"
+      }}>
         <h1>
           {" "}
           <Link href="/projects/testing/testing2">Testing 2 </Link>{" "}
@@ -389,7 +393,7 @@ export default function testing() {
         <p2>Interactables</p2>
       </div>
     
-    <div style={{paddingBottom:'1rem'}} id='interactables' />
+    <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='interactables' />
 
       <div className={styles.linkContainer} 
       // id="interactables"
@@ -468,7 +472,7 @@ export default function testing() {
         <p2>Environment</p2>
       </div>
 
-      <div style={{paddingBottom:'1rem'}} id="environment" />
+      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id="environment" />
 
       <div
         className={styles.linkContainer}

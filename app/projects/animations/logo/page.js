@@ -102,7 +102,7 @@ export default function logo() {
         </p>
       </div>
 
-      <div style={{ padding: "1rem" }} id="logo"> </div>
+      <div style={{ padding: "1rem" ,scrollMargin:'60px'}} id="logo"> </div>
       {/* <video
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}

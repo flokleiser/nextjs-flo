@@ -4,6 +4,7 @@
 
 - [x] Navbar fixed on top of screen?
 - [ ] adjust spacing for focus button based on new navbar
+    --> add scrollMargin:'60px' to element with scroll-id
 
 - [ ] Fix linkpage expandable animations (cv/skills)
 
