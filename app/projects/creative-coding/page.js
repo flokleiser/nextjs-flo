@@ -170,7 +170,9 @@ export default function creativeCoding() {
    z-[-1]"
       ></div>
 
-      <div className={styles.backbutton}>
+      <div className={styles.backbutton}
+       style={{position:'fixed', zIndex:9999}}
+       >
         <h1>
           {" "}
           <Link href="/projects">All Projects </Link>{" "}

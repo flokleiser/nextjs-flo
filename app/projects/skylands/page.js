@@ -186,7 +186,9 @@ export default function skylands() {
    z-[-1]"
       ></div>
 
-      <div className={styles.backbutton}>
+      <div className={styles.backbutton}
+       style={{position:'fixed', zIndex:9999}}
+       >
         <h1>
           {" "}
           <Link href="/projects">All Projects </Link>{" "}
@@ -289,7 +291,7 @@ export default function skylands() {
         <p2>Interactables</p2>
       </div>
 
-      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='interactables' />
+      <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='interactables' />
 
       <div className={styles.linkContainer}>
       <div style={{ padding: "0.125rem" }}> </div>
@@ -365,7 +367,7 @@ export default function skylands() {
       <div className={styles.subtitle}>
         <p2>Environment</p2>
       </div>
-      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='environment' />
+      <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='environment' />
 
       <div className={styles.linkContainer} >
       <div style={{ padding: "0.125rem" }}> </div>
@@ -441,7 +443,7 @@ export default function skylands() {
       <div className={styles.subtitle}>
         <p2>Boat Showcase</p2>
       </div>
-      <div style={{paddingBottom:'1rem', scrollMargin:'60px'}} id='boat' />
+      <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='boat' />
 
       <div className={styles.linkContainer}>
       <div style={{ padding: "0.125rem" }}> </div>

@@ -86,7 +86,9 @@ export default function plasticine() {
       )}
       </AnimatePresence>
                      
-          <div className={styles.backbutton}>
+          <div className={styles.backbutton}
+           style={{position:'fixed', zIndex:9999}}
+           >
             <h1> <Link href="/projects/animations">All Animations</Link> </h1>
             </div>
 
@@ -112,7 +114,7 @@ export default function plasticine() {
             </div>
             </div>
 
-            <div style={{padding:'1rem', scrollMargin:'60px'}} id="plasticine" />
+            <div style={{padding:'1rem', scrollMargin:'50px'}} id="plasticine" />
 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>

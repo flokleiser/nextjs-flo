@@ -86,7 +86,9 @@ export default function skate() {
       )}
       </AnimatePresence>
 
-          <div className={styles.backbutton}>
+          <div className={styles.backbutton}
+           style={{position:'fixed', zIndex:9999}}
+           >
             <h1> <Link href="/projects/animations">All Animations </Link> </h1>
             </div>
 
@@ -119,7 +121,7 @@ export default function skate() {
             A short sequence of myself, edited and rotoscoped in Adobe After Effects.
             </p>
             </div>
-            <div style={{ padding: '1rem', scrollMargin:'60px' }} id="loop"> </div> 
+            <div style={{ padding: '1rem', scrollMargin:'50px' }} id="loop"> </div> 
 
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>
@@ -174,7 +176,7 @@ export default function skate() {
             4 stop-motion sequences, sketched  on semi transparent paper and edited in Premiere Pro.            
             </p>
             </div>
-            <div style={{ padding: '1rem', scrollMargin:'60px'}} id="doodle"> </div> 
+            <div style={{ padding: '1rem', scrollMargin:'50px'}} id="doodle"> </div> 
       
             <div className={styles.linkContainer}>
             <div style={{ padding: "0.125rem" }}> </div>

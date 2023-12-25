@@ -87,7 +87,9 @@ export default function logo() {
       )}
       </AnimatePresence>
 
-      <div className={styles.backbutton}>
+      <div className={styles.backbutton}
+       style={{position:'fixed', zIndex:9999}}
+       >
         <h1>
           {" "}
           <Link href="/projects/animations">All Animations</Link>{" "}
@@ -102,7 +104,7 @@ export default function logo() {
         </p>
       </div>
 
-      <div style={{ padding: "1rem" ,scrollMargin:'60px'}} id="logo"> </div>
+      <div style={{ padding: "1rem" ,scrollMargin:'50px'}} id="logo"> </div>
       {/* <video
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}
