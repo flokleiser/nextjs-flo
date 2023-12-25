@@ -226,7 +226,8 @@ export default function links() {
         <ExpandableButton>
 
 <div style={{ padding: "1rem" }}></div>
-<div className="flex flex-wrap justify-center gap-2">
+<div className="flex relative flex-wrap justify-center gap-2">
+  <div className="flex  gap-2">
 <SiAdobeillustrator size={60} />
 <SiAdobephotoshop size={60} />
 <SiAdobeindesign size={60} />
@@ -241,6 +242,7 @@ width={60}
 height={24}
 style={{ filter: "invert(1)" }}
 />
+</div>
 </div>
 <div style={{ padding: "1rem" }}></div>
 
