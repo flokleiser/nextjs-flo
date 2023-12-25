@@ -1,11 +1,16 @@
 # To-Do/Ideas List:
 
 ## Currently working on: 
-### Back to top button
-- [ ] Implement on testing page
-### Page Divider:
-- [ ] Figure out if needed on all pages or not
-### Scrolling Progress Bar:
+
+- [x] Navbar fixed on top of screen?
+- [ ] adjust spacing for focus button based on new navbar
+
+
+
+- [ ] Titles sticky until scroll by?
+
+- [ ] Figure out on what pages the page divider makes sense
+
 - [ ] Framer motion progress bar thingy for scrolling
 - [ ] Try out framer motion scroll animations (useViewportScroll)
 

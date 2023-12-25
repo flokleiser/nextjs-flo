@@ -280,19 +280,21 @@ export default function testing() {
         </AnimatePresence>
       </div>
 
-      <div className={styles.backbutton}>
+      <div className={styles.backbutton} style={{zIndex:9999,position:"fixed"}}>
         <h1>
           {" "}
           <Link href="/">Home</Link>{" "}
         </h1>
       </div>
 
-      <div className={styles.backbutton} style={{ marginRight: "4rem" }}>
+      <div className={styles.backbutton} style={{ marginRight: "4rem", zIndex:9999, position:"fixed"}}>
         <h1>
           {" "}
           <Link href="/projects/testing/testing2">Testing 2 </Link>{" "}
         </h1>
       </div>
+
+{/* <div style={{paddingTop:'4rem'}} ></div> */}
 
       <h1 className={styles.title}>Testing</h1>
 
