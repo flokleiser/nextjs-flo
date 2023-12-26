@@ -4,8 +4,7 @@
 
 ### New Links Page:
 - [ ] Figure out cards and text next to each other
-
-
+- [ ] i could just do the project cards over again but might be boring
 
 - [ ] Fix linkpage expandable animations (cv/skills)
 
