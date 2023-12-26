@@ -182,12 +182,12 @@ export default function links() {
         <div
           className={styles.linkContainerImage}
           style={{
-            backgroundImage: "url(/images/flo11.png)", 
+            backgroundImage: "url(/images/links/flofinal.png)", 
             opacity: 0.5, 
             ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio3.png)" } : null),
             ...(isHoveringGithub? { backgroundImage: "url(/images/links/github2.png)" } : null),
             ...(isHoveringGoogleDrive? { backgroundImage: "url(/images/links/googledrive2.png)" } : null),
-            ...(isHoveringCV? { backgroundImage: "url(/images/links/cv3.png)" } : null),
+            ...(isHoveringCV? { backgroundImage: "url(/images/links/cv2.png)" } : null),
           }}
           >
         </div>

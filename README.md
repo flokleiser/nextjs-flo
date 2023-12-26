@@ -2,6 +2,11 @@
 
 ## Currently working on: 
 
+### New Links Page:
+- [ ] Figure out cards and text next to each other
+
+
+
 - [ ] Fix linkpage expandable animations (cv/skills)
 
 - [ ] Preload gifs on animation projects page
@@ -14,8 +19,6 @@
 
 
 ## TO FIX:
-### Suspense/Loading.js
-- [ ] Figure out why it doesnt work on deployment
 ### Image/Page loading:
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
