@@ -45,11 +45,9 @@ export default function testing() {
     if (isHoveringPortfolio) {
       setAnimationClass(styles.linkPageAnimationDiv1);
     } else if (animationClass === styles.linkPageAnimationDiv1) {
-      setAnimationClass(styles.linkPageAnimationDiv2);
+      setAnimationClass(styles.linkPjageAnimationDiv2);
     }
   }, [isHoveringPortfolio]);
-
-
 
   return (
     <main className={styles.main}>
@@ -90,111 +88,163 @@ export default function testing() {
 
       <h1 className={styles.title}>Links/Info</h1>
 
-      
-        <p className={styles.subtitledescription}>
-          Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
-          Switzerland. <br></br>
-          My passions include drawing, editing, programming, gaming, skating and
-          music. <br></br>I am currently applying to study Interaction Design /
-          Digital Ideation.
-        </p>
-        
-        <div style={{padding:'1rem'}} />
-            <div style={{ padding: "0.5rem" }} />
+      <p className={styles.subtitledescription}>
+        Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
+        Switzerland. <br></br>
+        My passions include drawing, editing, programming, gaming, skating and
+        music. <br></br>I am currently applying to study Interaction Design /
+        Digital Ideation.
+      </p>
+
+      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} />
+      <div style={{ padding: "1rem" }} />
 
-
-        <div className={styles.linkContainerLinks}>
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver={handleHoverPortfolio}
-            onMouseMove={() => setIsHoveringPortfolio(true)}
-            onMouseLeave={() => setIsHoveringPortfolio(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a
-                  href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
-                  target="_blank"
-                >
-                  <CiImageOn />
-                  Portfolio (.pdf)
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver= {handleHoverGithub}
-            onMouseMove={() => setIsHoveringGithub(true)}
-            onMouseLeave={() => setIsHoveringGithub(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a href="https://github.com/flokleiser" target="_blank">
-                  <DiGithubBadge />
-                  Github.com
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver={handleHoverGoogleDrive}
-            onMouseMove={() => setIsHoveringGoogleDrive(true)}
-            onMouseLeave={() => setIsHoveringGoogleDrive(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a
-                  href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing"
-                  target="_blank"
-                >
-                  <DiGoogleDrive />
-                  Google Drive
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver={handleHoverCV}
-            onMouseMove={() => setIsHoveringCV(true)}
-            onMouseLeave={() => setIsHoveringCV(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a
-                  href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
-                  target="_blank"
-                >
-                  <CiViewTimeline />
-                  CV (.pdf)
-                </a>
-              </p>
-            </div>
+      <div className={styles.linkContainerLinks}  
+      // style={{gap:'2rem'}}
+      >
+        <div className="flex-col mx-11">
+        <div
+          className={styles.buttonLinksPage}
+          onMouseOver={handleHoverPortfolio}
+          onMouseMove={() => setIsHoveringPortfolio(true)}
+          onMouseLeave={() => setIsHoveringPortfolio(false)}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
+                target="_blank"
+              >
+                <CiImageOn />
+                Portfolio (.pdf)
+              </a>
+            </p>
           </div>
         </div>
 
-        <div style={{ padding: "1rem" }}> </div>
+        <div style={{padding:'0.5rem'}}/>
 
+        <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        My portfolio <br/> Interaction Design / <br/> Digital Ideation <br/> made in 2023 <br/>
+        </p>
+        </div>
+
+        </div>
+        
         <div
           className={styles.linkContainerImage}
           style={{
-            backgroundImage: "url(/images/links/flofinal.png)", 
-            opacity: 0.5, 
-            ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio3.png)" } : null),
-            ...(isHoveringGithub? { backgroundImage: "url(/images/links/github2.png)" } : null),
-            ...(isHoveringGoogleDrive? { backgroundImage: "url(/images/links/googledrive2.png)" } : null),
-            ...(isHoveringCV? { backgroundImage: "url(/images/links/cv2.png)" } : null),
-          }}
-          >
-        </div>
+            backgroundImage: "url(/images/links/portfolio3.png)", 
+            opacity: 0.5}}
+            />
 
+      </div>
+      
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <div className={styles.linkContainerLinks} 
+      // style={{gap:'2rem'}}
+      style={{marginLeft:'2rem', marginRight:'2rem'}}
+      >
+     
+      <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/github2.png)", 
+            opacity: 0.5}}
+            />
+ <div className="flex-col mx-11">
+        <div
+          className={styles.buttonLinksPage}
+          onMouseOver={handleHoverGithub}
+          onMouseMove={() => setIsHoveringGithub(true)}
+          onMouseLeave={() => setIsHoveringGithub(false)}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a href="https://github.com/flokleiser" target="_blank">
+                <DiGithubBadge />
+                Github.com
+              </a>
+            </p>
+          </div>
+        </div>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        My portfolio <br/> Interaction Design / <br/> Digital Ideation <br/> made in 2023 <br/>
+        </p>
+      </div>
+        </div>
+      </div>
+
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <div className={styles.linkContainerLinks} style={{gap:'2rem'}}>
+        <div
+          className={styles.buttonLinksPage}
+          onMouseOver={handleHoverGoogleDrive}
+          onMouseMove={() => setIsHoveringGoogleDrive(true)}
+          onMouseLeave={() => setIsHoveringGoogleDrive(false)}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing"
+                target="_blank"
+              >
+                <DiGoogleDrive />
+                Google Drive
+              </a>
+            </p>
+          </div>
+        </div>
+        <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/googledrive2.png)", 
+            opacity: 0.5}}
+      />
+      </div>
+
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <div className={styles.linkContainerLinks} style={{gap:'2rem'}}>
+      <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/cv2.png)", 
+            opacity: 0.5}}
+      />
+        <div
+          className={styles.buttonLinksPage}
+          onMouseOver={handleHoverCV}
+          onMouseMove={() => setIsHoveringCV(true)}
+          onMouseLeave={() => setIsHoveringCV(false)}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
+                target="_blank"
+              >
+                <CiViewTimeline />
+                CV (.pdf)
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ padding: "1rem" }}> </div>
     </main>
   );
 }
