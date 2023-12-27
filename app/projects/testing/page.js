@@ -122,11 +122,12 @@ export default function testing() {
       style={{marginLeft:'2rem', marginRight:'2rem'}}
       >
      
-      <div
+      <motion.div whileInView={{opacity:0.5}} transition={{duration:1}}
           className={styles.linkContainerImage}
           style={{
             backgroundImage: "url(/images/links/github2.png)", 
-            opacity: 0.5}}
+            // opacity: 0.5}}
+            opacity:0}}
             />
  <div className="flex-col mx-11">
         <div

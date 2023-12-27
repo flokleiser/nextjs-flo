@@ -11,11 +11,6 @@
 
 - [ ] New links page: some onhover animation for images maybe?
 
-- [ ] Figure out cards and text next to each other
-- [ ] i could just do the project cards over again but might be boring
-
-- [ ] Fix linkpage expandable animations (cv/skills)
-
 - [ ] Preload gifs on animation projects page
 - [ ] figure out how preloading works for images (cards)
 
