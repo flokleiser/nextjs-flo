@@ -22,33 +22,6 @@ export default function testing() {
     document.title = "Testing";
   }, []);
 
-  const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
-  const [isHoveringGithub, setIsHoveringGithub] = useState(false);
-  const [isHoveringGoogleDrive, setIsHoveringGoogleDrive] = useState(false);
-  const [isHoveringCV, setIsHoveringCV] = useState(false);
-
-  const handleHoverPortfolio = () => {
-    setIsHoveringPortfolio(!isHoveringPortfolio);
-  };
-  const handleHoverGithub = () => {
-    setIsHoveringGithub(!isHoveringGithub);
-  };
-  const handleHoverGoogleDrive = () => {
-    setIsHoveringGoogleDrive(!isHoveringGoogleDrive);
-  };
-  const handleHoverCV = () => {
-    setIsHoveringCV(!isHoveringCV);
-  };
-
-  const [animationClass, setAnimationClass] = useState("");
-  useEffect(() => {
-    if (isHoveringPortfolio) {
-      setAnimationClass(styles.linkPageAnimationDiv1);
-    } else if (animationClass === styles.linkPageAnimationDiv1) {
-      setAnimationClass(styles.linkPjageAnimationDiv2);
-    }
-  }, [isHoveringPortfolio]);
-
   return (
     <main className={styles.main}>
       <div
@@ -107,9 +80,6 @@ export default function testing() {
         <div className="flex-col mx-11">
         <div
           className={styles.buttonLinksPage}
-          onMouseOver={handleHoverPortfolio}
-          onMouseMove={() => setIsHoveringPortfolio(true)}
-          onMouseLeave={() => setIsHoveringPortfolio(false)}
         >
           <div className={styles.subtitledescription}>
             <p>
@@ -128,7 +98,7 @@ export default function testing() {
 
         <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        My portfolio <br/> Interaction Design / <br/> Digital Ideation <br/> made in 2023 <br/>
+        My portfolio for <br/> Interaction Design / <br/> Digital Ideation <br/> made in 2023 <br/>
         </p>
         </div>
 
@@ -161,22 +131,20 @@ export default function testing() {
  <div className="flex-col mx-11">
         <div
           className={styles.buttonLinksPage}
-          onMouseOver={handleHoverGithub}
-          onMouseMove={() => setIsHoveringGithub(true)}
-          onMouseLeave={() => setIsHoveringGithub(false)}
         >
           <div className={styles.subtitledescription}>
             <p>
               <a href="https://github.com/flokleiser" target="_blank">
                 <DiGithubBadge />
-                Github.com
+                GitHub.com
               </a>
             </p>
           </div>
         </div>
+        <div style={{padding:'0.5rem'}}/>
       <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        My portfolio <br/> Interaction Design / <br/> Digital Ideation <br/> made in 2023 <br/>
+        My GitHub repositories <br/> for the p5js project, <br/> the "Skylands" VR game <br/> and the code for this website <br/>
         </p>
       </div>
         </div>
@@ -186,12 +154,10 @@ export default function testing() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "1rem" }} />
 
-      <div className={styles.linkContainerLinks} style={{gap:'2rem'}}>
+      <div className={styles.linkContainerLinks}>
+      <div className="flex-col mx-11">
         <div
           className={styles.buttonLinksPage}
-          onMouseOver={handleHoverGoogleDrive}
-          onMouseMove={() => setIsHoveringGoogleDrive(true)}
-          onMouseLeave={() => setIsHoveringGoogleDrive(false)}
         >
           <div className={styles.subtitledescription}>
             <p>
@@ -205,6 +171,13 @@ export default function testing() {
             </p>
           </div>
         </div>
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        All the files,<br/> including the images, <br/> videos, and animations <br/> in high quality <br/>     
+       </p>
+      </div>
+      </div>
         <div
           className={styles.linkContainerImage}
           style={{
@@ -217,18 +190,16 @@ export default function testing() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "1rem" }} />
 
-      <div className={styles.linkContainerLinks} style={{gap:'2rem'}}>
+      <div className={styles.linkContainerLinks}>
       <div
           className={styles.linkContainerImage}
           style={{
             backgroundImage: "url(/images/links/cv2.png)", 
             opacity: 0.5}}
       />
+           <div className="flex-col mx-11">
         <div
           className={styles.buttonLinksPage}
-          onMouseOver={handleHoverCV}
-          onMouseMove={() => setIsHoveringCV(true)}
-          onMouseLeave={() => setIsHoveringCV(false)}
         >
           <div className={styles.subtitledescription}>
             <p>
@@ -242,6 +213,47 @@ export default function testing() {
             </p>
           </div>
         </div>
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        My Curriculum Vitae<br/>
+        {/* <br/> videos, and animations <br/> in high quality <br/> */}
+        </p>
+      </div>
+      </div>
+      </div>
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <div className={styles.linkContainerLinks}>
+      <div className="flex-col mx-11">
+
+        <div className={styles.buttonLinksPage} style={{backgroundColor:'--background-start-rgb'}}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <a>  
+              About Me 
+              </a>
+            </p>
+        </div>
+        </div>
+
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        My Curriculum Vitae<br/>
+        {/* <br/> videos, and animations <br/> in high quality <br/> */}
+        </p>
+      </div>
+
+        </div>
+        <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/flofinal.png)", 
+            opacity: 0.5}}
+      />
       </div>
 
       <div style={{ padding: "1rem" }}> </div>

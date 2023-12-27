@@ -3,6 +3,14 @@
 ## Currently working on: 
 
 ### New Links Page:
+
+- [ ] New links page: button currently has background-end-rgb, either make the background color a gradient or:
+- [ ] Figure out what kind of gradient to apply based on the position on the page?
+
+- [ ] New links page: add page menu, with shortcuts to go to sections 
+
+- [ ] New links page: some onhover animation for images maybe?
+
 - [ ] Figure out cards and text next to each other
 - [ ] i could just do the project cards over again but might be boring
 
