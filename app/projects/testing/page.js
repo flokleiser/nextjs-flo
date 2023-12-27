@@ -79,7 +79,7 @@ export default function testing() {
       >
         <div className="flex-col mx-11">
         <div
-          className={styles.buttonLinksPage}
+          className={styles.buttonLinksPage} 
         >
           <div className={styles.subtitledescription}>
             <p>
@@ -199,7 +199,7 @@ export default function testing() {
       />
            <div className="flex-col mx-11">
         <div
-          className={styles.buttonLinksPage}
+          className={styles.buttonLinksPage} style={{backgroundColor:'rgba(var(--background-start-rgb))'}}
         >
           <div className={styles.subtitledescription}>
             <p>

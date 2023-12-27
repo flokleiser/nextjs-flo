@@ -5,7 +5,7 @@
 ### New Links Page:
 
 - [ ] New links page: button currently has background-end-rgb, either make the background color a gradient or:
-- [ ] Figure out what kind of gradient to apply based on the position on the page?
+- [ ] Figure out what kind of gradient to apply based on the position on the page? --> style={{backgroundColor:'rgba(var(--background-start-rgb))'}}>
 
 - [ ] New links page: add page menu, with shortcuts to go to sections 
 
