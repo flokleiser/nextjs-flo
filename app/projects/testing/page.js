@@ -56,30 +56,32 @@ export default function Testing() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-    // const direction = () => {Number}
+// const direction, setDirection = {
+//     handlePrevImage ? setDirection(right) : setDirection(left)
+// }
 
-//   const imageVariants = {
-//     enter() { 
-//         return {
-//             x:direction > 0 ? 1000 : -1000,
-//             opacity:0
-//         };
-//     },
-//     center: {
-//         x:0,
-//         opacity:1
-//     },
-//     exit() {
-//         return {
-//             x:direction < 0 ? 1000: -1000,
-//             opacity: 0
-//         };
-//     }
-//   };
+  const imageVariants = {
+    enter() { 
+        return {
+            x:direction > 0 ? 1000 : -1000,
+            opacity:0
+        };
+    },
+    center: {
+        x:0,
+        opacity:1
+    },
+    exit() {
+        return {
+            x:direction < 0 ? 1000: -1000,
+            opacity: 0
+        };
+    }
+  };
 
-const imageVariants = {
-    
-}
+// const imageVariants = {
+
+// }
 
   const [animationState, setAnimationState] = useState('initial');
 
@@ -113,6 +115,7 @@ const imageVariants = {
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
     }
+    direction=1
   };
 
 
