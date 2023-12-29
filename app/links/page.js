@@ -4,7 +4,7 @@ import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, easeIn, motion } from "framer-motion";
 
 
 export default function links() {
@@ -99,9 +99,10 @@ export default function links() {
 
         </div>
         
-        <div
+        <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            translateX:100,
             backgroundImage: "url(/images/links/portfolio3.png)", 
             opacity: 0.5}}
             />
@@ -115,13 +116,14 @@ export default function links() {
       <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
       whileInView={{opacity:1}} transition={{duration:1}}
       >
-      <div
+      <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            translateX:-100,
             backgroundImage: "url(/images/links/cv2.png)", 
             opacity: 0.5}}
       />
-           <div className="flex-col mx-11">
+           <motion.div className="flex-col mx-11" >
         <div
           className={styles.buttonLinksPage}
         >
@@ -143,7 +145,7 @@ export default function links() {
         My Curriculum Vitae<br/> (my education, skills <br/> and work experience)
         </p>
       </div>
-      </div>
+      </motion.div>
       </motion.div>
 
       <div style={{ padding: "1rem" }} />
@@ -176,9 +178,10 @@ export default function links() {
        </p>
       </div>
       </div>
-        <div
+      <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            translateX:100,
             backgroundImage: "url(/images/links/googledrive2.png)", 
             opacity: 0.5}}
       />
@@ -193,9 +196,10 @@ export default function links() {
       whileInView={{opacity:1}} transition={{duration:1}}
       >
      
-      <div
+     <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            translateX:-100,
             backgroundImage: "url(/images/links/github2.png)", 
             opacity:0.5}}
             />
@@ -257,11 +261,12 @@ export default function links() {
       </div>
 
         </div>
-        <div
+        <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            translateX:100,
             backgroundImage: "url(/images/links/flofinal.png)", 
-            opacity: 0.5}}
+            opacity: 0.5}} 
       />
       </motion.div>
 
