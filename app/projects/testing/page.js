@@ -271,8 +271,14 @@ export default function testing() {
         <div style={{padding:'0.5rem'}}/>
       <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        test
-     
+        Hi, my name is Florian Kleiser.<br/> 
+        I am 24 years old and I come <br/> 
+        from Zürich, Switzerland. <br/> 
+        My passions include drawing, <br/>
+        editing, programming, gaming, <br/> 
+        skating and music. I am currently <br/>
+        applying to study Interaction<br/>
+        Design/Digital Ideation.
         </p>
       </div>
 

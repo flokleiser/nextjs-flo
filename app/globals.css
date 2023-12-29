@@ -12,7 +12,8 @@
   
     
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 70, 70, 70;
+    /* --background-start-rgb: 70, 70, 70; */
+    --background-start-rgb:55,55,55;
     --background-end-rgb: 40, 40, 40;
 
     --card-font-rgb: 255, 255, 255;
@@ -66,6 +67,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+/* reverse */
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-start-rgb))
+    )
+    rgb(var(--background-end-rgb));
+} */
 
 body::before,
 body::after {
