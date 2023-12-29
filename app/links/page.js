@@ -3,53 +3,14 @@ import styles from "app/page.module.css";
 import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";
-import {
-  SiAdobeaftereffects,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
-  SiBlender,
-  SiUnity,
-  SiAdobeillustrator,
-  SiVisualstudiocode,
-  SiAdobeindesign,
-} from "react-icons/si";
-import Image from "next/image";
+
 import { AnimatePresence, motion } from "framer-motion";
-import ExpandableButton from "../components/ExpandableButton";
+
 
 export default function links() {
   useEffect(() => {
     document.title = "Links/Info";
   }, []);
-
-  const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
-  const [isHoveringGithub, setIsHoveringGithub] = useState(false);
-  const [isHoveringGoogleDrive, setIsHoveringGoogleDrive] = useState(false);
-  const [isHoveringCV, setIsHoveringCV] = useState(false);
-
-  const handleHoverPortfolio = () => {
-    setIsHoveringPortfolio(!isHoveringPortfolio);
-  };
-  const handleHoverGithub = () => {
-    setIsHoveringGithub(!isHoveringGithub);
-  };
-  const handleHoverGoogleDrive = () => {
-    setIsHoveringGoogleDrive(!isHoveringGoogleDrive);
-  };
-  const handleHoverCV = () => {
-    setIsHoveringCV(!isHoveringCV);
-  };
-
-  const [animationClass, setAnimationClass] = useState("");
-  useEffect(() => {
-    if (isHoveringPortfolio) {
-      setAnimationClass(styles.linkPageAnimationDiv1);
-    } else if (animationClass === styles.linkPageAnimationDiv1) {
-      setAnimationClass(styles.linkPageAnimationDiv2);
-    }
-  }, [isHoveringPortfolio]);
-
-
 
   return (
     <main className={styles.main}>
@@ -90,168 +51,221 @@ export default function links() {
 
       <h1 className={styles.title}>Links/Info</h1>
 
-      <div className={styles.linkContainer}>
-        <div style={{ padding: "1rem" }}> </div>
-        <p className={styles.subtitledescription}>
-          Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
-          Switzerland. <br></br>
-          My passions include drawing, editing, programming, gaming, skating and
-          music. <br></br>I am currently applying to study Interaction Design /
-          Digital Ideation.
-        </p>
-        <div style={{ padding: "1rem" }}> </div>
+      {/* <p className={styles.subtitledescription}>
+        Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
+        Switzerland. <br></br>
+        My passions include drawing, editing, programming, gaming, skating and
+        music. <br></br>I am currently applying to study Interaction Design /
+        Digital Ideation.
+      </p> */}
 
+      <p className={styles.subtitledescription}>
+        Links to my Portfolio, Curriculum Vitae, Google Drive, GitHub, and info about me 
+      </p>
 
-        <div className={styles.linkContainerLinks}>
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver={handleHoverPortfolio}
-            onMouseMove={() => setIsHoveringPortfolio(true)}
-            onMouseLeave={() => setIsHoveringPortfolio(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a
-                  href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
-                  target="_blank"
-                >
-                  <CiImageOn />
-                  Portfolio (.pdf)
-                </a>
-              </p>
-            </div>
-          </div>
+      <div style={{ padding: "1rem" }} />
 
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver= {handleHoverGithub}
-            onMouseMove={() => setIsHoveringGithub(true)}
-            onMouseLeave={() => setIsHoveringGithub(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a href="https://github.com/flokleiser" target="_blank">
-                  <DiGithubBadge />
-                  Github.com
-                </a>
-              </p>
-            </div>
-          </div>
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
 
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver={handleHoverGoogleDrive}
-            onMouseMove={() => setIsHoveringGoogleDrive(true)}
-            onMouseLeave={() => setIsHoveringGoogleDrive(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a
-                  href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing"
-                  target="_blank"
-                >
-                  <DiGoogleDrive />
-                  Google Drive
-                </a>
-              </p>
-            </div>
-          </div>
-
-          <div
-            className={styles.buttonLinksPage}
-            onMouseOver={handleHoverCV}
-            onMouseMove={() => setIsHoveringCV(true)}
-            onMouseLeave={() => setIsHoveringCV(false)}
-          >
-            <div className={styles.subtitledescription}>
-              <p>
-                <a
-                  href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
-                  target="_blank"
-                >
-                  <CiViewTimeline />
-                  CV (.pdf)
-                </a>
-              </p>
-            </div>
+      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
+      whileInView={{opacity:1}} transition={{duration:1}}
+      >
+        <div className="flex-col mx-11">
+        <div
+          className={styles.buttonLinksPage} 
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
+                target="_blank"
+              >
+                <CiImageOn />
+                Portfolio (.pdf)
+              </a>
+            </p>
           </div>
         </div>
 
-        <div style={{ padding: "1rem" }}> </div>
+        <div style={{padding:'0.5rem'}}/>
 
+        <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        My portfolio for <br/> Interaction Design / <br/> Digital Ideation, <br/> made in 2023 <br/>
+        </p>
+        </div>
+
+        </div>
+        
+        <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/portfolio3.png)", 
+            opacity: 0.5}}
+            />
+
+      </motion.div>
+      
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
+      whileInView={{opacity:1}} transition={{duration:1}}
+      >
+      <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/cv2.png)", 
+            opacity: 0.5}}
+      />
+           <div className="flex-col mx-11">
+        <div
+          className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
+                target="_blank"
+              >
+                <CiViewTimeline />
+                CV (.pdf)
+              </a>
+            </p>
+          </div>
+        </div>
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        My Curriculum Vitae<br/> (my education, skills <br/> and work experience)
+        </p>
+      </div>
+      </div>
+      </motion.div>
+
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
+      whileInView={{opacity:1}} transition={{duration:1}}
+      >
+      <div className="flex-col mx-11">
+        <div
+          className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing"
+                target="_blank"
+              >
+                <DiGoogleDrive />
+                Google Drive
+              </a>
+            </p>
+          </div>
+        </div>
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        All the animations/<br/>videos, the CV, and<br/>the Portfolio in <br/>high quality <br/> 
+       </p>
+      </div>
+      </div>
+        <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/googledrive2.png)", 
+            opacity: 0.5}}
+      />
+      </motion.div>
+
+
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
+      whileInView={{opacity:1}} transition={{duration:1}}
+      >
+     
+      <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/github2.png)", 
+            opacity:0.5}}
+            />
+ <div className="flex-col mx-11">
+        <div
+          className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a href="https://github.com/flokleiser" target="_blank">
+                <DiGithubBadge />
+                GitHub.com
+              </a>
+            </p>
+          </div>
+        </div>
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+         The GitHub repositories/ <br/> source code for the p5js<br/> project, the Skylands VR<br/> game, and the code for <br/> this website <br/>
+        </p>
+      </div>
+        </div>
+      </motion.div>
+
+
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+
+      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
+      whileInView={{opacity:1}} transition={{duration:1}}
+      >
+      <div className="flex-col mx-11">
+
+      <motion.div className={styles.buttonLinksPage} style={{cursor:'default'}} whileTap={{scale:0.9}}> 
+        <div className={styles.subtitledescription}>
+          <p 
+          style={{ padding: '1.5rem' }}
+          >
+            About Me
+          </p>
+        </div>
+      </motion.div>  
+
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        Hi, my name is Florian Kleiser.<br/> 
+        I am 24 years old and I come <br/> 
+        from Zürich, Switzerland. <br/> 
+        My passions include drawing, <br/>
+        editing, programming, gaming, <br/> 
+        skating and music. I am currently <br/>
+        applying to study Interaction<br/>
+        Design/Digital Ideation.
+        </p>
+      </div>
+
+        </div>
         <div
           className={styles.linkContainerImage}
           style={{
             backgroundImage: "url(/images/links/flofinal.png)", 
-            opacity: 0.5,
-            ...(isHoveringPortfolio ? { backgroundImage: "url(/images/links/portfolio3.png)" } : null),
-            ...(isHoveringGithub? { backgroundImage: "url(/images/links/github2.png)" } : null),
-            ...(isHoveringGoogleDrive? { backgroundImage: "url(/images/links/googledrive2.png)" } : null),
-            ...(isHoveringCV? { backgroundImage: "url(/images/links/cv2.png)" } : null),
-          }}
-          >
-        </div>
-
-        <div style={{ padding: "1rem" }}> </div>
-      </div>  
-      <div style={{ padding: "1rem" }}> </div>
-      
-      <div className={styles.linkContainer}>
+            opacity: 0.5}}
+      />
+      </motion.div>
 
       <div style={{ padding: "1rem" }}> </div>
-
-      <div className={styles.subtitledescription}>
-        <h1>Education/Experience</h1>
-        <ExpandableButton>
-
-<Image
-  src="/svg/timeline4.svg"
-  alt="timeline"
-  width={900}
-  height={24}
-  style={{ margin: 20 }}
-/>
-
-      </ExpandableButton>
-      </div>
-
-      <div style={{ padding: "1rem" }}> </div>
-     </div>
-      <div style={{ padding: "1rem" }}/>
-      <div className={styles.linkContainer}>
-      <div style={{ padding: "1rem" }}/> 
-
-      <div className={styles.subtitledescription}>
-        <h1>Skills</h1>
-        <ExpandableButton>
-
-<div style={{ padding: "1rem" }}></div>
-<div className="flex relative flex-wrap justify-center gap-2">
-  <div className="flex  gap-2">
-<SiAdobeillustrator size={60} />
-<SiAdobephotoshop size={60} />
-<SiAdobeindesign size={60} />
-<SiAdobepremierepro size={60} />
-<SiAdobeaftereffects size={60} />
-<SiVisualstudiocode size={60} />
-<SiBlender size={60} />
-<SiUnity size={60} />
-<Image
-src="/svg/logic.svg"
-width={60}
-height={24}
-style={{ filter: "invert(1)" }}
-/>
-</div>
-</div>
-<div style={{ padding: "1rem" }}></div>
-
-</ExpandableButton>
-      </div>
-
-      <div style={{ padding: "1rem" }}> </div>
-      </div>
-      <div style={{ padding: "2rem" }}> </div>
     </main>
   );
 }
