@@ -4,6 +4,7 @@
 
 ### Navbar
 - [ ] Figure out whats making it close automatically
+- [ ] Might be pages that dont use Link component --> projects
 - [ ] Redo open/close animations with framer motion --> stagger animations, whiletap animation for buttons
 
 ### New Links Page:

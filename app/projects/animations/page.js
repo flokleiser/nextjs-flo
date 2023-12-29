@@ -68,7 +68,7 @@ export default function animations() {
 
             <div style={{ padding: '2rem' }}>
             <div className={styles.gridanimation}>
-                <a
+                <Link
                 href='/projects/animations/plasticine'
                 className={styles.cardanimationplasticine}
                 style={{ 
@@ -83,9 +83,9 @@ export default function animations() {
                     Plasticine (A)life
                 </h2>
                 <p>Stop Motion</p>
-                </a>
+                </Link>
 
-                <a
+                <Link
                 href='/projects/animations/skate'
                 className={styles.cardanimationSkate}
                
@@ -99,9 +99,9 @@ export default function animations() {
                     Skate
                 </h2>
                 <p>Rotoscoping, Drawing</p>
-                </a>
+                </Link>
 
-                <a
+                <Link
                 href='/projects/animations/escape'
                 className={styles.cardanimationEscape}
                 style={{ 
@@ -114,9 +114,9 @@ export default function animations() {
                    Escape 
                 </h2>
                 <p>Image animation</p>
-                </a>
+                </Link>
 
-                <a
+                <Link
                 href='/projects/animations/kontakt'
                 className={styles.cardanimationKontakt}
                 style={{ 
@@ -129,9 +129,9 @@ export default function animations() {
                     Kontakt
                 </h2>
                 <p>Animating physics</p>
-                </a>
+                </Link>
 
-                <a
+                <Link
                 href='/projects/animations/logo'
                 className={styles.cardanimationLogo}
                 style={{ 
@@ -144,9 +144,9 @@ export default function animations() {
                     Logo 
                 </h2>
                 <p>Variations of a Logo</p>
-                </a>
+                </Link>
 
-                <a
+                <Link
                 href='/projects/animations/music'
                 className={styles.cardanimationMusic}
                 style={{ 
@@ -159,7 +159,7 @@ export default function animations() {
                     Music
                 </h2>
                 <p>Music Visualizers</p>
-                </a>
+                </Link>
             </div>
             </div>
 

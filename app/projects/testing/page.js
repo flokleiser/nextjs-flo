@@ -3,16 +3,16 @@ import styles from "app/page.module.css";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 export default function testing() {
   useEffect(() => {
     document.title = "Testing";
   }, []);
 
-  return (
-    <main className={styles.main}>
-      <div
-        className="relative 
+    return (
+        <main className={styles.main}>
+            <div className="relative 
    flex 
    place-items-center 
    before:absolute 
@@ -43,70 +43,143 @@ export default function testing() {
    after:dark:via-[#0141ff] 
    after:dark:opacity-40 
    before:lg:h-[360px] 
-   z-[-1]"
-      ></div>
+   z-[-1]">
+            </div>
 
-      <h1 className={styles.title}>Links/Info</h1>
+{/*            
+            <div className={styles.backbutton}>
+            <h1> <Link href="/"> Back to Homepage</Link> </h1>
+            </div> */}
 
-      {/* <p className={styles.subtitledescription}>
-        Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
-        Switzerland. <br></br>
-        My passions include drawing, editing, programming, gaming, skating and
-        music. <br></br>I am currently applying to study Interaction Design /
-        Digital Ideation.
-      </p> */}
+            <h1 className={styles.title}> 
+            Testing
+            </h1>
 
-      <p className={styles.subtitledescription}>
-        Links to my Portfolio, Curriculum Vitae, Google Drive, GitHub, and info about me 
-      </p>
+        <div className={styles.grid}>
 
-      <div style={{ padding: "1rem" }} />
+        <Link
+            className={styles.card}
+            href = '/projects/sketches'
+            style={{ 
+                    backgroundImage: 'url("/images/cards/sketch1.png")',
+                    backgroundSize: '102%',
+                    backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Sketches
+            </h2>
+            <p>Sketchbook</p>
+            </Link> 
+            
+            <a
+            href = '/projects/creative-coding'
+            className={styles.card}
+            // style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
+            style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.png")' ,
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Creative Coding
+            </h2>
+            <p>Generative Art, p5js</p>
+            </a>
 
-      <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "2rem" }} />
+            <a
+           href='/projects/skylands'
+           className={styles.card}
+           style={{ backgroundImage: 'url("/images/cards/skylandslogo5 transparentwide.png")',
+                backgroundSize: '102%',
+                backgroundPosition: 'center',
+          }}
+                rel="noopener noreferrer"
+            >
+            <h2> 
+                Skylands
+            </h2>
+            <p>VR Game, Unity</p>
+            </a>
 
 
-      <div className={styles.linkContainerLinks}  
-      >
-        <div className="flex-col mx-11">
-        <div
-          className={styles.buttonLinksPage} 
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <a
-                href="/"
-                // target="_blank"
-              >
-                <CiImageOn />
-                Portfolio (.pdf)
-              </a>
-            </p>
-          </div>
-        </div>
+            <a
+            href = '/projects/voxel'
+            className={styles.card}
+            rel="noopener noreferrer"
+            // style={{ backgroundImage: 'url("/images/cards/voxel transparentwide.png")',
+            style={{ backgroundImage: 'url("/images/cards/voxelwhite5.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Voxel Art
+            </h2>
+            <p>MagicaVoxel</p>
+            </a>
 
-        <div style={{padding:'0.5rem'}}/>
+            <a
+                className={styles.card}
+                rel="noopener noreferrer"
+                href = '/projects/cad'
+                // style={{ backgroundImage: 'url("/images/cards/cad transparent2.png")',
+                style={{ backgroundImage: 'url("/images/cards/cadwhite.png")',
+                backgroundSize: '102%',
+                backgroundPosition: 'center'}}
+            >
+            <h2>
+                CAD
+            </h2>
+            <p>Modeling, OnShape</p>
+            </a>
 
-        <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-        My portfolio for <br/> Interaction Design / <br/> Digital Ideation, <br/> made in 2023 <br/>
-        </p>
-        </div>
+            <a
+            href = '/projects/animations'
+            className={styles.card}
+            style={{ backgroundImage: 'url("/images/cards/animlogo transparent5.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+                Animations
+            </h2>
+            <p>Adobe After Effects</p>
+            </a>
 
-        </div>
-        
-        <div
-          className={styles.linkContainerImage}
-          style={{
-            backgroundImage: "url(/images/links/portfolio3.png)", 
-            opacity: 0.5}}
-            />
+            <a
+            href = '/projects/crafts'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("/images/cards/craft card 4.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Arts & Crafts
+            </h2>
+            <p>Handcrafted Stuff</p>
+            </a>
 
+
+            <a
+            href = '/projects/illustrator'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Illustrator
+            </h2>
+            <p>Designs & Artworks </p>
+            </a>
+
+          
       </div>
-      
-     
-      <div style={{ padding: "1rem" }}> </div>
+
+            <div style={{ padding: '1rem' }}> </div>
     </main>
-  );
+    )
 }

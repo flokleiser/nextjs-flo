@@ -57,7 +57,7 @@ export default function projects() {
 
         <div className={styles.grid}>
 
-        <a
+        <Link
             className={styles.card}
             href = '/projects/sketches'
             style={{ 
@@ -70,9 +70,9 @@ export default function projects() {
                 Sketches
             </h2>
             <p>Sketchbook</p>
-            </a> 
+            </Link> 
             
-            <a
+            <Link
             href = '/projects/creative-coding'
             className={styles.card}
             // style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
@@ -85,9 +85,9 @@ export default function projects() {
                 Creative Coding
             </h2>
             <p>Generative Art, p5js</p>
-            </a>
+            </Link>
 
-            <a
+            <Link
            href='/projects/skylands'
            className={styles.card}
            style={{ backgroundImage: 'url("/images/cards/skylandslogo5 transparentwide.png")',
@@ -100,10 +100,10 @@ export default function projects() {
                 Skylands
             </h2>
             <p>VR Game, Unity</p>
-            </a>
+            </Link>
 
 
-            <a
+            <Link
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
@@ -116,9 +116,9 @@ export default function projects() {
                 Voxel Art
             </h2>
             <p>MagicaVoxel</p>
-            </a>
+            </Link>
 
-            <a
+            <Link
                 className={styles.card}
                 rel="noopener noreferrer"
                 href = '/projects/cad'
@@ -131,9 +131,9 @@ export default function projects() {
                 CAD
             </h2>
             <p>Modeling, OnShape</p>
-            </a>
+            </Link>
 
-            <a
+            <Link
             href = '/projects/animations'
             className={styles.card}
             style={{ backgroundImage: 'url("/images/cards/animlogo transparent5.png")',
@@ -145,9 +145,9 @@ export default function projects() {
                 Animations
             </h2>
             <p>Adobe After Effects</p>
-            </a>
+            </Link>
 
-            <a
+            <Link
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
@@ -159,10 +159,10 @@ export default function projects() {
                 Arts & Crafts
             </h2>
             <p>Handcrafted Stuff</p>
-            </a>
+            </Link>
 
 
-            <a
+            <Link
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
@@ -174,7 +174,7 @@ export default function projects() {
                 Illustrator
             </h2>
             <p>Designs & Artworks </p>
-            </a>
+            </Link>
 
           
       </div>
