@@ -3,19 +3,7 @@ import styles from "app/page.module.css";
 import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";
-import {
-  SiAdobeaftereffects,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
-  SiBlender,
-  SiUnity,
-  SiAdobeillustrator,
-  SiVisualstudiocode,
-  SiAdobeindesign,
-} from "react-icons/si";
-import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import ExpandableButton from "app/components/ExpandableButton";
 
 export default function testing() {
   useEffect(() => {
@@ -61,21 +49,59 @@ export default function testing() {
 
       <h1 className={styles.title}>Links/Info</h1>
 
-      <p className={styles.subtitledescription}>
+      {/* <p className={styles.subtitledescription}>
         Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
         Switzerland. <br></br>
         My passions include drawing, editing, programming, gaming, skating and
         music. <br></br>I am currently applying to study Interaction Design /
         Digital Ideation.
+      </p> */}
+
+      <p className={styles.subtitledescription}>
+        Links to my Portfolio, Curriculum Vitae, Google Drive, GitHub, and info about me 
       </p>
 
       <div style={{ padding: "1rem" }} />
+
       <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "2rem" }} />
+
+      {/* <div className={styles.linkContainerLinks}>
+      <div className="flex-col mx-11">
+
+        <div className={styles.buttonLinksPage} style={{backgroundColor:'--background-start-rgb'}}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <a>  
+              About Me 
+              </a>
+            </p>
+        </div>
+        </div>
+
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+        test
+     
+        </p>
+      </div>
+
+        </div>
+        <div
+          className={styles.linkContainerImage}
+          style={{
+            backgroundImage: "url(/images/links/flofinal.png)", 
+            opacity: 0.5}}
+      />
+      </div> */}
+
+      {/* <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} /> */}
 
       <div className={styles.linkContainerLinks}  
-      // style={{gap:'2rem'}}
       >
         <div className="flex-col mx-11">
         <div
@@ -98,7 +124,7 @@ export default function testing() {
 
         <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        My portfolio for <br/> Interaction Design / <br/> Digital Ideation <br/> made in 2023 <br/>
+        My portfolio for <br/> Interaction Design / <br/> Digital Ideation, <br/> made in 2023 <br/>
         </p>
         </div>
 
@@ -113,31 +139,29 @@ export default function testing() {
 
       </div>
       
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "2rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "2rem" }} />
 
-      <div className={styles.linkContainerLinks} 
-      // style={{gap:'2rem'}}
-      style={{marginLeft:'2rem', marginRight:'2rem'}}
-      >
-     
-      <motion.div whileInView={{opacity:0.5}} transition={{duration:1}}
+      <div className={styles.linkContainerLinks}>
+      <div
           className={styles.linkContainerImage}
           style={{
-            backgroundImage: "url(/images/links/github2.png)", 
-            // opacity: 0.5}}
-            opacity:0}}
-            />
- <div className="flex-col mx-11">
+            backgroundImage: "url(/images/links/cv2.png)", 
+            opacity: 0.5}}
+      />
+           <div className="flex-col mx-11">
         <div
           className={styles.buttonLinksPage}
         >
           <div className={styles.subtitledescription}>
             <p>
-              <a href="https://github.com/flokleiser" target="_blank">
-                <DiGithubBadge />
-                GitHub.com
+              <a
+                href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
+                target="_blank"
+              >
+                <CiViewTimeline />
+                CV (.pdf)
               </a>
             </p>
           </div>
@@ -145,15 +169,14 @@ export default function testing() {
         <div style={{padding:'0.5rem'}}/>
       <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        My GitHub repositories <br/> for the p5js project, <br/> the "Skylands" VR game <br/> and the code for this website <br/>
+        My Curriculum Vitae<br/> (my education, skills <br/> and work experience)
         </p>
       </div>
-        </div>
       </div>
-
-      <div style={{ padding: "1rem" }} />
+      </div>
+      <div style={{ padding: "2rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "2rem" }} />
 
       <div className={styles.linkContainerLinks}>
       <div className="flex-col mx-11">
@@ -175,7 +198,7 @@ export default function testing() {
         <div style={{padding:'0.5rem'}}/>
       <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        All the files,<br/> including the images, <br/> videos, and animations <br/> in high quality <br/>     
+        All the animations/<br/>videos, the CV, and<br/>the Portfolio in <br/>high quality <br/> 
        </p>
       </div>
       </div>
@@ -187,29 +210,30 @@ export default function testing() {
       />
       </div>
 
-      <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
 
-      <div className={styles.linkContainerLinks}>
-      <div
+      <div style={{ padding: "2rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "2rem" }} />
+
+      <div className={styles.linkContainerLinks} 
+      style={{marginLeft:'2rem', marginRight:'2rem'}}
+      >
+     
+      <motion.div whileInView={{opacity:0.5}} transition={{duration:1}}
           className={styles.linkContainerImage}
           style={{
-            backgroundImage: "url(/images/links/cv2.png)", 
-            opacity: 0.5}}
-      />
-           <div className="flex-col mx-11">
+            backgroundImage: "url(/images/links/github2.png)", 
+            opacity:0}}
+            />
+ <div className="flex-col mx-11">
         <div
-          className={styles.buttonLinksPage} style={{backgroundColor:'rgba(var(--background-start-rgb))'}}
+          className={styles.buttonLinksPage}
         >
           <div className={styles.subtitledescription}>
             <p>
-              <a
-                href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
-                target="_blank"
-              >
-                <CiViewTimeline />
-                CV (.pdf)
+              <a href="https://github.com/flokleiser" target="_blank">
+                <DiGithubBadge />
+                GitHub.com
               </a>
             </p>
           </div>
@@ -217,34 +241,38 @@ export default function testing() {
         <div style={{padding:'0.5rem'}}/>
       <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        My Curriculum Vitae<br/>
-        {/* <br/> videos, and animations <br/> in high quality <br/> */}
+         The GitHub repositories/ <br/> source code for the p5js<br/> project, the Skylands VR<br/> game, and the code for <br/> this website <br/>
         </p>
       </div>
+        </div>
       </div>
-      </div>
-      <div style={{ padding: "1rem" }} />
+
+
+      <div style={{ padding: "2rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "2rem" }} />
 
       <div className={styles.linkContainerLinks}>
       <div className="flex-col mx-11">
 
-        <div className={styles.buttonLinksPage} style={{backgroundColor:'--background-start-rgb'}}>
-          <div className={styles.subtitledescription}>
-            <p>
-              <a>  
-              About Me 
-              </a>
-            </p>
+      {/* <div className={styles.subtitle}>
+        <p2>About me</p2>
+      </div> */}
+      <div className={styles.buttonLinksPage} style={{cursor:'default'}}>
+        <div className={styles.subtitledescription}>
+          <p 
+          style={{ padding: '1.5rem' }}
+          >
+            About Me
+          </p>
         </div>
-        </div>
+      </div>  
 
         <div style={{padding:'0.5rem'}}/>
       <div className="max-w-prose ">
         <p className={styles.subtitledescription}>
-        My Curriculum Vitae<br/>
-        {/* <br/> videos, and animations <br/> in high quality <br/> */}
+        test
+     
         </p>
       </div>
 

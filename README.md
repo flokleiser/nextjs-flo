@@ -4,30 +4,21 @@
 
 ### New Links Page:
 
-- [ ] New links page: button currently has background-end-rgb, either make the background color a gradient or:
-- [ ] Figure out what kind of gradient to apply based on the position on the page? --> style={{backgroundColor:'rgba(var(--background-start-rgb))'}}>
+- [ ] new links page: --> motion div whileinview
 
 - [ ] New links page: add page menu, with shortcuts to go to sections 
 
 - [ ] New links page: some onhover animation for images maybe?
 
-- [ ] Preload gifs on animation projects page
-- [ ] figure out how preloading works for images (cards)
-
-- [ ] Figure out on what pages the page divider makes sense
-
-- [ ] Framer motion progress bar thingy for scrolling
-- [ ] Try out framer motion scroll animations (useViewportScroll)
-
 
 ## TO FIX:
 ### Image/Page loading:
+- [ ] Look into preloading gifs/images maybe
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
 ### Image/Gif Animations:
 - [ ] Image gallery : image left/right animations 
 - [ ] Animation gifs --> not weird stretching
-
 
 ## Ideas for when bored:
 - [x] Navbar fixed on top of screen?
@@ -41,7 +32,7 @@
 - [ ] Page transitions seem to be broken on nextjs13 using the app router for some weird reason, figure out why -> useRouter/usePath etc
 
 ### Loading.js
-- [ ] Loading.js page more betterer
+- [x] Loading.js page more betterer
 
 ### Footer
 - [ ] Make website footer?
@@ -52,6 +43,7 @@
 ### Focus/Dim Buttons:
 - [x] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
 - [x] Implement focus button on all pages
+
 
 ## Checklist before final publish:
 - [ ] Fix texts
