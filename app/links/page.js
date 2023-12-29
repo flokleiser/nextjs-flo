@@ -99,9 +99,10 @@ export default function links() {
 
         </div>
         
-        <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
+        <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            filter:'blur(20px)',
             translateX:100,
             backgroundImage: "url(/images/links/portfolio3.png)", 
             opacity: 0.5}}
@@ -116,9 +117,10 @@ export default function links() {
       <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
       whileInView={{opacity:1}} transition={{duration:1}}
       >
-      <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
+      <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            filter:'blur(20px)',
             translateX:-100,
             backgroundImage: "url(/images/links/cv2.png)", 
             opacity: 0.5}}
@@ -178,9 +180,10 @@ export default function links() {
        </p>
       </div>
       </div>
-      <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
+      <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            filter:'blur(20px)',
             translateX:100,
             backgroundImage: "url(/images/links/googledrive2.png)", 
             opacity: 0.5}}
@@ -196,9 +199,10 @@ export default function links() {
       whileInView={{opacity:1}} transition={{duration:1}}
       >
      
-     <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
+     <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            filter:'blur(20px)',
             translateX:-100,
             backgroundImage: "url(/images/links/github2.png)", 
             opacity:0.5}}
@@ -261,9 +265,10 @@ export default function links() {
       </div>
 
         </div>
-        <motion.div whileInView={{translateX:0}} transition={{duration:0.5}}
+        <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
           className={styles.linkContainerImage}
           style={{
+            filter:'blur(20px)',
             translateX:100,
             backgroundImage: "url(/images/links/flofinal.png)", 
             opacity: 0.5}} 

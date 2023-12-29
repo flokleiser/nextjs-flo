@@ -203,7 +203,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           }}
           >
 
-      <div style={{ padding: "1rem" }}></div>
+      <div style={{ padding: "0.5rem" }}></div>
 
       <div className={styles.subtitledescription}>
         <p>
@@ -211,7 +211,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         </p>
       </div>
 
-      <div style={{ padding: "2rem" }}>
+      <div style={{ padding: "1rem" }}>
         <div>
           <iframe
             src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
@@ -228,7 +228,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
 
       <TipsButton />
 
-       <div style={{ padding: "1rem" }}> </div>
+       <div style={{ padding: "0.5rem" }}> </div>
 </div>
 <div style={{ padding: "1rem" }}> </div>
 
@@ -244,10 +244,6 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           </a>
         </div>
       </div>
-      {/* <div className={styles.subtitledescription}>
-            <p> Examples: </p>
-            </div> */}
-
 
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />

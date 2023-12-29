@@ -2,32 +2,28 @@
 
 ## Currently working on: 
 
+### Pages
+- [ ] Maybe add some more whileInView animations?
+
 ### Navbar
-- [ ] Figure out whats making it close automatically
-- [ ] Might be pages that dont use Link component --> projects
-- [ ] Redo open/close animations with framer motion --> stagger animations, whiletap animation for buttons
+- [ ] Redo open/close animations with framer motion 
+- [ ] look into stagger animation
 
 ### New Links Page:
-
 - [x] new links page: --> motion div whileinview
-- [ ] New links page: add page menu, with shortcuts to go to sections 
 - [ ] New links page: some onhover animation for images maybe?
 
+## Ideas for when bored:
+- [ ] Titles sticky until scroll by?
 
-## TO FIX:
 ### Image/Page loading:
 - [ ] Look into preloading gifs/images maybe
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
+
 ### Image/Gif Animations:
 - [ ] Image gallery : image left/right animations 
 - [ ] Animation gifs --> not weird stretching
-
-## Ideas for when bored:
-- [x] Navbar fixed on top of screen?
-- [x] adjust spacing for focus button based on new navbar
-
-- [ ] Titles sticky until scroll by?
 
 ### Page Transitions:
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
@@ -124,6 +120,10 @@
 - [x] Navbar icon
 - [x] Navbar change toggle from top to left
 - [x] Change animation to not look like shit
+- [x] Figure out why it closes automatically (turns out it was not using the Link router)
+- [x] Navbar fixed on top of screen?
+- [x] adjust spacing for focus button based on new navbar
+- [x] onTap animation
 
 ### Background:
 - [x] Gradient like github page
