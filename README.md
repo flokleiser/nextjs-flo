@@ -2,6 +2,10 @@
 
 ## Currently working on: 
 
+### Navbar
+- [ ] Figure out whats making it close automatically
+- [ ] Redo open/close animations with framer motion --> stagger animations, whiletap animation for buttons
+
 ### New Links Page:
 
 - [x] new links page: --> motion div whileinview

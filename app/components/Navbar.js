@@ -4,7 +4,7 @@ import styles from "app/page.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, stagger } from "framer-motion";
 import { BsList, BsX, BsXSquare, BsSearch } from "react-icons/bs";
 import {
   CiSquareChevDown,
@@ -89,6 +89,7 @@ export default function NavbarTest() {
   return (
     <div className={styles.navbarContainer}>
       <div className="flex border-stone-900/80 p-[0.4rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
+        <motion.div whileTap={{scale:0.5}}>
         <button
           className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100"
           onClick={toggleNavbarVisibility}
@@ -99,6 +100,7 @@ export default function NavbarTest() {
             <BsList style={{ fontSize: "1.5rem" }} />
           )}
         </button>
+        </motion.div>
 
         <AnimatePresence>
           {showNavbar && (
@@ -133,7 +135,8 @@ export default function NavbarTest() {
                 {navItems.map((item, index) => {
                   const isActive = item.path === pathname;
                   return (
-                    <Link
+                    <motion.div whileTap={{scale:0.8}}>
+                    <Link 
                       key={item.path}
                       className={`px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
                         isActive ? "text-zinc-100" : "text-zinc-300"
@@ -145,7 +148,7 @@ export default function NavbarTest() {
                     >
                       <span>{item.name}</span>
                       {item.path === hoveredPath && (
-                        <motion.div
+                        <motion.div 
                           className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                           layoutId="navbar"
                           aria-hidden="true"
@@ -162,21 +165,24 @@ export default function NavbarTest() {
                         />
                       )}
                     </Link>
+                      </motion.div>
                   );
                 })}
 
+                <motion.div whileTap={{scale:0.5}}>
                   <button 
                     className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`} 
                     onClick={toggleSubNavbarVisibility}
                   >
                     {showSubNavbar ? (
-                      /* <CiSquareChevLeft style={{ fontSize: '1.5rem' }} /> */
-                      <CiSquareMinus style={{ opacity:0.4, fontSize: "1.5rem" }} />
+                      <CiSquareChevLeft style={{ fontSize: '1.5rem' }} /> 
+                      // <CiSquareMinus style={{ opacity:0.4, fontSize: "1.5rem" }} />
                     ) : (
-                      /* <CiSquareChevRight style={{ fontSize: '1.5rem' }}  /> */
-                      <CiSquarePlus style={{ opacity:0.4, fontSize: "1.5rem" }} />
+                      <CiSquareChevRight style={{ fontSize: '1.5rem' }}  />
+                      // <CiSquarePlus style={{ opacity:0.4, fontSize: "1.5rem" }} />
                     )}
                   </button>
+                  </motion.div>
 
                 <AnimatePresence>
                   {showSubNavbar && (
@@ -184,10 +190,10 @@ export default function NavbarTest() {
                       className={styles.subNavbar}
                       style={{
                         position: "relative",
-                        transform: "translateY(-100%)",
+                        transform: "translateX(100%)",
                       }}
                       initial={{
-                        transform: "translateY(-100%)",
+                        transform: "translateX(100%)",
                         opacity: 0,
                       }}
                       animate={{
@@ -195,7 +201,7 @@ export default function NavbarTest() {
                         opacity: 1,
                       }}
                       exit={{
-                        transform: "translateY(-100%)",
+                        transform: "translateX(100%)",
                         opacity: 0,
                       }}
                       transition={{

@@ -1,6 +1,5 @@
 "use client";
 import styles from "app/page.module.css";
-import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -67,39 +66,6 @@ export default function testing() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "2rem" }} />
 
-      {/* <div className={styles.linkContainerLinks}>
-      <div className="flex-col mx-11">
-
-        <div className={styles.buttonLinksPage} style={{backgroundColor:'--background-start-rgb'}}>
-          <div className={styles.subtitledescription}>
-            <p>
-              <a>  
-              About Me 
-              </a>
-            </p>
-        </div>
-        </div>
-
-        <div style={{padding:'0.5rem'}}/>
-      <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-        test
-     
-        </p>
-      </div>
-
-        </div>
-        <div
-          className={styles.linkContainerImage}
-          style={{
-            backgroundImage: "url(/images/links/flofinal.png)", 
-            opacity: 0.5}}
-      />
-      </div> */}
-
-      {/* <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} /> */}
 
       <div className={styles.linkContainerLinks}  
       >
@@ -110,8 +76,8 @@ export default function testing() {
           <div className={styles.subtitledescription}>
             <p>
               <a
-                href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
-                target="_blank"
+                href="/"
+                // target="_blank"
               >
                 <CiImageOn />
                 Portfolio (.pdf)
@@ -139,158 +105,7 @@ export default function testing() {
 
       </div>
       
-      <div style={{ padding: "2rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "2rem" }} />
-
-      <div className={styles.linkContainerLinks}>
-      <div
-          className={styles.linkContainerImage}
-          style={{
-            backgroundImage: "url(/images/links/cv2.png)", 
-            opacity: 0.5}}
-      />
-           <div className="flex-col mx-11">
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <a
-                href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
-                target="_blank"
-              >
-                <CiViewTimeline />
-                CV (.pdf)
-              </a>
-            </p>
-          </div>
-        </div>
-        <div style={{padding:'0.5rem'}}/>
-      <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-        My Curriculum Vitae<br/> (my education, skills <br/> and work experience)
-        </p>
-      </div>
-      </div>
-      </div>
-      <div style={{ padding: "2rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "2rem" }} />
-
-      <div className={styles.linkContainerLinks}>
-      <div className="flex-col mx-11">
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <a
-                href="https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea?usp=sharing"
-                target="_blank"
-              >
-                <DiGoogleDrive />
-                Google Drive
-              </a>
-            </p>
-          </div>
-        </div>
-        <div style={{padding:'0.5rem'}}/>
-      <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-        All the animations/<br/>videos, the CV, and<br/>the Portfolio in <br/>high quality <br/> 
-       </p>
-      </div>
-      </div>
-        <div
-          className={styles.linkContainerImage}
-          style={{
-            backgroundImage: "url(/images/links/googledrive2.png)", 
-            opacity: 0.5}}
-      />
-      </div>
-
-
-      <div style={{ padding: "2rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "2rem" }} />
-
-      <div className={styles.linkContainerLinks} 
-      style={{marginLeft:'2rem', marginRight:'2rem'}}
-      >
      
-      <motion.div whileInView={{opacity:0.5}} transition={{duration:1}}
-          className={styles.linkContainerImage}
-          style={{
-            backgroundImage: "url(/images/links/github2.png)", 
-            opacity:0}}
-            />
- <div className="flex-col mx-11">
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <a href="https://github.com/flokleiser" target="_blank">
-                <DiGithubBadge />
-                GitHub.com
-              </a>
-            </p>
-          </div>
-        </div>
-        <div style={{padding:'0.5rem'}}/>
-      <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-         The GitHub repositories/ <br/> source code for the p5js<br/> project, the Skylands VR<br/> game, and the code for <br/> this website <br/>
-        </p>
-      </div>
-        </div>
-      </div>
-
-
-      <div style={{ padding: "2rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "2rem" }} />
-
-      <div className={styles.linkContainerLinks}>
-      <div className="flex-col mx-11">
-
-      {/* <div className={styles.subtitle}>
-        <p2>About me</p2>
-      </div> */}
-      <div className={styles.buttonLinksPage} style={{cursor:'default'}}>
-        <div className={styles.subtitledescription}>
-          <p 
-          style={{ padding: '1.5rem' }}
-          >
-            About Me
-          </p>
-        </div>
-      </div>  
-
-        <div style={{padding:'0.5rem'}}/>
-      <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-        Hi, my name is Florian Kleiser.<br/> 
-        I am 24 years old and I come <br/> 
-        from Zürich, Switzerland. <br/> 
-        My passions include drawing, <br/>
-        editing, programming, gaming, <br/> 
-        skating and music. I am currently <br/>
-        applying to study Interaction<br/>
-        Design/Digital Ideation.
-        </p>
-      </div>
-
-        </div>
-        <div
-          className={styles.linkContainerImage}
-          style={{
-            backgroundImage: "url(/images/links/flofinal.png)", 
-            opacity: 0.5}}
-      />
-      </div>
-
       <div style={{ padding: "1rem" }}> </div>
     </main>
   );
