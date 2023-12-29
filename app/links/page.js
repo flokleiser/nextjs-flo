@@ -265,7 +265,7 @@ export default function links() {
       />
       </motion.div>
 
-      <div style={{ padding: "1rem" }}> </div>
+      <div style={{ padding: "2rem" }}> </div>
     </main>
   );
 }

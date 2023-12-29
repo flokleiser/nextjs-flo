@@ -4,10 +4,8 @@
 
 ### New Links Page:
 
-- [ ] new links page: --> motion div whileinview
-
+- [x] new links page: --> motion div whileinview
 - [ ] New links page: add page menu, with shortcuts to go to sections 
-
 - [ ] New links page: some onhover animation for images maybe?
 
 
