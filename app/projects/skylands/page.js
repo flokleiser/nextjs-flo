@@ -513,6 +513,10 @@ export default function skylands() {
         </div>
       </div>
 
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
       <div className={styles.subtitledescription}>
         <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
           <p>

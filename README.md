@@ -5,10 +5,6 @@
 ### Pages
 - [ ] Maybe add some more whileInView animations?
 
-### New Links Page:
-- [x] new links page: --> motion div whileinview
-- [ ] New links page: some onhover animation for images maybe?
-
 ### Image/Page loading:
 - [ ] Look into preloading gifs/images maybe
 - [ ] Blur image placeholder until fully loaded maybe

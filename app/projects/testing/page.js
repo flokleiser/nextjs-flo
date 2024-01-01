@@ -10,39 +10,18 @@ import { AnimatePresence, motion} from 'framer-motion';
 
 
 const data = [
-  {
-    image: '/images/sketches/sketch test scan website2.png', id: 0
-  },
-  {
-  image: '/images/sketches/sketch test website.png', id: 1
-  },
-  {
-  image: '/images/sketches/sketch test scan website3.png', id: 2
-  },
-  {
-  image: '/images/sketches/sketch test scan website4.png', id: 3
-  },
-  {
-  image: '/images/sketches/sketch test scan website6.png', id: 4
-  },
-  // {
-  // image: '/images/sketches/sketch test scan website7.png', id: 5
-  // }
+  {image: '/images/sketches/sketch test scan website2.png', id: 0},
+  {image: '/images/sketches/sketch test website.png', id: 1},
+  {image: '/images/sketches/sketch test scan website3.png', id: 2},
+  {image: '/images/sketches/sketch test scan website4.png', id: 3},
+  {image: '/images/sketches/sketch test scan website6.png', id: 4},
 ];
 
 const data2 = [
-  {
-    image: '/images/sketches/metal2.png', id: 5
-  },
-  {
-    image: '/images/sketches/cat3.png', id: 6
-  },
-  {
-    image: '/images/sketches/dragon2.png', id: 7
-  },
-  {
-  image: '/images/sketches/illusions2.png', id: 8
-  },
+  {image: '/images/sketches/metal2.png', id: 5},
+  {image: '/images/sketches/cat3.png', id: 6},
+  {image: '/images/sketches/dragon2.png', id: 7},
+  {image: '/images/sketches/illusions2.png', id: 8},
 ];
 
 const data3 = [
@@ -56,32 +35,8 @@ export default function Testing() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-// const direction, setDirection = {
-//     handlePrevImage ? setDirection(right) : setDirection(left)
-// }
-
   const imageVariants = {
-    enter() { 
-        return {
-            x:direction > 0 ? 1000 : -1000,
-            opacity:0
-        };
-    },
-    center: {
-        x:0,
-        opacity:1
-    },
-    exit() {
-        return {
-            x:direction < 0 ? 1000: -1000,
-            opacity: 0
-        };
-    }
   };
-
-// const imageVariants = {
-
-// }
 
   const [animationState, setAnimationState] = useState('initial');
 
@@ -115,7 +70,6 @@ export default function Testing() {
       setSelectedImage(dataArray[newIndex].image);
       console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
     }
-    direction=1
   };
 
 
@@ -269,10 +223,6 @@ useEffect(() => {
           >
           <motion.img
             src={selectedImage}
-            // initial={{scale:0.5}}
-            // animate={{scale:1}}
-            // exit={{scale:0.45}}
-            // transition={{duration:0.3}}
             initial="enter"
             animate="center"
             exit="exit"
@@ -298,7 +248,6 @@ useEffect(() => {
               <IoIosArrowBack style={{ fontSize: '2rem' }}/>
             </button>
             </div>
-            {/* <div className="absolute right-5"> */}
             <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="rightButton"
