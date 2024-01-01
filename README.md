@@ -5,21 +5,16 @@
 ### Pages
 - [ ] Maybe add some more whileInView animations?
 
-### Navbar
-- [ ] Redo open/close animations with framer motion 
-- [ ] look into stagger animation
-
 ### New Links Page:
 - [x] new links page: --> motion div whileinview
 - [ ] New links page: some onhover animation for images maybe?
-
-## Ideas for when bored:
-- [ ] Titles sticky until scroll by?
 
 ### Image/Page loading:
 - [ ] Look into preloading gifs/images maybe
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
+
+- [ ] Add "buffer" that actually shows loading.js instead of absolutely nothing
 
 ### Image/Gif Animations:
 - [ ] Image gallery : image left/right animations 
@@ -45,8 +40,8 @@
 
 
 ## Checklist before final publish:
-- [ ] Fix texts
-- [ ] Updated links (CV, Portfolio)
+- [x] Fix texts
+- [x] Updated links (CV, Portfolio)
 
 ### Videos/Gifs/Images:
 
