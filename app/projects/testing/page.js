@@ -106,7 +106,7 @@ export default function testing() {
         transition={{ duration: 0.1}}
         
         style={{
-          backdropFilter: `blur(6px)`,
+          backdropFilter: `blur(4px)`,
         }}>
         </motion.div>
       )}

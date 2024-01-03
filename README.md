@@ -4,16 +4,11 @@
 
 ### Pages
 - [ ] Maybe add some more whileInView animations?
-- [ ] Projects/Animations page --> Add blur while hovering maybe
-
 - [ ] Look into CLS (cumulative layout shift)
 - [ ] Make suspense work in projects
 
-### Animations:
-- [ ] Image gallery : image left/right animations 
-- [ ] Animation gifs --> not weird stretching
-
 ### Image/Page loading:
+- [ ] Figure out if left/right swiping animations is possible
 - [ ] Look into preloading gifs/images maybe
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
@@ -27,13 +22,15 @@
 ### Footer
 - [ ] Make website footer?
 
+### Random Fixes
+- [ ] Fix youtube not allowing fullscreen
+
 ### Page Divider:
 - [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 
 ### Focus/Dim Buttons:
 - [x] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
 - [x] Implement focus button on all pages
-
 
 ## Checklist before final publish:
 - [x] Fix texts
@@ -45,6 +42,10 @@
 - [x] Video embedding --> dim background
 
 #### Animations:
+
+- [ ] Maybe different background images for each page? slightly transparent
+
+- [x] Add background blur onhover
 - [x] Upload all animations
 - [x] Kontakt
 - [x] Logo
