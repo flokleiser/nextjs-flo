@@ -46,10 +46,6 @@ export default function projects() {
    z-[-1]">
             </div>
 
-{/*            
-            <div className={styles.backbutton}>
-            <h1> <Link href="/"> Back to Homepage</Link> </h1>
-            </div> */}
 
             <h1 className={styles.title}> 
             Projects

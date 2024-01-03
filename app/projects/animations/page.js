@@ -65,8 +65,11 @@ export default function animations() {
             </div>
       
             {/* </div> */}
+            <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
 
-            <div style={{ padding: '2rem' }}>
+            <div style={{ padding: '1rem' }}>
             <div className={styles.gridanimation}>
                 <Link
                 href='/projects/animations/plasticine'
@@ -163,7 +166,8 @@ export default function animations() {
             </div>
             </div>
 
-            <div className={styles.subtitledescription} >
+
+            <div className={styles.subtitledescription} style={{margin:"-1rem"}}>
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
                 <a href="https://drive.google.com/drive/folders/1tV3FvfgCulwlXBDga_Jf9pJH1nuoTqvK?usp=drive_link" target="_blank"> 
                     <DiGoogleDrive /> All videos
@@ -171,7 +175,7 @@ export default function animations() {
                 </div>
             </div>
 
-                <div style={{ padding: '2rem' }}> </div>
+                <div style={{ padding: '0.3rem' }}> </div>
     
 
         </main>

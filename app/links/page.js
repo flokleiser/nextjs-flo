@@ -51,14 +51,6 @@ export default function links() {
 
       <h1 className={styles.title}>Links/Info</h1>
 
-      {/* <p className={styles.subtitledescription}>
-        Hi, im Florian Kleiser, I am 24 years old and I come from Zürich,
-        Switzerland. <br></br>
-        My passions include drawing, editing, programming, gaming, skating and
-        music. <br></br>I am currently applying to study Interaction Design /
-        Digital Ideation.
-      </p> */}
-
       <p className={styles.subtitledescription}>
         Links to my Portfolio, Curriculum Vitae, Google Drive, GitHub, and info about me 
       </p>

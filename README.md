@@ -5,24 +5,24 @@
 ### Pages
 - [ ] Maybe add some more whileInView animations?
 
+- [ ] Look into CLS (cumulative layout shift)
+- [ ] Make suspense work in projects
+- [ ] Projects/Animations page --> Add blur while hovering maybe
+
+### Animations:
+- [ ] Image gallery : image left/right animations 
+- [ ] Animation gifs --> not weird stretching
+
 ### Image/Page loading:
 - [ ] Look into preloading gifs/images maybe
 - [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
-
 - [ ] Add "buffer" that actually shows loading.js instead of absolutely nothing
-
-### Image/Gif Animations:
-- [ ] Image gallery : image left/right animations 
-- [ ] Animation gifs --> not weird stretching
 
 ### Page Transitions:
 - [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
 - [ ] Animation onSelect (on clicking projects/portfolio)
 - [ ] Page transitions seem to be broken on nextjs13 using the app router for some weird reason, figure out why -> useRouter/usePath etc
-
-### Loading.js
-- [x] Loading.js page more betterer
 
 ### Footer
 - [ ] Make website footer?
