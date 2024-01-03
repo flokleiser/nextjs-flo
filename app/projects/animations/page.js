@@ -103,10 +103,10 @@ export default function testing() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.1}}
+        transition={{ duration: 0.06}}
         
         style={{
-          backdropFilter: `blur(4px)`,
+          backdropFilter: `blur(6px)`,
         }}>
         </motion.div>
       )}
