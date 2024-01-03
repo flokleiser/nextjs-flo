@@ -600,8 +600,7 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/skate transparent2.png");
-  /* z-index: 1; */
-  z-index: 5;
+  z-index: 1;
   position: relative;
 }
 .cardanimationSkate span {
@@ -914,10 +913,8 @@ transition: all 0.5s ease-in-out;
   .cardanimation:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);    
+    z-index: 5;
   
-    /* background-size:140%;
-    background-position: center; */
-    
     background-image: url("/images/animations/gifs/plasticine-gif-half.gif"); 
   }
 
@@ -925,6 +922,7 @@ transition: all 0.5s ease-in-out;
   .cardanimationplasticine:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);    
+    z-index: 5;
   
     /* background-size:140%;
     background-position: center; */
@@ -956,6 +954,7 @@ transition: all 0.5s ease-in-out;
   .cardanimationEscape:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
+    z-index: 5;
 
     background-image: url("/images/animations/gifs/escape-short4.gif"); 
   }
@@ -973,6 +972,7 @@ transition: all 0.5s ease-in-out;
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-image: url("/images/animations/gifs/kontakt-v2.gif");
+    z-index: 5;
   }
   .cardanimationKontakt:hover span {
     transform: translateX(4px);
@@ -983,6 +983,7 @@ transition: all 0.5s ease-in-out;
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-image: url("/images/animations/gifs/logotest3.gif"); 
+    z-index: 5;
   }
   .cardanimationLogo:hover span {
     transform: translateX(4px);
@@ -993,6 +994,7 @@ transition: all 0.5s ease-in-out;
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-image: url("/images/animations/gifs/public-transport5.gif"); 
+    z-index: 5;
   }
   .cardanimationMusic:hover span {
     transform: translateX(4px);

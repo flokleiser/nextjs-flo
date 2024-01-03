@@ -75,6 +75,7 @@ export default function testing() {
         
         style={{
           backdropFilter: `blur(4px)`,
+          pointerEvents: 'none'
         }}>
         </motion.div>
       )}

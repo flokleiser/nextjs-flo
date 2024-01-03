@@ -16,38 +16,6 @@ export default function animations() {
   const handleHover= () => {
     setHovering(!isHovering);
   }
-  
-  const [isHoveringPlasticine, setHoveringPlasticine] = useState(false)
-  const handleHoverPlasticine = () => {
-    setHoveringPlasticine(!isHoveringPlasticine);
-  }
-
-  const [isHoveringSkate, setHoveringSkate] = useState(false)
-  const handleHoverSkate = () => {
-    setHoveringSkate(!isHoveringSkate);
-  }
-
-  const [isHoveringEscape, setHoveringEscape] = useState(false)
-  const handleHoverEscape= () => {
-    setHoveringEscape(!isHoveringEscape);
-  }
-
-  const [isHoveringK, setHoveringK] = useState(false)
-  const handleHoverK= () => {
-    setHoveringK(!isHoveringK);
-  }
-
-  const [isHoveringLogo, setHoveringLogo] = useState(false)
-  const handleHoverLogo= () => {
-    setHoveringLogo(!isHoveringLogo);
-  }
-
-  const [isHoveringM, setHoveringM] = useState(false)
-  const handleHoverM= () => {
-    setHoveringM(!isHoveringM);
-  }
-
-
 
   return (
     <main className={styles.main}>
@@ -103,10 +71,11 @@ export default function animations() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.06}}
+        transition={{ duration: 0.25}}
         
         style={{
           backdropFilter: `blur(6px)`,
+          pointerEvents: 'none'
         }}>
         </motion.div>
       )}
@@ -135,12 +104,11 @@ export default function animations() {
             style={{
               backgroundSize: "102%",
               backgroundPosition: "center",
-              zIndex: isHoveringPlasticine ? 3 : 1
             }}
             rel="noopener noreferrer"
-            onMouseOver={() => {handleHoverPlasticine(),handleHover()}}
-            onMouseMove={() => {setHoveringPlasticine(true),setHovering(true)}}
-            onMouseLeave={() => {setHoveringPlasticine(false),setHovering(false)}}
+            onMouseOver={() => {handleHover()}}
+            onMouseMove={() => {setHovering(true)}}
+            onMouseLeave={() => {setHovering(false)}}
           >
             <h2>Plasticine (A)life</h2>
             <p>Stop Motion</p>
@@ -152,12 +120,11 @@ export default function animations() {
             style={{
               backgroundSize: "102%",
               backgroundPosition: "center",
-              zIndex: isHoveringSkate ? 3 : 1
             }}
             rel="noopener noreferrer"
-            onMouseOver={() => {handleHoverSkate(),handleHover()}}
-            onMouseMove={() => {setHoveringSkate(true),setHovering(true)}}
-            onMouseLeave={() => {setHoveringSkate(false),setHovering(false)}}
+            onMouseOver={() => {handleHover()}}
+            onMouseMove={() => {setHovering(true)}}
+            onMouseLeave={() => {setHovering(false)}}
           >
             <h2>Skate</h2>
             <p>Rotoscoping, Drawing</p>
@@ -169,12 +136,11 @@ export default function animations() {
             style={{
               backgroundSize: "102%",
               backgroundPosition: "center",
-              zIndex: isHoveringEscape ? 3 : 1
             }}
             rel="noopener noreferrer"
-            onMouseOver={() => {handleHoverEscape(),handleHover()}}
-            onMouseMove={() => {setHoveringEscape(true),setHovering(true)}}
-            onMouseLeave={() => {setHoveringEscape(false),setHovering(false)}}
+            onMouseOver={() => {handleHover()}}
+            onMouseMove={() => {setHovering(true)}}
+            onMouseLeave={() => {setHovering(false)}}
           >
             <h2>Escape</h2>
             <p>Image animation</p>
@@ -186,12 +152,11 @@ export default function animations() {
             style={{
               backgroundSize: "102%",
               backgroundPosition: "center",
-              zIndex: isHoveringK ? 3 : 1
             }}
             rel="noopener noreferrer"
-            onMouseOver={() => {handleHoverK(),handleHover()}}
-            onMouseMove={() => {setHoveringK(true),setHovering(true)}}
-            onMouseLeave={() => {setHoveringK(false),setHovering(false)}}
+            onMouseOver={() => {handleHover()}}
+            onMouseMove={() => {setHovering(true)}}
+            onMouseLeave={() => {setHovering(false)}}
           >
             <h2>Kontakt</h2>
             <p>Animating physics</p>
@@ -203,12 +168,11 @@ export default function animations() {
             style={{
               backgroundSize: "102%",
               backgroundPosition: "center",
-              zIndex: isHoveringLogo ? 3 : 1
             }}
             rel="noopener noreferrer"
-            onMouseOver={() => {handleHoverLogo(),handleHover()}}
-            onMouseMove={() => {setHoveringLogo(true),setHovering(true)}}
-            onMouseLeave={() => {setHoveringLogo(false),setHovering(false)}}
+            onMouseOver={() => {handleHover()}}
+            onMouseMove={() => {setHovering(true)}}
+            onMouseLeave={() => {setHovering(false)}}
           >
             <h2>Logo</h2>
             <p>Variations of a Logo</p>
@@ -220,12 +184,11 @@ export default function animations() {
             style={{
               backgroundSize: "102%",
               backgroundPosition: "center",
-              zIndex: isHoveringM ? 3 : 1
             }}
             rel="noopener noreferrer"
-            onMouseOver={() => {handleHoverM(),handleHover()}}
-            onMouseMove={() => {setHoveringM(true),setHovering(true)}}
-            onMouseLeave={() => {setHoveringM(false),setHovering(false)}}
+            onMouseOver={() => {handleHover()}}
+            onMouseMove={() => {setHovering(true)}}
+            onMouseLeave={() => {setHovering(false)}}
           >
             <h2>Music</h2>
             <p>Music Visualizers</p>
