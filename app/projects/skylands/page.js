@@ -252,7 +252,7 @@ export default function skylands() {
                 style={{ maxHeight: "80vh", zIndex: 9999 }}
               />
               <button
-                className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+                className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
                 onClick={handleResetClick}
                 style={{ zIndex: 9979 }}
               >

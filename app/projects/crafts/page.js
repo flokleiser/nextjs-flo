@@ -209,7 +209,7 @@ return () => {
             style={{ maxHeight: '80vh', zIndex: 9990 }}
           />
            <button
-            className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+            className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             onClick={handleResetClick}
             style={{ zIndex: 9999 }}
           >
