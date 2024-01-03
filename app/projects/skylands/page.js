@@ -332,7 +332,7 @@ export default function skylands() {
         <div style={{ padding: "1.25rem" }}> </div>
       </div>
 
-      <div className="">
+      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -357,7 +357,7 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -409,7 +409,8 @@ export default function skylands() {
         <div style={{ padding: "1.25rem" }}> </div>
       </div>
 
-      <div className="">
+      {/* <div className=""> */}
+      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -434,7 +435,8 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </div>
+      {/* </div> */}
+      </motion.div>
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -487,7 +489,8 @@ export default function skylands() {
         <div style={{ padding: "1.25rem" }}> </div>
       </div>
 
-      <div className="">
+      {/* <div className=""> */}
+      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -512,7 +515,8 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </div>
+      {/* </div> */}
+      </motion.div>
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />

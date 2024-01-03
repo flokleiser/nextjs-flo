@@ -10,20 +10,20 @@ import { AnimatePresence, motion} from 'framer-motion';
 import testimage from "/public/images/sketches/sketch test scan website2.png";
 
 const data = [
-  // {image: '/images/sketches/sketch test scan website2.png', id: 0},
-  // {image: '/images/sketches/sketch test website.png', id: 1},
-  // {image: '/images/sketches/sketch test scan website3.png', id: 2},
-  // {image: '/images/sketches/sketch test scan website4.png', id: 3},
-  // {image: '/images/sketches/sketch test scan website6.png', id: 4},
-  {image: testimage, id:0},
-  {image: testimage, id:1},
-  {image: testimage, id:2},
-  {image: testimage, id:3},
-  {image: testimage, id:4}
+  {image: '/images/sketches/sketch test scan website2.png', id: 0},
+  {image: '/images/sketches/sketch test website.png', id: 1},
+  {image: '/images/sketches/sketch test scan website3.png', id: 2},
+  {image: '/images/sketches/sketch test scan website4.png', id: 3},
+  {image: '/images/sketches/sketch test scan website6.png', id: 4},
+  // {image: testimage, id:0},
+  // {image: testimage, id:1},
+  // {image: testimage, id:2},
+  // {image: testimage, id:3},
+  // {image: testimage, id:4}
 ];
 
 
-export default function testing() {
+export default async function testing() {
   
   useEffect(() => {
     document.title = "testing";

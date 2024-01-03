@@ -8,7 +8,7 @@
 
 ### Image/Page loading:
 
-- [ ] Look into awaitpromise
+- [ ] Look into await/async promise
 
 - [ ] Blur image placeholder until fully loaded 
 - [ ] Figure out how blur placeholder works with array

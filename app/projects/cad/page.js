@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
+import { useInView } from 'framer-motion';
 
 
 const data = [
@@ -259,9 +260,11 @@ return () => {
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) =>  (
-                  <article key="cad1"
+
+                  <article key="cad1" 
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
+
                     <div className="relative rounded-2xl">
                       <Image
                         width={600}
@@ -313,7 +316,12 @@ return () => {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-              <div className="">
+              <motion.div className=""
+              style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
+              whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
+              transition={{duration:0.5}} 
+              >
+                
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -337,7 +345,7 @@ return () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
 
               <div styles={{ padding: '2rem' }}> </div>
@@ -351,7 +359,11 @@ Completed CAD design:
 <div styles={{ padding: '2rem' }}> </div> */}
 
 
-              <div className="">
+              <motion.div className=""
+              style={{translateX:300, opacity:0.5, filter:'blur(10px)'}}
+              whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
+              transition={{duration:0.5}} 
+              >
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -375,7 +387,7 @@ Completed CAD design:
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               <div styles={{ padding: '2rem' }}> </div>
 
@@ -388,7 +400,11 @@ Prototypes out of popsicle sticks
 <div styles={{ padding: '2rem' }}> </div> */}
 
 
-            <div className="">
+              <motion.div className=""
+              style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
+              whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
+              transition={{duration:0.5}} 
+              >
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -412,7 +428,7 @@ Prototypes out of popsicle sticks
                     ))}
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
 
             {/* <div className={styles.subtitledescription}>
