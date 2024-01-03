@@ -113,6 +113,9 @@ export default function music() {
             src="https://drive.google.com/uc?id=1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV" controls>
             </video>     */}
 
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
         <div className = {styles.subtitle}>
               <p2>
                Public Transport
@@ -155,7 +158,7 @@ export default function music() {
         <div style={{ padding: "0.125rem" }}> </div>
             <div className='flex align-center'>
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}} 
-            src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0&rel=0" >
+            src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0&rel=0"allowFullScreen >
             </iframe>
             </div>
             <div style={{ padding: "1.25rem" }}> </div>
@@ -210,7 +213,7 @@ export default function music() {
         <div style={{ padding: "0.125rem" }}> </div> 
             <div className='flex align-center'>
         
-            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx&rel=0" >
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx&rel=0"allowFullScreen >
             </iframe>
             </div>
             <div style={{ padding: "1.25rem" }}> </div>
@@ -264,7 +267,7 @@ export default function music() {
         <div style={{ padding: "0.125rem" }}> </div> 
             <div className='flex align-center'>
       
-            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5&rel=0" >
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5&rel=0" allowFullScreen>
            </iframe>
            </div>
            <div style={{ padding: "1.25rem" }}> </div>

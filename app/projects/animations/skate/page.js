@@ -96,6 +96,9 @@ export default function skate() {
               Skate Animations
             </h1>
 
+            <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
           {/* <div className={styles.subtitledescription}>
             <p>
               placeholder
@@ -154,7 +157,7 @@ export default function skate() {
         <div style={{ padding: "0.125rem" }}> </div> 
             <div className='flex align-center'>
            
-            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"> 
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"allowFullScreen> 
             </iframe>
             </div>
             <div style={{ padding: "1.25rem" }}> </div>
@@ -209,7 +212,7 @@ export default function skate() {
         <div style={{ padding: "0.125rem" }}> </div>
             <div className='flex align-center'>
            
-            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0">
+            <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0"allowFullScreen>
             </iframe>
             </div>
             <div style={{ padding: "1.25rem" }}> </div>

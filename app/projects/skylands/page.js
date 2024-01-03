@@ -327,6 +327,7 @@ export default function skylands() {
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
+            allowFullScreen
           ></iframe>
 
         </div>
@@ -404,6 +405,7 @@ export default function skylands() {
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/RHG-6tXNh6s?si=CeC_FO-txlmVHThG&rel=0"
+            allowFullScreen
           ></iframe>
         </div>
         <div style={{ padding: "1.25rem" }}> </div>
@@ -481,6 +483,7 @@ export default function skylands() {
             className={styles.iframevideo}
             style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
             src="https://www.youtube.com/embed/A0E-4BC7WaY?si=0tBe_be9_eXKcwaY&rel=0"
+            allowFullScreen
           ></iframe>
         </div>
         <div style={{ padding: "1.25rem" }}> </div>

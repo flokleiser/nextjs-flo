@@ -143,6 +143,7 @@ export default function logo() {
             className={styles.iframevideo}
             style={{ zIndex: 48, position: "relative" }}
             src="https://www.youtube.com/embed/kYIbEc0wmu4?si=is1tQgTleDbIWayt&rel=0"
+            allowFullScreen
           ></iframe>
         </div>
         <div style={{ padding: "1.25rem" }}> </div>

@@ -140,7 +140,7 @@ export default function kontakt() {
          <div className='flex align-center'>
         
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}} 
-            src="https://www.youtube.com/embed/VAPNv4HEvw8?si=0Acev4IzeaTSiAZ3&rel=0"> 
+            src="https://www.youtube.com/embed/VAPNv4HEvw8?si=0Acev4IzeaTSiAZ3&rel=0" allowFullScreen> 
             </iframe>
             </div>
             <div style={{ padding: "1.25rem" }}> </div>
