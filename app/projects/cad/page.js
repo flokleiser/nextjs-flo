@@ -62,7 +62,6 @@ export default function cad() {
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
-      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
@@ -74,7 +73,6 @@ export default function cad() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
-      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 

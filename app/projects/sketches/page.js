@@ -61,7 +61,6 @@ export default function sketches() {
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
-      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
@@ -73,7 +72,6 @@ export default function sketches() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
-      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
@@ -261,7 +259,7 @@ useEffect(() => {
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) =>  (
-                  <article key="x1"
+                  <article 
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative rounded-2xl">
@@ -290,7 +288,7 @@ useEffect(() => {
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data2.map((x) =>  (
-                  <article key="x2"
+                  <article 
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative rounded-2xl">
@@ -316,7 +314,7 @@ useEffect(() => {
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data3.map((x) =>  (
-                  <article key="x3"
+                  <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
                     <div className="relative rounded-2xl">

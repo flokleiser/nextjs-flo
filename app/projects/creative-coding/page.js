@@ -60,7 +60,6 @@ export default function creativeCoding() {
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
-      console.log(`Previous button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
@@ -71,7 +70,6 @@ export default function creativeCoding() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
-      console.log(`Next button clicked. Index: ${dataArray[newIndex].id}`);
     }
   };
 
@@ -200,6 +198,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         style={{
           // paddingLeft:"2rem", paddingRight:"2rem"  
           width:"90vw",
+          zIndex:1
           }}
           >
 
@@ -274,7 +273,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
               style={{ maxHeight: "80vh", zIndex: 9990 }}
             />
             <button
-              className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+              className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
               onClick={handleResetClick}
               style={{ zIndex: 9999 }}
             >

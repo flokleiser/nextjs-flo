@@ -8,16 +8,9 @@
 
 ### Image/Page loading:
 - [ ] Blur image placeholder until fully loaded 
-
-- [ ] Figure out if left/right swiping animations is possible
+- [ ] Figure out how blur placeholder works with array
 - [ ] Look into preloading gifs/images maybe
 - [ ] Keep page from displaying until fully loaded (?)
-- [ ] Add "buffer" that actually shows loading.js instead of absolutely nothing
-
-### Page Transitions:
-- [ ] Page transition/animation -> idea: page timeout onclick + animation then, before transition
-- [ ] Animation onSelect (on clicking projects/portfolio)
-- [ ] Page transitions seem to be broken on nextjs13 using the app router for some weird reason, figure out why -> useRouter/usePath etc
 
 ### Footer
 - [ ] Make website footer?
@@ -42,8 +35,6 @@
 - [x] Video embedding --> dim background
 
 #### Animations:
-
-- [ ] Only blur backgroundimage?
 
 - [ ] Maybe different background images for each page? slightly transparent -> maybe when dimmed, add some background image over the overlay
 
