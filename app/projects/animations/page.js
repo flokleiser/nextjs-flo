@@ -6,10 +6,10 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 
-export default function testing() {
+export default function animations() {
   
   useEffect(() => {
-    document.title = "testing";
+    document.title = "Projects - Animations";
   }, []);
 
   const [isHovering, setHovering] = useState(false)

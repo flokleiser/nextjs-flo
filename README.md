@@ -4,13 +4,13 @@
 
 ### Pages
 - [ ] Maybe add some more whileInView animations?
-- [ ] Look into CLS (cumulative layout shift)
 - [ ] Make suspense work in projects
 
 ### Image/Page loading:
+- [ ] Blur image placeholder until fully loaded 
+
 - [ ] Figure out if left/right swiping animations is possible
 - [ ] Look into preloading gifs/images maybe
-- [ ] Blur image placeholder until fully loaded maybe
 - [ ] Keep page from displaying until fully loaded (?)
 - [ ] Add "buffer" that actually shows loading.js instead of absolutely nothing
 
@@ -23,7 +23,7 @@
 - [ ] Make website footer?
 
 ### Random Fixes
-- [ ] Fix youtube not allowing fullscreen
+- [x] Fix youtube not allowing fullscreen
 
 ### Page Divider:
 - [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
@@ -43,7 +43,9 @@
 
 #### Animations:
 
-- [ ] Maybe different background images for each page? slightly transparent
+- [ ] Only blur backgroundimage?
+
+- [ ] Maybe different background images for each page? slightly transparent -> maybe when dimmed, add some background image over the overlay
 
 - [x] Add background blur onhover
 - [x] Upload all animations

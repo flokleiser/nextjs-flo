@@ -563,6 +563,8 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/plasticine card4.png");
+  z-index: 1;
+  position: relative;
 }
 .cardanimationplasticine span {
   display: flex;
@@ -598,6 +600,9 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/skate transparent2.png");
+  /* z-index: 1; */
+  z-index: 5;
+  position: relative;
 }
 .cardanimationSkate span {
   display: flex;
@@ -632,6 +637,8 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/escape transparent3.png");
+  z-index: 1;
+  position: relative;
 }
 .cardanimationEscape span {
   display: flex;
@@ -666,6 +673,8 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/kontakt transparent.png");
+  z-index: 1;
+  position: relative;
 }
 .cardanimationKontakt span {
   display: flex;
@@ -700,6 +709,8 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/logo new small4.png");
+  z-index: 1;
+  position: relative;
 }
 .cardanimationLogo span {
   display: flex;
@@ -734,6 +745,8 @@ transition: all 0.5s ease-in-out;
   overflow: hidden;
   justify-self: center;
   background-image: url("/images/animations/cards/music transparent3.png");
+  z-index: 1;
+  position: relative;
 }
 .cardanimationMusic span {
   display: flex;
@@ -917,6 +930,7 @@ transition: all 0.5s ease-in-out;
     background-position: center; */
     
     background-image: url("/images/animations/gifs/plasticine-gif-new.gif"); 
+    z-index: 5;
   }
   .cardanimation:hover span {
     transform: translateX(4px);
@@ -927,6 +941,7 @@ transition: all 0.5s ease-in-out;
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);  
     background-image: url("/images/animations/gifs/skatenew8.gif"); 
+    z-index: 5;
   }
   .cardanimationSkate:hover h2,
   .cardanimationSkate:hover p {
