@@ -4,6 +4,7 @@ import styles from "app/page.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { AnimatePresence, motion, stagger } from "framer-motion";
 import { BsList, BsX, BsXSquare, BsSearch } from "react-icons/bs";
 import {
@@ -68,7 +69,8 @@ const navSubItems = [
 ];
 
 export default function Navbar() {
-  let pathname = usePathname() || "/";
+
+  const pathname = usePathname() || "/";
 
   const [showNavbar, setShowNavbar] = useState(false);
   const [showSubNavbar, setShowSubNavbar] = useState(false);
@@ -129,17 +131,21 @@ export default function Navbar() {
             >
               <nav className="flex justify-start items-center w-full z-9999">
                 {navItems.map((item) => {
-                  const isActive = item.path === pathname;
+                  // const isActive = item.path === pathname;
                   return (
                     <motion.div whileTap={{ scale: 0.8 }}>
                       <Link
                         key={item.path}
                         className={`px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
-                          isActive ? "text-zinc-100" : "text-zinc-300"
+                          // isActive 
+                          item.path === pathname
+                          ? "text-zinc-100" : "text-zinc-300"
                         }`}
-                        data-active={isActive}
+                        // data-active={isActive}
                         href={item.path}
                         onMouseOver={() => setHoveredPath(item.path)}
+                        onMouseMove={() => setHoveredPath(pathname)}
+                        // onMouseMove={() => setHoveredPath(item.path)}
                         onMouseLeave={() => setHoveredPath(pathname)}
                       >
                         <span>{item.name}</span>
@@ -204,19 +210,22 @@ export default function Navbar() {
                     >
                       <nav className="flex flex-row justify-start w-full z-9999">
                         {navSubItems.map((subItem) => {
-                            const isActive = subItem.path === pathname;
+                          const isActive = subItem.path === pathname;
                             return (
                               <motion.div whileTap={{ scale: 0.8 }}>
                           <Link
                             key={subItem.path}
                             className={`px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999 ${
-                              subItem.path === pathname
+                              // subItem.path === pathname
+                              isActive 
                                 ? "text-zinc-100"
                                 : "text-zinc-300"
                             }`}
-                            data-active={subItem.path === pathname}
+                            // data-active={subItem.path === pathname}
+                            data-active={isActive}
                             href={subItem.path}
                             onMouseOver={() => setHoveredPath(subItem.path)}
+                            onMouseMove={() => setHoveredPath(pathname)}
                             onMouseLeave={() => setHoveredPath(pathname)}
                             // onClick={handleSubNavbarItemClick}
                           >
