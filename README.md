@@ -7,6 +7,9 @@
 - [ ] Make suspense work in projects
 
 ### Image/Page loading:
+
+- [ ] Look into awaitpromise
+
 - [ ] Blur image placeholder until fully loaded 
 - [ ] Figure out how blur placeholder works with array
 - [ ] Look into preloading gifs/images maybe
@@ -16,6 +19,7 @@
 - [ ] Make website footer?
 
 ### Random Fixes
+- [ ] Navbar currentPath box behaving weird when scrolled down and page change
 - [x] Fix youtube not allowing fullscreen
 
 ### Page Divider:

@@ -7,12 +7,19 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
 
+import testimage from "/public/images/sketches/sketch test scan website2.png";
+
 const data = [
-  {image: '/images/sketches/sketch test scan website2.png', id: 0},
-  {image: '/images/sketches/sketch test website.png', id: 1},
-  {image: '/images/sketches/sketch test scan website3.png', id: 2},
-  {image: '/images/sketches/sketch test scan website4.png', id: 3},
-  {image: '/images/sketches/sketch test scan website6.png', id: 4},
+  // {image: '/images/sketches/sketch test scan website2.png', id: 0},
+  // {image: '/images/sketches/sketch test website.png', id: 1},
+  // {image: '/images/sketches/sketch test scan website3.png', id: 2},
+  // {image: '/images/sketches/sketch test scan website4.png', id: 3},
+  // {image: '/images/sketches/sketch test scan website6.png', id: 4},
+  {image: testimage, id:0},
+  {image: testimage, id:1},
+  {image: testimage, id:2},
+  {image: testimage, id:3},
+  {image: testimage, id:4}
 ];
 
 
@@ -206,7 +213,7 @@ backgroundColor: 'rgba(0, 0, 0, 0.75)',
   style={{ maxHeight: '80vh', zIndex: 9990 }}
 />
  <button
-  className="absolute top-5 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+  className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
   onClick={handleResetClick}
   style={{ zIndex: 9999 }}
 >
@@ -262,6 +269,19 @@ backgroundColor: 'rgba(0, 0, 0, 0.75)',
         </div>
       </div>
     </div>
+
+    <Image 
+    // src="/images/sketches/sketch test scan website2.png" 
+    src={testimage}
+    alt="testing" 
+    key='test' 
+    width={500} 
+    height={500} 
+    placeholder='blur'
+    />
+
+    <div style={{padding:'2rem'}}/>
+
     </main>
   )
 }
