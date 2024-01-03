@@ -10,39 +10,18 @@ import { AnimatePresence, motion} from 'framer-motion';
 
 
 const data = [
-  {
-    image: '/images/sketches/sketch test scan website2.png', id: 0
-  },
-  {
-  image: '/images/sketches/sketch test website.png', id: 1
-  },
-  {
-  image: '/images/sketches/sketch test scan website3.png', id: 2
-  },
-  {
-  image: '/images/sketches/sketch test scan website4.png', id: 3
-  },
-  {
-  image: '/images/sketches/sketch test scan website6.png', id: 4
-  },
-  // {
-  // image: '/images/sketches/sketch test scan website7.png', id: 5
-  // }
+  {image: '/images/sketches/sketch test scan website2.png', id: 0},
+  {image: '/images/sketches/sketch test website.png', id: 1},
+  {image: '/images/sketches/sketch test scan website3.png', id: 2},
+  {image: '/images/sketches/sketch test scan website4.png', id: 3},
+  {image: '/images/sketches/sketch test scan website6.png', id: 4},
 ];
 
 const data2 = [
-  {
-    image: '/images/sketches/metal2.png', id: 5
-  },
-  {
-    image: '/images/sketches/cat3.png', id: 6
-  },
-  {
-    image: '/images/sketches/dragon2.png', id: 7
-  },
-  {
-  image: '/images/sketches/illusions2.png', id: 8
-  },
+  {image: '/images/sketches/metal2.png', id: 5},
+  {image: '/images/sketches/cat3.png', id: 6},
+  {image: '/images/sketches/dragon2.png', id: 7},
+  {image: '/images/sketches/illusions2.png', id: 8},
 ];
 
 const data3 = [

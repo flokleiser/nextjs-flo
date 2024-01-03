@@ -4,10 +4,10 @@
 
 ### Pages
 - [ ] Maybe add some more whileInView animations?
+- [ ] Projects/Animations page --> Add blur while hovering maybe
 
 - [ ] Look into CLS (cumulative layout shift)
 - [ ] Make suspense work in projects
-- [ ] Projects/Animations page --> Add blur while hovering maybe
 
 ### Animations:
 - [ ] Image gallery : image left/right animations 
