@@ -1070,12 +1070,11 @@ transition: all 0.5s ease-in-out;
 
 @media (max-width: 900px) {
   .subNavbar {
-    display:none;
+    /* display:none; */
+    opacity:0;
+    pointer-events: 'none';
+    z-index: -10;
   }
-
-  .subNavbarTest {
-    display:none;
-  } 
 }
 
 
@@ -1111,7 +1110,8 @@ transition: all 0.5s ease-in-out;
   }
 
   .linkContainerImage {
-    width: 70vw;
+    /* width: 70vw; */
+    width: 95vw;
     transition: background-image 500ms;
     /* height: 50vh; */
     background-size:contain;

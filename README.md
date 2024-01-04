@@ -2,31 +2,18 @@
 
 ## Currently working on: 
 
-### Navbar second version
-- [ ] Make second version without hover-path
-- [ ] Decide on if i will use that or the first version
-
-### Pages
-- [ ] Maybe add some more whileInView animations?
-- [ ] Make suspense work in projects
-
-### Image/Page loading:
-
-- [ ] Look into await/async promise
-
-- [ ] Blur image placeholder until fully loaded 
-- [ ] Figure out how blur placeholder works with array
-- [ ] Look into preloading gifs/images maybe
-- [ ] Keep page from displaying until fully loaded (?)
-
 ### Footer
 - [ ] Make website footer?
 
 ### Random Fixes
+- [ ] Look into preloading gifs/images maybe
+- [ ] Keep page from displaying until fully loaded (?)
 - [ ] Navbar currentPath box behaving weird when scrolled down and page change
 - [x] Fix youtube not allowing fullscreen
 
-### Page Divider:
+### Random pages:
+- [ ] Maybe add some more whileInView animations?
+- [ ] Make suspense work in projects
 - [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 
 ### Focus/Dim Buttons:
@@ -108,6 +95,14 @@
 - [x] Fix title not centered on mobile
 
 ### Navbar:
+
+- [ ] Pathname seems responsible for "logging" the last visited page? -> important for the hovering animation
+- [ ] Subnavbar --> look into stagger
+- [ ] Make second version without hover-path
+- [ ] Maybe add suspense to page changes with menu bar?
+- [ ] Decide on if i will use that or the first version
+
+- [x] Fix not centered on mobile still
 - [x] Navbar animation --> from the side
 - [x] Sub-Navbar (Projects)
 - [x] Navbar icon

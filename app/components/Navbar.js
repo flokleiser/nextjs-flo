@@ -3,7 +3,6 @@ import styles from "app/page.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import { AnimatePresence, motion, stagger } from "framer-motion";
 import { BsList, BsX, BsXSquare, BsSearch } from "react-icons/bs";
 import {
@@ -69,6 +68,8 @@ const navSubItems = [
 
 export default function Navbar() {
 
+  const staggerSubNavbar = stagger(0.1,{startDelay:0.15});
+
   const pathname = usePathname() || "/";
 
   const [showNavbar, setShowNavbar] = useState(false);
@@ -126,41 +127,31 @@ export default function Navbar() {
             >
               <nav className="flex justify-start items-center w-full z-9999">
                 {navItems.map((item) => {
-                  // const isActive = item.path === pathname;
                   return (
                     <motion.div whileTap={{ scale: 0.8 }}>
                       <Link
                         key={item.path}
-                        className={`px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in ${
-                          // isActive 
-                          item.path === pathname
-                          ? "text-zinc-100" : "text-zinc-300"
-                        }`}
-                        // data-active={isActive}
+                        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in"
                         href={item.path}
-                        onMouseOver={() => setHoveredPath(item.path)}
-                        onMouseMove={() => setHoveredPath(pathname)}
-                        // onMouseMove={() => setHoveredPath(item.path)}
-                        onMouseLeave={() => setHoveredPath(pathname)}
-                        onClick={() => setHoveredPath(pathname)}
+                        onClick={() => setHoveredPath(item.path)}
                       >
                         <span>{item.name}</span>
-                        {/* {item.path === hoveredPath && (
-                          <motion.div
+                        {item.path === hoveredPath && (
+                          <div
                             className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                             layoutId="navbar"
                             aria-hidden="true"
                             style={{
                               width: "100%",
                             }}
-                            transition={{
-                              bounce: 0.01,
-                              stiffness: 100,
-                              damping: 20,
-                              duration: 0.3,
-                            }}
+                            //  transition={{
+                            //   bounce: 0.01,
+                            //   stiffness: 100,
+                            //   damping: 20,
+                            //   duration: 0.3,
+                            // }} 
                           />
-                        )} */}
+                         )} 
                       </Link>
                     </motion.div>
                   );
@@ -182,62 +173,44 @@ export default function Navbar() {
                   {showSubNavbar && (
                     <motion.div
                       className={styles.subNavbar}
-                      style={{
-                        position: "relative",
-                        transform: "translateX(100%)",
-                      }}
-                      initial={{
-                        transform: "translateX(100%)",
-                        opacity: 0,
-                      }}
-                      animate={{
-                        transform: "translateX(0)",
-                        opacity: 1,
-                      }}
-                      exit={{
-                        transform: "translateX(100%)",
-                        opacity: 0,
-                      }}
-                      transition={{
-                        duration: 0.5,
-                        ease: "easeInOut",
-                      }}
+                      // initial={{
+                      //   opacity: 0,
+                      // }}
+                      // animate={{
+                      //   opacity: 1,
+                      //   staggerSubNavbar
+                      // }}
+                      // exit={{
+                      //   opacity: 0,
+                      // }}
+                      // transition={{
+                      //   duration: 0.5,
+                      //   ease: "easeInOut",
+                      // }}
+
+                      animate
                     >
                       <nav className="flex flex-row justify-start w-full z-9999">
                         {navSubItems.map((subItem) => {
-                          const isActive = subItem.path === pathname;
-                            return (
-                              <motion.div whileTap={{ scale: 0.8 }}>
+                      return (
+                        <motion.div whileTap={{ scale: 0.8 }}>
                           <Link
                             key={subItem.path}
-                            className={`px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999 ${
-                              isActive 
-                                ? "text-zinc-100"
-                                : "text-zinc-300"
-                            }`}
-                            data-active={isActive}
+                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999" 
                             href={subItem.path}
-                            onMouseOver={() => setHoveredPath(subItem.path)}
-                            onMouseMove={() => setHoveredPath(pathname)}
-                            onMouseLeave={() => setHoveredPath(pathname)}
+                            onClick={() => setHoveredPath(subItem.path)}
                           >
                             <span>{subItem.name}</span>
-                            {/* {subItem.path === hoveredPath && (
-                              <motion.div
+                            {subItem.path === hoveredPath && (
+                              <div
                                 className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                                 layoutId="navbar"
                                 aria-hidden="true"
                                 style={{
                                   width: "100%",
                                 }}
-                                transition={{
-                                  bounce: 0.01,
-                                  stiffness: 100,
-                                  damping: 20,
-                                  duration: 0.3,
-                                }}
                               />
-                            )} */}
+                            )}
                           </Link>
                           </motion.div>
                             );
