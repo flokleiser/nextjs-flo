@@ -8,15 +8,12 @@
 .navbarBox {
   position:absolute;
   height:100%;
-  /* background-color: rgb(120 113 108 / 0.5); */
-  /* background-color: #A63C9F; */
   opacity:0.5;
   border-radius: 0.35rem;
   z-index: -10;
   bottom: 0px;
   left:0px;
   border:1.5px;
-  /* border-color: #ffffff; */
   border-style: solid;
 }
 
