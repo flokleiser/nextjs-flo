@@ -2,8 +2,18 @@
 
 ## Currently working on: 
 
-### Footer
-- [ ] Make website footer?
+### Random fun stuff
+- [ ] Navbar --> maybe bring back hover and add an outline for active path?
+- [ ] Navbar gray box --> figure out different colors for each page (if possible)
+- [ ] Navbar gray box --> make more colorful, maybe map display width to gradient
+- [ ] Look into SVG Drawing
+- [ ] Make menu buttons on navbar "morph" onclick
+
+### Random pages:
+- [ ] try layoutId (for pictures left/right swiping animations)
+- [ ] Maybe add some more whileInView animations?
+- [ ] Make suspense work in projects
+- [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 
 ### Random Fixes
 - [ ] Look into preloading gifs/images maybe
@@ -11,14 +21,8 @@
 - [ ] Navbar currentPath box behaving weird when scrolled down and page change
 - [x] Fix youtube not allowing fullscreen
 
-### Random pages:
-- [ ] Maybe add some more whileInView animations?
-- [ ] Make suspense work in projects
-- [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
-
-### Focus/Dim Buttons:
-- [x] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
-- [x] Implement focus button on all pages
+### Footer
+- [ ] Make website footer?
 
 ## Checklist before final publish:
 - [x] Fix texts
@@ -108,6 +112,10 @@
 - [x] Navbar fixed on top of screen?
 - [x] adjust spacing for focus button based on new navbar
 - [x] onTap animation
+
+### Focus/Dim Buttons:
+- [x] get some padding on top of id for focus button? (make new div with 1rem padding and take away 1rem padding from subtitle div) or
+- [x] Implement focus button on all pages
 
 ### Background:
 - [x] Gradient like github page

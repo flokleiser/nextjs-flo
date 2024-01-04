@@ -15,7 +15,6 @@ import {
   CiSquareMore,
   CiCircleChevUp,
 } from "react-icons/ci";
-import { MdBorderColor } from "react-icons/md";
 
 const navItems = [
   {
@@ -36,12 +35,10 @@ const navSubItems = [
   {
     path: "/projects/sketches",
     name: "Sketches",
-    color: "#FFFFFF"
   },
   {
     path: "/projects/creative-coding",
     name: "Creative Coding",
-    color:  "#3E0973"
   },
   {
     path: "/projects/skylands",
@@ -69,34 +66,6 @@ const navSubItems = [
   },
 ];
 
-const colorMap = {
-  "/": "#3E0973",
-  "/links": "#FFFFFF",
-  "/projects" :  "#58088C",
-  "/projects/sketches" : "#A63C9F",
-  "/projects/creative-coding" : "#850FA6", 
-  "/projects/skylands" : "#58088C",
-  "/projects/voxel" : "#3E0973",
-  "/projects/cad" : "#FFFFFF",
-  "/projects/animations" : "#FFFFFF",
-  "/projects/crafts" : "#FFFFFF",
-  "/projects/illustrator" : "#FFFFFF",
-}
-
-const borderColorMap = {
-  "/" : "#FFFFFF",
-  "/links" : "#CC0000",
-  "/projects" :  "#FFFFFF",
-  "/projects/sketches" :"#FFFFFF", 
-  "/projects/creative-coding" :"#FFFFFF", 
-  "/projects/skylands" : "#FFFFFF",
-  "/projects/voxel" :"#FFFFFF", 
-  "/projects/cad" : "#FFFFFF",
-  "/projects/animations" : "#FFFFFF",
-  "/projects/crafts" : "#FFFFFF",
-  "/projects/illustrator" : "#FFFFFF",
-}
-
 const grayBoxVariant = {
   initial:{
     width:'0%', 
@@ -107,16 +76,12 @@ const grayBoxVariant = {
 }
 
 export default function Navbar() {
-  
-  const pathname = usePathname() || "/";
 
-  const boxBackgroundColor = colorMap[pathname]
-  const boxBorderColor = borderColorMap[pathname]
+  const pathname = usePathname() || "/";
 
   const [showNavbar, setShowNavbar] = useState(false);
   const [showSubNavbar, setShowSubNavbar] = useState(false);
-  const [activePath, setActivePath] = useState(pathname);
-  const [hoveringPath, setHoveringPath] =useState(pathname)
+  const [hoveredPath, setHoveredPath] = useState(pathname);
 
   const toggleNavbarVisibility = () => {
     setShowNavbar(!showNavbar);
@@ -175,37 +140,21 @@ export default function Navbar() {
                         key={item.path}
                         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in"
                         href={item.path}
-                        onMouseOver={() => setHoveringPath(item.path)}
-                        onMouseMove={() => setHoveringPath(item.path)}
-                        onMouseLeave={() => setHoveringPath(false)}
-                        onClick={() => setActivePath(item.path)}
+                        onClick={() => setHoveredPath(item.path)}
                       >
                         <span>{item.name}</span>
-                        {item.path === activePath && (
+                        {item.path === hoveredPath && (
                           <motion.div
                             className={styles.navbarBox}
                             aria-hidden="true"
                             style={{
-                              backgroundColor: boxBackgroundColor,
-                              borderColor: boxBorderColor,
                               width: "100%",
-                              // opacity:0.5,
                             }}
                             variants={grayBoxVariant}
                             initial="initial" 
                             animate="animate"
                           />
                          )} 
-                         {item.path === hoveringPath && (
-                          <motion.div
-                          className={styles.navbarBoxHover}
-                          aria-hidden="true"
-                            style={{
-                              width: "100%",
-                              opacity: hoveringPath === activePath ? 0 : 1
-                            }}
-                          />
-                         )}
                       </Link>
                     </motion.div>
                   );
@@ -250,22 +199,16 @@ export default function Navbar() {
                             key={subItem.path}
                             className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999" 
                             href={subItem.path}
-                            onMouseOver={() => setHoveringPath(subItem.path)}
-                            onMouseMove={() => setHoveringPath(subItem.path)}
-                            onMouseLeave={() => setHoveringPath(false)}
-                            onClick={() => setActivePath(subItem.path)}
+                            onClick={() => setHoveredPath(subItem.path)}
                           >
-                            <span>
+                            <motion.span>
                             {subItem.name}  
-                            </span>
-                            {subItem.path === activePath && (
+                            </motion.span>
+                            {subItem.path === hoveredPath && (
                               <motion.div
                                 className={styles.navbarBox}
                                 aria-hidden="true"
                                 style={{
-                                  backgroundColor: boxBackgroundColor,
-                                  // opacity:0.5,
-                                  borderColor: boxBorderColor,
                                   width: "100%",
                                 }}
                                 variants={grayBoxVariant}
@@ -273,16 +216,6 @@ export default function Navbar() {
                                 animate="animate"
                               />
                             )}
-                            {subItem.path === hoveringPath && (
-                          <motion.div
-                          className={styles.navbarBoxHover}
-                          aria-hidden="true"
-                            style={{
-                              width: "100%",
-                              opacity: hoveringPath === activePath ? 0 : 1
-                            }}
-                          />
-                         )}
                           </Link>
                           </motion.div>
                             );
