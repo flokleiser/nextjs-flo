@@ -95,13 +95,9 @@
 - [x] Fix title not centered on mobile
 
 ### Navbar:
-
-- [ ] Pathname seems responsible for "logging" the last visited page? -> important for the hovering animation
+- [ ] Animate the "active-path" gray box 
 - [ ] Subnavbar --> look into stagger
-- [ ] Make second version without hover-path
-- [ ] Maybe add suspense to page changes with menu bar?
-- [ ] Decide on if i will use that or the first version
-
+- [x] Make second version without hover-path
 - [x] Fix not centered on mobile still
 - [x] Navbar animation --> from the side
 - [x] Sub-Navbar (Projects)

@@ -5,6 +5,16 @@
   align-items: center;
 }
 
+.navbarBox {
+  position:absolute;
+  height:100%;
+  background-color: rgb(120 113 108 / 0.5);
+  border-radius: 0.25rem;
+  z-index: -10;
+  bottom: 0px;
+  left:0px;
+}
+
 .homepageOverlayProjects {
   position: absolute;
   top: 0;

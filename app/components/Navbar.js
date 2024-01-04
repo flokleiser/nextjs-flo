@@ -68,8 +68,6 @@ const navSubItems = [
 
 export default function Navbar() {
 
-  const staggerSubNavbar = stagger(0.1,{startDelay:0.15});
-
   const pathname = usePathname() || "/";
 
   const [showNavbar, setShowNavbar] = useState(false);
@@ -137,19 +135,14 @@ export default function Navbar() {
                       >
                         <span>{item.name}</span>
                         {item.path === hoveredPath && (
-                          <div
-                            className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
+                          <motion.div
+                            className={styles.navbarBox}
                             layoutId="navbar"
                             aria-hidden="true"
                             style={{
                               width: "100%",
                             }}
-                            //  transition={{
-                            //   bounce: 0.01,
-                            //   stiffness: 100,
-                            //   damping: 20,
-                            //   duration: 0.3,
-                            // }} 
+                            animate
                           />
                          )} 
                       </Link>
@@ -171,26 +164,24 @@ export default function Navbar() {
                 </motion.div>
                 <AnimatePresence>
                   {showSubNavbar && (
-                    <motion.div
-                      className={styles.subNavbar}
-                      // initial={{
-                      //   opacity: 0,
-                      // }}
-                      // animate={{
-                      //   opacity: 1,
-                      //   staggerSubNavbar
-                      // }}
-                      // exit={{
-                      //   opacity: 0,
-                      // }}
-                      // transition={{
-                      //   duration: 0.5,
-                      //   ease: "easeInOut",
-                      // }}
-
-                      animate
-                    >
-                      <nav className="flex flex-row justify-start w-full z-9999">
+                       <motion.div
+                        className={styles.subNavbar}
+                        initial={{
+                          opacity: 0,
+                        }}
+                        animate={{
+                          opacity: 1,
+                        }}
+                        exit={{
+                          opacity: 0,
+                        }}
+                        transition={{
+                          duration: 0.5,
+                          ease: "easeInOut",
+                          staggerChildren:0.5
+                        }}
+                      >
+                    <nav className="flex flex-row justify-start w-full z-9999">
                         {navSubItems.map((subItem) => {
                       return (
                         <motion.div whileTap={{ scale: 0.8 }}>
@@ -200,10 +191,12 @@ export default function Navbar() {
                             href={subItem.path}
                             onClick={() => setHoveredPath(subItem.path)}
                           >
-                            <span>{subItem.name}</span>
+                            <motion.span>
+                            {subItem.name}  
+                            </motion.span>
                             {subItem.path === hoveredPath && (
                               <div
-                                className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
+                                className={styles.navbarBox}
                                 layoutId="navbar"
                                 aria-hidden="true"
                                 style={{
@@ -216,8 +209,8 @@ export default function Navbar() {
                             );
                         })}
                       </nav>
-                    </motion.div>
-                  )}
+                  </motion.div>
+                   )} 
                 </AnimatePresence>
 
               </nav>
