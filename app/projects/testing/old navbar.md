@@ -1,4 +1,5 @@
 "use client";
+
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -83,6 +84,10 @@ export default function Navbar() {
     setShowSubNavbar(!showSubNavbar);
   };
 
+  // const handleSubNavbarItemClick = () => {
+  //   setShowSubNavbar(false);
+  // };
+
   return (
     <div className={styles.navbarContainer}>
       <div className="flex border-stone-900/80 p-[0.4rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
@@ -142,10 +147,9 @@ export default function Navbar() {
                         onMouseMove={() => setHoveredPath(pathname)}
                         // onMouseMove={() => setHoveredPath(item.path)}
                         onMouseLeave={() => setHoveredPath(pathname)}
-                        onClick={() => setHoveredPath(pathname)}
                       >
                         <span>{item.name}</span>
-                        {/* {item.path === hoveredPath && (
+                        {item.path === hoveredPath && (
                           <motion.div
                             className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                             layoutId="navbar"
@@ -160,7 +164,7 @@ export default function Navbar() {
                               duration: 0.3,
                             }}
                           />
-                        )} */}
+                        )}
                       </Link>
                     </motion.div>
                   );
@@ -172,12 +176,13 @@ export default function Navbar() {
                     onClick={toggleSubNavbarVisibility}
                   >
                     {showSubNavbar ? (
-                      <CiSquareChevRight style={{ fontSize: "1.5rem" }} />
-                    ) : (
                       <CiSquareChevLeft style={{ fontSize: "1.5rem" }} />
+                    ) : (
+                      <CiSquareChevRight style={{ fontSize: "1.5rem" }} />
                     )}
                   </button>
                 </motion.div>
+
                 <AnimatePresence>
                   {showSubNavbar && (
                     <motion.div
@@ -211,18 +216,21 @@ export default function Navbar() {
                           <Link
                             key={subItem.path}
                             className={`px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999 ${
+                              // subItem.path === pathname
                               isActive 
                                 ? "text-zinc-100"
                                 : "text-zinc-300"
                             }`}
+                            // data-active={subItem.path === pathname}
                             data-active={isActive}
                             href={subItem.path}
                             onMouseOver={() => setHoveredPath(subItem.path)}
                             onMouseMove={() => setHoveredPath(pathname)}
                             onMouseLeave={() => setHoveredPath(pathname)}
+                            // onClick={handleSubNavbarItemClick}
                           >
                             <span>{subItem.name}</span>
-                            {/* {subItem.path === hoveredPath && (
+                            {subItem.path === hoveredPath && (
                               <motion.div
                                 className="absolute bottom-0 left-0 h-full bg-stone-500/50 rounded-md -z-10"
                                 layoutId="navbar"
@@ -237,7 +245,7 @@ export default function Navbar() {
                                   duration: 0.3,
                                 }}
                               />
-                            )} */}
+                            )}
                           </Link>
                           </motion.div>
                             );
@@ -246,7 +254,6 @@ export default function Navbar() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-
               </nav>
             </motion.div>
           )}

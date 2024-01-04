@@ -2,6 +2,10 @@
 
 ## Currently working on: 
 
+### Navbar second version
+- [ ] Make second version without hover-path
+- [ ] Decide on if i will use that or the first version
+
 ### Pages
 - [ ] Maybe add some more whileInView animations?
 - [ ] Make suspense work in projects
