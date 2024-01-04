@@ -3,9 +3,9 @@
 ## Currently working on: 
 
 ### Random fun stuff
-- [ ] Navbar --> maybe bring back hover and add an outline for active path?
-- [ ] Navbar gray box --> figure out different colors for each page (if possible)
+- [ ] Navbar open/close button --> make background (backgroundColor:'#211f1e') and have other items go BEHIND that
 - [ ] Navbar gray box --> make more colorful, maybe map display width to gradient
+- [ ] Navbar box animation --> more betterer
 - [ ] Look into SVG Drawing
 - [ ] Make menu buttons on navbar "morph" onclick
 
@@ -13,13 +13,10 @@
 - [ ] try layoutId (for pictures left/right swiping animations)
 - [ ] Maybe add some more whileInView animations?
 - [ ] Make suspense work in projects
-- [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 
 ### Random Fixes
 - [ ] Look into preloading gifs/images maybe
 - [ ] Keep page from displaying until fully loaded (?)
-- [ ] Navbar currentPath box behaving weird when scrolled down and page change
-- [x] Fix youtube not allowing fullscreen
 
 ### Footer
 - [ ] Make website footer?
@@ -34,7 +31,6 @@
 - [x] Video embedding --> dim background
 
 #### Animations:
-
 - [ ] Maybe different background images for each page? slightly transparent -> maybe when dimmed, add some background image over the overlay
 
 - [x] Add background blur onhover
@@ -95,12 +91,15 @@
 ## Less Priority (Visual/Layout)
 
 ### General Website issues:
+- [x] Add a "page divider", a half transparent thin line to "section" different parts of a page?
 - [x] Figure out dark mode on other devices
 - [x] Fix title not centered on mobile
+- [x] Fix youtube not allowing fullscreen
 
 ### Navbar:
-- [ ] Animate the "active-path" gray box 
-- [ ] Subnavbar --> look into stagger
+- [x] Animate the "active-path" gray box 
+- [x] Navbar --> maybe bring back hover and add an outline for active path?
+- [x] Navbar gray box --> figure out different colors for each page (if possible)
 - [x] Make second version without hover-path
 - [x] Fix not centered on mobile still
 - [x] Navbar animation --> from the side

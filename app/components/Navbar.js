@@ -15,7 +15,6 @@ import {
   CiSquareMore,
   CiCircleChevUp,
 } from "react-icons/ci";
-import { MdBorderColor } from "react-icons/md";
 
 const navItems = [
   {
@@ -131,13 +130,14 @@ export default function Navbar() {
       <div className="flex border-stone-900/80 p-[0.4rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
         <motion.div whileTap={{ scale: 0.5 }}>
           <button
-            className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100"
+            className="px-4 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+            style={{backgroundColor:'#211f1e'}}
             onClick={toggleNavbarVisibility}
           >
             {showNavbar ? (
-              <BsX style={{ fontSize: "1.5rem" }} />
+              <BsX style={{ fontSize: "1.5rem", backgroundColor:'#211f1e', zIndex:'9999'}} />
             ) : (
-              <BsList style={{ fontSize: "1.5rem" }} />
+              <BsList style={{ fontSize: "1.5rem", backgroundColor:'#211f1e', zIndex:'9999'}} />
             )}
           </button>
         </motion.div>
@@ -167,7 +167,7 @@ export default function Navbar() {
                 ease: "easeInOut",
               }}
             >
-              <nav className="flex justify-start items-center w-full z-9999">
+              <nav className="flex justify-start items-center w-full z-9998">
                 {navItems.map((item) => {
                   return (
                     <motion.div whileTap={{ scale: 0.8 }}>
@@ -242,13 +242,13 @@ export default function Navbar() {
                           staggerChildren:0.5
                         }}
                       >
-                    <nav className="flex flex-row justify-start w-full z-9999">
+                    <nav className="flex flex-row justify-start w-full z-9998">
                         {navSubItems.map((subItem) => {
                       return (
                         <motion.div whileTap={{ scale: 0.8 }}>
                           <Link
                             key={subItem.path}
-                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9999 no-underline duration-300 ease-in z-9999" 
+                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9998 no-underline duration-300 ease-in z-9998" 
                             href={subItem.path}
                             onMouseOver={() => setHoveringPath(subItem.path)}
                             onMouseMove={() => setHoveringPath(subItem.path)}
