@@ -6,6 +6,7 @@
 - [ ] Make menu buttons on navbar "morph" onclick
 - [ ] Look into SVG Drawing --> Navbar open/close icon animated
 - [ ] Navbar open/close button --> make background (backgroundColor:'#211f1e') and have other items go BEHIND that
+- [ ] Navbar opening animation from top?
 
 - [ ] Navbar colors finalize --> maybe feedback
 

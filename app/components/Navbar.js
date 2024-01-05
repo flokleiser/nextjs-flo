@@ -130,22 +130,22 @@ export default function Navbar() {
   return (
     <div className={styles.navbarContainer}>
       <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
-        <motion.div whileTap={{ scale: 0.5 }}>
+        {/* <motion.div whileTap={{ scale: 0.5 }}> */}
           <button
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
             onClick={toggleNavbarVisibility}
           >
             {showNavbar ? (
               <BsX style={{fontSize: "1.6rem", paddingBottom:'-0.5rem', 
-              backgroundColor:'#211f1e', zIndex:9999, border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
+              backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
             }} />
             ) : (
               <BsList style={{fontSize: "1.6rem", 
-              backgroundColor:'#211f1e', zIndex:9999, border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
+              backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
             }} />
             )}
           </button>
-        </motion.div>
+        {/* </motion.div> */}
 
         <AnimatePresence>
           {showNavbar && (
@@ -172,7 +172,7 @@ export default function Navbar() {
                 ease: "easeInOut",
               }}
             >
-              <nav className="flex justify-start items-center w-full z-9998">
+              <nav className="flex justify-start items-center w-full z-9990">
                 {navItems.map((item) => {
                   return (
                     <motion.div whileTap={{ scale: 0.8 }}>
@@ -216,7 +216,7 @@ export default function Navbar() {
                   );
                 })}
 
-                <motion.div whileTap={{ scale: 0.5 }}>
+                {/* <motion.div whileTap={{ scale: 0.5 }}> */}
                   <button
                     className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
                     onClick={toggleSubNavbarVisibility}
@@ -227,7 +227,7 @@ export default function Navbar() {
                       <CiSquareChevLeft style={{ fontSize: "1.5rem" }} />
                     )}
                   </button>
-                </motion.div>
+                {/* </motion.div> */}
                 <AnimatePresence>
                   {showSubNavbar && (
                        <motion.div
