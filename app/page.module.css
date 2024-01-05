@@ -8,7 +8,7 @@
 .navbarBox {
   position:absolute;
   height:100%;
-  /* opacity:0.5; */
+  opacity:0.5;
   border-radius: 0.35rem;
   z-index: -10;
   bottom: 0px;
