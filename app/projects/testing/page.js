@@ -228,15 +228,15 @@ z-[-1]"
       <div style={{ padding: "1rem" }} />
 
 <div className="flex flex-row">
-      <Image src="/svg/skylands.svg" width={200} height={200} 
-      />
-
+      <Image src="/svg/skylands.svg" width={200} height={200}/>
       <div style={{padding:'2rem'}} />
 
 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_2" data-name="Layer 2" viewBox="0 0 1300.22 2042.41" style={{width:200}} stroke="currentColor" fill="currentColor">
 
-  <g id="Layer_1-2" data-name="Layer 1" >
-    <polyline fill="none" strokeWidth="20px" class="cls-1" points="156.26 1181.31 156.26 761.14 626.85 761.14 696.47 761.14 696.47 1181.31"/>
+  <motion.g id="Layer_1-2" data-name="Layer 1" >
+    <motion.polyline fill="none" strokeWidth="20px" class="cls-1" points="156.26 1181.31 156.26 761.14 626.85 761.14 696.47 761.14 696.47 1181.31"
+    // initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    />
     <polygon fill="none" strokeWidth="20px" class="cls-1" points="635.2 220.93 635.2 761.14 468.13 761.14 468.13 220.93 490.41 220.93 635.2 220.93"/>
     <rect fill="none" strokeWidth="20px" class="cls-1" x="493.19" y="87.27" width="116.95" height="133.66"/>
     <polyline fill="none" strokeWidth="20px"class="cls-1" points="130.5 761.14 229.22 594.76 468.13 594.76"/>
@@ -245,31 +245,70 @@ z-[-1]"
     <rect fill="none" strokeWidth="20px" class="cls-1" x="243.91" y="889.09" width="110.81" height="164.28"/>
     <rect fill="none" strokeWidth="20px" class="cls-1" x="512.97" y="889.09" width="110.81" height="292.23"/>
     <polyline fill="none" strokeWidth="20px" class="cls-1" points="635.2 324.66 568.37 324.66 568.37 422.12 635.2 422.12"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m1080.2,761.14c-72.4,151.88-72.4,430.61-72.4,430.61"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m870.19,864.09s62.23-115.17,213.91-105.3"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m952.95,898.26s38.15-149.13,131.14-136.34"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m1188.9,910.8s-1.87-109.75-108.7-148.09"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m1290.82,915.31s-59.55-164.37-220.86-156.87"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m1277.41,787.54s-101.04-90.85-233.41-26.79"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m1094.57,754.6s-112.89-75.62-234.85,6.55"/>
-    <path fill="none" strokeWidth="20px" class="cls-1" d="m1110.33,1443.34c228.75,118.94-7.07,256.86-7.07,256.86,69.43,332.24-298.74,267.1-298.74,267.1-233.78,164.17-437.22-33.88-437.22-33.88-298.74,41.51-246.81-206.6-246.81-206.6-151.51-80.22-147.23-221.49,13.03-313.07h5.21"/>
+    
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1080.2,761.14c-72.4,151.88-72.4,430.61-72.4,430.61"
+    initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m870.19,864.09s62.23-115.17,213.91-105.3"
+       initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}} 
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m952.95,898.26s38.15-149.13,131.14-136.34"
+       initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}} 
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1188.9,910.8s-1.87-109.75-108.7-148.09"
+       initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}} 
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1290.82,915.31s-59.55-164.37-220.86-156.87"
+       initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}} 
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1277.41,787.54s-101.04-90.85-233.41-26.79"
+       initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}} 
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1094.57,754.6s-112.89-75.62-234.85,6.55"
+       initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}} 
+    />
+    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1110.33,1443.34c228.75,118.94-7.07,256.86-7.07,256.86,69.43,332.24-298.74,267.1-298.74,267.1-233.78,164.17-437.22-33.88-437.22-33.88-298.74,41.51-246.81-206.6-246.81-206.6-151.51-80.22-147.23-221.49,13.03-313.07h5.21"/>
+
     <polygon fill="none" strokeWidth="20px" class="cls-1" points="1141.78 1191.69 1110.33 1443.34 1107.72 1464.18 981.34 1681.4 850.12 1616.62 757.8 1755.29 597.36 1852.27 461.11 1787.49 383.31 1819.87 242.41 1681.4 138.73 1413.74 52.75 1191.69 1141.78 1191.69"/>
-  </g>
+  </motion.g>
 </svg>
 
 <div style={{padding:'2rem'}} /> 
 
-<svg xmlns="http://www.w3.org/2000/svg" id="Layer_3" data-name="Layer 3" viewBox="0 0 1300.22 2042.41" style={{width:200}} stroke="currentColor" fill="currentColor">
-  <g id="Layer_1-2" data-name="Layer 1">
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m226.07,48.29c-72.4,151.88-72.4,430.61-72.4,430.61"/>
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m16.06,151.24S78.29,36.07,229.97,45.94"/>
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m98.82,185.41S136.97,36.28,229.96,49.07"/>
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m334.77,197.95s-1.87-109.75-108.7-148.09"/>
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m436.69,202.46S377.14,38.09,215.83,45.59"/>
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m423.28,74.69s-101.04-90.85-233.41-26.79"/>
-    <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m240.44,41.75S127.55-33.87,5.59,48.3"/>
-  </g>
-</svg>
+<motion.svg xmlns="http://www.w3.org/2000/svg" id="Layer_3" data-name="Layer 3" viewBox="0 0 1300.22 2042.41" style={{width:200}} stroke="currentColor" fill="currentColor">
+  <motion.g id="Layer_1-2" data-name="Layer 1">
+    <motion.path initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    d="m226.07,48.29c-72.4,151.88-72.4,430.61-72.4,430.61"
+    />
+     <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    // d="m16.06,151.24S78.29,36.07,229.97,45.94"
+    d="m229.97,45.94 S78.29,36.07 16.06,151.24"
+    />
+ <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    // d="m98.82,185.41S136.97,36.28,229.96,49.07"
+    d=""
+    />
+ <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    d="m334.77,197.95s-1.87-109.75-108.7-148.09"
+    />
+ <motion.path initial={{pathLength:0}} animate={{pathLength:1}}  transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    d="m436.69,202.46S377.14,38.09,215.83,45.59"
+    />
+ <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    d="m423.28,74.69s-101.04-90.85-233.41-26.79"
+    />
+ <motion.path initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:2, repeat: Infinity, repeatType:"loop", repeatDelay:2}}
+    fill="none" strokeWidth="20px" class="cls-1" 
+    d="m240.44,41.75S127.55-33.87,5.59,48.3"
+    />
+  </motion.g>
+</motion.svg>
        </div>
 
           {/* <AnimatePresence>
