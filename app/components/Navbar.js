@@ -35,12 +35,10 @@ const navSubItems = [
   {
     path: "/projects/sketches",
     name: "Sketches",
-    color: "#FFFFFF"
   },
   {
     path: "/projects/creative-coding",
     name: "Creative Coding",
-    color:  "#3E0973"
   },
   {
     path: "/projects/skylands",
@@ -69,29 +67,33 @@ const navSubItems = [
 ];
 
 const colorMap = {
-  "/": "#3E0973",
-  "/links": "#FFFFFF",
-  "/projects" :  "#58088C",
-  "/projects/sketches" : "#A63C9F",
-  "/projects/creative-coding" : "#850FA6", 
-  "/projects/skylands" : "#58088C",
-  "/projects/voxel" : "#3E0973",
-  "/projects/cad" : "#FFFFFF",
+  // "/": "#A63C9F",
+  // "/": "#9d3ca6",
+  "/": "#67118D",
+  // "/links": "#850FA6",
+  "/links": "#3A096D",
+  // "/projects" :  "#58088C",
+  "/projects": "#210650",
+  "/projects/sketches" : "#FFFFFF",
+  "/projects/creative-coding" : "#d847aa", 
+  "/projects/skylands" : "#b5b667",
+  "/projects/voxel" : "#4facc6",
+  "/projects/cad" : "#97bad6",
   "/projects/animations" : "#FFFFFF",
-  "/projects/crafts" : "#FFFFFF",
+  "/projects/crafts" : "#d973a9",
   "/projects/illustrator" : "#FFFFFF",
 }
 
 const borderColorMap = {
   "/" : "#FFFFFF",
-  "/links" : "#CC0000",
+  "/links" : "#FFFFFF",
   "/projects" :  "#FFFFFF",
-  "/projects/sketches" :"#FFFFFF", 
+  "/projects/sketches" :"#3A3B3C", 
   "/projects/creative-coding" :"#FFFFFF", 
   "/projects/skylands" : "#FFFFFF",
   "/projects/voxel" :"#FFFFFF", 
   "/projects/cad" : "#FFFFFF",
-  "/projects/animations" : "#FFFFFF",
+  "/projects/animations" : "#3A3B3C",
   "/projects/crafts" : "#FFFFFF",
   "/projects/illustrator" : "#FFFFFF",
 }
