@@ -67,17 +67,6 @@ const navSubItems = [
 ];
 
 const colorMap = {
-  // "/": "#67118D",
-  // "/links": "#3A096D",
-  // "/projects": "#210650",
-  // "/projects/sketches" : "#FFFFFF",
-  // "/projects/creative-coding" : "#d847aa", 
-  // "/projects/skylands" : "#b5b667",
-  // "/projects/voxel" : "#4facc6",
-  // "/projects/cad" : "#97bad6",
-  // "/projects/animations" : "#FFFFFF",
-  // "/projects/crafts" : "#d973a9",
-  // "/projects/illustrator" : "#FFFFFF",
   "/": "#6b106a",
   "/links": "#670e6b",
   "/projects": "#640d6b",

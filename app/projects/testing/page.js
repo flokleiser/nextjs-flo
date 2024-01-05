@@ -3,10 +3,9 @@ import React, { useState, useEffect, Suspense } from "react";
 import styles from "app/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { PiXCircle } from "react-icons/pi";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, animate, useAnimation, motion } from "framer-motion";
 import { BsX, BsList } from "react-icons/bs";
+import { BsArrowClockwise } from "react-icons/bs";
 
 import testimage from "/public/images/sketches/sketch test scan website2.png";
 
@@ -23,6 +22,10 @@ const data = [
   // {image: testimage, id:4}
 ];
 
+const rotationAnimation = {
+  initial:{rotate:0},
+  animate:{rotate:360}
+}
 
 export default function testing() {
   useEffect(() => {
@@ -132,10 +135,13 @@ export default function testing() {
     setButtonClicked(!buttonClicked);
   };
 
-  const repeatAnimation = () => {
-    setRepeatAnimation();
-  }
-  const [setRepeatAnimation] = useState()
+  const [key, setKey] = useState(0);
+  const controls = useAnimation();
+
+  const repeatAnimation = async () => {
+    await controls.start({ pathLength: 0, pathOffset: 1 });
+    controls.start({ pathLength: 1, pathOffset: 0 });
+  };
 
   return (
     <main className={styles.main}>
@@ -232,11 +238,15 @@ z-[-1]"
         )}
       </button>
 
-      <button
+      <motion.button
         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
         onClick={repeatAnimation}
+        whileTap={{scale:"0.5"}}
+        // initial={{rotate:0}}
+        // animate={{rotate:10}}
+        // transition={{duration:1}}
       >
-          <BsX
+         <BsArrowClockwise 
             style={{
               fontSize: "3rem",
               paddingBottom: "-0.5rem",
@@ -249,7 +259,7 @@ z-[-1]"
               borderRadius: "0.35rem",
             }}
           />
-      </button>
+      </motion.button>
 
       </div>
 
@@ -275,10 +285,15 @@ z-[-1]"
     <polyline fill="none" strokeWidth="20px" class="cls-1" points="635.2 324.66 568.37 324.66 568.37 422.12 635.2 422.12"/>
     
     <motion.path fill="none" strokeWidth="20px" class="cls-1" d="m1080.2,761.14c-72.4,151.88-72.4,430.61-72.4,430.61"
-   initial={{pathLength:0, pathOffset:1}} animate={{pathLength:1, pathOffset:0}}  transition={{duration:2,  repeatDelay:2}}/>
+  //  initial={{pathLength:0, pathOffset:1}} animate={{pathLength:1, pathOffset:0}}  transition={{duration:2,  repeatDelay:2}}
+  animate={controls}
+  transition={{ duration: 1, repeatDelay: 2 }} 
+  />
     <motion.path fill="none" strokeWidth="20px" class="cls-1" 
     d="m870.19,864.09s62.23-115.17,213.91-105.3"
-    initial={{pathLength:0, pathOffset:1}} animate={{pathLength:1, pathOffset:0}}   transition={{delay:2, duration:2, }} />
+    // initial={{pathLength:0, pathOffset:1}} animate={{pathLength:1, pathOffset:0}}   transition={{delay:2, duration:2, }} />
+    animate={controls} 
+  transition={{ duration: 1, repeatDelay: 2 }} />
     <motion.path fill="none" strokeWidth="20px" class="cls-1" 
     d="m952.95,898.26s38.15-149.13,131.14-136.34"
        initial={{pathLength:0, pathOffset:1}} animate={{pathLength:1, pathOffset:0}}  transition={{duration:2,delay:2, }} />
