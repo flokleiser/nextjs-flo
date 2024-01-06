@@ -276,16 +276,17 @@ z-[-1]"
         initial="rest"
         whileHover="hover"
         whileTap="pressed"
-        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        style={{
+          position:'relative',
+          backgroundColor: "#211f1e",
+          zIndex: "9999",
+          border: "1px",
+          borderStyle: "solid",
+          borderColor: "#FFFFFF",
+          borderRadius:"0.375rem",
+         }}
       >
         <motion.svg
-          style={{
-            backgroundColor: "#211f1e",
-            zIndex: "9999",
-            border: "1px",
-            borderStyle: "solid",
-            borderColor: "#FFFFFF",
-            borderRadius: "0.35rem"}}
         viewBox="0 0 16 16"
           width="48"
           height="48"
