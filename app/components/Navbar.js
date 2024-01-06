@@ -103,6 +103,12 @@ const grayBoxVariant = {
   }
 }
 
+const menuButton = {
+  rest: { scale: 1 },
+  hover: { scale: 1.1 },
+  pressed: { scale: 0.95 }
+};
+
 export default function Navbar() {
   
   const pathname = usePathname() || "/";
@@ -127,7 +133,8 @@ export default function Navbar() {
     <div className={styles.navbarContainer}>
       <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
         {/* <motion.div whileTap={{ scale: 0.5 }}> */}
-          <button
+
+          {/* <button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
             onClick={toggleNavbarVisibility}
           >
@@ -140,7 +147,39 @@ export default function Navbar() {
               backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
             }} />
             )}
+          </button> */}
+
+          {/* <button style={{zIndex:'9999'}}
+            className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+            onClick={toggleNavbarVisibility}>
+              {showNavbar ? (
+               
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              ) : (
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
+                  <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </svg> 
+              )}
+          </button> */}
+
+          <button style={{zIndex:'9999'}}
+            className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+            onClick={toggleNavbarVisibility}>
+                <motion.svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed"
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                  />
+                </motion.svg>
+                {/* <motion.svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
+                  <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                </motion.svg>  */}
           </button>
+
         {/* </motion.div> */}
 
         <AnimatePresence>

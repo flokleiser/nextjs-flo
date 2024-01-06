@@ -5,12 +5,8 @@
 ### Random fun stuff
 - [ ] Make menu buttons on navbar "morph" onclick
 - [ ] Look into SVG Drawing --> Navbar open/close icon animated
-- [ ] Navbar open/close button --> make background (backgroundColor:'#211f1e') and have other items go BEHIND that
-- [ ] Navbar opening animation from top?
 
-- [ ] Navbar colors finalize --> maybe feedback
-
-- [ ] animate the "expand" button of subnavbar to spin around
+- [ ] animate the "expand" button of subnavbar to spin around
 
 - [ ] Navbar box animation --> more betterer
 
@@ -102,6 +98,8 @@
 - [x] Fix youtube not allowing fullscreen
 
 ### Navbar:
+- [x] Navbar colors finalize --> maybe feedback
+- [x] Navbar open/close button --> make background (backgroundColor:'#211f1e') and have other items go BEHIND that
 - [x] Animate the "active-path" gray box 
 - [x] Navbar --> maybe bring back hover and add an outline for active path?
 - [x] Navbar gray box --> figure out different colors for each page (if possible)
