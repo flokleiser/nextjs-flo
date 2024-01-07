@@ -109,6 +109,21 @@ const menuButton = {
   pressed: { scale: 0.95 }
 };
 
+const pathTopBottom = {
+  open : {opacity:1},
+  closed: {opacity:0}
+}
+
+const pathMiddle1 = {
+  open : {rotate:0},
+  closed: {rotate:45}
+}
+
+const pathMiddle2 = {  
+  open : {rotate:0},
+  closed: {rotate:-45}
+}
+
 export default function Navbar() {
   
   const pathname = usePathname() || "/";
@@ -132,57 +147,44 @@ export default function Navbar() {
   return (
     <div className={styles.navbarContainer}>
       <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
-        {/* <motion.div whileTap={{ scale: 0.5 }}> */}
-
-          {/* <button style={{zIndex:'9999'}}
-            className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
-            onClick={toggleNavbarVisibility}
-          >
-            {showNavbar ? (
-              <BsX style={{fontSize: "1.6rem", paddingBottom:'-0.5rem', 
-              backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
-            }} />
-            ) : (
-              <BsList style={{fontSize: "1.6rem", 
-              backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'
-            }} />
-            )}
-          </button> */}
-
-          {/* <button style={{zIndex:'9999'}}
-            className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
-            onClick={toggleNavbarVisibility}>
-              {showNavbar ? (
-               
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
-                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-                </svg>
-              ) : (
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
-                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
-                  <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                </svg> 
-              )}
-          </button> */}
 
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
             onClick={toggleNavbarVisibility} variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
-                <motion.svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
+
+                {/* <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
                   <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  variants={{closed: {d: "M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"},
-                            open: {d: "M10.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"} }}
                   />
-                </motion.svg>
-                {/* <motion.svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" width={25} 
+                </motion.svg> */}
+
+                <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
-                  <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                </motion.svg>  */}
+
+                  <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                  variants={pathTopBottom}
+                  initial={showNavbar? "open" : "closed"} 
+                  animate={showNavbar? "closed" : "open"} />
+
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                  variants={pathMiddle1}
+                  initial={showNavbar? "open" : "closed"} 
+                  animate={showNavbar? "closed" : "open"}/>
+                  
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
+                    variants={pathMiddle2}
+                    initial={showNavbar ? "open" : "closed"} 
+                    animate={showNavbar? "closed" : "open"}/>
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                     variants={pathTopBottom}
+                     initial={showNavbar? "open" : "closed"} 
+                     animate={showNavbar? "closed" : "open"} />
+                </motion.svg> 
+
+                
           </motion.button>
 
-        {/* </motion.div> */}
 
         <AnimatePresence>
           {showNavbar && (

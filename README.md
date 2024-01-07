@@ -3,8 +3,11 @@
 ## Currently working on: 
 
 ### Random fun stuff
+
 - [ ] Make menu buttons on navbar "morph" onclick
 - [ ] Look into SVG Drawing --> Navbar open/close icon animated
+
+- [ ] Look into animation keyframes for svg drawing (testing page)
 
 - [ ] animate the "expand" button of subnavbar to spin around
 

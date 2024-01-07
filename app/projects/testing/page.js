@@ -3,7 +3,7 @@ import React, { useState, useEffect, Suspense } from "react";
 import styles from "app/page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, animate, useAnimation, motion } from "framer-motion";
+import { AnimatePresence, animate, useAnimation, motion, useAnimate, delay } from "framer-motion";
 import { BsX, BsList } from "react-icons/bs";
 import { BsArrowClockwise } from "react-icons/bs";
 
@@ -22,10 +22,6 @@ const data = [
   // {image: testimage, id:4}
 ];
 
-const rotationAnimation = {
-  initial:{rotate:0},
-  animate:{rotate:360}
-}
 
 const button = {
   rest: { scale: 1 },
@@ -34,10 +30,39 @@ const button = {
 };
 const arrow = {
   rest: { rotate: 0 },
-  hover: { rotate: 360, transition: { duration: 0.4 } }
+  hover: { rotate: 360, transition: { duration: 0.6 } }
 };
 
+const pathTopBottom = {
+  open : {opacity:0},
+  closed: {opacity:1}
+}
+
+const pathTopBottomTest = {
+  open: {d:"M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"},
+  closed: {d:"m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" }
+  
+}
+
+const pathMiddle1 = {
+  open : {rotate:45},
+  closed: {rotate:0}
+}
+
+const pathMiddle2 = {  
+  open : {rotate:-45},
+  closed: {rotate:0}
+}
+
+
 export default function testing() {
+
+  const [showNavbarTest, setShowNavbarTest] = useState(false);
+  const toggleNavbarVisibilityTest = () => {
+    setShowNavbarTest(!showNavbarTest);
+    console.log(showNavbarTest)
+  };
+
   useEffect(() => {
     document.title = "testing";
   }, []);
@@ -216,41 +241,59 @@ z-[-1]"
 
 <div className="flex-row" style={{display:'flex'}}>
 
-
-      <button
+<motion.button
         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
-        onClick={clickButton}
-      >
-        {buttonClicked ? (
-          <BsX
-            style={{
-              fontSize: "3rem",
-              paddingBottom: "-0.5rem",
-              backgroundColor: "#211f1e",
-              // backgroundColor: "#FFFFFF",
-              zIndex: "9999",
-              border: "1px",
-              borderStyle: "solid",
-              borderColor: "#FFFFFF",
-              borderRadius: "0.35rem",
-            }}
-          />
-        ) : (
-          <BsList
-            style={{
-              fontSize: "3rem",
-              backgroundColor: "#211f1e",
-              zIndex: "9999",
-              border: "1px",
-              borderStyle: "solid",
-              borderColor: "#FFFFFF",
-              borderRadius: "0.35rem",
-            }}
-          />
-        )}
-      </button>
+        onClick={toggleNavbarVisibilityTest} >
 
-      {/* <motion.button
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+
+                  <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                  variants={pathTopBottomTest}
+                  initial={showNavbarTest? "open" : "closed"} 
+                  animate={showNavbarTest? "closed" : "open"}
+                  transition={delay } />
+
+
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                  variants={pathMiddle1}
+                  initial={showNavbarTest ? "open" : "closed"} 
+                  animate={showNavbarTest ? "closed" : "open"}/>
+                  
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
+                    variants={pathMiddle2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}/>
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                     variants={pathTopBottom}
+                     initial={showNavbarTest? "open" : "closed"} 
+                     animate={showNavbarTest? "closed" : "open"} />
+
+                </motion.svg> 
+        </motion.button>
+
+        <motion.button
+        // className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={repeatAnimation}>
+
+        <motion.svg 
+        stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0}     
+        initial="rest"
+        whileHover="hover" 
+        style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+                  <motion.path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                          variants={arrow}/>
+                  {/* <motion.path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                  variants={arrow}
+                  />
+                  <motion.path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" 
+                  /> */}
+
+        </motion.svg> 
+        </motion.button>
+        
+          <motion.button
         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
         onClick={repeatAnimation}
         whileTap={{scale:"0.5"}}
@@ -268,38 +311,8 @@ z-[-1]"
               borderRadius: "0.35rem",
             }}
           />
-      </motion.button> */}
+      </motion.button>
 
-      <motion.div
-        onClick={repeatAnimation}
-        variants={button}
-        initial="rest"
-        whileHover="hover"
-        whileTap="pressed"
-        style={{
-          position:'relative',
-          backgroundColor: "#211f1e",
-          zIndex: "9999",
-          border: "1px",
-          borderStyle: "solid",
-          borderColor: "#FFFFFF",
-          borderRadius:"0.375rem",
-         }}
-      >
-        <motion.svg
-        viewBox="0 0 16 16"
-          width="48"
-          height="48"
-          xmlns="http://www.w3.org/2000/svg"
-          variants={arrow}
-        >
-          <path
-            d="M12.8 5.1541V2.5a.7.7 0 0 1 1.4 0v5a.7.7 0 0 1-.7.7h-5a.7.7 0 0 1 0-1.4h3.573c-.7005-1.8367-2.4886-3.1-4.5308-3.1C4.8665 3.7 2.7 5.85 2.7 8.5s2.1665 4.8 4.8422 4.8c1.3035 0 2.523-.512 3.426-1.4079a.7.7 0 0 1 .986.9938C10.7915 14.0396 9.2186 14.7 7.5422 14.7 4.0957 14.7 1.3 11.9257 1.3 8.5s2.7957-6.2 6.2422-6.2c2.1801 0 4.137 1.1192 5.2578 2.8541z"
-            fill="#fff"
-            fillRule="nonzero"
-          />
-        </motion.svg>
-      </motion.div>
 
       </div>
 
