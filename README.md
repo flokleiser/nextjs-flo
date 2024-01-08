@@ -6,7 +6,6 @@
 
 - [ ] Look into search function
 
-- [ ] focus/dim button more transparent
 - [ ] Look into animation keyframes for svg drawing (testing page)
 
 ### Random pages:
@@ -92,6 +91,8 @@
 - [x] Fix youtube not allowing fullscreen
 
 ### Navbar:
+- [x] Make menu buttons on navbar "morph" onclick
+- [x] Look into SVG Drawing --> Navbar open/close icon animated
 - [x] Navbar colors finalize --> maybe feedback
 - [x] Navbar open/close button --> make background (backgroundColor:'#211f1e') and have other items go BEHIND that
 - [x] Animate the "active-path" gray box 

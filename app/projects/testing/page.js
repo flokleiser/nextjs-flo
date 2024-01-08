@@ -112,8 +112,8 @@ export default function testing() {
   const controls = useAnimation();
 
   const repeatAnimation = async () => {
-    await controls.start({ pathLength: 0, pathOffset: 1 });
-    controls.start({ pathLength: 1, pathOffset: 0 });
+    await controls.start({ pathLength: 0, pathOffset: 1, });
+    controls.start({ pathLength: 1, pathOffset: 0, });
   };
 
   return (
