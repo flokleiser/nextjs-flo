@@ -7,22 +7,6 @@ import { AnimatePresence, animate, useAnimation, motion, useAnimate, delay } fro
 import { BsX, BsList } from "react-icons/bs";
 import { BsArrowClockwise } from "react-icons/bs";
 
-import testimage from "/public/images/sketches/sketch test scan website2.png";
-
-const data = [
-  { image: "/images/sketches/sketch test scan website2.png", id: 0 },
-  { image: "/images/sketches/sketch test website.png", id: 1 },
-  { image: "/images/sketches/sketch test scan website3.png", id: 2 },
-  { image: "/images/sketches/sketch test scan website4.png", id: 3 },
-  { image: "/images/sketches/sketch test scan website6.png", id: 4 },
-  // {image: testimage, id:0},
-  // {image: testimage, id:1},
-  // {image: testimage, id:2},
-  // {image: testimage, id:3},
-  // {image: testimage, id:4}
-];
-
-
 const button = {
   rest: { scale: 1 },
   hover: { scale: 1.1 },
@@ -35,23 +19,31 @@ const arrow = {
 
 const pathTopBottom = {
   open : {opacity:0},
-  closed: {opacity:1}
-}
-
-const pathTopBottomTest = {
-  open: {d:"M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"},
-  closed: {d:"m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" }
-  
+  closed : {opacity:1}
 }
 
 const pathMiddle1 = {
   open : {rotate:45},
-  closed: {rotate:0}
+  closed : {rotate:0}
 }
 
 const pathMiddle2 = {  
   open : {rotate:-45},
-  closed: {rotate:0}
+  closed : {rotate:0}
+}
+
+const pathMiddle3 = {
+  // open : {transform: "translateY(0%)"},
+  // closed : {transform: "translateY(-100%)"}
+  open : {transform: "translateY(-100%)"},
+  closed : {transform: "translateY(0%)"} 
+}
+
+const pathMiddle4 = {
+  // open : {transform: "translateY(0%)"},
+  // closed : {transform: "translateY(100%)"}
+  open : {transform: "translateY(100%)"},
+  closed : {transform: "translateY(0%)"}
 }
 
 
@@ -66,109 +58,6 @@ export default function testing() {
   useEffect(() => {
     document.title = "testing";
   }, []);
-
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleResetClick = () => {
-    setSelectedImage(null);
-    setCurrentIndex(0);
-    document.documentElement.style.overflow = "auto";
-    document.body.style.overflow = "auto";
-  };
-
-  /* make image big */
-  const handleImageClick = (imageSrc) => {
-    const dataArray = [...data];
-    const selectedIndex = dataArray.findIndex(
-      (item) => item.image === imageSrc
-    );
-    if (selectedIndex !== -1) {
-      setSelectedImage(imageSrc);
-      setCurrentIndex(dataArray[selectedIndex].id);
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
-    }
-  };
-
-  const handlePrevImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data];
-      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
-    }
-  };
-
-  const handleNextImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data];
-      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
-    }
-  };
-
-  /* handleoutsideclick*/
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      const imageElement = document.querySelector("#overlay img");
-      const leftButton = document.querySelector("#leftButton");
-      const rightButton = document.querySelector("#rightButton");
-
-      if (imageElement) {
-        const imageRect = imageElement.getBoundingClientRect();
-
-        if (
-          event.clientX < imageRect.left ||
-          event.clientX > imageRect.right ||
-          event.clientY < imageRect.top ||
-          event.clientY > imageRect.bottom
-        ) {
-          if (
-            event.target !== leftButton &&
-            event.target !== rightButton &&
-            !leftButton.contains(event.target) &&
-            !rightButton.contains(event.target)
-          ) {
-            handleResetClick();
-          }
-        }
-      }
-    };
-
-    document.addEventListener("mouseup", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mouseup", handleOutsideClick);
-    };
-  }, []);
-
-  /* handlekeydown*/
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        handleResetClick();
-      } else if (event.key === "ArrowLeft") {
-        handlePrevImage();
-      } else if (event.key === "ArrowRight") {
-        handleNextImage();
-      }
-    };
-
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleResetClick, handlePrevImage, handleNextImage]);
-
-  const [buttonClicked, setButtonClicked] = useState(false);
-  const clickButton = () => {
-    setButtonClicked(!buttonClicked);
-  };
 
   const [key, setKey] = useState(0);
   const controls = useAnimation();
@@ -241,18 +130,82 @@ z-[-1]"
 
 <div className="flex-row" style={{display:'flex'}}>
 
-<motion.button
+{/* V1 --> original from navbar */}
+        <motion.button
         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
         onClick={toggleNavbarVisibilityTest} >
 
         <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
 
+          
                   <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                  variants={pathTopBottom}
+                  initial={showNavbarTest? "open" : "closed"} 
+                  animate={showNavbarTest? "closed" : "open"} />
+
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                  variants={pathMiddle1}
+                  initial={showNavbarTest? "open" : "closed"} 
+                  animate={showNavbarTest? "closed" : "open"}/>
+                  
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
+                    variants={pathMiddle2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest? "closed" : "open"}/>
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                     variants={pathTopBottom}
+                     initial={showNavbarTest? "open" : "closed"} 
+                     animate={showNavbarTest? "closed" : "open"} />
+
+                </motion.svg> 
+        </motion.button>
+
+{/* V2 --> unfolding with delay? */}
+        <motion.button
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={toggleNavbarVisibilityTest} >
+
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                  variants={pathMiddle1}
+                  initial={showNavbarTest ? "open" : "closed"} 
+                  animate={showNavbarTest ? "closed" : "open"}/>
+                  
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
+                    variants={pathMiddle2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}/>
+
+                  <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                    variants={pathMiddle3}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ?  "closed" : "open"} />
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                    variants={pathMiddle4}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}/>
+
+                </motion.svg> 
+        </motion.button>
+
+{/* V3 --> "unfolding" from middle */}
+        <motion.button
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={toggleNavbarVisibilityTest} >
+
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+
+                  {/* <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
                   variants={pathTopBottomTest}
                   initial={showNavbarTest? "open" : "closed"} 
                   animate={showNavbarTest? "closed" : "open"}
-                  transition={delay } />
+                  transition={delay } /> */}
 
 
                   <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
@@ -265,34 +218,37 @@ z-[-1]"
                     initial={showNavbarTest ? "open" : "closed"} 
                     animate={showNavbarTest ? "closed" : "open"}/>
 
-                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                  {/* <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
                      variants={pathTopBottom}
                      initial={showNavbarTest? "open" : "closed"} 
-                     animate={showNavbarTest? "closed" : "open"} />
+                     animate={showNavbarTest? "closed" : "open"} /> */}
 
                 </motion.svg> 
         </motion.button>
 
+{/* V4 --> only middle line */}
         <motion.button
-        // className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
-        onClick={repeatAnimation}>
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={toggleNavbarVisibilityTest} >
 
-        <motion.svg 
-        stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0}     
-        initial="rest"
-        whileHover="hover" 
-        style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
-                  <motion.path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
-                          variants={arrow}/>
-                  {/* <motion.path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
-                  variants={arrow}
-                  />
-                  <motion.path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" 
-                  /> */}
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
 
-        </motion.svg> 
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                  variants={pathMiddle1}
+                  initial={showNavbarTest ? "open" : "closed"} 
+                  animate={showNavbarTest ? "closed" : "open"}/>
+                  
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
+                    variants={pathMiddle2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}/>
+
+                </motion.svg> 
         </motion.button>
-        
+
+
+            
           <motion.button
         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
         onClick={repeatAnimation}
@@ -314,7 +270,42 @@ z-[-1]"
       </motion.button>
 
 
+  <motion.button
+                className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={repeatAnimation}>
+
+        <motion.svg 
+        stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0}     
+        initial="rest"
+        whileHover="hover" 
+        style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+                  <motion.path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+                          variants={arrow}/>
+
+        </motion.svg> 
+        </motion.button>
+
+      <motion.button
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "   
+        onClick={repeatAnimation}>
+
+        <motion.svg 
+        stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0}     
+        initial="rest"
+        whileHover="hover" 
+        style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+                  <motion.path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+                          variants={arrow}/>
+              
+
+        </motion.svg> 
+        </motion.button>
+
       </div>
+
+      <div style={{padding:'1rem'}} />
+
+
 
       <div style={{ padding: "1rem" }} />
 
@@ -365,99 +356,7 @@ z-[-1]"
   </motion.g>
 </svg>
 
-
-
-
        </div>
-
-          {/* <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            id="overlay"
-            className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            style={{
-              backdropFilter: `blur(${selectedImage ? "10px" : "0px"})`,
-              backgroundColor: "rgba(0, 0, 0, 0.75)",
-            }}
-          >
-            <motion.img
-              src={selectedImage}
-              initial={{ scale: 0.5 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.45 }}
-              transition={{ duration: 0.3 }}
-              alt=""
-              className="max-w-4/5 max-h-4/5"
-              style={{ maxHeight: "80vh", zIndex: 9990 }}
-            />
-            <button
-              className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-              onClick={handleResetClick}
-              style={{ zIndex: 9999 }}
-            >
-              <PiXCircle style={{ fontSize: "2rem" }} />
-            </button>
-            <div className="absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
-              <button
-                id="leftButton"
-                className="text-black px-0 py-4 rounded-r"
-                onClick={handlePrevImage}
-                style={{ zIndex: 9999 }}
-              >
-                <IoIosArrowBack style={{ fontSize: "2rem" }} />
-              </button>
-            </div>
-            <div className="absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
-              <button
-                id="rightButton"
-                className=" text-black px-0 py-4 rounded-r"
-                onClick={handleNextImage}
-                style={{ zIndex: 9999 }}
-              >
-                <IoIosArrowForward style={{ fontSize: "2rem" }} />
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="">
-        <div className="p-3 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data.map((x) => (
-              <article className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div> */}
-
-      {/* <Image
-        // src="/images/sketches/sketch test scan website2.png"
-        src={testimage}
-        alt="testing"
-        key="test"
-        width={500}
-        height={500}
-        placeholder="blur"
-      /> */}
 
       <div style={{ padding: "2rem" }} />
     </main>

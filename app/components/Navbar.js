@@ -124,6 +124,20 @@ const pathMiddle2 = {
   closed: {rotate:-45}
 }
 
+const pathMiddle3 = {
+  open : {transform: "translateY(0%)"},
+  closed : {transform: "translateY(-100%)"}
+  // open : {transform: "translateY(-100%)"},
+  // closed : {transform: "translateY(0%)"} 
+}
+
+const pathMiddle4 = {
+  open : {transform: "translateY(0%)"},
+  closed : {transform: "translateY(100%)"}
+  // open : {transform: "translateY(100%)"},
+  // closed : {transform: "translateY(0%)"}
+}
+
 export default function Navbar() {
   
   const pathname = usePathname() || "/";
@@ -162,7 +176,7 @@ export default function Navbar() {
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
 
                   <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
-                  variants={pathTopBottom}
+                  variants={pathMiddle3}
                   initial={showNavbar? "open" : "closed"} 
                   animate={showNavbar? "closed" : "open"} />
 
@@ -177,7 +191,7 @@ export default function Navbar() {
                     animate={showNavbar? "closed" : "open"}/>
 
                   <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
-                     variants={pathTopBottom}
+                     variants={pathMiddle4}
                      initial={showNavbar? "open" : "closed"} 
                      animate={showNavbar? "closed" : "open"} />
                 </motion.svg> 
