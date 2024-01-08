@@ -93,7 +93,8 @@ export default function links() {
                 href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
                 target="_blank"
               >
-                <CiImageOn />
+                {/* <CiImageOn /> */}
+                <DiGoogleDrive />
                 Portfolio (.pdf)
               </a>
             </p>

@@ -2,8 +2,14 @@
 
 ## Currently working on: 
 
-### Random fun stuff
+### Portfolio page:
+- [ ] Figure out how to get rid of embedding-background
+- [ ] Figure out how to get the pdf controls to show up (?)
 
+- [ ] Portfolio page --> add some suspense, or some async await thing
+
+
+### Random fun stuff
 #### Navbar changes etc
 - [ ] subNavbar animation --> not just fade in/out
 

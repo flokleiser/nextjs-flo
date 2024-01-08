@@ -43,8 +43,10 @@ before:lg:h-[360px]
 z-[-1]">
         </div>
 
-        <iframe src="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/preview" style={{width:'100vw', height: '100vh'}} 
-        width="640" height="480" allow="autoplay"
+        <iframe 
+        className={styles.iframevideo}
+        src="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/preview" style={{width:'100vw', height: '95vh'}} 
+        width="640" height="480" 
         ></iframe>
 
     </main>
