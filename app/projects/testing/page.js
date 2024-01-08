@@ -33,19 +33,68 @@ const pathMiddle2 = {
 }
 
 const pathMiddle3 = {
-  // open : {transform: "translateY(0%)"},
-  // closed : {transform: "translateY(-100%)"}
   open : {transform: "translateY(-100%)"},
   closed : {transform: "translateY(0%)"} 
 }
 
 const pathMiddle4 = {
-  // open : {transform: "translateY(0%)"},
-  // closed : {transform: "translateY(100%)"}
   open : {transform: "translateY(100%)"},
   closed : {transform: "translateY(0%)"}
 }
 
+const pathMiddleDelay1 = {
+  open : {transform: "translateY(25%)", opacity:0},
+  closed : {transform: "translateY(0%)", opacity: 1},
+}
+
+const pathMiddleDelay2 = {
+  open : {transform: "translateY(-25%)", opacity:0},
+  closed : {transform: "translateY(0%)", opacity:1}
+}
+
+const pathMiddleDelay3 = {
+  open : {transform: "translateX(100%)", 
+        },
+  closed : {transform: "translateX(0%)", 
+        },
+}
+
+const pathMiddleDelay4 = {
+  open : {transform: "translateX(100%)", 
+  },
+  closed : {transform: "translateX(0%)", 
+  },
+}
+
+const pathMiddleSwipe1= {
+  open : {transform: "translateX(300%) scale(7.2)" 
+  },
+  closed : {transform: "translateX(0%) scale(1)"
+  },
+}
+
+const pathMiddleSwipe2= {
+  open : {transform: "translateX(300%) scale(7.2)" 
+  },
+  closed : {transform: "translateX(0%) scale(1)"
+  },
+}
+
+const arrowButton = {
+  open: {
+  transform:"translateX(100%)"
+},
+  closed: {
+  transform:"translateX(0%)"
+}
+}
+
+const arrowButton2 = {
+  open: {  transform:"translateX(0%)"},
+  closed: {
+    transform:"translateX(-100%)"
+  }
+}
 
 export default function testing() {
 
@@ -137,7 +186,6 @@ z-[-1]"
 
         <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
-
           
                   <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
                   variants={pathTopBottom}
@@ -201,32 +249,39 @@ z-[-1]"
         <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
 
-                  {/* <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
-                  variants={pathTopBottomTest}
-                  initial={showNavbarTest? "open" : "closed"} 
-                  animate={showNavbarTest? "closed" : "open"}
-                  transition={delay } /> */}
-
-
                   <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
-                  variants={pathMiddle1}
-                  initial={showNavbarTest ? "open" : "closed"} 
-                  animate={showNavbarTest ? "closed" : "open"}/>
+                    variants={pathMiddle1}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0:0.25}} 
+                    />
                   
                   <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
                     variants={pathMiddle2}
                     initial={showNavbarTest ? "open" : "closed"} 
-                    animate={showNavbarTest ? "closed" : "open"}/>
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0:0.25}} 
+                    />
 
-                  {/* <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
-                     variants={pathTopBottom}
-                     initial={showNavbarTest? "open" : "closed"} 
-                     animate={showNavbarTest? "closed" : "open"} /> */}
+                  <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                    variants={pathMiddleDelay1}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ?  "closed" : "open"} 
+                    transition={{delay: showNavbarTest ? 0.25:0}}
+                    />
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                    variants={pathMiddleDelay2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0.25:0}}
+                    />
 
                 </motion.svg> 
+
         </motion.button>
 
-{/* V4 --> only middle line */}
+{/* V4 --> different rotate */}
         <motion.button
         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
         onClick={toggleNavbarVisibilityTest} >
@@ -234,19 +289,118 @@ z-[-1]"
         <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
 
-                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
-                  variants={pathMiddle1}
-                  initial={showNavbarTest ? "open" : "closed"} 
-                  animate={showNavbarTest ? "closed" : "open"}/>
+<motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                    variants={pathMiddle1}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0:0.25}} 
+                    />
                   
                   <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
                     variants={pathMiddle2}
                     initial={showNavbarTest ? "open" : "closed"} 
-                    animate={showNavbarTest ? "closed" : "open"}/>
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0:0.25}} 
+                    />
+
+                  <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                    variants={pathMiddleDelay3}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ?  "closed" : "open"} 
+                    transition={{delay: showNavbarTest ? 0.25:0}}
+                    />
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                    variants={pathMiddleDelay4}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0.25:0}}
+                    />
+
+                </motion.svg> 
+
+        </motion.button>
+
+
+{/* V5 --> variation of v4 */}
+<motion.button
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={toggleNavbarVisibilityTest} >
+
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
+                    variants={pathMiddle1}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0:0.25}} 
+                    />
+                  
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
+                    variants={pathMiddle2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0:0.25}} 
+                    />
+
+                  <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
+                    variants={pathMiddleSwipe1}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ?  "closed" : "open"} 
+                    transform={{scale: showNavbarTest ? "5" : "10"}}
+                    transition={{delay: showNavbarTest ? 0.25:0}}
+                    />
+
+                  <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
+                    variants={pathMiddleSwipe2}
+                    initial={showNavbarTest ? "open" : "closed"} 
+                    animate={showNavbarTest ? "closed" : "open"}
+                    transition={{delay: showNavbarTest ? 0.25:0}}
+                    />
+
+                </motion.svg> 
+
+        </motion.button>
+
+{/* V6 --> only middle line */}
+        <motion.button
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={toggleNavbarVisibilityTest} >
+
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+
+                  <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 L 13 7.5 A 0.5 0.5 0 0 1 13 8.5 L 3 8.5 A 0.5 0.5 0 0 1 2.5 8 Z"
+                  variants={pathMiddle1}
+                  initial={showNavbarTest ? "open" : "closed"} 
+                  animate={showNavbarTest ? "closed" : "open"}/>
 
                 </motion.svg> 
         </motion.button>
 
+{/* V6 --> only middle line */}
+<motion.button
+        className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
+        onClick={toggleNavbarVisibilityTest} >
+
+        <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:"48px"}}>
+
+                  <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z"
+                  variants={arrowButton}
+                  initial={showNavbarTest ? "open" : "closed"} 
+                  animate={showNavbarTest ? "closed" : "open"}
+                  />
+
+                  <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z"
+                  variants={arrowButton2}
+                  initial={showNavbarTest ? "open" : "closed"} 
+                  animate={showNavbarTest ? "closed" : "open"}
+                  />
+
+                </motion.svg> 
+        </motion.button>
 
             
           <motion.button

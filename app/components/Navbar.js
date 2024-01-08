@@ -109,9 +109,20 @@ const menuButton = {
   pressed: { scale: 0.95 }
 };
 
-const pathTopBottom = {
-  open : {opacity:1},
-  closed: {opacity:0}
+const arrowButton = {
+  open: {
+  transform:"translateX(-100%)"
+},
+  closed: {
+  transform:"translateX(0%)"
+}
+}
+
+const arrowButton2 = {
+  open: {  transform:"translateX(0%)"},
+  closed: {
+    transform:"translateX(100%)"
+  }
 }
 
 const pathMiddle1 = {
@@ -125,17 +136,21 @@ const pathMiddle2 = {
 }
 
 const pathMiddle3 = {
-  open : {transform: "translateY(0%)"},
-  closed : {transform: "translateY(-100%)"}
-  // open : {transform: "translateY(-100%)"},
-  // closed : {transform: "translateY(0%)"} 
+  // open : {transform: "translateY(0%)"},
+  // closed : {transform: "translateY(-100%)"}
+  closed: {transform: "translateX(100%)"
+  },
+  open: {transform: "translateX(0%)" 
+  },
 }
 
 const pathMiddle4 = {
-  open : {transform: "translateY(0%)"},
-  closed : {transform: "translateY(100%)"}
-  // open : {transform: "translateY(100%)"},
-  // closed : {transform: "translateY(0%)"}
+  // open : {transform: "translateY(0%)"},
+  // closed : {transform: "translateY(100%)"}
+  closed: {transform: "translateX(100%) "
+  },
+  open: {transform: "translateX(0%)" 
+  },
 }
 
 export default function Navbar() {
@@ -165,12 +180,6 @@ export default function Navbar() {
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
             onClick={toggleNavbarVisibility} variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
-
-                {/* <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
-                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
-                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-                  />
-                </motion.svg> */}
 
                 <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
@@ -271,15 +280,35 @@ export default function Navbar() {
 
                   <motion.button
                     className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
-                    onClick={toggleSubNavbarVisibility}
+                    onClick={toggleSubNavbarVisibility} 
                     variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
                   
-                    {showSubNavbar ? (
+                    {/* {showSubNavbar ? (
                       <CiSquareChevRight style={{ fontSize: "1.5rem" }} />
                     ) : (
                       <CiSquareChevLeft style={{ fontSize: "1.5rem" }} />
-                    )}
+                    )} */}
+
+                <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
+                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:'25px'}}>
+
+                  <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z"
+                  variants={arrowButton}
+                  initial={showSubNavbar? "open" : "closed"} 
+                  animate={showSubNavbar? "closed" : "open"}
+                  />
+                  <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z"
+                  variants={arrowButton2}
+                  initial={showSubNavbar? "open" : "closed"} 
+                  animate={showSubNavbar? "closed" : "open"}
+                  />
+
+                </motion.svg> 
                   </motion.button>
+
+
+
+
                 <AnimatePresence>
                   {showSubNavbar && (
                        <motion.div

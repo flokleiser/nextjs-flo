@@ -4,14 +4,10 @@
 
 ### Random fun stuff
 
-- [ ] Make menu buttons on navbar "morph" onclick
-- [ ] Look into SVG Drawing --> Navbar open/close icon animated
+- [ ] Look into search function
 
+- [ ] focus/dim button more transparent
 - [ ] Look into animation keyframes for svg drawing (testing page)
-
-- [ ] animate the "expand" button of subnavbar to spin around
-
-- [ ] Navbar box animation --> more betterer
 
 ### Random pages:
 - [ ] try layoutId (for pictures left/right swiping animations)
@@ -21,9 +17,6 @@
 ### Random Fixes
 - [ ] Look into preloading gifs/images maybe
 - [ ] Keep page from displaying until fully loaded (?)
-
-### Footer
-- [ ] Make website footer?
 
 ## Checklist before final publish:
 - [x] Fix texts
@@ -35,8 +28,6 @@
 - [x] Video embedding --> dim background
 
 #### Animations:
-- [ ] Maybe different background images for each page? slightly transparent -> maybe when dimmed, add some background image over the overlay
-
 - [x] Add background blur onhover
 - [x] Upload all animations
 - [x] Kontakt
