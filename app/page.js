@@ -269,8 +269,8 @@ export default function Home() {
       >
          <Link
               className="link-hover"
-              href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
-              target="_blank"
+              // href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
+              href="/portfolio"
             >
         <div className={styles.subtitleHomepage}>
           <motion.span 

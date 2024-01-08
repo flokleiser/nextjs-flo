@@ -3,6 +3,7 @@ import styles from "app/page.module.css";
 import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";
+import Link from "next/link";
 
 import { AnimatePresence, easeIn, motion } from "framer-motion";
 
@@ -65,6 +66,24 @@ export default function links() {
       whileInView={{opacity:1}} transition={{duration:1}}
       >
         <div className="flex-col mx-11">
+
+        <div
+          className={styles.buttonLinksPage} 
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link
+              href="/portfolio"
+              >
+                <CiImageOn />
+                Portfolio
+              </Link>
+            </p>
+          </div>
+        </div>
+
+<div style={{padding:'0.5rem'}} />
+
         <div
           className={styles.buttonLinksPage} 
         >

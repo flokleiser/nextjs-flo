@@ -22,7 +22,8 @@ export default function RootLayout({ children }) {
       <Navbar />
       {/* <NavbarProvider> */}
       <Suspense fallback={<Loading />}>
-        <div className="pt-[60px]">
+        {/* <div className="pt-[60px]"> */}
+        <div className="pt-[50px]" >
       <main>{children}</main>
       </div>
       </Suspense>
