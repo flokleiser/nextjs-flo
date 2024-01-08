@@ -3,6 +3,9 @@
 ## Currently working on: 
 
 ### Portfolio page:
+
+- [ ] Portfolio --> add some sort of "scrollIntoView" functionality (?)
+
 - [ ] Figure out how to get rid of embedding-background
 - [ ] Figure out how to get the pdf controls to show up (?)
 
