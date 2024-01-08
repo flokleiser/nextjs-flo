@@ -99,7 +99,7 @@ export default function Home() {
       >
         <h1>
           {" "}
-          <Link href="/projects/testing">Testing</Link>{" "}
+          <Link href="/projects/tests/svgTest">Testing</Link>{" "}
         </h1>
       </div>
 

@@ -4,16 +4,22 @@
 
 ### Random fun stuff
 
+#### Navbar changes etc
+- [ ] subNavbar animation --> not just fade in/out
+- [ ] 
+
+#### SVG Animations
+- [ ] Look into animation keyframes for svg drawing (testing page)
+- [ ] Implement in skylands page
+
+#### Image next/prev animations
+- [ ] try layoutId (for pictures left/right swiping animations)
+
+#### Maybe additions
 - [ ] Look into search function
 
-- [ ] Look into animation keyframes for svg drawing (testing page)
-
-### Random pages:
-- [ ] try layoutId (for pictures left/right swiping animations)
-- [ ] Maybe add some more whileInView animations?
-- [ ] Make suspense work in projects
-
 ### Random Fixes
+- [ ] Figure out why suspense doesnt work in projects
 - [ ] Look into preloading gifs/images maybe
 - [ ] Keep page from displaying until fully loaded (?)
 

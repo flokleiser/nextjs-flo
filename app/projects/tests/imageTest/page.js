@@ -1,39 +1,37 @@
 'use client'
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Suspense} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
-import { useInView } from 'framer-motion';
 
 
-const data = [
-  { image : '/images/cad/cad website.png', id: 0},
-]
+
+const data = [
+  {image: '/images/sketches/sketch test scan website2.png', id: 0},
+  {image: '/images/sketches/sketch test website.png', id: 1},
+  {image: '/images/sketches/sketch test scan website3.png', id: 2},
+  {image: '/images/sketches/sketch test scan website4.png', id: 3},
+  {image: '/images/sketches/sketch test scan website6.png', id: 4},
+];
 
 const data2 = [
-  { image: '/images/cad/cad parts2.png', id: 1},
-  { image: '/images/cad/cad parts1.png', id: 2},
-  { image: '/images/cad/cad parts3.png', id: 3},
-]
+  {image: '/images/sketches/metal2.png', id: 5},
+  {image: '/images/sketches/cat3.png', id: 6},
+  {image: '/images/sketches/dragon2.png', id: 7},
+  {image: '/images/sketches/illusions2.png', id: 8},
+];
 
 const data3 = [
-  { image : '/images/cad/cadknife4.png', id: 4},
-  { image : '/images/cad/cadknife2.png', id: 5},
-  { image : '/images/cad/cadknife1.png', id: 6},
-  { image : '/images/cad/cadknife3.png', id: 7},
+{ image: '/images/sketches/cartoon2.png', id: 9 },
+{ image: '/images/sketches/corona memory3.png', id: 10 },
+{ image: '/images/sketches/spaceship sketch2.png', id: 11 },
 ]
 
-const data4 = [
-  { image: '/images/cad/popsicle1.png', id: 8},
-  { image: '/images/cad/popsicle2.png', id: 9},
-]
+export default function imageTest() {
 
-export default function cad() {
-
- 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -46,7 +44,7 @@ export default function cad() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3, ...data4];
+    const dataArray = [...data, ...data2, ...data3];
     const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
     if (selectedIndex !== -1) {
       setSelectedImage(imageSrc);
@@ -58,7 +56,7 @@ export default function cad() {
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3, ...data4];
+      const dataArray = [...data, ...data2, ...data3];
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -69,7 +67,7 @@ export default function cad() {
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3, ...data4];
+      const dataArray = [...data, ...data2, ...data3];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -134,11 +132,15 @@ return () => {
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
 
-  useEffect(() => {
-    document.title = 'Projects - CAD';
-  }, []);
+
+
+useEffect(() => {
+  document.title = 'imageTest';
+}, []);
+
 
     return (
+
         <main className={styles.main}>
               <div className="relative 
    flex 
@@ -173,32 +175,30 @@ return () => {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-          
+ 
           <div className={styles.backbutton}
            style={{position:'fixed', zIndex:9999}}
-            >
+           >
             <h1> <Link href="/projects">All Projects </Link> </h1>
             </div>
-                     
+      
             <h1 className={styles.title}>
-             Computer Aided Design
+             Sketches
             </h1>
-             
+
             <div className={styles.subtitledescription}>
             <p>
-            A balisong (butterfly knife) designed in onshape.com, rendered in Blender, and built using popsicle sticks and hot glue.
-            </p>
-            </div> 
-            {/* <Image src="/images/cad/cad website.png"width={800} height={800}/>  */}
+            A collection of sketches, designs and artworks ranging from 2018 
+            to 2023.   
+             </p>
+            </div>
 
-            {/* <div style={{padding:'1rem'}} />
+            <div style={{padding:'1rem'}} />
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} /> */}
-
-            <div className="">
-
-             <AnimatePresence>
+      <div style={{ padding: "0.5rem" }} />
+         
+            <AnimatePresence>
               {selectedImage && (
                <motion.div
                 id="overlay" 
@@ -212,7 +212,6 @@ return () => {
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
         }}
           >
-          
           <motion.img
             src={selectedImage}
             initial={{scale:0.5}}
@@ -223,7 +222,6 @@ return () => {
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990 }}
           />
-
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             onClick={handleResetClick}
@@ -255,21 +253,20 @@ return () => {
         </motion.div>
       )}
       </AnimatePresence>
-    
+       
+       <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data.map((x) =>  (
-
-                  <article key="cad1" 
+                  <article 
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-
                     <div className="relative rounded-2xl">
                       <Image
-                        width={600}
+                        width={400}
                         height={400}
-                        className={`rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                           selectedImage ? 'z-0' : ''
                         }`}
                         src={x.image}
@@ -283,53 +280,18 @@ return () => {
                 </div>
               </div>
             
-            {/* <div styles={{ padding: '2rem' }}> </div>
 
-            <div className={styles.subtitledescription}>
-            <p>
-              Assembly process/individual parts
-            </p>
-            </div>  
+              
 
-            <div styles={{ padding: '2rem' }}> </div> */}
-
-<div className={styles.subtitledescription}>
-            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-            <a 
-            style={{paddingBottom: '2rem'}}
-                      href="https://cad.onshape.com/documents/74ceed200a5aa4f63a77c82e/w/2cd4c25834f626e76cd4c9af/e/d0d97ca62557a0c79fb7dfc5?renderMode=0&uiState=6567658f98467778680c9faf" target="_blank">
-                    <Image
-                      src="/svg/onshape.svg"
-                      alt="Onshape Logo"
-                      className={styles.vercelLogo}
-                      style={{ filter: 'invert(100%)' }}
-                      width={50}
-                      height={24}
-                      priority
-                    />  
-                   Project on OnShape
-                    </a>
-            </div>
-            </div>
-
-            <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} />
-
-              <motion.div className=""
-              // style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
-              // whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
-              // transition={{duration:0.5}} 
-              >
-                
+              <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data2.map((x) =>  (
-                  <article key="cad2"
+                  <article 
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-                    <div className="relative  rounded-2xl">
+                    <div className="relative rounded-2xl">
                       <Image
                         width={400}
                         height={400}
@@ -345,33 +307,17 @@ return () => {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-
-              <div styles={{ padding: '2rem' }}> </div>
-
-{/* <div className={styles.subtitledescription}>
-<p>
-Completed CAD design:
-</p>
-</div>  
-
-<div styles={{ padding: '2rem' }}> </div> */}
-
-
-              <motion.div className=""
-              // style={{translateX:300, opacity:0.5, filter:'blur(10px)'}}
-              // whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
-              // transition={{duration:0.5}} 
-              >
+             <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
                     {data3.map((x) =>  (
-                  <article key="cad3"
+                  <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
-                    <div className="relative  rounded-2xl">
+                    <div className="relative rounded-2xl">
                       <Image
                         width={400}
                         height={400}
@@ -387,70 +333,13 @@ Completed CAD design:
                     ))}
                   </div>
                 </div>
-              </motion.div>
-
-              <div styles={{ padding: '2rem' }}> </div>
-
-{/* <div className={styles.subtitledescription}>
-<p>
-Prototypes out of popsicle sticks
-</p>
-</div>  
-
-<div styles={{ padding: '2rem' }}> </div> */}
-
-
-              <motion.div className=""
-              // style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
-              // whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
-              // transition={{duration:0.5}} 
-              >
-              <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data4.map((x) =>  (
-                  <article key="cad4"
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-                  >
-                    <div className="relative  rounded-2xl">
-                      <Image
-                        width={400}
-                        height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
-                        src={x.image}
-                        alt=""
-                        onClick={() => handleImageClick(x.image)}
-                      />
-                    </div>
-                  </article>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-
-
-            {/* <div className={styles.subtitledescription}>
-            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-            <a style={{paddingBottom: '2rem'}}
-                      href="https://cad.onshape.com/documents/74ceed200a5aa4f63a77c82e/w/2cd4c25834f626e76cd4c9af/e/d0d97ca62557a0c79fb7dfc5?renderMode=0&uiState=6567658f98467778680c9faf" target="_blank">
-                    <Image
-                      src="/svg/onshape.svg"
-                      alt="Onshape Logo"
-                      className={styles.vercelLogo}
-                      style={{ filter: 'invert(100%)' }}
-                      width={50}
-                      height={24}
-                      priority
-                    />  
-                   Project on OnShape
-                    </a>
-            </div>
-            </div> */}
-
-            <div style={{ padding: '2rem' }}> </div>
-
+              </div>
+        
+   
+                     
         </main>
+
     )
 }
+
+
