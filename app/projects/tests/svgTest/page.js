@@ -100,6 +100,15 @@ const testButtonMenu = {
   closed: { rotate: 0 },
 };
 
+const testAnimationReverse = {
+  initial:{pathLength:0, pathOffset:1} ,
+  animate:{pathLength:1, pathOffset:0} 
+}
+const testAnimation = {
+  initial:{pathLength:0},
+  animate:{pathLength:1}
+}
+
 export default function svgTest() {
   const [testOpen, setTestOpen] = useState(false);
   const toggleTestOpen = () => {
@@ -124,6 +133,11 @@ export default function svgTest() {
     await controls.start({ pathLength: 0, pathOffset: 1 });
     controls.start({ pathLength: 1, pathOffset: 0 });
   };
+
+  const [startAnimation, setStartAnimation] = useState(0);
+  const toggleStartAnimation = () => {
+    setStartAnimation(!startAnimation);
+  }
 
   return (
     <main className={styles.main}>
@@ -162,7 +176,6 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
 
-<motion.div style={{ position:"relative", zIndex: 9999, display: "flex", flexDirection:"column"}}>
       <motion.button
         className={styles.backbutton}
         style={{ position: "fixed", zIndex: 9999, display: "flex", flexDirection:"column"}}
@@ -192,28 +205,20 @@ z-[-1]"
 
       <AnimatePresence>
         {testOpen &&  (
-          <motion.ul className={styles.backbutton}
-          style={{ position:"fixed", zIndex: 9999, display: "flex", flexDirection:"column" }} 
+          <motion.div className={styles.backbuttonTest}
+          // style={{ position:"fixed", zIndex: 9999, display: "flex", flexDirection:"column"}} 
           >
-        <motion.li >Item 1 </motion.li>
-        <motion.li >Item 2 </motion.li>
-        <motion.li>Item 3 </motion.li>
-        <motion.li>Item 4 </motion.li>
-        <motion.li >Item 5 </motion.li>
-      </motion.ul>
+        <Link className={styles.subtitledescription}href="/projects/tests/svgTest" > SVG </Link>
+        <Link href="/projects/tests/imageTest" > IMAGES </Link>
+      </motion.div>
         )}
       </AnimatePresence>
-      </motion.div>
-
-     
-
 
       <h1 className={styles.title}>Testing</h1>
 
       <div className={styles.subtitledescription}>
         <p>
-          A collection of sketches, designs and artworks ranging from 2018 to
-          2023.
+         testing some buttons
         </p>
       </div>
 
@@ -578,7 +583,7 @@ z-[-1]"
 
         <motion.button
           className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
-          onClick={repeatAnimation}
+          onClick={toggleStartAnimation}
         >
           <motion.svg
             stroke="currentColor"
@@ -655,6 +660,189 @@ z-[-1]"
           fill="currentColor"
         >
           <motion.g id="Layer_1-2" data-name="Layer 1">
+
+{/* HOUSE WALLS */}
+            <motion.polyline
+              fill="none"
+              strokeWidth="20px"
+              points="156.26 1181.31 156.26 761.14 626.85 761.14 696.47 761.14 696.47 1181.31"
+              variants={testAnimation}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={{ duration: 1, repeatDelay: 2 }}
+            />
+
+{/* TOWER WALLS */}
+            <motion.polygon
+              fill="none"
+              strokeWidth="20px"
+              points="635.2 220.93 635.2 761.14 468.13 761.14 468.13 220.93 490.41 220.93 635.2 220.93"
+            />
+
+{/* TOWER SECTION */}
+            <rect
+              fill="none"
+              strokeWidth="20px"
+              x="493.19"
+              y="87.27"
+              width="116.95"
+              height="133.66"
+            />
+            
+{/* HOUSE ROOF */}
+            <motion.polyline
+              fill="none"
+              strokeWidth="20px"
+              points="130.5 761.14 229.22 594.76 468.13 594.76"
+            />
+
+{/* TOWER ROOF */}
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m468.13,87.27s0-77.27,83.54-77.27,83.54,77.27,83.54,77.27"
+            />
+
+{/* WINDOW 1 */}
+            <motion.polyline
+              fill="none"
+              strokeWidth="20px"
+              points="635.2 543.94 568.37 543.94 568.37 641.41 635.2 641.41"
+            />
+
+{/* WINDOW 3 */}
+            <motion.rect
+              fill="none"
+              strokeWidth="20px"
+              x="243.91"
+              y="889.09"
+              width="110.81"
+              height="164.28"
+            />
+
+{/* DOOR */}
+            <motion.rect
+              fill="none"
+              strokeWidth="20px"
+              x="512.97"
+              y="889.09"
+              width="110.81"
+              height="292.23"
+            />
+
+{/* WINDOW 2*/}
+            <motion.polyline
+              fill="none"
+              strokeWidth="20px"
+              points="635.2 324.66 568.37 324.66 568.37 422.12 635.2 422.12"
+            />
+
+
+{/* PALM TREE */}
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m1080.2,761.14c-72.4,151.88-72.4,430.61-72.4,430.61" 
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? {duration: 1, delay:2}:{duration:1, delay:1}}
+              />
+
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m870.19,864.09s62.23-115.17,213.91-105.3" 
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? { duration: 1, delay: 3 }:{ duration: 1, delay:0}}
+              />
+
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m952.95,898.26s38.15-149.13,131.14-136.34"
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? { duration: 1, delay: 3 }:{ duration: 1, delay:0}} 
+            />
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m1188.9,910.8s-1.87-109.75-108.7-148.09"
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? { duration: 1, delay: 3 }:{ duration: 1, delay:0}} 
+            />
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m1290.82,915.31s-59.55-164.37-220.86-156.87"
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? { duration: 1, delay: 3 }:{ duration: 1, delay:0}} 
+            />
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m1277.41,787.54s-101.04-90.85-233.41-26.79"
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? { duration: 1, delay: 3 }:{ duration: 1, delay:0}} 
+            />
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m1094.57,754.6s-112.89-75.62-234.85,6.55"
+              variants={testAnimation}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={startAnimation ? { duration: 1, delay: 3 }:{ duration: 1, delay:0}} 
+            />
+
+{/* CLOUD */}
+            <motion.path
+              fill="none"
+              strokeWidth="20px"
+              d="m1110.33,1443.34c228.75,118.94-7.07,256.86-7.07,256.86,69.43,332.24-298.74,267.1-298.74,267.1-233.78,164.17-437.22-33.88-437.22-33.88-298.74,41.51-246.81-206.6-246.81-206.6-151.51-80.22-147.23-221.49,13.03-313.07h5.21"
+              variants={testAnimation}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={{duration:1}}
+            />
+
+
+{/* ISLAND */}
+            <motion.polygon
+              fill="none"
+              strokeWidth="20px"
+              points="1141.78 1191.69 1110.33 1443.34 1107.72 1464.18 981.34 1681.4 850.12 1616.62 757.8 1755.29 597.36 1852.27 461.11 1787.49 383.31 1819.87 242.41 1681.4 138.73 1413.74 52.75 1191.69 1141.78 1191.69"
+              variants={testAnimationReverse}
+              initial="initial"
+              animate={startAnimation ? "animate" : "initial" }
+              transition={{duration:1}}
+            />
+
+          </motion.g>
+        </svg>
+
+        <div style={{ padding: "2rem" }} />
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="Layer_2"
+          data-name="Layer 2"
+          viewBox="0 0 1300.22 2042.41"
+          style={{ width: 200 }}
+          stroke="currentColor"
+          fill="currentColor"
+        >
+          <motion.g id="Layer_1-2" data-name="Layer 1">
             <motion.polyline
               fill="none"
               strokeWidth="20px"
@@ -716,8 +904,6 @@ z-[-1]"
               strokeWidth="20px"
               d="m1080.2,761.14c-72.4,151.88-72.4,430.61-72.4,430.61"
               //  initial={{pathLength:0, pathOffset:1}} animate={{pathLength:1, pathOffset:0}}  transition={{duration:2,  repeatDelay:2}}
-              animate={controls}
-              transition={{ duration: 1, repeatDelay: 2 }}
             />
             <motion.path
               fill="none"
@@ -781,6 +967,7 @@ z-[-1]"
             />
           </motion.g>
         </svg>
+
       </div>
 
       <div style={{ padding: "2rem" }} />

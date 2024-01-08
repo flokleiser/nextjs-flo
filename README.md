@@ -6,7 +6,6 @@
 
 #### Navbar changes etc
 - [ ] subNavbar animation --> not just fade in/out
-- [ ] 
 
 #### SVG Animations
 - [ ] Look into animation keyframes for svg drawing (testing page)

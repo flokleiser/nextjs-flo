@@ -94,14 +94,44 @@ export default function Home() {
    z-[-1]"
       ></div>
 
+    {/* <div style={{display:"flex"}}>
       <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999}}
+      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
       >
         <h1>
           {" "}
-          <Link href="/projects/tests/svgTest">Testing</Link>{" "}
+          <Link href="/projects/tests/svgTest">SVG</Link>{" "}
         </h1>
       </div>
+        <div style={{padding:'0.5rem'}} />
+
+      <div className={styles.backbuttonHomepage} 
+      style={{position:'fixed', right:'5rem', zIndex:9999,  position:"absolute", display:"flex" }}
+      >
+      <h1>
+          {" "}
+          <Link href="/projects/tests/imageTest">IMG</Link>{" "}
+        </h1>
+        </div>
+      </div> */}
+      
+      <div className={styles.backbuttonHomepage} 
+      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
+      >
+        <h1>
+          {" "}
+          <Link href="/projects/tests/svgTest">SVG</Link>{" "}
+        </h1>
+        <div style={{padding:'0.5rem'}} />
+          <h1> / </h1>
+          <div style={{padding:'0.5rem'}} />
+        <h1>
+          {" "}
+          <Link href="/projects/tests/imageTest">IMG</Link>{" "}
+        </h1>
+      </div>
+
+
 
       <div className={styles.titleHomepage}>
         <AnimatePresence>
@@ -109,7 +139,6 @@ export default function Home() {
           <motion.span
           initial={{ opacity: isHoveringProjects? 1:1}}
           animate={{ opacity: isHoveringProjects? 1:1}}
-          // animate={{ opacity: isHoveringProjects? 0:1}}
           transition={{
             duration: 0.25,
             delay:  i / 40

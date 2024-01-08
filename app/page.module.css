@@ -340,6 +340,23 @@ transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
 
+.backbuttonTest {
+  position:absolute;
+  opacity:0;
+  right: 1.15rem; 
+  top: 4.35rem; 
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem; 
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; 
+  color: rgb(244 244 245);
+  background-color: rgb(120 113 108 / 0.5);
+  border-radius: 0.35rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+  transition: transform 200ms, border 200ms, opacity 500ms;
+  cursor: pointer;
+}
+
 .backbuttonHomepage {
   position:absolute;
   opacity:0;
