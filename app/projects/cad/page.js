@@ -293,7 +293,7 @@ return () => {
 
             <div styles={{ padding: '2rem' }}> </div> */}
 
-<div className={styles.subtitledescription}>
+{/* <div className={styles.subtitledescription}>
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
             <a 
             style={{paddingBottom: '2rem'}}
@@ -314,7 +314,57 @@ return () => {
 
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} />
+      <div style={{ padding: "0.5rem" }} /> */}
+
+{/* <div style={{ padding: "1rem" }} /> */}
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
+      whileInView={{opacity:1}} transition={{duration:1}}
+      >
+      <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
+          className={styles.linkContainerImage}
+          style={{
+            filter:'blur(20px)',
+            translateX:-100,
+            backgroundImage: "url('/images/cad/cadimage.png')",
+            opacity: 0.5}}
+      />
+           <motion.div className="flex-col mx-11" >
+        <div
+          className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <a
+                href="https://cad.onshape.com/documents/74ceed200a5aa4f63a77c82e/w/2cd4c25834f626e76cd4c9af/e/d0d97ca62557a0c79fb7dfc5?renderMode=0&uiState=6567658f98467778680c9faf" target="_blank">
+                 <Image
+                      src="/svg/onshape.svg"
+                      alt="Onshape Logo"
+                      className={styles.vercelLogo}
+                      style={{ filter: 'invert(100%)' }}
+                      width={50}
+                      height={24}
+                      priority
+                    />  
+              cad.onshape.com 
+              </a>
+            </p>
+          </div>
+        </div>
+        <div style={{padding:'0.5rem'}}/>
+      <div className="max-w-prose ">
+        <p className={styles.subtitledescription}>
+          The project on OnShape
+        </p>
+      </div>
+      </motion.div>
+      </motion.div>
+
+      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
 
               <motion.div className=""
               // style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
