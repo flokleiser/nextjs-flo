@@ -10,6 +10,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import { MdFilterCenterFocus } from "react-icons/md";
+import {Tooltip} from "@nextui-org/tooltip";
+import CenterTooltip from "@/app/components/CenterTooltip";
+import DimTooltip from "@/app/components/DimTooltip";
 
 const data = [
   { image: "/images/skylands/skylands3.png", id: 0 },
@@ -293,50 +296,56 @@ export default function skylands() {
 
       <div className={styles.linkContainer}>
       <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex ml-1 ">
-        <button
-            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            style={{ zIndex: 53 }}
-            onClick={handleToggleClick}
-          >
-            {isDim ? (
-              <LuLightbulb style={{ fontSize: "1.5rem" }} />
-            ) : (
-              <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
-            )}
-          </button>
+        <div className="flex">
 
-          <Link
-            className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-            style={{ zIndex: 53 }}
-            href="#interactables"
-            rel="noopener noreferrer"
-            onClick={handleScroll}
-          >
-            {" "}
-            <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
-          </Link>
-        </div>
+<DimTooltip >
+      <button
+          className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+          style={{ zIndex: 53 }}
+          onClick={handleToggleClick}
+        >
+          {isDim ? (
+            <LuLightbulb style={{ fontSize: "1.5rem" }} />
+          ) : (
+            <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+          )}
+        </button>
+</DimTooltip>
 
-        <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex align-center">
+<CenterTooltip>
+        <Link
+          className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+          style={{ zIndex: 53 }}
+          href="#interactables"
+          rel="noopener noreferrer"
+          onClick={handleScroll}
+        >
+          {" "}
+          <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+        </Link>
+</CenterTooltip>
 
-          <iframe
-            className={styles.iframevideo}
-            style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-            src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
-            allowFullScreen
-          ></iframe>
-
-        </div>
-        <div style={{ padding: "1.25rem" }}> </div>
       </div>
 
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data.map((x) => (
+      <div style={{ padding: "0.125rem" }}> </div>
+      <div className="flex align-center">
+
+        <iframe
+          className={styles.iframevideo}
+          style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
+          src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
+          allowFullScreen
+        ></iframe>
+
+      </div>
+      <div style={{ padding: "1.25rem" }}> </div>
+    </div>
+
+    <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+      <div className="p-1 container mx-auto">
+        <div className="py-2"></div>
+        <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+          {data.map((x) => (
               <article
                 key="s1"
                 className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -373,6 +382,7 @@ export default function skylands() {
         <div className="flex ml-1 ">
           {/* place-self-start */}
 
+          <DimTooltip >
           <button
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -384,7 +394,9 @@ export default function skylands() {
               <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
             )}
           </button>
+          </DimTooltip>
 
+          <CenterTooltip>
           <Link
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -395,6 +407,8 @@ export default function skylands() {
             {" "}
             <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
           </Link>
+          </CenterTooltip>
+
         </div>
         <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
@@ -452,6 +466,7 @@ export default function skylands() {
         <div className="flex ml-1 ">
           {/* place-self-start */}
 
+          <DimTooltip>
           <button
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -463,7 +478,9 @@ export default function skylands() {
               <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
             )}
           </button>
+          </DimTooltip>
 
+          <CenterTooltip>
           <Link
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -474,6 +491,8 @@ export default function skylands() {
             {" "}
             <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
           </Link>
+          </CenterTooltip>
+
         </div>
 
         <div style={{ padding: "0.125rem" }}> </div>

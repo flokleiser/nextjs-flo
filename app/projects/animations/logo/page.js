@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import React, { useState, useEffect } from "react";
 import { MdFilterCenterFocus } from "react-icons/md";
+import CenterTooltip from "@/app/components/CenterTooltip";
+import DimTooltip from "@/app/components/DimTooltip";
 
 // export const metadata = {
 //   title: "Animations - Logo",
@@ -111,9 +113,10 @@ export default function logo() {
 
       <div className={styles.linkContainer}>
       <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex ml-1 ">
+        <div className="flex">
           {/* place-self-start */}
 
+<DimTooltip>
           <button
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -125,7 +128,9 @@ export default function logo() {
               <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
             )}
           </button>
+          </DimTooltip>
 
+          <CenterTooltip>
           <Link
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -136,6 +141,7 @@ export default function logo() {
             {" "}
             <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
           </Link>
+          </CenterTooltip>
         </div>
         <div style={{ padding: "0.125rem" }}> </div> 
         <div className="flex align-center">

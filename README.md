@@ -3,6 +3,9 @@
 ## Currently working on: 
 
 ### Random pages
+
+- [ ] Check if everything is centered --> iframevideo
+
 - [ ] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
 - [ ] Implement the tooltips
 

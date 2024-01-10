@@ -7,6 +7,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 import React, { useState, useEffect } from "react";
 import { MdFilterCenterFocus } from "react-icons/md";
+import CenterTooltip from "@/app/components/CenterTooltip";
+import DimTooltip from "@/app/components/DimTooltip";
 
 export default function escape() {
   const [isDim, setDim] = useState(false);
@@ -102,8 +104,9 @@ export default function escape() {
 
       <div className={styles.linkContainer}>
         <div style={{ padding: "0.125rem" }}> </div>
-        <div className="flex ml-1 ">
+        <div className="flex">
 
+        <DimTooltip>
           <button
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -115,7 +118,9 @@ export default function escape() {
               <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
             )}
           </button>
+          </DimTooltip>
 
+          <CenterTooltip>
           <Link
             className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             style={{ zIndex: 53 }}
@@ -126,6 +131,8 @@ export default function escape() {
             {" "}
             <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
           </Link>
+          </CenterTooltip>
+
         </div>
         <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex align-center">
