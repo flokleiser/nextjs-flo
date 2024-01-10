@@ -1,14 +1,20 @@
 'use client'
 import {Tooltip} from "@nextui-org/tooltip";
 import styles from 'app/page.module.css'
-// import { Children } from "react";
 
 export default function DimTooltip({children}) {
 return (
     <Tooltip
+      showArrow
        content="Dim background"
        delay={0}
+       placement="left"
        closeDelay={0}
+       classNames={{
+        base: ["bg-[#78716c]/50 rounded-md"],
+        content: ["py-0.5 px-1 shadow-xl text-white",
+        "rounded-md" ]
+       }}
        motionProps={{
          variants : {
            exit: {

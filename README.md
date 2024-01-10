@@ -4,10 +4,12 @@
 
 ### Random pages
 
-- [ ] Check if everything is centered --> iframevideo
+- [ ] Add some tooltip background?
 
-- [ ] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
-- [ ] Implement the tooltips
+- [x] Check if everything is centered --> iframevideo
+
+- [x] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
+- [x] Implement the tooltips
 
 ### Random fun stuff
 #### Navbar changes etc

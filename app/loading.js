@@ -1,6 +1,7 @@
 'use client'
 import styles from 'app/page.module.css'
 import { Puff } from "react-loader-spinner";
+// import {Spinner} from "@nextui-org/react";
 
 
 export default function Loading(){
