@@ -2,15 +2,9 @@
 
 ## Currently working on: 
 
-### Portfolio page:
-
-- [ ] Portfolio --> add some sort of "scrollIntoView" functionality (?)
-
-- [ ] Figure out how to get rid of embedding-background
-- [ ] Figure out how to get the pdf controls to show up (?)
-
-- [ ] Portfolio page --> add some suspense, or some async await thing
-
+### Random pages
+- [ ] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
+- [ ] Implement the tooltips
 
 ### Random fun stuff
 #### Navbar changes etc

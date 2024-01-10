@@ -10,9 +10,11 @@ import {
   motion,
   useAnimate,
   delay,
+  easeIn,
 } from "framer-motion";
 import { BsX, BsList } from "react-icons/bs";
 import { BsArrowClockwise } from "react-icons/bs";
+import {Tooltip} from "@nextui-org/tooltip";
 
 const button = {
   rest: { scale: 1 },
@@ -176,6 +178,7 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
 
+ 
       <motion.button
         className={styles.backbutton}
         style={{ position: "fixed", zIndex: 9999, display: "flex", flexDirection:"column"}}
@@ -202,6 +205,7 @@ z-[-1]"
           />
         </motion.svg>
         </motion.button>
+   
 
       <AnimatePresence>
         {testOpen &&  (
@@ -228,6 +232,29 @@ z-[-1]"
 
       <div className="flex-row" style={{ display: "flex" }}>
         {/* V1 --> original from navbar */}
+
+        <Tooltip
+    content="test"
+    delay={0}
+    closeDelay={0}
+    motionProps={{
+      variants : {
+        exit: {
+          opacity:0,
+          transition: { 
+            duration: 0.1, ease:"easeIn",
+          }
+        },
+        enter : {
+          opacity:1,
+          transition: {
+            duration:0.15, ease:"easeOut",
+          }
+        },
+      },
+    }}
+    >
+
         <motion.button
           className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
           onClick={toggleNavbarVisibilityTest}
@@ -277,6 +304,9 @@ z-[-1]"
             />
           </motion.svg>
         </motion.button>
+
+</Tooltip>
+
 
         {/* V2 --> unfolding with delay? */}
         <motion.button

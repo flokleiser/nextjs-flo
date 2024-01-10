@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/tooltip": "^2.0.29",
     "daisyui": "^4.0.7",
     "framer-motion": "^10.16.5",
     "gsap": "^3.12.3",
