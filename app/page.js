@@ -116,18 +116,28 @@ export default function Home() {
       </div> */}
       
       <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
+      style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
       >
         <h1>
           {" "}
           <Link href="/projects/tests/svgTest">SVG</Link>{" "}
         </h1>
-        <div style={{padding:'0.5rem'}} />
-          <h1> / </h1>
-          <div style={{padding:'0.5rem'}} />
+        </div>
+          <div className={styles.backbuttonHomepage} 
+      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
+      >
         <h1>
           {" "}
           <Link href="/projects/tests/imageTest">IMG</Link>{" "}
+        </h1>
+      </div>
+
+      <div className={styles.backbuttonHomepage} 
+      style={{position:'fixed', zIndex:9999, right:'7rem', position:"absolute", display:"flex" }}
+      >
+                <h1>
+          {" "}
+          <Link href="/projects/tests/filesTest">Files</Link>{" "}
         </h1>
       </div>
 
