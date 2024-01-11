@@ -2,16 +2,16 @@
 
 ## Currently working on: 
 
-### Random pages
+### Random fun stuff
+
+- [ ] SubNavbar button --> add background
+
+- [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
+- [ ] Page transitions please
+- [ ] Figure out collapsable menus
 
 - [ ] Add some tooltip background?
 
-- [x] Check if everything is centered --> iframevideo
-
-- [x] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
-- [x] Implement the tooltips
-
-### Random fun stuff
 #### Navbar changes etc
 - [ ] subNavbar animation --> not just fade in/out
 
@@ -38,6 +38,8 @@
 
 #### General:
 - [x] Video embedding --> dim background
+- [x] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
+- [x] Implement the tooltips
 
 #### Animations:
 - [x] Add background blur onhover

@@ -132,14 +132,14 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className={styles.backbuttonHomepage} 
+      {/* <div className={styles.backbuttonHomepage} 
       style={{position:'fixed', zIndex:9999, right:'7rem', position:"absolute", display:"flex" }}
       >
                 <h1>
           {" "}
           <Link href="/projects/tests/filesTest">Files</Link>{" "}
         </h1>
-      </div>
+      </div> */}
 
 
 

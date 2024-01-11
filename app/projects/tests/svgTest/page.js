@@ -440,7 +440,7 @@ z-[-1]"
               variants={pathMiddle1}
               initial={showNavbarTest ? "open" : "closed"}
               animate={showNavbarTest ? "closed" : "open"}
-              transition={{ delay: showNavbarTest ? 0 : 0.25 }}
+              transition={{ delay: showNavbarTest ? 0 : 0.5 }}
             />
 
             <motion.path
@@ -448,7 +448,7 @@ z-[-1]"
               variants={pathMiddle2}
               initial={showNavbarTest ? "open" : "closed"}
               animate={showNavbarTest ? "closed" : "open"}
-              transition={{ delay: showNavbarTest ? 0 : 0.25 }}
+              transition={{ delay: showNavbarTest ? 0 : 0.5 }}
             />
 
             <motion.path

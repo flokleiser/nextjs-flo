@@ -136,8 +136,6 @@ const pathMiddle2 = {
 }
 
 const pathMiddle3 = {
-  // open : {transform: "translateY(0%)"},
-  // closed : {transform: "translateY(-100%)"}
   closed: {transform: "translateX(100%)"
   },
   open: {transform: "translateX(0%)" 
@@ -145,8 +143,6 @@ const pathMiddle3 = {
 }
 
 const pathMiddle4 = {
-  // open : {transform: "translateY(0%)"},
-  // closed : {transform: "translateY(100%)"}
   closed: {transform: "translateX(100%) "
   },
   open: {transform: "translateX(0%)" 
@@ -182,27 +178,37 @@ export default function Navbar() {
             onClick={toggleNavbarVisibility} variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
 
                 <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
-                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
+                style={{
+                  backgroundColor:'#211f1e', 
+                  zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem'}}>
 
                   <motion.path d="m 2.5 4 a 0.5 0.5 0 0 1 0.5 -0.5 h 10 a 0.5 0.5 0 0 1 0 1 h -10 a 0.5 0.5 0 0 1 -0.5 -0.5 z" 
                   variants={pathMiddle3}
                   initial={showNavbar? "open" : "closed"} 
-                  animate={showNavbar? "closed" : "open"} />
+                  animate={showNavbar? "closed" : "open"} 
+                  transition={{ delay: showNavbar? 0: 0.25 }}  
+                  />
 
                   <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z"
                   variants={pathMiddle1}
                   initial={showNavbar? "open" : "closed"} 
-                  animate={showNavbar? "closed" : "open"}/>
+                  animate={showNavbar? "closed" : "open"}
+                  transition={{ delay: showNavbar? 0.5 : 0}}  
+                  />
                   
                   <motion.path d="M 2.5 8 A 0.5 0.5 0 0 1 3 7.5 H 13 A 0.5 0.5 0 0 1 13 8.5 H 3 A 0.5 0.5 0 0 1 2.5 8 Z" 
                     variants={pathMiddle2}
                     initial={showNavbar ? "open" : "closed"} 
-                    animate={showNavbar? "closed" : "open"}/>
+                    animate={showNavbar? "closed" : "open"}
+                    transition={{ delay: showNavbar? 0.5 : 0 }} 
+                    />
 
                   <motion.path d="M 2.5 12 A 0.5 0.5 0 0 1 3 11.5 H 13 A 0.5 0.5 0 0 1 13 12.5 H 3 A 0.5 0.5 0 0 1 2.5 12 Z "
                      variants={pathMiddle4}
                      initial={showNavbar? "open" : "closed"} 
-                     animate={showNavbar? "closed" : "open"} />
+                     animate={showNavbar? "closed" : "open"}
+                     transition={{ delay: showNavbar? 0: 0.25 }}  
+                     />
                 </motion.svg> 
 
                 
@@ -290,17 +296,22 @@ export default function Navbar() {
                     )} */}
 
                 <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
-                style={{backgroundColor:'#211f1e', zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:'25px'}}>
+                style={{
+                  backgroundColor:'#211f1e', 
+                  zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:'25px'}}
+                >
 
                   <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z"
                   variants={arrowButton}
                   initial={showSubNavbar? "open" : "closed"} 
                   animate={showSubNavbar? "closed" : "open"}
+                  transition={{delay: showSubNavbar? 0.25:0}}
                   />
                   <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z"
                   variants={arrowButton2}
                   initial={showSubNavbar? "open" : "closed"} 
                   animate={showSubNavbar? "closed" : "open"}
+                  transition={{delay: showSubNavbar ? 0:0.25}}
                   />
 
                 </motion.svg> 
