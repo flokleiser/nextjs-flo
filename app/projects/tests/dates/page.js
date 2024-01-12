@@ -1,22 +1,17 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
 import styles from "app/page.module.css";
-import {
-  AnimatePresence,
-  animate,
-  useAnimation,
-  motion,
-  useAnimate,
-  delay,
-  easeIn,
-} from "framer-motion";
-import { DiGoogleDrive } from "react-icons/di";
+import Calendar from "react-calendar";
+// import
+
 
 export default function filesTest() {
 
   useEffect(() => {
     document.title = "testing";
   }, []);
+
+  const [value, onChange] = useState(new Date());
 
   return (
     <main className={styles.main}>
@@ -60,7 +55,10 @@ z-[-1]"
       <hr className={styles.pageDivider} />
       <div style={{ padding: "1rem" }} />
 
-     
+      <Calendar
+          onChange={onChange}
+          value={value}
+      />
 
       <div style={{ padding: "2rem" }} />
     </main>

@@ -95,30 +95,11 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-    {/* <div style={{display:"flex"}}>
-      <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/svgTest">SVG</Link>{" "}
-        </h1>
-      </div>
-        <div style={{padding:'0.5rem'}} />
-
-      <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', right:'5rem', zIndex:9999,  position:"absolute", display:"flex" }}
-      >
-      <h1>
-          {" "}
-          <Link href="/projects/tests/imageTest">IMG</Link>{" "}
-        </h1>
-        </div>
-      </div> */}
-
-{/* <div className={styles.backbuttonHomepage}  */}
-<div className={styles.backbutton}
-      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
+<div
+      style={{position:'fixed', zIndex:9999,   display:"flex" ,
+      right:' 1.15rem ',
+  top: '0.75rem'
+    }}
       >
                 <h1>
           {" "}
