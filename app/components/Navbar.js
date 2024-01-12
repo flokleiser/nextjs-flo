@@ -284,21 +284,16 @@ export default function Navbar() {
                   );
                 })}
 
-                  <motion.button
+                  <motion.button style={{zIndex:'9999'}}
                     className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
                     onClick={toggleSubNavbarVisibility} 
                     variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
-                  
-                    {/* {showSubNavbar ? (
-                      <CiSquareChevRight style={{ fontSize: "1.5rem" }} />
-                    ) : (
-                      <CiSquareChevLeft style={{ fontSize: "1.5rem" }} />
-                    )} */}
 
                 <motion.svg stroke="currentColor" fill="currentColor"  viewBox="0 0 16 16" width={25} strokeWidth={0} 
                 style={{
                   backgroundColor:'#211f1e', 
-                  zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:'25px'}}
+                  zIndex:'9999', border:'1px',borderStyle:'solid', borderColor:'#FFFFFF', borderRadius:'0.35rem', width:'25px'
+                }}
                 >
 
                   <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z"
