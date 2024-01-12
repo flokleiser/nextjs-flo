@@ -10,7 +10,6 @@ import DimTooltip from '@/app/components/DimTooltip';
 import CenterTooltip from '@/app/components/CenterTooltip';
 import { MdFilterCenterFocus } from "react-icons/md";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
-// import {  } from 'next/navigation';
 
 
 const data = [
@@ -79,8 +78,6 @@ export default function imageTest() {
       setSelectedImage(dataArray[newIndex].image);
     }
   };
-
-
 
 /* handleoutsideclick*/
 useEffect(() => {

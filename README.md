@@ -4,6 +4,8 @@
 
 ### Random fun stuff
 
+- [ ] Add page with calendar for dates (hausaufgaben etc)
+
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
 - [ ] Page transitions please
 - [ ] Figure out collapsable menus

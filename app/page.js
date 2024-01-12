@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { CiCalendar } from "react-icons/ci";
 
 export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
@@ -114,6 +115,19 @@ export default function Home() {
         </h1>
         </div>
       </div> */}
+
+{/* <div className={styles.backbuttonHomepage}  */}
+<div className={styles.backbutton}
+      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
+      >
+                <h1>
+          {" "}
+          <Link href="/projects/tests/dates">
+            {/* Dates */}
+            <CiCalendar style={{fontSize:'1.5rem'}} />
+            </Link>{" "}
+        </h1>
+      </div>
       
       <div className={styles.backbuttonHomepage} 
       style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
@@ -124,7 +138,7 @@ export default function Home() {
         </h1>
         </div>
           <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999,  position:"absolute", display:"flex" }}
+      style={{position:'fixed', zIndex:9999, right:'7rem', position:"absolute", display:"flex" }}
       >
         <h1>
           {" "}
@@ -132,14 +146,7 @@ export default function Home() {
         </h1>
       </div>
 
-      {/* <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999, right:'7rem', position:"absolute", display:"flex" }}
-      >
-                <h1>
-          {" "}
-          <Link href="/projects/tests/filesTest">Files</Link>{" "}
-        </h1>
-      </div> */}
+
 
 
 
