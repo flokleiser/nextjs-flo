@@ -6,6 +6,10 @@ import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
+import DimTooltip from '@/app/components/DimTooltip';
+import CenterTooltip from '@/app/components/CenterTooltip';
+import { MdFilterCenterFocus } from "react-icons/md";
+import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 // import {  } from 'next/navigation';
 
 
@@ -17,20 +21,21 @@ const data = [
   {image: '/images/sketches/sketch test scan website6.png', id: 4},
 ];
 
-const data2 = [
-  {image: '/images/sketches/metal2.png', id: 5},
-  {image: '/images/sketches/cat3.png', id: 6},
-  {image: '/images/sketches/dragon2.png', id: 7},
-  {image: '/images/sketches/illusions2.png', id: 8},
-];
-
-const data3 = [
-{ image: '/images/sketches/cartoon2.png', id: 9 },
-{ image: '/images/sketches/corona memory3.png', id: 10 },
-{ image: '/images/sketches/spaceship sketch2.png', id: 11 },
-]
 
 export default function imageTest() {
+
+  const [isDim, setDim] = useState(false);
+  const handleToggleClick = () => {
+    setDim(!isDim);
+    };
+
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,7 +49,7 @@ export default function imageTest() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3];
+    const dataArray = [...data]
     const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
     if (selectedIndex !== -1) {
       setSelectedImage(imageSrc);
@@ -56,7 +61,7 @@ export default function imageTest() {
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
+      const dataArray = [...data,]
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -67,7 +72,7 @@ export default function imageTest() {
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
+      const dataArray = [...data];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -175,6 +180,24 @@ useEffect(() => {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
+
+          <AnimatePresence>
+      {isDim && (
+        <motion.div
+        className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center z-[52]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5}}
+        
+        style={{
+          backdropFilter: `blur(10px)`,
+          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+        }}>
+      
+        </motion.div>
+      )}
+      </AnimatePresence> 
  
           <div className={styles.backbutton}
            style={{position:'fixed', zIndex:9999}}
@@ -279,66 +302,87 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
-            
 
-              
+              <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='interactables' />
 
-              <div className="">
-              <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data2.map((x) =>  (
-                  <article 
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-                  >
-                    <div className="relative rounded-2xl">
-                      <Image
-                        width={400}
-                        height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
-                        src={x.image}
-                        alt=""
-                        onClick={() => handleImageClick(x.image)}
-                      />
-                    </div>
-                  </article>
-                    ))}
-                  </div>
-                </div>
-              </div>
+<div className={styles.linkContainer}>
+<div style={{ padding: "0.125rem" }}> </div>
+  <div className="flex">
 
-             <div className="">
-              <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data3.map((x) =>  (
-                  <article
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-                  >
-                    <div className="relative rounded-2xl">
-                      <Image
-                        width={400}
-                        height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
-                        src={x.image}
-                        alt=""
-                        onClick={() => handleImageClick(x.image)}
-                      />
-                    </div>
-                  </article>
-                    ))}
-                  </div>
-                </div>
-              </div>
-        
+<DimTooltip >
+<button
+    className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+    style={{ zIndex: 53 }}
+    onClick={handleToggleClick}
+  >
+    {isDim ? (
+      <LuLightbulb style={{ fontSize: "1.5rem" }} />
+    ) : (
+      <LuLightbulbOff style={{ fontSize: "1.5rem" }} />
+    )}
+  </button>
+</DimTooltip>
+
+<DimTooltip >
+<button
+    className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+    style={{ zIndex: 53 }}
+    onClick={handleToggleClick}
+  >
+    <motion.svg  stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 24 24" height={24} >
+      {/* <motion.path d="" */}
+    </motion.svg>
    
-                     
-        </main>
+  </button>
+</DimTooltip>
 
+{/* <CenterTooltip>
+  <Link
+    className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+    style={{ zIndex: 53 }}
+    href="#interactables"
+    rel="noopener noreferrer"
+    onClick={handleScroll}
+  >
+    {" "}
+    <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
+  </Link>
+</CenterTooltip> */}
+
+<CenterTooltip>
+  <Link
+    className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
+    style={{ zIndex: 53 }}
+    href="#interactables"
+    rel="noopener noreferrer"
+    onClick={handleScroll}
+  >
+    {" "}
+    <motion.svg stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 24 24" height={24} >
+      <motion.path d="M5 15H3v4c0 1.1.9 2 2 2h4v-2H5v-4zM5 5h4V3H5c-1.1 0-2 .9-2 2v4h2V5zm14-2h-4v2h4v4h2V5c0-1.1-.9-2-2-2zm0 16h-4v2h4c1.1 0 2-.9 2-2v-4h-2v4zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+    </motion.svg>
+  </Link>
+</CenterTooltip>
+
+</div>
+
+<div style={{ padding: "0.125rem" }}> </div>
+<div className="flex align-center">
+
+  <iframe
+    className={styles.iframevideo}
+    style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
+    // src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
+    allowFullScreen
+  ></iframe>
+
+</div>
+<div style={{ padding: "1.25rem" }}> </div>
+</div>
+
+<div style={{padding:'2rem'}} />
+
+                    </main>
     )
 }
 

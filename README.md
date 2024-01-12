@@ -4,16 +4,11 @@
 
 ### Random fun stuff
 
-- [ ] SubNavbar button --> add background
-
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
 - [ ] Page transitions please
 - [ ] Figure out collapsable menus
 
 - [ ] Add some tooltip background?
-
-#### Navbar changes etc
-- [ ] subNavbar animation --> not just fade in/out
 
 #### SVG Animations
 - [ ] Look into animation keyframes for svg drawing (testing page)
@@ -106,6 +101,8 @@
 - [x] Fix youtube not allowing fullscreen
 
 ### Navbar:
+- [x] subNavbar animation --> not just fade in/out
+- [x] SubNavbar button --> add background
 - [x] Make menu buttons on navbar "morph" onclick
 - [x] Look into SVG Drawing --> Navbar open/close icon animated
 - [x] Navbar colors finalize --> maybe feedback
