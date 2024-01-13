@@ -2,24 +2,51 @@
 
 ## Currently working on: 
 
-### Random fun stuff
+## ENZIAN:
+- [ ] Figure out how to access project on enzian computer
 
+## NEW TO-DO PAGES:
+
+### CAD
+- [ ] Change background to be green --> like portfolio 
+
+### SKYLANDS
+- [ ] Structure & add screenshots --> like portfolio
+
+### CREATIVE-CODING:
+- [ ] Move "tips" button to top
+- [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
+- [ ] Add all screenshots --> like portfolio
+
+### SKETCHES
+- [ ] Add all sketches that are in portfolio
+- [ ] Maybe change background slightly
+
+### ANIMATIONS
+- [ ] Change background for main animation page
+- [ ] Change background for sub-animation pages
+
+### VOXEL & ILLUSTRATOR:
+- [ ] Change backgrounds slightly
+
+### Crafts:
+- [ ] Change backgrounds slightly
+
+### HOMEPAGE
+- [ ] Try to add scaling (layout & text to take up x amount of vw/vh)
+
+### Calendar:
 - [ ] Add page with calendar for dates (hausaufgaben etc)
 
+### Random fun stuff
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
+
 - [ ] Page transitions please
 - [ ] Figure out collapsable menus
-
 - [ ] Add some tooltip background?
-
-#### SVG Animations
 - [ ] Look into animation keyframes for svg drawing (testing page)
 - [ ] Implement in skylands page
-
-#### Image next/prev animations
 - [ ] try layoutId (for pictures left/right swiping animations)
-
-#### Maybe additions
 - [ ] Look into search function
 
 ### Random Fixes
