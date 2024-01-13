@@ -81,7 +81,11 @@ export default function animations() {
       )}
       </AnimatePresence>
 
-      <h1 className={styles.title} style={{zIndex:'100'}}>Animations</h1>
+      <div style={{paddingTop:'1rem'}} />
+
+      <div className={styles.linkContainerAnimationsBackground} >
+      {/* <h1 className={styles.title} style={{zIndex:'100'}}>Animations</h1> */}
+      <h1 className={styles.titleWithoutPadding} style={{zIndex:'100'}}>Animations</h1>
 
       <div className={styles.subtitledescription} style={{zIndex:'100'}}>
         <p>
@@ -93,7 +97,9 @@ export default function animations() {
       </div>
 
       <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} style={{zIndex:'100'}}/>
+      <hr className={styles.pageDivider} style={{zIndex:'100', 
+      // maxWidth:'1400px'
+      }}/>
       <div style={{ padding: "1rem" }} />
 
       <div style={{ padding: "1rem" }}>
@@ -205,6 +211,10 @@ export default function animations() {
             <DiGoogleDrive /> All videos
           </a>
         </div>
+      </div>
+
+      <div style={{ padding: "0.375rem" }}> </div>
+
       </div>
 
       <div style={{ padding: "0.3rem" }}> </div>

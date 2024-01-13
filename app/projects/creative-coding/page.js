@@ -177,7 +177,12 @@ export default function creativeCoding() {
         </h1>
       </div>
 
-      <h1 className={styles.title}>Creative Coding</h1>
+      <div style={{paddingTop:'1rem'}} />
+      <div className={styles.linkContainerCC} >
+
+      <h1 className={styles.titleWithoutPadding}>Creative Coding</h1>
+
+      {/* <h1 className={styles.title}>Creative Coding</h1> */}
 
       {/* <div className={styles.subtitle}>
              <h1> Rotations </h1>
@@ -194,7 +199,8 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
 
       <div style={{ padding: "1rem" }}></div>
 
-      <div className={styles.linkContainer} 
+      {/* <div className={styles.linkContainer}  */}
+      <div className={styles.linkContainerCCSandbox}
         style={{
           // paddingLeft:"2rem", paddingRight:"2rem"  
           width:"90vw",
@@ -220,6 +226,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
             style={{
               border: "2px solid white",
               width: "85vw",
+              maxWidth: '1350px',
               aspectRatio: "16/9"
             }}
           />
@@ -375,6 +382,8 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           </div>
         </div>
       </motion.div>
+
+      </div>
 
       <div style={{ padding: "2rem" }}> </div>
       {/* <code>

@@ -182,28 +182,21 @@ return () => {
             <div style={{paddingTop:'1rem'}} />
 
             <div className={styles.linkContainerCad} 
-        style={{
-          // paddingLeft:"2rem", paddingRight:"2rem"  
-          width:"90vw",
-          zIndex:1
-          }}
           >
                      
             <h1 className={styles.titleWithoutPadding}>
              Computer Aided Design
             </h1>
+
+            {/* <h1 className={styles.title}>
+             Computer Aided Design
+            </h1> */}
              
             <div className={styles.subtitledescription}>
             <p>
             A balisong (butterfly knife) designed in onshape.com, rendered in Blender, and built using popsicle sticks and hot glue.
             </p>
             </div> 
-            {/* <Image src="/images/cad/cad website.png"width={800} height={800}/>  */}
-
-            {/* <div style={{padding:'1rem'}} />
-            <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} /> */}
 
             <div className="">
 
@@ -343,7 +336,7 @@ return () => {
       />
            <motion.div className="flex-col mx-11" >
         <div
-          className={styles.buttonLinksPage}
+          className={styles.buttonLinksPageCad}
         >
           <div className={styles.subtitledescription}>
             <p>

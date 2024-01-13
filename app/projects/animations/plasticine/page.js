@@ -94,7 +94,12 @@ export default function plasticine() {
             <h1> <Link href="/projects/animations">All Animations</Link> </h1>
             </div>
 
-            <h1 className={styles.title}>
+            <div style={{paddingTop:'1rem'}} />
+
+<div className={styles.linkContainerAnimationsBackground} >
+<h1 className={styles.titleWithoutPadding}>
+
+            {/* <h1 className={styles.title}> */}
               Plasticine (A)live
             </h1>
             {/* <video
@@ -118,7 +123,8 @@ export default function plasticine() {
 
             <div style={{padding:'1rem', scrollMargin:'50px'}} id="plasticine" />
 
-            <div className={styles.linkContainer}>
+            {/* <div className={styles.linkContainer}> */}
+            <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
           {/* place-self-start */}
@@ -168,6 +174,8 @@ export default function plasticine() {
                 </a>
                 </div>
             </div>
+
+</div>
 
             <div style={{ padding: '2rem' }}> </div>
 

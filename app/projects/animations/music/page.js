@@ -94,7 +94,12 @@ export default function music() {
             <h1> <Link href="/projects/animations">All Animations</Link> </h1>
             </div>
 
-            <h1 className={styles.title}>
+            <div style={{paddingTop:'1rem'}} />
+
+<div className={styles.linkContainerAnimationsBackground} >
+<h1 className={styles.titleWithoutPadding}>
+
+            {/* <h1 className={styles.title}> */}
               Animations to Music
             </h1>
             {/* <div className={styles.subtitledescription}>
@@ -129,7 +134,8 @@ export default function music() {
             </p>
             </div>
             <div style={{ padding: '1rem', scrollMargin:'50px' }} id="publictransport"> </div> 
-            <div className={styles.linkContainer}>
+            {/* <div className={styles.linkContainer}> */}
+            <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
           {/* place-self-start */}
@@ -188,7 +194,8 @@ export default function music() {
             </div>
             <div style={{ padding: '1rem', scrollMargin:'60px' }}id="piano"> </div> 
 
-            <div className={styles.linkContainer}>
+            {/* <div className={styles.linkContainer}> */}
+            <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
           {/* place-self-start */}
@@ -246,7 +253,8 @@ export default function music() {
             </div>
             <div style={{ padding: '1rem', scrollMargin:'60px'}} id="blurry"> </div> 
 
-            <div className={styles.linkContainer}>
+            {/* <div className={styles.linkContainer}> */}
+            <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex  ">
           {/* place-self-start */}
@@ -295,6 +303,8 @@ export default function music() {
                 </a>
                 </div>
             </div>
+
+          </div>
 
            <div style={{ padding: '2rem' }}> </div>
 

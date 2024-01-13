@@ -91,7 +91,12 @@ export default function escape() {
         </h1>
       </div>
 
-      <h1 className={styles.title}>Escape</h1>
+      <div style={{paddingTop:'1rem'}} />
+
+      <div className={styles.linkContainerAnimationsBackground} >
+
+      {/* <h1 className={styles.title}>Escape</h1> */}
+      <h1 className={styles.titleWithoutPadding}>Escape</h1>
 
       <div className={styles.subtitledescription}>
         <p>
@@ -102,7 +107,8 @@ export default function escape() {
 
       <div style={{ padding: "1rem", scrollMargin: "50px" }} id="escape" />
 
-      <div className={styles.linkContainer}>
+      {/* <div className={styles.linkContainer}> */}
+      <div className={styles.linkContainerAnimationsVideo}>
         <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex">
 
@@ -155,6 +161,7 @@ export default function escape() {
             <DiGoogleDrive /> Video on Google Drive
           </a>
         </div>
+      </div>
       </div>
 
       <div style={{ padding: "2rem" }}> </div>

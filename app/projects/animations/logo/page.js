@@ -98,7 +98,14 @@ export default function logo() {
         </h1>
       </div>
 
-      <h1 className={styles.title}>Logo</h1>
+      <div style={{paddingTop:'1rem'}} />
+
+<div className={styles.linkContainerAnimationsBackground} >
+<h1 className={styles.titleWithoutPadding}>
+
+      {/* <h1 className={styles.title}> */}
+        
+        Logo</h1>
       <div className={styles.subtitledescription}>
         <p>
           A small project where i designed a logo for the first letter in my
@@ -111,7 +118,8 @@ export default function logo() {
             src="https://drive.google.com/uc?id=1t3uRCLQX84zKMnf8HlKfAWi6Srv_W94F" controls>
             </video> */}
 
-      <div className={styles.linkContainer}>
+      {/* <div className={styles.linkContainer}> */}
+      <div className={styles.linkContainerAnimationsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex">
           {/* place-self-start */}
@@ -163,6 +171,8 @@ export default function logo() {
             <DiGoogleDrive /> Video on Google Drive
           </a>
         </div>
+      </div>
+
       </div>
 
       <div style={{ padding: "2rem" }}> </div>

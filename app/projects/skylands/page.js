@@ -196,7 +196,12 @@ export default function skylands() {
         </h1>
       </div>
 
-      <h1 className={styles.title}>Skylands</h1>
+      <div style={{paddingTop:'1rem'}} />
+      <div className={styles.linkContainerSkylands}>
+
+      <h1 className={styles.titleWithoutPadding}> Skylands </h1>
+
+      {/* <h1 className={styles.title}>Skylands</h1> */}
 
       <div className={styles.subtitledescription}>
         <p>
@@ -302,7 +307,8 @@ with a variety of interactive objects to explore.
 
       <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='interactables' />
 
-      <div className={styles.linkContainer}>
+      {/* <div className={styles.linkContainer}> */}
+      <div className={styles.linkContainerSkylandsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex">
 
@@ -385,7 +391,8 @@ with a variety of interactive objects to explore.
       </div>
       <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='environment' />
 
-      <div className={styles.linkContainer} >
+      {/* <div className={styles.linkContainer} > */}
+      <div className={styles.linkContainerSkylandsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
           {/* place-self-start */}
@@ -469,7 +476,8 @@ with a variety of interactive objects to explore.
       </div>
       <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='boat' />
 
-      <div className={styles.linkContainer}>
+      {/* <div className={styles.linkContainer}> */}
+      <div className={styles.linkContainerSkylandsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
           {/* place-self-start */}
@@ -581,6 +589,7 @@ with a variety of interactive objects to explore.
             </a>
           </p>
         </div>
+      </div>
       </div>
 
       <div style={{ padding: "2rem" }}> </div>

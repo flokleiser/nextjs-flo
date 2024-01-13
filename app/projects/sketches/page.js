@@ -181,12 +181,24 @@ useEffect(() => {
            >
             <h1> <Link href="/projects">All Projects </Link> </h1>
             </div>
+
+            <div style={{paddingTop:'1rem'}} />
+            {/* <div className={styles.linkContainerSketches} > */}
+            <div className={styles.linkContainerIllustrator} >
       
-            <h1 className={styles.title}>
+              {/* <h1 className={styles.titleWithoutPadding}> */}
+              <h1 className={styles.titleWithoutPaddingDark}>
              Sketches
             </h1>
 
-            <div className={styles.subtitledescription}>
+            {/* <h1 className={styles.title}>
+             Sketches
+            </h1> */}
+
+            <div className={styles.subtitledescription}
+            style={{color:'rgb(55,55,55)'}}
+            >
+              
             <p>
             A collection of sketches, designs and artworks ranging from 2018 
             to 2023.   
@@ -195,7 +207,7 @@ useEffect(() => {
 
             <div style={{padding:'1rem'}} />
             <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDivider} />
+      <hr className={styles.pageDividerDark} />
       <div style={{ padding: "0.5rem" }} />
          
             <AnimatePresence>
@@ -312,7 +324,7 @@ useEffect(() => {
              <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
                     {data3.map((x) =>  (
                   <article
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -334,6 +346,10 @@ useEffect(() => {
                   </div>
                 </div>
               </div>
+            
+            </div>
+            
+            <div style={{ padding: '2rem' }}> </div>
         
    
                      

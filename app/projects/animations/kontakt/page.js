@@ -94,9 +94,16 @@ export default function kontakt() {
             <h1> <Link href="/projects/animations">All Animations</Link> </h1>
             </div>
 
-            <h1 className={styles.title}>
+            <div style={{paddingTop:'1rem'}} />
+
+<div className={styles.linkContainerAnimationsBackground} >
+<h1 className={styles.titleWithoutPadding}>
               Kontakt
             </h1>
+
+            {/* <h1 className={styles.title}>
+              Kontakt
+            </h1> */}
 
             <div className={styles.subtitledescription}>
               <p>
@@ -110,7 +117,8 @@ export default function kontakt() {
             src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
             </video> */}
          
-         <div className={styles.linkContainer}>
+         {/* <div className={styles.linkContainer}> */}
+         <div className={styles.linkContainerAnimationsVideo}>
          <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
           {/* place-self-start */}
@@ -158,6 +166,8 @@ export default function kontakt() {
                     <DiGoogleDrive /> Video on Google Drive
                 </a>
                 </div>
+            </div>
+
             </div>
 
             <div style={{ padding: '2rem' }}> </div>

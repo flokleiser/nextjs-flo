@@ -167,8 +167,13 @@ return () => {
             <h1> <Link href="/projects">All Projects </Link> </h1>
             </div>
 
+            <div style={{paddingTop:'1rem'}} />
+      <div className={styles.linkContainerCrafts} >
+
+      <h1 className={styles.titleWithoutPadding}>
+
            
-            <h1 className={styles.title}>
+            {/* <h1 className={styles.title}> */}
              Crafts
             </h1>
             <div className={styles.subtitledescription}>
@@ -269,7 +274,7 @@ return () => {
               <div className="">
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
                     {data2.map((x) =>  (
                   <article key="crafts2"
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -291,6 +296,9 @@ return () => {
                   </div>
                 </div>
               </div>
+
+              </div>
+              <div style={{padding:'2rem'}}/>
 
         </main>
     )

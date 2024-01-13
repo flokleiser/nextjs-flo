@@ -8,11 +8,13 @@
 ## NEW TO-DO PAGES:
 
 ### CAD
-- [ ] Change background to be green --> like portfolio 
+- [x] Change background to be green --> like portfolio 
+- [ ] Figure out how to make grid
 - [ ] Maybe add tooltips (descriptions)?
 
 ### SKYLANDS
 - [ ] Structure & add screenshots --> like portfolio
+- [ ] Figure out background colors (different ones)
 
 ### CREATIVE-CODING:
 - [x] Move "tips" button to top
@@ -21,11 +23,8 @@
 
 ### SKETCHES
 - [x] Add all sketches that are in portfolio
-- [ ] Maybe change background slightly
-
-### ANIMATIONS
-- [ ] Change background for main animation page
-- [ ] Change background for sub-animation pages
+- [x] Maybe change background slightly
+- [ ] Look into picture/svg as backgroundcolor ?
 
 ### VOXEL & ILLUSTRATOR:
 - [ ] Change backgrounds slightly
@@ -67,6 +66,8 @@
 - [x] Implement the tooltips
 
 #### Animations:
+- [x] Change background for main animation page
+- [x] Change background for sub-animation pages
 - [x] Add background blur onhover
 - [x] Upload all animations
 - [x] Kontakt
