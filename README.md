@@ -9,17 +9,18 @@
 
 ### CAD
 - [ ] Change background to be green --> like portfolio 
+- [ ] Maybe add tooltips (descriptions)?
 
 ### SKYLANDS
 - [ ] Structure & add screenshots --> like portfolio
 
 ### CREATIVE-CODING:
-- [ ] Move "tips" button to top
+- [x] Move "tips" button to top
 - [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
 - [ ] Add all screenshots --> like portfolio
 
 ### SKETCHES
-- [ ] Add all sketches that are in portfolio
+- [x] Add all sketches that are in portfolio
 - [ ] Maybe change background slightly
 
 ### ANIMATIONS

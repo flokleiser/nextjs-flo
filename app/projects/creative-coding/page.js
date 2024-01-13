@@ -204,11 +204,12 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
 
       <div style={{ padding: "0.5rem" }}></div>
 
-      <div className={styles.subtitledescription}>
+      {/* <div className={styles.subtitledescription}>
         <p>
           Try it out:
         </p>
-      </div>
+      </div> */}
+      <TipsButton />
 
       <div style={{ padding: "1rem" }}>
         <div>
@@ -225,7 +226,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         </div>
       </div>
 
-      <TipsButton />
+      {/* <TipsButton /> */}
 
        <div style={{ padding: "0.5rem" }}> </div>
 </div>

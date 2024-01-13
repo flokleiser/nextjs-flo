@@ -100,6 +100,22 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 
+.linkContainerCad {
+  position:relative;
+  display: flex;
+  z-index: 52;
+  width:80vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;      
+  border-style: solid;
+  border-width: 10px;
+  border-color: rgb(99, 174, 152);
+  background-color: rgba(74, 117, 110, 1);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+}
+
 .linkContainerLinks {
   display:flex;
   flex-direction: row;
@@ -417,9 +433,19 @@ transition: all 0.5s ease-in-out;
   text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5); 
   font-weight: normal;
   padding-bottom: 2rem;
-  padding-top: 0rem;
+  padding-top: 1rem;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
 }
+
+.titleWithoutPadding{
+    font-size: 4.5rem;
+    text-decoration: underline 5px rgba(var(--foreground-rgb), 0.5); 
+    font-weight: normal;
+    padding-bottom: 2rem;
+    padding-top: 0rem;
+    text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
 .subtitle {
   font-size: 3rem;
   /* display:flex; */
