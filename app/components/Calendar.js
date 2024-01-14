@@ -1,76 +1,37 @@
-// 'use client'
-
 import styles from "app/page.module.css";
 import React, { useState } from "react";
 
-// import { Calendar, 
-//     momentLocalizer 
-// } from "react-big-calendar";
-// import moment from "moment"; 
-// import events from "/app/projects/tests/dates/events";
-// import "react-big-calendar/lib/css/react-big-calendar.css";
-
-
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-// import interactionPlugin from "@fullcalendar/interaction";
 
-
-// moment.locale("en-GB");
-// const localizer = momentLocalizer(moment)
 
 
 export default function MyCalendar() {
 
-    // const [eventsData, setEventsData] = useState(events);
-
-    // const handleSelect = ({ start, end }) => {
-    //     console.log(start);
-    //     console.log(end);
-    //     const title = window.prompt("New Event name");
-    //     if (title)
-    //       setEventsData([
-    //         ...eventsData,
-    //         {
-    //           start,
-    //           end,
-    //           title
-    //         }
-    //       ]);
-    //   };
-    //   return (
-    //     <div className="App">
-    //       <Calendar
-    //         views={["day", "agenda", "work_week", "month"]}
-    //         selectable
-    //         localizer={localizer}
-    //         defaultDate={new Date()}
-    //         defaultView="week"
-    //         // events={events}
-    //         startAccessor="start"
-    //         endAccessor="end"
-    //         events={eventsData}
-    //         style={{ height: "70vh", width:"80vw" }}
-    //         onSelectEvent={(event) => alert(event.title)}
-    //         onSelectSlot={handleSelect}
-    //       />
-    //     </div>
-    //   );
-
-    // const handleDateClick = (arg) => {
-    //     alert(arg.dateStr);
-    // }
-
     return (
-        <div className="App">
+        <div className="App" style={{width:'75vw'}}>
           <FullCalendar
+            height={'75vh'}
             plugins={[dayGridPlugin]}
             initialView="dayGridMonth"
-            weekends={false}
+            weekends={true}
             // dateClick={(e) => handleDateClick(e)}
             events={[
-              { title: "event 1", date: "2024-01-14" },
-              { title: "event 2", date: "2024-01-17" },
+              {title: "Portfolio Beratung", date: "2024-01-18" },
+              {title: "Hausaufgabe Start ZHdK", date: "2024-01-25" },
+              {title : "Hausaufgabe + Portfolio ZHdK", date:"2024-02-13"},
+              {title : "Aufnahmeprüfung ZHdK", date:"2024-03-21"},
+              {title : "Aufnahmeprüfung ZHdK", date:"2024-03-22"},
+              {title : "Hausaufgabe Start HSLU", date:"2024-02-23"},
+              {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'04"},
+              {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'05"},
+              {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'06"},
+              {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'07"},
+              {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'08"},
+              {title : "Assessment-Tag HSLU" ,date:"2024-04-02"},
+              {title : "Assessment-Tag HSLU" ,date:"2024-04-03"},
+              {title : "Assessment-Tag HSLU" ,date:"2024-04-04"},
+              {title : "Assessment-Tag HSLU" ,date:"2024-04-05"},
             ]}
             // eventContent={renderEventContent}
           />
