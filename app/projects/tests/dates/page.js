@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
 import styles from "app/page.module.css";
-import Calendar from "react-calendar";
-// import
+import MyCalendar from "@/app/components/Calendar";
 
 
 export default function filesTest() {
@@ -10,8 +9,6 @@ export default function filesTest() {
   useEffect(() => {
     document.title = "testing";
   }, []);
-
-  const [value, onChange] = useState(new Date());
 
   return (
     <main className={styles.main}>
@@ -50,15 +47,13 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
  
-      <h1 className={styles.title}>Dates</h1>
+      {/* <h1 className={styles.title}>Dates</h1>
 
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} /> */}
+      <div style={{ padding: "2rem" }} />
 
-      <Calendar
-          onChange={onChange}
-          value={value}
-      />
+
+          <MyCalendar />
 
       <div style={{ padding: "2rem" }} />
     </main>
