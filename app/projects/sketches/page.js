@@ -183,8 +183,8 @@ useEffect(() => {
             </div>
 
             <div style={{paddingTop:'1rem'}} />
-            {/* <div className={styles.linkContainerSketches} > */}
-            <div className={styles.linkContainerIllustrator} >
+            <div className={styles.linkContainerSketches} >
+            {/* <div className={styles.linkContainerIllustrator} > */}
       
               {/* <h1 className={styles.titleWithoutPadding}> */}
               <h1 className={styles.titleWithoutPaddingDark}>
