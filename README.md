@@ -9,7 +9,7 @@
 
 ### CAD
 - [x] Change background to be green --> like portfolio 
-- [ ] Figure out how to make grid
+- [ ] Figure out how to make grid --> <hr> and <vr> maybe?
 - [ ] Maybe add tooltips (descriptions)?
 
 ### SKYLANDS

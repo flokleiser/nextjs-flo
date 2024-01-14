@@ -184,13 +184,18 @@ return () => {
             <div className={styles.linkContainerCad} 
           >
                      
-            <h1 className={styles.titleWithoutPadding}>
+            <h1 className={styles.titleWithoutPaddingCad}>
              Computer Aided Design
             </h1>
+
+<hr className={styles.pageDividerCad} />
 
             {/* <h1 className={styles.title}>
              Computer Aided Design
             </h1> */}
+
+            <div style={{padding:'1rem'}} />
+<vl className={styles.pageDividerCadVertical} />
              
             <div className={styles.subtitledescription}>
             <p>
@@ -319,7 +324,7 @@ return () => {
       <div style={{ padding: "0.5rem" }} /> */}
 
 {/* <div style={{ padding: "1rem" }} /> */}
-      <hr className={styles.pageDivider} />
+<hr className={styles.pageDividerCad} />
       <div style={{ padding: "1rem" }} />
 
       <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
@@ -366,7 +371,8 @@ return () => {
       </motion.div>
 
       <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
+      {/* <hr className={styles.pageDivider} /> */}
+      <hr className={styles.pageDividerCad} />
       <div style={{ padding: "1rem" }} />
 
               <motion.div className=""
