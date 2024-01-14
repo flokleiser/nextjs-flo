@@ -15,6 +15,7 @@
 ### SKYLANDS
 - [ ] Structure & add screenshots --> like portfolio
 - [ ] Figure out background colors (different ones)
+- [ ] Maybe split page into "videos/gameplay" and "screenshots
 
 ### CREATIVE-CODING:
 - [x] Move "tips" button to top
@@ -36,7 +37,7 @@
 - [ ] Try to add scaling (layout & text to take up x amount of vw/vh)
 
 ### Calendar:
-- [ ] Add page with calendar for dates (hausaufgaben etc)
+- [x] Add page with calendar for dates (hausaufgaben etc)
 
 ### Random fun stuff
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
