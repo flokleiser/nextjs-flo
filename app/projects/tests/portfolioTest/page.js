@@ -29,20 +29,25 @@ const data3 = [
   // { image: "/images/creative-coding/creativecoding5.png", id: 7 },
   { image: "/images/creative-coding/creativecoding9.png", id: 8 },
   { image: "/images/creative-coding/creativecoding4.png", id: 5 },
+  { image: "/images/creative-coding/cc3.png", id: 11 },
+  { image: "/images/creative-coding/cc4.png", id: 12 },
+  { image: "/images/creative-coding/cc1.png", id: 9 },
+  // { image: "/images/creative-coding/cc2.png", id: 10 },
 ];
 
 function codeBlock1() {
   const codeString1=
-  `    if (newCenterPoint1) {
-    selectedCenterPoint = 1;
-    followMouse = false;
+`
+if (newCenterPoint1) {
+  selectedCenterPoint = 1;
+  followMouse = false;
 
-    centerX = width/2 + 300 * cos(angleX * (PI/2*frequency));    
-    centerY = height/2 + 200 * sin(angleY * (PI*frequency));     
+  centerX = width/2 + 300 * cos(angleX * (PI/2*frequency));    
+  centerY = height/2 + 200 * sin(angleY * (PI*frequency));     
 
-    angleX += 0.1;
-    angleY += 0.1;
-  }`
+  angleX += 0.1;
+  angleY += 0.1;
+}`
       return(
           <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
               {codeString1}
@@ -53,24 +58,24 @@ function codeBlock1() {
 
 function codeBlock2() {
     const codeString2=
-    // "if (newCenterPoint2) { selectedCenterPoint = 2;  followMouse = false;"
-        `if (newCenterPoint2) { 
-      selectedCenterPoint = 2;
-      followMouse = false;
+        `
+if (newCenterPoint2) { 
+  selectedCenterPoint = 2;
+  followMouse = false;
           
-      centerX = width/2 + 200 * sin(angleX);
-      centerY = height/2 + 150 * sin(angleY);
-      angleX += 0.02;
-      angleY += 0.03; 
+  centerX = width/2 + 200 * sin(angleX);
+  centerY = height/2 + 150 * sin(angleY);
+  angleX += 0.02;
+  angleY += 0.03; 
 
-        if (toggleRotate) {
-          if (angleX >= PI*4 && angleY >= PI*6) {
-          drawing = !drawing;
-          angleX = 0;
-          angleY = 0;
-        } 
-      }
-  }; `
+  if (toggleRotate) {
+    if (angleX >= PI*4 && angleY >= PI*6) {
+      drawing = !drawing;
+      angleX = 0;
+      angleY = 0;
+    } 
+  }
+} `
         return(
             <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
                 {codeString2}
@@ -80,19 +85,19 @@ function codeBlock2() {
 
 function codeBlock3() {
   const codeString2=
-  `if (newCenterPoint3) {
-    selectedCenterPoint = 3;
-    followMouse = false;
-    //circle-ish
-    amplitude = 150;
-    centerX = width/2 + sin(angle) * amplitude;
-    centerY = height/2 + cos(angle) * amplitude;
-    angle += 0.01* PI;
+  `
+if (newCenterPoint3) {
+  selectedCenterPoint = 3;
+  followMouse = false;
+  amplitude = 150;
+  centerX = width/2 + sin(angle) * amplitude;
+  centerY = height/2 + cos(angle) * amplitude;
+  angle += 0.01* PI;
     
-    let numPoints = 12;
-    let angleIncrement = TWO_PI / numPoints;
-    angle += 0.01 * angleIncrement;
-  }`
+  let numPoints = 12;
+  let angleIncrement = TWO_PI / numPoints;
+  angle += 0.01 * angleIncrement;
+}`
 
       return(
           <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
