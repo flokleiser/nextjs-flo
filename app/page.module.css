@@ -261,7 +261,8 @@
   border-color: rgb(144, 144, 144);
   /* border-color: rgba(212, 72, 175, 0.5); */
 
-  background-color: rgb(49,49,49);
+  /* background-color: rgb(49,49,49); */
+  background-color: rgba(222,91,154,0.2);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 
@@ -336,16 +337,14 @@
   border-style: solid;
   border-width: 10px;
 
- 
-
   border-color: rgba(78,170,195,1);
   /* border-image: linear-gradient(180deg, rgba(78,170,195,1) 0%, rgba(70,157,47,1) 100%);
   border-image-slice:1;
   background-origin: border-box;
   background-clip: content-box, border-box; */
- 
 
-  background-color: rgb(19,19,19);
+  /* background-color: rgb(19,19,19); */
+  background-color: rgba(9,161,187, 0.5);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 /* .linkContainerVoxel::before {
@@ -424,10 +423,10 @@ transition: all 0.5s ease-in-out;
 }
 
 .homepagePortfolio {
-  position:absolute;
-  padding-top: 1rem;
-  margin-left:1rem;
-  margin-right:1rem;
+  /* position:absolute; */
+  /* padding-top: 1rem; */
+  /* margin-left:1rem;
+  margin-right:1rem; */
   margin-top:1.5rem;
   display:flex;
   flex-direction: column;
@@ -437,17 +436,24 @@ transition: all 0.5s ease-in-out;
   /* z-index: -9999; */
 }
 .cardHomepagePortfolio {
-
   opacity: 0;
-
   filter: blur(5px);
+
+  position:absolute;
+  /* justify-self: center; */
+  /* justify-content:center; */
+  margin-top:11rem;
+  /* width:80vw; */
   }
 
 .cardHomepageTest {
   position:absolute;
   opacity:0.1;
+  /* width:80vw; */
   /* margin-top:25rem; */
-  margin-top:10rem;
+
+  /* margin-top:10rem; */
+  margin-top:9rem;
   filter: blur(5px);
   }
 
@@ -664,16 +670,21 @@ transition: all 0.5s ease-in-out;
 /* HOMEPAGE */
 .titleHomepage {
   /* position:absolute; */
+
   font-size: 6.5rem;
+  font-size:6.5vw;
+
   font-weight: normal;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
   padding-top:8rem;
+  /* width:50vw; */
   /* top:7rem; */
 }
 
 
 .subtitleHomepage {
   font-size: 3.5rem;
+  font-size:3.5vw;
   font-weight: normal;
   display:flex;
   align-items: center;
@@ -1501,6 +1512,7 @@ transition: all 0.5s ease-in-out;
     transform: scale(0.7);
     justify-content:center;
     margin-bottom:2rem;
+    /* width:80vw; */
   }
 
   /* .navbar-contents nav {

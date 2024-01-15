@@ -95,6 +95,7 @@ export default function Home() {
    z-[-1]"
       ></div>
 
+{/* <div> */}
 <div
       style={{position:'fixed', zIndex:9999,   display:"flex" ,
       right:' 1.15rem ',
@@ -329,6 +330,7 @@ export default function Home() {
       </AnimatePresence>
 
       <div style={{ margin: "3.5rem" }}> </div>
+      {/* </div> */}
     </main>
   );
 }

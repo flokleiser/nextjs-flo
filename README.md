@@ -2,30 +2,30 @@
 
 ## NEW TO-DO PAGES:
 
-### CAD
-- [ ] Maybe add tooltips (descriptions)?
-
 ### SKYLANDS
 - [ ] Structure & add screenshots --> like portfolio
-- [ ] Figure out background colors (different ones)
+- [x] Figure out background colors (different ones)
 - [ ] Maybe split page into "videos/gameplay" and "screenshots
 
 ### CREATIVE-CODING:
+- [ ] Decide on background --> colorful or not
 - [x] Move "tips" button to top
 - [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
 - [ ] Add all screenshots --> like portfolio
 
 ### VOXEL/Illustrator/Crafts
-- [x] Change illustrator backgrounds slightly
-- [ ] Change voxel backgrounds slightly
-- [ ] Change crafts backgrounds slightly
+- [x] Change voxel backgrounds slightly
+- [x] Change crafts backgrounds slightly
+
+### CAD
+- [ ] Decide on background --> empty spaces
+- [ ] Maybe add tooltips (descriptions)?
 
 ### HOMEPAGE
 - [ ] Try to add scaling (layout & text to take up x amount of vw/vh)
 
 ### Random fun stuff
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
-
 - [ ] Page transitions please
 - [ ] Figure out collapsable menus
 - [ ] Add some tooltip background?
@@ -103,6 +103,7 @@
 - [x] Add description
 
 #### Illustrator
+- [x] Change illustrator backgrounds slightly
 - [x] Upload Screenshots
 - [x] Add description
 
