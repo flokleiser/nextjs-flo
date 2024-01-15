@@ -31,30 +31,297 @@ const data3 = [
   { image: "/images/creative-coding/creativecoding9.png", id: 8 },
 ];
 
-function codeBlock() {
-    const codeString="if (newCenterPoint2) { selectedCenterPoint = 2;  followMouse = false;"
-    
-       "selectedCenterPoint = 2;"
-        "followMouse = false;"
+function codeBlock1() {
+  const codeString1=
+  `    if (newCenterPoint1) {
+    selectedCenterPoint = 1;
+    followMouse = false;
+
+    centerX = width/2 + 300 * cos(angleX * (PI/2*frequency));    
+    centerY = height/2 + 200 * sin(angleY * (PI*frequency));     
+
+    angleX += 0.1;
+    angleY += 0.1;
+  }`
+      return(
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+              {codeString1}
+          </SyntaxHighlighter>
+      );
+}
+
+
+function codeBlock2() {
+    const codeString2=
+    // "if (newCenterPoint2) { selectedCenterPoint = 2;  followMouse = false;"
+        `if (newCenterPoint2) { 
+      selectedCenterPoint = 2;
+      followMouse = false;
           
-        "centerX = width/2 + 200 * sin(angleX);"
-        "centerY = height/2 + 150 * sin(angleY);"
-        "angleX += 0.02;"
-        "angleY += 0.03; "
-        "if (toggleRotate) {"
-        "if (angleX >= PI*4 && angleY >= PI*6) {"
-        "drawing = !drawing;"
-        "angleX = 0;"
-        "angleY = 0;"
-        "}"
-        "}"
-        "}";
+      centerX = width/2 + 200 * sin(angleX);
+      centerY = height/2 + 150 * sin(angleY);
+      angleX += 0.02;
+      angleY += 0.03; 
+
+        if (toggleRotate) {
+          if (angleX >= PI*4 && angleY >= PI*6) {
+          drawing = !drawing;
+          angleX = 0;
+          angleY = 0;
+        } 
+      }
+  }; `
         return(
             <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
-                {codeString}
+                {codeString2}
             </SyntaxHighlighter>
         );
 }
+
+function codeBlock3() {
+  const codeString2=
+  `if (newCenterPoint3) {
+    selectedCenterPoint = 3;
+    followMouse = false;
+    //circle-ish
+    amplitude = 150;
+    centerX = width/2 + sin(angle) * amplitude;
+    centerY = height/2 + cos(angle) * amplitude;
+    angle += 0.01* PI;
+    
+    let numPoints = 12;
+    let angleIncrement = TWO_PI / numPoints;
+    angle += 0.01 * angleIncrement;
+  }`
+
+      return(
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+              {codeString2}
+          </SyntaxHighlighter>
+      );
+}
+
+// function codeBlock4() {
+//   const codeString2=
+//   `
+//   if (newCenterPoint7) {
+//     selectedCenterPoint = 7;
+//     isRotating = !isRotating;
+
+//     if (speedX > 0 && speedY > 0) {
+//       direction = downright;
+//     } else if (speedX > 0 && speedY < 0) {
+//       direction = upright;
+//     } else if (speedX < 0 && speedY > 0) {
+//       direction = downleft;
+//     } else if (speedX < 0 && speedY < 0) {
+//       direction = upleft;
+//     }
+//     //todo: fix bouncy one pixel too high
+//     if (!modifier1 && !modifier3) {
+//       centerX += speedX;
+//       centerY += speedY;
+
+//       //todo: fix one pixel too high when bouncy
+//       if (!verticalLine) {
+//         if (!newLine5) {
+//           if (centerY > height -25|| centerY < 25) {
+//           speedY *= -1;
+//           }
+//           if (centerX > width - 175 || centerX < 175) {
+//             speedX *= -1;
+//           }
+//         }  
+//         else if (newLine5) {
+//           if (centerY > height -105|| centerY < 105) {
+//             speedY *= -1;
+//             }
+//             if (centerX > width - 175 || centerX < 175) {
+//               speedX *= -1;
+//             }
+//           }
+//         }
+    
+//         else if (verticalLine) {
+//         if (centerY > height -175|| centerY < 175) {
+//           speedY *= -1;
+//           }
+//         if (centerX > width - 25 || centerX < 25) {
+//             speedX *= -1;
+//         }
+//       } 
+      
+//       if (modifier2) {
+//         if (centerX > 175 && centerX < width - 175 && centerY > 175 && centerY < height - 175) {
+//           //'b' automatic, 's' automatic, 't' automatic.
+//           randomSwitch();
+//         }
+//       }
+//   }
+
+//     //tping out frame
+//     if (modifier1) {
+//     modifier3 = false;
+//     centerX += speedX;
+//     centerY += speedY;
+    
+//     if (direction === upright) {
+//       if(centerX > width && verticalLine) {
+//         centerX = 0;
+//       }
+//       if(centerX > width+150 && !verticalLine) {
+//         centerX = -150;
+//       }
+//       if(centerY < 0 && !verticalLine) {
+//           centerY = height;
+//         }
+//       if(centerY < -150 && verticalLine) {
+//           centerY = height + 150;
+//       }
+//     }
+
+//     if (direction === downright) {
+//       if(centerX > width && verticalLine) {
+//         centerX = 0;
+//       }
+//       if(centerX > width+300 && !verticalLine) {
+//         centerX = -300;
+//       }
+//       if(centerY > height && !verticalLine) {
+//         centerY = 0;
+
+//       }
+//       if(centerY > height + 150 && verticalLine) {
+//         centerY = -150;
+//         console.log('check');
+//       }
+//     } 
+//     if (direction === upleft) {
+//       if(centerX < 0 && verticalLine) {
+//         centerX = width;
+//       }
+//       if(centerX < -150 && !verticalLine) {
+//         centerX = width + 150;
+//       }
+//       if(centerY < 0 && !verticalLine) {
+//           centerY = height;
+//         }
+//       if(centerY < -150 && verticalLine) {
+//           centerY = height + 150;
+//       }
+//     }
+
+//     if (modifier2) {
+//       randomSwitch();
+//     }
+//     }   
+    
+//     //tping in frame
+//     if (modifier3) {
+//       modifier1 = false;
+//       centerX += speedX;
+//       centerY += speedY;
+      
+//       if (direction === upright) {
+//           if(centerX > width - 25 && verticalLine) {
+//             centerX = 25;
+//           }
+//           if(centerX > width - 175 && !verticalLine /* && centerY < 75 */ ) {
+//             centerX = 175;
+//           }
+//           if(centerY < 175 && verticalLine) {
+//               centerY = height - 175;
+//           }
+//           if(centerY < 25 && !verticalLine) {
+//               centerY = height - 25;
+//           }
+//         }
+      
+//       if (direction === downright) {
+//         if(centerX > width - 25 && verticalLine) {
+//           centerX = 25;
+//         }
+//         if(centerX > width - 175 && !verticalLine) {
+//           centerX = 175;
+//         }
+//         if(centerY > height - 175 && verticalLine) {
+//             centerY = 175;
+//         }
+//         if(centerY > height - 25 && !verticalLine) {
+//             centerY = 25;
+//         }
+//       }
+
+//       if (direction === upleft) {
+//         //change here
+//         if(centerX < 25 && verticalLine) {
+//           centerX = width - 25;
+//         }
+//         if(centerX < 175 && !verticalLine  ) {
+//           centerX = width -175;
+//         }
+        
+//         if(centerY < 175 && verticalLine) {
+//             centerY = height - 175;
+//         }
+//         if(centerY < 25 && !verticalLine) {
+//             centerY = height - 25;
+//         }
+//       }
+
+//       if (modifier2) {
+//         randomSwitch();
+//       }
+//     }
+//   }
+//   if (newCenterPoint8) {
+//     selectedCenterPoint = 8;
+    
+
+//     if(modifier1 && !modifier3) {
+//     centerX = lerp(centerX, targetPoints[currentTargetIndex].x, easing);
+//     centerY = lerp(centerY, targetPoints[currentTargetIndex].y, easing);
+   
+//     let d = dist(centerX, centerY, targetPoints[currentTargetIndex].x, targetPoints[currentTargetIndex].y);
+      
+//         if (!modifier2){
+//           if (d < 1) {
+//             currentTargetIndex = (currentTargetIndex + 1) % targetPoints.length;
+//           }
+//         }
+//         else {
+//           if (d < 1) {
+//             currentTargetIndex2 = (currentTargetIndex2 - 1 + targetPoints2.length) % targetPoints2.length;
+//           }
+//         }
+//     }
+    
+//     if(modifier3 && !modifier1) {
+//       centerX = lerp(centerX, targetPoints2[currentTargetIndex2].x, easing);
+//       centerY = lerp(centerY, targetPoints2[currentTargetIndex2].y, easing);
+    
+//       let d = dist(centerX, centerY, targetPoints2[currentTargetIndex2].x, targetPoints2[currentTargetIndex2].y);
+      
+//       //reverse logic
+//         if (!modifier2){
+//           if (d < 1) {
+//             currentTargetIndex2 = (currentTargetIndex2 + 1) % targetPoints2.length;
+//           }
+//         }
+//         else {
+//           if (d < 1){
+//             currentTargetIndex2 = (currentTargetIndex2 - 1 + targetPoints2.length) % targetPoints2.length;
+//           }
+//         }
+//     }
+//   }
+//   `
+//       return(
+//           <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+//               {codeString2}
+//           </SyntaxHighlighter>
+//       );
+// }
 
 export default function creativeCoding() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -288,10 +555,83 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
       <div style={{ padding: "0.5rem" }} />
 
 <div className={styles.code}>
-        {codeBlock()}
+        {codeBlock1()}
      </div>
+
+     <div className="">
+        <div className="p-3 container mx-auto">
+          <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+            {data2.map((x) => (
+              <article key="cc2" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+                <div className="relative rounded-2xl">
+                  <Image
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
     
       <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      <div className={styles.code}>
+        {codeBlock2()}
+     </div>
+
+     <div className="">
+        <div className="p-3 container mx-auto">
+          <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+            {data.map((x) => (
+              <article key="cc" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+                <div className="relative rounded-2xl">
+                  <Image
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+     <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      <div className={styles.code}>
+        {codeBlock3()}
+     </div>
+
+     <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      <div className={styles.code}>
+        {codeBlock4()}
+     </div>
+
+     <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
@@ -350,53 +690,6 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="">
-        <div className="p-3 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data.map((x) => (
-              <article key="cc" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="">
-        <div className="p-3 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data2.map((x) => (
-              <article key="cc2" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <motion.div className="" >
         <div className="p-3 container mx-auto">
