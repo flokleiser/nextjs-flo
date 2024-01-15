@@ -22,13 +22,13 @@ const data = [
 const data2 = [
   { image: "/images/creative-coding/creativecoding2.png", id: 3 },
   { image: "/images/creative-coding/creativecoding3.png", id: 4 },
-  { image: "/images/creative-coding/creativecoding4.png", id: 5 },
   { image: "/images/creative-coding/creativecoding6.png", id: 6 },
 ];
 
 const data3 = [
-  { image: "/images/creative-coding/creativecoding5.png", id: 7 },
+  // { image: "/images/creative-coding/creativecoding5.png", id: 7 },
   { image: "/images/creative-coding/creativecoding9.png", id: 8 },
+  { image: "/images/creative-coding/creativecoding4.png", id: 5 },
 ];
 
 function codeBlock1() {
@@ -627,13 +627,13 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-      <div className={styles.code}>
+      {/* <div className={styles.code}>
         {codeBlock4()}
      </div>
 
      <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} />
+      <div style={{ padding: "0.5rem" }} /> */}
 
       <AnimatePresence>
         {selectedImage && (
