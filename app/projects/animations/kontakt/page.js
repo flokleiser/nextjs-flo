@@ -157,7 +157,8 @@ export default function kontakt() {
             src="https://www.youtube.com/embed/VAPNv4HEvw8?si=0Acev4IzeaTSiAZ3&rel=0" allowFullScreen> 
             </iframe>
             </div>
-            <div style={{ padding: "1.25rem" }}> </div>
+            {/* <div style={{ padding: "1.25rem" }}> </div> */}
+            <div style={{padding:"0.8rem"}} />
          </div>
 
             <div className={styles.subtitledescription} >

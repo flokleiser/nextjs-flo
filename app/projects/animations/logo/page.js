@@ -160,7 +160,8 @@ export default function logo() {
             allowFullScreen
           ></iframe>
         </div>
-        <div style={{ padding: "1.25rem" }}> </div>
+        {/* <div style={{ padding: "1.25rem" }}> </div> */}
+        <div style={{padding:"0.8rem"}} />
       </div>
       <div className={styles.subtitledescription}>
         <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">

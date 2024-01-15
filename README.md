@@ -1,15 +1,8 @@
 # To-Do/Ideas List:
 
-## Currently working on: 
-
-## ENZIAN:
-- [ ] Figure out how to access project on enzian computer
-
 ## NEW TO-DO PAGES:
 
 ### CAD
-- [x] Change background to be green --> like portfolio 
-- [ ] Figure out how to make grid --> <hr> and <vr> maybe?
 - [ ] Maybe add tooltips (descriptions)?
 
 ### SKYLANDS
@@ -22,22 +15,13 @@
 - [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
 - [ ] Add all screenshots --> like portfolio
 
-### SKETCHES
-- [x] Add all sketches that are in portfolio
-- [x] Maybe change background slightly
-- [ ] Look into picture/svg as backgroundcolor ?
-
-### VOXEL & ILLUSTRATOR:
-- [ ] Change backgrounds slightly
-
-### Crafts:
-- [ ] Change backgrounds slightly
+### VOXEL/Illustrator/Crafts
+- [x] Change illustrator backgrounds slightly
+- [ ] Change voxel backgrounds slightly
+- [ ] Change crafts backgrounds slightly
 
 ### HOMEPAGE
 - [ ] Try to add scaling (layout & text to take up x amount of vw/vh)
-
-### Calendar:
-- [x] Add page with calendar for dates (hausaufgaben etc)
 
 ### Random fun stuff
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
@@ -65,6 +49,7 @@
 - [x] Video embedding --> dim background
 - [x] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
 - [x] Implement the tooltips
+- [x] Add page with calendar for dates (hausaufgaben etc)
 
 #### Animations:
 - [x] Change background for main animation page
@@ -96,10 +81,16 @@
 - [x] image gallery
 
 #### Sketches
+- [x] Add all sketches that are in portfolio
+- [x] Maybe change background slightly
+- [x] Look into picture/svg as backgroundcolor ?
 - [x] Add description
 - [x] Upload screenshots
 
 #### CAD 
+- [x] Figure out how to dynamically scale vl
+- [x] Change background to be green --> like portfolio 
+- [x] Figure out how to make grid --> <hr> and <vl> maybe?
 - [x] Add description
 - [x] Upload screenshots
 

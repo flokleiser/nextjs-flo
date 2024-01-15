@@ -163,7 +163,8 @@ export default function plasticine() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792&rel=0"allowFullScreen>
             </iframe>
             </div>
-            <div style={{ padding: "1.25rem" }}> </div>
+            {/* <div style={{ padding: "1.25rem" }}> </div> */}
+            <div style={{padding:"0.8rem"}} />
             </div>
             {/* <div style={{padding:'1rem'}}/> */}
 

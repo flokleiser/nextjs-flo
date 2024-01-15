@@ -188,14 +188,14 @@ return () => {
              Computer Aided Design
             </h1>
 
-<hr className={styles.pageDividerCad} />
+{/* <hr className={styles.pageDividerCad} /> */}
 
             {/* <h1 className={styles.title}>
              Computer Aided Design
             </h1> */}
 
             <div style={{padding:'1rem'}} />
-<vl className={styles.pageDividerCadVertical} />
+{/* <vl className={styles.pageDividerCadVertical} /> */}
              
             <div className={styles.subtitledescription}>
             <p>
@@ -262,7 +262,6 @@ return () => {
         </motion.div>
       )}
       </AnimatePresence>
-    
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -324,7 +323,7 @@ return () => {
       <div style={{ padding: "0.5rem" }} /> */}
 
 {/* <div style={{ padding: "1rem" }} /> */}
-<hr className={styles.pageDividerCad} />
+{/* <hr className={styles.pageDividerCad} /> */}
       <div style={{ padding: "1rem" }} />
 
       <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
@@ -372,7 +371,7 @@ return () => {
 
       <div style={{ padding: "1rem" }} />
       {/* <hr className={styles.pageDivider} /> */}
-      <hr className={styles.pageDividerCad} />
+      {/* <hr className={styles.pageDividerCad} /> */}
       <div style={{ padding: "1rem" }} />
 
               <motion.div className=""

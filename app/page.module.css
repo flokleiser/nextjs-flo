@@ -117,7 +117,7 @@
   display: flex;
   z-index: 52;
     max-width: 1400px;
-    width:80vw;
+    width:90vw;
     /* width:var(--max-width); */
   
     flex-direction: column;
@@ -136,7 +136,8 @@
   display: flex;
   z-index: 52;
     max-width: 1400px;
-    width:80vw;
+    /* width:80vw; */
+    width:78vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -150,7 +151,8 @@
   display: flex;
   z-index: 52;
     max-width: 1400px;
-    width:80vw;
+    /* width:80vw; */
+    width:78vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -162,7 +164,6 @@
 .linkContainerCad {
   position:relative;
   display: flex;
-  /* z-index: 52; */
   width:95vw;
   flex-direction: column;
   justify-content: center;
@@ -170,8 +171,13 @@
   border-radius: 24px;      
   border-style: solid;
   border-width: 10px;
-  border-color: rgb(99, 174, 152);
-  background-color: rgba(74, 117, 110, 1);
+  border-color: rgba(99, 174, 152, 1);
+  background-color: rgba(74, 117, 110, 0.6);
+  background-image:
+    linear-gradient(to right, rgba(99, 174, 152, 0.6), 10px, transparent 10px),
+    linear-gradient(to bottom, rgba(99, 174, 152, 0.6),10px, transparent 10px);
+  background-position: -15px -15px;
+  background-size: 17% 250px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 
@@ -200,15 +206,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border-radius: 24px;      
+  border-radius: 24px;      
   border-style: solid;
-  border-width: 10px; */
+  border-width: 10px;
   /* border-color: rgb(250, 250, 250); */
 
   /* background-color: rgb(98, 101, 101); */
   /* opacity:0.5; */
   /* background-size: contain; */
-  background-image: url("/images/sketches/sketchbackgroundtest2.png");
+
+  background-image: url("/images/sketches/test3.png");
+
   /* object-fit:cover;  */
   background-size: cover;
   /* background-repeat: no-repeat; */
@@ -269,11 +277,12 @@
   border-style: solid;
   border-width: 10px;
 
-  border-color: rgb(144, 144, 144);
-  /* border-color: rgba(212, 72, 175, 0.5); */
+  /* border-color: rgb(144, 144, 144); */
+    border-color: rgba(0,0,0,0.9);
 
   /* background-color: rgb(49,49,49); */
-  background-color: rgba(250,250,250,0.7);
+  /* background-color: rgba(250,250,250,0.7); */
+    background-color: rgba(250,250,250,1);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 }
 

@@ -173,7 +173,8 @@ export default function music() {
             src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0&rel=0"allowFullScreen >
             </iframe>
             </div>
-            <div style={{ padding: "1.25rem" }}> </div>
+            {/* <div style={{ padding: "1.25rem" }}> </div> */}
+            <div style={{padding:"0.8rem"}} />
             </div>
 
             <div style={{padding:'1rem'}} />
@@ -233,7 +234,8 @@ export default function music() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx&rel=0"allowFullScreen >
             </iframe>
             </div>
-            <div style={{ padding: "1.25rem" }}> </div>
+            {/* <div style={{ padding: "1.25rem" }}> </div> */}
+            <div style={{padding:"0.8rem"}} />
 </div>
 <div style={{padding:'1rem'}} />
             <div style={{ padding: "0.5rem" }} />
@@ -292,7 +294,8 @@ export default function music() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5&rel=0" allowFullScreen>
            </iframe>
            </div>
-           <div style={{ padding: "1.25rem" }}> </div>
+           {/* <div style={{ padding: "1.25rem" }}> </div> */}
+           <div style={{padding:"0.8rem"}} />
             </div>
             {/* <div style={{padding:'1rem'}}/> */}
             

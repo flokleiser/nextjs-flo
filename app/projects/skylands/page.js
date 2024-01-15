@@ -352,7 +352,8 @@ with a variety of interactive objects to explore.
         ></iframe>
 
       </div>
-      <div style={{ padding: "1.25rem" }}> </div>
+      {/* <div style={{ padding: "1.25rem" }}> </div> */}
+      <div style={{padding:"0.8rem"}}/>
     </div>
 
     <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
@@ -435,7 +436,8 @@ with a variety of interactive objects to explore.
             allowFullScreen
           ></iframe>
         </div>
-        <div style={{ padding: "1.25rem" }}> </div>
+        {/* <div style={{ padding: "1.25rem" }}> </div> */}
+        <div style={{padding:"0.8rem"}} />
       </div>
 
       {/* <div className=""> */}
@@ -521,7 +523,8 @@ with a variety of interactive objects to explore.
             allowFullScreen
           ></iframe>
         </div>
-        <div style={{ padding: "1.25rem" }}> </div>
+        {/* <div style={{ padding: "1.25rem" }}> </div> */}
+        <div style={{padding:"0.8rem"}} />
       </div>
 
       {/* <div className=""> */}

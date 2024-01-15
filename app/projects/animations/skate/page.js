@@ -172,7 +172,8 @@ export default function skate() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"allowFullScreen> 
             </iframe>
             </div>
-            <div style={{ padding: "1.25rem" }}> </div>
+            {/* <div style={{ padding: "1.25rem" }}> </div> */}
+            <div style={{padding:"0.8rem"}} />
             </div>
 
             <div style={{padding:'1rem'}} />
@@ -232,7 +233,8 @@ export default function skate() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0"allowFullScreen>
             </iframe>
             </div>
-            <div style={{ padding: "1.25rem" }}> </div>
+            {/* <div style={{ padding: "1.25rem" }}> </div> */}
+            <div style={{padding:"0.8rem"}} />
             </div>
 
             <div className={styles.subtitledescription} >

@@ -149,7 +149,8 @@ export default function escape() {
             allowFullScreen
           ></iframe>
         </div>
-        <div style={{ padding: "1.25rem" }}> </div>
+        {/* <div style={{ padding: "1.25rem" }}> </div> */}
+        <div style={{padding:"0.8rem"}} />
       </div>
 
       <div className={styles.subtitledescription}>
