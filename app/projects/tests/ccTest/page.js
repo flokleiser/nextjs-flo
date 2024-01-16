@@ -22,23 +22,22 @@ const data = [
 const data2 = [
   { image: "/images/creative-coding/creativecoding2.png", id: 3 },
   { image: "/images/creative-coding/creativecoding3.png", id: 4 },
-  { image: "/images/creative-coding/creativecoding6.png", id: 6 },
+  { image: "/images/creative-coding/creativecoding6.png", id: 5 },
 ];
 
 const data3 = [
-  // { image: "/images/creative-coding/creativecoding4.png", id: 5 },
-  { image: "/images/creative-coding/cc3.png", id: 11 },
-  { image: "/images/creative-coding/cc4.png", id: 12 },
+  { image: "/images/creative-coding/cc3.png", id: 6 },
+  { image: "/images/creative-coding/cc4.png", id: 7 },
   { image: "/images/creative-coding/creativecoding9.png", id: 8 },
   { image: "/images/creative-coding/cc1.png", id: 9 },
   { image: "/images/creative-coding/cc8.png", id: 10 },
 ];
 
 const data4 = [
-    { image: "/images/creative-coding/creativecoding5.png", id: 7 },
-    { image: "/images/creative-coding/cc6.png", id: 15 },
-    { image: "/images/creative-coding/cc5.png", id: 14 },
-    { image: "/images/creative-coding/cc7.png", id: 16 },
+    { image: "/images/creative-coding/creativecoding5.png", id: 11 },
+    { image: "/images/creative-coding/cc6.png", id: 12 },
+    { image: "/images/creative-coding/cc5.png", id: 13 },
+    { image: "/images/creative-coding/cc7.png", id: 14 },
 ]
 
 function codeBlock1() {
