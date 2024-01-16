@@ -15,8 +15,8 @@
 - [ ] Decide on background --> empty spaces
 - [ ] Maybe add tooltips (descriptions)?
 
-### HOMEPAGE
-- [ ] Try to add scaling (layout & text to take up x amount of vw/vh)
+### Acessibility
+- [ ] Add some "alt" properties for pictures
 
 ### Random fun stuff
 - [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)

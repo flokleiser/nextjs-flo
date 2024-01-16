@@ -10,6 +10,109 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import TipsButton from "@/app/components/TipsButton";
 
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import {vscDarkPlus} from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
+const codeString1=
+`if (newCenterPoint1) {
+  selectedCenterPoint = 1;
+  followMouse = false;
+
+  centerX = width/2 + 300 * cos(angleX * (PI/2*frequency));
+  centerY = height/2 + 200 * sin(angleY * (PI*frequency));
+
+  angleX += 0.1;
+  angleY += 0.1;
+}`
+
+const codeString2=
+`if (newCenterPoint2) { 
+  selectedCenterPoint = 2;
+  followMouse = false;
+          
+  centerX = width/2 + 200 * sin(angleX);
+  centerY = height/2 + 150 * sin(angleY);
+  angleX += 0.02;
+  angleY += 0.03; 
+
+  if (toggleRotate) {
+    if (angleX >= PI*4 && angleY >= PI*6) {
+      drawing = !drawing;
+      angleX = 0;
+      angleY = 0;
+    } 
+  }
+} `
+
+const codeString3=
+`if (newCenterPoint3) {
+  selectedCenterPoint = 3;
+  followMouse = false;
+  amplitude = 150;
+  centerX = width/2 + sin(angle) * amplitude;
+  centerY = height/2 + cos(angle) * amplitude;
+  angle += 0.01* PI;
+    
+  let numPoints = 12;
+  let angleIncrement = TWO_PI / numPoints;
+  angle += 0.01 * angleIncrement;
+}`
+
+const codeString4=
+`if (newCenterPoint7) {
+    selectedCenterPoint = 7;
+    isRotating = !isRotating;
+
+    if (speedX > 0 && speedY > 0) {
+      direction = downright;
+    } else if (speedX > 0 && speedY < 0) {
+      direction = upright;
+    } else if (speedX < 0 && speedY > 0) {
+      direction = downleft;
+    } else if (speedX < 0 && speedY < 0) {
+      direction = upleft;
+    }
+    if (!modifier1 && !modifier3) {
+      centerX += speedX;
+      centerY += speedY;
+
+      if (!verticalLine) {
+        if (!newLine5) {
+          if (centerY > height -25|| centerY < 25) {
+          speedY *= -1;
+          }
+          if (centerX > width - 175 || centerX < 175) {
+            speedX *= -1;
+          }
+        }  
+        else if (newLine5) {
+          if (centerY > height -105|| centerY < 105) {
+            speedY *= -1;
+            }
+            if (centerX > width - 175 || centerX < 175) {
+              speedX *= -1;
+            }
+          }
+        }
+    
+        else if (verticalLine) {
+        if (centerY > height -175|| centerY < 175) {
+          speedY *= -1;
+          }
+        if (centerX > width - 25 || centerX < 25) {
+            speedX *= -1;
+        }
+      } 
+      
+      if (modifier2) {
+        if (centerX > 175 && centerX < width - 175 
+          && centerY > 175 && centerY < height - 175) {
+          randomSwitch();
+        }
+      }
+  }
+  `
+
 const data = [
   { image: "/images/creative-coding/creativecoding white.png", id: 0 },
   { image: "/images/creative-coding/creativecoding twocolor.png", id: 1 },
@@ -19,14 +122,156 @@ const data = [
 const data2 = [
   { image: "/images/creative-coding/creativecoding2.png", id: 3 },
   { image: "/images/creative-coding/creativecoding3.png", id: 4 },
-  { image: "/images/creative-coding/creativecoding4.png", id: 5 },
-  { image: "/images/creative-coding/creativecoding6.png", id: 6 },
+  { image: "/images/creative-coding/creativecoding6.png", id: 5 },
 ];
 
 const data3 = [
-  { image: "/images/creative-coding/creativecoding5.png", id: 7 },
+  { image: "/images/creative-coding/cc3.png", id: 6 },
+  { image: "/images/creative-coding/cc4.png", id: 7 },
   { image: "/images/creative-coding/creativecoding9.png", id: 8 },
+  { image: "/images/creative-coding/cc1.png", id: 9 },
+  { image: "/images/creative-coding/cc8.png", id: 10 },
 ];
+
+const data4 = [
+    { image: "/images/creative-coding/creativecoding5.png", id: 11 },
+    { image: "/images/creative-coding/cc6.png", id: 12 },
+    { image: "/images/creative-coding/cc5.png", id: 13 },
+    { image: "/images/creative-coding/cc7.png", id: 14 },
+]
+
+// function codeBlock1() {
+//   const codeString1=
+// `if (newCenterPoint1) {
+//   selectedCenterPoint = 1;
+//   followMouse = false;
+
+//   centerX = width/2 + 300 * cos(angleX * (PI/2*frequency));
+//   centerY = height/2 + 200 * sin(angleY * (PI*frequency));
+
+//   angleX += 0.1;
+//   angleY += 0.1;
+// }`
+//       return(
+//           <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+//               {codeString1}
+//           </SyntaxHighlighter>
+//       );
+// }
+
+
+
+// function codeBlock2() {
+//     const codeString2=
+// `if (newCenterPoint2) { 
+//   selectedCenterPoint = 2;
+//   followMouse = false;
+          
+//   centerX = width/2 + 200 * sin(angleX);
+//   centerY = height/2 + 150 * sin(angleY);
+//   angleX += 0.02;
+//   angleY += 0.03; 
+
+//   if (toggleRotate) {
+//     if (angleX >= PI*4 && angleY >= PI*6) {
+//       drawing = !drawing;
+//       angleX = 0;
+//       angleY = 0;
+//     } 
+//   }
+// } `
+//         return(
+//             <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+//                 {codeString2}
+//             </SyntaxHighlighter>
+//         );
+// }
+
+// function codeBlock3() {
+//   const codeString2=
+// `if (newCenterPoint3) {
+//   selectedCenterPoint = 3;
+//   followMouse = false;
+//   amplitude = 150;
+//   centerX = width/2 + sin(angle) * amplitude;
+//   centerY = height/2 + cos(angle) * amplitude;
+//   angle += 0.01* PI;
+    
+//   let numPoints = 12;
+//   let angleIncrement = TWO_PI / numPoints;
+//   angle += 0.01 * angleIncrement;
+// }`
+
+//       return(
+//           <SyntaxHighlighter language="javascript" style={vscDarkPlus}>
+//               {codeString2}
+//           </SyntaxHighlighter>
+//       );
+// }
+
+
+
+// function codeBlock4() {
+//   const codeString3=
+// `if (newCenterPoint7) {
+//     selectedCenterPoint = 7;
+//     isRotating = !isRotating;
+
+//     if (speedX > 0 && speedY > 0) {
+//       direction = downright;
+//     } else if (speedX > 0 && speedY < 0) {
+//       direction = upright;
+//     } else if (speedX < 0 && speedY > 0) {
+//       direction = downleft;
+//     } else if (speedX < 0 && speedY < 0) {
+//       direction = upleft;
+//     }
+//     if (!modifier1 && !modifier3) {
+//       centerX += speedX;
+//       centerY += speedY;
+
+//       if (!verticalLine) {
+//         if (!newLine5) {
+//           if (centerY > height -25|| centerY < 25) {
+//           speedY *= -1;
+//           }
+//           if (centerX > width - 175 || centerX < 175) {
+//             speedX *= -1;
+//           }
+//         }  
+//         else if (newLine5) {
+//           if (centerY > height -105|| centerY < 105) {
+//             speedY *= -1;
+//             }
+//             if (centerX > width - 175 || centerX < 175) {
+//               speedX *= -1;
+//             }
+//           }
+//         }
+    
+//         else if (verticalLine) {
+//         if (centerY > height -175|| centerY < 175) {
+//           speedY *= -1;
+//           }
+//         if (centerX > width - 25 || centerX < 25) {
+//             speedX *= -1;
+//         }
+//       } 
+      
+//       if (modifier2) {
+//         if (centerX > 175 && centerX < width - 175 
+//           && centerY > 175 && centerY < height - 175) {
+//           randomSwitch();
+//         }
+//       }
+//   }
+//   `
+//       return(
+//           <SyntaxHighlighter language="javascript" style={vscDarkPlus} wrapLines={true}>
+//               {codeString2}
+//           </SyntaxHighlighter>
+//       );
+// }
 
 export default function creativeCoding() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -41,7 +286,7 @@ export default function creativeCoding() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3];
+    const dataArray = [...data, ...data2, ...data3, ...data4];
     const selectedIndex = dataArray.findIndex(
       (item) => item.image === imageSrc
     );
@@ -55,7 +300,7 @@ export default function creativeCoding() {
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
+      const dataArray = [...data, ...data2, ...data3, ...data4];
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -65,7 +310,7 @@ export default function creativeCoding() {
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
+      const dataArray = [...data, ...data2, ...data3, ...data4];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -180,13 +425,7 @@ export default function creativeCoding() {
       <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerCC} >
 
-      <h1 className={styles.titleWithoutPadding}>Creative Coding</h1>
-
-      {/* <h1 className={styles.title}>Creative Coding</h1> */}
-
-      {/* <div className={styles.subtitle}>
-             <h1> Rotations </h1>
-            </div> */}
+      <h1 className={styles.titleWithoutPadding}> Creative Coding  </h1>
 
       <div className={styles.subtitledescription}>
         <p>
@@ -199,22 +438,14 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
 
       <div style={{ padding: "1rem" }}></div>
 
-      {/* <div className={styles.linkContainer}  */}
       <div className={styles.linkContainerCCSandbox}
         style={{
-          // paddingLeft:"2rem", paddingRight:"2rem"  
           width:"90vw",
           zIndex:1
           }}
           >
 
       <div style={{ padding: "0.25rem" }}></div>
-
-      {/* <div className={styles.subtitledescription}>
-        <p>
-          Try it out:
-        </p>
-      </div> */}
       <TipsButton />
 
       <div 
@@ -223,7 +454,6 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         <div>
           <iframe
             src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
-            // width="100vw"
             allowFullScreen
             style={{
               border: "2px solid white",
@@ -234,16 +464,14 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           />
         </div>
       </div>
-
-      {/* <TipsButton /> */}
-
-       {/* <div style={{ padding: "0.5rem" }}> </div> */}
               <div style={{ padding: "1rem" }}> </div>
 </div>
 <div style={{ padding: "1rem" }}> </div>
 
-      <div className={styles.subtitledescription}>
-        <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer">
+      {/* <div className={styles.subtitledescription}> */}
+      <div className={styles.buttonLinksPage}>
+        {/* <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer "> */}
+        <div className={styles.subtitledescription}>
           <a
             style={{ paddingBottom: "2rem" }}
             href="https://github.com/flokleiser/Rotations-P5JS"
@@ -255,9 +483,95 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         </div>
       </div>
 
-            <div style={{ padding: "0.5rem" }} />
+            <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
+
+      <div className={styles.subtitle}>
+        <p2>Examples</p2>
+      </div>
+
+{/* <div className={styles.code}>
+        {codeBlock1()}
+     </div> */}
+
+{/* <div className={styles.code}>
+<pre> {codeString1} </pre>
+ </div> */}
+
+
+     <div className="">
+        <div className="p-3 container mx-auto">
+          <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+            {data2.map((x) => (
+              <article key="cc2" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+                <div className="relative rounded-2xl">
+                  <Image
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+    
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      {/* <div className={styles.code}>
+        {codeBlock2()}
+     </div> */}
+     
+     {/* <div className={styles.code}>
+      <pre> {codeString2} </pre>
+     </div> */}
+
+     <div className="">
+        <div className="p-3 container mx-auto">
+          <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+            {data.map((x) => (
+              <article key="cc" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+                <div className="relative rounded-2xl">
+                  <Image
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+     <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      {/* <div className={styles.code}>
+        {codeBlock3()}
+     </div> */}
+
+    {/* <div className={styles.code}>
+      <pre> {codeString3} </pre>
+    </div> */}
 
       <AnimatePresence>
         {selectedImage && (
@@ -314,59 +628,50 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="">
-        <div className="p-3 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data.map((x) => (
-              <article key="cc" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="">
-        <div className="p-3 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data2.map((x) => (
-              <article key="cc2" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
 
       <motion.div className="" >
         <div className="p-3 container mx-auto">
           <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
             {data3.map((x) => (
+              <article key="cc3" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
+                <div className="relative  rounded-2xl">
+                  <Image 
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      {/* <div className={styles.code}>
+        {codeBlock4()}
+     </div> */}
+
+     {/* <div className={styles.code}>
+<pre> {codeString4} </pre>
+ </div> */}
+
+     
+
+     <motion.div className="" >
+        <div className="p-3 container mx-auto">
+          <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+            {data4.map((x) => (
               <article key="cc3" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
                 <div className="relative  rounded-2xl">
                   <Image 
@@ -389,9 +694,6 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
       </div>
 
       <div style={{ padding: "2rem" }}> </div>
-      {/* <code>
-              test.js
-            </code> */}
     </main>
   );
 }
