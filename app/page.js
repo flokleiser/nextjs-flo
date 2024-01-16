@@ -132,7 +132,7 @@ export default function Home() {
       >
         <h1>
           {" "}
-          <Link href="/projects/tests/portfolioTest">test</Link>{" "}
+          <Link href="/projects/tests/ccTest">TEST</Link>{" "}
         </h1>
       </div>
 

@@ -203,13 +203,12 @@ useEffect(() => {
             </div>
       
             <h1 className={styles.title}>
-             Sketches
+             Testing
             </h1>
 
             <div className={styles.subtitledescription}>
             <p>
-            A collection of sketches, designs and artworks ranging from 2018 
-            to 2023.   
+              Testing some picture gallery things and video things
              </p>
             </div>
 

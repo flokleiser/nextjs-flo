@@ -6,9 +6,6 @@
 - [ ] Add "title" when big
 - [ ] Add Tooltip or image description
 
-### SKYLANDS
-- [ ] Maybe split page into "videos/gameplay" and "screenshots
-
 ### CREATIVE-CODING:
 - [ ] Fix code snippets looking really bad
 - [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
@@ -35,6 +32,9 @@
 - [ ] Figure out why suspense doesnt work in projects
 - [ ] Look into preloading gifs/images maybe
 - [ ] Keep page from displaying until fully loaded (?)
+
+### SKYLANDS
+- [ ] Maybe split page into "videos/gameplay" and "screenshots
 
 ## Checklist before final publish:
 - [x] Fix texts
