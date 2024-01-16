@@ -59,8 +59,9 @@ const codeString3=
 }`
 
 const codeString4=
-`if (newCenterPoint7) {
-    selectedCenterPoint = 7;
+`
+if (newCenterPoint7) {
+selectedCenterPoint = 7;
     isRotating = !isRotating;
 
     if (speedX > 0 && speedY > 0) {
@@ -211,67 +212,79 @@ const data4 = [
 
 
 
-// function codeBlock4() {
-//   const codeString3=
-// `if (newCenterPoint7) {
-//     selectedCenterPoint = 7;
-//     isRotating = !isRotating;
+function codeBlock4() {
+  const codeString4=
+`
+if (newCenterPoint7) {
+  selectedCenterPoint = 7;
+  isRotating = !isRotating;
 
-//     if (speedX > 0 && speedY > 0) {
-//       direction = downright;
-//     } else if (speedX > 0 && speedY < 0) {
-//       direction = upright;
-//     } else if (speedX < 0 && speedY > 0) {
-//       direction = downleft;
-//     } else if (speedX < 0 && speedY < 0) {
-//       direction = upleft;
-//     }
-//     if (!modifier1 && !modifier3) {
-//       centerX += speedX;
-//       centerY += speedY;
+  if (speedX > 0 && speedY > 0) {
+    direction = downright;
+  } else if (speedX > 0 && speedY < 0) {
+    direction = upright;
+  } else if (speedX < 0 && speedY > 0) {
+    direction = downleft;
+  } else if (speedX < 0 && speedY < 0) {
+    direction = upleft;
+  }
+  if (!modifier1 && !modifier3) {
+    centerX += speedX;
+    centerY += speedY;
 
-//       if (!verticalLine) {
-//         if (!newLine5) {
-//           if (centerY > height -25|| centerY < 25) {
-//           speedY *= -1;
-//           }
-//           if (centerX > width - 175 || centerX < 175) {
-//             speedX *= -1;
-//           }
-//         }  
-//         else if (newLine5) {
-//           if (centerY > height -105|| centerY < 105) {
-//             speedY *= -1;
-//             }
-//             if (centerX > width - 175 || centerX < 175) {
-//               speedX *= -1;
-//             }
-//           }
-//         }
+    if (!verticalLine) {
+      if (!newLine5) {
+        if (centerY > height -25|| centerY < 25) {
+          speedY *= -1;
+        }
+        if (centerX > width - 175 || centerX < 175) {
+          speedX *= -1;
+        }
+      }  
+      else if (newLine5) {
+        if (centerY > height -105|| centerY < 105) {
+          speedY *= -1;
+        }
+        if (centerX > width - 175 || centerX < 175) {
+          speedX *= -1;
+        }
+      }
+  }
     
-//         else if (verticalLine) {
-//         if (centerY > height -175|| centerY < 175) {
-//           speedY *= -1;
-//           }
-//         if (centerX > width - 25 || centerX < 25) {
-//             speedX *= -1;
-//         }
-//       } 
+    else if (verticalLine) {
+      if (centerY > height -175|| centerY < 175) {
+        speedY *= -1;
+      }
+      if (centerX > width - 25 || centerX < 25) {
+        speedX *= -1;
+      }
+    } 
       
-//       if (modifier2) {
-//         if (centerX > 175 && centerX < width - 175 
-//           && centerY > 175 && centerY < height - 175) {
-//           randomSwitch();
-//         }
-//       }
-//   }
-//   `
-//       return(
-//           <SyntaxHighlighter language="javascript" style={vscDarkPlus} wrapLines={true}>
-//               {codeString2}
-//           </SyntaxHighlighter>
-//       );
-// }
+    if (modifier2) {
+      if (centerX > 175 && centerX < width - 175 
+        && centerY > 175 && centerY < height - 175) {
+          randomSwitch();
+      }
+    }
+}
+  `
+      return(
+          <SyntaxHighlighter language="javascript" style={vscDarkPlus}  wrapLines={true}
+          customStyle={{
+            backgroundColor: 'rgb(49,49,49)',
+            // fontSize: '2rem',
+          }}
+          codeTagProps={{
+            style: {
+              fontSize: '1.1rem',
+              color: 'rgb(170,218,250)'
+            }
+          }}
+          >
+              {codeString4}
+          </SyntaxHighlighter>
+      );
+}
 
 export default function creativeCoding() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -491,13 +504,15 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         <p2>Examples</p2>
       </div>
 
+      <div style={{ padding: "1.5rem" }} />
+
 {/* <div className={styles.code}>
         {codeBlock1()}
      </div> */}
 
-{/* <div className={styles.code}>
+<div className={styles.code}>
 <pre> {codeString1} </pre>
- </div> */}
+ </div>
 
 
      <div className="">
@@ -657,20 +672,20 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-      {/* <div className={styles.code}>
+      <div className="flex flex-row">
+
+      <div className={styles.code}>
         {codeBlock4()}
-     </div> */}
+     </div>
 
      {/* <div className={styles.code}>
 <pre> {codeString4} </pre>
  </div> */}
 
-     
-
      <motion.div className="" >
         <div className="p-3 container mx-auto">
           <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+          <div className="md:flex-col md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
             {data4.map((x) => (
               <article key="cc3" className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer">
                 <div className="relative  rounded-2xl">
@@ -690,6 +705,8 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
           </div>
         </div>
       </motion.div>
+      
+      </div>
 
       </div>
 
