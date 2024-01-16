@@ -15,40 +15,22 @@ import CenterTooltip from "@/app/components/CenterTooltip";
 import DimTooltip from "@/app/components/DimTooltip";
 
 const data = [
-  { image: "/images/skylands/skylandsfull.png", id: 0 ,
-    text: "hello test"
-  },
-  { image: "/images/skylands/skylandsnew8.png", id: 0 }, 
+  { image: "/images/skylands/skylands3.png", id: 0 },
+  { image: "/images/skylands/skylands4.png", id: 1 },
+  { image: "/images/skylands/skylands_whiteboard.png", id: 2 },
 ];
-// interactables
+
 const data2 = [
-  { image: "/images/skylands/skylands3.png", id: 1 },
-  { image: "/images/skylands/skylands4.png", id: 2 },
-  { image: "/images/skylands/skylandsnew1.png", id: 3},
+  { image: "/images/skylands/skylandsfull.png", id: 3 },
+  { image: "/images/skylands/skylands_waterfall.png", id: 4 },
+  { image: "/images/skylands/skylands5.png", id: 5 },
+  { image: "/images/skylands/skylands_ferriswheel.png", id: 6 },
 ];
+
 const data3 = [
-  { image: "/images/skylands/skylands_whiteboard.png", id: 4 },
-  { image: "/images/skylands/skylandsnew2.png", id: 5},
-  { image: "/images/skylands/skylandsnew3.png", id: 6}
-]
-
-// environment
-const data4 = [
-  { image: "/images/skylands/skylands_ferriswheel.png", id: 7 },
-  { image: "/images/skylands/skylands_waterfall.png", id: 8 },
-  { image: "/images/skylands/skylandsnew4.png", id: 9},
-];
-const data5 = [
-  { image: "/images/skylands/skylandsnew7.png", id: 10},
-  { image: "/images/skylands/skylands5.png", id: 11 },
-  { image: "/images/skylands/skylandsnew6.png", id: 12},
-];
-
-// boat?
-const data6 = [
-  { image: "/images/skylands/skylands1.png", id: 13 },
-  { image: "/images/skylands/skylands2.png", id: 14 },
-  { image: "/images/skylands/skylands_steering.png", id: 15 },
+  { image: "/images/skylands/skylands1.png", id: 7 },
+  { image: "/images/skylands/skylands2.png", id: 8 },
+  { image: "/images/skylands/skylands_steering.png", id: 9 },
 ];
 
 export default function skylands() {
@@ -78,7 +60,7 @@ export default function skylands() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+    const dataArray = [...data, ...data2, ...data3];
     const selectedIndex = dataArray.findIndex(
       (item) => item.image === imageSrc
     );
@@ -92,7 +74,7 @@ export default function skylands() {
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+      const dataArray = [...data, ...data2, ...data3];
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -102,7 +84,7 @@ export default function skylands() {
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+      const dataArray = [...data, ...data2, ...data3];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -241,7 +223,6 @@ with a variety of interactive objects to explore.
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-
       <AnimatePresence>
       {isDim && (
         <motion.div
@@ -276,9 +257,6 @@ with a variety of interactive objects to explore.
                 zIndex:54
               }}
             >
-
-              {/* Insert text/title for big images here somewhere probably? */}
-
               <motion.img
                 src={selectedImage}
                 initial={{ scale: 0.5 }}
@@ -322,42 +300,6 @@ with a variety of interactive objects to explore.
           )}
         </AnimatePresence>
       </div>
-
-
-
-      <div className="" 
-      // style={{width:'80vw'}}
-      >
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data.map((x) => (
-              <article
-                key="s2"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative  rounded-2xl">
-                  <Image
-                      width={1330}
-                      height={800}
-                    className={` rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      {/* </div> */}
-      </div>
-
-      <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} />
 
       <div className={styles.subtitle}>
         <p2>Interactables</p2>
@@ -417,34 +359,8 @@ with a variety of interactive objects to explore.
     <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
       <div className="p-1 container mx-auto">
         <div className="py-2"></div>
-        <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
-          {data2.map((x) => (
-              <article
-                key="s1"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
-      <div className="p-1 container mx-auto">
-        <div className="py-2"></div>
         <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-          {data3.map((x) => (
+          {data.map((x) => (
               <article
                 key="s1"
                 className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -528,35 +444,8 @@ with a variety of interactive objects to explore.
       <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
-          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
-            {data4.map((x) => (
-              <article
-                key="s2"
-                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-              >
-                <div className="relative  rounded-2xl">
-                  <Image
-                    width={400}
-                    height={400}
-                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                      selectedImage ? "z-0" : ""
-                    }`}
-                    src={x.image}
-                    alt=""
-                    onClick={() => handleImageClick(x.image)}
-                  />
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      {/* </div> */}
-      </motion.div>
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
-        <div className="p-1 container mx-auto">
-          <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data5.map((x) => (
+            {data2.map((x) => (
               <article
                 key="s2"
                 className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -643,7 +532,7 @@ with a variety of interactive objects to explore.
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data6.map((x) => (
+            {data3.map((x) => (
               <article
                 key="s2"
                 className="pt-3 pl-3 pr-3 pb-0  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"

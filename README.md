@@ -2,20 +2,17 @@
 
 ## NEW TO-DO PAGES:
 
+### Pictures everywhere:
+- [ ] Add "title" when big
+- [ ] Add Tooltip or image description
+
 ### SKYLANDS
-- [ ] Structure & add screenshots --> like portfolio
-- [x] Figure out background colors (different ones)
 - [ ] Maybe split page into "videos/gameplay" and "screenshots
 
 ### CREATIVE-CODING:
-- [ ] Decide on background --> colorful or not
-- [x] Move "tips" button to top
+- [ ] Fix code snippets looking really bad
 - [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
-- [ ] Add all screenshots --> like portfolio
-
-### VOXEL/Illustrator/Crafts
-- [x] Change voxel backgrounds slightly
-- [x] Change crafts backgrounds slightly
+- [ ] Decide on background --> colorful or not
 
 ### CAD
 - [ ] Decide on background --> empty spaces
@@ -69,12 +66,16 @@
 - [x] Decide on Layout when multiple videos per page
 
 #### Skylands
+- [x] Structure & add screenshots --> like portfolio
+- [x] Figure out background colors (different ones)
 - [x] Upload Screenshots
 - [x] Upload Video
 - [x] Upload apk
 - [x] Figure out why video wont work
 
 #### Creative-Coding
+- [x] Move "tips" button to top
+- [x] Add all screenshots --> like portfolio
 - [x] p5js editor
 - [x] Add examples with code view + screenshots
 - [x] Github Link
@@ -95,10 +96,12 @@
 - [x] Upload screenshots
 
 #### Voxel Art
+- [x] Change voxel backgrounds slightly
 - [x] Upload screenshots
 - [x] Add description
 
 #### Arts & Crafts
+- [x] Change crafts backgrounds slightly
 - [x] Upload screenshots
 - [x] Add description
 
