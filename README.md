@@ -11,6 +11,9 @@
 - [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
 - [ ] Decide on background --> colorful or not
 
+### Skylands:
+- [ ] Svg background
+
 ### CAD
 - [ ] Decide on background --> empty spaces
 - [ ] Maybe add tooltips (descriptions)?

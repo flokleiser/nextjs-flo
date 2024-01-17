@@ -13,7 +13,7 @@ import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 
 
 const data = [
-  {image: '/images/sketches/sketch test scan website2.png', id: 0, description:'test'},
+  {image: '/images/sketches/sketch test scan website2.png', id: 0, description:'test 1'},
   {image: '/images/sketches/sketch test website.png', id: 1, description:'test 2'},
   {image: '/images/sketches/sketch test scan website3.png', id: 2, description:'test 3'},
   {image: '/images/sketches/sketch test scan website4.png', id: 3, description:'test 4'},
@@ -244,6 +244,12 @@ useEffect(() => {
           backgroundColor: 'rgba(0, 0, 0, 0.75)',
         }}
           >
+
+          {/* <p className="absolute top-12 text-white text-[1.75rem] text-center mt-4">  */}
+          <p className="absolute bottom-12 text-white text-[1.75rem] text-center " >
+          {selectedDescription}
+          </p>
+
           <motion.img
             src={selectedImage}
             initial={{scale:0.5}}
@@ -255,10 +261,6 @@ useEffect(() => {
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990 }}
           />
-
-          <p className="text-white text-center mt-4"> 
-          {selectedDescription}
-          </p>
 
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
@@ -288,6 +290,7 @@ useEffect(() => {
               <IoIosArrowForward style={{ fontSize: '2rem' }}/>
             </button>
           </div>
+          
         </motion.div>
       )}
       </AnimatePresence>

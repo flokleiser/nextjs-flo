@@ -18,7 +18,7 @@ const data = [
   // { image: "/images/skylands/skylandsfull.png", id: 0 ,
   //   text: "hello test"
   // },
-  { image: "/images/skylands/skylandsnew8.png", id: 0 }, 
+  { image: "/images/skylands/skylandsnew8.png", id: 0, description:'Overview of the islands' }, 
 ];
 // interactables
 const data2 = [
@@ -67,6 +67,7 @@ export default function skylands() {
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedDescription, setSelectedDescription] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleResetClick = () => {
@@ -79,14 +80,14 @@ export default function skylands() {
   /* make image big */
   const handleImageClick = (imageSrc) => {
     const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
-    const selectedIndex = dataArray.findIndex(
-      (item) => item.image === imageSrc
-    );
+    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
     if (selectedIndex !== -1) {
       setSelectedImage(imageSrc);
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
+
+      setCurrentIndex(dataArray[selectedIndex].id);
     }
   };
 
@@ -97,6 +98,8 @@ export default function skylands() {
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
     }
   };
 
@@ -107,6 +110,8 @@ export default function skylands() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
     }
   };
 
@@ -277,6 +282,10 @@ with a variety of interactive objects to explore.
               }}
             >
 
+          <p className="absolute bottom-12 text-white text-[1.75rem] text-center " >
+          {selectedDescription}
+          </p>
+
               {/* Insert text/title for big images here somewhere probably? */}
 
               <motion.img
@@ -285,7 +294,7 @@ with a variety of interactive objects to explore.
                 animate={{ scale: 1 }}
                 exit={{ scale: 0.45 }}
                 transition={{ duration: 0.3 }}
-                alt=""
+                alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
                 style={{ maxHeight: "80vh", zIndex: 9999 }}
               />
