@@ -13,11 +13,11 @@ import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
 
 
 const data = [
-  {image: '/images/sketches/sketch test scan website2.png', id: 0},
-  {image: '/images/sketches/sketch test website.png', id: 1},
-  {image: '/images/sketches/sketch test scan website3.png', id: 2},
-  {image: '/images/sketches/sketch test scan website4.png', id: 3},
-  {image: '/images/sketches/sketch test scan website6.png', id: 4},
+  {image: '/images/sketches/sketch test scan website2.png', id: 0, description:'test'},
+  {image: '/images/sketches/sketch test website.png', id: 1, description:'test 2'},
+  {image: '/images/sketches/sketch test scan website3.png', id: 2, description:'test 3'},
+  {image: '/images/sketches/sketch test scan website4.png', id: 3, description:'test 4'},
+  {image: '/images/sketches/sketch test scan website6.png', id: 4, description:'test 5'},
 ];
 
 
@@ -37,6 +37,7 @@ export default function imageTest() {
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedDescription, setSelectedDescription] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleResetClick = () => {
@@ -55,16 +56,24 @@ export default function imageTest() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
+      
+      setSelectedDescription(dataArray[selectedIndex].description);
+
+      console.log(dataArray[selectedIndex].description)
     }
   };
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data,]
+      const dataArray = [...data]
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
+
+      console.log(dataArray[newIndex].description)
     }
   };
 
@@ -76,6 +85,10 @@ export default function imageTest() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
+
+      console.log(dataArray[newIndex].description)
     }
   };
 
@@ -237,10 +250,16 @@ useEffect(() => {
             animate={{scale:1}}
             exit={{scale:0.45}}
             transition={{duration:0.3}}
-            alt=""
+
+            alt={selectedImage.description}
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990 }}
           />
+
+          <p className="text-white text-center mt-4"> 
+          {selectedDescription}
+          </p>
+
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
             onClick={handleResetClick}
@@ -301,7 +320,7 @@ useEffect(() => {
 
               <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='interactables' />
 
-<div className={styles.linkContainer}>
+{/* <div className={styles.linkContainer}>
 <div style={{ padding: "0.125rem" }}> </div>
   <div className="flex">
 
@@ -326,24 +345,11 @@ useEffect(() => {
     onClick={handleToggleClick}
   >
     <motion.svg  stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 24 24" height={24} >
-      {/* <motion.path d="" */}
     </motion.svg>
    
   </button>
 </DimTooltip>
 
-{/* <CenterTooltip>
-  <Link
-    className=" m-1 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
-    style={{ zIndex: 53 }}
-    href="#interactables"
-    rel="noopener noreferrer"
-    onClick={handleScroll}
-  >
-    {" "}
-    <MdFilterCenterFocus style={{ fontSize: "1.5rem" }} />
-  </Link>
-</CenterTooltip> */}
 
 <CenterTooltip>
   <Link
@@ -368,13 +374,12 @@ useEffect(() => {
   <iframe
     className={styles.iframevideo}
     style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-    // src="https://www.youtube.com/embed/sz8cQtsfpzc?si=UkqxEbkulWEECgbM&rel=0"
     allowFullScreen
   ></iframe>
 
 </div>
 <div style={{ padding: "1.25rem" }}> </div>
-</div>
+</div> */}
 
 <div style={{padding:'2rem'}} />
 

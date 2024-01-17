@@ -3,7 +3,7 @@
 ## NEW TO-DO PAGES:
 
 ### Pictures everywhere:
-- [ ] Add "title" when big
+- [x] Add "title" when big --> implement into skylands
 - [ ] Add Tooltip or image description
 
 ### CREATIVE-CODING:
