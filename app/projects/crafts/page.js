@@ -211,7 +211,7 @@ return () => {
             transition={{duration:0.3}}
             alt=""
             className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
+            style={{ maxHeight: '80vh', zIndex: 9990, borderRadius:'24px' }}
           />
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"

@@ -179,13 +179,16 @@ return () => {
 <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerIllustrator} >
 
+      {/* <h1 className={styles.titleWithoutPadding}> */}
       <h1 className={styles.titleWithoutPaddingDark} >
 
             {/* <h1 className={styles.title}> */}
              Illustrator Artworks
             </h1>
 
-            <div className={styles.subtitledescription} style={{color:'rgb(55,55,55)'}}>
+            <div className={styles.subtitledescription} 
+            style={{color:'rgb(55,55,55)'}}
+            >
               
         <p>
           Artworks created with Adobe Illustrator
@@ -200,13 +203,17 @@ return () => {
             {/* <div className={styles.linkContainer}>
         <div style={{ padding: "1rem" }}> </div> */}
 
-            <div className={styles.subtitle} style={{color:'rgb(55,55,55)'}}>
+            <div className={styles.subtitle} 
+            style={{color:'rgb(55,55,55)'}}
+            >
             <p>
             How To'nt    
             </p>
             </div>
 
-            <div className={styles.subtitledescription} style={{color:'rgb(55,55,55)'}}>
+            <div className={styles.subtitledescription} 
+            style={{color:'rgb(55,55,55)'}}
+            >
             <p>
             A project inspired by Ikea instructions, with a twist.           
             </p>
@@ -236,7 +243,7 @@ return () => {
             transition={{duration:0.3}}
             alt=""
             className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
+            style={{ maxHeight: '80vh', zIndex: 9990, borderRadius:'24px'}}
           />
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
@@ -306,13 +313,17 @@ return () => {
             {/* <div className={styles.linkContainer}>
             <div style={{ padding: "1rem" }}> </div> */}
 
-            <div className={styles.subtitle} style={{color:'rgb(55,55,55)'}}>
+            <div className={styles.subtitle} 
+            style={{color:'rgb(55,55,55)'}}
+            >
             <p>
             Reduce To The Max 
             </p>
             </div>
 
-            <div className={styles.subtitledescription} style={{color:'rgb(55,55,55)'}}>
+            <div className={styles.subtitledescription} 
+            style={{color:'rgb(55,55,55)'}}
+            >
             <p>
              Depictions of 5 sports, reduced to their most basic shapes.
             </p>

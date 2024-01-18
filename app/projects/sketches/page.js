@@ -186,8 +186,8 @@ useEffect(() => {
             <div className={styles.linkContainerSketches} >
             {/* <div className={styles.linkContainerIllustrator} > */}
       
-              {/* <h1 className={styles.titleWithoutPadding}> */}
-              <h1 className={styles.titleWithoutPaddingDark}>
+              <h1 className={styles.titleWithoutPadding}>
+              {/* <h1 className={styles.titleWithoutPaddingDark}> */}
              Sketches
             </h1>
 
@@ -196,7 +196,7 @@ useEffect(() => {
             </h1> */}
 
             <div className={styles.subtitledescription}
-            style={{color:'rgb(55,55,55)'}}
+            // style={{color:'rgb(55,55,55)'}}
             >
               
             <p>
@@ -207,7 +207,8 @@ useEffect(() => {
 
             <div style={{padding:'1rem'}} />
             <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDividerDark} />
+      {/* <hr className={styles.pageDividerDark} /> */}
+      <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
          
             <AnimatePresence>
@@ -232,7 +233,7 @@ useEffect(() => {
             transition={{duration:0.3}}
             alt=""
             className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990 }}
+            style={{ maxHeight: '80vh', zIndex: 9990, borderRadius:'24px' }}
           />
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
@@ -357,5 +358,3 @@ useEffect(() => {
 
     )
 }
-
-
