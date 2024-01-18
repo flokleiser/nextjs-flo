@@ -178,12 +178,10 @@ export default function Home() {
             style={{ animationDelay: "0s" }}
           >
             <Image 
-              style={{width:'75vw'}}
+              style={{width:'100%'}}
               src="/images/homepage/new2/1.png"
               width={1100}
               height={1000}
-              // width={'80vw'}
-              // height={1000}
               
             />
           </div>
@@ -192,7 +190,7 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             <Image
-              style={{width:'75vw'}}
+              style={{width:'100%'}}
               src="/images/homepage/new2/2.png"
               width={1100}
               height={1000}
@@ -203,7 +201,7 @@ export default function Home() {
             style={{ animationDelay: "0.2s" }}
           >
             <Image
-              style={{width:'75vw'}}
+              style={{width:'100%'}}
               src="/images/homepage/new2/3.png"
               width={1100}
               height={1000}
@@ -214,7 +212,7 @@ export default function Home() {
             style={{ animationDelay: "0.3s" }}
           >
             <Image
-              style={{width:'75vw'}}
+              style={{width:'100%'}}
               src="/images/homepage/new2/4.png"
               width={1100}
               height={1000}
@@ -225,7 +223,7 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <Image
-              style={{width:'75vw'}}
+              style={{width:'100%'}}
               src="/images/homepage/new2/5.png"
               width={1100}
               height={1000}
@@ -236,7 +234,7 @@ export default function Home() {
             style={{ animationDelay: "0.5s" }}
           >
             <Image
-              style={{width:'75vw'}}
+              style={{width:'100%'}}
               src="/images/homepage/new2/6.png"
               width={1100}
               height={1000}

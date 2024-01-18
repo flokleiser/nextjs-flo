@@ -19,13 +19,10 @@
 
 ### Pictures everywhere:
 
-- [ ] Maybe add borderRadius:'24px' to motion images
+- [x] Maybe add borderRadius:'24px' to motion images
 
 - [x] Add "title" when big --> implement into skylands
-    - [ ] Add all descriptions on skylands page
-
-- [ ] Description animation:
-    - [ ] Animate the text to appear or fade in or something
+    - [x] Add all descriptions on skylands page
 
 - [ ] Skylands --> make tooltip background different color
 - [ ] Add Tooltip or image description
