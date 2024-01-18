@@ -492,8 +492,8 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
 
       <div style={{ padding: "1.5rem" }} />
 
-<ExpandableButton>
-  {codeBlock4()}
+<ExpandableButton style={{display:'flex', justifyItems:'center'}}>
+  {codeBlock1()}
 </ExpandableButton>
 
      <div className="">

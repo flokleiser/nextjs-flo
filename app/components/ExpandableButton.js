@@ -11,9 +11,15 @@ export default function ExpandableButton({ children }) {
   const childrenVariants = {
     open: {opacity: 1, 
       // width:"100%"
-      width:"auto"
+      // width:"auto"
+      // height:"100%"
+      scale:1
     },
-    closed: { opacity:0, width:"0%"}
+    closed: { opacity:0, 
+      // width:"0%"
+      // height:"0%"
+      scale:0
+    }
   };
 
   return (
@@ -31,7 +37,7 @@ export default function ExpandableButton({ children }) {
 
       <AnimatePresence>
         {isExpanded && (
-      <motion.div 
+      <motion.div className="flex flex-col justify-center"
       // className={styles.linkContainer}
       initial="closed"
       animate="open"
@@ -40,7 +46,7 @@ export default function ExpandableButton({ children }) {
       >
         <motion.div 
         animate={{}}>
-          {children}
+          {children} 
         </motion.div>
       </motion.div>
         )}
