@@ -1,10 +1,40 @@
 # To-Do/Ideas List:
 
+#### Checklist before final publish:
+
+- [ ] Fix texts
+    - [ ] Doublecheck Skylands
+    - [ ] Doublecheck Creative-COding
+    - [ ] Doublecheck Sketches
+    - [ ] Doublecheck CAD
+    - [ ] Doublecheck Animations
+    - [ ] Doubtlecheck Voxel/Illustrator/Crafts
+
+- [ ] Updated links (Portfolio)
+
 ## NEW TO-DO PAGES:
 
+### Homepage
+- [ ] Make projects/portfolio cards scale up like the title etc
+
 ### Pictures everywhere:
+
+- [ ] Maybe add borderRadius:'24px' to motion images
+
 - [x] Add "title" when big --> implement into skylands
+    - [ ] Add all descriptions on skylands page
+
+- [ ] Description animation:
+    - [ ] Animate the text to appear or fade in or something
+
+- [ ] Skylands --> make tooltip background different color
 - [ ] Add Tooltip or image description
+- [ ] Figure out if tooltip different colors are possible
+
+- [ ] Figure out how to set image.description as alt property on both GALLERY and EXPANDED
+
+### Animations:
+- [ ] Make cards bigger
 
 ### CREATIVE-CODING:
 - [ ] Fix code snippets looking really bad
@@ -36,13 +66,6 @@
 - [ ] Look into preloading gifs/images maybe
 - [ ] Keep page from displaying until fully loaded (?)
 
-### SKYLANDS
-- [ ] Maybe split page into "videos/gameplay" and "screenshots
-
-## Checklist before final publish:
-- [x] Fix texts
-- [x] Updated links (CV, Portfolio)
-
 ### Videos/Gifs/Images:
 
 #### General:
@@ -69,6 +92,7 @@
 - [x] Decide on Layout when multiple videos per page
 
 #### Skylands
+- [x] Add background to description of images
 - [x] Structure & add screenshots --> like portfolio
 - [x] Figure out background colors (different ones)
 - [x] Upload Screenshots
