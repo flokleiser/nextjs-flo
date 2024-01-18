@@ -87,6 +87,8 @@ export default function skylands() {
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
 
+      setSelectedDescription(dataArray[selectedIndex].description);
+
       setCurrentIndex(dataArray[selectedIndex].id);
     }
   };
@@ -282,12 +284,7 @@ with a variety of interactive objects to explore.
               }}
             >
 
-          <p className="absolute bottom-12 text-white text-[1.75rem] text-center " >
-          {selectedDescription}
-          </p>
-
-              {/* Insert text/title for big images here somewhere probably? */}
-
+<div className="flex flex-col items-center">
               <motion.img
                 src={selectedImage}
                 initial={{ scale: 0.5 }}
@@ -296,8 +293,17 @@ with a variety of interactive objects to explore.
                 transition={{ duration: 0.3 }}
                 alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
-                style={{ maxHeight: "80vh", zIndex: 9999 }}
+                style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
+
               />
+
+          <div className={styles.imageDescription}>
+          <p>
+          {selectedDescription}
+          </p>
+          </div>
+</div>
+
               <button
                 className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
                 onClick={handleResetClick}
