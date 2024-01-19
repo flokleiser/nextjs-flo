@@ -116,25 +116,9 @@ export default function Home() {
       >
         <h1>
           {" "}
-          <Link href="/projects/tests/svgTest">SVG</Link>{" "}
+          <Link href="/projects/tests/">TESTS</Link>{" "}
         </h1>
         </div>
-          <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999, right:'7rem', position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/imageTest">IMG</Link>{" "}
-        </h1>
-      </div>
-      <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999, right:'10rem', position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/ccTest">TEST</Link>{" "}
-        </h1>
-      </div>
 
 
 

@@ -4,6 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useState } from "react";
 import styles from 'app/page.module.css'
 import {AnimatePresence, motion} from "framer-motion";
+import {Tooltip} from "@nextui-org/tooltip";
 
 export default function TipsButton() {
 
@@ -29,9 +30,22 @@ export default function TipsButton() {
 
   return (
     <div>
+      <Tooltip
+       showArrow
+       content="Press this for a random tip on how to create your own art"
+       delay={0}
+       placement="top"
+       closeDelay={0}
+       classNames={{
+        base: ["bg-[#78716c]/50 rounded-md"],
+        content: ["py-0.5 px-1 shadow-xl text-white",
+        "rounded-md" ]
+       }}
+       >
       <button className={styles.buttonNew} onClick={handleToggleClick}>
        {randomTip ? randomTip : "Tips:"}
       </button>
+      </Tooltip>
       </div>
   );
 };

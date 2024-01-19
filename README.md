@@ -1,7 +1,6 @@
 # To-Do/Ideas List:
 
 #### Checklist before final publish:
-
 - [ ] Fix texts
     - [ ] Doublecheck Skylands
     - [ ] Doublecheck Creative-COding
@@ -9,10 +8,22 @@
     - [ ] Doublecheck CAD
     - [ ] Doublecheck Animations
     - [ ] Doubtlecheck Voxel/Illustrator/Crafts
-
 - [ ] Updated links (Portfolio)
 
 ## NEW TO-DO PAGES:
+
+### Creative Coding:
+- [ ] Video to showcase tool (screen recording)
+- [ ] Move tool at the end of page
+- [ ] Scrollable window/codesandbox under gallery or video
+
+- [ ] Fix code snippets looking really bad
+- [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
+- [ ] Decide on background --> colorful or not
+
+### Expandable button:
+- [ ] Figure out how to make size the same
+- [ ] Better animation
 
 ### Homepage
 - [ ] Make projects/portfolio cards scale up like the title etc
@@ -32,11 +43,6 @@
 
 ### Animations:
 - [ ] Make cards bigger
-
-### CREATIVE-CODING:
-- [ ] Fix code snippets looking really bad
-- [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
-- [ ] Decide on background --> colorful or not
 
 ### Skylands:
 - [ ] Svg background

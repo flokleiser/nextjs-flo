@@ -13,6 +13,7 @@ import TipsButton from "@/app/components/TipsButton";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {vscDarkPlus} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
+import {Tooltip} from "@nextui-org/tooltip";
 import ExpandableButton from "@/app/components/ExpandableButton";
 
 
@@ -435,6 +436,10 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         <p2>Examples</p2>
       </div>
 
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -490,11 +495,18 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         )}
       </AnimatePresence>
 
-      <div style={{ padding: "1.5rem" }} />
+      {/* <div style={{ padding: "1.5rem" }} /> */}
 
-<ExpandableButton style={{display:'flex', justifyItems:'center'}}>
+{/* <codeTooltip> */}
+
+<ExpandableButton 
+style={{display:'flex', justifyItems:'center'}}
+>
   {codeBlock1()}
 </ExpandableButton>
+
+{/* </codeTooltip> */}
+
 
      <div className="">
         <div className="p-3 container mx-auto">
@@ -525,6 +537,12 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
+      <ExpandableButton 
+style={{display:'flex', justifyItems:'center'}}
+>
+  {codeBlock2()}
+</ExpandableButton>
+
 
      <div className="">
         <div className="p-3 container mx-auto">
@@ -553,6 +571,12 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
      <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
+
+      <ExpandableButton 
+style={{display:'flex', justifyItems:'center'}}
+>
+  {codeBlock3()}
+</ExpandableButton>
 
 
       <motion.div className="" >
@@ -583,7 +607,13 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-      <div className="flex flex-row space-x-4">
+      {/* <div className="flex flex-row space-x-4"> */}
+
+      <ExpandableButton 
+style={{display:'flex', justifyItems:'center'}}
+>
+  {codeBlock4()}
+</ExpandableButton>
 
      <motion.div className="" >
         <div className="p-3 container mx-auto">
@@ -609,7 +639,7 @@ functions or directly with the mouse movement. Made using p5js, the JavaScript v
         </div>
       </motion.div>
       
-      </div>
+      {/* </div> */}
 
       </div>
 
