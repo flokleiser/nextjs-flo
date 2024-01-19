@@ -387,9 +387,9 @@ export default function creativeCoding() {
 
         <div style={{ padding: "1rem" }}></div>
 
-        <div className={styles.subtitle}>
+        {/* <div className={styles.subtitle}>
           <p2>How its made:</p2>
-        </div>
+        </div> */}
 
         <div style={{ padding: "1rem" }}></div>
 
