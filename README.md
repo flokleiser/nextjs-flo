@@ -13,6 +13,9 @@
 ## NEW TO-DO PAGES:
 
 ### Creative Coding:
+
+- [ ] Scrollable container element?
+
 - [ ] Video to showcase tool (screen recording)
 - [ ] Move tool at the end of page
 - [ ] Scrollable window/codesandbox under gallery or video

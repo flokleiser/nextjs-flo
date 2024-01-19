@@ -1498,6 +1498,13 @@ transition: all 0.5s ease-in-out;
   aspect-ratio: 16/9;
 }
 
+.iframevideoSmall {
+  width: 42.5vw; 
+  max-width:620px;
+  margin: 0 auto;
+  aspect-ratio: 16/9;
+}
+
 /* @media (max-width: 1120px) {
   .subNavbar {
   position: absolute;
