@@ -422,23 +422,26 @@ export default function creativeCoding() {
 
         >
           <div style={{ padding: "0.25rem" }}></div>
-          <TipsButton />
+          {/* <TipsButton /> */}
 
-          <div style={{ padding: "0.5rem" }}>
+          <div 
+          style={{ padding: "0.5rem" }}
+          >
             <div>
               <iframe
                 src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
                 allowFullScreen
                 style={{
-                  border: "2px solid white",
-                  width: "85vw",
+                  // border: "2px solid white",
+                  width: "88vw",
                   maxWidth: "1350px",
                   aspectRatio: "16/9",
                 }}
               />
             </div>
           </div>
-          <div style={{ padding: "1rem" }}> </div>
+          {/* <div style={{ padding: "1rem" }}> </div> */}
+          <div style={{padding:'0.25rem'}}/>
         </div>
         <div style={{ padding: "1rem" }}> </div>
 

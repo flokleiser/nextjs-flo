@@ -14,6 +14,11 @@
 
 ### Creative Coding:
 
+- [ ] Interactive part --> 
+    - [ ] figure out how to set drawing to true on mouse over?
+    - [ ] figure out how to have followmouse & autocolor on, and still be able to turn it off
+    - [ ] Make things in drop down menu actually do something
+
 - [x] Scrollable container element?
 
 - [ ] Video to showcase tool (screen recording)
