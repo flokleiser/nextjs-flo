@@ -283,7 +283,7 @@ with a variety of interactive objects to explore.
               }}
             >
 
-<motion.div className="flex flex-col items-center"
+<motion.div className="flex flex-col items-center mt-8"
   initial={{ scale: 0.5 }}
   animate={{ scale: 1 }}
   exit={{ scale: 0.45 }}
@@ -298,7 +298,7 @@ with a variety of interactive objects to explore.
               />
 
 
-          <div className={styles.imageDescription}>
+          <div className={styles.imageDescription} style={{  backgroundColor: 'rgba(187, 188, 122, 0.6)'}}>
           <p>
           {currentIndex + ")    "}  {selectedDescription}
           </p>

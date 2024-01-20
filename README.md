@@ -14,19 +14,15 @@
 
 ### Creative Coding:
 
-- [ ] Scrollable container element?
+- [x] Scrollable container element?
 
 - [ ] Video to showcase tool (screen recording)
 - [ ] Move tool at the end of page
-- [ ] Scrollable window/codesandbox under gallery or video
+- [x] Scrollable window/codesandbox under gallery or video
 
-- [ ] Fix code snippets looking really bad
-- [ ] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
-- [ ] Decide on background --> colorful or not
-
-### Expandable button:
-- [ ] Figure out how to make size the same
-- [ ] Better animation
+- [x] Fix code snippets looking really bad
+- [x] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
+- [x] Decide on background --> colorful or not
 
 ### Homepage
 - [ ] Make projects/portfolio cards scale up like the title etc
@@ -34,7 +30,6 @@
 ### Pictures everywhere:
 
 - [x] Maybe add borderRadius:'24px' to motion images
-
 - [x] Add "title" when big --> implement into skylands
     - [x] Add all descriptions on skylands page
 

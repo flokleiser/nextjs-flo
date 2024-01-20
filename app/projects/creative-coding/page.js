@@ -17,36 +17,35 @@ import { Tooltip } from "@nextui-org/tooltip";
 import ExpandableButton from "@/app/components/ExpandableButton";
 
 const data = [
-  { image: "/images/creative-coding/creativecoding white.png", id: 0 },
-  { image: "/images/creative-coding/creativecoding twocolor.png", id: 1 },
-  { image: "/images/creative-coding/creativecoding green.png", id: 2 },
+  { image: "/images/creative-coding/creativecoding white.png", id: 1, description:'NewCenterPoint1, Example 1'},
+  { image: "/images/creative-coding/creativecoding twocolor.png", id: 2, description:'NewCenterPoint1, Example 2'},
+  { image: "/images/creative-coding/creativecoding green.png", id: 3, description:'NewCenterPoint1, Example 3' },
 ];
 
 const data2 = [
-  { image: "/images/creative-coding/creativecoding2.png", id: 3 },
-  { image: "/images/creative-coding/creativecoding3.png", id: 4 },
-  { image: "/images/creative-coding/creativecoding6.png", id: 5 },
+  { image: "/images/creative-coding/creativecoding2.png", id: 4, description:'NewCenterPoint2, Example 1' },
+  { image: "/images/creative-coding/creativecoding3.png", id: 5, description:'NewCenterPoint2, Example 2' },
+  { image: "/images/creative-coding/creativecoding6.png", id: 6, description:'NewCenterPoint2, Example 3' },
 ];
 
-const data3v2 = [{ image: "/images/creative-coding/cc3.png", id: 6 }];
 
 const data3 = [
-  { image: "/images/creative-coding/cc3.png", id: 6 },
-  { image: "/images/creative-coding/cc4.png", id: 7 },
-  // { image: "/images/creative-coding/creativecoding9.png", id: 8 },
-  { image: "/images/creative-coding/cc1.png", id: 9 },
-  { image: "/images/creative-coding/cc8.png", id: 10 },
+  { image: "/images/creative-coding/cc3.png", id: 7, description:'NewCenterPoint3, Example 1' },
+  { image: "/images/creative-coding/cc4.png", id: 8, description:'NewCenterPoint3, Example 2' },
+  { image: "/images/creative-coding/cc1.png", id: 9, description:'NewCenterPoint3, Example 3' },
+  { image: "/images/creative-coding/cc8.png", id: 10, description:'NewCenterPoint3, Example 4' },
 ];
 
 const data4 = [
-  { image: "/images/creative-coding/creativecoding5.png", id: 11 },
-  { image: "/images/creative-coding/cc6.png", id: 12 },
-  { image: "/images/creative-coding/cc5.png", id: 13 },
-  { image: "/images/creative-coding/cc7.png", id: 14 },
+  { image: "/images/creative-coding/creativecoding5.png", id: 11, description:'NewCenterPoint7, Example 1' },
+  { image: "/images/creative-coding/cc6.png", id: 12, description:'NewCenterPoint7, Example 2' },
+  { image: "/images/creative-coding/cc5.png", id: 13, description:'NewCenterPoint7, Example 3' },
+  { image: "/images/creative-coding/cc7.png", id: 14, description:'NewCenterPoint7, Example 4' },
 ];
 
 function codeBlock1() {
-  const codeString1 = `if (newCenterPoint1) {
+  const codeString1 = `
+  if (newCenterPoint1) {
   selectedCenterPoint = 1;
   followMouse = false;
 
@@ -61,13 +60,13 @@ function codeBlock1() {
       language="javascript"
       style={vscDarkPlus}
       customStyle={{
-        backgroundColor: "rgb(49,49,49)",
+        // backgroundColor: "rgb(49,49,49)",
         // fontSize: '2rem',
+        aspectRatio:16/9
       }}
       codeTagProps={{
         style: {
-          // fontSize: "1.1rem",
-          fontSize: "0.9rem",
+          fontSize: "1rem",
           color: "rgb(170,218,250)",
         },
       }}
@@ -78,7 +77,8 @@ function codeBlock1() {
 }
 
 function codeBlock2() {
-  const codeString2 = `if (CenterPoint2) { 
+  const codeString2 = `
+  if (newCenterPoint2) { 
   selectedCenterPoint = 2;
   followMouse = false;
           
@@ -94,17 +94,22 @@ function codeBlock2() {
       angleY = 0;
     } 
   }
-} `;
+} 
+
+`
+;
   return (
     <SyntaxHighlighter
       language="javascript"
       style={vscDarkPlus}
       customStyle={{
-        backgroundColor: "rgb(49,49,49)",
+        // backgroundColor: "rgb(49,49,49)",
+        aspectRatio:16/9
       }}
       codeTagProps={{
         style: {
-          fontSize: "1.1rem",
+          // fontSize: "1.1rem",
+          fontSize:'1rem',
           color: "rgb(170,218,250)",
         },
       }}
@@ -115,7 +120,8 @@ function codeBlock2() {
 }
 
 function codeBlock3() {
-  const codeString2 = `if (newCenterPoint3) {
+  const codeString2 = `
+  if (newCenterPoint3) {
   selectedCenterPoint = 3;
   followMouse = false;
   amplitude = 150;
@@ -126,19 +132,21 @@ function codeBlock3() {
   let numPoints = 12;
   let angleIncrement = TWO_PI / numPoints;
   angle += 0.01 * angleIncrement;
-}`;
+}
+`;
 
   return (
     <SyntaxHighlighter
       language="javascript"
       style={vscDarkPlus}
       customStyle={{
-        backgroundColor: "rgb(49,49,49)",
+        // backgroundColor: "rgb(49,49,49)",
+        aspectRatio:16/9
         // fontSize: '2rem',
       }}
       codeTagProps={{
         style: {
-          fontSize: "1.1rem",
+          fontSize: "1rem",
           color: "rgb(170,218,250)",
         },
       }}
@@ -209,12 +217,13 @@ if (newCenterPoint7) {
       style={vscDarkPlus}
       wrapLines={true}
       customStyle={{
-        backgroundColor: "rgb(49,49,49)",
+        // backgroundColor: "rgb(49,49,49)",
+        aspectRatio:16/9
         // fontSize: '2rem',
       }}
       codeTagProps={{
         style: {
-          fontSize: "1.1rem",
+          fontSize: "1rem",
           color: "rgb(170,218,250)",
         },
       }}
@@ -226,6 +235,7 @@ if (newCenterPoint7) {
 
 export default function creativeCoding() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedDescription, setSelectedDescription] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleResetClick = () => {
@@ -246,6 +256,9 @@ export default function creativeCoding() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
+
+      setSelectedDescription(dataArray[selectedIndex].description);
+
     }
   };
 
@@ -256,6 +269,9 @@ export default function creativeCoding() {
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
+
     }
   };
 
@@ -266,6 +282,9 @@ export default function creativeCoding() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
+
     }
   };
 
@@ -462,7 +481,7 @@ export default function creativeCoding() {
                 backgroundColor: "rgba(0, 0, 0, 0.75)",
               }}
             >
-              <motion.img
+              {/* <motion.img
                 src={selectedImage}
                 initial={{ scale: 0.5 }}
                 animate={{ scale: 1 }}
@@ -475,7 +494,33 @@ export default function creativeCoding() {
                   zIndex: 9990,
                   borderRadius: "24px",
                 }}
+              /> */}
+
+
+<motion.div className="flex flex-col items-center mt-8"
+  initial={{ scale: 0.5 }}
+  animate={{ scale: 1 }}
+  exit={{ scale: 0.45 }}
+  transition={{ duration: 0.3 }}
+>
+              <motion.img
+                src={selectedImage}
+                alt={selectedImage.description}
+                className="max-w-4/5 max-h-4/5"
+                style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
+
               />
+
+
+          <div className={styles.imageDescription} style={{backgroundColor:'rgb(50,50,50)'}}>
+          <p>
+          {/* {currentIndex + ")    "}   */}
+          {selectedDescription}
+          </p>
+          </div>
+</motion.div>
+
+
               <button
                 className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
                 onClick={handleResetClick}
@@ -549,23 +594,41 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
         <div className="flex flex-row">
-          <div
-            className={styles.linkContainerCCSandbox}
-            style={{ width: "45vw", zIndex: 1, maxWidth: "650px", height:'25.3125vw', maxHeight:'365.625px', overflow: "auto"}}
-          >
 
-          
-            {codeBlock4()}
-           
+
+          {/* <div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", marginBottom:'10px', overflow: "auto"}} >
+          <div style={{ padding: "0.5rem" }}/>
+
+        <div className="flex align-center">
+          <div className={styles.iframevideoSmall}>
+            {codeBlock1()}
           </div>
+          </div>
+          <div style={{ padding: "0.5rem" }}/>
+          </div> */}
+
+          <div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+          }}
+          >
+            <div style={{ padding: "0.5rem" }}> </div>
+            <div className="flex align-center">
+              <div
+                className={styles.iframevideoSmall}
+                style={{position:'relative'}}
+              >                
+              {codeBlock1()}
+              </div>
+            </div>
+            <div style={{ padding: "0.5rem" }} />
+          </div>
+        
 
           <div style={{ marginLeft: "12.5px", marginRight: "12.5px" }} />
 
-          <div
-            className={styles.linkContainerCCSandbox}
-            style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
-            // height:'25.3125vw' 
-            // height:'auto'
+          <div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
           >
             <div style={{ padding: "0.5rem" }}> </div>
@@ -622,11 +685,21 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
 <div className="flex flex-row">
-  <div
-    className={styles.linkContainerCCSandbox}
-    style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
-  >
-  </div>
+<div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+          }}
+          >
+            <div style={{ padding: "0.5rem" }}> </div>
+            <div className="flex align-center">
+              <div
+                className={styles.iframevideoSmall}
+                style={{position:'relative'}}
+              >                
+              {codeBlock2()}
+              </div>
+            </div>
+            <div style={{ padding: "0.5rem" }} />
+          </div>
 
   <div style={{ marginLeft: "12.5px", marginRight: "12.5px" }} />
 
@@ -635,14 +708,14 @@ style={{display:'flex', justifyItems:'center'}}
     style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
   >
     <div style={{ padding: "0.5rem" }}> </div>
-    <div className="flex align-center">
+    {/* <div className="flex align-center"> */}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
         src="https://www.youtube.com/embed/_fmgP4kvRlk?si=cWvrsFuy78losEc1&rel=0"
         allowFullScreen
       ></iframe>
-    </div>
+    {/* </div> */}
     <div style={{ padding: "0.5rem" }} />
   </div>
 
@@ -690,11 +763,21 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
 <div className="flex flex-row">
-  <div
-    className={styles.linkContainerCCSandbox}
-    style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
-  >
-  </div>
+<div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+          }}
+          >
+            <div style={{ padding: "0.5rem" }}> </div>
+            <div className="flex align-center">
+              <div
+                className={styles.iframevideoSmall}
+                style={{position:'relative'}}
+              >                
+              {codeBlock3()}
+              </div>
+            </div>
+            <div style={{ padding: "0.5rem" }} />
+          </div>
 
   <div style={{ marginLeft: "12.5px", marginRight: "12.5px" }} />
 
@@ -758,12 +841,21 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
 <div className="flex flex-row">
-  <div
-    className={styles.linkContainerCCSandbox}
-    style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
-  >
-
-  </div>
+<div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+          }}
+          >
+            <div style={{ padding: "0.5rem" }}> </div>
+            <div className="flex align-center">
+              <div
+                className={styles.iframevideoSmall}
+                style={{position:'relative'}}
+              >                
+              {codeBlock4()}
+              </div>
+            </div>
+            <div style={{ padding: "0.5rem" }} />
+          </div>
 
   <div style={{ marginLeft: "12.5px", marginRight: "12.5px" }} />
 
