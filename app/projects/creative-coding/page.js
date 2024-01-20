@@ -66,7 +66,8 @@ function codeBlock1() {
       }}
       codeTagProps={{
         style: {
-          fontSize: "1.1rem",
+          // fontSize: "1.1rem",
+          fontSize: "0.9rem",
           color: "rgb(170,218,250)",
         },
       }}
@@ -399,6 +400,7 @@ export default function creativeCoding() {
             width: "90vw",
             zIndex: 1,
           }}
+
         >
           <div style={{ padding: "0.25rem" }}></div>
           <TipsButton />
@@ -549,21 +551,28 @@ style={{display:'flex', justifyItems:'center'}}
         <div className="flex flex-row">
           <div
             className={styles.linkContainerCCSandbox}
-            style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
+            style={{ width: "45vw", zIndex: 1, maxWidth: "650px", height:'25.3125vw', maxHeight:'365.625px', overflow: "auto"}}
           >
+
+          
+            {codeBlock4()}
+           
           </div>
 
           <div style={{ marginLeft: "12.5px", marginRight: "12.5px" }} />
 
           <div
             className={styles.linkContainerCCSandbox}
-            style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
+            style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+            // height:'25.3125vw' 
+            // height:'auto'
+          }}
           >
             <div style={{ padding: "0.5rem" }}> </div>
             <div className="flex align-center">
               <iframe
                 className={styles.iframevideoSmall}
-                style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
+                style={{ zIndex: selectedImage ? 1 : 52, position: "relative",}}
                 src="https://www.youtube.com/embed/z_rbwerTgBE?si=TiMMhrdZMZn6kD79&rel=0"
                 allowFullScreen
               ></iframe>
