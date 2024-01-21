@@ -175,10 +175,15 @@ export default function Home() {
             }}>
           <div
             className={`${styles.cardHomepageTest} ${animationClass2}`}
-            style={{ animationDelay: "0s" }}
+            style={{ animationDelay: "0s", 
+          }}
           >
             <Image 
-              style={{width:'100%'}}
+              style={{
+                // width:'100%',
+                // minHeight:'80vh',
+                minWidth:'70vw'
+            }}
               src="/images/homepage/new2/1.png"
               width={1100}
               height={1000}

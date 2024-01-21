@@ -83,7 +83,7 @@ export default function animations() {
 
       <div style={{paddingTop:'1rem'}} />
 
-      <div className={styles.linkContainerAnimationsBackground} >
+      <div className={styles.linkContainerAnimationsBackground} style={{minHeight:'93vh'}}>
       {/* <h1 className={styles.title} style={{zIndex:'100'}}>Animations</h1> */}
       <h1 className={styles.titleWithoutPadding} style={{zIndex:'100'}}>Animations</h1>
 

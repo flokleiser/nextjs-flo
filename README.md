@@ -2,25 +2,20 @@
 
 ## NEW TO-DO PAGES:
 
+### BACKGROUND:
+- [ ] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
+
 ### Creative Coding:
-
 - [ ] Doublecheck that mobile etc works
-
 - [ ] Move tool at the end of page
-
 - [ ] Interactive part --> 
     - [ ] figure out how to set drawing to true on mouse over?
     - [ ] figure out how to have followmouse & autocolor on, and still be able to turn it off
     - [ ] Make things in drop down menu actually do something
-
 - [ ] Video to showcase tool (screen recording)
 
 ### SKYLANDS:
 - [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
-
-### CAD
-- [ ] Add border to images? for descriptions
-- [ ] Maybe add tooltips (descriptions)?
 
 ### Random fun stuff
 - [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)

@@ -10,13 +10,13 @@ import { useInView } from 'framer-motion';
 
 
 const data = [
-  { image : '/images/cad/cad website.png', id: 0},
+  { image : '/images/cad/cad website.png', id: 0, description:'Render of the knife, made in Blender'},
 ]
 
 const data2 = [
-  { image: '/images/cad/cad parts2.png', id: 1},
-  { image: '/images/cad/cad parts1.png', id: 2},
-  { image: '/images/cad/cad parts3.png', id: 3},
+  { image: '/images/cad/cad parts2.png', id: 1, description:'Individual parts nr. 1'},
+  { image: '/images/cad/cad parts1.png', id: 2, description:'Individual parts nr. 2'},
+  { image: '/images/cad/cad parts3.png', id: 3, description:'Assembly'},
 ]
 
 const data3 = [
@@ -35,6 +35,7 @@ export default function cad() {
 
  
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedDescription, setSelectedDescription] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleResetClick = () => {
@@ -53,6 +54,9 @@ export default function cad() {
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = 'hidden';
       document.body.style.overflow = 'hidden';
+
+      setSelectedDescription(dataArray[selectedIndex].description);      
+
     }
   };
 
@@ -63,6 +67,9 @@ export default function cad() {
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
+
     }
   };
 
@@ -74,6 +81,9 @@ export default function cad() {
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
+
     }
   };
 
@@ -208,6 +218,7 @@ return () => {
                <motion.div
                 id="overlay" 
         className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50"
+        // className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center focus:outline-none z-50 border-solid border-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -218,7 +229,7 @@ return () => {
         }}
           >
           
-          <motion.img
+          {/* <motion.img
             src={selectedImage}
             initial={{scale:0.5}}
             animate={{scale:1}}
@@ -227,9 +238,39 @@ return () => {
             alt=""
             className="max-w-4/5 max-h-4/5"
             style={{ maxHeight: '80vh', zIndex: 9990, 
-            borderRadius:'24px'
+            borderRadius:'24px',
+            border:'solid',
+            borderColor:'white'
           }}
-          />
+          /> */}
+          <motion.div className="flex flex-col items-center mt-8"
+          initial={{ scale: 0.5 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.45 }}
+          transition={{ duration: 0.3 }}
+>
+              <motion.img
+                src={selectedImage}
+                alt={selectedImage.description}
+                className="max-w-4/5 max-h-4/5"
+                style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px ', 
+                // border:'solid',
+                // borderColor: 'rgba(99, 174, 152, 1)'
+              }}
+
+              />
+
+
+          {/* <div className={styles.imageDescription} style={{
+            backgroundColor:'rgb(50,50,50)'
+            backgroundColor: 'rgba(74, 117, 110, 0.3)'
+            }}> */}
+          {/* <p> */}
+          {/* {currentIndex + ")    "}   */}
+          {/* {selectedDescription} */}
+          {/* </p> */}
+          {/* </div> */}
+          </motion.div>
 
            <button
             className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"

@@ -168,7 +168,7 @@ return () => {
             </div>
 
             <div style={{paddingTop:'1rem'}} />
-      <div className={styles.linkContainerCrafts} >
+      <div className={styles.linkContainerCrafts} style={{minHeight:'93vh'}} >
 
       <h1 className={styles.titleWithoutPadding}>
 
@@ -298,7 +298,8 @@ return () => {
               </div>
 
               </div>
-              <div style={{padding:'2rem'}}/>
+              {/* <div style={{padding:'2rem'}}/> */}
+              <div style={{ padding: "0.4rem" }}> </div>
 
         </main>
     )
