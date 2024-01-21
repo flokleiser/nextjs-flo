@@ -176,7 +176,7 @@ return () => {
 
             <div className={styles.subtitledescription}>
             <p>
-            Voxel art, made in MagicaVoxel.
+            3D Voxel art, made using MagicaVoxel.
              </p>
             </div>
 

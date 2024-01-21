@@ -101,7 +101,7 @@ export default function escape() {
       <div className={styles.subtitledescription}>
         <p>
           Homework for the application to the Propädeutikum ZHdK 2021, in which
-          the task was to creatively utilise the image seen below.
+          the task was to creatively utilise the image seen at the start of the animation.
         </p>
       </div>
 

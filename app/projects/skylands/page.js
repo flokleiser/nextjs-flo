@@ -229,8 +229,9 @@ export default function skylands() {
 
       <div className={styles.subtitledescription}>
         <p>
-          A VR game/experience for the Meta Quest 2 Headset. Built in Unity, C#
-          and Blender.
+          A VR game/experience for the Meta Quest 2 Headset, built in Unity, C#
+          and Blender. <br />
+          This page contains gameplay videos, screenshots, and the downloadable .apk file.
         </p>
         {/* <p>
         A VR game/experience for the Meta Quest 2 Headset.

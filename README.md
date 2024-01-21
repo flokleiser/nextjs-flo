@@ -1,69 +1,42 @@
 # To-Do/Ideas List:
 
-#### Checklist before final publish:
-- [ ] Fix texts
-    - [ ] Doublecheck Skylands
-    - [ ] Doublecheck Creative-COding
-    - [ ] Doublecheck Sketches
-    - [ ] Doublecheck CAD
-    - [ ] Doublecheck Animations
-    - [ ] Doubtlecheck Voxel/Illustrator/Crafts
-- [ ] Updated links (Portfolio)
-
 ## NEW TO-DO PAGES:
 
 ### Creative Coding:
+- [ ] Move tool at the end of page
 
 - [ ] Interactive part --> 
     - [ ] figure out how to set drawing to true on mouse over?
     - [ ] figure out how to have followmouse & autocolor on, and still be able to turn it off
     - [ ] Make things in drop down menu actually do something
 
-- [x] Scrollable container element?
-
 - [ ] Video to showcase tool (screen recording)
-- [ ] Move tool at the end of page
-- [x] Scrollable window/codesandbox under gallery or video
 
-- [x] Fix code snippets looking really bad
-- [x] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
-- [x] Decide on background --> colorful or not
-
-### Homepage
-- [ ] Make projects/portfolio cards scale up like the title etc
+### SKYLANDS:
+- [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
 
 ### Pictures everywhere:
-
-- [x] Maybe add borderRadius:'24px' to motion images
-- [x] Add "title" when big --> implement into skylands
-    - [x] Add all descriptions on skylands page
-
 - [ ] Skylands --> make tooltip background different color
 - [ ] Add Tooltip or image description
 - [ ] Figure out if tooltip different colors are possible
 
-- [ ] Figure out how to set image.description as alt property on both GALLERY and EXPANDED
-
-### Animations:
-- [ ] Make cards bigger
-
-### Skylands:
-- [ ] Svg background
-
 ### CAD
-- [ ] Decide on background --> empty spaces
+- [ ] Add border to images? for descriptions
 - [ ] Maybe add tooltips (descriptions)?
 
-### Acessibility
-- [ ] Add some "alt" properties for pictures
+### ANIMATIONS:
+- [ ] change "physics now" to "newton 3" maybe
 
 ### Random fun stuff
-- [ ] When really bored --> add more svg animations onclick (focus button, dim button, next/prev image button)
+- [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
+
+- [ ] Make projects/portfolio cards scale up like the title etc
+- [ ] Add some "alt" properties for pictures
+
 - [ ] Page transitions please
 - [ ] Figure out collapsable menus
 - [ ] Add some tooltip background?
 - [ ] Look into animation keyframes for svg drawing (testing page)
-- [ ] Implement in skylands page
 - [ ] try layoutId (for pictures left/right swiping animations)
 - [ ] Look into search function
 
@@ -75,12 +48,15 @@
 ### Videos/Gifs/Images:
 
 #### General:
+- [x] Maybe add borderRadius:'24px' to motion images
+- [x] Add "title" when big 
 - [x] Video embedding --> dim background
 - [x] Figure out how to make "mouse hover tipps" show up --> for dim button/focus button, 
 - [x] Implement the tooltips
 - [x] Add page with calendar for dates (hausaufgaben etc)
 
 #### Animations:
+- [x] Make cards bigger
 - [x] Change background for main animation page
 - [x] Change background for sub-animation pages
 - [x] Add background blur onhover
@@ -98,6 +74,7 @@
 - [x] Decide on Layout when multiple videos per page
 
 #### Skylands
+- [ ] Maybe add an svg background?
 - [x] Add background to description of images
 - [x] Structure & add screenshots --> like portfolio
 - [x] Figure out background colors (different ones)
@@ -107,6 +84,11 @@
 - [x] Figure out why video wont work
 
 #### Creative-Coding
+- [x] Fix code snippets looking really bad
+- [x] Add code screenshots (+ maybe little "test" code sandbox things that only have the current code)
+- [x] Decide on background --> colorful or not
+- [x] Scrollable window/codesandbox under gallery or video
+- [x] Scrollable container element?
 - [x] Move "tips" button to top
 - [x] Add all screenshots --> like portfolio
 - [x] p5js editor

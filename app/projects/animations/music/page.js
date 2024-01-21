@@ -190,7 +190,7 @@ export default function music() {
             
             <div className={styles.subtitledescription}>
             <p>
-            An animation of my room, drawn in Photoshop and animated in Adobe After Effects. To the song “Be Encouraged” by Kiefer.
+            An animation of my room, to the song “Be Encouraged” by Kiefer. Drawn in Photoshop and animated in Adobe After Effects. 
             </p>
             </div>
             <div style={{ padding: '1rem', scrollMargin:'60px' }}id="piano"> </div> 

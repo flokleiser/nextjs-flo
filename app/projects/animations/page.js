@@ -89,7 +89,7 @@ export default function animations() {
 
       <div className={styles.subtitledescription} style={{zIndex:'100'}}>
         <p>
-          A collection of various animations ranging from 2019 to 2023,
+          A collection of various animations, 
           including experiments with VFX, stop motion, sound design, different
           art styles and simulated physics. Made in Adobe After Effects and
           Premiere Pro.

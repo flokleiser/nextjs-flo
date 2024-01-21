@@ -215,7 +215,8 @@ return () => {
             style={{color:'rgb(55,55,55)'}}
             >
             <p>
-            A project inspired by Ikea instructions, with a twist.           
+            {/* A project inspired by Ikea instructions, with a twist.            */}
+            A series of "Ikea"-like instruction manuals, with a twist.
             </p>
             </div>
            

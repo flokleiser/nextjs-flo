@@ -200,8 +200,8 @@ useEffect(() => {
             >
               
             <p>
-            A collection of sketches, designs and artworks ranging from 2018 
-            to 2023.   
+            A collection of sketches, designs and artworks.
+            
              </p>
             </div>
 
