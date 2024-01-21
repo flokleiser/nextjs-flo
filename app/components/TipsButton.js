@@ -42,7 +42,7 @@ export default function TipsButton() {
         "rounded-md" ]
        }}
        >
-      <button className={styles.buttonNew} onClick={handleToggleClick}>
+      <button className={styles.buttonNew} style={{position:'absolute', justifyContent:'center',  backgroundColor:'rgb(50,50,50)', color:'white', marginTop:'10px'}} onClick={handleToggleClick}>
        {randomTip ? randomTip : "Tips:"}
       </button>
       </Tooltip>
