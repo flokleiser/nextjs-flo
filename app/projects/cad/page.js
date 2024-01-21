@@ -188,14 +188,12 @@ return () => {
              Computer Aided Design
             </h1>
 
-{/* <hr className={styles.pageDividerCad} /> */}
 
             {/* <h1 className={styles.title}>
              Computer Aided Design
             </h1> */}
 
             <div style={{padding:'1rem'}} />
-{/* <vl className={styles.pageDividerCadVertical} /> */}
              
             <div className={styles.subtitledescription}>
             <p>
@@ -291,15 +289,7 @@ return () => {
                 </div>
               </div>
             
-            {/* <div styles={{ padding: '2rem' }}> </div>
-
-            <div className={styles.subtitledescription}>
-            <p>
-              Assembly process/individual parts
-            </p>
-            </div>  
-
-            <div styles={{ padding: '2rem' }}> </div> */}
+            <div styles={{ padding: '2rem' }}> </div>
 
 {/* <div className={styles.subtitledescription}>
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
@@ -371,10 +361,20 @@ return () => {
       </motion.div>
       </motion.div>
 
+      
+
       <div style={{ padding: "1rem" }} />
       {/* <hr className={styles.pageDivider} /> */}
-      {/* <hr className={styles.pageDividerCad} /> */}
+      <hr className={styles.pageDividerCad} />
       <div style={{ padding: "1rem" }} />
+
+      <div className={styles.subtitledescription}>
+            <p>
+              Assembly process/individual parts
+            </p>
+            </div>  
+
+            <div styles={{ padding: '2rem' }}> </div>
 
               <motion.div className=""
               // style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
@@ -410,13 +410,16 @@ return () => {
 
               <div styles={{ padding: '2rem' }}> </div>
 
-{/* <div className={styles.subtitledescription}>
+              <div className={styles.pageDividerCad} />
+              <div style={{ padding: "1rem" }} />
+
+<div className={styles.subtitledescription}>
 <p>
 Completed CAD design:
 </p>
 </div>  
 
-<div styles={{ padding: '2rem' }}> </div> */}
+<div styles={{ padding: '2rem' }}> </div>
 
 
               <motion.div className=""
@@ -451,13 +454,17 @@ Completed CAD design:
 
               <div styles={{ padding: '2rem' }}> </div>
 
-{/* <div className={styles.subtitledescription}>
+              <div className={styles.pageDividerCad} />
+              {/* <div className={styles.pageDividerDark} /> */}
+              <div style={{padding:'1rem' }} />
+
+<div className={styles.subtitledescription}>
 <p>
 Prototypes out of popsicle sticks
 </p>
 </div>  
 
-<div styles={{ padding: '2rem' }}> </div> */}
+<div styles={{ padding: '2rem' }}> </div>
 
 
               <motion.div className=""

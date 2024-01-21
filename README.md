@@ -3,6 +3,9 @@
 ## NEW TO-DO PAGES:
 
 ### Creative Coding:
+
+- [ ] Doublecheck that mobile etc works
+
 - [ ] Move tool at the end of page
 
 - [ ] Interactive part --> 
@@ -15,17 +18,9 @@
 ### SKYLANDS:
 - [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
 
-### Pictures everywhere:
-- [ ] Skylands --> make tooltip background different color
-- [ ] Add Tooltip or image description
-- [ ] Figure out if tooltip different colors are possible
-
 ### CAD
 - [ ] Add border to images? for descriptions
 - [ ] Maybe add tooltips (descriptions)?
-
-### ANIMATIONS:
-- [ ] change "physics now" to "newton 3" maybe
 
 ### Random fun stuff
 - [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
