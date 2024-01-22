@@ -20,6 +20,32 @@ const data = [
   {image: '/images/sketches/sketch test scan website6.png', id: 4, description:'test 5'},
 ];
 
+const lightBulbBody = {
+  open: {
+    pathLength : 1,
+    pathOffset: 0,
+    opacity:1
+  },
+  closed: {
+    pathLength : 0,
+    pathOffset : 1,    
+    opacity:0
+  }
+}
+
+const lightBulbLine= {
+  open: {
+    pathLength : 0,
+    pathOffset: 1,
+    opacity:0
+  },
+  closed: {
+    pathLength : 1,
+    pathOffset : 0,
+    opacity:1
+  }
+}
+
 
 export default function imageTest() {
 
@@ -323,7 +349,7 @@ useEffect(() => {
 
               <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='interactables' />
 
-{/* <div className={styles.linkContainer}>
+<div className={styles.linkContainer}>
 <div style={{ padding: "0.125rem" }}> </div>
   <div className="flex">
 
@@ -347,7 +373,25 @@ useEffect(() => {
     style={{ zIndex: 53 }}
     onClick={handleToggleClick}
   >
-    <motion.svg  stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 24 24" height={24} >
+     <motion.svg  stroke="currentColor" fill="none" strokeWidth={2} viewBox="0 0 24 24" height={24} strokeLinecap={'round'} >
+      {/* <motion.path d="M16.8 11.2c.8-.9 1.2-2 1.2-3.2a6 6 0 0 0-9.3-5" />  */}
+      {/* <motion.path d="M6.3 6.3a4.67 4.67 0 0 0 1.2 5.2c.7.7 1.3 1.5 1.5 2.5" /> */}
+
+      <motion.path d="m2 2 20 20" 
+           variants={lightBulbLine}     
+           initial={isDim ? "open":"closed"}
+           animate={isDim ? "closed":"open"} 
+      />
+      <motion.path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" 
+          variants={lightBulbBody}     
+          initial={isDim ? "open":"closed"}
+          animate={isDim ? "closed":"open"}
+      // animate={isDim ? "closed":"open"}
+
+      />
+
+      <motion.path d="M9 18h6" />
+      <motion.path d="M10 22h4" />
     </motion.svg>
    
   </button>
@@ -364,7 +408,10 @@ useEffect(() => {
   >
     {" "}
     <motion.svg stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 24 24" height={24} >
-      <motion.path d="M5 15H3v4c0 1.1.9 2 2 2h4v-2H5v-4zM5 5h4V3H5c-1.1 0-2 .9-2 2v4h2V5zm14-2h-4v2h4v4h2V5c0-1.1-.9-2-2-2zm0 16h-4v2h4c1.1 0 2-.9 2-2v-4h-2v4zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" />
+       {/* <motion.path d="M5 15H3v4c0 1.1.9 2 2 2h4v-2H5v-4zM5 5h4V3H5c-1.1 0-2 .9-2 2v4h2V5zm14-2h-4v2h4v4h2V5c0-1.1-.9-2-2-2zm0 16h-4v2h4c1.1 0 2-.9 2-2v-4h-2v4zM12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" /> */}
+       <motion.path d="M 5 15 H 3 v 4 c 0 1.1 0.9 2 2 2 h 4 v -2 H 5 v -4 z M 5 5 h 4 V 3 H 5 c -1.1 0 -2 0.9 -2 2 v 4 h 2 V 5 z m 14 -2 h -4 v 2 h 4 v 4 h 2 V 5 c 0 -1.1 -0.9 -2 -2 -2 z m 0 16 h -4 v 2 h 4 c 1.1 0 2 -0.9 2 -2 v -4 h -2 v 4 z Z" 
+      />
+      <motion.path d="M 12 12 z z z M 12 9 c -1.66 0 -3 1.34 -3 3 s 1.34 3 3 3 s 3 -1.34 3 -3 s -1.34 -3 -3 -3 z" />
     </motion.svg>
   </Link>
 </CenterTooltip>
@@ -382,7 +429,7 @@ useEffect(() => {
 
 </div>
 <div style={{ padding: "1.25rem" }}> </div>
-</div> */}
+</div>
 
 <div style={{padding:'2rem'}} />
 

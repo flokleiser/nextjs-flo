@@ -21,13 +21,27 @@
     --button-rgb: 30,30,30;
 
     
-  --primary-glow: conic-gradient(
+  /* --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #A63C9F 0deg,
     #850FA6 55deg,
     #58088C 120deg,
     #3E0973 160deg,
     transparent 360deg
+  ); */
+
+  --primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    #A63C9F 0deg,
+    #850FA6 55deg,
+    #58088C 120deg,
+    #3E0973 160deg,
+    #3E0973 200deg,
+    #3E0973 240deg,
+    #58088C 280deg,
+    #850FA6 320deg,
+    #A63C9F 360deg,
+    transparent 0deg
   );
 
   --secondary-glow: radial-gradient(

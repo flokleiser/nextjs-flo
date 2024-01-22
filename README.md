@@ -2,8 +2,13 @@
 
 ## NEW TO-DO PAGES:
 
+## NEW TO-DO PAGES:
+- [x] Get github to work on enzian computer
+
 ### BACKGROUND:
 - [ ] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
+- [ ] Change background tailwind to css class?
+- [x] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
 
 ### Creative Coding:
 - [ ] Doublecheck that mobile etc works
