@@ -11,6 +11,9 @@
 - [x] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
 
 ### Creative Coding:
+
+- [ ] Make better buttons (?) to toggle drawing etc
+
 - [ ] Doublecheck that mobile etc works
 - [ ] Move tool at the end of page
 - [ ] Interactive part --> 
