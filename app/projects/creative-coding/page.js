@@ -13,8 +13,6 @@ import TipsButton from "@/app/components/TipsButton";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-import { Tooltip } from "@nextui-org/tooltip";
-import ExpandableButton from "@/app/components/ExpandableButton";
 
 const data = [
   { image: "/images/creative-coding/creativecoding white.png", id: 1, description:'NewCenterPoint1, Example 1'},
@@ -40,7 +38,7 @@ const data4 = [
   { image: "/images/creative-coding/creativecoding5.png", id: 11, description:'NewCenterPoint7, Example 1' },
   { image: "/images/creative-coding/cc6.png", id: 12, description:'NewCenterPoint7, Example 2' },
   { image: "/images/creative-coding/cc5.png", id: 13, description:'NewCenterPoint7, Example 3' },
-  { image: "/images/creative-coding/cc7.png", id: 14, description:'NewCenterPoint7, Example 4' },
+  // { image: "/images/creative-coding/cc7.png", id: 14, description:'NewCenterPoint7, Example 4' },
 ];
 
 function codeBlock1() {
@@ -429,8 +427,8 @@ export default function creativeCoding() {
           >
             <div>
               <iframe
-                // src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
-                src="https://editor.p5js.org/flokleiser/full/S3ltCiaH7"
+                src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
+                // src="https://editor.p5js.org/flokleiser/full/S3ltCiaH7"
                 allowFullScreen
                 style={{
                   // border: "2px solid white",
