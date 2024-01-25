@@ -1,15 +1,6 @@
 # To-Do/Ideas List:
 
-## Mappe:
-- [x] Export creative-coding videos
-- [x] Upload creative-coding videos to youtube
-- [ ] Doublecheck layout on indesign --> correct pages to left/right
-
-- [ ] If time --> redo the "card" boxes and pictures
-
 ## NEW TO-DO PAGES:
-
-
 
 ### Creative Coding:
 - [ ] Make better buttons (?) to toggle drawing etc
