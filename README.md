@@ -1,6 +1,7 @@
 # To-Do/Ideas List:
 
 ## NEW TO-DO PAGES:
+- [ ] Add a mindmap to dates page
 
 ### Creative Coding:
 - [ ] Make better buttons (?) to toggle drawing etc

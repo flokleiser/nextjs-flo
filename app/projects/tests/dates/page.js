@@ -2,7 +2,9 @@
 import React, { useState, useEffect, Suspense } from "react";
 import styles from "app/page.module.css";
 import MyCalendar from "@/app/components/Calendar";
-
+import * as markmap from "markmap-view";
+import { Transformer } from "markmap-lib";
+import md from "@/app/projects/tests/dates/Hausaufgabe.md";
 
 export default function filesTest() {
 
@@ -46,6 +48,7 @@ after:dark:opacity-40
 before:lg:h-[360px] 
 z-[-1]"
       ></div>
+
  
       {/* <h1 className={styles.title}>Dates</h1>
 
