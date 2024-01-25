@@ -1,19 +1,18 @@
 # To-Do/Ideas List:
 
-## NEW TO-DO PAGES:
+## Mappe:
+- [x] Export creative-coding videos
+- [x] Upload creative-coding videos to youtube
+- [ ] Doublecheck layout on indesign --> correct pages to left/right
+
+- [ ] If time --> redo the "card" boxes and pictures
 
 ## NEW TO-DO PAGES:
-- [x] Get github to work on enzian computer
 
-### BACKGROUND:
-- [ ] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
-- [ ] Change background tailwind to css class?
-- [x] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
+
 
 ### Creative Coding:
-
 - [ ] Make better buttons (?) to toggle drawing etc
-
 - [ ] Doublecheck that mobile etc works
 - [ ] Move tool at the end of page
 - [ ] Interactive part --> 
@@ -21,9 +20,6 @@
     - [ ] figure out how to have followmouse & autocolor on, and still be able to turn it off
     - [ ] Make things in drop down menu actually do something
 - [ ] Video to showcase tool (screen recording)
-
-### SKYLANDS:
-- [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
 
 ### Random fun stuff
 - [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
@@ -46,6 +42,7 @@
 ### Videos/Gifs/Images:
 
 #### General:
+- [x] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
 - [x] Maybe add borderRadius:'24px' to motion images
 - [x] Add "title" when big 
 - [x] Video embedding --> dim background

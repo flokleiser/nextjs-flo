@@ -15,15 +15,15 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 
 const data = [
-  { image: "/images/creative-coding/creativecoding white.png", id: 1, description:'NewCenterPoint1, Example 1'},
-  { image: "/images/creative-coding/creativecoding twocolor.png", id: 2, description:'NewCenterPoint1, Example 2'},
-  { image: "/images/creative-coding/creativecoding green.png", id: 3, description:'NewCenterPoint1, Example 3' },
+  { image: "/images/creative-coding/creativecoding white.png", id: 1, description:'NewCenterPoint2, Example 1'},
+  { image: "/images/creative-coding/creativecoding twocolor.png", id: 2, description:'NewCenterPoint2, Example 2'},
+  { image: "/images/creative-coding/creativecoding green.png", id: 3, description:'NewCenterPoint2, Example 3' },
 ];
 
 const data2 = [
-  { image: "/images/creative-coding/creativecoding2.png", id: 4, description:'NewCenterPoint2, Example 1' },
-  { image: "/images/creative-coding/creativecoding3.png", id: 5, description:'NewCenterPoint2, Example 2' },
-  { image: "/images/creative-coding/creativecoding6.png", id: 6, description:'NewCenterPoint2, Example 3' },
+  { image: "/images/creative-coding/creativecoding2.png", id: 4, description:'NewCenterPoint1, Example 1' },
+  { image: "/images/creative-coding/creativecoding3.png", id: 5, description:'NewCenterPoint1, Example 2' },
+  { image: "/images/creative-coding/creativecoding6.png", id: 6, description:'NewCenterPoint1, Example 3' },
 ];
 
 
@@ -638,7 +638,8 @@ style={{display:'flex', justifyItems:'center'}}
               <iframe
                 className={styles.iframevideoSmall}
                 style={{ zIndex: selectedImage ? 1 : 52, position: "relative",}}
-                src="https://www.youtube.com/embed/z_rbwerTgBE?si=TiMMhrdZMZn6kD79&rel=0"
+                // src="https://www.youtube.com/embed/z_rbwerTgBE?si=TiMMhrdZMZn6kD79&rel=0"
+                src="https://www.youtube.com/embed/4KYr9DEqOCw?si=VaHdlBZ3h_c79Fw4&rel=0"
                 allowFullScreen
               ></iframe>
             </div>
@@ -686,7 +687,8 @@ style={{display:'flex', justifyItems:'center'}}
 
         <div stlye={{ padding: "0.5rem" }} />
 
-<div className="flex flex-row">
+{/* <div className="flex flex-row"> */}
+<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
 <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -714,7 +716,8 @@ style={{display:'flex', justifyItems:'center'}}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-        src="https://www.youtube.com/embed/_fmgP4kvRlk?si=cWvrsFuy78losEc1&rel=0"
+        // src="https://www.youtube.com/embed/_fmgP4kvRlk?si=cWvrsFuy78losEc1&rel=0"
+        src="https://www.youtube.com/embed/F0DwWNKuL9I?si=H_yvQk4WO9MaGHcM&rel=0" 
         allowFullScreen
       ></iframe>
     {/* </div> */}
@@ -764,7 +767,8 @@ style={{display:'flex', justifyItems:'center'}}
 
         <div stlye={{ padding: "0.5rem" }} />
 
-<div className="flex flex-row">
+{/* <div className="flex flex-row"> */}
+<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
 <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -792,7 +796,8 @@ style={{display:'flex', justifyItems:'center'}}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-        src="https://www.youtube.com/embed/kRxCXPPyuQI?si=Cc1JBPQw8IKZ5F1c&rel=0" 
+        // src="https://www.youtube.com/embed/kRxCXPPyuQI?si=Cc1JBPQw8IKZ5F1c&rel=0" 
+        src="https://www.youtube.com/embed/aX9ngBGPKLA?si=edOVv03Gp22W_xQO&rel=0" 
         allowFullScreen
       ></iframe>
     </div>
@@ -842,10 +847,11 @@ style={{display:'flex', justifyItems:'center'}}
 
         <div stlye={{ padding: "0.5rem" }} />
 
-<div className="flex flex-row">
-<div className={styles.linkContainerCCSandbox}
-          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
-          }}
+{/* <div className="flex flex-row"> */}
+<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+<div className={styles.linkContainerCCSandboxSmall}
+          // style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+          // }}
           >
             <div style={{ padding: "0.5rem" }}> </div>
             <div className="flex align-center">
@@ -870,7 +876,8 @@ style={{display:'flex', justifyItems:'center'}}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-        src="https://www.youtube.com/embed/Gh7pxNVKmbU?si=HzZlicGcsVRbgFyw&rel=0" 
+        // src="https://www.youtube.com/embed/Gh7pxNVKmbU?si=HzZlicGcsVRbgFyw&rel=0" 
+        src="https://www.youtube.com/embed/cQY-fGIULjA?si=wpl6wyj8CXX2_E0Z&rel=0" 
         allowFullScreen
       ></iframe>
     </div>
