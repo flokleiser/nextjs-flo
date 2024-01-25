@@ -4,7 +4,6 @@ import styles from "app/page.module.css";
 import MyCalendar from "@/app/components/Calendar";
 import * as markmap from "markmap-view";
 import { Transformer } from "markmap-lib";
-import md from "@/app/projects/tests/dates/Hausaufgabe.md";
 
 export default function filesTest() {
 
