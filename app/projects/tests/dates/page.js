@@ -58,6 +58,16 @@ z-[-1]"
           <MyCalendar />
 
       <div style={{ padding: "2rem" }} />
+
+      <div className={styles.subtitle} >
+        <h1> Hausaufgabe </h1>
+      </div>
+
+      <iframe 
+        src="https://drive.google.com/file/d/12NtDVZx1YMboV0ftDi4XhG7Na7H6KS5H/preview"
+        style={{width:'100vw', height: '95vh'}} 
+        width="640" height="480" 
+        ></iframe>
     </main>
   );
 }
