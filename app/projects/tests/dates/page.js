@@ -59,7 +59,7 @@ z-[-1]"
 
       <div style={{ padding: "2rem" }} />
 
-      <div className={styles.subtitle} >
+      {/* <div className={styles.subtitle} >
         <h1> Hausaufgabe </h1>
       </div>
 
@@ -67,7 +67,7 @@ z-[-1]"
         src="https://drive.google.com/file/d/12NtDVZx1YMboV0ftDi4XhG7Na7H6KS5H/preview"
         style={{width:'100vw', height: '95vh'}} 
         width="640" height="480" 
-        ></iframe>
+        ></iframe> */}
     </main>
   );
 }
