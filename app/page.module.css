@@ -1259,6 +1259,14 @@ transition: all 0.5s ease-in-out;
       grid-column-start: 1;
       grid-column-end: 3;
     }
+    .card:nth-child(9) {
+      grid-column-start: 1;
+      grid-column-end: 4;
+    }
+    /* .card:nth-child(10) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    } */
 
     
 }
