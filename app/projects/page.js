@@ -171,6 +171,41 @@ export default function projects() {
             </h2>
             <p>Designs & Artworks </p>
             </Link>
+            
+            {/* <Link
+            href = '/projects/illustrator'
+            className={styles.card}
+            rel="noopener noreferrer"
+            // style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
+            // backgroundSize: '102%',
+            // backgroundPosition: 'center'}}
+            >
+            <h2>
+               Placeholder 
+            </h2>
+            <p>placeholder</p>
+            </Link> */}
+
+            <Link
+            href = '/projects/momentfulness'
+            className={styles.card}
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test2.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test3.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test4.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test 6.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test7.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test9.png")' ,
+            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test 10.png")' ,
+            style={{ backgroundImage: 'url("/images/cards/momentfulness card test 11.png")' ,
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+            <h2>
+               Momentfulness 
+            </h2>
+            <p>JavaScript/HTML-canvas</p>
+            </Link>
 
           
       </div>
