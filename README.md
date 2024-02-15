@@ -1,7 +1,10 @@
 # To-Do/Ideas List:
 
+## Updates:
+- [ ] Update Portfolio
+
 ## NEW TO-DO PAGES:
-- [ ] Add a mindmap to dates page
+- [ ] ZHdK homework
 
 ### Creative Coding:
 - [ ] Make better buttons (?) to toggle drawing etc
