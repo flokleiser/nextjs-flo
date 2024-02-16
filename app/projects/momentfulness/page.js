@@ -11,7 +11,7 @@ import { AnimatePresence, motion} from 'framer-motion';
 export default function momentfulness() {
   
   useEffect(() => {
-    document.title = 'Projects - Voxel';
+    document.title = 'Projects - Momentfulness';
   }, []);
 
     return (
@@ -67,7 +67,7 @@ export default function momentfulness() {
 
             <div className={styles.subtitledescription}>
             <p>
-            A series of 4 animated images, made with JavaScript and a HTML-canvas.
+            Design-homework for the application to the ZHdK, with the theme of "im Moment. A series of 4 animated images, made with JavaScript and a HTML-canvas.
              </p>
             </div>
 
@@ -76,15 +76,21 @@ export default function momentfulness() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
+      <div className={styles.linkContainerMomentfulnessSmall} >
+        <div style={{padding:'0.5rem'}} />
       <iframe className={styles.iframeMomentfulness} src="https://flokleiser.github.io/Momentfulness"></iframe>
+      <div style={{padding:'0.5rem'}} />
+      </div>
 
 
       {/* </div> */}
             
 
+       {/* <div style={{ padding: "0.25rem" }} /> */}
        <div style={{ padding: "1rem" }} />
        </div>
-       <div style={{ padding: "1rem" }} />
+       {/* <div style={{ padding: "0.5rem" }} /> */}
+       <div style={{ padding: "2rem" }} />
 
 
 
