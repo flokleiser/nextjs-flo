@@ -64,6 +64,10 @@ const navSubItems = [
     path: "/projects/illustrator",
     name: "Illustrator",
   },
+  {
+    path: "/projects/momentfulness",
+    name: "Momentfulness",
+  },
 ];
 
 const colorMap = {
