@@ -173,12 +173,9 @@ export default function projects() {
             </Link>
             
             {/* <Link
-            href = '/projects/illustrator'
+            href = '/404'
             className={styles.card}
             rel="noopener noreferrer"
-            // style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
-            // backgroundSize: '102%',
-            // backgroundPosition: 'center'}}
             >
             <h2>
                Placeholder 
@@ -189,15 +186,12 @@ export default function projects() {
             <Link
             href = '/projects/momentfulness'
             className={styles.card}
-            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test 11.png")' ,
-            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test 1.png")' ,
-            // style={{ backgroundImage: 'url("/images/cards/momentfulness card test 2.png")' ,
             style={{ backgroundImage: 'url("/images/cards/momentfulness card test 4.png")' ,
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
             >
-            <h2>
+           <h2>
                Momentfulness 
             </h2>
             <p>JavaScript/HTML-canvas</p>

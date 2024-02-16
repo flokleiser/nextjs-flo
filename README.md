@@ -1,18 +1,18 @@
 # To-Do/Ideas List:
 
 ## Updates:
-- [ ] Update Portfolio
+- [x] Update Portfolio
 
 ## NEW TO-DO PAGES:
-- [ ] ZHdK homework
+- [x] ZHdK homework
 
 ### Creative Coding:
-- [ ] Make better buttons (?) to toggle drawing etc
-- [ ] Doublecheck that mobile etc works
+- [x] Make better buttons (?) to toggle drawing etc
+- [x] Doublecheck that mobile etc works
 - [ ] Move tool at the end of page
 - [ ] Interactive part --> 
-    - [ ] figure out how to set drawing to true on mouse over?
-    - [ ] figure out how to have followmouse & autocolor on, and still be able to turn it off
+    - [x] figure out how to set drawing to true on mouse over?
+    - [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
     - [ ] Make things in drop down menu actually do something
 - [ ] Video to showcase tool (screen recording)
 
