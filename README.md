@@ -1,10 +1,10 @@
 # To-Do/Ideas List:
 
 ## Updates:
-- [ ] Update Portfolio
+- [x] Update Portfolio
 
 ## NEW TO-DO PAGES:
-- [ ] ZHdK homework
+- [x] ZHdK homework
 
 ### Creative Coding:
 - [ ] Make better buttons (?) to toggle drawing etc
