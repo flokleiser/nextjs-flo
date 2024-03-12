@@ -39,12 +39,3 @@ export default function MyCalendar() {
         </div>
       );
 }
-
-// function renderEventContent(eventInfo) {
-//     return (
-//       <>
-//         <b>{eventInfo.timeText}</b>
-//         <i>{eventInfo.event.title}</i>
-//       </>
-//     );
-//   }
