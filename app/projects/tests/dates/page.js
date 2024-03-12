@@ -5,10 +5,10 @@ import MyCalendar from "@/app/components/Calendar";
 import * as markmap from "markmap-view";
 import { Transformer } from "markmap-lib";
 
-export default function filesTest() {
+export default function dates() {
 
   useEffect(() => {
-    document.title = "testing";
+    document.title = "Calendar";
   }, []);
 
   return (

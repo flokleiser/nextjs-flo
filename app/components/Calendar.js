@@ -20,18 +20,19 @@ export default function MyCalendar() {
               {title: "Portfolio Beratung", date: "2024-01-18" },
               {title: "Hausaufgabe Start ZHdK", date: "2024-01-25" },
               {title : "Hausaufgabe + Portfolio ZHdK", date:"2024-02-13"},
-              {title : "Aufnahmeprüfung ZHdK", date:"2024-03-21"},
-              {title : "Aufnahmeprüfung ZHdK", date:"2024-03-22"},
+              {title : "Aufnahmeprüfung ZHdK", date:"2024-03-19"},
               {title : "Hausaufgabe Start HSLU", date:"2024-02-23"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'04"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'05"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'06"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'07"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'08"},
+              {title : "Einladung Prüfung HSLU" ,date:"2024-03-25"},
               {title : "Assessment-Tag HSLU" ,date:"2024-04-02"},
               {title : "Assessment-Tag HSLU" ,date:"2024-04-03"},
               {title : "Assessment-Tag HSLU" ,date:"2024-04-04"},
               {title : "Assessment-Tag HSLU" ,date:"2024-04-05"},
+              {title : "Aufnahmeentscheid HSLU", date:"2024-04-18"}
             ]}
             // eventContent={renderEventContent}
           />
