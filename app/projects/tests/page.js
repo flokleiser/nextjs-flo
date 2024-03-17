@@ -69,7 +69,23 @@ z-[-1]"
       <hr className={styles.pageDivider} />
       <div style={{ padding: "1rem" }} />
 
+
       <div className="flex flex-row mx-11">
+
+      <div
+          className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link
+                href="/projects/tests/canvasTest"
+              >
+              3D
+              </Link>
+            </p>
+          </div>
+        </div>
+
         <div
           className={styles.buttonLinksPage}
         >
