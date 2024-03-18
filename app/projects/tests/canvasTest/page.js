@@ -8,6 +8,8 @@ import * as THREE from 'three'
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import Stats from 'three/examples/jsm/libs/stats.module'
+import { useGLTF } from '@react-three/drei'
+
 
 
 const scene = new THREE.Scene()
