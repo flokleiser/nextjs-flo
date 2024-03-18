@@ -4,9 +4,38 @@ import styles from "app/page.module.css";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
+import * as THREE from 'three'
+import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import Stats from 'three/examples/jsm/libs/stats.module'
+
+
+const scene = new THREE.Scene()
 
 const light = new PointLight();
 light.position.set(1, 1, 0);
+
+
+const objLoader = new OBJLoader()
+objLoader.load(
+    'public/stl/snowdrop.obj',
+    (object) => {
+        // (object.children[0] as THREE.Mesh).material = material
+        // object.traverse(function (child) {
+        //     if ((child as THREE.Mesh).isMesh) {
+        //         (child as THREE.Mesh).material = material
+        //     }
+        // })
+        scene.add(object)
+    },
+    (xhr) => {
+        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+    },
+    (error) => {
+        console.log(error)
+    }
+)
+
 
 export default function canvasTest() {
 
