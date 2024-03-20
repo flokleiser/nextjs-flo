@@ -7,6 +7,8 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+// import { STLLoader } from 'three/addons/loaders/STLLoader.js';
+// import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 import { AnimatePresence, motion} from 'framer-motion';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -22,7 +24,9 @@ const data = [
 ] 
 
 function Model() {
-    const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
+    const obj= useLoader(OBJLoader, '/stl/snowdropnew.obj');
+    // const obj= useLoader(STLLoader, '/stl/snowdroptestnew.stl')
+
     return <primitive object={obj} />;
     }
 
@@ -287,8 +291,9 @@ return () => {
       {/* <div style={{ width: "85vw", height: "55vh" }}> */}
       <div className={styles.linkContainerFlowerModel}>
       <Canvas>
-        <ambientLight intensity={0.5} />
-        <spotLight position={[0,0,15]} />
+        {/* <ambientLight intensity={0.5} /> */}
+        {/* <spotLight position={[0,0,15]} /> */}
+        <directionalLight color={"#ffffff"} intensity={0.5} position={[5, 10, 10]} />
         <OrbitControls />
         <Model />
       </Canvas>
