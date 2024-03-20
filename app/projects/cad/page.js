@@ -310,25 +310,25 @@ return () => {
         <Model />
       </Canvas>
 
-  {/* <div className={styles.cadModelButtons}> */}
-  <div className="flex">
 
+  <div className={styles.cadModelButtons}>
     <button className={styles.buttonCad}>
-      <h1> <Link href="/projects/cad">Open</Link> </h1>
+      <h1> Open </h1>
     </button>
 
     <button className={styles.buttonCad}>
-      <h1> <Link href="/projects/cad">Clo</Link> </h1>
+      <h1> Closed</h1>
     </button>
-
   </div>
-
 </div>
 
 
 
              
-              </div>
+</div>
+
+
+
             <div style={{ padding: "2rem" }} />
       {/* <hr className={styles.pageDivider} /> */}
       <hr className={styles.pageDividerCad} />
