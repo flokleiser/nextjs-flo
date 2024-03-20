@@ -7,10 +7,12 @@ import * as THREE from 'three';
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+// import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { AnimatePresence, motion} from 'framer-motion';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
 const data = [
@@ -23,17 +25,16 @@ const data = [
 ] 
 
 function Model() {
-    // const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
-    const obj= useLoader(OBJLoader, '/stl/snowdropApplied.obj');
+    const gltf= useLoader(GLTFLoader, '/stl/snowdrop_big.glb');
     const material = new THREE.MeshStandardMaterial({ color: 'white', side: THREE.DoubleSide });
 
-    obj.traverse((child) => {
-        if (child instanceof THREE.Mesh) {
-          child.material = material;
-        }
-      });
+    // gltf.traverse((child) => {
+    //     if (child instanceof THREE.Mesh) {
+    //       child.material = material;
+    //     }
+    //   });
 
-    return <primitive object={obj} />;
+    return <primitive object={gltf.scene} />;
     }
 
 
@@ -298,8 +299,8 @@ return () => {
       <div className={styles.linkContainerFlowerModel}>
       <Canvas>
         {/* <ambientLight intensity={0.5} /> */}
-        {/* <spotLight position={[0,0,15]} /> */}
-        <directionalLight color={"#ffffff"} intensity={0.5} position={[5, 10, 10]} />
+        <spotLight position={[0,0,15]} />
+        <directionalLight color={"#ffffff"} intensity={0.8} position={[5, 10, 10]} />
         <OrbitControls />
         <Model />
       </Canvas>
