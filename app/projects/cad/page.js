@@ -294,6 +294,17 @@ return () => {
 
       {/* <div style={{ width: "90vw", height: "55vh" }}> */}
       <div className={styles.linkContainerCADModel} >
+
+{/* <div style={{display:'flex'}}>   */}
+  <div className={styles.buttonCad}>
+    <h1> <Link href="/projects">Open</Link> </h1>
+  </div>
+
+  <div className={styles.buttonCad}>
+    <h1> <Link href="/projects">Closed</Link> </h1>
+  </div>
+{/* </div> */}
+
       <Canvas>
         <ambientLight intensity={0.5} />
         <spotLight position={[0,0,15]} />
@@ -302,8 +313,6 @@ return () => {
       </Canvas>
       </div>
 
-      {/* <div style={{padding:'0.5rem'}} />
-      </div> */}
 
 
              

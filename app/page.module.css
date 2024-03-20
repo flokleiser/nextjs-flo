@@ -790,6 +790,29 @@ transition: all 0.5s ease-in-out;
   margin: 2rem;
 }
 
+.buttonCad {
+  position:absolute;
+  justify-self:top;
+  /* margin-top:0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem; 
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;  */
+  width:65px;
+  justify-self: center;
+  /* color: rgb(244 244 245); */
+  /* color: rgba(99, 174, 152, 1); */
+  /* background-color: rgb(120 113 108 / 0.5); */
+  background-color: rgba(99, 174, 152, 1);
+  border-style: solid;
+  border-width: 2px;
+  /* background-color: rgba(74, 117, 110, 0.7); */
+  border-radius: 0.35rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+  transition: transform 200ms, border 200ms;
+  cursor: pointer;
+}
+
 .backbutton-hidden {
   opacity: 0;
   pointer-events: none;
@@ -1333,27 +1356,6 @@ transition: all 0.5s ease-in-out;
   grid-column-gap: 1.5rem;
 }
 
-/* @media (min-width: 2000px) {
-  .linkContainerCad {
-    background-position: -15px -15px;
-    background-size: 12% 350px;
-  }
-}
-
-@media (max-width: 2000px) {
-  .linkContainerCad {
-    background-position: -15px -15px;
-    background-size: 17% 250px;
-  }
-}
-
-@media (max-width: 1300px) {
-  .linkContainerCad {
-    background-position: -15px -15px;
-    background-size: 21% 250px;
-  }
-} */
-
 
 @media (min-width: 1120px) {
 
@@ -1588,6 +1590,10 @@ transition: all 0.5s ease-in-out;
   } 
 
   .backbutton:hover {
+    transform: scale(1.07);
+  }
+  
+  .buttonCad:hover {
     transform: scale(1.07);
   }
 

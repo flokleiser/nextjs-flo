@@ -42,8 +42,8 @@ const data4 = [
 ];
 
 function codeBlock1() {
-  const codeString1 = `
-  if (newCenterPoint1) {
+  const codeString1 = 
+  `if (newCenterPoint1) {
   selectedCenterPoint = 1;
   followMouse = false;
 
@@ -75,8 +75,8 @@ function codeBlock1() {
 }
 
 function codeBlock2() {
-  const codeString2 = `
-  if (newCenterPoint2) { 
+  const codeString2 = 
+  `if (newCenterPoint2) { 
   selectedCenterPoint = 2;
   followMouse = false;
           
@@ -92,9 +92,7 @@ function codeBlock2() {
       angleY = 0;
     } 
   }
-} 
-
-`
+} `
 ;
   return (
     <SyntaxHighlighter
@@ -118,8 +116,8 @@ function codeBlock2() {
 }
 
 function codeBlock3() {
-  const codeString2 = `
-  if (newCenterPoint3) {
+  const codeString2 = 
+  `if (newCenterPoint3) {
   selectedCenterPoint = 3;
   followMouse = false;
   amplitude = 150;
@@ -130,8 +128,7 @@ function codeBlock3() {
   let numPoints = 12;
   let angleIncrement = TWO_PI / numPoints;
   angle += 0.01 * angleIncrement;
-}
-`;
+}`;
 
   return (
     <SyntaxHighlighter
@@ -155,8 +152,8 @@ function codeBlock3() {
 }
 
 function codeBlock4() {
-  const codeString4 = `
-if (newCenterPoint7) {
+  const codeString4 = 
+  `if (newCenterPoint7) {
   selectedCenterPoint = 7;
   isRotating = !isRotating;
 
@@ -207,8 +204,7 @@ if (newCenterPoint7) {
           randomSwitch();
       }
     }
-}
-  `;
+}`;
   return (
     <SyntaxHighlighter
       language="javascript"
