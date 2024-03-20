@@ -14,19 +14,16 @@ import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
-// const data = [
-//   { image : '/images/cad/cad website.png', id: 0, description:'Render of the knife, made in Blender'},
-// ]
+
+var butterflyModel = '/stl/butterfly_open.glb'
 
 function Model() {
-  const gltf= useLoader(GLTFLoader, '/stl/butterfly_open.glb');
+  // const gltf= useLoader(GLTFLoader, '/stl/butterfly_open.glb');
+  // const gltf= useLoader(GLTFLoader, {modelClosed ? ('/stl/butterfly_open.glb'):('/stl/butterfly_closed.glb')});
+  const gltf= useLoader(GLTFLoader, butterflyModel);
+
   const material = new THREE.MeshStandardMaterial({ color: 'white', side: THREE.DoubleSide });
 
-  // gltf.traverse((child) => {
-  //     if (child instanceof THREE.Mesh) {
-  //       child.material = material;
-  //     }
-  //   });
 
   return <primitive object={gltf.scene} />;
   }
@@ -50,6 +47,29 @@ const data4 = [
 ]
 
 export default function cad() {
+
+
+  const [modelClosed, setModelClosed] = useState(false);
+  // const [butterflyModel, setButterflyModel] = useState('/stl/butterfly_open.glb');
+  const handleModelSwitch= () => {
+    setModelClosed(!modelClosed);
+    };
+    // useEffect(() => {
+    //   if (modelClosed) {
+    //     setButterflyModel('/stl/butterfly_closed.glb');
+    //   } else {
+    //     setButterflyModel('/stl/butterfly_open.glb');
+    //     console.log('check');
+    //   }
+    // }, [modelClosed]);
+  if (modelClosed) {
+    butterflyModel = '/stl/butterfly_closed.glb'
+  }
+  else {
+    butterflyModel = '/stl/butterfly_open.glb'
+    console.log('check')
+  }
+
 
  
   const [selectedImage, setSelectedImage] = useState(null);
@@ -312,13 +332,19 @@ return () => {
 
 
   <div className={styles.cadModelButtons}>
-    <button className={styles.buttonCad}>
+    {/* <button className={styles.buttonCad}>
       <h1> Open </h1>
+    </button> */}
+
+    <button className={styles.buttonCad}
+    onClick={handleModelSwitch}>
+      {modelClosed? (
+        <h1> Open</h1>
+      ) : (
+        <h1> Close</h1>
+      )}
     </button>
 
-    <button className={styles.buttonCad}>
-      <h1> Closed</h1>
-    </button>
   </div>
 </div>
 
