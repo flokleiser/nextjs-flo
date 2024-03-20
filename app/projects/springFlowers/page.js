@@ -3,6 +3,10 @@ import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 import React, {useState, useEffect} from 'react';
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { AnimatePresence, motion} from 'framer-motion';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -16,6 +20,11 @@ const data = [
   { image: '/images/illustrator/flowers/ivy.png', id:4},
   { image: '/images/illustrator/flowers/sunflower.png', id:5},
 ] 
+
+function Model() {
+    const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
+    return <primitive object={obj} />;
+    }
 
 
 export default function flowers() {
@@ -67,8 +76,6 @@ export default function flowers() {
       setSelectedImage(dataArray[newIndex].image);
     }
   };
-
-
 
 /* handleoutsideclick*/
 useEffect(() => {
@@ -267,8 +274,23 @@ return () => {
               </div>
               {/* </div> */}
 
-            <div style={{padding:'1rem'}} />
-            <div style={{ padding: "0.5rem" }} />
+
+      <div style={{padding:'1rem'}} />
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
+
+      <div style={{ width: "85vw", height: "55vh" }}>
+      <Canvas>
+        <ambientLight intensity={0.5} />
+        <spotLight position={[0,0,15]} />
+        <OrbitControls />
+        <Model />
+      </Canvas>
+      </div>
+
+      <div style={{padding:'1rem'}} />
+      <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 

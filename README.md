@@ -1,5 +1,13 @@
 # To-Do/Ideas List:
 
+## 3D models:
+- [ ] Figure out how to make textures
+- [ ] add to cad page
+
+## Cleaning up:
+- [ ] Make a component for my images with the handleoutsideclick etc
+- [ ] Make a component for the background color
+
 ## Updates:
 - [x] Update Portfolio
 

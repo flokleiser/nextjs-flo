@@ -117,14 +117,14 @@ export default function projects() {
             href = '/projects/springFlowers'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/flowercard.png")',
+            style={{ backgroundImage: 'url("/images/cards/flowercardWhite.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
             <h2>
                 Flower Cards 
             </h2>
-            <p>Illustrator, 3D printed</p>
+            <p>Illustrator, 3D-Printed</p>
             </Link>
 
             <Link
