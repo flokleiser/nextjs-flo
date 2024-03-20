@@ -7,10 +7,11 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
 import { useInView } from 'framer-motion';
+import * as THREE from 'three';
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
 // const data = [
@@ -18,8 +19,16 @@ import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 // ]
 
 function Model() {
-  const obj= useLoader(OBJLoader, '/stl/butterflyNewTest.obj');
-  return <primitive object={obj} />;
+  const gltf= useLoader(GLTFLoader, '/stl/butterfly_open.glb');
+  const material = new THREE.MeshStandardMaterial({ color: 'white', side: THREE.DoubleSide });
+
+  // gltf.traverse((child) => {
+  //     if (child instanceof THREE.Mesh) {
+  //       child.material = material;
+  //     }
+  //   });
+
+  return <primitive object={gltf.scene} />;
   }
 
 const data2 = [
