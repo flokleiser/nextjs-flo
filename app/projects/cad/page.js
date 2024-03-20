@@ -7,11 +7,20 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
 import { useInView } from 'framer-motion';
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
+import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
 
-const data = [
-  { image : '/images/cad/cad website.png', id: 0, description:'Render of the knife, made in Blender'},
-]
+// const data = [
+//   { image : '/images/cad/cad website.png', id: 0, description:'Render of the knife, made in Blender'},
+// ]
+
+function Model() {
+  const obj= useLoader(OBJLoader, '/stl/butterflyNewTest.obj');
+  return <primitive object={obj} />;
+  }
 
 const data2 = [
   { image: '/images/cad/cad parts2.png', id: 1, description:'Individual parts nr. 1'},
@@ -47,7 +56,7 @@ export default function cad() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3, ...data4];
+    const dataArray = [ ...data2, ...data3, ...data4];
     const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
     if (selectedIndex !== -1) {
       setSelectedImage(imageSrc);
@@ -62,7 +71,7 @@ export default function cad() {
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3, ...data4];
+      const dataArray = [ ...data2, ...data3, ...data4];
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -76,7 +85,7 @@ export default function cad() {
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3, ...data4];
+      const dataArray = [ ...data2, ...data3, ...data4];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -229,20 +238,7 @@ return () => {
         }}
           >
           
-          {/* <motion.img
-            src={selectedImage}
-            initial={{scale:0.5}}
-            animate={{scale:1}}
-            exit={{scale:0.45}}
-            transition={{duration:0.3}}
-            alt=""
-            className="max-w-4/5 max-h-4/5"
-            style={{ maxHeight: '80vh', zIndex: 9990, 
-            borderRadius:'24px',
-            border:'solid',
-            borderColor:'white'
-          }}
-          /> */}
+         
           <motion.div className="flex flex-col items-center mt-8"
           initial={{ scale: 0.5 }}
           animate={{ scale: 1 }}
@@ -254,22 +250,11 @@ return () => {
                 alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
                 style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px ', 
-                // border:'solid',
-                // borderColor: 'rgba(99, 174, 152, 1)'
+       
               }}
 
               />
 
-
-          {/* <div className={styles.imageDescription} style={{
-            backgroundColor:'rgb(50,50,50)'
-            backgroundColor: 'rgba(74, 117, 110, 0.3)'
-            }}> */}
-          {/* <p> */}
-          {/* {currentIndex + ")    "}   */}
-          {/* {selectedDescription} */}
-          {/* </p> */}
-          {/* </div> */}
           </motion.div>
 
            <button
@@ -289,7 +274,6 @@ return () => {
               <IoIosArrowBack style={{ fontSize: '2rem' }}/>
             </button>
             </div>
-            {/* <div className="absolute right-5"> */}
             <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="rightButton"
@@ -302,61 +286,35 @@ return () => {
           </div>
         </motion.div>
       )}
+
       </AnimatePresence>
-              <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-                    {data.map((x) =>  (
 
-                  <article key="cad1" 
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-                  >
+      <div style={{ padding: "1rem" }} />
 
-                    <div className="relative rounded-2xl">
-                      <Image
-                        width={600}
-                        height={400}
-                        className={`rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
-                        src={x.image}
-                        alt=""
-                        onClick={() => handleImageClick(x.image)}
-                      />
-                    </div>
-                  </article>
-                    ))}
-                  </div>
-                </div>
+
+      {/* <div style={{ width: "90vw", height: "55vh" }}> */}
+      <div className={styles.linkContainerCADModel} >
+      <Canvas>
+        <ambientLight intensity={0.5} />
+        <spotLight position={[0,0,15]} />
+        <OrbitControls />
+        <Model />
+      </Canvas>
+      </div>
+
+      {/* <div style={{padding:'0.5rem'}} />
+      </div> */}
+
+
+             
               </div>
+            <div style={{ padding: "1rem" }} />
+      {/* <hr className={styles.pageDivider} /> */}
+      <hr className={styles.pageDividerCad} />
+      <div style={{ padding: "1rem" }} />
             
             <div styles={{ padding: '2rem' }}> </div>
 
-{/* <div className={styles.subtitledescription}>
-            <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
-            <a 
-            style={{paddingBottom: '2rem'}}
-                      href="https://cad.onshape.com/documents/74ceed200a5aa4f63a77c82e/w/2cd4c25834f626e76cd4c9af/e/d0d97ca62557a0c79fb7dfc5?renderMode=0&uiState=6567658f98467778680c9faf" target="_blank">
-                    <Image
-                      src="/svg/onshape.svg"
-                      alt="Onshape Logo"
-                      className={styles.vercelLogo}
-                      style={{ filter: 'invert(100%)' }}
-                      width={50}
-                      height={24}
-                      priority
-                    />  
-                   Project on OnShape
-                    </a>
-            </div>
-            </div>
-
-            <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} /> */}
-
-{/* <div style={{ padding: "1rem" }} /> */}
-{/* <hr className={styles.pageDividerCad} /> */}
       <div style={{ padding: "1rem" }} />
 
       <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
