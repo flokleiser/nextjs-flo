@@ -175,7 +175,7 @@ return () => {
             </div>
 
             <div style={{paddingTop:'1rem'}} />
-      <div className={styles.linkContainerMomentfulness}>
+      <div className={styles.linkContainerFlowers}>
 
 
       <h1 className={styles.titleWithoutPadding}>
@@ -188,6 +188,11 @@ return () => {
                Minimalistic flowers designed in Adobe Illustrator, converted to STL files with blender, and 3D printed to use as a frame for making postcards. 
              </p>
             </div>
+
+            <div style={{padding:'1rem'}} />
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
 
                  
             <AnimatePresence>
@@ -275,12 +280,12 @@ return () => {
               {/* </div> */}
 
 
-      <div style={{padding:'1rem'}} />
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "0.5rem" }} />
+      <div style={{ padding: "1.5rem" }} />
 
-      <div style={{ width: "85vw", height: "55vh" }}>
+      {/* <div style={{ width: "85vw", height: "55vh" }}> */}
+      <div className={styles.linkContainerFlowerModel}>
       <Canvas>
         <ambientLight intensity={0.5} />
         <spotLight position={[0,0,15]} />
