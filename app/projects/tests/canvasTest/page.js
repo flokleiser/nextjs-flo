@@ -5,10 +5,10 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
 import * as THREE from 'three'
-import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
+// import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import Stats from 'three/examples/jsm/libs/stats.module'
-import { useGLTF } from '@react-three/drei'
+// import Stats from 'three/examples/jsm/libs/stats.module'
+// import { useGLTF } from '@react-three/drei'
 
 
 
@@ -18,28 +18,26 @@ const light = new PointLight();
 light.position.set(1, 1, 0);
 
 
-const objLoader = new OBJLoader()
-objLoader.load(
-    'public/stl/snowdrop.obj',
-    (object) => {
-        // (object.children[0] as THREE.Mesh).material = material
-        // object.traverse(function (child) {
-        //     if ((child as THREE.Mesh).isMesh) {
-        //         (child as THREE.Mesh).material = material
-        //     }
-        // })
-        scene.add(object)
-    },
-    (xhr) => {
-        console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
-    },
-    (error) => {
-        console.log(error)
-    }
-)
+function Model() {
+  // const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
+  const obj= useLoader(OBJLoader, '/stl/snowdropCenter.obj');
+  return <primitive object={obj} />;
+  // objLoader.load(
+  //     'public/stl/snowdrop.obj',
+  //     (object) => {
+  //         scene.add(object)
+  //     },
+  //     (xhr) => {
+  //         console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
+  //     },
+  //     (error) => {
+  //         console.log(error)
+  //     }
+  //   )
+  }
 
 
-export default function canvasTest() {
+export default function test3d() {
 
   useEffect(() => {
     document.title = "3D test";
@@ -86,20 +84,11 @@ z-[-1]"
 
 
       <div style={{ width: "75vw", height: "75vh" }}>
-      {/* <Canvas camera={{ position: [0, 0, 3] }}>  */}
-      <Canvas  onCreated={({ camera, scene }) => {
-        camera.add(light);
-        scene.add(camera);
-      }}>
-        <ambientLight intensity={0.25} />
-        {/* <DirectionalLight color="white" position={[0,0,5]} /> */}
-        <spotLight color="white" position={[0, 0, 5]} />
+      <Canvas>
+        <ambientLight intensity={0.5} />
+        <spotLight position={[0,0,5]} />
         <OrbitControls />
-            <mesh>
-            <boxGeometry args={[2,2,2]} /> 
-            <meshStandardMaterial />
-            </mesh>
-         
+        <Model />
       </Canvas>
       </div>
 
