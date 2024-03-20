@@ -1,31 +1,28 @@
 'use client'
-import React, {useState, useEffect} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
-import Link from 'next/link'
+import Link from 'next/link';
+import React, {useState, useEffect} from 'react';
+import { AnimatePresence, motion} from 'framer-motion';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { AnimatePresence, motion} from 'framer-motion';
 
 
+const data = [
+  { image: '/images/illustrator/flowers/snowdrop.png', id:0},
+  { image: '/images/illustrator/flowers/tulip.png', id:1},
+  { image: '/images/illustrator/flowers/daffodil.png', id:2},
+  { image: '/images/illustrator/flowers/rose.png', id:3},
+  { image: '/images/illustrator/flowers/ivy.png', id:4},
+  { image: '/images/illustrator/flowers/sunflower.png', id:5},
+] 
 
-const data2 = [
-  { image: '/images/illustrator/howtont/howtont2.png', id: 6},
-  { image: '/images/illustrator/howtont/howtont3.png', id: 7},
-  { image: '/images/illustrator/howtont/howtont4.png', id: 8},
-  { image: '/images/illustrator/howtont/howtont5.png', id: 9},
-  { image: '/images/illustrator/howtont/howtont6.png', id: 10},
-];
 
-const data3 = [
-  { image: '/images/illustrator/reduce to the max/reduce5.png', id: 11},
-  { image: '/images/illustrator/reduce to the max/reduce4.png', id: 12},
-  { image: '/images/illustrator/reduce to the max/reduce3.png', id: 13},
-  { image: '/images/illustrator/reduce to the max/reduce2.png', id: 14},
-  { image: '/images/illustrator/reduce to the max/reduce1.png', id: 15},
-];
-
-export default function illustrator() {
+export default function flowers() {
+  
+  useEffect(() => {
+    document.title = 'Projects - Spring Flowers';
+  }, []);
 
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -40,7 +37,7 @@ export default function illustrator() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data2, ...data3];
+    const dataArray = [...data];
     const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
     if (selectedIndex !== -1) {
       setSelectedImage(imageSrc);
@@ -52,7 +49,7 @@ export default function illustrator() {
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [ ...data2, ...data3];
+      const dataArray = [ ...data];
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -63,7 +60,7 @@ export default function illustrator() {
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [ ...data2, ...data3];
+      const dataArray = [ ...data];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
@@ -128,10 +125,6 @@ return () => {
 };
 }, [handleResetClick, handlePrevImage, handleNextImage]);
 
-  useEffect(() => {
-    document.title = 'Projects - Illustrator';
-  }, []);
-
     return (
         <main className={styles.main}>
               <div className="relative 
@@ -173,57 +166,23 @@ return () => {
            >
             <h1> <Link href="/projects">All Projects </Link> </h1>
             </div>
-           
-          {/* <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div> */}
 
-<div style={{paddingTop:'1rem'}} />
-      <div className={styles.linkContainerIllustrator} >
+            <div style={{paddingTop:'1rem'}} />
+      <div className={styles.linkContainerMomentfulness}>
 
-      {/* <h1 className={styles.titleWithoutPadding}> */}
-      <h1 className={styles.titleWithoutPaddingDark} >
 
-            {/* <h1 className={styles.title}> */}
-             Illustrator Artworks
+      <h1 className={styles.titleWithoutPadding}>
+
+            Flowers
             </h1>
 
-            <div className={styles.subtitledescription} 
-            style={{color:'rgb(55,55,55)'}}
-            >
-              
-        <p>
-          Artworks created with Adobe Illustrator
-        </p>
-      </div>
-
-      <div style={{padding:'1rem'}} />
-            <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDividerDark} />
-      <div style={{ padding: "0.5rem" }} />
-            
-            {/* <div className={styles.linkContainer}>
-        <div style={{ padding: "1rem" }}> </div> */}
-
-            <div className={styles.subtitle} 
-            style={{color:'rgb(55,55,55)'}}
-            >
+            <div className={styles.subtitledescription}>
             <p>
-            How To'nt    
-            </p>
+               Minimalistic flowers designed in Adobe Illustrator, converted to STL files with blender, and 3D printed to use as a frame for making postcards. 
+             </p>
             </div>
 
-            <div className={styles.subtitledescription} 
-            style={{color:'rgb(55,55,55)'}}
-            >
-            <p>
-            {/* A project inspired by Ikea instructions, with a twist.            */}
-            A series of "Ikea"-like instruction manuals, with a twist.
-            </p>
-            </div>
-           
-           
-          
+                 
             <AnimatePresence>
               {selectedImage && (
                <motion.div
@@ -285,7 +244,7 @@ return () => {
               <div className="p-3 container mx-auto">
                 <div className="py-2"></div>
                   <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
-                    {data2.map((x) =>  (
+                    {data.map((x) =>  (
                   <article key="i1"
                     className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                   >
@@ -308,59 +267,20 @@ return () => {
               </div>
               {/* </div> */}
 
-
+            <div style={{padding:'1rem'}} />
             <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDividerDark} />
+      <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
-              
-            {/* <div className={styles.linkContainer}>
-            <div style={{ padding: "1rem" }}> </div> */}
 
-            <div className={styles.subtitle} 
-            style={{color:'rgb(55,55,55)'}}
-            >
-            <p>
-            Reduce To The Max 
-            </p>
-            </div>
 
-            <div className={styles.subtitledescription} 
-            style={{color:'rgb(55,55,55)'}}
-            >
-            <p>
-             Depictions of 5 sports, reduced to their most basic shapes.
-            </p>
-            </div>
 
-            <div className="">
-              <div className="p-3 container mx-auto">
-                <div className="py-2"></div>
-                  <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
-                    {data3.map((x) =>  (
-                  <article key="i2"
-                    className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
-                  >
-                    <div className="relative rounded-2xl">
-                      <Image
-                        width={400}
-                        height={400}
-                        className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
-                          selectedImage ? 'z-0' : ''
-                        }`}
-                        src={x.image}
-                        alt=""
-                        onClick={() => handleImageClick(x.image)}
-                      />
-                    </div>
-                  </article>
-                    ))}
-                  </div>
-                </div>
-              </div>
-           {/* </div>  */}
-           
-           </div>
-           <div style={{padding:'2rem'}}/>
+            
+
+       <div style={{ padding: "1rem" }} />
+       </div>
+       <div style={{ padding: "2rem" }} />
+
+
 
         </main>
     )
