@@ -1,5 +1,19 @@
 # To-Do/Ideas List:
 
+## 3D models:
+- [ ] Figure out how to make textures
+
+
+- [ ] CAD:
+    - [ ] Figure out how to display multiple models
+    - [ ] Buttons to switch from open to closed
+        - [ ] Make buttons not take up entire row
+    - [x] add to cad page
+
+## Cleaning up:
+- [ ] Make a component for my images with the handleoutsideclick etc
+- [ ] Make a component for the background color
+
 ## Updates:
 - [x] Update Portfolio
 
@@ -13,8 +27,6 @@
 - [ ] Interactive part --> 
     - [x] figure out how to set drawing to true on mouse over?
     - [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
-    - [ ] Make things in drop down menu actually do something
-- [ ] Video to showcase tool (screen recording)
 
 ### Random fun stuff
 - [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
@@ -28,11 +40,6 @@
 - [ ] Look into animation keyframes for svg drawing (testing page)
 - [ ] try layoutId (for pictures left/right swiping animations)
 - [ ] Look into search function
-
-### Random Fixes
-- [ ] Figure out why suspense doesnt work in projects
-- [ ] Look into preloading gifs/images maybe
-- [ ] Keep page from displaying until fully loaded (?)
 
 ### Videos/Gifs/Images:
 

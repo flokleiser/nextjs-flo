@@ -98,22 +98,6 @@ export default function projects() {
             <p>VR Game, Unity</p>
             </Link>
 
-
-            <Link
-            href = '/projects/voxel'
-            className={styles.card}
-            rel="noopener noreferrer"
-            // style={{ backgroundImage: 'url("/images/cards/voxel transparentwide.png")',
-            style={{ backgroundImage: 'url("/images/cards/voxelwhite5.png")',
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            >
-            <h2>
-                Voxel Art
-            </h2>
-            <p>MagicaVoxel</p>
-            </Link>
-
             <Link
                 className={styles.card}
                 rel="noopener noreferrer"
@@ -130,6 +114,38 @@ export default function projects() {
             </Link>
 
             <Link
+            href = '/projects/springFlowers'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("/images/cards/flowercardWhite.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Flower Cards 
+            </h2>
+            <p>Illustrator, 3D-Printed</p>
+            </Link>
+
+            <Link
+            href = '/projects/momentfulness'
+            className={styles.card}
+            style={{ backgroundImage: 'url("/images/cards/momentfulness card test 4.png")' ,
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            rel="noopener noreferrer"
+            >
+           <h2>
+               Momentfulness 
+            </h2>
+            <p>JavaScript/HTML-canvas</p>
+            </Link>
+
+
+
+     
+
+            <Link
             href = '/projects/animations'
             className={styles.card}
             style={{ backgroundImage: 'url("/images/cards/animlogo transparent5.png")',
@@ -142,6 +158,37 @@ export default function projects() {
             </h2>
             <p>Adobe After Effects</p>
             </Link>
+
+            <Link
+            href = '/projects/illustrator'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Illustrator
+            </h2>
+            <p>Designs & Artworks </p>
+            </Link>
+
+            <Link
+            href = '/projects/voxel'
+            className={styles.card}
+            rel="noopener noreferrer"
+            // style={{ backgroundImage: 'url("/images/cards/voxel transparentwide.png")',
+            style={{ backgroundImage: 'url("/images/cards/voxelwhite5.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Voxel Art
+            </h2>
+            <p>MagicaVoxel</p>
+            </Link>
+
+         
 
             <Link
             href = '/projects/crafts'
@@ -158,45 +205,7 @@ export default function projects() {
             </Link>
 
 
-            <Link
-            href = '/projects/illustrator'
-            className={styles.card}
-            rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            >
-            <h2>
-                Illustrator
-            </h2>
-            <p>Designs & Artworks </p>
-            </Link>
             
-            {/* <Link
-            href = '/404'
-            className={styles.card}
-            rel="noopener noreferrer"
-            >
-            <h2>
-               Placeholder 
-            </h2>
-            <p>placeholder</p>
-            </Link> */}
-
-            <Link
-            href = '/projects/momentfulness'
-            className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/momentfulness card test 4.png")' ,
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
-            rel="noopener noreferrer"
-            >
-           <h2>
-               Momentfulness 
-            </h2>
-            <p>JavaScript/HTML-canvas</p>
-            </Link>
-
           
       </div>
 
