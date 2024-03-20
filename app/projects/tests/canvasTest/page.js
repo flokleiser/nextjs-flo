@@ -5,10 +5,7 @@ import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
 import * as THREE from 'three'
-// import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-// import Stats from 'three/examples/jsm/libs/stats.module'
-// import { useGLTF } from '@react-three/drei'
 
 
 
@@ -19,7 +16,6 @@ light.position.set(1, 1, 0);
 
 
 function Model() {
-  // const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
   const obj= useLoader(OBJLoader, '/stl/snowdropCenter.obj');
   return <primitive object={obj} />;
   // objLoader.load(
@@ -86,13 +82,12 @@ z-[-1]"
       <div style={{ width: "75vw", height: "75vh" }}>
       <Canvas>
         <ambientLight intensity={0.5} />
-        <spotLight position={[0,0,5]} />
+        <spotLight position={[0,0,15]} />
         <OrbitControls />
         <Model />
       </Canvas>
       </div>
 
-      
 
 
       <div style={{ padding: "2rem" }} />
