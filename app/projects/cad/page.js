@@ -292,18 +292,7 @@ return () => {
       <div style={{ padding: "1rem" }} />
 
 
-      {/* <div style={{ width: "90vw", height: "55vh" }}> */}
-      <div className={styles.linkContainerCADModel} >
-
-{/* <div style={{display:'flex'}}>   */}
-  <div className={styles.buttonCad}>
-    <h1> <Link href="/projects">Open</Link> </h1>
-  </div>
-
-  <div className={styles.buttonCad}>
-    <h1> <Link href="/projects">Closed</Link> </h1>
-  </div>
-{/* </div> */}
+<div className={styles.linkContainerCADModel} >
 
       <Canvas>
         <ambientLight intensity={0.5} />
@@ -311,13 +300,27 @@ return () => {
         <OrbitControls />
         <Model />
       </Canvas>
-      </div>
+
+  {/* <div className={styles.cadModelButtons}> */}
+  <div className="flex">
+
+    <button className={styles.buttonCad}>
+      <h1> <Link href="/projects/cad">Open</Link> </h1>
+    </button>
+
+    <button className={styles.buttonCad}>
+      <h1> <Link href="/projects/cad">Clo</Link> </h1>
+    </button>
+
+  </div>
+
+</div>
 
 
 
              
               </div>
-            <div style={{ padding: "1rem" }} />
+            <div style={{ padding: "2rem" }} />
       {/* <hr className={styles.pageDivider} /> */}
       <hr className={styles.pageDividerCad} />
       <div style={{ padding: "1rem" }} />
