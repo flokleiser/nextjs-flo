@@ -24,8 +24,8 @@ const data = [
 ] 
 
 function Model() {
-    const obj= useLoader(OBJLoader, '/stl/snowdropnew.obj');
-    // const obj= useLoader(STLLoader, '/stl/snowdroptestnew.stl')
+    // const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
+    const obj= useLoader(OBJLoader, '/stl/snowdropApplied.obj');
 
     return <primitive object={obj} />;
     }
