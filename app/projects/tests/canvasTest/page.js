@@ -16,7 +16,8 @@ light.position.set(1, 1, 0);
 
 
 function Model() {
-  const obj= useLoader(OBJLoader, '/stl/snowdropCenter.obj');
+  // const obj= useLoader(OBJLoader, '/stl/snowdropCenter.obj');
+  const obj= useLoader(OBJLoader, '/stl/butterflyNewTest.obj');
   return <primitive object={obj} />;
   // objLoader.load(
   //     'public/stl/snowdrop.obj',
