@@ -3,12 +3,11 @@ import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 import React, {useState, useEffect} from 'react';
+import * as THREE from 'three';
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-// import { STLLoader } from 'three/addons/loaders/STLLoader.js';
-// import { STLLoader } from 'three/examples/jsm/loaders/STLLoader.js';
 import { AnimatePresence, motion} from 'framer-motion';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -26,6 +25,13 @@ const data = [
 function Model() {
     // const obj= useLoader(OBJLoader, '/stl/snowdrop.obj');
     const obj= useLoader(OBJLoader, '/stl/snowdropApplied.obj');
+    const material = new THREE.MeshStandardMaterial({ color: 'white', side: THREE.DoubleSide });
+
+    obj.traverse((child) => {
+        if (child instanceof THREE.Mesh) {
+          child.material = material;
+        }
+      });
 
     return <primitive object={obj} />;
     }
