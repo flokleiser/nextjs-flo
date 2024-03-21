@@ -45,28 +45,32 @@ const navSubItems = [
     name: "Skylands",
   },
   {
-    path: "/projects/voxel",
-    name: "Voxel Art",
-  },
-  {
     path: "/projects/cad",
     name: "CAD",
+  },
+  {
+    path: "/projects/springFlowers",
+    name: "Flowers",
+  },
+  {
+    path: "/projects/momentfulness",
+    name: "Momentfulness",
   },
   {
     path: "/projects/animations",
     name: "Animations",
   },
   {
-    path: "/projects/crafts",
-    name: "Crafts",
-  },
-  {
     path: "/projects/illustrator",
     name: "Illustrator",
   },
   {
-    path: "/projects/momentfulness",
-    name: "Momentfulness",
+    path: "/projects/voxel",
+    name: "Voxel Art",
+  },
+  {
+    path: "/projects/crafts",
+    name: "Crafts",
   },
 ];
 
