@@ -8,12 +8,9 @@ import { useState } from 'react';
 import Loading from './loading.js'
 import { NavbarProvider } from './components/Navbar';
 
-// const inter = Inter({ subsets: ['latin'] })
 const assistant = Assistant({ subsets: ['latin'] })
 
-
 export default function RootLayout({ children }) {
-
 
   return (
     <html lang="en">
