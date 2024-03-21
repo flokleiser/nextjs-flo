@@ -78,6 +78,20 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
+                href="/projects/tests/galleryTest"
+              >
+              ImageGallery
+              </Link>
+            </p>
+          </div>
+        </div>
+
+      <div
+      className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link
                 href="/projects/tests/cadTest"
               >
               CAD

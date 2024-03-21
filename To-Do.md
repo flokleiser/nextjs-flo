@@ -12,9 +12,8 @@
     - [x] add to cad page
 
 ## Cleaning up:
-- [ ] Make a component for my images with the handleoutsideclick etc
+- [x] Make a component for my images with the handleoutsideclick etc
 
-- [ ] Make a component for the background color
 
 ## Updates:
 - [x] Update Portfolio
