@@ -24,7 +24,12 @@ const data = [
 ];
 
 function Model() {
-  const gltf = useLoader(GLTFLoader, "/stl/snowdrop_big.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/snowdrop.glb");
+  const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/tulip.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/daffodil.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/rose.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/sunflower.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/ivy.glb");
   const material = new THREE.MeshStandardMaterial({
     color: "white",
     side: THREE.DoubleSide,
