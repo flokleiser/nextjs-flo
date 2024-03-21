@@ -6,12 +6,13 @@
 
 - [ ] CAD:
     - [ ] Figure out how to display multiple models
-    - [ ] Buttons to switch from open to closed
+    - [x] Buttons to switch from open to closed
         - [ ] Make buttons not take up entire row
     - [x] add to cad page
 
 ## Cleaning up:
 - [ ] Make a component for my images with the handleoutsideclick etc
+
 - [ ] Make a component for the background color
 
 ## Updates:
