@@ -2,7 +2,7 @@
 
 ___
 
-### My Projects
+## My Projects
 - Skylands (VR Game)
 - Creative Coding (p5js, JavaScript)
 - Sketches (Analogue)
@@ -15,16 +15,15 @@ ___
 - Voxel Art (MagicaVoxel)
 - Arts & Crafts (Cardboard)
 
-### My Portfolio
+## My Portfolio
 - PDF, made in Adobe Illustrator
 
-### About me
+## About me
 - CV
 - Infos about me
 
-### External Links
+## External Links
 - Google Drive
 - Github
 - YouTube (for videos)
 ___
-
