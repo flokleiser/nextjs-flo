@@ -312,7 +312,7 @@ export default function flowers() {
             </Canvas>
           </div>
 
-          <div className={styles.flowerButtonDiv}>
+          {/* <div className={styles.flowerButtonDiv}>
               <button className={styles.flowerButton}>
                 <h1> Snowdrop</h1>
               </button>
@@ -337,7 +337,7 @@ export default function flowers() {
                 <h1> Ivy</h1>
               </button>
 
-          </div>
+          </div> */}
           
 
         </div>
