@@ -73,6 +73,20 @@ z-[-1]"
       <div className="flex flex-row mx-11">
 
       <div
+      className={styles.buttonLinksPage}
+        >
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link
+                href="/projects/tests/cadTest"
+              >
+              CAD
+              </Link>
+            </p>
+          </div>
+        </div>
+
+      <div
           className={styles.buttonLinksPage}
         >
           <div className={styles.subtitledescription}>

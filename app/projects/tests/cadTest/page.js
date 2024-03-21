@@ -6,9 +6,11 @@ import Link from "next/link";
 import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
+import { useInView } from "framer-motion";
 import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 
@@ -19,6 +21,8 @@ function Model({modelPath}) {
 
   return <primitive ref={prim} object={copiedScene} />;
 }
+
+
 
 const data2 = [
   {
@@ -302,7 +306,7 @@ export default function cad() {
             <Canvas>
               {/* <ambientLight intensity={0.5} /> */}
               {/* <spotLight position={[0, 0, 0]} /> */}
-              <directionalLight color="white" position={[2, 0, 5]} />
+              <directionalLight color="white" position={[0, 0, 5]} />
               <OrbitControls />
               <Model modelPath={modelPath}/>
             </Canvas>
@@ -430,6 +434,9 @@ export default function cad() {
 
         <motion.div
           className=""
+          // style={{translateX:300, opacity:0.5, filter:'blur(10px)'}}
+          // whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
+          // transition={{duration:0.5}}
         >
           <div className="p-3 container mx-auto">
             <div className="py-2"></div>
@@ -471,6 +478,9 @@ export default function cad() {
 
         <motion.div
           className=""
+          // style={{translateX:-300, opacity:0.5, filter:'blur(10px)'}}
+          // whileInView={{translateX:0, opacity:1, filter:'blur(0px)'}}
+          // transition={{duration:0.5}}
         >
           <div className="p-3 container mx-auto">
             <div className="py-2"></div>
