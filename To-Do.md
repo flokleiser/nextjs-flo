@@ -1,5 +1,8 @@
 # To-Do/Ideas List:
 
+## General upkeep:
+- [ ] Seperate pages into "content" and "page", like a seperate file for the stuff that should be rendered on the page
+
 ## 3D models:
 - [x] Figure out how to make textures --> just use gtlf
 - [ ] Figure out better lighting
@@ -11,10 +14,7 @@
         - [ ] Make buttons not take up entire row
     - [x] add to cad page
 
-## Cleaning up:
-- [ ] Make a component for my images with the handleoutsideclick etc
 
-- [ ] Make a component for the background color
 
 ## Updates:
 - [x] Update Portfolio
@@ -46,6 +46,7 @@
 ### Videos/Gifs/Images:
 
 #### General:
+- [x] Make a component for my images with the handleoutsideclick etc
 - [x] Change general background of all pages (fml) --> to something that doesnt look like the circle cut off halfway through
 - [x] Maybe add borderRadius:'24px' to motion images
 - [x] Add "title" when big 

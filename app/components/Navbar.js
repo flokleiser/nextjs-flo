@@ -45,43 +45,63 @@ const navSubItems = [
     name: "Skylands",
   },
   {
-    path: "/projects/voxel",
-    name: "Voxel Art",
-  },
-  {
     path: "/projects/cad",
     name: "CAD",
+  },
+  {
+    path: "/projects/springFlowers",
+    name: "Flowers",
+  },
+  {
+    path: "/projects/momentfulness",
+    name: "Momentfulness",
   },
   {
     path: "/projects/animations",
     name: "Animations",
   },
   {
-    path: "/projects/crafts",
-    name: "Crafts",
-  },
-  {
     path: "/projects/illustrator",
     name: "Illustrator",
   },
   {
-    path: "/projects/momentfulness",
-    name: "Momentfulness",
+    path: "/projects/voxel",
+    name: "Voxel Art",
+  },
+  {
+    path: "/projects/crafts",
+    name: "Crafts",
   },
 ];
 
 const colorMap = {
-  "/": "#6b106a",
-  "/links": "#670e6b",
-  "/projects": "#640d6b",
-  "/projects/sketches" : "#600b6c",
-  "/projects/creative-coding" : "#5b0a6d", 
-  "/projects/skylands" : "#57096d",
-  "/projects/voxel" : "#52096e",
-  "/projects/cad" : "#4e086f",
-  "/projects/animations" : "#480870",
-  "/projects/crafts" : "#430970",
-  "/projects/illustrator" : "#3d0971"
+  // "/": "#6b106a",
+  // "/links": "#670e6b",
+  // "/projects": "#640d6b",
+  // "/projects/sketches" : "#600b6c",
+  // "/projects/creative-coding" : "#5b0a6d", 
+  // "/projects/skylands" : "#57096d",
+  // "/projects/cad" : "#57096d",
+  // "/projects/springFlowers" : "#52096e",
+  // "/projects/momentfulness" : "#52096e",
+  // "/projects/animations" : "#4e086f",
+  // "/projects/illustrator" : "#480870",
+  // "/projects/voxel" : "#430970",
+  // "/projects/crafts" : "#3d0971"
+
+  "/": "#A9A9A9",
+  "/links": "#A9A9A9",
+  "/projects":"#A9A9A9", 
+  "/projects/sketches" :"#A9A9A9", 
+  "/projects/creative-coding" :"#A9A9A9", 
+  "/projects/skylands" :"#A9A9A9", 
+  "/projects/cad" :"#A9A9A9", 
+  "/projects/springFlowers" :"#A9A9A9", 
+  "/projects/momentfulness" :"#A9A9A9", 
+  "/projects/animations" :"#A9A9A9", 
+  "/projects/illustrator" :"#A9A9A9", 
+  "/projects/voxel" :"#A9A9A9", 
+  "/projects/crafts" :"#A9A9A9", 
 }
 
 const borderColorMap = {
@@ -91,6 +111,8 @@ const borderColorMap = {
   "/projects/sketches" :"#FFFFFF", 
   "/projects/creative-coding" :"#FFFFFF", 
   "/projects/skylands" : "#FFFFFF",
+  "/projects/springFlowers" : "#FFFFFF",
+  "/projects/momentfulness" : "#FFFFFF",
   "/projects/voxel" :"#FFFFFF", 
   "/projects/cad" : "#FFFFFF",
   "/projects/animations" : "#FFFFFF",

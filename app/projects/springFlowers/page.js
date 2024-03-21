@@ -24,7 +24,26 @@ const data = [
 ];
 
 function Model() {
-  const gltf = useLoader(GLTFLoader, "/stl/snowdrop_big.glb");
+
+//molds
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/snowdrop.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/tulip.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/daffodil.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/rose.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/sunflower.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/molds/ivy.glb");
+
+//mockups
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/mockups/snowdrop.glb");
+  const gltf = useLoader(GLTFLoader, "/stl/flowers/mockups/tulip.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/mockups/daffodil.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/mockups/rose.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/mockups/sunflower.glb");
+  // const gltf = useLoader(GLTFLoader, "/stl/flowers/mockups/ivy.glb");
+
+
+
+
   const material = new THREE.MeshStandardMaterial({
     color: "white",
     side: THREE.DoubleSide,

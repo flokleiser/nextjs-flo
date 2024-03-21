@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
+import RootLayout from '@/app/layout'; 
 
 
 
@@ -141,7 +142,8 @@ useEffect(() => {
 
     return (
 
-        <main className={styles.main}>
+      // <RootLayout>
+      <main className={styles.main}>
               <div className="relative 
    flex 
    place-items-center 
@@ -356,6 +358,7 @@ useEffect(() => {
    
                      
         </main>
+        // {/* </RootLayout> */}
 
     )
 }

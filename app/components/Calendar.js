@@ -27,11 +27,7 @@ export default function MyCalendar() {
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'06"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'07"},
               {title : "Hausaufgabe + Portfolio HSLU", date:"2024-03-'08"},
-              {title : "Einladung Prüfung HSLU" ,date:"2024-03-25"},
               {title : "Assessment-Tag HSLU" ,date:"2024-04-02"},
-              {title : "Assessment-Tag HSLU" ,date:"2024-04-03"},
-              {title : "Assessment-Tag HSLU" ,date:"2024-04-04"},
-              {title : "Assessment-Tag HSLU" ,date:"2024-04-05"},
               {title : "Aufnahmeentscheid HSLU", date:"2024-04-18"}
             ]}
             // eventContent={renderEventContent}
