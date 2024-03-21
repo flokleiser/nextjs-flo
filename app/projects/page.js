@@ -122,7 +122,7 @@ export default function projects() {
             backgroundPosition: 'center'}}
             >
             <h2>
-                Flower Cards 
+                Spring Flowers
             </h2>
             <p>Illustrator, 3D-Printed</p>
             </Link>
