@@ -1,4 +1,4 @@
-# My personal website, made using Next.js, JavaScript, and React
+# My personal website (Next.js, JavaScript, and React)
 
 ___
 
