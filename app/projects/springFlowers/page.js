@@ -18,9 +18,11 @@ const data = [
 ];
 
 const modelPaths = [
-  "/stl/flowers/snowdrop_both.glb",
+  // "/stl/flowers/snowdrop_both.glb",
+  "/stl/flowers/snowdrop_both_notexture.glb",
   "/stl/flowers/tulip_both.glb",
-  "/stl/flowers/daffodil_both.glb",
+  // "/stl/flowers/daffodil_both.glb",
+  "/stl/flowers/daffodil_both_notexture.glb",
   "/stl/flowers/rose_both.glb",
   "/stl/flowers/sunflower_both.glb",
   "/stl/flowers/ivy_both.glb",

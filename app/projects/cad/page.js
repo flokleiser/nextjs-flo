@@ -16,8 +16,20 @@ function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
   const copiedScene = useMemo(() => scene.clone(),[scene]);
   const prim = useRef();
+  const light = useRef();
 
-  return <primitive ref={prim} object={copiedScene} />;
+  useFrame(({ camera }) => {
+    light.current.position.copy(camera.position);
+    light.current.rotation.copy(camera.rotation);
+  });
+  return (
+    <>
+  <primitive ref={prim} object={copiedScene}  />
+  <spotLight ref={light} position={[0,0,15]} intensity={1} distance={10} angle={Math.PI / 4} penumbra={0.5} />
+  </>
+  );
+
+  // return <primitive ref={prim} object={copiedScene} />;
 }
 
 const data2 = [
