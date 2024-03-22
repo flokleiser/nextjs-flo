@@ -1,11 +1,23 @@
 # To-Do/Ideas List:
 
+## Suspense/Page transitions
+- [ ] Figure out why layout.js isnt applying to child pages
+- [ ] Fix page transitions to not only work on reload
+
+- [ ] Add suspense to children pages
+- [ ] Add page transitions to children pages
+
 ## General upkeep:
 - [ ] Seperate pages into "content" and "page", like a seperate file for the stuff that should be rendered on the page
 
 ## 3D models:
 - [x] Figure out how to make textures --> just use gtlf
-- [ ] Figure out better lighting
+- [x] Figure out better lighting
+
+- [ ] Flowers:
+    - [ ] Buttons for all the "molds"
+    - [ ] Visualizer of the finished card, cardboard look
+    - [ ] Maybe some bool switch of "mold"/"Card" and then the flowers
 
 - [ ] CAD:
     - [ ] Figure out how to display multiple models side to side
