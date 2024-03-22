@@ -1,4 +1,4 @@
-![](public/images/banner/big bold transparent.png)
+![](big bold transparent.png)
 
 
 # My personal website (Next.js, JavaScript, and React)
@@ -6,7 +6,7 @@
 ___
 
 ## My Projects
-- [Skylands (VR Game)] (www.floriankleiser.com/projects/skylands)
+- [Skylands (VR Game)] (https://floriankleiser.com/projects/skylands)
 
 - Creative Coding (p5js, JavaScript)
     [floriankleiser.com/projects/creative-coding]
