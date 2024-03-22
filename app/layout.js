@@ -29,9 +29,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body className={assistant.className}>
-      <Navbar />
+        <Navbar />
 
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         <motion.div
          key={children.key}
          variants={pageVariants}
@@ -41,14 +41,14 @@ export default function RootLayout({ children }) {
          transition={pageTransition}
        >
 
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}> */}
           <div className="pt-[50px]" >
           <main>{children}</main>
           </div>
-        </Suspense>
+        {/* </Suspense>
 
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       </body>
     </html>
