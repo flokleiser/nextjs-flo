@@ -7,7 +7,7 @@ ___
 
 ## My Projects
 - Skylands (VR Game) 
-    <floriankleiser.com/projects/skylands>
+    [www.floriankleiser.com/projects/skylands]
 
 - Creative Coding (p5js, JavaScript)
     [floriankleiser.com/projects/creative-coding]
