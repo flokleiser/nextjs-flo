@@ -1,15 +1,10 @@
 "use client";
 import styles from "app/page.module.css";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";
-import { AnimatePresence, motion } from "framer-motion";
-import { PiXCircle } from "react-icons/pi";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import ImageGallery from "@/app/components/ImageGallery";
 
@@ -22,39 +17,34 @@ const data = [
   { image: "/images/illustrator/flowers/ivy.png", id: 5 },
 ];
 
-function Model() {
+const modelPaths = [
+  "/stl/flowers/snowdrop_both.glb",
+  "/stl/flowers/tulip_both.glb",
+  "/stl/flowers/daffodil_both.glb",
+  "/stl/flowers/rose_both.glb",
+  "/stl/flowers/sunflower_both.glb",
+  "/stl/flowers/ivy_both.glb",
+];
 
-  // const gltf = useLoader(GLTFLoader, "/stl/flowers/snowdrop_both.glb");
-  // const gltf = useLoader(GLTFLoader, "/stl/flowers/tulip_both.glb");
-  // const gltf = useLoader(GLTFLoader, "/stl/flowers/daffodil_both.glb");
-  // const gltf = useLoader(GLTFLoader, "/stl/flowers/rose_both.glb");
-  // const gltf = useLoader(GLTFLoader, "/stl/flowers/sunflower_both.glb");
-  // const gltf = useLoader(GLTFLoader, "/stl/flowers/ivy_both.glb");
+function Model({modelPath}) {
+  const {scene} = useLoader(GLTFLoader, modelPath)
+  const copiedScene = useMemo(() => scene.clone(),[scene]);
+  const prim = useRef();
 
-
-    const gltf = useLoader(GLTFLoader, modelPath);
-
-
-
-  const material = new THREE.MeshStandardMaterial({
-    color: "white",
-    side: THREE.DoubleSide,
-  });
-
-
-  return <primitive object={gltf.scene} />;
+  return <primitive ref={prim} object={copiedScene} />;
 }
 
-
-// [modelPath, setModelPath] => string
-// const switchModelPath(){
-
-// }
 
 export default function flowers() {
   useEffect(() => {
     document.title = "Projects - Spring Flowers";
   }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const handleModelChange = (index) => {
+    setCurrentIndex(index);
+  };
 
 
   return (
@@ -133,32 +123,33 @@ export default function flowers() {
               <spotLight position={[0, 0, 15]} />
               <directionalLight color="white" position={[2, 0, 5]} />
               <OrbitControls />
-              <Model />
+              <Model modelPath={modelPaths[currentIndex]}/>
             </Canvas>
           </div>
 
           <div className={styles.flowerButtonDiv}>
-              <button className={styles.flowerButton}>
+
+              <button className={styles.flowerButton} onClick={() => handleModelChange(0)}>
                 <h1> Snowdrop</h1>
               </button>
 
-              <button className={styles.flowerButton}>
+              <button className={styles.flowerButton} onClick={() => handleModelChange(1)}>
                 <h1> Tulip </h1>
               </button>
 
-              <button className={styles.flowerButton}>
+              <button className={styles.flowerButton} onClick={() => handleModelChange(2)}>
                 <h1> Daffodil</h1>
               </button>
 
-              <button className={styles.flowerButton}>
+              <button className={styles.flowerButton} onClick={() => handleModelChange(3)}>
                 <h1> Rose </h1>
               </button>
 
-              <button className={styles.flowerButton}>
+              <button className={styles.flowerButton} onClick={() => handleModelChange(4)}>
                 <h1> Sunflower</h1>
               </button>
 
-              <button className={styles.flowerButton}>
+              <button className={styles.flowerButton} onClick={() => handleModelChange(5)}>
                 <h1> Ivy</h1>
               </button>
 
