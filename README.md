@@ -1,4 +1,4 @@
-![](big bold transparent.png)
+![](public/images/banner/big%20bold%20transparent.png)
 
 
 # My personal website (Next.js, JavaScript, and React)
@@ -6,38 +6,30 @@
 ___
 
 ## My Projects
-- [Skylands (VR Game)] (https://floriankleiser.com/projects/skylands)
+- [Skylands (VR Game)](https://floriankleiser.com/projects/skylands)
 
-- Creative Coding (p5js, JavaScript)
-    [floriankleiser.com/projects/creative-coding]
 
-- Sketches (Analogue)
-    [floriankleiser.com/projects/sketches]
+- [Creative Coding (p5js, JavaScript)](https://floriankleiser.com/projects/creative-coding)
 
-- Butterfly (CAD)
-    [floriankleiser.com/projects/cad]
+- [Sketches (Analogue)](https://floriankleiser.com/projects/sketches)
 
-- Flowers (3D Prints)
-    [floriankleiser.com/projects/springFlowers]
+- [Butterfly (CAD)](https://floriankleiser.com/projects/cad)
 
-- Momentfulness (html-canvas, JavaScript)
-    [floriankleiser.com/projects/momentfulness]
+- [Flowers (3D Prints](https://floriankleiser.com/projects/springFlowers)
 
-- Animations (Adobe After Effects)
-    [floriankleiser.com/projects/animations]
+- [Momentfulness (html-canvas, JavaScript)](https://floriankleiser.com/projects/momentfulness)
 
-- Reduce to the max & How To'nt (Adobe Illustrator)
-    [floriankleiser.com/projects/illustrator]
+- [Animations (Adobe After Effects)](https://floriankleiser.com/projects/animations)
 
-- Voxel Art (MagicaVoxel)
-    [floriankleiser.com/projects/voxel]
+- [Reduce to the max & How To'nt (Adobe Illustrator)](https://floriankleiser.com/projects/illustrator)
 
-- Arts & Crafts (Cardboard)
-    [floriankleiser.com/projects/crafts]
+- [Voxel Art (MagicaVoxel)](https://floriankleiser.com/projects/voxel)
+
+- [Arts & Crafts (Cardboard)](https://floriankleiser.com/projects/crafts)
 
 ## My Portfolio
 - PDF, made in Adobe Illustrator
-    [floriankleiser.com/projects/portfolio]
+<https://floriankleiser.com/projects/portfolio>
 
 ## About me & External Links
 - CV
@@ -45,6 +37,6 @@ ___
 - Google Drive
 - Github
 - YouTube (for videos)
-    [floriankleiser.com/projects/links]
+<https://floriankleiser.com/projects/links>
 
 ___
