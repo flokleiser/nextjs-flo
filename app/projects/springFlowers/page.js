@@ -30,8 +30,19 @@ function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
   const copiedScene = useMemo(() => scene.clone(),[scene]);
   const prim = useRef();
+  const light = useRef();
 
-  return <primitive ref={prim} object={copiedScene} />;
+  useFrame(({ camera }) => {
+    light.current.position.copy(camera.position);
+    light.current.rotation.copy(camera.rotation);
+  });
+
+  return (
+    <>
+  <primitive ref={prim} object={copiedScene}  />
+  <spotLight ref={light} position={[0,0,15]} intensity={20} distance={10} angle={Math.PI / 4} penumbra={0.5} />
+  </>
+  );
 }
 
 
@@ -120,8 +131,8 @@ export default function flowers() {
         <div style={{ display: "flex" }}>
           <div className={styles.linkContainerFlowerModel}>
             <Canvas>
-              <spotLight position={[0, 0, 15]} />
               <directionalLight color="white" position={[2, 0, 5]} />
+              <ambientLight intensity={0.3}/>
               <OrbitControls />
               <Model modelPath={modelPaths[currentIndex]}/>
             </Canvas>
