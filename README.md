@@ -8,7 +8,6 @@ ___
 ## My Projects
 - [Skylands (VR Game)](https://floriankleiser.com/projects/skylands)
 
-
 - [Creative Coding (p5js, JavaScript)](https://floriankleiser.com/projects/creative-coding)
 
 - [Sketches (Analogue)](https://floriankleiser.com/projects/sketches)

@@ -15,22 +15,38 @@ import CenterTooltip from "@/app/components/CenterTooltip";
 import DimTooltip from "@/app/components/DimTooltip";
 
 const data = [
-  { image: "/images/skylands/skylands3.png", id: 0 },
-  { image: "/images/skylands/skylands4.png", id: 1 },
-  { image: "/images/skylands/skylands_whiteboard.png", id: 2 },
+  { image: "/images/skylands/skylandsnew8.png", id: 1, description:'Birds eye view of the islands' }, 
 ];
-
+// interactables
 const data2 = [
-  { image: "/images/skylands/skylandsfull.png", id: 3 },
-  { image: "/images/skylands/skylands_waterfall.png", id: 4 },
-  { image: "/images/skylands/skylands5.png", id: 5 },
-  { image: "/images/skylands/skylands_ferriswheel.png", id: 6 },
+  { image: "/images/skylands/skylands3.png", id: 2, description:'Mini-Golf course' },
+  { image: "/images/skylands/skylands4.png", id: 3, description:'Starter room with mirror and interactable music player' },
+  { image: "/images/skylands/skylandsnew1.png", id: 4, description:'Interactable buttons to change the exterior (see "Environments")'},
+];
+const data3 = [
+  { image: "/images/skylands/skylands_whiteboard.png", id: 5, description:'Different whiteboards to draw on'},
+  { image: "/images/skylands/skylandsnew2.png", id: 6, description:'3D Voxel models to pick up and interact with'},
+  { image: "/images/skylands/skylandsnew3.png", id: 7, description:'Whiteboard and marker'}
+]
+
+// environment
+const data4 = [
+  { image: "/images/skylands/skylandsfull.png", id: 8, description:'Overview of the islands'},
+  { image: "/images/skylands/skylands_ferriswheel.png", id: 9, description:'Island with a ferris wheel' },
+  { image: "/images/skylands/skylands_waterfall.png", id: 10, description:'Island with a waterfall'},
+  { image: "/images/skylands/skylandsnew4.png", id: 11, description:'Island with a small pond'},
+];
+const data5 = [
+  { image: "/images/skylands/skylandsnew7.png", id: 12, description:'Main island with empty exterior'},
+  { image: "/images/skylands/skylands5.png", id: 13, description:'Main island with stone paths and a fountain'},
+  { image: "/images/skylands/skylandsnew6.png", id: 14, description:'Main island with a small lake'},
 ];
 
-const data3 = [
-  { image: "/images/skylands/skylands1.png", id: 7 },
-  { image: "/images/skylands/skylands2.png", id: 8 },
-  { image: "/images/skylands/skylands_steering.png", id: 9 },
+// boat?
+const data6 = [
+  { image: "/images/skylands/skylands1.png", id: 15, description:'Island with a dock for the boat' },
+  { image: "/images/skylands/skylands2.png", id: 16 , description:'Full view of the steerable boat'},
+  { image: "/images/skylands/skylands_steering.png", id: 17 , description:'The steering mechanism'},
 ];
 
 export default function skylands() {
@@ -49,6 +65,7 @@ export default function skylands() {
   };
 
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedDescription, setSelectedDescription] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleResetClick = () => {
@@ -60,35 +77,42 @@ export default function skylands() {
 
   /* make image big */
   const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3];
-    const selectedIndex = dataArray.findIndex(
-      (item) => item.image === imageSrc
-    );
+    const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
     if (selectedIndex !== -1) {
       setSelectedImage(imageSrc);
       setCurrentIndex(dataArray[selectedIndex].id);
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
+
+      setSelectedDescription(dataArray[selectedIndex].description);
+
+      setCurrentIndex(dataArray[selectedIndex].id);
+      console.log('test');
     }
   };
 
   const handlePrevImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
+      const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
     }
   };
 
   const handleNextImage = () => {
     if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
+      const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
       setCurrentIndex(dataArray[newIndex].id);
       setSelectedImage(dataArray[newIndex].image);
+
+      setSelectedDescription(dataArray[newIndex].description);
     }
   };
 
@@ -205,8 +229,9 @@ export default function skylands() {
 
       <div className={styles.subtitledescription}>
         <p>
-          A VR game/experience for the Meta Quest 2 Headset. Built in Unity, C#
-          and Blender.
+          A VR game/experience for the Meta Quest 2 Headset, built in Unity, C#
+          and Blender. <br />
+          This page contains gameplay videos, screenshots, and the downloadable .apk file.
         </p>
         {/* <p>
         A VR game/experience for the Meta Quest 2 Headset.
@@ -222,6 +247,7 @@ with a variety of interactive objects to explore.
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
+
 
       <AnimatePresence>
       {isDim && (
@@ -257,16 +283,29 @@ with a variety of interactive objects to explore.
                 zIndex:54
               }}
             >
+
+<motion.div className="flex flex-col items-center mt-8"
+  initial={{ scale: 0.5 }}
+  animate={{ scale: 1 }}
+  exit={{ scale: 0.45 }}
+  transition={{ duration: 0.3 }}
+>
               <motion.img
                 src={selectedImage}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.45 }}
-                transition={{ duration: 0.3 }}
-                alt=""
+                alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
-                style={{ maxHeight: "80vh", zIndex: 9999 }}
+                style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
+
               />
+
+
+          <div className={styles.imageDescription} style={{  backgroundColor: 'rgba(187, 188, 122, 0.6)'}}>
+          <p>
+          {currentIndex + ")    "}  {selectedDescription}
+          </p>
+          </div>
+</motion.div>
+
               <button
                 className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
                 onClick={handleResetClick}
@@ -300,6 +339,42 @@ with a variety of interactive objects to explore.
           )}
         </AnimatePresence>
       </div>
+
+
+
+      <div className="" 
+      // style={{width:'80vw'}}
+      >
+        <div className="p-1 container mx-auto">
+          <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-8" >
+            {data.map((x) => (
+              <article
+                key="s2"
+                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+              >
+                <div className="relative  rounded-2xl">
+                  <Image
+                      width={1330}
+                      height={800}
+                    className={` rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      {/* </div> */}
+      </div>
+
+      <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "0.5rem" }} />
 
       <div className={styles.subtitle}>
         <p2>Interactables</p2>
@@ -359,8 +434,34 @@ with a variety of interactive objects to explore.
     <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
       <div className="p-1 container mx-auto">
         <div className="py-2"></div>
+        <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+          {data2.map((x) => (
+              <article
+                key="s1"
+                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+              >
+                <div className="relative rounded-2xl">
+                  <Image
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </motion.div>
+      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+      <div className="p-1 container mx-auto">
+        <div className="py-2"></div>
         <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-          {data.map((x) => (
+          {data3.map((x) => (
               <article
                 key="s1"
                 className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -444,8 +545,35 @@ with a variety of interactive objects to explore.
       <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
+          <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+            {data4.map((x) => (
+              <article
+                key="s2"
+                className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
+              >
+                <div className="relative  rounded-2xl">
+                  <Image
+                    width={400}
+                    height={400}
+                    className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+                      selectedImage ? "z-0" : ""
+                    }`}
+                    src={x.image}
+                    alt=""
+                    onClick={() => handleImageClick(x.image)}
+                  />
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      {/* </div> */}
+      </motion.div>
+      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+        <div className="p-1 container mx-auto">
+          <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data2.map((x) => (
+            {data5.map((x) => (
               <article
                 key="s2"
                 className="pt-3 pl-3 pr-3 pb-0 transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
@@ -532,7 +660,7 @@ with a variety of interactive objects to explore.
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
-            {data3.map((x) => (
+            {data6.map((x) => (
               <article
                 key="s2"
                 className="pt-3 pl-3 pr-3 pb-0  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
