@@ -20,15 +20,7 @@
 
     --button-rgb: 30,30,30;
 
-    
-  /* --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #A63C9F 0deg,
-    #850FA6 55deg,
-    #58088C 120deg,
-    #3E0973 160deg,
-    transparent 360deg
-  ); */
+
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -81,16 +73,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-/* reverse */
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-start-rgb))
-    )
-    rgb(var(--background-end-rgb));
-} */
+
 
 body::before,
 body::after {
@@ -129,22 +112,3 @@ a {
     color-scheme: dark;
   }
 }
-
-/* @media (max-width: 880px) {
-  iframe {
-    width: 100%;
-    padding: 2rem;
-    aspect-ratio: 4/3;
-  }
-}
-
-@media (min-width: 880px) {
-  iframe {
-    width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
-    aspect-ratio: 4/3;
-  }
-} */
-
-

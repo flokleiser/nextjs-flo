@@ -28,9 +28,11 @@ const modelPaths = [
 
 function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
+  // const {scene} = useLoader(GLTFLoader, modelPaths[0])
   const copiedScene = useMemo(() => scene.clone(),[scene]);
   const prim = useRef();
   const light = useRef();
+
 
   useFrame(({ camera }) => {
     light.current.position.copy(camera.position);
@@ -55,6 +57,7 @@ export default function flowers() {
 
   const handleModelChange = (index) => {
     setCurrentIndex(index);
+    console.log(index, modelPaths[index])
   };
 
 
