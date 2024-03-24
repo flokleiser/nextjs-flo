@@ -2169,37 +2169,3 @@ transition: all 0.5s ease-in-out;
 .fade-in.show {
   opacity: 1;
 }
-
-
-.backgroundStyle{
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
-  position: relative;
-  overflow: hidden;
-}
-
-.backgroundStyle::before {
-  position: absolute;
-  z-index: -1;
-  opacity: 0.3;
-  background: var(--my-class-before-background);
-  border-radius: 50%;
-  width: 50vw;
-  height: 50vw;
-  filter: blur(90px);
-  justify-self: center;
-  top: calc(50vh - 50vw/2);
-  left: calc(50vw - 50vw/2);
-}
-
-.backgroundStyle::after {
-  position: absolute;
-  z-index: -20;
-  background: var(--my-class-after-background);
-  border-radius: 50%;
-  filter: blur(90px);
-  top: calc(50vh - 50vw/2);
-  left: calc(50vw - 50vw/2);
-}
-
-
-

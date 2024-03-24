@@ -1,12 +1,10 @@
 # To-Do/Ideas List:
 
-## This is not good, something broke
-- [ ] Image gallery position of big screen image not centered
-- [ ] Navbar back button not visible
-
-- [x] the problem was the new layout.js
+## Background
+- [ ] Make new background
 
 ## Suspense/Page transitions
+- [ ] Figure out how to make page transitions without breaking everything
 - [ ] Figure out why layout.js isnt applying to child pages
 - [ ] Fix page transitions to not only work on reload
 
