@@ -59,6 +59,7 @@ export default function flowers() {
     setCurrentIndex(index);
     console.log(index, modelPaths[index])
   };
+  
 
 
   return (
