@@ -2,6 +2,7 @@
 
 ## QOL:
 - [ ] Search function? 
+    --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
 - [ ] Website traffic analizer
 
 ## Background

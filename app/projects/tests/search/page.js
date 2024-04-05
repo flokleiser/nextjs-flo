@@ -3,10 +3,14 @@ import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
 import SearchBar from "@/app/components/searchBar";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 
+export default function searchTest(){
 
-export default function searchTest({placeholder}) {
+
+  // searchParams, }:{ : 
+
   useEffect(() => {
     document.title = "Search function";
   }, []);

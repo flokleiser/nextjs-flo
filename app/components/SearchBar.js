@@ -7,6 +7,7 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export default function SearchBar({placeholder}) {
+    
 const handleSearch= useDebouncedCallback((term) => {
     console.log(term);
 
@@ -35,7 +36,9 @@ const handleSearch= useDebouncedCallback((term) => {
     placeholder={placeholder}
     onChange={(e) => {
       handleSearch(e.target.value);
-    }}/>
+    }}
+    defaultValue={searchParams.get('query')?.toString()} 
+    />
        <FaMagnifyingGlass className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
   </div>
 
