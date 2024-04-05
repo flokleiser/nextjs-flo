@@ -37,7 +37,8 @@
     "react-photo-album": "^2.3.0",
     "react-syntax-highlighter": "^15.5.0",
     "react-transition-group": "^4.4.5",
-    "three": "^0.162.0"
+    "three": "^0.162.0",
+    "use-debounce": "^10.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
