@@ -2,6 +2,7 @@
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 export default function searchTest() {
 
@@ -42,3 +43,4 @@ export default function searchTest() {
     </main>
   );
 }
+
