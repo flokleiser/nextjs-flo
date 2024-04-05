@@ -8,9 +8,6 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 export default function searchTest(){
 
-
-  // searchParams, }:{ : 
-
   useEffect(() => {
     document.title = "Search function";
   }, []);
