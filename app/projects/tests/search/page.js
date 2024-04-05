@@ -2,6 +2,7 @@
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useDebouncedCallback } from 'use-debounce';
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
