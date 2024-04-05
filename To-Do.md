@@ -1,5 +1,9 @@
 # To-Do/Ideas List:
 
+## QOL:
+- [ ] Search function? 
+- [ ] Website traffic analizer
+
 ## Background
 - [ ] Make new background
 
