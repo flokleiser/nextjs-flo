@@ -26,9 +26,12 @@ const modelPaths = [
   "/stl/flowers/ivy_both.glb",
 ];
 
+// modelPaths.onload = console.log('loaded');
+modelPaths.onload = console.log('loaded');
+
+
 function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
-  // const {scene} = useLoader(GLTFLoader, modelPaths[0])
   const copiedScene = useMemo(() => scene.clone(),[scene]);
   const prim = useRef();
   const light = useRef();
@@ -59,6 +62,7 @@ export default function flowers() {
     setCurrentIndex(index);
     console.log(index, modelPaths[index])
   };
+  
 
 
   return (
