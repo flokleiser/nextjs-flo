@@ -2,7 +2,7 @@
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
-import SearchBar from "@/app/components/searchBar";
+import SearchBar from "@/app/components/SearchBar";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
 
 
