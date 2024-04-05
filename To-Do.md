@@ -1,5 +1,8 @@
 # To-Do/Ideas List:
 
+## QOL:
+- [ ] Search function? 
+
 ## Background
 - [ ] Make new background
 
