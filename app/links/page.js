@@ -135,7 +135,7 @@ export default function links() {
           style={{
             filter:'blur(20px)',
             translateX:-100,
-            backgroundImage: "url(/images/links/cv2.png)", 
+            backgroundImage: "url(/images/links/cv3.png)", 
             opacity: 0.5}}
       />
            <motion.div className="flex-col mx-11" >
@@ -144,13 +144,16 @@ export default function links() {
         >
           <div className={styles.subtitledescription}>
             <p>
-              <a
-                href="https://drive.google.com/file/d/1rOXRUr6bOtxws0A105ZNlKbcPbmlmyOn/view"
+              {/* <a
+                href="https://drive.google.com/file/d/1dG7y59mddTFC_tMWaYHcGHHzMeyTrJ2t/view"
                 target="_blank"
-              >
+              > */}
+              <Link
+              href="/CV" >
                 <CiViewTimeline />
                 CV (.pdf)
-              </a>
+                </Link>
+              {/* </a> */}
             </p>
           </div>
         </div>
