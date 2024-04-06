@@ -27,6 +27,9 @@ const handleSearch= useDebouncedCallback((term) => {
 
   return (
 
+    <div className={styles.searchBar} >
+     {/* <div  style={{position:'fixed', zIndex:9999,   display:"flex" ,right:' 1.15rem ',top: '0.75rem'}}>  */}
+
     <div className="relative flex flex-1 flex-shrink-0">
     <label htmlFor="search" className="sr-only">
     Search
@@ -40,6 +43,7 @@ const handleSearch= useDebouncedCallback((term) => {
     defaultValue={searchParams.get('query')?.toString()} 
     />
        <FaMagnifyingGlass className="absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+  </div>
   </div>
 
   );

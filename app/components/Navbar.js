@@ -16,6 +16,8 @@ import {
   CiCircleChevUp,
 } from "react-icons/ci";
 
+import SearchBar from "@/app/components/SearchBar";
+
 const navItems = [
   {
     path: "/",
@@ -241,6 +243,7 @@ export default function Navbar() {
           </motion.button>
 
 
+
         <AnimatePresence>
           {showNavbar && (
             <motion.div
@@ -309,6 +312,7 @@ export default function Navbar() {
                     </motion.div>
                   );
                 })}
+              {/* <SearchBar /> */}
 
                   <motion.button style={{zIndex:'9999'}}
                     className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
@@ -414,9 +418,12 @@ export default function Navbar() {
                 </AnimatePresence>
 
               </nav>
+
+
             </motion.div>
           )}
         </AnimatePresence>
+      <SearchBar />
       </div>
     </div>
   );

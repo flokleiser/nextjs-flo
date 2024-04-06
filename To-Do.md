@@ -3,7 +3,12 @@
 ## QOL:
 - [ ] Search function? 
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
-- [ ] Website traffic analizer
+    - [x] Visual 
+    - [ ] Figure out how how to make it functional
+    - [ ] Maybe new page with results?
+
+- [ ] Fix suspense shit
+- [ ] Remove "back to projects" button
 
 ## Background
 - [ ] Make new background

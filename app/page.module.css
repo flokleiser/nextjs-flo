@@ -2169,3 +2169,11 @@ transition: all 0.5s ease-in-out;
 .fade-in.show {
   opacity: 1;
 }
+
+
+.searchBar {
+  /* position:absolute; */
+  position:fixed;
+  display: flex;
+  right: 0.5rem;
+}

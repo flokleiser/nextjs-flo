@@ -96,7 +96,7 @@ export default function Home() {
       ></div>
 
 {/* <div> */}
-<div
+{/* <div
       style={{position:'fixed', zIndex:9999,   display:"flex" ,
       right:' 1.15rem ',
   top: '0.75rem'
@@ -105,20 +105,19 @@ export default function Home() {
                 <h1>
           {" "}
           <Link href="/projects/tests/dates">
-            {/* Dates */}
             <CiCalendar style={{fontSize:'1.5rem'}} />
             </Link>{" "}
         </h1>
-      </div>
+      </div> */}
       
-      <div className={styles.backbuttonHomepage} 
+      {/* <div className={styles.backbuttonHomepage} 
       style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
       >
         <h1>
           {" "}
           <Link href="/projects/tests/">TESTS</Link>{" "}
         </h1>
-        </div>
+        </div> */}
 
 
 
