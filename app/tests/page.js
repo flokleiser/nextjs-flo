@@ -17,7 +17,7 @@ import { DiGoogleDrive } from "react-icons/di";
 export default function filesTest() {
 
   useEffect(() => {
-    document.title = "testing";
+    document.title = "Tests";
   }, []);
 
   return (
@@ -57,7 +57,7 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
  
-      <h1 className={styles.title}>Testing</h1>
+      <h1 className={styles.title}>Tests</h1>
 
       <div className={styles.subtitledescription}>
         <p>
@@ -78,7 +78,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/galleryTest"
+                href="/tests/galleryTest"
               >
               ImageGallery
               </Link>
@@ -92,7 +92,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/search"
+                href="/tests/search"
               >
               Search
               </Link>
@@ -106,7 +106,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/flowersTest"
+                href="/tests/flowersTest"
               >
              flowers 
               </Link>
@@ -120,7 +120,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/cadTest"
+                href="/tests/cadTest"
               >
               CAD
               </Link>
@@ -134,7 +134,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/canvasTest"
+                href="/tests/canvasTest"
               >
               3D
               </Link>
@@ -148,7 +148,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/svgTest"
+                href="/tests/svgTest"
               >
                SVG
               </Link>
@@ -162,7 +162,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/imageTest"
+                href="/tests/imageTest"
               >
                IMAGE
               </Link>
@@ -181,7 +181,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/background"
+                href="/tests/background"
               >
               Background
               </Link>
@@ -196,7 +196,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/filesTest"
+                href="/tests/filesTest"
               >
               FILES 
               </Link>
@@ -210,7 +210,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/portfolioTest"
+                href="/tests/portfolioTest"
               >
                MAPPE
               </Link>
@@ -224,7 +224,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/skylandsTest"
+                href="/tests/skylandsTest"
               >
               SKYLANDS
               </Link>
@@ -238,7 +238,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/ccTest"
+                href="/tests/ccTest"
               >
               CC 
               </Link>
@@ -252,7 +252,7 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/projects/tests/homepageTest"
+                href="/tests/homepageTest"
               >
               HOMEPAGE 
               </Link>
