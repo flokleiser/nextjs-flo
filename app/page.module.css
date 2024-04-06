@@ -2172,8 +2172,8 @@ transition: all 0.5s ease-in-out;
 
 
 .searchBar {
-  /* position:absolute; */
-  position:fixed;
+  position:absolute;
+  /* position:fixed; */
   display: flex;
-  right: 0.5rem;
+  right: 1rem;
 }
