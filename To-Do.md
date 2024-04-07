@@ -5,6 +5,7 @@
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 
     - [ ] Figure out how how to make it functional
+        - [ ] index.js file with all pages + keywords listed
     - [ ] Maybe new page with results?
 
 - [ ] Fix suspense shit
