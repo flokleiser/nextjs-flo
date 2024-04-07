@@ -7,7 +7,7 @@
     - [x] Figure out how how to make it functional
         - [x] index.js file with all pages + keywords listed
 
-        - [ ] Overlay with search results, similar to command pallette
+        - [ ] One big card, like command pallette
     -  
     - [ ] Maybe new page with results?
 
