@@ -1,4 +1,4 @@
-const pageIndex = [
+export default [
     { path: '/', title: 'Template', content: 'This is page 1', category: 'Category 1', keywords: ['keyword1','keyword2'] },
 
     { path: '/', title: 'Homepage', content: 'Homepage', category: 'Overview', keywords: ['homepage','start'] },
@@ -28,5 +28,4 @@ const pageIndex = [
     { path: '/skylands', title: 'Skylands', content: 'Skylands VR Game', category: 'Projects', keywords: ['unity','vr', 'c#','game','virtual reality']},
     { path: '/springFlowers', title: 'Spring Flowers', content: '3D Flower Designs', category: 'Projects', keywords: ['3d','print', '3d print','blender','illustrator']},
     { path: '/voxel', title: 'Voxel Art', content: '3D Voxel Designs', category: 'Projects', keywords: ['voxel','magicavoxel', '3d']},
-
   ];
