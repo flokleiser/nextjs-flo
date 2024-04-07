@@ -9,6 +9,10 @@
 
         - [ ] One big card, like command pallette
         - [ ] Make it go away on focus loss or empty field
+        - [ ] Add background blur
+        - [ ] Animatepresence opening and closing animation
+        - [ ] Button for closing
+        - [ ] Click outside for closing
     -  
     - [ ] Maybe new page with results?
 

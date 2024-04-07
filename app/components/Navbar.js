@@ -446,9 +446,10 @@ export default function Navbar() {
           )}
         </AnimatePresence>
       <SearchBar onSearch={handleSearch}/>
-      {showSearchResults && (
+      {showSearchResults}
+      {/* {showSearchResults && (
         <SearchResultsOverlay searchResults={searchResults} />
-      )}
+      )} */}
       </div>
     </div>
   );

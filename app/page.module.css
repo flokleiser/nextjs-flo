@@ -2224,7 +2224,8 @@ transition: all 0.5s ease-in-out;
 
 .cardSearch {
  
-  width: 350px;
+  /* width: 350px; */
+  width:230px;
   height: 100px;
   /* height: 167px; */
 
@@ -2237,6 +2238,7 @@ transition: all 0.5s ease-in-out;
   background-position: right;
   margin-bottom: 1.5rem;
   overflow: hidden;
+  background-color:rgba(40, 40, 40, 0.8);
 
   justify-self:center;
 }
@@ -2258,11 +2260,15 @@ transition: all 0.5s ease-in-out;
 }
 
 .searchOverlay {
+  z-index: 800;
   position:fixed;
   display:flex;
+  /* flex-direction: row-reverse; */
   align-items: center;
   justify-content: center;
   outline: 2px solid transparent;
   outline-offset: 2px;
-  top:50%;
+  background-color:rgba(40, 40, 40, 0.5);
+  margin-top:2.9rem;
+  right:0;
 }
