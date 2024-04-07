@@ -45,10 +45,11 @@ export default function searchTest(){
       <SearchBar onSearch={handleSearch}/>
       <div>
         {searchResults.map((page) => (
-          <div key={page.path}>
+          // <div key={page.path}>
+          <div className={styles.cardSearch} key={page.path}>
             <Link href={page.path}>
-              <h3>{page.title}</h3>
-              <p>{page.content}</p>
+              <h3 className={styles.searchResultsTitle}>{page.title}</h3>
+              <p className={styles.searchResultsBody}>{page.content}</p>
             </Link>
           </div>
         ))}

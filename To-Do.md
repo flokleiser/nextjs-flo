@@ -4,12 +4,15 @@
 - [ ] Search function? 
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 
-    - [ ] Figure out how how to make it functional
-        - [ ] index.js file with all pages + keywords listed
+    - [x] Figure out how how to make it functional
+        - [x] index.js file with all pages + keywords listed
+
+        - [ ] Overlay with search results, similar to command pallette
+    -  
     - [ ] Maybe new page with results?
 
 - [ ] Fix suspense shit
-- [ ] Remove "back to projects" button
+- [x] Remove "back to projects" button
 
 ## Background
 - [ ] Make new background

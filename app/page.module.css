@@ -1545,6 +1545,15 @@ transition: all 0.5s ease-in-out;
     transform: translateX(4px);
   }
 
+  .cardSearch:hover {
+    transform: scale(1.07); 
+    border: 1px solid rgba(var(--card-border-rgb), 5);    
+  }
+
+  .cardSearch:hover span {
+    transform: translateX(4px);
+  }
+
   .cardanimation:hover {
     transform: scale(1.08); 
     border: 1px solid rgba(var(--card-border-rgb), 15);    
@@ -1876,6 +1885,14 @@ transition: all 0.5s ease-in-out;
     margin-bottom: 0.5rem;
   }
 
+  .cardSearch {
+    padding: 3rem 2.5rem;
+  }
+
+  .cardSearch h2 {
+    margin-bottom: 0.5rem;
+  }
+
   .cardanimation {
     padding: 3rem 2.5rem;
   }
@@ -2195,4 +2212,49 @@ transition: all 0.5s ease-in-out;
   width: 100%; 
   font-size: 0.875rem;
   line-height: 1.25rem; 
+}
+
+
+.searchResultsTitle {
+  font-size: 1.875rem;
+}
+
+.searchResultsBody {
+  font-size: 0.875rem;
+}
+
+
+.cardSearch {
+ 
+  width: 350px;
+  height: 100px;
+  /* height: 167px; */
+
+  /* padding: 3rem 2.2rem; */
+  padding:1rem 0.5rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 200ms, border 200ms;
+  background-position: right;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+
+  justify-self:center;
+}
+.cardSearch span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+.cardSearch h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.7rem;
+}
+.cardSearch p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  /* max-width: 30ch; */
 }
