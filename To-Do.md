@@ -8,6 +8,7 @@
         - [x] index.js file with all pages + keywords listed
 
         - [ ] One big card, like command pallette
+        - [ ] Make it go away on focus loss or empty field
     -  
     - [ ] Maybe new page with results?
 
