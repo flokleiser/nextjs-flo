@@ -1759,6 +1759,9 @@ transition: all 0.5s ease-in-out;
     pointer-events: 'none';
     z-index: -10;
   }
+  .searchBar {
+    width:75px;
+  }
 }
 
 
@@ -2176,4 +2179,20 @@ transition: all 0.5s ease-in-out;
   /* position:fixed; */
   display: flex;
   right: 1rem;
+}
+
+
+.searchBarStyle {
+  display: block; 
+  padding-top: 4px;
+  padding-bottom: 3px;
+  /* padding-left: 2.5rem;  */
+  padding-left: 1.75rem;
+  border-radius: 0.375rem; 
+  border-width: 1px; 
+  border-color: #E5E7EB; 
+  outline-width: 2px; 
+  width: 100%; 
+  font-size: 0.875rem;
+  line-height: 1.25rem; 
 }

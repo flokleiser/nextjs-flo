@@ -34,14 +34,15 @@ const handleSearch= useDebouncedCallback((term) => {
     Search
     </label>
   <input
-    className="peer block w-full rounded-md border border-gray-200 py-[4px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+    // className="peer block w-full rounded-md border border-gray-200 py-[4px] pl-10 text-sm outline-2 placeholder:text-gray-500"
+    className={styles.searchBarStyle}
     placeholder={placeholder}
     onChange={(e) => {
       handleSearch(e.target.value);
     }}
     defaultValue={searchParams.get('query')?.toString()} 
     />
-       <FaMagnifyingGlass className="absolute left-3 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+       <FaMagnifyingGlass className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
   </div>
   </div>
 
