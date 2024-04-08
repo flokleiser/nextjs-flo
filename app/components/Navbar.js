@@ -17,6 +17,9 @@ import {
 } from "react-icons/ci";
 
 import SearchBar from "@/app/components/SearchBar";
+import pageIndex from "./pageIndex";
+import SearchResultsOverlay from "@/app/components/SearchResultsOverlay";
+
 
 const navItems = [
   {
@@ -178,6 +181,25 @@ const pathMiddle4 = {
 }
 
 export default function Navbar() {
+
+  const [searchResults, setSearchResults] = useState([]);
+  const [showSearchResults, setShowSearchResults] = useState(false);
+
+  const handleSearch = (term) => {
+    const results = pageIndex.filter((page) => {
+      const { title, content, keywords } = page;
+      const searchTerm = term.toLowerCase();
+
+      return (
+        title.toLowerCase().includes(searchTerm) ||
+        content.toLowerCase().includes(searchTerm) ||
+        keywords.some((keyword) => keyword.toLowerCase().includes(searchTerm))
+      );
+    });
+
+    setSearchResults(results);
+    setShowSearchResults(true);
+  };
   
   const pathname = usePathname() || "/";
 
@@ -423,7 +445,11 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      {/* <SearchBar /> */}
+      <SearchBar onSearch={handleSearch}/>
+      {showSearchResults}
+      {/* {showSearchResults && (
+        <SearchResultsOverlay searchResults={searchResults} />
+      )} */}
       </div>
     </div>
   );

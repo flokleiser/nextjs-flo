@@ -1,43 +1,56 @@
 # To-Do/Ideas List:
 
-## QOL:
-- [ ] Search function? 
+## Search:
+- [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 
-    - [ ] Figure out how how to make it functional
-    - [ ] Maybe new page with results?
+    - [x] Figure out how how to make it functional
+        - [x] index.js file with all pages + keywords listed
 
-- [ ] Fix suspense shit
-- [ ] Remove "back to projects" button
+        - [x] ONLY DISPLAY WHEN SEARCH INPUT IS IN FOCUS
 
-## Background
-- [ ] Make new background
+        - [x] Make it go away on focus loss or empty field
 
-## Suspense/Page transitions
-- [ ] Figure out how to make page transitions without breaking everything
+        - [x] Animatepresence opening and closing animation
+
+        - [x] Button for closing
+        - [x] Click outside for closing
+        - [ ] (x) Button to clear search field
+
+        - [ ] One big card, like command pallette
+        - [ ] Add background blur
+    -  
+
+
+## Suspense
 - [ ] Figure out why layout.js isnt applying to child pages
-- [ ] Fix page transitions to not only work on reload
-
 - [ ] Add suspense to children pages
+
+## Page transitions
+- [ ] Figure out how to make page transitions without breaking everything
 - [ ] Add page transitions to children pages
+- [ ] Fix page transitions to not only work on reload
 
 ## General upkeep:
 - [ ] Seperate pages into "content" and "page", like a seperate file for the stuff that should be rendered on the page
+
+## Background
+- [ ] Make new background
 
 ## 3D models:
 - [x] Figure out how to make textures --> just use gtlf
 - [x] Figure out better lighting
 
-- [ ] Flowers:
-    - [ ] Buttons for all the "molds"
-    - [ ] Visualizer of the finished card, cardboard look
-    - [ ] Maybe some bool switch of "mold"/"Card" and then the flowers
+- [x] Flowers:
+    - [x] Buttons for all the "molds"
+    - [x] Visualizer of the finished card, cardboard look
+    - [x] Maybe some bool switch of "mold"/"Card" and then the flowers
 
-- [ ] CAD:
-    - [ ] Figure out how to display multiple models side to side
+- [x] CAD:
+    - [x] Figure out how to display multiple models side to side
     - [x] Figure out how to switch between multiple models
     - [x] Buttons to switch from open to closed
-        - [ ] Make buttons not take up entire row
+        - [x] Make buttons not take up entire row
     - [x] add to cad page
 
 

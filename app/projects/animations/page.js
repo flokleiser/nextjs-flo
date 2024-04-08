@@ -54,7 +54,7 @@ export default function animations() {
    z-[-1]"
       ></div>
 
-      <div
+      {/* <div
         className={styles.backbutton}
         style={{ position: "fixed", zIndex: 9999 }}
       >
@@ -62,7 +62,7 @@ export default function animations() {
           {" "}
           <Link href="/projects">All Projects </Link>{" "}
         </h1>
-      </div>
+      </div> */}
 
       <AnimatePresence>
       {isHovering&& (
