@@ -17,7 +17,7 @@ import { DiGoogleDrive } from "react-icons/di";
 export default function filesTest() {
 
   useEffect(() => {
-    document.title = "testing";
+    document.title = "Tests";
   }, []);
 
   return (
@@ -57,7 +57,7 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
  
-      <h1 className={styles.title}>Testing</h1>
+      <h1 className={styles.title}>Tests</h1>
 
       <div className={styles.subtitledescription}>
         <p>
