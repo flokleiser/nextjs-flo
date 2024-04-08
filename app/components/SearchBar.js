@@ -73,7 +73,6 @@ const handleSearch = useDebouncedCallback((term) => {
   };
 
 
-
   const searchParams = useSearchParams();
 
   return (
@@ -135,10 +134,16 @@ const handleSearch = useDebouncedCallback((term) => {
           ) : (
             <div>
             {searchResults.map((page) => (
-              <div className={styles.cardSearch} key={page.path}>
+              <div className={styles.cardSearch} key={page.path}
+              style={{
+                backgroundImage: `url(${page.previewImage})`,
+                backgroundSize: 'fit',
+                backgroundPosition: 'center',
+              }}>
                 <Link href={page.path}>
                   <h3 className={styles.searchResultsTitle}>{page.title}</h3>
                   <p className={styles.searchResultsBody}>{page.content}</p>
+                  {/* <img src={page.previewImage} /> */}
                 </Link>
               </div>
             ))}
