@@ -16,7 +16,9 @@
 
         - [x] Animatepresence opening and closing animation
 
-        - [x] Button for closing
+        - [ ] Button for closing
+            - [ ] Better styling
+            - [ ] Make it actually work
 
         - [x] Click outside for closing
         - [x] (x) Button to clear search field
