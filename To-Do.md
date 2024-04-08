@@ -1,20 +1,21 @@
 # To-Do/Ideas List:
 
 ## Search:
-- [ ] Search function?
+- [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 
     - [x] Figure out how how to make it functional
         - [x] index.js file with all pages + keywords listed
 
-        - [ ] ONLY DISPLAY WHEN SEARCH INPUT IS IN FOCUS
+        - [x] ONLY DISPLAY WHEN SEARCH INPUT IS IN FOCUS
 
-        - [ ] Make it go away on focus loss or empty field
+        - [x] Make it go away on focus loss or empty field
 
-        - [ ] Animatepresence opening and closing animation
+        - [x] Animatepresence opening and closing animation
 
-        - [ ] Button for closing
-        - [ ] Click outside for closing
+        - [x] Button for closing
+        - [x] Click outside for closing
+        - [ ] (x) Button to clear search field
 
         - [ ] One big card, like command pallette
         - [ ] Add background blur

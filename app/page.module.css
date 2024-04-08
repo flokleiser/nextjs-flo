@@ -2238,7 +2238,8 @@ transition: all 0.5s ease-in-out;
   background-position: right;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  background-color:rgba(40, 40, 40, 0.8);
+  /* background-color:rgba(40, 40, 40, 0.8); */
+  background-color:rgba(80, 80, 80, 0.8);
 
   justify-self:center;
 }
@@ -2268,7 +2269,7 @@ transition: all 0.5s ease-in-out;
   justify-content: center;
   outline: 2px solid transparent;
   outline-offset: 2px;
-  background-color:rgba(40, 40, 40, 0.5);
+  background-color:rgba(40, 40, 40, 0.8);
   margin-top:2.9rem;
   right:0;
 }

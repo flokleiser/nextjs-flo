@@ -8,82 +8,74 @@ import { useSearchParams, usePathname, useRouter } from "next/navigation";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import pageIndex from "@/app/components/pageIndex";
 import {AnimatePresence, motion} from "framer-motion";
+import { useRef } from "react";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 export default function SearchBar({placeholder, onSearch}) {
     
 const [searchResults, setSearchResults] = useState([]);
 const [searchTerm, setSearchTerm] = useState('');
 const [isFocused, setIsFocused] = useState(false);
-// const [searchOpen, setSearchOpen] = useState(false);
+const [shouldShowOverlay, setShouldShowOverlay] = useState(false);
 
-// if (searchOpen = true) {
-// }
-// else {
-// }
+const overlayRef = useRef(null);
+const pathname = usePathname();
+
+useEffect(() => {
+  setShouldShowOverlay(false);
+}, [pathname]);
 
 const handleSearch = useDebouncedCallback((term) => {
   setSearchTerm(term)
   console.log(term)
 
-  // if (term) {
-  //   setSearchOpen(true);
-  //   console.log(setSearchOpen)
-  // }
-  // else {
-  //   setSearchOpen(false);
-  //   console.log(setSearchOpen)
-  // }
 
   const searchResults = pageIndex.filter((page) => {
     const { title, content, keywords } = page;
     const searchTerm = term.toLowerCase();
 
-    // if (term === '') {
-    //   setSearchResults([]);
-    //   setSearchOpen(false);
-    //   return;
-
-    // }
-
-    // else {
       return (
         title.toLowerCase().includes(searchTerm) ||
         content.toLowerCase().includes(searchTerm) ||
         keywords.some((keyword) => keyword.toLowerCase().includes(searchTerm))
       );
-    // }
   });
 
-  setSearchResults(searchResults);
 
   setSearchResults(searchResults);
   onSearch(term)
+  setShouldShowOverlay(true);
 
-
-    // const params = new URLSearchParams(searchParams)
-    //    if (term) {
-    //       params.set('query', term)
-    //       }
-    //       else {
-    //       params.delete('query');
-    //       }
-    // replace(`${pathname}?${params.toString()}`);
   }, 300);
 
   const handleFocus = () => {
     setIsFocused(true);
   };
 
-  const handleBlur = () => {
+  const handleBlur = (event) => {
+    if (overlayRef.current && !overlayRef.current.contains(event.relatedTarget)) {
+      setIsFocused(false);
+      setShouldShowOverlay(false)
+    }
+  };
+  
+
+  const handleCloseOverlay = () => {
     setIsFocused(false);
+    setShouldShowOverlay(false);
+    setSearchTerm('test');
   };
 
-  const shouldShowOverlay = searchTerm.trim() !== '' || isFocused;
+  const handleClearSearch = () => {
+    const params = new URLSearchParams(searchParams);
+    params.delete('query');
+    replace(`${pathname}?${params.toString()}`);
+    setSearchResults([]);
+  };
+
+
 
   const searchParams = useSearchParams();
-  // const pathname = usePathname();
-  // const { replace } = useRouter();
-
 
   return (
 
@@ -108,29 +100,47 @@ const handleSearch = useDebouncedCallback((term) => {
   </div>
 
 
+  <AnimatePresence mode="wait"> 
 {shouldShowOverlay && (
-  <div className={styles.searchOverlay}
-  >
-    <div className="p-8  h-[100vh] overflow-y-auto">
-      {searchResults.length === 0 ? (
-        <h3 className={styles.cardSearch}>No results found.</h3>
-      ) : (
-        <div>
-        {searchResults.map((page) => (
-          // <div key={page.path}>
-          <div className={styles.cardSearch} key={page.path}>
-            <Link href={page.path}>
-              <h3 className={styles.searchResultsTitle}>{page.title}</h3>
-              <p className={styles.searchResultsBody}>{page.content}</p>
-            </Link>
-          </div>
-        ))}
-      </div>
-      )} 
-    </div>
+    <motion.div className={styles.searchOverlay}
+      initial={{ x:'100%' }}
+      animate={{ x: 0 }}
+      exit={{ x:'100%' }}
+      transition={{ duration: 0.3 }}
+      ref={overlayRef}
+      >
 
-  </div>
+      <button style={{zIndex: 500, fontSize: "2rem" }}
+
+        onClick={() => {
+          handleCloseOverlay
+          handleClearSearch
+        }}
+      >
+        <IoCloseCircleOutline className="h-15 w-15 text-gray-500" />
+      </button>
+
+
+        <div className="p-8  h-[100vh] overflow-y-auto">
+          {searchResults.length === 0 ? (
+            <h3 className={styles.cardSearch}>No results found.</h3>
+          ) : (
+            <div>
+            {searchResults.map((page) => (
+              <div className={styles.cardSearch} key={page.path}>
+                <Link href={page.path}>
+                  <h3 className={styles.searchResultsTitle}>{page.title}</h3>
+                  <p className={styles.searchResultsBody}>{page.content}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
+          )} 
+        </div>
+
+    </motion.div>
 )}
+</AnimatePresence> 
   </div>
 
   );
