@@ -9,62 +9,80 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import pageIndex from "@/app/components/pageIndex";
 import {AnimatePresence, motion} from "framer-motion";
 
-
-
-
 export default function SearchBar({placeholder, onSearch}) {
     
 const [searchResults, setSearchResults] = useState([]);
-var [searchOpen, setSearchOpen] = useState(false);
+const [searchTerm, setSearchTerm] = useState('');
+const [isFocused, setIsFocused] = useState(false);
+// const [searchOpen, setSearchOpen] = useState(false);
 
-if (searchOpen = true) {
-  console.log('true')
-}
-else {
-  console.log('closed')
-}
+// if (searchOpen = true) {
+// }
+// else {
+// }
 
 const handleSearch = useDebouncedCallback((term) => {
+  setSearchTerm(term)
   console.log(term)
+
+  // if (term) {
+  //   setSearchOpen(true);
+  //   console.log(setSearchOpen)
+  // }
+  // else {
+  //   setSearchOpen(false);
+  //   console.log(setSearchOpen)
+  // }
+
   const searchResults = pageIndex.filter((page) => {
     const { title, content, keywords } = page;
     const searchTerm = term.toLowerCase();
 
-    if (term === '') {
-      // setSearchResults([]);
-      setSearchOpen(false);
-      return;
+    // if (term === '') {
+    //   setSearchResults([]);
+    //   setSearchOpen(false);
+    //   return;
 
-    }
+    // }
 
-    else {
-      setSearchOpen(true);
+    // else {
       return (
         title.toLowerCase().includes(searchTerm) ||
         content.toLowerCase().includes(searchTerm) ||
         keywords.some((keyword) => keyword.toLowerCase().includes(searchTerm))
       );
-    }
+    // }
   });
 
   setSearchResults(searchResults);
 
-  // setSearchResults(searchResults);
+  setSearchResults(searchResults);
+  onSearch(term)
 
 
-    const params = new URLSearchParams(searchParams)
-       if (term) {
-          params.set('query', term)
-          }
-          else {
-          params.delete('query');
-          }
-    replace(`${pathname}?${params.toString()}`);
+    // const params = new URLSearchParams(searchParams)
+    //    if (term) {
+    //       params.set('query', term)
+    //       }
+    //       else {
+    //       params.delete('query');
+    //       }
+    // replace(`${pathname}?${params.toString()}`);
   }, 300);
 
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
+
+  const shouldShowOverlay = searchTerm.trim() !== '' || isFocused;
+
   const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
+  // const pathname = usePathname();
+  // const { replace } = useRouter();
 
 
   return (
@@ -82,20 +100,15 @@ const handleSearch = useDebouncedCallback((term) => {
       handleSearch(e.target.value);
       onSearch(e.target.value);
     }}
+    onFocus={handleFocus}
+    onBlur={handleBlur}
     defaultValue={searchParams.get('query')?.toString()} 
     />
        <FaMagnifyingGlass className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
   </div>
 
-  {/* <div className={styles.searchResults}>
-      {searchResults.map((page) => (
-        <Link key={page.path} href={page.path}>
-          <h3>{page.title}</h3>
-          <p>{page.content}</p>
-        </Link>
-      ))}
-    </div> */}
 
+{shouldShowOverlay && (
   <div className={styles.searchOverlay}
   >
     <div className="p-8  h-[100vh] overflow-y-auto">
@@ -117,7 +130,7 @@ const handleSearch = useDebouncedCallback((term) => {
     </div>
 
   </div>
-
+)}
   </div>
 
   );
