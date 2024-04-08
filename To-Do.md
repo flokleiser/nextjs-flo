@@ -13,12 +13,12 @@
 
         - [x] Animatepresence opening and closing animation
 
-        - [ ] Button for closing
+        - [x] Button for closing
 
         - [x] Click outside for closing
         - [x] (x) Button to clear search field
 
-        - [ ] Page previews?
+        - [x] Page previews?
 
 
         - [ ] Add background blur
