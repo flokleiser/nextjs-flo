@@ -45,6 +45,9 @@ const handleSearch = useDebouncedCallback((term) => {
 
   const handleBlur = () => {
     setIsFocused(false);
+    // const timer = setTimeout(() => {
+    // }, 500);
+    // return () => clearTimeout(timer);
   };
 
   const shouldShowOverlay = searchTerm.trim() !== '' || isFocused;
@@ -77,29 +80,36 @@ const handleSearch = useDebouncedCallback((term) => {
   </div>
 
 
+  <AnimatePresence mode="wait"> 
 {shouldShowOverlay && (
-  <div className={styles.searchOverlay}
-  >
-    <div className="p-8  h-[100vh] overflow-y-auto">
-      {searchResults.length === 0 ? (
-        <h3 className={styles.cardSearch}>No results found.</h3>
-      ) : (
-        <div>
-        {searchResults.map((page) => (
-          // <div key={page.path}>
-          <div className={styles.cardSearch} key={page.path}>
-            <Link href={page.path}>
-              <h3 className={styles.searchResultsTitle}>{page.title}</h3>
-              <p className={styles.searchResultsBody}>{page.content}</p>
-            </Link>
+    <motion.div className={styles.searchOverlay}
+      // key={searchOverlayKey}
+      initial={{ x:'100%' }}
+      animate={{ x: 0 }}
+      exit={{ x:'100%' }}
+      transition={{ duration: 0.3 }}
+      >
+        <div className="p-8  h-[100vh] overflow-y-auto">
+          {searchResults.length === 0 ? (
+            <h3 className={styles.cardSearch}>No results found.</h3>
+          ) : (
+            <div>
+            {searchResults.map((page) => (
+              // <div key={page.path}>
+              <div className={styles.cardSearch} key={page.path}>
+                <Link href={page.path}>
+                  <h3 className={styles.searchResultsTitle}>{page.title}</h3>
+                  <p className={styles.searchResultsBody}>{page.content}</p>
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      )} 
-    </div>
+          )} 
+        </div>
 
-  </div>
+    </motion.div>
 )}
+</AnimatePresence> 
   </div>
 
   );
