@@ -14,38 +14,16 @@ export default function SearchBar({placeholder, onSearch}) {
 const [searchResults, setSearchResults] = useState([]);
 const [searchTerm, setSearchTerm] = useState('');
 const [isFocused, setIsFocused] = useState(false);
-// const [searchOpen, setSearchOpen] = useState(false);
-
-// if (searchOpen = true) {
-// }
-// else {
-// }
 
 const handleSearch = useDebouncedCallback((term) => {
   setSearchTerm(term)
   console.log(term)
 
-  // if (term) {
-  //   setSearchOpen(true);
-  //   console.log(setSearchOpen)
-  // }
-  // else {
-  //   setSearchOpen(false);
-  //   console.log(setSearchOpen)
-  // }
 
   const searchResults = pageIndex.filter((page) => {
     const { title, content, keywords } = page;
     const searchTerm = term.toLowerCase();
 
-    // if (term === '') {
-    //   setSearchResults([]);
-    //   setSearchOpen(false);
-    //   return;
-
-    // }
-
-    // else {
       return (
         title.toLowerCase().includes(searchTerm) ||
         content.toLowerCase().includes(searchTerm) ||
@@ -59,15 +37,6 @@ const handleSearch = useDebouncedCallback((term) => {
   setSearchResults(searchResults);
   onSearch(term)
 
-
-    // const params = new URLSearchParams(searchParams)
-    //    if (term) {
-    //       params.set('query', term)
-    //       }
-    //       else {
-    //       params.delete('query');
-    //       }
-    // replace(`${pathname}?${params.toString()}`);
   }, 300);
 
   const handleFocus = () => {

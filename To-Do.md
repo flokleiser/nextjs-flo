@@ -14,7 +14,8 @@
         - [ ] Animatepresence opening and closing animation
 
         - [ ] Button for closing
-        - [ ] Click outside for closing
+        - [x] Click outside for closing
+        - [ ] (x) Button to clear search field
 
         - [ ] One big card, like command pallette
         - [ ] Add background blur
