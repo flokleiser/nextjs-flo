@@ -1,5 +1,8 @@
 # To-Do/Ideas List:
 
+## Better Backgrounds
+- [ ] springflowers better background
+
 ## Search:
 - [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
@@ -19,12 +22,6 @@
         - [x] (x) Button to clear search field
 
         - [x] Page previews?
-
-
-        - [ ] Add background blur
-
-    -  
-
 
 ## Suspense
 - [ ] Figure out why layout.js isnt applying to child pages
