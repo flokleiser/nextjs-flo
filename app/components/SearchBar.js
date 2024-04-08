@@ -10,8 +10,9 @@ import pageIndex from "@/app/components/pageIndex";
 import {AnimatePresence, motion} from "framer-motion";
 import { useRef } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import { MdClear } from "react-icons/md";
 
-export default function SearchBar({placeholder, onSearch}) {
+export default function SearchBar({onSearch}) {
     
 const [searchResults, setSearchResults] = useState([]);
 const [searchTerm, setSearchTerm] = useState('');
@@ -24,6 +25,8 @@ const pathname = usePathname();
 useEffect(() => {
   setShouldShowOverlay(false);
 }, [pathname]);
+
+const { replace } = useRouter();
 
 const handleSearch = useDebouncedCallback((term) => {
   setSearchTerm(term)
@@ -40,7 +43,6 @@ const handleSearch = useDebouncedCallback((term) => {
         keywords.some((keyword) => keyword.toLowerCase().includes(searchTerm))
       );
   });
-
 
   setSearchResults(searchResults);
   onSearch(term)
@@ -63,16 +65,12 @@ const handleSearch = useDebouncedCallback((term) => {
   const handleCloseOverlay = () => {
     setIsFocused(false);
     setShouldShowOverlay(false);
-    setSearchTerm('test');
   };
 
   const handleClearSearch = () => {
-    const params = new URLSearchParams(searchParams);
-    params.delete('query');
-    replace(`${pathname}?${params.toString()}`);
-    setSearchResults([]);
+    console.log('search reset')
+    searchInputField.value = "";
   };
-
 
 
   const searchParams = useSearchParams();
@@ -86,8 +84,9 @@ const handleSearch = useDebouncedCallback((term) => {
     Search
     </label>
   <input
+    id="searchInputField"
     className={styles.searchBarStyle}
-    placeholder={placeholder}
+    // value="test"
     onChange={(e) => {
       handleSearch(e.target.value);
       onSearch(e.target.value);
@@ -98,6 +97,12 @@ const handleSearch = useDebouncedCallback((term) => {
     />
        <FaMagnifyingGlass className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
   </div>
+
+  <button style={{zIndex: 500, fontSize: "2rem" }}
+    onClick={handleClearSearch}
+  >
+   <MdClear className="absolute right-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+  </button>
 
 
   <AnimatePresence mode="wait"> 
@@ -123,14 +128,22 @@ const handleSearch = useDebouncedCallback((term) => {
 
         <div className="p-8  h-[100vh] overflow-y-auto">
           {searchResults.length === 0 ? (
-            <h3 className={styles.cardSearch}>No results found.</h3>
+            <div className={styles.cardSearch}>
+            <h3 className={styles.searchResultsTitle}>No results found.</h3>
+            </div>
           ) : (
             <div>
             {searchResults.map((page) => (
-              <div className={styles.cardSearch} key={page.path}>
+              <div className={styles.cardSearch} key={page.path}
+              style={{
+                backgroundImage: `url(${page.previewImage})`,
+                backgroundSize: 'fit',
+                backgroundPosition: 'center',
+              }}>
                 <Link href={page.path}>
                   <h3 className={styles.searchResultsTitle}>{page.title}</h3>
                   <p className={styles.searchResultsBody}>{page.content}</p>
+                  {/* <img src={page.previewImage} /> */}
                 </Link>
               </div>
             ))}
