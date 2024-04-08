@@ -19,6 +19,11 @@ const [isFocused, setIsFocused] = useState(false);
 const [shouldShowOverlay, setShouldShowOverlay] = useState(false);
 
 const overlayRef = useRef(null);
+const pathname = usePathname();
+
+useEffect(() => {
+  setShouldShowOverlay(false);
+}, [pathname]);
 
 const handleSearch = useDebouncedCallback((term) => {
   setSearchTerm(term)
