@@ -30,7 +30,7 @@ export default function LoadingScreen() {
       {/* <RotatingLines */}
       {/* <Watch */}
       {/* <ProgressBar */}
-      <Hourglass
+      <Watch
         visible={true}
         height="180"
         width="180"

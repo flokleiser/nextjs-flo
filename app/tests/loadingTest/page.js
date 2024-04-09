@@ -19,18 +19,101 @@ import {RotatingLines} from "react-loader-spinner"
 //kinda cool
 import {Watch} from "react-loader-spinner"
 
+//spinner
+import BounceLoader from "react-spinners/BounceLoader";
+
 
 export default function LoadingScreen() {
   return (
     <main className={styles.main}>
       <div style={{ paddingTop: "5rem" }} />
       {/* <div className={styles.subtitleHomepage}>Loading</div> */}
-      <div style={{padding:'10rem'}} />
-      {/* <Puff */}
-      {/* <Grid */}
-      {/* <RotatingLines */}
-      {/* <Watch */}
-      {/* <ProgressBar */}
+      {/* <div style={{padding:'10rem'}} /> */}
+      <Puff
+        visible={true}
+        height="180"
+        width="180"
+        color="#ffffff"
+        ariaLabel="puff-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#ffffff", "#ffffff"]}
+        barColor="#ffffff"
+        borderColor="#ffffff"
+        strokeColor="#ffffff"
+        strokeWidth="4"
+      />
+
+<div style={{padding:'3rem'}} />
+
+      <Grid
+        visible={true}
+        height="180"
+        width="180"
+        color="#ffffff"
+        ariaLabel="puff-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#ffffff", "#ffffff"]}
+        barColor="#ffffff"
+        borderColor="#ffffff"
+        strokeColor="#ffffff"
+        strokeWidth="4"
+      />
+
+<div style={{padding:'3rem'}} />
+
+      <RotatingLines
+        visible={true}
+        height="180"
+        width="180"
+        color="#ffffff"
+        ariaLabel="puff-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#ffffff", "#ffffff"]}
+        barColor="#ffffff"
+        borderColor="#ffffff"
+        strokeColor="#ffffff"
+        strokeWidth="4"
+      />
+
+<div style={{padding:'3rem'}} />
+
+      <Watch
+        visible={true}
+        height="180"
+        width="180"
+        color="#ffffff"
+        ariaLabel="puff-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#ffffff", "#ffffff"]}
+        barColor="#ffffff"
+        borderColor="#ffffff"
+        strokeColor="#ffffff"
+        strokeWidth="4"
+      />
+
+<div style={{padding:'3rem'}} />
+
+      <ProgressBar
+        visible={true}
+        height="180"
+        width="180"
+        color="#ffffff"
+        ariaLabel="puff-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#ffffff", "#ffffff"]}
+        barColor="#ffffff"
+        borderColor="#ffffff"
+        strokeColor="#ffffff"
+        strokeWidth="4"
+      />
+
+<div style={{padding:'3rem'}} />
+
       <Hourglass
         visible={true}
         height="180"
@@ -46,6 +129,11 @@ export default function LoadingScreen() {
         strokeWidth="4"
       />
 
+      <div style={{padding:'3rem'}} />
+
+<BounceLoader color="#36d7b7" />
+
     </main>
   );
 }
+
