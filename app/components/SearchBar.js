@@ -18,6 +18,9 @@ export default function SearchBar({ onSearch }) {
   const [isFocused, setIsFocused] = useState(false);
   const [shouldShowOverlay, setShouldShowOverlay] = useState(false);
 
+
+  const [showCloseButton, setShowCloseButton] = useState(false);
+
   const overlayRef = useRef(null);
   const pathname = usePathname();
 
@@ -50,19 +53,23 @@ export default function SearchBar({ onSearch }) {
   const handleFocus = () => {
     setIsFocused(true);
     setShouldShowOverlay(true);
+    setShowCloseButton(true);
   };
+
 
   const handleBlur = (event) => {
     if (overlayRef.current && !overlayRef.current.contains(event.relatedTarget)) {
       setIsFocused(false);
       setShouldShowOverlay(false);
     }
+    setShowCloseButton(false);
   };
 
-  // const handleCloseOverlay = () => {
-  //   setIsFocused(false);
-  //   setShouldShowOverlay(false);
-  // };
+  const handleCloseOverlay = () => {
+    setIsFocused(false);
+    setShouldShowOverlay(false);
+    setShowCloseButton(false);
+  };
 
   const handleClearSearch = () => {
     console.log("search reset");
@@ -105,15 +112,18 @@ export default function SearchBar({ onSearch }) {
             transition={{ duration: 0.3 }}
             ref={overlayRef}
           >
-            {/* <button
+
+        {/* {showCloseButton && (
+            <button
               style={{ zIndex: 500, fontSize: "2rem" }}
               onClick={() => {
                 handleCloseOverlay;
-                handleClearSearch;
+                // handleClearSearch;
               }}
             >
               <IoCloseCircleOutline className="h-15 w-15 text-gray-500" />
-            </button> */}
+            </button>
+        )} */}
 
             <div className="p-8  h-[100vh] overflow-y-auto">
               {searchResults.length === 0 ? (
