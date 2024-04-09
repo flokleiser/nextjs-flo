@@ -1,11 +1,5 @@
 # To-Do/Ideas List:
 
-
-- [ ] New analytics page
-
-## Better Backgrounds
-- [x] springflowers better background
-
 ## Search:
 - [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
@@ -22,6 +16,8 @@
         - [ ] Button for closing
             - [ ] Better styling
             - [ ] Make it actually work
+
+        - [ ] Maybe autocomplete function
 
         - [x] Click outside for closing
         - [x] (x) Button to clear search field

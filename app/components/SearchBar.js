@@ -49,6 +49,7 @@ export default function SearchBar({ onSearch }) {
 
   const handleFocus = () => {
     setIsFocused(true);
+    setShouldShowOverlay(true);
   };
 
   const handleBlur = (event) => {
@@ -58,10 +59,10 @@ export default function SearchBar({ onSearch }) {
     }
   };
 
-  const handleCloseOverlay = () => {
-    setIsFocused(false);
-    setShouldShowOverlay(false);
-  };
+  // const handleCloseOverlay = () => {
+  //   setIsFocused(false);
+  //   setShouldShowOverlay(false);
+  // };
 
   const handleClearSearch = () => {
     console.log("search reset");
@@ -79,7 +80,6 @@ export default function SearchBar({ onSearch }) {
         <input
           id="searchInputField"
           className={styles.searchBarStyle}
-          // value="test"
           onChange={(e) => {
             handleSearch(e.target.value);
             onSearch(e.target.value);
@@ -105,7 +105,7 @@ export default function SearchBar({ onSearch }) {
             transition={{ duration: 0.3 }}
             ref={overlayRef}
           >
-            <button
+            {/* <button
               style={{ zIndex: 500, fontSize: "2rem" }}
               onClick={() => {
                 handleCloseOverlay;
@@ -113,7 +113,7 @@ export default function SearchBar({ onSearch }) {
               }}
             >
               <IoCloseCircleOutline className="h-15 w-15 text-gray-500" />
-            </button>
+            </button> */}
 
             <div className="p-8  h-[100vh] overflow-y-auto">
               {searchResults.length === 0 ? (

@@ -26,5 +26,5 @@ export default [
   { previewImage: '/images/pagePreviews/new/skylandsTest2.png', path: '/projects/skylands', title: 'Skylands', content: 'Skylands VR Game', category: 'Projects', keywords: ['unity','vr', 'c#','game','virtual reality']},
   { previewImage: '/images/pagePreviews/new/springflowersTest3.png', path: '/projects/springFlowers', title: 'Spring Flowers', content: '3D Flower Designs', category: 'Projects', keywords: ['3d','print', '3d print','blender','illustrator']},
   { previewImage: '/images/pagePreviews/new/voxelTest2.png', path: '/projects/voxel', title: 'Voxel Art', content: '3D Voxel Designs', category: 'Projects', keywords: ['voxel','magicavoxel', '3d']},
-  { previewImage: '/images/pagePreviews/new/testsTest2.png ', path: '/projects/tests', title: 'Tests', content: 'Testing page', category: 'Tests', keywords: ['test','testing']},
+  { previewImage: '/images/pagePreviews/new/testsTest2.png ', path: '/tests', title: 'Tests', content: 'Testing page', category: 'Tests', keywords: ['test','testing']},
 ];
