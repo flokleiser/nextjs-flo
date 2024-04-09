@@ -19,6 +19,8 @@ import {RotatingLines} from "react-loader-spinner"
 //kinda cool
 import {Watch} from "react-loader-spinner"
 
+import { Spinner } from "flowbite-react";
+
 export default function LoadingScreen() {
   return (
     <main className={styles.main}>
@@ -30,7 +32,7 @@ export default function LoadingScreen() {
       {/* <RotatingLines */}
       {/* <Watch */}
       {/* <ProgressBar */}
-      <Hourglass
+      {/* <Hourglass
         visible={true}
         height="180"
         width="180"
@@ -43,7 +45,10 @@ export default function LoadingScreen() {
         borderColor="#ffffff"
         strokeColor="#ffffff"
         strokeWidth="4"
-      />
+      /> */}
+
+      <Spinner />
+       {/* aria-label="Extra large spinner example" size="xl" /> */}
     </main>
   );
 }

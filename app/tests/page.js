@@ -13,6 +13,7 @@ import {
   easeIn,
 } from "framer-motion";
 import { DiGoogleDrive } from "react-icons/di";
+import { FaLock } from "react-icons/fa";
 
 export default function filesTest() {
 
@@ -64,6 +65,7 @@ z-[-1]"
          testing some files 
         </p>
       </div>
+
 
       <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />

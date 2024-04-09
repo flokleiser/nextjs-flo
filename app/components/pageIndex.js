@@ -1,5 +1,3 @@
-import { FaLock } from "react-icons/fa";
-
 export default [
   { previewImage: '/images/pagePreviews/new/homepageTest2.png', path: '/', title: 'Homepage', content: 'Homepage', category: 'Overview', keywords: ['homepage','start'] },
   
@@ -28,5 +26,5 @@ export default [
   { previewImage: '/images/pagePreviews/new/skylandsTest2.png', path: '/skylands', title: 'Skylands', content: 'Skylands VR Game', category: 'Projects', keywords: ['unity','vr', 'c#','game','virtual reality']},
   { previewImage: '/images/pagePreviews/new/springflowersTest.png', path: '/springFlowers', title: 'Spring Flowers', content: '3D Flower Designs', category: 'Projects', keywords: ['3d','print', '3d print','blender','illustrator']},
   { previewImage: '/images/pagePreviews/new/voxelTest2.png', path: '/voxel', title: 'Voxel Art', content: '3D Voxel Designs', category: 'Projects', keywords: ['voxel','magicavoxel', '3d']},
-  { previewImage: '/images/pagePreviews/new/testsTest2.png ', path: '/tests', title: 'Tests', content: 'Testing page', category: 'Tests', keywords: ['test','testing'], icon: <FaLock/>},
+  { previewImage: '/images/pagePreviews/new/testsTest2.png ', path: '/tests', title: 'Tests', content: 'Testing page', category: 'Tests', keywords: ['test','testing']},
 ];
