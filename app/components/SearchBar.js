@@ -48,7 +48,7 @@ export default function SearchBar({ onSearch }) {
     setSearchResults(searchResults);
     onSearch(term);
     setShouldShowOverlay(true);
-  }, 300);
+  }, 100);
 
   const handleFocus = () => {
     setIsFocused(true);
