@@ -74,21 +74,8 @@ z-[-1]"
       <div>
       <div className="relative flex flex-1 flex-shrink-0 pt-1.5">
       <input className={styles.passwordBar} type="password" onChange={handleInputChange} />
-      {/* <FaLock className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" /> */}
+      <FaLock className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
       </div>
-
-      {/* <div className={styles.subtitledescription}>
-        <p>
-         testing some files 
-        </p>
-      </div> */}
-
-
-      {/* <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} /> */}
-
-
 
       {showContents && <div> <TestPage/>
     
