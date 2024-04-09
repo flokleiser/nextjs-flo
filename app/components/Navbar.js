@@ -18,7 +18,6 @@ import {
 
 import SearchBar from "@/app/components/SearchBar";
 import pageIndex from "./pageIndex";
-import SearchResultsOverlay from "@/app/components/SearchResultsOverlay";
 
 
 const navItems = [
