@@ -1,5 +1,10 @@
 # To-Do/Ideas List:
 
+
+## Password function?
+- [ ] look into how to password protect a page
+- [ ] New analytics page
+
 ## Better Backgrounds
 - [ ] springflowers better background
 
