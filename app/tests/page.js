@@ -13,14 +13,25 @@ import {
   easeIn,
 } from "framer-motion";
 import { DiGoogleDrive } from "react-icons/di";
+import { FaLock } from "react-icons/fa";
 
-export default function filesTest() {
+
+const testPage = () => { 
 
   useEffect(() => {
     document.title = "Tests";
   }, []);
 
+  const [showContents, setShowContents] = useState(false);
+
+  const handleInputChange = (event) => {
+    if (event.target.value === "test") {
+      setShowContents(true);
+    }
+  };
+
   return (
+    
     <main className={styles.main}>
       <div
         className="relative 
@@ -65,10 +76,19 @@ z-[-1]"
         </p>
       </div>
 
+
       <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "1rem" }} />
 
+
+      <div>
+      <div className="relative flex flex-1 flex-shrink-0 pt-1.5">
+      <input className={styles.passwordBar} type="text" onChange={handleInputChange} />
+      {/* <FaLock className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" /> */}
+      </div>
+
+      {showContents && <div>
 
       <div className="flex flex-row mx-11">
 
@@ -280,7 +300,34 @@ z-[-1]"
 
         </div>
 
+        <div style={{padding:'1rem'}}/>
+
+          <div className="flex flex-row mx-11"></div>
+            <div
+            className={styles.buttonLinksPage}
+            >
+            <div className={styles.subtitledescription}>
+              <p>
+                <Link
+                  href="/tests/loadingTest"
+                >
+                Stats
+                </Link>
+              </p>
+            </div>
+
+        </div>
+
+
+
+
+        </div>}
+        </div>
+
       <div style={{ padding: "2rem" }} />
     </main>
   );
 }
+
+
+export default testPage;

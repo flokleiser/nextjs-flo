@@ -143,7 +143,6 @@ const handleSearch = useDebouncedCallback((term) => {
                 <Link href={page.path}>
                   <h3 className={styles.searchResultsTitle}>{page.title}</h3>
                   <p className={styles.searchResultsBody}>{page.content}</p>
-                  {/* <img src={page.previewImage} /> */}
                 </Link>
               </div>
             ))}

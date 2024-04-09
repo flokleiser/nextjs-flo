@@ -19,6 +19,7 @@ import {RotatingLines} from "react-loader-spinner"
 //kinda cool
 import {Watch} from "react-loader-spinner"
 
+
 export default function LoadingScreen() {
   return (
     <main className={styles.main}>
@@ -44,6 +45,7 @@ export default function LoadingScreen() {
         strokeColor="#ffffff"
         strokeWidth="4"
       />
+
     </main>
   );
 }
