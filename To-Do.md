@@ -4,7 +4,7 @@
 - [ ] New analytics page
 
 ## Better Backgrounds
-- [ ] springflowers better background
+- [x] springflowers better background
 
 ## Search:
 - [x] Search function?
