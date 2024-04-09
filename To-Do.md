@@ -7,7 +7,7 @@
     - [x] Figure out how how to make it functional
         - [x] index.js file with all pages + keywords listed
 
-        - [x] ONLY DISPLAY WHEN SEARCH INPUT IS IN FOCUS
+        - [x] only display onFocus
 
         - [x] Make it go away on focus loss or empty field
 
