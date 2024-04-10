@@ -103,7 +103,6 @@ export default function SearchBar({ onSearch }) {
         {shouldShowOverlay && (
           <motion.div
             className={styles.searchOverlay}
-            // className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full "
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -120,7 +119,8 @@ export default function SearchBar({ onSearch }) {
               <IoCloseCircleOutline className="h-15 w-15 text-gray-500" />
             </button> */}
 
-            <div className="p-8  h-[100vh] overflow-y-auto backdrop-blur-md"
+            {/* <div className="p-8  h-[100vh] overflow-y-auto backdrop-blur-md" */}
+            <div className="p-8  h-[100vh] overflow-y-auto"
             // style={{backdropFilter:"blur(10px)"}}
             >
               
