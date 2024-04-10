@@ -54,7 +54,8 @@ z-[-1]">
 
         <iframe 
         src="https://drive.google.com/file/d/1dG7y59mddTFC_tMWaYHcGHHzMeyTrJ2t/preview" 
-        style={{width:"100vw", height:"95vh"}}
+        // style={{width:"100vw", height:"95vh"}}
+        style={{width:"100vw", height:"96vh"}}
         width="640" height="480" >
 
         </iframe>
