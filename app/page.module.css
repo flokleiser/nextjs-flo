@@ -2191,7 +2191,6 @@ transition: all 0.5s ease-in-out;
   opacity: 1;
 }
 
-
 .searchBar {
   position:absolute;
   /* position:fixed; */
@@ -2245,15 +2244,18 @@ transition: all 0.5s ease-in-out;
 
   justify-self:center;
 }
+
 .cardSearch span {
   display: inline-block;
   transition: transform 200ms;
 }
+
 .cardSearch h2 {
   font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 0.7rem;
 }
+
 .cardSearch p {
   margin: 0;
   opacity: 0.6;
@@ -2266,16 +2268,15 @@ transition: all 0.5s ease-in-out;
   z-index: 800;
   position:fixed;
   display:flex;
-  /* flex-direction: row-reverse; */
   align-items: center;
   justify-content: center;
   outline: 2px solid transparent;
   outline-offset: 2px;
   background-color:rgba(40, 40, 40, 0.8);
-  margin-top:2.9rem;
+  margin-top:2.8rem;
   right:0;
+  backdrop-filter: blur(15px);
 }
-
 
 .passwordBar{
   display: block; 
