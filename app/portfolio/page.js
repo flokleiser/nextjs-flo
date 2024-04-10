@@ -65,7 +65,8 @@ z-[-1]">
         // src="https://drive.google.com/file/d/1b4mRdDAdqGD0KS4nlxXLnif71r8ayYdB/preview" 
         // src="https://drive.google.com/file/d/14PnzzDMOzSfJ7xMbp5O3WNXJfA1RE3rh/preview"
         src="https://drive.google.com/file/d/1idQPlX3VKanj_9xHR1MJJktuJ0rJPzIH/preview"
-        style={{width:'100vw', height: '95vh'}} 
+        // style={{width:'100vw', height: '95vh'}} 
+        style={{width:'100vw', height: '96vh'}} 
         width="640" height="480" 
         ></iframe>
 

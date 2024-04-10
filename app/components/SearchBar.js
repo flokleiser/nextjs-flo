@@ -66,9 +66,6 @@ export default function SearchBar({ onSearch }) {
     setShouldShowOverlay(false);
   };
 
-  function errorMsg() {
-    console.log('close')
-  }
 
   const handleClearSearch = () => {
     console.log("search reset");
@@ -122,7 +119,11 @@ export default function SearchBar({ onSearch }) {
               <IoCloseCircleOutline className="h-15 w-15 text-gray-500" />
             </button> */}
 
-            <div className="p-8  h-[100vh] overflow-y-auto">
+            {/* <div className="p-8  h-[100vh] overflow-y-auto backdrop-blur-md" */}
+            <div className="p-8  h-[100vh] overflow-y-auto"
+            // style={{backdropFilter:"blur(10px)"}}
+            >
+              
               {searchResults.length === 0 ? (
                 <div className={styles.cardSearch}>
                   <h3 className={styles.searchResultsTitle}>No results found.</h3>
