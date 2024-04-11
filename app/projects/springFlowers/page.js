@@ -6,7 +6,11 @@ import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import ImageGallery from "@/app/components/ImageGallery";
+// import ImageGallery from "@/app/components/ImageGallery";
+import dynamic from "next/dynamic";
+
+const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
+
 
 const data = [
   { image: "/images/illustrator/flowers/snowdrop.png", id: 0 },

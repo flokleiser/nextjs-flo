@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
-import RootLayout from '@/app/layout'; 
+// import RootLayout from '@/app/layout'; 
 import dynamic from 'next/dynamic';
 
 
