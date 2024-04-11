@@ -48,8 +48,10 @@ export default function LoadingScreen() {
 
       <Grid
         visible={true}
-        height="180"
-        width="180"
+        // height="180"
+        // width="180"
+        height="330"
+        width="330"
         color="#ffffff"
         ariaLabel="puff-loading"
         wrapperStyle={{}}
@@ -133,6 +135,8 @@ export default function LoadingScreen() {
 
 <BounceLoader color="#36d7b7" />
 
+
+<div style={{padding:'3rem'}} />
     </main>
   );
 }

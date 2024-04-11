@@ -39,15 +39,13 @@ export default function RootLayout({ children }) {
          animate="animate"
          exit="exit"
          transition={pageTransition}
-       >
+       > */}
 
-        <Suspense fallback={<Loading />}> */}
           <div className="pt-[50px]" >
           <main>{children}</main>
           </div>
-        {/* </Suspense>
 
-        </motion.div>
+        {/* </motion.div>
       </AnimatePresence> */}
 
       </body>
@@ -56,3 +54,44 @@ export default function RootLayout({ children }) {
 }
 
 
+
+
+
+// 'use client'
+// import { Inter } from 'next/font/google';
+// import './globals.css';
+// import { Assistant } from 'next/font/google';  
+// import Navbar from './components/Navbar';
+// import { TransitionGroup, CSSTransition } from 'react-transition-group';
+// import { usePathname } from "next/navigation";
+// import { useState, useEffect } from "react";
+
+
+// const assistant = Assistant({ subsets: ['latin'] })
+
+// export default function RootLayout({ children }) {
+
+//   let pathname = usePathname() || "/";
+
+//   return (
+//     <html lang="en">
+//       <head />
+//       <body className={assistant.className}>
+//       <Navbar />
+
+//       <TransitionGroup>
+//           <CSSTransition
+//             key={pathname}
+//             classNames="page"
+//             timeout={300}
+//           >
+
+//       {children}
+      
+//       </CSSTransition>
+//       </TransitionGroup>
+
+//       </body>
+//     </html>
+//   )
+// }
