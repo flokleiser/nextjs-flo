@@ -263,7 +263,8 @@
   /* opacity:0.5; */
   /* background-size: contain; */
 
-  background-image: url("/images/sketches/test4.png");
+  /* background-image: url("/images/sketches/test4.png"); */
+  background-image: url("/images/sketches/test5.png");
 
   background-color: rgb(49,49,49);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
@@ -864,9 +865,9 @@ transition: all 0.5s ease-in-out;
 }
 
 .backbutton {
-  position:absolute;
+  /* position:absolute; */
   /* position:fixed; */
-  /* z-index: 9999; */
+  z-index: 9999;
   right: 12rem; 
   top: 0.425rem; 
   padding-top: 0.4rem;

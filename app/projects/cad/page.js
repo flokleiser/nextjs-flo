@@ -12,6 +12,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import ImageGallery from "@/app/components/ImageGallery";
 
 
+
 function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
   const copiedScene = useMemo(() => scene.clone(),[scene]);
