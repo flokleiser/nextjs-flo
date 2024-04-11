@@ -1,7 +1,13 @@
 # To-Do/Ideas List:
 
-## Loading Screen:
-- [ ] Make own loading screen
+## Page transitions
+- [ ] Figure out how to make page transitions without breaking everything
+- [ ] Add page transitions to children pages
+- [ ] Fix page transitions to not only work on reload
+
+## Backbutton
+- [x] Bring back "backbutton"
+- [x] Make it not show up on mobile
 
 ## Search:
 - [x] Search function?
@@ -9,35 +15,17 @@
     - [x] Visual 
     - [x] Figure out how how to make it functional
         - [x] index.js file with all pages + keywords listed
-
         - [x] only display onFocus
-
         - [x] Make it go away on focus loss or empty field
-
         - [x] Animatepresence opening and closing animation
-
-        - [ ] Button for closing
-            - [ ] Better styling
-            - [ ] Make it actually work
-
-        - [ ] Maybe autocomplete function
-
         - [x] Click outside for closing
         - [x] (x) Button to clear search field
-
         - [x] Page previews?
 
 ## Suspense
-- [ ] Figure out why layout.js isnt applying to child pages
-- [ ] Add suspense to children pages
+- [x] Figure out why layout.js isnt applying to child pages --> just use loading.js
+- [x] Add suspense to children pages
 
-## Page transitions
-- [ ] Figure out how to make page transitions without breaking everything
-- [ ] Add page transitions to children pages
-- [ ] Fix page transitions to not only work on reload
-
-## General upkeep:
-- [ ] Seperate pages into "content" and "page", like a seperate file for the stuff that should be rendered on the page
 
 ## Background
 - [ ] Make new background
@@ -75,17 +63,7 @@
     - [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
 
 ### Random fun stuff
-- [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
-
-- [ ] Make projects/portfolio cards scale up like the title etc
-- [ ] Add some "alt" properties for pictures
-
-- [ ] Page transitions please
-- [ ] Figure out collapsable menus
-- [ ] Add some tooltip background?
-- [ ] Look into animation keyframes for svg drawing (testing page)
 - [ ] try layoutId (for pictures left/right swiping animations)
-- [ ] Look into search function
 
 ### Videos/Gifs/Images:
 

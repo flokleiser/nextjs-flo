@@ -30,10 +30,26 @@ export default function LoadingScreen() {
       {/* <RotatingLines */}
       {/* <Watch */}
       {/* <ProgressBar */}
-      <Watch
+      {/* <Watch
         visible={true}
         height="180"
         width="180"
+        color="#ffffff"
+        ariaLabel="puff-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        colors={["#ffffff", "#ffffff"]}
+        barColor="#ffffff"
+        borderColor="#ffffff"
+        strokeColor="#ffffff"
+        strokeWidth="4"
+      /> */}
+            <Grid
+        visible={true}
+        // height="180"
+        // width="180"
+        height="330"
+        width="330"
         color="#ffffff"
         ariaLabel="puff-loading"
         wrapperStyle={{}}
