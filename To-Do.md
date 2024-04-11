@@ -1,9 +1,10 @@
 # To-Do/Ideas List:
 
 ## Page transitions
-- [ ] Figure out how to make page transitions without breaking everything
-- [ ] Add page transitions to children pages
-- [ ] Fix page transitions to not only work on reload
+- [x] Figure out how to make page transitions without breaking everything
+- [x] Add page transitions to children pages
+- [x] Fix page transitions to not only work on reload
+- [ ] SOLUTION --> super hacky workaround because nextjs page transitions are broken
 
 ## Backbutton
 - [x] Bring back "backbutton"
