@@ -682,8 +682,8 @@ style={{display:'flex', justifyItems:'center'}}
 
         <div stlye={{ padding: "0.5rem" }} />
 
-{/* <div className="flex flex-row"> */}
-<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+<div className="flex flex-row">
+{/* <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "> */}
 <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -721,6 +721,7 @@ style={{display:'flex', justifyItems:'center'}}
 
 
 </div>
+
 
         <div style={{ padding: "1.5rem" }} />
         <hr className={styles.pageDivider} />
@@ -762,8 +763,8 @@ style={{display:'flex', justifyItems:'center'}}
 
         <div stlye={{ padding: "0.5rem" }} />
 
-{/* <div className="flex flex-row"> */}
-<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+<div className="flex flex-row">
+{/* <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "> */}
 <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -842,8 +843,8 @@ style={{display:'flex', justifyItems:'center'}}
 
         <div stlye={{ padding: "0.5rem" }} />
 
-{/* <div className="flex flex-row"> */}
-<div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+<div className="flex flex-row">
+{/* <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "> */}
 <div className={styles.linkContainerCCSandboxSmall}
           // style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           // }}
