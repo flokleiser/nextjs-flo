@@ -1,13 +1,13 @@
 # To-Do/Ideas List:
 
-## Backbutton
-- [ ] Bring back "backbutton"
-- [ ] Make it not show up on mobile
-
 ## Page transitions
 - [ ] Figure out how to make page transitions without breaking everything
 - [ ] Add page transitions to children pages
 - [ ] Fix page transitions to not only work on reload
+
+## Backbutton
+- [x] Bring back "backbutton"
+- [x] Make it not show up on mobile
 
 ## Search:
 - [x] Search function?
@@ -18,7 +18,6 @@
         - [x] only display onFocus
         - [x] Make it go away on focus loss or empty field
         - [x] Animatepresence opening and closing animation
-        - [ ] Maybe autocomplete function
         - [x] Click outside for closing
         - [x] (x) Button to clear search field
         - [x] Page previews?
