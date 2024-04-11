@@ -6,7 +6,7 @@ import { Suspense, useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
 import {useNavigationTransition} from './components/transitionContext'
-import { duration } from 'moment';
+// import Transitions, {Animate} from "./components/transitionContext"
 
 const assistant = Assistant({ subsets: ['latin'] })
 
@@ -28,11 +28,9 @@ export default function RootLayout({ children }) {
       <body className={assistant.className}>
         <Navbar />
 
-      {/* <AnimatePresence mode="wait"> */}
       <AnimatePresence mode="popLayout">
       {!pending && (
         <motion.div
-        //  key={children.key}
          key={pathname}
          variants={pageVariants}
          initial="initial"
@@ -40,9 +38,13 @@ export default function RootLayout({ children }) {
          exit="exit"
        >
 
-          <div className="pt-[50px]" >
-          <main>{children}</main>
-          </div>
+          {/* <Transitions> */}
+
+            <div className="pt-[50px]" >
+             <main>{children}</main>
+             {/* <Animate> <main>{children}</main></Animate> */}
+            </div>
+          {/* </Transitions> */}
 
         </motion.div>
          )}

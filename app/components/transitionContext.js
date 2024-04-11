@@ -31,122 +31,27 @@ export default function Transitions({ children }) {
 }
 
 
+
 // "use client";
 
 // import { AnimatePresence, motion } from "framer-motion";
-// import { useRouter } from "next/navigation";
-// import {
-//   createContext,
-//   MouseEventHandler,
-//   PropsWithChildren,
-//   use,
-//   useTransition,
-// } from "react";
+// import { useRouter } from "next/router";
+// import { createContext,use,useTransition } from "react";
 
-// export const DELAY = 1000;
+// const DELAY = 200;
 
-// const sleep = (ms: number) =>
-//   new Promise<void>((resolve) => setTimeout(() => resolve(), ms));
+// const sleep = (ms) =>
+//   new Promise((resolve) => setTimeout(() => resolve(), ms));
 // const noop = () => {};
 
-// type TransitionContext = {
-//   pending: boolean;
-//   navigate: (url: string) => void;
-// };
-// const Context = createContext<TransitionContext>({
-//   pending: false,
-//   navigate: noop,
-// });
-// export const usePageTransition = () => use(Context);
-// export const usePageTransitionHandler = () => {
-//   const { navigate } = usePageTransition();
-//   const onClick: MouseEventHandler<HTMLAnchorElement> = (e) => {
-//     e.preventDefault();
-//     const href = e.currentTarget.getAttribute("href");
-//     if (href) navigate(href);
-//   };
-
-//   return onClick;
-// };
-
-// type Props = PropsWithChildren<{
-//   className?: string;
-// }>;
-
-// export default function Transitions({ children, className }: Props) {
-//   const [pending, start] = useTransition();
-//   const router = useRouter();
-//   const navigate = (href: string) => {
-//     start(async () => {
-//       router.push(href);
-//       await sleep(DELAY);
-//     });
-//   };
-
-//   const onClick: MouseEventHandler<HTMLDivElement> = (e) => {
-//     const a = (e.target as Element).closest("a");
-//     if (a) {
-//       e.preventDefault();
-//       const href = a.getAttribute("href");
-//       if (href) navigate(href);
-//     }
-//   };
-
-//   return (
-//     <Context.Provider value={{ pending, navigate }}>
-//       <div onClickCapture={onClick} className={className}>
-//         {children}
-//       </div>
-//     </Context.Provider>
-//   );
-// }
-
-// export function Animate({ children, className }: Props) {
-//   const { pending } = usePageTransition();
-//   return (
-//     <AnimatePresence>
-//       {!pending && (
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           animate={{ opacity: 1 }}
-//           exit={{ opacity: 0 }}
-//           className={className}
-//         >
-//           {children}
-//         </motion.div>
-//       )}
-//     </AnimatePresence>
-//   );
-// }
-
-// import { AnimatePresence, motion } from "framer-motion";
-// import { useRouter } from "next/navigation";
-// import {
-//   createContext,
-//   MouseEventHandler,
-//   PropsWithChildren,
-//   use,
-//   useTransition,
-// } from "react";
-
-// export const DELAY = 1000;
-
-// const sleep = ms =>
-//   new Promise(resolve => setTimeout(() => resolve(), ms));
-// const noop = () => {};
-
-// // type TransitionContext = {
-// //   pending: boolean;
-// //   navigate: (url: string) => void;
-// // };
 // const Context = createContext({
 //   pending: false,
 //   navigate: noop,
 // });
-// export const usePageTransition = () => use(Context);
-// export const usePageTransitionHandler = () => {
+// const usePageTransition = () => use(Context);
+// const usePageTransitionHandler = () => {
 //   const { navigate } = usePageTransition();
-//   const onClick: MouseEventHandler<HTMLAnchorElement> = (e) => {
+//   const onClick = (e) => {
 //     e.preventDefault();
 //     const href = e.currentTarget.getAttribute("href");
 //     if (href) navigate(href);
@@ -155,22 +60,18 @@ export default function Transitions({ children }) {
 //   return onClick;
 // };
 
-// type Props = PropsWithChildren<{
-//   className?: string;
-// } >;
-
-// export default function Transitions({ children, className }: Props) {
+// function Transitions({ children, className }) {
 //   const [pending, start] = useTransition();
 //   const router = useRouter();
-//   const navigate = (href: string) => {
+//   const navigate = (href) => {
 //     start(async () => {
 //       router.push(href);
 //       await sleep(DELAY);
 //     });
 //   };
 
-//   const onClick: MouseEventHandler<HTMLDivElement> = (e) => {
-//     const a = (e.target as Element).closest("a");
+//   const onClick = (e) => {
+//     const a = e.target.closest("a");
 //     if (a) {
 //       e.preventDefault();
 //       const href = a.getAttribute("href");
@@ -187,7 +88,7 @@ export default function Transitions({ children }) {
 //   );
 // }
 
-// export function Animate({ children, className }: Props) {
+// function Animate({ children, className }) {
 //   const { pending } = usePageTransition();
 //   return (
 //     <AnimatePresence>
@@ -204,3 +105,10 @@ export default function Transitions({ children }) {
 //     </AnimatePresence>
 //   );
 // }
+
+// module.exports = {
+//   Transitions,
+//   Animate,
+//   usePageTransitionHandler,
+// };
+
