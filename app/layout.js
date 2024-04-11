@@ -5,22 +5,26 @@ import Navbar from './components/Navbar';
 import { Suspense, useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
-import {useNavigationTransition} from './components/transitionContext'
-// import Transitions, {Animate} from "./components/transitionContext"
+// import {useNavigationTransition} from './components/transitionContext'
 
 const assistant = Assistant({ subsets: ['latin'] })
 
 const pageVariants = {
+
+
   initial: { opacity: 0, y: 500 },
   animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -500 },
+  exit: { opacity: 0, y: 500 },
   transition: {duration:0.5, type:'tween', ease:'anticipate'}
+
 };
 
 export default function RootLayout({ children }) {
 
   const pathname = usePathname();
-  const { pending } = useNavigationTransition();
+  // const { pending } = useNavigationTransition();
+
+
 
   return (
     <html lang="en">
@@ -28,26 +32,23 @@ export default function RootLayout({ children }) {
       <body className={assistant.className}>
         <Navbar />
 
-      <AnimatePresence mode="popLayout">
-      {!pending && (
+      {/* <AnimatePresence mode="popLayout"> */}
+      <AnimatePresence mode="wait">
+      {/* {!pending && ( */}
         <motion.div
-         key={pathname}
+        key={pathname}
          variants={pageVariants}
          initial="initial"
          animate="animate"
          exit="exit"
        >
 
-          {/* <Transitions> */}
-
             <div className="pt-[50px]" >
-             <main>{children}</main>
-             {/* <Animate> <main>{children}</main></Animate> */}
+              <main>{children}</main>
             </div>
-          {/* </Transitions> */}
 
         </motion.div>
-         )}
+          {/* )}  */}
       </AnimatePresence>
 
       </body>
