@@ -59,9 +59,9 @@ z-[-1]"
       ></div>
 
 
-      <div style={{ padding: "1rem" }} />
+      {/* <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "1rem" }} /> */}
 
       <div className="flex flex-row mx-11">
 

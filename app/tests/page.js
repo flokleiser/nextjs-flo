@@ -24,12 +24,20 @@ export default function testPage() {
   }, []);
 
   const [showContents, setShowContents] = useState(false);
+  const [showInput, setShowInput] = useState(true);
 
   const handleInputChange = (event) => {
     if (event.target.value === "test") {
       setShowContents(true);
+      setShowInput(false);
     }
   };
+
+  // const handleShowInput = (event) => {
+  //   if (setShowContents) {
+  //     setShowInput(false);
+  //   }
+  // }
 
   return (
     
@@ -71,13 +79,22 @@ z-[-1]"
  
       <h1 className={styles.title}>Tests</h1>
 
+      {/* <div style={{ padding: "1rem" }} />
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} /> */}
+
       <div>
+      {showInput && 
       <div className="relative flex flex-1 flex-shrink-0 pt-1.5">
-      <input className={styles.passwordBar} type="password" onChange={handleInputChange} />
+
+
+      <input className={styles.passwordBar} type="password" onChange={handleInputChange} autoFocus/>
       <FaLock className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
       </div>
+      }
 
-      {showContents && <div> <TestPage/>
+      {showContents && 
+      <div> <TestPage/>
     
         </div>}
         </div>

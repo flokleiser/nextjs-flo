@@ -1,7 +1,8 @@
 # To-Do/Ideas List:
 
-
-## Sync with new mac again
+## Testing page
+- [x] Autofocus on password bar
+- [x] Hide password bar after password has been entered
 
 ## Page Loading times
 - [ ] Look into what pages are slow to load
@@ -67,13 +68,8 @@
 ### Creative Coding:
 - [x] Make better buttons (?) to toggle drawing etc
 - [x] Doublecheck that mobile etc works
-- [ ] Move tool at the end of page
-- [ ] Interactive part --> 
-    - [x] figure out how to set drawing to true on mouse over?
-    - [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
-
-### Random fun stuff
-- [ ] try layoutId (for pictures left/right swiping animations)
+- [x] figure out how to set drawing to true on mouse over?
+- [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
 
 ### Videos/Gifs/Images:
 
