@@ -2197,10 +2197,14 @@ transition: all 0.5s ease-in-out;
 }
 
 .searchBar {
-  position:absolute;
-  /* position:fixed; */
+  /* if switching back to navbar --> position absolute */
+  /* position:absolute; */
+  position:fixed;
   display: flex;
   right: 1rem;
+  top:0.4rem;
+  /* backdrop-filter: blur(2px); */
+  z-index: 9999;
 }
 
 
@@ -2271,16 +2275,17 @@ transition: all 0.5s ease-in-out;
 
 .searchOverlay {
   z-index: 800;
+  /* z-index: 5; */
   position:fixed;
   display:flex;
   align-items: center;
   justify-content: center;
   outline: 2px solid transparent;
   outline-offset: 2px;
+  border-radius:20px;
   background-color:rgba(40, 40, 40, 0.8);
-  margin-top:2.8rem;
+  margin-top:3.5rem;
   right:0;
-  backdrop-filter: blur(15px);
 }
 
 .passwordBar{

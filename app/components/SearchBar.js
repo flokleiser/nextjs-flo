@@ -109,23 +109,14 @@ export default function SearchBar({ onSearch }) {
             transition={{ duration: 0.3 }}
             ref={overlayRef}
           >
-
-            {/* <button
-              style={{ zIndex: 900, fontSize: "2rem" }}
-              onClick={() => {
-                handleCloseOverlay;
-              }}
-            >
-              <IoCloseCircleOutline className="h-15 w-15 text-gray-500" />
-            </button> */}
-
             {/* <div className="p-8  h-[100vh] overflow-y-auto backdrop-blur-md" */}
-            <div className="p-8  h-[100vh] overflow-y-auto"
-            // style={{backdropFilter:"blur(10px)"}}
+            <div className="p-8  h-[93vh] overflow-y-auto backdrop-blur-md"
+             style={{borderRadius:'20px'}}
             >
               
               {searchResults.length === 0 ? (
-                <div className={styles.cardSearch}>
+                <div className={styles.cardSearch}
+                >
                   <h3 className={styles.searchResultsTitle}>No results found.</h3>
                 </div>
               ) : (
@@ -150,8 +141,8 @@ export default function SearchBar({ onSearch }) {
               )}
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
+         )} 
+        </AnimatePresence>
     </div>
   );
 }

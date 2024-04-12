@@ -1,5 +1,9 @@
 # To-Do/Ideas List:
 
+## Optimisations:
+- [ ] Look into lazy loading
+- [ ] Look into dynamic imports
+
 ## Testing page
 - [x] Autofocus on password bar
 - [x] Hide password bar after password has been entered
@@ -21,6 +25,10 @@
 - [x] Make it not show up on mobile
 
 ## Search:
+
+- [ ] **Only move searchoverlay to a different file?**
+
+- [ ] Figure out why backdrop-filter doesnt work on search overlay
 - [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 

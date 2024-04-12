@@ -444,11 +444,8 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      <SearchBar onSearch={handleSearch}/>
-      {showSearchResults}
-      {/* {showSearchResults && (
-        <SearchResultsOverlay searchResults={searchResults} />
-      )} */}
+      {/* <SearchBar onSearch={handleSearch}/>
+      {showSearchResults} */}
       </div>
     </div>
   );
