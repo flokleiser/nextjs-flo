@@ -1,5 +1,8 @@
 # To-Do/Ideas List:
 
+## Page Loading times
+- [ ] Look into what pages are slow to load
+
 ## Page transitions
 - [x] Figure out how to make page transitions without breaking everything
 - [x] Add page transitions to children pages
