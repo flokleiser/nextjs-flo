@@ -1,5 +1,8 @@
 # To-Do/Ideas List:
 
+
+## Sync with new mac again
+
 ## Page Loading times
 - [ ] Look into what pages are slow to load
 
