@@ -81,7 +81,7 @@ export default function escape() {
         )}
       </AnimatePresence>
 
-      <div
+      {/* <div
         className={styles.backbutton}
         style={{ position: "fixed", zIndex: 9999 }}
       >
@@ -89,7 +89,7 @@ export default function escape() {
           {" "}
           <Link href="/projects/animations">Back to Animations</Link>{" "}
         </h1>
-      </div>
+      </div> */}
 
       <div style={{paddingTop:'1rem'}} />
 

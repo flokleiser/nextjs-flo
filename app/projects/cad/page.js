@@ -113,7 +113,7 @@ export default function cad() {
    z-[-1]"
       ></div>
 
-      <div
+      {/* <div
         className={styles.backbutton}
         style={{ position: "fixed", zIndex: 9999 }}
       >
@@ -121,7 +121,7 @@ export default function cad() {
           {" "}
           <Link href="/projects">Back to Projects </Link>{" "}
         </h1>
-      </div>
+      </div> */}
       <div style={{ paddingTop: "1rem" }} />
 
       <div className={styles.linkContainerCad}>

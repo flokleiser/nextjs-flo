@@ -220,7 +220,7 @@ export default function Navbar() {
 
   return (
     <div className={styles.navbarContainer}>
-      <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
+      {/* <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full "> */}
 
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
@@ -446,7 +446,7 @@ export default function Navbar() {
         </AnimatePresence>
       <SearchBar onSearch={handleSearch} style={{zIndex:'-100'}}/>
       {showSearchResults}
-      </div>
+      {/* </div> */}
     </div>
   );
 }
