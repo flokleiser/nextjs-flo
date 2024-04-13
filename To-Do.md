@@ -1,17 +1,27 @@
 # To-Do/Ideas List:
 
+## Saturday
+- [ ] **Only move searchoverlay to a different file?**
+- [x] Figure out why backdrop-filter doesnt work on search overlay --> because its in the navbar file
+
+## Background
+- [ ] Figure out how i can factor out the tailwindcss for the background style
+- [ ] Move it to backgroundStyle.js
+
+___
+
 ## Optimisations:
 - [ ] Look into lazy loading
 - [ ] Look into dynamic imports
+- [ ] Look into what pages are slow to load
 
-## Testing page
+___
+
+### Testing page
 - [x] Autofocus on password bar
 - [x] Hide password bar after password has been entered
 
-## Page Loading times
-- [ ] Look into what pages are slow to load
-
-## Page transitions
+### Page transitions
 - [x] Figure out how to make page transitions without breaking everything
 - [x] Add page transitions to children pages
 
@@ -20,15 +30,12 @@
 - [x] Fix page transitions to not only work on reload
 - [x] SOLUTION --> super hacky workaround because nextjs page transitions are broken
 
-## Backbutton
+### Backbutton
 - [x] Bring back "backbutton"
 - [x] Make it not show up on mobile
 
-## Search:
+### Search:
 
-- [ ] **Only move searchoverlay to a different file?**
-
-- [ ] Figure out why backdrop-filter doesnt work on search overlay
 - [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 
@@ -41,15 +48,12 @@
         - [x] (x) Button to clear search field
         - [x] Page previews?
 
-## Suspense
+### Suspense
 - [x] Figure out why layout.js isnt applying to child pages --> just use loading.js
 - [x] Add suspense to children pages
 
 
-## Background
-- [ ] Make new background
-
-## 3D models:
+### 3D models:
 - [x] Figure out how to make textures --> just use gtlf
 - [x] Figure out better lighting
 
@@ -65,12 +69,10 @@
         - [x] Make buttons not take up entire row
     - [x] add to cad page
 
-
-
-## Updates:
+### Updates:
 - [x] Update Portfolio
 
-## NEW TO-DO PAGES:
+### NEW TO-DO PAGES:
 - [x] ZHdK homework
 
 ### Creative Coding:

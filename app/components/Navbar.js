@@ -444,8 +444,8 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      {/* <SearchBar onSearch={handleSearch}/>
-      {showSearchResults} */}
+      <SearchBar onSearch={handleSearch} style={{zIndex:'-100'}}/>
+      {showSearchResults}
       </div>
     </div>
   );
