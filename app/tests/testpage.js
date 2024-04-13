@@ -286,6 +286,20 @@ z-[-1]"
               </p>
             </div>
         </div>
+
+        <div
+            className={styles.buttonLinksPage}
+            >
+            <div className={styles.subtitledescription}>
+              <p>
+                <Link
+                  href="/tests/gaussianSplatting"
+                >
+               Gaussian Splatting 
+                </Link>
+              </p>
+            </div>
+        </div>
         </div>
 
 
