@@ -2299,14 +2299,6 @@ transition: all 0.5s ease-in-out;
 
   top:0;
   right:0;
-  /* padding-top:2rem; */
-  /* padding-top:6rem; */
-
-  /* padding: 2rem;
-  height:100vh;
-  backdrop-filter: blur(12px);
-  overflow-y: auto;
-  background-color: rgb(28 25 23 / 0.8); */
 }
 
 /* .searchOverlayDiv::before{
