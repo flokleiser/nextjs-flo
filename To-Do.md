@@ -1,8 +1,7 @@
 # To-Do/Ideas List:
 
 ## Saturday
-- [ ] **Only move searchoverlay to a different file?**
-- [x] Figure out why backdrop-filter doesnt work on search overlay --> because its in the navbar file
+- [x] Figure out why backdrop-filter doesnt work on search overlay --> because navbar has backdrop blur
 
 ## Background
 - [ ] Figure out how i can factor out the tailwindcss for the background style

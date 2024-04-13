@@ -2287,13 +2287,17 @@ transition: all 0.5s ease-in-out;
 
   /* background-color:rgba(40, 40, 40, 0.8); */
   /* background-color: rgba(28, 25, 23,  0.8); */
-  /* background-color: rgb(28 25 23 / 0.8); */
   /* margin-top:3.5rem; */
   top:0;
   right:0;
-  padding-top:2rem;
+  /* padding-top:2rem; */
+  /* padding-top:6rem; */
 
-  backdrop-filter: blur(5px);
+  /* padding: 2rem;
+  height:100vh;
+  backdrop-filter: blur(12px);
+  overflow-y: auto;
+  background-color: rgb(28 25 23 / 0.8); */
 }
 
 .passwordBar{
