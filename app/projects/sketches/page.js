@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
-import RootLayout from '@/app/layout'; 
+// import RootLayout from '@/app/layout'; 
+import dynamic from 'next/dynamic';
 
 
 
@@ -181,7 +182,7 @@ useEffect(() => {
           {/* <div className={styles.backbutton}
            style={{position:'fixed', zIndex:9999}}
            >
-            <h1> <Link href="/projects">All Projects </Link> </h1>
+            <h1> <Link href="/projects">Back to Projects </Link> </h1>
             </div> */}
 
             <div style={{paddingTop:'1rem'}} />

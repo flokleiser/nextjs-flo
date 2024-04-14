@@ -18,7 +18,6 @@ import {
 
 import SearchBar from "@/app/components/SearchBar";
 import pageIndex from "./pageIndex";
-import SearchResultsOverlay from "@/app/components/SearchResultsOverlay";
 
 
 const navItems = [
@@ -221,7 +220,7 @@ export default function Navbar() {
 
   return (
     <div className={styles.navbarContainer}>
-      <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full ">
+      {/* <div className="flex border-stone-900/80 p-[0.3rem] mb-1 fixed top bg-stone-900/80 backdrop-blur-md z-[9998] w-full "> */}
 
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
@@ -445,12 +444,9 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
-      <SearchBar onSearch={handleSearch}/>
+      <SearchBar onSearch={handleSearch} style={{zIndex:'-100'}}/>
       {showSearchResults}
-      {/* {showSearchResults && (
-        <SearchResultsOverlay searchResults={searchResults} />
-      )} */}
-      </div>
+      {/* </div> */}
     </div>
   );
 }

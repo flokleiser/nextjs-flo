@@ -49,11 +49,11 @@ export default function momentfulness() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-{/* 
-          <div className={styles.backbutton}
+
+          {/* <div className={styles.backbutton}
            style={{position:'fixed', zIndex:9999}}
            >
-            <h1> <Link href="/projects">All Projects </Link> </h1>
+            <h1> <Link href="/projects">Back to Projects </Link> </h1>
             </div> */}
 
             <div style={{paddingTop:'1rem'}} />

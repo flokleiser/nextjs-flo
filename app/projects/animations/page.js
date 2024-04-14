@@ -60,7 +60,7 @@ export default function animations() {
       >
         <h1>
           {" "}
-          <Link href="/projects">All Projects </Link>{" "}
+          <Link href="/projects">Back to Projects </Link>{" "}
         </h1>
       </div> */}
 

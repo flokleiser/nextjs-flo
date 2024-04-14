@@ -13,14 +13,34 @@ import {
   easeIn,
 } from "framer-motion";
 import { DiGoogleDrive } from "react-icons/di";
+import { FaLock } from "react-icons/fa";
+import TestPage from "app/tests/testpage.js"
 
-export default function filesTest() {
+// const testPage = () => { 
+export default function testPage() {
 
   useEffect(() => {
-    document.title = "testing";
+    document.title = "Tests";
   }, []);
 
+  const [showContents, setShowContents] = useState(false);
+  const [showInput, setShowInput] = useState(true);
+
+  const handleInputChange = (event) => {
+    if (event.target.value === "test") {
+      setShowContents(true);
+      setShowInput(false);
+    }
+  };
+
+  // const handleShowInput = (event) => {
+  //   if (setShowContents) {
+  //     setShowInput(false);
+  //   }
+  // }
+
   return (
+    
     <main className={styles.main}>
       <div
         className="relative 
@@ -57,210 +77,26 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
  
-      <h1 className={styles.title}>Testing</h1>
+      <h1 className={styles.title}>Tests</h1>
 
-      <div className={styles.subtitledescription}>
-        <p>
-         testing some files 
-        </p>
-      </div>
-
-      <div style={{ padding: "1rem" }} />
+      {/* <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
+      <div style={{ padding: "1rem" }} /> */}
+
+      <div>
+      {showInput && 
+      <div className="relative flex flex-1 flex-shrink-0 pt-1.5">
 
 
-      <div className="flex flex-row mx-11">
+      <input className={styles.passwordBar} type="password" onChange={handleInputChange} autoFocus/>
+      <FaLock className="absolute left-2 top-5 h-[18px] w-[15px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
+      </div>
+      }
 
-      <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/galleryTest"
-              >
-              ImageGallery
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/search"
-              >
-              Search
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/flowersTest"
-              >
-             flowers 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-      <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/cadTest"
-              >
-              CAD
-              </Link>
-            </p>
-          </div>
-        </div>
-
-      <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/canvasTest"
-              >
-              3D
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/svgTest"
-              >
-               SVG
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/imageTest"
-              >
-               IMAGE
-              </Link>
-            </p>
-          </div>
-        </div>
-        </div> 
-
-<div style={{padding:'1rem'}}/>
-
-<div className="flex flex-row mx-11">
-
-      <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/background"
-              >
-              Background
-              </Link>
-            </p>
-          </div>
-        </div>
-
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/filesTest"
-              >
-              FILES 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/portfolioTest"
-              >
-               MAPPE
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/skylandsTest"
-              >
-              SKYLANDS
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/ccTest"
-              >
-              CC 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/homepageTest"
-              >
-              HOMEPAGE 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-
+      {showContents && 
+      <div> <TestPage/>
+    
+        </div>}
         </div>
 
       <div style={{ padding: "2rem" }} />

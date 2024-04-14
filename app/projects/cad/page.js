@@ -12,6 +12,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import ImageGallery from "@/app/components/ImageGallery";
 
 
+
 function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
   const copiedScene = useMemo(() => scene.clone(),[scene]);
@@ -118,7 +119,7 @@ export default function cad() {
       >
         <h1>
           {" "}
-          <Link href="/projects">All Projects </Link>{" "}
+          <Link href="/projects">Back to Projects </Link>{" "}
         </h1>
       </div> */}
       <div style={{ paddingTop: "1rem" }} />

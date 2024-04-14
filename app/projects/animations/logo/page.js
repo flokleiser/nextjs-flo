@@ -94,7 +94,7 @@ export default function logo() {
        >
         <h1>
           {" "}
-          <Link href="/projects/animations">All Animations</Link>{" "}
+          <Link href="/projects/animations">Back to Animations</Link>{" "}
         </h1>
       </div> */}
 

@@ -1,43 +1,58 @@
 # To-Do/Ideas List:
 
-## Search:
+## Saturday
+- [x] Figure out why backdrop-filter doesnt work on search overlay --> because navbar has backdrop blur
+
+## Background
+- [ ] Figure out how i can factor out the tailwindcss for the background style
+- [ ] Move it to backgroundStyle.js
+
+___
+
+## Optimisations:
+- [ ] Look into lazy loading
+- [ ] Look into dynamic imports
+- [ ] Look into what pages are slow to load
+
+___
+
+### Testing page
+- [x] Autofocus on password bar
+- [x] Hide password bar after password has been entered
+
+### Page transitions
+- [x] Figure out how to make page transitions without breaking everything
+- [x] Add page transitions to children pages
+
+- [ ] Add transition animations for elements on the page aswell, not just pages themselves
+
+- [x] Fix page transitions to not only work on reload
+- [x] SOLUTION --> super hacky workaround because nextjs page transitions are broken
+
+### Backbutton
+- [x] Bring back "backbutton"
+- [x] Make it not show up on mobile
+
+### Search:
+
 - [x] Search function?
     --> https://nextjs.org/learn/dashboard-app/adding-search-and-pagination
     - [x] Visual 
     - [x] Figure out how how to make it functional
         - [x] index.js file with all pages + keywords listed
-
-        - [x] ONLY DISPLAY WHEN SEARCH INPUT IS IN FOCUS
-
+        - [x] only display onFocus
         - [x] Make it go away on focus loss or empty field
-
         - [x] Animatepresence opening and closing animation
-
-        - [x] Button for closing
         - [x] Click outside for closing
-        - [ ] (x) Button to clear search field
+        - [x] (x) Button to clear search field
+        - [x] Page previews?
 
-        - [ ] One big card, like command pallette
-        - [ ] Add background blur
-    -  
+### Suspense
+- [x] Figure out why layout.js isnt applying to child pages --> just use loading.js
+- [x] Add suspense to children pages
 
 
-## Suspense
-- [ ] Figure out why layout.js isnt applying to child pages
-- [ ] Add suspense to children pages
-
-## Page transitions
-- [ ] Figure out how to make page transitions without breaking everything
-- [ ] Add page transitions to children pages
-- [ ] Fix page transitions to not only work on reload
-
-## General upkeep:
-- [ ] Seperate pages into "content" and "page", like a seperate file for the stuff that should be rendered on the page
-
-## Background
-- [ ] Make new background
-
-## 3D models:
+### 3D models:
 - [x] Figure out how to make textures --> just use gtlf
 - [x] Figure out better lighting
 
@@ -53,34 +68,17 @@
         - [x] Make buttons not take up entire row
     - [x] add to cad page
 
-
-
-## Updates:
+### Updates:
 - [x] Update Portfolio
 
-## NEW TO-DO PAGES:
+### NEW TO-DO PAGES:
 - [x] ZHdK homework
 
 ### Creative Coding:
 - [x] Make better buttons (?) to toggle drawing etc
 - [x] Doublecheck that mobile etc works
-- [ ] Move tool at the end of page
-- [ ] Interactive part --> 
-    - [x] figure out how to set drawing to true on mouse over?
-    - [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
-
-### Random fun stuff
-- [ ] Add more svg animations onclick (focus button, dim button, next/prev image button)
-
-- [ ] Make projects/portfolio cards scale up like the title etc
-- [ ] Add some "alt" properties for pictures
-
-- [ ] Page transitions please
-- [ ] Figure out collapsable menus
-- [ ] Add some tooltip background?
-- [ ] Look into animation keyframes for svg drawing (testing page)
-- [ ] try layoutId (for pictures left/right swiping animations)
-- [ ] Look into search function
+- [x] figure out how to set drawing to true on mouse over?
+- [x] figure out how to have followmouse & autocolor on, and still be able to turn it off
 
 ### Videos/Gifs/Images:
 

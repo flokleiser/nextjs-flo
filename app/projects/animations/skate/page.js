@@ -91,8 +91,8 @@ export default function skate() {
           {/* <div className={styles.backbutton}
            style={{position:'fixed', zIndex:9999}}
            >
-            <h1> <Link href="/projects/animations">All Animations </Link> </h1>
-            </div> */}
+            <h1> <Link href="/projects/animations">Back to Animations </Link> </h1>
+            </div>*/}
 
             <div style={{paddingTop:'1rem'}} />
 

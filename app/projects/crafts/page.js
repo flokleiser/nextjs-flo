@@ -63,7 +63,7 @@ export default function crafts() {
           {/* <div className={styles.backbutton}
            style={{position:'fixed', zIndex:9999}}
            >
-            <h1> <Link href="/projects">All Projects </Link> </h1>
+            <h1> <Link href="/projects">Back to Projects </Link> </h1>
             </div> */}
 
             <div style={{paddingTop:'1rem'}} />
