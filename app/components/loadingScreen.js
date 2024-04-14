@@ -22,9 +22,9 @@ import {Watch} from "react-loader-spinner"
 export default function LoadingScreen() {
   return (
     <main className={styles.main}>
-      <div style={{ paddingTop: "5rem" }} />
+      {/* <div style={{ paddingTop: "5rem" }} /> */}
       {/* <div className={styles.subtitleHomepage}>Loading</div> */}
-      <div style={{padding:'10rem'}} />
+      <div style={{padding:'7rem'}} />
       {/* <Puff */}
       {/* <Grid */}
       {/* <RotatingLines */}

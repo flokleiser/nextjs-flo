@@ -15,13 +15,17 @@ const assistant = Assistant({ subsets: ['latin'] })
 
 
 const pageVariants = {
-
-
-  initial: { opacity: 0, y: 500 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 500 },
+  initial: { opacity: 0, x: -500 },
+  animate: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 500 },
   transition: {duration:0.5, type:'tween', ease:'anticipate'}
+};
 
+const contentVariants= {
+  initial: { x: 500 },
+  animate: { x: 0 },
+  exit: { x: 500 },
+  transition: {duration:0.5, type:'tween', ease:'anticipate'}
 };
 
 export default function RootLayout({ children }) {
@@ -35,6 +39,7 @@ export default function RootLayout({ children }) {
       <body className={assistant.className}>
         <Navbar />
 
+      {/* <Suspense fallback={<div>Loading...</div>}> */}
       <AnimatePresence mode="wait">
         <motion.div
         key={pathname}
@@ -44,12 +49,16 @@ export default function RootLayout({ children }) {
          exit="exit"
        >
 
+
             <div className="pt-[50px]" >
-              <main>{children}</main>
+              <main>
+                {children}
+              </main>
             </div>
 
         </motion.div>
       </AnimatePresence>
+      {/* </Suspense> */}
 
       </body>
     </html>

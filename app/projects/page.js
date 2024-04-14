@@ -1,14 +1,21 @@
+'use client'
 import styles from 'app/page.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
+import { AnimatePresence, easeIn, motion } from "framer-motion";
+import { useEffect } from 'react';
 
 
-export const metadata = {
-    title: 'Projects',
-    description: '-',
-}
+// export const metadata = {
+//     title: 'Projects',
+//     description: '-',
+// }
 
 export default function projects() {
+
+    useEffect(() => {
+        document.title = "Projects";
+      }, []);
     
     return (
         <main className={styles.main}>
@@ -45,7 +52,6 @@ export default function projects() {
    before:lg:h-[360px] 
    z-[-1]">
             </div>
-
 
             <h1 className={styles.title}> 
             Projects

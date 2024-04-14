@@ -6,7 +6,6 @@
 ## Background
 - [ ] Figure out how i can factor out the tailwindcss for the background style
 - [ ] Move it to backgroundStyle.js
-
 ___
 
 ## Optimisations:
