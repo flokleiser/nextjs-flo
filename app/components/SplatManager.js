@@ -5,17 +5,11 @@ import { LumaSplatsThree, LumaSplatsSemantics } from '@lumaai/luma-web';
 class SplatManager {
     constructor() {
         this.splatArray = [
-            //demo
             'https://lumalabs.ai/capture/d80d4876-cf71-4b8a-8b5b-49ffac44cd4a',
-            //cat
             "https://lumalabs.ai/embed/dda54514-b5b8-4675-8d4c-a2590acbe399",
-            //cat 2
             "https://lumalabs.ai/embed/66bcf4a4-ddbd-4c53-9d89-93f39a943dba",
-            //desk
             "https://lumalabs.ai/embed/2c100df7-a93d-4893-9430-fbf9715e012d",
-            //desk 2
             "https://lumalabs.ai/embed/f3fa6a0c-de07-4f58-b395-f75f993c1d6f",
-            //desk 3
             "https://lumalabs.ai/embed/2a7c971c-fb52-4aca-b7c3-117a9e1016a0",
         ];
 
@@ -35,8 +29,7 @@ class SplatManager {
         this.scene = new Scene();
 
         this.splat = new LumaSplatsThree({
-            // source: this.splatArray[1],
-            source: this.splatArray[2],
+            source: this.splatArray[1],
             enableThreeShaderIntegration: false,
         });
 
