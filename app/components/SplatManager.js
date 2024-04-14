@@ -35,7 +35,8 @@ class SplatManager {
         this.scene = new Scene();
 
         this.splat = new LumaSplatsThree({
-            source: this.splatArray[1],
+            // source: this.splatArray[1],
+            source: this.splatArray[2],
             enableThreeShaderIntegration: false,
         });
 
@@ -56,6 +57,17 @@ class SplatManager {
         this.renderer.render(this.scene, this.camera);
     }
 
+    demoSplat() {
+        this.scene.remove(splat);
+        this.splat = new LumaSplatsThree({
+            source: splatArray[0],
+            enableThreeShaderIntegration:false
+        });
+        this.scene.add(splat)
+    
+        this.camera.position.z = 7;
+    }
+
     catSplat() {
         this.scene.remove(splat);
         this.splat = new LumaSplatsThree({
@@ -64,6 +76,62 @@ class SplatManager {
         });
         this.scene.add(splat);
         this.camera.position.z = -7;
+    }
+
+    catSplat2() { 
+        this.scene.remove(splat);
+        this.splat = new LumaSplatsThree({
+            source: splatArray[2],
+            enableThreeShaderIntegration:false
+        });
+        this.scene.add(splat)
+    
+        this.camera.position.z = 7;
+    }
+    
+    deskSplat() {
+        this.scene.remove(splat);
+        this.splat = new LumaSplatsThree({
+            source: splatArray[3],
+            enableThreeShaderIntegration:false
+        });
+        this.scene.add(splat)
+    
+        this.camera.position.z = 7;
+    }
+    
+    deskSplat2() {
+        this.scene.remove(splat);
+        this.splat = new LumaSplatsThree({
+            source: splatArray[4],
+            enableThreeShaderIntegration:false
+        });
+        this.scene.add(splat)
+    
+        this.camera.position.z = -7;
+    }
+    
+    deskSplat3() {
+        this.scene.remove(splat);
+        this.splat = new LumaSplatsThree({
+            source: splatArray[5],
+            enableThreeShaderIntegration:false
+        });
+        this.scene.add(splat)
+    
+        this.camera.position.z = 7;
+    }
+    
+    toggleBackground() {
+        this.backgroundEnabled = !this.backgroundEnabled
+    
+        if (!this.backgroundEnabled) {
+            this.splat.semanticsMask = LumaSplatsSemantics.FOREGROUND;
+        }
+    
+        else if (this.backgroundEnabled) {
+            this.splat.semanticsMask = LumaSplatsSemantics.FOREGROUND | LumaSplatsSemantics.BACKGROUND;
+        }
     }
 
 }
