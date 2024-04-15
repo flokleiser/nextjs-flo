@@ -18,7 +18,7 @@ export default function gaussianSplatting() {
     };
 }, []);
 
-<iframe className={styles.iframeMomentfulness} src="https://flokleiser.github.io/gaussianFlo"></iframe>
+{/* <iframe className={styles.iframeMomentfulness} src="https://flokleiser.github.io/gaussianFlo"></iframe> */}
 
   return (
     <main className={styles.main}>
