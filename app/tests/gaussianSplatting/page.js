@@ -2,7 +2,6 @@
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
-import SplatManager from "@/app/components/SplatManager";
 
 export default function gaussianSplatting() {
 
@@ -10,18 +9,14 @@ export default function gaussianSplatting() {
     document.title = "Gaussian";
   }, []);
 
-  useEffect(() => {
-    const splatManager = new SplatManager();
-    
-    return () => {
-        splatManager.renderer.domElement.remove();
-    };
-}, []);
-
-{/* <iframe className={styles.iframeMomentfulness} src="https://flokleiser.github.io/gaussianFlo"></iframe> */}
-
   return (
     <main className={styles.main}>
+
+<iframe 
+// className={styles.iframeMomentfulness} 
+style={{width:'100vw', height:'96vh'}}
+src="https://flokleiser.github.io/gaussianFlo/"></iframe> 
+
     </main>
   );
 }
