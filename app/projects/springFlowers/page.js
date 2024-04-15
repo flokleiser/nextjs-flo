@@ -30,7 +30,6 @@ const modelPaths = [
   "/stl/flowers/ivy_both.glb",
 ];
 
-// modelPaths.onload = console.log('loaded');
 modelPaths.onload = console.log('loaded');
 
 
