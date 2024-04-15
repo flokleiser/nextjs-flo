@@ -1,11 +1,9 @@
 # To-Do/Ideas List:
 
-## Saturday
-- [x] Figure out why backdrop-filter doesnt work on search overlay --> because navbar has backdrop blur
+## Fun:
+Interactive logo type thingy like:
+https://www.goldinteractive.ch/team
 
-## Background
-- [ ] Figure out how i can factor out the tailwindcss for the background style
-- [ ] Move it to backgroundStyle.js
 ___
 
 ## Optimisations:
