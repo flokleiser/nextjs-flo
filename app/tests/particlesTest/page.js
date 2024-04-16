@@ -47,10 +47,7 @@ export default function particlesTest() {
       x : x,
       y: y
     };
-    // this.r =  2
     this.r = 4
-    // this.vx = (Math.random()-0.5)*20;
-    // this.vy = (Math.random()-0.5)*20;
     this.vx = 0;
     this.vy = 0;
 
