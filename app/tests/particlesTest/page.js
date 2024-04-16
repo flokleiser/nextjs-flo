@@ -17,14 +17,15 @@ export default function particlesTest() {
     mouse = {x:0,y:0},
     radius = 1;
   
-  var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+//   var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+  var color = ["#ffffff"];
+
+  var displayText = "Flo"
   
-  var copy = document.querySelector("#copy");
+//   var copy = document.querySelector("#copy");
   
   var ww = canvas.width = window.innerWidth;
   var wh = canvas.height = window.innerHeight;
-  
-  
   
   function Particle(x,y){
     this.x =  Math.random()*ww;
@@ -33,21 +34,27 @@ export default function particlesTest() {
       x : x,
       y: y
     };
-    this.r =  Math.random()*5 + 2;
+    // this.r =  Math.random()*5 + 2;
+    this.r =  2
     this.vx = (Math.random()-0.5)*20;
     this.vy = (Math.random()-0.5)*20;
+
     this.accX = 0;
     this.accY = 0;
-    this.friction = Math.random()*0.05 + 0.94;
-  
-    this.color = colors[Math.floor(Math.random()*6)];
-  }
+    // this.friction = Math.random()*0.05 + 0.94;
+    this.friction =  0.95
+
+    // this.color = colors[Math.floor(Math.random()*6)];
+    this.color = color 
+ }
   
   Particle.prototype.render = function() {
   
   
-    this.accX = (this.dest.x - this.x)/1000;
-    this.accY = (this.dest.y - this.y)/1000;
+    // this.accX = (this.dest.x - this.x)/1000;
+    // this.accY = (this.dest.y - this.y)/1000;
+    this.accX = (this.dest.x - this.x)/200;
+    this.accY = (this.dest.y - this.y)/200;
     this.vx += this.accX;
     this.vy += this.accY;
     this.vx *= this.friction;
@@ -97,9 +104,11 @@ export default function particlesTest() {
   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    ctx.font = "bold "+(ww/10)+"px sans-serif";
+    // ctx.font = "bold "+(ww/3)+"px sans-serif";
+    ctx.font = "bold "+(ww/3)+"px sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText(copy.value, ww/2, wh/2);
+    // ctx.fillText(copy.value, ww/2, wh/2);
+    ctx.fillText(displayText, ww/2, wh/2);
   
     var data  = ctx.getImageData(0, 0, ww, wh).data;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -132,7 +141,7 @@ export default function particlesTest() {
     }
   };
   
-  copy.addEventListener("keyup", initScene);
+//   copy.addEventListener("keyup", initScene);
   window.addEventListener("resize", initScene);
   window.addEventListener("mousemove", onMouseMove);
   window.addEventListener("touchmove", onTouchMove);
@@ -179,26 +188,17 @@ before:lg:h-[360px]
 z-[-1]"
   ></div>
 
-      <div style={{ paddingTop: "1rem" }} />
-        <h1 className={styles.titleWithoutPadding}>Particles</h1>
-
-        <div style={{ padding: "0.5rem" }} />
-        <hr className={styles.pageDivider} />
-        <div style={{ padding: "0.5rem" }} />
-
         <canvas style={{
-            width:'80vw', 
-            height:'70vh', 
+            // width:'70vw', 
+            // height:'70vh', 
+            width:'100vw', 
+            height:'100vh', 
             // background:'black'
             }} 
             id="scene">
 
                 
             </canvas>
-	<input id="copy" type="text" value="test" />
-
-        <div style={{ padding: "1rem" }} />
-      <div style={{ padding: "2rem" }} />
     </main>
   );
 }
