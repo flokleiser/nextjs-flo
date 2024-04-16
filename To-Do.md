@@ -4,6 +4,9 @@
 Interactive logo type thingy like:
 https://www.goldinteractive.ch/team
 
+https://codepen.io/Zaku/pen/AobWbm
+https://codepen.io/Mamboleoo/pen/obWGYr
+
 ___
 
 ## Optimisations:
