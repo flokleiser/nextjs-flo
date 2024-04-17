@@ -163,7 +163,7 @@ radius = 0.5;
 
     ctx.textAlign = "center";
     // ctx.fillText(displayText, ww/2, wh/3.5);
-    ctx.fillText(displayText, ww/2, wh/3);
+    ctx.fillText(displayText, ww/2, wh/2.5);
   
     var data  = ctx.getImageData(0, 0, ww, wh).data;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -208,6 +208,7 @@ function onMouseUp() {
 
   return (
         <canvas style={{
+          // paddingTop:'3rem',
             width:'100vw', 
             height:'80vh', 
             position:'absolute',

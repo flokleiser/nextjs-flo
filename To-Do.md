@@ -1,9 +1,11 @@
 # To-Do/Ideas List:
 
-
 ## Homepage:
+- [ ] Fix spacing between the particles
+
 - [ ] Look into bubbling (onmouseover called multiple times etc)
 - [ ] Figure out if theres a better way to animate the cards
+
 
 ## Fun:
 - [x] Interactive Logo
