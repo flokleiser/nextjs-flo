@@ -14,10 +14,9 @@ import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { CiCalendar } from "react-icons/ci";
 import TitleParticles from "@/app/components/Particles";
 
-export default function Home() {
+export default function homepageTest() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
-//   const [hoveringPortfolioCycle, setHoveringPortfolioCycle] = useCycle(false, true);
 
   const [animationClass, setAnimationClass] = useState("");
   const [animationClass2, setAnimationClass2] = useState("");
@@ -50,7 +49,6 @@ export default function Home() {
     document.title = "Florian Kleiser - Home";
   }, []);
 
-  const text= "Florian Kleiser".split("");
   const projectstext= "Projects".split("");
   const portfoliotext= "Portfolio".split('');
 
@@ -96,7 +94,34 @@ export default function Home() {
    z-[-1]"
       ></div>
 
+{/* <div> */}
+{/* <div
+      style={{position:'fixed', zIndex:9999,   display:"flex" ,
+      right:' 1.15rem ',
+  top: '0.75rem'
+    }}
+      >
+                <h1>
+          {" "}
+          <Link href="/projects/tests/dates">
+            <CiCalendar style={{fontSize:'1.5rem'}} />
+            </Link>{" "}
+        </h1>
+      </div> */}
+      
+      {/* <div className={styles.backbuttonHomepage} 
+      style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
+      >
+        <h1>
+          {" "}
+          <Link href="/projects/tests/">TESTS</Link>{" "}
+        </h1>
+        </div> */}
 
+
+
+
+{/* <TitleParticles /> */}
 <AnimatePresence>
 <motion.div style={{
       position:'absolute', 
@@ -120,7 +145,21 @@ export default function Home() {
 </AnimatePresence>
 
       <div className={styles.titleHomepage}>
-        <div style={{padding: '6.5rem'}} />
+      <div style={{padding: '6.5rem'}} />
+        {/* <AnimatePresence>
+        {text.map((el, i) => (
+          <motion.span
+          initial={{ opacity: isHoveringProjects? 1:1}}
+          animate={{ opacity: isHoveringProjects? 1:1}}
+          transition={{
+            duration: 0.25,
+            delay:  i / 40
+          }}
+          key={i} >
+            {el}{""}
+          </motion.span>
+        ))}
+        </AnimatePresence> */}
         </div>
 
 

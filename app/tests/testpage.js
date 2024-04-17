@@ -15,13 +15,8 @@ import {
 import { DiGoogleDrive } from "react-icons/di";
 import { FaLock } from "react-icons/fa";
 
-
-const TestPage = () => { 
-
-
-
+const TestPage = () => {
   return (
-    
     <main className={styles.main}>
       <div
         className="relative 
@@ -58,273 +53,91 @@ before:lg:h-[360px]
 z-[-1]"
       ></div>
 
+      <div className="flex flex-row mx-11">
+        <div className={styles.buttonLinksPage}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link href="/tests/galleryTest">ImageGallery</Link>
+            </p>
+          </div>
+        </div>
 
-      {/* <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} /> */}
+        <div className={styles.buttonLinksPage}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link href="/tests/canvasTest">3D</Link>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.buttonLinksPage}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link href="/tests/svgTest">SVG</Link>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.buttonLinksPage}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link href="/tests/filesTest">Files</Link>
+            </p>
+          </div>
+        </div>
+
+        <div className={styles.buttonLinksPage}>
+          <div className={styles.subtitledescription}>
+            <p>
+              <Link href="/tests/dates">Dates</Link>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ padding: "1rem" }} />
 
       <div className="flex flex-row mx-11">
-
-      <div
-      className={styles.buttonLinksPage}
-        >
+        <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link
-                href="/tests/galleryTest"
-              >
-              ImageGallery
-              </Link>
+              <Link href="/tests/loadingTest">Loading</Link>
             </p>
           </div>
         </div>
 
-        <div
-      className={styles.buttonLinksPage}
-        >
+        <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link
-                href="/tests/search"
-              >
-              Search
-              </Link>
+              <Link href="/tests/gaussianSplatting">Gaussian Splatting</Link>
             </p>
           </div>
         </div>
 
-        <div
-      className={styles.buttonLinksPage}
-        >
+        <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link
-                href="/tests/flowersTest"
-              >
-             flowers 
-              </Link>
+              <Link href="/tests/particlesTest">Particles</Link>
             </p>
           </div>
         </div>
+      </div>
 
-      <div
-      className={styles.buttonLinksPage}
-        >
+      <div style={{ padding: "1rem" }} />
+
+      <div className="flex flex-row mx-11">
+        <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link
-                href="/tests/cadTest"
-              >
-              CAD
-              </Link>
+              <Link href="/tests/homepageTest">New Homepage</Link>
             </p>
           </div>
         </div>
-
-      <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/canvasTest"
-              >
-              3D
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/svgTest"
-              >
-               SVG
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/imageTest"
-              >
-               IMAGE
-              </Link>
-            </p>
-          </div>
-        </div>
-        </div> 
-
-<div style={{padding:'1rem'}}/>
-
-<div className="flex flex-row mx-11">
-
-      <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/background"
-              >
-              Background
-              </Link>
-            </p>
-          </div>
-        </div>
-
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/filesTest"
-              >
-              FILES 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/portfolioTest"
-              >
-               MAPPE
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/skylandsTest"
-              >
-              SKYLANDS
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/ccTest"
-              >
-              CC 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/homepageTest"
-              >
-              HOMEPAGE 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        </div>
-
-        <div style={{padding:'1rem'}}/>
-
-          <div className="flex flex-row mx-11">
-            <div
-            className={styles.buttonLinksPage}
-            >
-            <div className={styles.subtitledescription}>
-              <p>
-                <Link
-                  href="/tests/loadingTest"
-                >
-               Loading 
-                </Link>
-              </p>
-            </div>
-
-        </div>
-
-            <div
-            className={styles.buttonLinksPage}
-            >
-            <div className={styles.subtitledescription}>
-              <p>
-                <Link
-                  href="/tests/loadingTest"
-                >
-                Stats
-                </Link>
-              </p>
-            </div>
-        </div>
-
-        <div
-            className={styles.buttonLinksPage}
-            >
-            <div className={styles.subtitledescription}>
-              <p>
-                <Link
-                  href="/tests/gaussianSplatting"
-                >
-               Gaussian Splatting 
-                </Link>
-              </p>
-            </div>
-        </div>
-
-        <div
-            className={styles.buttonLinksPage}
-            >
-            <div className={styles.subtitledescription}>
-              <p>
-                <Link
-                  href="/tests/particlesTest"
-                >
-              Particles 
-                </Link>
-              </p>
-            </div>
-        </div>
-
-
-        </div>
-
-
-
-
+      </div>
 
       <div style={{ padding: "2rem" }} />
     </main>
   );
-}
+};
 
 export default TestPage;
