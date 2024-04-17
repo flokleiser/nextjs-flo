@@ -60,7 +60,10 @@ radius = 0.5;
       y: y
     };
     // this.r = 4
-    this.r = 3 
+
+    // this.r = ww/300
+    this.r = ww/700 
+
     // this.r = 2 
     this.vx = 0;
     this.vy = 0;
@@ -96,8 +99,8 @@ radius = 0.5;
     ctx.beginPath();
 
     // ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
-    // ctx.rect(this.x, this.y, 2*this.r,2*this.r, this.r);
-    ctx.roundRect(this.x, this.y, 1.5*this.r,1.5*this.r, this.r);
+    ctx.rect(this.x, this.y, 1.25*this.r,1.25*this.r, this.r);
+    // ctx.roundRect(this.x, this.y, 1.5*this.r,1.5*this.r, this.r);
 
     ctx.fill();
   
@@ -170,9 +173,9 @@ radius = 0.5;
     ctx.globalCompositeOperation = "screen";
   
     particles = [];
-    for(var i=0;i<ww;i+=Math.round(ww/200)){
-      for(var j=0;j<wh;j+=Math.round(ww/200)){
-        if(data[ ((i + j*ww)*4) + 3] > 200){
+    for(var i=0;i<ww;i+=Math.round(ww/250)){
+      for(var j=0;j<wh;j+=Math.round(ww/250)){
+        if(data[ ((i + j*ww)*4) + 3] >250){
           particles.push(new Particle(i,j));
         }
       }
