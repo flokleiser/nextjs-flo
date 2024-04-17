@@ -1,6 +1,8 @@
 # To-Do/Ideas List:
 
 ## Homepage:
+- [ ] Try out a png as imagedata
+
 - [ ] Fix spacing between the particles
 
 - [ ] Look into bubbling (onmouseover called multiple times etc)

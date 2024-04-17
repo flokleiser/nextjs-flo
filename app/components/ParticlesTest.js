@@ -10,7 +10,7 @@ const assistant = Assistant({
 
 });
 
-export default function TitleParticles() {
+export default function TestParticles() {
 
 
     
@@ -92,7 +92,7 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
     this.x += this.vx;
     this.y +=  this.vy;
   
-    // ctx.drawImage(textImage,0,0, ww, wh)
+    // ctx.drawImage(textImage,ww/2,wh/2, textImage.width, textImage.height)
     ctx.fillStyle = this.color;
     ctx.beginPath();
 

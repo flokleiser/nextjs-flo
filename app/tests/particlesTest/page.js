@@ -2,7 +2,7 @@
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
-import TitleParticles from "@/app/components/Particles";
+import TestParticles from "@/app/components/ParticlesTest";
 import dynamic from 'next/dynamic';
 
 // const TitleParticles= dynamic(() => import('@/app/components/Particles'))
@@ -50,7 +50,7 @@ before:lg:h-[360px]
 z-[-1]"
   ></div>
 
-  <TitleParticles />
+  <TestParticles/>
 
     </main>
   );
