@@ -60,7 +60,8 @@ radius = 0.5;
       y: y
     };
     // this.r = 4
-    this.r = 2 
+    this.r = 3 
+    // this.r = 2 
     this.vx = 0;
     this.vy = 0;
 
@@ -93,7 +94,11 @@ radius = 0.5;
   
     ctx.fillStyle = this.color;
     ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+
+    // ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+    // ctx.rect(this.x, this.y, 2*this.r,2*this.r, this.r);
+    ctx.roundRect(this.x, this.y, 1.5*this.r,1.5*this.r, this.r);
+
     ctx.fill();
   
     var a = this.x - mouse.x;
@@ -101,7 +106,8 @@ radius = 0.5;
   
     var distance = Math.sqrt( a*a + b*b );
 
-    if(distance<(radius*70)){
+    // if(distance<(radius*70)){
+    if(distance<(radius*60)){
         // this.accX = (this.x - mouse.x)/100;
         // this.accY = (this.y - mouse.y)/100;
 
