@@ -62,7 +62,7 @@ radius = 0.5;
     // this.r = 4
 
     // this.r = ww/300
-    this.r = ww/700 
+    this.r = ww/600 
 
     // this.r = 2 
     this.vx = 0;
@@ -98,8 +98,8 @@ radius = 0.5;
     ctx.fillStyle = this.color;
     ctx.beginPath();
 
-    // ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
-    ctx.rect(this.x, this.y, 1.25*this.r,1.25*this.r, this.r);
+    ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+    // ctx.rect(this.x, this.y, 1.25*this.r,1.25*this.r, this.r);
     // ctx.roundRect(this.x, this.y, 1.5*this.r,1.5*this.r, this.r);
 
     ctx.fill();
@@ -109,13 +109,7 @@ radius = 0.5;
   
     var distance = Math.sqrt( a*a + b*b );
 
-    // if(distance<(radius*70)){
     if(distance<(radius*60)){
-        // this.accX = (this.x - mouse.x)/100;
-        // this.accY = (this.y - mouse.y)/100;
-
-        // this.accX = (this.x - mouse.x)/10;
-        // this.accY = (this.y - mouse.y)/10;
         this.accX = (this.x - mouse.x);
         this.accY = (this.y - mouse.y);
 
@@ -129,12 +123,6 @@ radius = 0.5;
         this.vy += this.accY;
     }
 
-    // if(distance>(radius*70)){
-    //     this.accX = (this.x - mouse.x)/100;
-    //     this.accY = (this.y - mouse.y)/100;
-    //     this.vx += this.accX;
-    //     this.vy += this.accY;
-    //   }
   }
   
   function onMouseMove(e){
@@ -160,22 +148,30 @@ radius = 0.5;
   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    // ctx.font = "bold "+(ww/10)+"px sans-serif";
-    ctx.font = `bold ${(ww / 10)}px ${assistant.style.fontFamily}`;
-    // ctx.font = `${(ww / 10)}px ${assistant.style.fontFamily}`;
+    // ctx.font = `bold ${(ww / 10)}px ${assistant.style.fontFamily}`;
+    ctx.font = `${(ww / 10)}px ${assistant.style.fontFamily}`;
 
     ctx.textAlign = "center";
-    // ctx.fillText(displayText, ww/2, wh/3.5);
     ctx.fillText(displayText, ww/2, wh/2.5);
   
     var data  = ctx.getImageData(0, 0, ww, wh).data;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.globalCompositeOperation = "screen";
+
+    var divider = 250
   
     particles = [];
-    for(var i=0;i<ww;i+=Math.round(ww/250)){
-      for(var j=0;j<wh;j+=Math.round(ww/250)){
-        if(data[ ((i + j*ww)*4) + 3] >250){
+    // for(var i=0;i<ww;i+=Math.round(ww/250)){
+    //   for(var j=0;j<wh;j+=Math.round(ww/250)){
+    //     if(data[ ((i + j*ww)*4) + 3] >250){
+    //       particles.push(new Particle(i,j));
+    //     }
+    //   }
+    // }
+    for(var i=0;i<ww;i+=Math.round(ww/divider)){
+      for(var j=0;j<wh;j+=Math.round(ww/divider)){
+        // if(data[ ((i + j*ww)*4) + 3] >divider){
+        if(data[((i + j*ww)*4) + 3] >divider){
           particles.push(new Particle(i,j));
         }
       }
