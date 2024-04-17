@@ -2,10 +2,12 @@
 
 ## Fun:
 - [x] Interactive Logo
-    - [ ] Change font size
+    - [x] Change font
     - [ ] Change particle size
     - [ ] Change particle shape
-    - [ ] Try on title page
+    - [x] Try on title page
+
+    - [ ] Uniformly scale on hoverportfolio
 
 
 Interactive logo type thingy like:
