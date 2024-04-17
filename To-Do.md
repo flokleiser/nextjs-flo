@@ -1,10 +1,15 @@
 # To-Do/Ideas List:
 
+
+## Homepage:
+- [ ] Look into bubbling (onmouseover called multiple times etc)
+- [ ] Figure out if theres a better way to animate the cards
+
 ## Fun:
 - [x] Interactive Logo
     - [x] Change font
-    - [ ] Change particle size
-    - [ ] Change particle shape
+    - [x] Change particle size
+    - [x] Change particle shape
     - [x] Try on title page
 
     - [ ] Uniformly scale on hoverportfolio
