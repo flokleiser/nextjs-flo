@@ -100,13 +100,17 @@ export default function Home() {
 <AnimatePresence>
 <motion.div style={{
       position:'absolute', 
+      top:0,
       left:0,
-      // transformOrigin: 'center center',
-      // transformOrigin: '50% 50% 0',
+      // originX: 0,
+      // originY: 0
     }}
     
-    initial={{ opacity:1}}
+    initial={{ opacity:1, 
+      // scale:1
+    }}
     animate={{ opacity: isHoveringProjects? 0:1, 
+      // scale:isHoveringPortfolio ? 1.1 : 1
     }}
     transition={{duration: 0.25, 
     }}
@@ -117,20 +121,6 @@ export default function Home() {
 
       <div className={styles.titleHomepage}>
         <div style={{padding: '6.5rem'}} />
-        {/* <AnimatePresence>
-        {text.map((el, i) => (
-          <motion.span
-          initial={{ opacity: isHoveringProjects? 1:1}}
-          animate={{ opacity: isHoveringProjects? 1:1}}
-          transition={{
-            duration: 0.25,
-            delay:  i / 40
-          }}
-          key={i} >
-            {el}{""}
-          </motion.span>
-        ))}
-        </AnimatePresence> */}
         </div>
 
 

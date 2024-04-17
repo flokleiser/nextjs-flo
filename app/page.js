@@ -124,9 +124,31 @@ export default function Home() {
 
 
 {/* <TitleParticles /> */}
+<AnimatePresence>
+<motion.div style={{
+      position:'absolute', 
+      top:0,
+      left:0,
+      // originX: 0,
+      // originY: 0
+    }}
+    
+    initial={{ opacity:1, 
+      // scale:1
+    }}
+    animate={{ opacity: isHoveringProjects? 0:1, 
+      // scale:isHoveringPortfolio ? 1.1 : 1
+    }}
+    transition={{duration: 0.25, 
+    }}
+  >
+  <TitleParticles />
+  </motion.div>
+</AnimatePresence>
 
       <div className={styles.titleHomepage}>
-        <AnimatePresence>
+      <div style={{padding: '6.5rem'}} />
+        {/* <AnimatePresence>
         {text.map((el, i) => (
           <motion.span
           initial={{ opacity: isHoveringProjects? 1:1}}
@@ -139,7 +161,7 @@ export default function Home() {
             {el}{""}
           </motion.span>
         ))}
-        </AnimatePresence>
+        </AnimatePresence> */}
         </div>
 
 

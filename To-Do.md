@@ -21,7 +21,7 @@ ___
 
 ## Optimisations:
 - [ ] Look into lazy loading
-- [ ] Look into dynamic imports
+- [x] Look into dynamic imports
 - [ ] Look into what pages are slow to load
 
 ___
