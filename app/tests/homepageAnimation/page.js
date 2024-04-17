@@ -4,9 +4,6 @@ import styles from "/app/page.module.css";
 import {
   CiGrid32,
   CiImageOn,
-  CiFileOn,
-  CiViewList,
-  CiStickyNote,
 } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,21 +18,21 @@ export default function Home() {
   const [animationClass, setAnimationClass] = useState("");
   const [animationClass2, setAnimationClass2] = useState("");
 
-  useEffect(() => {
-    if (isHoveringPortfolio) {
-      setAnimationClass(styles.animationClassHalf1);
-    } else if (animationClass === styles.animationClassHalf1) {
-      setAnimationClass(styles.animationClassHalf2);
-    }
-  }, [isHoveringPortfolio]);
+  // useEffect(() => {
+  //   if (isHoveringPortfolio) {
+  //     setAnimationClass(styles.animationClassHalf1);
+  //   } else if (animationClass === styles.animationClassHalf1) {
+  //     setAnimationClass(styles.animationClassHalf2);
+  //   }
+  // }, [isHoveringPortfolio]);
 
-  useEffect(() => {
-    if (isHoveringProjects) {
-      setAnimationClass2(styles.animationTestClassHalf1);
-    } else if (animationClass2 === styles.animationTestClassHalf1) {
-      setAnimationClass2(styles.animationTestClassHalf2);
-    }
-  }, [isHoveringProjects]);
+  // useEffect(() => {
+  //   if (isHoveringProjects) {
+  //     setAnimationClass2(styles.animationTestClassHalf1);
+  //   } else if (animationClass2 === styles.animationTestClassHalf1) {
+  //     setAnimationClass2(styles.animationTestClassHalf2);
+  //   }
+  // }, [isHoveringProjects]);
 
   if (isHoveringPortfolio) {
     console.log('portfolio')
@@ -44,18 +41,13 @@ export default function Home() {
     console.log('projects')
   }
 
-//   const handleHoverProjects = (e) => {
-//     e.stopPropagation();
-//     setIsHoveringProjects(!isHoveringProjects);
-//   };
-
-  function handleHoverProjects(e) {
-    e.stopPropagation();
+  const handleHoverProjects = (e) => {
+    // e.stopPropagation();
     setIsHoveringProjects(!isHoveringProjects);
   };
 
   const handleHoverPortfolio = (e) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
@@ -63,14 +55,7 @@ export default function Home() {
     document.title = "Florian Kleiser - Home";
   }, []);
 
-  const text= "Florian Kleiser".split("");
-  const projectstext= "Projects".split("");
-  const portfoliotext= "Portfolio".split('');
-
-  const titleVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  }
+  
 
   return (
     <main className={styles.main}>
@@ -109,48 +94,16 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-{/* <div> */}
-{/* <div
-      style={{position:'fixed', zIndex:9999,   display:"flex" ,
-      right:' 1.15rem ',
-  top: '0.75rem'
-    }}
-      >
-                <h1>
-          {" "}
-          <Link href="/projects/tests/dates">
-            <CiCalendar style={{fontSize:'1.5rem'}} />
-            </Link>{" "}
-        </h1>
-      </div> */}
-      
-      {/* <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/">TESTS</Link>{" "}
-        </h1>
-        </div> */}
-
-
-
-
-{/* <TitleParticles /> */}
 <AnimatePresence>
 <motion.div style={{
       position:'absolute', 
       top:0,
       left:0,
-      // originX: 0,
-      // originY: 0
     }}
     
     initial={{ opacity:1, 
-      // scale:1
     }}
     animate={{ opacity: isHoveringProjects? 0:1, 
-      // scale:isHoveringPortfolio ? 1.1 : 1
     }}
     transition={{duration: 0.25, 
     }}
@@ -161,26 +114,12 @@ export default function Home() {
 
       <div className={styles.titleHomepage}>
       <div style={{padding: '6.5rem'}} />
-        {/* <AnimatePresence>
-        {text.map((el, i) => (
-          <motion.span
-          initial={{ opacity: isHoveringProjects? 1:1}}
-          animate={{ opacity: isHoveringProjects? 1:1}}
-          transition={{
-            duration: 0.25,
-            delay:  i / 40
-          }}
-          key={i} >
-            {el}{""}
-          </motion.span>
-        ))}
-        </AnimatePresence> */}
         </div>
 
 
       <AnimatePresence>
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
-          <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
+            <div className={styles.cardHomepagePortfolio}>
             <Image
               src="/images/homepage/portfolio homepage4.png"
               width={1100}
@@ -193,29 +132,27 @@ export default function Home() {
       <AnimatePresence>
         <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
           <div
-            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            className={styles.cardHomepageTest}
             style={{ animationDelay: "0s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/1.png"
               width={1100}
               height={1000}
             />
           </div>
           <div
-            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            className={styles.cardHomepageTest}
             style={{ animationDelay: "0.1s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/2.png"
               width={1100}
               height={1000}
             />
           </div>
           <div
-            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            className={styles.cardHomepageTest}
             style={{ animationDelay: "0.2s" }}
           >
             <Image
@@ -226,33 +163,30 @@ export default function Home() {
             />
           </div>
           <div
-            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            className={styles.cardHomepageTest}
             style={{ animationDelay: "0.3s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/4.png"
               width={1100}
               height={1000}
             />
           </div>
           <div
-            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            className={styles.cardHomepageTest}
             style={{ animationDelay: "0.4s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/5.png"
               width={1100}
               height={1000}
             />
           </div>
           <div
-            className={`${styles.cardHomepageTest} ${animationClass2}`}
+            className={styles.cardHomepageTest}
             style={{ animationDelay: "0.5s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/6.png"
               width={1100}
               height={1000}
@@ -266,78 +200,23 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepageProjects}
 
-        onMouseOver={(e) => handleHoverProjects()}
-
-
+        onMouseOver={() => handleHoverProjects()}
+        onMouseOut={() => handleHoverProjects()}
+        // onMouseMove={() => setIsHoveringProjects(true)}
+        // onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
       >
-        <Link className="link-hover" href="/projects">
-        <div className={styles.subtitleHomepage}>
-           <motion.span
-           initial={{ opacity: isHoveringPortfolio ? 1:1 }}
-           animate={{ opacity: isHoveringPortfolio ? 0:1 }} >
-            {/* <CiGrid32 /> */}
-            <div className="flex items-center">
-            <CiGrid32 /> Projects
-            </div>
-              
-            </motion.span>
-             {/* {projectstext.map((el, i) => (
-                 <motion.span
-                 initial={{ opacity: isHoveringPortfolio ? 1:1 }}
-                 animate={{ opacity: isHoveringPortfolio ? 0:1 }}
-          transition={{
-              duration: 0.25,
-            }}
-            key={i} >
-            {el}
-          </motion.span>
-         ))}    */}
-        </div>
-        </Link>
+      <CiGrid32 />
       </div>
 
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-
-        // onMouseOver={() => handleHoverPortfolio}
-        onMouseOver={handleHoverPortfolio}
-
-        // onMouseMove={() => setIsHoveringPortfolio(true)}
-        // onMouseLeave={() => setIsHoveringPortfolio(false)}
+        onMouseOver={() => handleHoverPortfolio}
+        onMouseMove={() => setIsHoveringPortfolio(true)}
+        onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
-         <Link
-              className="link-hover"
-              // href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
-              href="/portfolio"
-            >
-        <div className={styles.subtitleHomepage}>
-          <motion.span 
-          initial={{ opacity: isHoveringProjects ? 1:1 }}
-          animate={{ opacity: isHoveringProjects ? 0:1 }}
-          >
-                                    <div className="flex items-center">
-            <CiImageOn /> Portfolio
-            </div>
-            </motion.span>
-            {/* {portfoliotext.map((el, i) => (
-              <motion.span
-              initial={{ opacity: isHoveringProjects ? 1:1 }}
-              animate={{ opacity: isHoveringProjects ? 0:1 }}
-              transition={{
-                duration: 0.25,
-                delay: i / 30
-              }}
-              key={i} >
-            {el}
-          </motion.span>
-        ))}   */}
-        
-         
-        </div>
-        </Link>
-
+          <CiImageOn />
       </div>
 
       {/* Projects hover */}
