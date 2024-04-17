@@ -1,17 +1,31 @@
 "use client";
 import styles from "app/page.module.css";
 import { useEffect } from "react";
+import { Assistant } from 'next/font/google';  
+
+const assistant = Assistant({ 
+    subsets: ['latin'],
+    weight:'400',
+
+});
 
 export default function TitleParticles() {
 
-  useEffect(() => {
-    var canvas = document.querySelector("#scene"),
-    ctx = canvas.getContext("2d"),
-    particles = [],
-    amount = 0,
-    mouse = {x:0,y:0},
-    radius = 0.5;
-  
+
+    
+useEffect(() => {
+var canvas = document.querySelector("#scene"),
+ctx = canvas.getContext("2d"),
+particles = [],
+amount = 0,
+mouse = {x:0,y:0},
+radius = 0.5;
+        
+// const assistant = Assistant({ 
+//     subsets: ['latin'],
+//     weight:'400',
+// });
+
 //   var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
 //   var colors = ["#A63C9F", "#850FA6", "#58088C", "#3E0973", "#3E0973", "#3E0973", "#58088C", "#850FA6", "#A63C9F"]
   var colors= ["#6b106a",
@@ -135,8 +149,11 @@ export default function TitleParticles() {
   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    // ctx.font = "bold "+(ww/3)+"px sans-serif";
-    ctx.font = "bold "+(ww/10)+"px sans-serif";
+    // ctx.font = "bold "+(ww/10)+"px sans-serif";
+    ctx.font = `bold ${(ww / 10)}px ${assistant.style.fontFamily}`;
+
+    // ctx.font = assistant.style.fontFamily
+
     ctx.textAlign = "center";
     ctx.fillText(displayText, ww/2, wh/2);
   
