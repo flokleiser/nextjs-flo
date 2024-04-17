@@ -79,33 +79,7 @@ z-[-1]"
           </div>
         </div>
 
-        <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/search"
-              >
-              Search
-              </Link>
-            </p>
-          </div>
-        </div>
 
-        <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/flowersTest"
-              >
-             flowers 
-              </Link>
-            </p>
-          </div>
-        </div>
 
       <div
       className={styles.buttonLinksPage}
