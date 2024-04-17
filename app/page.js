@@ -44,13 +44,11 @@ export default function Home() {
     console.log('projects')
   }
 
-  const handleHoverProjects = (e) => {
-    e.stopPropagation();
+  const handleHoverProjects = () => {
     setIsHoveringProjects(!isHoveringProjects);
   };
 
-  const handleHoverPortfolio = (e) => {
-    e.stopPropagation();
+  const handleHoverPortfolio = () => {
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
@@ -243,9 +241,12 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepageProjects}
 
-        onMouseOver={() => {handleHoverProjects}}
-        onMouseMove={() => setIsHoveringProjects(true)}
+        // onMouseOver={() => {handleHoverProjects}}
+        // onMouseMove={() => setIsHoveringProjects(true)}
+        // onMouseLeave={() => setIsHoveringProjects(false)}
+        onMouseEnter={() => handleHoverProjects()}
         onMouseLeave={() => setIsHoveringProjects(false)}
+        
         style={{ zIndex: 60 }}
       >
         <Link className="link-hover" href="/projects">
@@ -277,8 +278,10 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-        onMouseOver={() => handleHoverPortfolio}
-        onMouseMove={() => setIsHoveringPortfolio(true)}
+        // onMouseOver={() => handleHoverPortfolio}
+        // onMouseMove={() => setIsHoveringPortfolio(true)}
+        // onMouseLeave={() => setIsHoveringPortfolio(false)}
+        onMouseEnter={() => handleHoverPortfolio()}
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
          <Link
@@ -291,7 +294,7 @@ export default function Home() {
           initial={{ opacity: isHoveringProjects ? 1:1 }}
           animate={{ opacity: isHoveringProjects ? 0:1 }}
           >
-                                    <div className="flex items-center">
+            <div className="flex items-center">
             <CiImageOn /> Portfolio
             </div>
             </motion.span>

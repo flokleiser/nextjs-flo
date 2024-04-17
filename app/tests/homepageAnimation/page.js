@@ -112,25 +112,39 @@ export default function Home() {
   </motion.div>
 </AnimatePresence>
 
-      <div className={styles.titleHomepage} style={{opacity:0}}>
-      <div style={{padding: '6.5rem'}} />
+      <div className={styles.titleHomepage}style={{opacity:0}}>
+        flo
         </div>
 
 
-      <AnimatePresence>
-        <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
-            <div className={styles.cardHomepagePortfolio}>
+      <AnimatePresence mode="wait">
+      {isHoveringPortfolio ? (
+        <motion.div className={styles.homepagePortfolio} style={{ zIndex: -700 }}             
+          initial={{ opacity: 0.1 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0.1 }}
+          transition={{ duration: 0.3 }}>
+            <div className={styles.cardHomepagePortfolio}
+             >
             <Image
               src="/images/homepage/portfolio homepage4.png"
               width={1100}
               height={1000}
             />
           </div>
-        </div>
+          </motion.div>
+      ):(<div style={{marginTop:'1.5rem'}}> </div>)}
       </AnimatePresence>
 
-      <AnimatePresence>
-        <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
+
+      <AnimatePresence mode="wait">
+      {isHoveringProjects ? (
+        <motion.div className={styles.homepageSlices} style={{ zIndex: -900 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }} 
+        >
           <div
             className={styles.cardHomepageTest}
             style={{ animationDelay: "0s" }}
@@ -192,18 +206,16 @@ export default function Home() {
               height={1000}
             />
           </div>
-        </div>
+        </motion.div>
+         ):(<div style={{marginTop:'1.5rem'}}> </div>)}
       </AnimatePresence>
 
       <div style={{ margin: "5rem" }}> </div>
 
       <div
         className={styles.buttonGeneralHomepageProjects}
-
-        onMouseOver={() => handleHoverProjects()}
-        onMouseOut={() => handleHoverProjects()}
-        // onMouseMove={() => setIsHoveringProjects(true)}
-        // onMouseLeave={() => setIsHoveringProjects(false)}
+        onMouseEnter={() => handleHoverProjects()}
+        onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
       >
       <CiGrid32 />
@@ -212,8 +224,7 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-        onMouseOver={() => handleHoverPortfolio}
-        onMouseMove={() => setIsHoveringPortfolio(true)}
+        onMouseEnter={() => handleHoverPortfolio()}
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
           <CiImageOn />
@@ -236,7 +247,7 @@ export default function Home() {
       </AnimatePresence>
 
       {/* Portfolio hover */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isHoveringPortfolio && (
           <motion.div
             className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center -z-[800]"
@@ -244,13 +255,9 @@ export default function Home() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            style={{
-              backdropFilter: "blur(100px)",
-              // backgroundColor: "rgba(0,0,0,0.4)",
-            }}
           ></motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
 
       <div style={{ margin: "3.5rem" }}> </div>
       {/* </div> */}
