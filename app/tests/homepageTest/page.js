@@ -96,34 +96,24 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-{/* <div> */}
-{/* <div
-      style={{position:'fixed', zIndex:9999,   display:"flex" ,
-      right:' 1.15rem ',
-  top: '0.75rem'
+
+<AnimatePresence>
+<motion.div style={{
+      position:'absolute', 
+      left:0,
+      // transformOrigin: 'center center',
+      // transformOrigin: '50% 50% 0',
     }}
-      >
-                <h1>
-          {" "}
-          <Link href="/projects/tests/dates">
-            <CiCalendar style={{fontSize:'1.5rem'}} />
-            </Link>{" "}
-        </h1>
-      </div> */}
-      
-      {/* <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/">TESTS</Link>{" "}
-        </h1>
-        </div> */}
-
-
-
-
-<TitleParticles />
+    
+    initial={{ opacity:1}}
+    animate={{ opacity: isHoveringProjects? 0:1, 
+    }}
+    transition={{duration: 0.25, 
+    }}
+  >
+  <TitleParticles />
+  </motion.div>
+</AnimatePresence>
 
       <div className={styles.titleHomepage}>
         <div style={{padding: '6.5rem'}} />
