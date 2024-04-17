@@ -5,7 +5,8 @@ import { Assistant } from 'next/font/google';
 
 const assistant = Assistant({ 
     subsets: ['latin'],
-    weight:'400',
+    // weight:'600',
+    // weight:'400',
 
 });
 
@@ -48,7 +49,8 @@ radius = 0.5;
   
   var ww = canvas.width = window.innerWidth;
 // var wh = canvas.height = window.innerHeight/3 * 2;
-  var wh = canvas.height = window.innerHeight/5 * 4;
+//   var wh = canvas.height = window.innerHeight/5 * 4;
+  var wh = canvas.height = window.innerHeight;
   
   function Particle(x,y){
     this.x = x
@@ -151,6 +153,7 @@ radius = 0.5;
   
     // ctx.font = "bold "+(ww/10)+"px sans-serif";
     ctx.font = `bold ${(ww / 10)}px ${assistant.style.fontFamily}`;
+    // ctx.font = `${(ww / 10)}px ${assistant.style.fontFamily}`;
 
     ctx.textAlign = "center";
     // ctx.fillText(displayText, ww/2, wh/3.5);
@@ -202,9 +205,9 @@ function onMouseUp() {
             width:'100vw', 
             height:'80vh', 
             position:'absolute',
-            // background:'black'
             }} 
             id="scene">
+
 
                 
             </canvas>
