@@ -18,8 +18,6 @@ import { FaLock } from "react-icons/fa";
 
 const TestPage = () => { 
 
-
-
   return (
     
     <main className={styles.main}>
@@ -59,9 +57,6 @@ z-[-1]"
       ></div>
 
 
-      {/* <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} /> */}
 
       <div className="flex flex-row mx-11">
 
@@ -74,22 +69,6 @@ z-[-1]"
                 href="/tests/galleryTest"
               >
               ImageGallery
-              </Link>
-            </p>
-          </div>
-        </div>
-
-
-
-      <div
-      className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/cadTest"
-              >
-              CAD
               </Link>
             </p>
           </div>
@@ -123,38 +102,7 @@ z-[-1]"
           </div>
         </div>
 
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/imageTest"
-              >
-               IMAGE
-              </Link>
-            </p>
-          </div>
-        </div>
-        </div> 
 
-<div style={{padding:'1rem'}}/>
-
-<div className="flex flex-row mx-11">
-
-      <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/background"
-              >
-              Background
-              </Link>
-            </p>
-          </div>
-        </div>
 
 
         <div
@@ -165,7 +113,7 @@ z-[-1]"
               <Link
                 href="/tests/filesTest"
               >
-              FILES 
+              Files
               </Link>
             </p>
           </div>
@@ -177,51 +125,9 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link
-                href="/tests/portfolioTest"
+                href="/tests/dates"
               >
-               MAPPE
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/skylandsTest"
-              >
-              SKYLANDS
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/ccTest"
-              >
-              CC 
-              </Link>
-            </p>
-          </div>
-        </div>
-
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link
-                href="/tests/homepageTest"
-              >
-              HOMEPAGE 
+              Dates
               </Link>
             </p>
           </div>
@@ -245,20 +151,6 @@ z-[-1]"
               </p>
             </div>
 
-        </div>
-
-            <div
-            className={styles.buttonLinksPage}
-            >
-            <div className={styles.subtitledescription}>
-              <p>
-                <Link
-                  href="/tests/loadingTest"
-                >
-                Stats
-                </Link>
-              </p>
-            </div>
         </div>
 
         <div
