@@ -12,6 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { CiCalendar } from "react-icons/ci";
+import TitleParticles from "@/app/components/Particles";
 
 export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
@@ -122,6 +123,7 @@ export default function Home() {
 
 
 
+{/* <TitleParticles /> */}
 
       <div className={styles.titleHomepage}>
         <AnimatePresence>
@@ -139,6 +141,7 @@ export default function Home() {
         ))}
         </AnimatePresence>
         </div>
+
 
       <AnimatePresence>
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>

@@ -12,6 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { CiCalendar } from "react-icons/ci";
+import TitleParticles from "@/app/components/Particles";
 
 export default function Home() {
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
@@ -96,7 +97,7 @@ export default function Home() {
       ></div>
 
 {/* <div> */}
-<div
+{/* <div
       style={{position:'fixed', zIndex:9999,   display:"flex" ,
       right:' 1.15rem ',
   top: '0.75rem'
@@ -105,43 +106,28 @@ export default function Home() {
                 <h1>
           {" "}
           <Link href="/projects/tests/dates">
-            {/* Dates */}
             <CiCalendar style={{fontSize:'1.5rem'}} />
             </Link>{" "}
         </h1>
-      </div>
+      </div> */}
       
-      <div className={styles.backbuttonHomepage} 
+      {/* <div className={styles.backbuttonHomepage} 
       style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
       >
         <h1>
           {" "}
-          <Link href="/projects/tests/svgTest">SVG</Link>{" "}
+          <Link href="/projects/tests/">TESTS</Link>{" "}
         </h1>
-        </div>
-          <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999, right:'7rem', position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/imageTest">IMG</Link>{" "}
-        </h1>
-      </div>
-      <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', zIndex:9999, right:'10rem', position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/ccTest">TEST</Link>{" "}
-        </h1>
-      </div>
+        </div> */}
 
 
 
 
+<TitleParticles />
 
       <div className={styles.titleHomepage}>
-        <AnimatePresence>
+        <div style={{padding: '6.5rem'}} />
+        {/* <AnimatePresence>
         {text.map((el, i) => (
           <motion.span
           initial={{ opacity: isHoveringProjects? 1:1}}
@@ -154,8 +140,9 @@ export default function Home() {
             {el}{""}
           </motion.span>
         ))}
-        </AnimatePresence>
+        </AnimatePresence> */}
         </div>
+
 
       <AnimatePresence>
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
@@ -170,24 +157,16 @@ export default function Home() {
       </AnimatePresence>
 
       <AnimatePresence>
-        <div className={styles.homepageSlices} style={{ zIndex: -900, 
-            // width:'80vw',height:'80vh' 
-            }}>
+        <div className={styles.homepageSlices} style={{ zIndex: -900 }}>
           <div
             className={`${styles.cardHomepageTest} ${animationClass2}`}
-            style={{ animationDelay: "0s", 
-          }}
+            style={{ animationDelay: "0s" }}
           >
-            <Image 
-              style={{
-                // width:'100%',
-                // minHeight:'80vh',
-                minWidth:'70vw'
-            }}
+            <Image
+              // style={{width:'100%'}}
               src="/images/homepage/new2/1.png"
               width={1100}
               height={1000}
-              
             />
           </div>
           <div
@@ -195,7 +174,7 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             <Image
-              style={{width:'100%'}}
+              // style={{width:'100%'}}
               src="/images/homepage/new2/2.png"
               width={1100}
               height={1000}
@@ -206,7 +185,7 @@ export default function Home() {
             style={{ animationDelay: "0.2s" }}
           >
             <Image
-              style={{width:'100%'}}
+              // style={{width:'100%'}}
               src="/images/homepage/new2/3.png"
               width={1100}
               height={1000}
@@ -217,7 +196,7 @@ export default function Home() {
             style={{ animationDelay: "0.3s" }}
           >
             <Image
-              style={{width:'100%'}}
+              // style={{width:'100%'}}
               src="/images/homepage/new2/4.png"
               width={1100}
               height={1000}
@@ -228,7 +207,7 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <Image
-              style={{width:'100%'}}
+              // style={{width:'100%'}}
               src="/images/homepage/new2/5.png"
               width={1100}
               height={1000}
@@ -239,7 +218,7 @@ export default function Home() {
             style={{ animationDelay: "0.5s" }}
           >
             <Image
-              style={{width:'100%'}}
+              // style={{width:'100%'}}
               src="/images/homepage/new2/6.png"
               width={1100}
               height={1000}

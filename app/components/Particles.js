@@ -152,10 +152,8 @@ radius = 0.5;
     // ctx.font = "bold "+(ww/10)+"px sans-serif";
     ctx.font = `bold ${(ww / 10)}px ${assistant.style.fontFamily}`;
 
-    // ctx.font = assistant.style.fontFamily
-
     ctx.textAlign = "center";
-    ctx.fillText(displayText, ww/2, wh/2);
+    ctx.fillText(displayText, ww/2, wh/4);
   
     var data  = ctx.getImageData(0, 0, ww, wh).data;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
