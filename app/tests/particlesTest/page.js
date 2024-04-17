@@ -2,10 +2,10 @@
 import styles from "app/page.module.css";
 import Link from "next/link";
 import { useEffect } from "react";
-// import titleParticles from "@/app/components/Particles";
+import TitleParticles from "@/app/components/Particles";
 import dynamic from 'next/dynamic';
 
-const TitleParticles= dynamic(() => import('@/app/components/Particles'))
+// const TitleParticles= dynamic(() => import('@/app/components/Particles'))
 
 export default function particlesTest() {
 
