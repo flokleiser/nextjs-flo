@@ -252,7 +252,7 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepageProjects}
 
-        // onMouseOver={() => {handleHoverProjects()}}
+        onMouseOver={() => {handleHoverProjects()}}
         onMouseMove={() => setIsHoveringProjects(true)}
         onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
@@ -283,7 +283,7 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-        // onMouseOver={handleHoverPortfolio}
+        onMouseOver={handleHoverPortfolio}
         onMouseMove={() => setIsHoveringPortfolio(true)}
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
