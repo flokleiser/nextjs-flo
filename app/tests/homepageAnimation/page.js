@@ -37,11 +37,25 @@ export default function Home() {
     }
   }, [isHoveringProjects]);
 
-  const handleHoverProjects = () => {
+  if (isHoveringPortfolio) {
+    console.log('portfolio')
+  }
+  if (isHoveringProjects) {
+    console.log('projects')
+  }
+
+//   const handleHoverProjects = (e) => {
+//     e.stopPropagation();
+//     setIsHoveringProjects(!isHoveringProjects);
+//   };
+
+  function handleHoverProjects(e) {
+    e.stopPropagation();
     setIsHoveringProjects(!isHoveringProjects);
   };
 
-  const handleHoverPortfolio = () => {
+  const handleHoverPortfolio = (e) => {
+    e.stopPropagation();
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
@@ -252,9 +266,9 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepageProjects}
 
-        // onMouseOver={() => {handleHoverProjects()}}
-        onMouseMove={() => setIsHoveringProjects(true)}
-        onMouseLeave={() => setIsHoveringProjects(false)}
+        onMouseOver={(e) => handleHoverProjects()}
+
+
         style={{ zIndex: 60 }}
       >
         <Link className="link-hover" href="/projects">
@@ -262,10 +276,13 @@ export default function Home() {
            <motion.span
            initial={{ opacity: isHoveringPortfolio ? 1:1 }}
            animate={{ opacity: isHoveringPortfolio ? 0:1 }} >
-            <CiGrid32 />
+            {/* <CiGrid32 /> */}
+            <div className="flex items-center">
+            <CiGrid32 /> Projects
+            </div>
               
             </motion.span>
-             {projectstext.map((el, i) => (
+             {/* {projectstext.map((el, i) => (
                  <motion.span
                  initial={{ opacity: isHoveringPortfolio ? 1:1 }}
                  animate={{ opacity: isHoveringPortfolio ? 0:1 }}
@@ -275,7 +292,7 @@ export default function Home() {
             key={i} >
             {el}
           </motion.span>
-         ))}   
+         ))}    */}
         </div>
         </Link>
       </div>
@@ -283,9 +300,12 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-        // onMouseOver={handleHoverPortfolio}
-        onMouseMove={() => setIsHoveringPortfolio(true)}
-        onMouseLeave={() => setIsHoveringPortfolio(false)}
+
+        // onMouseOver={() => handleHoverPortfolio}
+        onMouseOver={handleHoverPortfolio}
+
+        // onMouseMove={() => setIsHoveringPortfolio(true)}
+        // onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
          <Link
               className="link-hover"
@@ -297,9 +317,11 @@ export default function Home() {
           initial={{ opacity: isHoveringProjects ? 1:1 }}
           animate={{ opacity: isHoveringProjects ? 0:1 }}
           >
-            <CiImageOn />
+                                    <div className="flex items-center">
+            <CiImageOn /> Portfolio
+            </div>
             </motion.span>
-            {portfoliotext.map((el, i) => (
+            {/* {portfoliotext.map((el, i) => (
               <motion.span
               initial={{ opacity: isHoveringProjects ? 1:1 }}
               animate={{ opacity: isHoveringProjects ? 0:1 }}
@@ -310,7 +332,8 @@ export default function Home() {
               key={i} >
             {el}
           </motion.span>
-        ))}  
+        ))}   */}
+        
          
         </div>
         </Link>

@@ -189,10 +189,6 @@ export default function homepagePerformance() {
 
       <div
         className={styles.buttonGeneralHomepageProjects}
-
-        // onMouseOver={() => {handleHoverProjects()}}
-        onMouseMove={() => setIsHoveringProjects(true)}
-        onMouseLeave={() => setIsHoveringProjects(false)}
         style={{ zIndex: 60 }}
       >
         <Link className="link-hover" href="/projects">
@@ -212,9 +208,6 @@ export default function homepagePerformance() {
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-        // onMouseOver={handleHoverPortfolio}
-        onMouseMove={() => setIsHoveringPortfolio(true)}
-        onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
          <Link
               className="link-hover"
