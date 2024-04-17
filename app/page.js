@@ -150,7 +150,7 @@ export default function Home() {
   </motion.div>
 </AnimatePresence>
 
-      <div className={styles.titleHomepage}>
+      <div className={styles.titleHomepage}style={{opacity:0}}>
         flo
         </div>
 
