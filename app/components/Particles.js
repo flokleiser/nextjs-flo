@@ -10,8 +10,7 @@ export default function TitleParticles() {
     particles = [],
     amount = 0,
     mouse = {x:0,y:0},
-    // radius = 0.75;
-    radius = 1;
+    radius = 0.5;
   
 //   var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
 //   var colors = ["#A63C9F", "#850FA6", "#58088C", "#3E0973", "#3E0973", "#3E0973", "#58088C", "#850FA6", "#A63C9F"]
@@ -34,7 +33,8 @@ export default function TitleParticles() {
   var displayText = "Florian Kleiser"
   
   var ww = canvas.width = window.innerWidth;
-  var wh = canvas.height = window.innerHeight;
+// var wh = canvas.height = window.innerHeight/3 * 2;
+  var wh = canvas.height = window.innerHeight/5 * 4;
   
   function Particle(x,y){
     this.x = x
@@ -116,7 +116,6 @@ export default function TitleParticles() {
     mouse.y = e.clientY;
   }
 
-  
   /* Touch controls */
   function onTouchMove(e){
     if(e.touches.length > 0 ){
@@ -131,12 +130,12 @@ export default function TitleParticles() {
   
   function initScene(){
     ww = canvas.width = window.innerWidth;
-    wh = canvas.height = window.innerHeight;
+    wh = canvas.height = window.innerHeight/5 * 4;
   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
     // ctx.font = "bold "+(ww/3)+"px sans-serif";
-    ctx.font = "bold "+(ww/7)+"px sans-serif";
+    ctx.font = "bold "+(ww/10)+"px sans-serif";
     ctx.textAlign = "center";
     ctx.fillText(displayText, ww/2, wh/2);
   
@@ -145,33 +144,22 @@ export default function TitleParticles() {
     ctx.globalCompositeOperation = "screen";
   
     particles = [];
-    // for(var i=0;i<ww;i+=Math.round(ww/150)){
-    //   for(var j=0;j<wh;j+=Math.round(ww/150)){
-    //     if(data[ ((i + j*ww)*4) + 3] > 150){
-    //       particles.push(new Particle(i,j));
-    //     }
-    //   }
-    // }
-
-    for(var i=0;i<ww;i+=Math.round(ww/100)){
-        for(var j=0;j<wh;j+=Math.round(ww/100)){
-          if(data[ ((i + j*ww)*4) + 3] > 100){
-            particles.push(new Particle(i,j));
-          }
+    for(var i=0;i<ww;i+=Math.round(ww/200)){
+      for(var j=0;j<wh;j+=Math.round(ww/200)){
+        if(data[ ((i + j*ww)*4) + 3] > 200){
+          particles.push(new Particle(i,j));
         }
       }
-
+    }
     amount = particles.length;
   
   }
 
 function onMouseDown() {
     radius = 2;
-    // radius = -2;
 }
 function onMouseUp() {
-    // radius = 1;
-    radius = 0.75;
+    radius = 0.5;
 }
   
   function render(a) {
@@ -194,10 +182,9 @@ function onMouseUp() {
 
   return (
         <canvas style={{
-            // width:'70vw', 
-            // height:'70vh', 
             width:'100vw', 
-            height:'100vh', 
+            height:'80vh', 
+            position:'absolute',
             // background:'black'
             }} 
             id="scene">

@@ -1,6 +1,13 @@
 # To-Do/Ideas List:
 
 ## Fun:
+- [x] Interactive Logo
+    - [ ] Change font size
+    - [ ] Change particle size
+    - [ ] Change particle shape
+    - [ ] Try on title page
+
+
 Interactive logo type thingy like:
 https://www.goldinteractive.ch/team
 
