@@ -43,7 +43,8 @@ export default function TitleParticles() {
       x : x,
       y: y
     };
-    this.r = 4
+    // this.r = 4
+    this.r = 2 
     this.vx = 0;
     this.vy = 0;
 
