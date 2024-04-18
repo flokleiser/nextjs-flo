@@ -8,14 +8,6 @@ const assistant = Assistant({
 
 });
 
-const useAnimationFrame = (animationHandler) => {
-  const frame = useRef(0);
-  const animate = () => {
-    animationHandler();
-    frame.current = requestAnimationFrame(animate)
-  }
-}
-
 
 export default function TitleParticles() {
 
@@ -178,7 +170,7 @@ function onMouseUp() {
       particles[i].render();
     }
     // return () => cancelAnimationFrame(frame.current)
-    return () => cancelAnimationFrame(render)
+    // return () => cancelAnimationFrame(render)
   };
   
   window.addEventListener("resize", initScene);
@@ -198,9 +190,6 @@ function onMouseUp() {
             position:'absolute',
             }} 
             id="scene">
-
-
-                
             </canvas>
   );
 }

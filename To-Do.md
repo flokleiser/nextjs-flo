@@ -2,17 +2,8 @@
 ___
 
 ## Page performance:
-- [ ] RequestAnimationFrames bad for performance
+- [x] RequestAnimationFrames bad --> fixed by empty array after useEffect hook.
 - [ ] If really bored --> delete all comments from the code
-
-## Homepage:
-- [ ] Fix title being in the middle
-
-- [ ] Fix spacing between the particles
-- [ ] Try out a png as imagedata
-
-- [ ] Look into bubbling (onmouseover called multiple times etc)
-- [ ] Figure out if theres a better way to animate the cards
 
 ## Loading times:
 - [ ] Look into lazy loading
