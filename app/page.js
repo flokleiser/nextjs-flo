@@ -11,7 +11,6 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { CiCalendar } from "react-icons/ci";
 import TitleParticles from "@/app/components/Particles";
 
 export default function Home() {
@@ -102,34 +101,7 @@ export default function Home() {
    z-[-1]"
       ></div>
 
-{/* <div> */}
-{/* <div
-      style={{position:'fixed', zIndex:9999,   display:"flex" ,
-      right:' 1.15rem ',
-  top: '0.75rem'
-    }}
-      >
-                <h1>
-          {" "}
-          <Link href="/projects/tests/dates">
-            <CiCalendar style={{fontSize:'1.5rem'}} />
-            </Link>{" "}
-        </h1>
-      </div> */}
-      
-      {/* <div className={styles.backbuttonHomepage} 
-      style={{position:'fixed', right:'4rem',  zIndex:9999,  position:"absolute", display:"flex" }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/tests/">TESTS</Link>{" "}
-        </h1>
-        </div> */}
 
-
-
-
-{/* <TitleParticles /> */}
 <AnimatePresence>
 <motion.div style={{
       position:'absolute', 
@@ -172,7 +144,6 @@ export default function Home() {
             style={{ animationDelay: "0s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/1.png"
               width={1100}
               height={1000}
@@ -183,7 +154,6 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/2.png"
               width={1100}
               height={1000}
@@ -194,7 +164,6 @@ export default function Home() {
             style={{ animationDelay: "0.2s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/3.png"
               width={1100}
               height={1000}
@@ -205,7 +174,6 @@ export default function Home() {
             style={{ animationDelay: "0.3s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/4.png"
               width={1100}
               height={1000}
@@ -216,7 +184,6 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/5.png"
               width={1100}
               height={1000}
@@ -227,7 +194,6 @@ export default function Home() {
             style={{ animationDelay: "0.5s" }}
           >
             <Image
-              // style={{width:'100%'}}
               src="/images/homepage/new2/6.png"
               width={1100}
               height={1000}
@@ -241,9 +207,7 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepageProjects}
 
-        // onMouseOver={() => {handleHoverProjects}}
-        // onMouseMove={() => setIsHoveringProjects(true)}
-        // onMouseLeave={() => setIsHoveringProjects(false)}
+      
         onMouseEnter={() => handleHoverProjects()}
         onMouseLeave={() => setIsHoveringProjects(false)}
         
@@ -254,23 +218,11 @@ export default function Home() {
            <motion.span
            initial={{ opacity: isHoveringPortfolio ? 1:1 }}
            animate={{ opacity: isHoveringPortfolio ? 0:1 }} >
-            {/* <CiGrid32 /> */}
             <div className="flex items-center">
             <CiGrid32 /> Projects
             </div>
               
             </motion.span>
-             {/* {projectstext.map((el, i) => (
-                 <motion.span
-                 initial={{ opacity: isHoveringPortfolio ? 1:1 }}
-                 animate={{ opacity: isHoveringPortfolio ? 0:1 }}
-          transition={{
-              duration: 0.25,
-            }}
-            key={i} >
-            {el}
-          </motion.span>
-         ))}    */}
         </div>
         </Link>
       </div>
@@ -278,15 +230,11 @@ export default function Home() {
       <div
         className={styles.buttonGeneralHomepage}
         style={{ zIndex: 60 }}
-        // onMouseOver={() => handleHoverPortfolio}
-        // onMouseMove={() => setIsHoveringPortfolio(true)}
-        // onMouseLeave={() => setIsHoveringPortfolio(false)}
         onMouseEnter={() => handleHoverPortfolio()}
         onMouseLeave={() => setIsHoveringPortfolio(false)}
       >
          <Link
               className="link-hover"
-              // href="https://drive.google.com/file/d/1xSrkDL-yliLV2XVAWYgNaPvalsMcsgKP/view"
               href="/portfolio"
             >
         <div className={styles.subtitleHomepage}>
@@ -298,18 +246,7 @@ export default function Home() {
             <CiImageOn /> Portfolio
             </div>
             </motion.span>
-            {/* {portfoliotext.map((el, i) => (
-              <motion.span
-              initial={{ opacity: isHoveringProjects ? 1:1 }}
-              animate={{ opacity: isHoveringProjects ? 0:1 }}
-              transition={{
-                duration: 0.25,
-                delay: i / 30
-              }}
-              key={i} >
-            {el}
-          </motion.span>
-        ))}   */}
+      
         
          
         </div>
@@ -333,7 +270,6 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* Portfolio hover */}
       <AnimatePresence>
         {isHoveringPortfolio && (
           <motion.div
@@ -344,14 +280,12 @@ export default function Home() {
             transition={{ duration: 0.3 }}
             style={{
               backdropFilter: "blur(100px)",
-              // backgroundColor: "rgba(0,0,0,0.4)",
             }}
           ></motion.div>
         )}
       </AnimatePresence>
 
       <div style={{ margin: "3.5rem" }}> </div>
-      {/* </div> */}
     </main>
   );
 }

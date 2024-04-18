@@ -1,4 +1,13 @@
 # To-Do/Ideas List:
+___
+
+
+## Page performance:
+- [ ] Look into useMemo
+
+- [ ] If really bored --> delete all comments from the code
+
+
 
 ## Homepage:
 - [ ] Try out a png as imagedata
@@ -8,7 +17,12 @@
 - [ ] Look into bubbling (onmouseover called multiple times etc)
 - [ ] Figure out if theres a better way to animate the cards
 
+## Loading times:
+- [ ] Look into lazy loading
+- [x] Look into dynamic imports
+- [ ] Look into what pages are slow to load
 
+___
 ## Fun:
 - [x] Interactive Logo
     - [x] Change font
@@ -18,22 +32,6 @@
 
     - [ ] Uniformly scale on hoverportfolio
 
-
-Interactive logo type thingy like:
-https://www.goldinteractive.ch/team
-
-https://codepen.io/Zaku/pen/AobWbm
-https://codepen.io/Mamboleoo/pen/obWGYr
-https://codepen.io/enricotoniato/pen/gbzJYO
-
-___
-
-## Optimisations:
-- [ ] Look into lazy loading
-- [x] Look into dynamic imports
-- [ ] Look into what pages are slow to load
-
-___
 
 ### Testing page
 - [x] Autofocus on password bar

@@ -86,13 +86,6 @@ z-[-1]"
           </div>
         </div>
 
-        <div className={styles.buttonLinksPage}>
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link href="/tests/dates">Dates</Link>
-            </p>
-          </div>
-        </div>
       </div>
 
       <div style={{ padding: "1rem" }} />
@@ -110,14 +103,6 @@ z-[-1]"
           <div className={styles.subtitledescription}>
             <p>
               <Link href="/tests/gaussianSplatting">Gaussian Splatting</Link>
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.buttonLinksPage}>
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link href="/tests/particlesTest">Particles</Link>
             </p>
           </div>
         </div>

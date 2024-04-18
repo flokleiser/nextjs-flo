@@ -109,7 +109,6 @@ export default function SearchBar({ onSearch }) {
             transition={{ duration: 0.3 }}
             ref={overlayRef}
           >
-            {/* <div className="p-8  pt-16 h-[100vh]  bg-stone-900/90 overflow-y-auto" > */}
             <div className={styles.searchOverlayDiv} >
 
               

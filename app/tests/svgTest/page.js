@@ -15,7 +15,6 @@ import {
 import { BsX, BsList } from "react-icons/bs";
 import { BsArrowClockwise } from "react-icons/bs";
 import {Tooltip} from "@nextui-org/tooltip";
-import ExpandableButton from "@/app/components/ExpandableButton";
 
 const button = {
   rest: { scale: 1 },
@@ -1001,10 +1000,6 @@ z-[-1]"
 
 
       </div>
-
-        <ExpandableButton >
-          <p> testttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt </p>
-        </ExpandableButton>
 
       <div style={{ padding: "2rem" }} />
     </main>
