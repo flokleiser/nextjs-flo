@@ -5,8 +5,6 @@ import { Assistant } from 'next/font/google';
 
 const assistant = Assistant({ 
     subsets: ['latin'],
-    // weight:'600',
-    // weight:'400',
 
 });
 
@@ -16,7 +14,7 @@ export default function TitleParticles() {
     
 useEffect(() => {
 var canvas = document.querySelector("#scene"),
-ctx = canvas.getContext("2d"),
+ctx = canvas.getContext("2d", {willReadFrequently: true}),
 particles = [],
 amount = 0,
 mouse = {x:0,y:0},
@@ -41,12 +39,9 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
   "#3d0971"]
   var color = ["#ffffff"];
 
-  // var displayText = "Flo"
   var displayText = "Florian Kleiser"
   
   var ww = canvas.width = window.innerWidth;
-// var wh = canvas.height = window.innerHeight/3 * 2;
-//   var wh = canvas.height = window.innerHeight/5 * 4;
   var wh = canvas.height = window.innerHeight;
   
   function Particle(x,y){
@@ -56,32 +51,23 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
       x : x,
       y: y
     };
-    // this.r = 4
 
-    // this.r = ww/300
     this.r = ww/600 
 
-    // this.r = 2 
     this.vx = 0;
     this.vy = 0;
 
     this.accX = 0;
     this.accY = 0;
-    // this.friction = Math.random()*0.05 + 0.94;
-    // this.friction =  0.95
-    // this.friction =  0.99
     this.friction = 0.7 
 
     this.color = color 
-    // this.color = colors[Math.floor(Math.random()*6)];
  }
  
   
   Particle.prototype.render = function() {
   
   
-    // this.accX = (this.dest.x - this.x)/1000;
-    // this.accY = (this.dest.y - this.y)/1000;
     this.accX = (this.dest.x - this.x)/100;
     this.accY = (this.dest.y - this.y)/100;
     this.vx += this.accX;
@@ -92,13 +78,10 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
     this.x += this.vx;
     this.y +=  this.vy;
   
-    // ctx.drawImage(textImage,0,0, ww, wh)
     ctx.fillStyle = this.color;
     ctx.beginPath();
 
     ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
-    // ctx.rect(this.x, this.y, 1.25*this.r,1.25*this.r, this.r);
-    // ctx.roundRect(this.x, this.y, 1.5*this.r,1.5*this.r, this.r);
 
     ctx.fill();
   
@@ -128,7 +111,6 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
     mouse.y = e.clientY;
   }
 
-  /* Touch controls */
   function onTouchMove(e){
     if(e.touches.length > 0 ){
       mouse.x = e.touches[0].clientX;
@@ -146,7 +128,6 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-    // ctx.font = `bold ${(ww / 10)}px ${assistant.style.fontFamily}`;
     ctx.font = `${(ww / 10)}px ${assistant.style.fontFamily}`;
 
     ctx.textAlign = "center";
@@ -159,16 +140,8 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
     var divider = 250
   
     particles = [];
-    // for(var i=0;i<ww;i+=Math.round(ww/250)){
-    //   for(var j=0;j<wh;j+=Math.round(ww/250)){
-    //     if(data[ ((i + j*ww)*4) + 3] >250){
-    //       particles.push(new Particle(i,j));
-    //     }
-    //   }
-    // }
     for(var i=0;i<ww;i+=Math.round(ww/divider)){
       for(var j=0;j<wh;j+=Math.round(ww/divider)){
-        // if(data[ ((i + j*ww)*4) + 3] >divider){
         if(data[((i + j*ww)*4) + 3] >divider){
           particles.push(new Particle(i,j));
         }
@@ -205,7 +178,6 @@ function onMouseUp() {
 
   return (
         <canvas style={{
-          // paddingTop:'3rem',
             width:'100vw', 
             height:'80vh', 
             position:'absolute',

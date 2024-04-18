@@ -21,7 +21,6 @@ export default function TipsButton() {
     const [randomTip, setRandomTip] = useState("");
    
     const handleToggleClick = () => {
-        // setVisible(!isVisible);
         
         const randomIndex = Math.floor(Math.random() * tips.length);
         const randomTip = tips[randomIndex];

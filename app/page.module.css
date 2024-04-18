@@ -724,21 +724,6 @@ transition: all 0.5s ease-in-out;
   color: white;
 }
 
-.expandableButtonNew {
-  transition: transform 200ms, border 200ms;
-  border: 1px solid rgba(var(--card-border-rgb), 0.15); 
-  background-color:#ffffff70;
-  border-radius: 6px; 
-  transition: transform 200ms, border 200ms;
-  font-size: 1.5rem;
-  color: rgb(var(--background-end-rgb));
-  font-weight: normal;
-  align-items:center;
-  position:relative;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-left:5px;
-}
 
 .buttonNew {
   transition: transform 200ms, border 200ms;

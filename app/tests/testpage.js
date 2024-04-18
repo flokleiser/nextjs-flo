@@ -106,14 +106,6 @@ z-[-1]"
             </p>
           </div>
         </div>
-
-        <div className={styles.buttonLinksPage}>
-          <div className={styles.subtitledescription}>
-            <p>
-              <Link href="/tests/particlesTest">Particles</Link>
-            </p>
-          </div>
-        </div>
       </div>
 
       <div style={{ padding: "1rem" }} />
