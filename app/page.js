@@ -121,7 +121,7 @@ export default function Home() {
 </AnimatePresence> */}
 
       <div className={styles.titleHomepage}
-      style={{opacity:0}}
+      // style={{opacity:0}}
       >
        Florian Kleiser 
         </div>
