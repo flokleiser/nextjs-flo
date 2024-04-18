@@ -114,14 +114,6 @@ z-[-1]"
         <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link href="/tests/homepagePerformance">New Homepage</Link>
-            </p>
-          </div>
-        </div>
-
-        <div className={styles.buttonLinksPage}>
-          <div className={styles.subtitledescription}>
-            <p>
               <Link href="/tests/homepageAnimation">Homepage Animation</Link>
             </p>
           </div>
