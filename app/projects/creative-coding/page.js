@@ -38,7 +38,6 @@ const data4 = [
   { image: "/images/creative-coding/creativecoding5.png", id: 11, description:'NewCenterPoint7, Example 1' },
   { image: "/images/creative-coding/cc6.png", id: 12, description:'NewCenterPoint7, Example 2' },
   { image: "/images/creative-coding/cc5.png", id: 13, description:'NewCenterPoint7, Example 3' },
-  // { image: "/images/creative-coding/cc7.png", id: 14, description:'NewCenterPoint7, Example 4' },
 ];
 
 function codeBlock1() {
@@ -58,8 +57,6 @@ function codeBlock1() {
       language="javascript"
       style={vscDarkPlus}
       customStyle={{
-        // backgroundColor: "rgb(49,49,49)",
-        // fontSize: '2rem',
         aspectRatio:16/9
       }}
       codeTagProps={{
@@ -99,12 +96,10 @@ function codeBlock2() {
       language="javascript"
       style={vscDarkPlus}
       customStyle={{
-        // backgroundColor: "rgb(49,49,49)",
         aspectRatio:16/9
       }}
       codeTagProps={{
         style: {
-          // fontSize: "1.1rem",
           fontSize:'1rem',
           color: "rgb(170,218,250)",
         },
@@ -135,9 +130,7 @@ function codeBlock3() {
       language="javascript"
       style={vscDarkPlus}
       customStyle={{
-        // backgroundColor: "rgb(49,49,49)",
         aspectRatio:16/9
-        // fontSize: '2rem',
       }}
       codeTagProps={{
         style: {
@@ -211,9 +204,7 @@ function codeBlock4() {
       style={vscDarkPlus}
       wrapLines={true}
       customStyle={{
-        // backgroundColor: "rgb(49,49,49)",
         aspectRatio:16/9
-        // fontSize: '2rem',
       }}
       codeTagProps={{
         style: {
@@ -239,7 +230,6 @@ export default function creativeCoding() {
     document.body.style.overflow = "auto";
   };
 
-  /* make image big */
   const handleImageClick = (imageSrc) => {
     const dataArray = [...data, ...data2, ...data3, ...data4];
     const selectedIndex = dataArray.findIndex(
@@ -282,7 +272,6 @@ export default function creativeCoding() {
     }
   };
 
-  /* handleoutsideclick*/
   useEffect(() => {
     const handleOutsideClick = (event) => {
       const imageElement = document.querySelector("#overlay img");
@@ -376,15 +365,6 @@ export default function creativeCoding() {
    z-[-1]"
       ></div>
 
-      {/* <div
-        className={styles.backbutton}
-        style={{ position: "fixed", zIndex: 9999 }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects">Back to Projects </Link>{" "}
-        </h1>
-      </div> */}
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerCC}>
@@ -401,9 +381,6 @@ export default function creativeCoding() {
 
         <div style={{ padding: "1rem" }}></div>
 
-        {/* <div className={styles.subtitle}>
-          <p2>How its made:</p2>
-        </div> */}
 
         <div style={{ padding: "1rem" }}></div>
 
@@ -416,7 +393,6 @@ export default function creativeCoding() {
 
         >
           <div style={{ padding: "0.25rem" }}></div>
-          {/* <TipsButton /> */}
 
           <div 
           style={{ padding: "0.5rem" }}
@@ -426,7 +402,6 @@ export default function creativeCoding() {
                 src="https://editor.p5js.org/flokleiser/full/1JskqsGtG"
                 allowFullScreen
                 style={{
-                  // border: "2px solid white",
                   width: "88vw",
                   maxWidth: "1350px",
                   aspectRatio: "16/9",
@@ -434,7 +409,6 @@ export default function creativeCoding() {
               />
             </div>
           </div>
-          {/* <div style={{ padding: "1rem" }}> </div> */}
           <div style={{padding:'0.25rem'}}/>
         </div>
         <div style={{ padding: "1rem" }}> </div>
@@ -478,20 +452,6 @@ export default function creativeCoding() {
                 backgroundColor: "rgba(0, 0, 0, 0.75)",
               }}
             >
-              {/* <motion.img
-                src={selectedImage}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.45 }}
-                transition={{ duration: 0.3 }}
-                alt=""
-                className="max-w-4/5 max-h-4/5"
-                style={{
-                  maxHeight: "80vh",
-                  zIndex: 9990,
-                  borderRadius: "24px",
-                }}
-              /> */}
 
 
 <motion.div className="flex flex-col items-center mt-8"
@@ -511,7 +471,6 @@ export default function creativeCoding() {
 
           <div className={styles.imageDescription} style={{backgroundColor:'rgb(50,50,50)'}}>
           <p>
-          {/* {currentIndex + ")    "}   */}
           {selectedDescription}
           </p>
           </div>
@@ -549,18 +508,6 @@ export default function creativeCoding() {
           )}
         </AnimatePresence>
 
-        {/* <div style={{ padding: "1.5rem" }} /> */}
-
-        {/* <codeTooltip> */}
-
-        {/* <ExpandableButton 
-style={{display:'flex', justifyItems:'center'}}
->
-  {codeBlock1()}
-</ExpandableButton> */}
-
-        {/* </codeTooltip> */}
-
         <div className="">
           <div className="p-3 container mx-auto">
             <div className="py-2"></div>
@@ -591,20 +538,6 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
         <div className="flex flex-row">
-
-
-          {/* <div className={styles.linkContainerCCSandbox}
-          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", marginBottom:'10px', overflow: "auto"}} >
-          <div style={{ padding: "0.5rem" }}/>
-
-        <div className="flex align-center">
-          <div className={styles.iframevideoSmall}>
-            {codeBlock1()}
-          </div>
-          </div>
-          <div style={{ padding: "0.5rem" }}/>
-          </div> */}
-
           <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -633,7 +566,6 @@ style={{display:'flex', justifyItems:'center'}}
               <iframe
                 className={styles.iframevideoSmall}
                 style={{ zIndex: selectedImage ? 1 : 52, position: "relative",}}
-                // src="https://www.youtube.com/embed/z_rbwerTgBE?si=TiMMhrdZMZn6kD79&rel=0"
                 src="https://www.youtube.com/embed/4KYr9DEqOCw?si=VaHdlBZ3h_c79Fw4&rel=0"
                 allowFullScreen
               ></iframe>
@@ -647,11 +579,6 @@ style={{display:'flex', justifyItems:'center'}}
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        {/* <ExpandableButton 
-style={{display:'flex', justifyItems:'center'}}
->
-  {codeBlock2()}
-</ExpandableButton> */}
 
         <div className="">
           <div className="p-3 container mx-auto">
@@ -683,7 +610,6 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
 <div className="flex flex-row">
-{/* <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "> */}
 <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -707,15 +633,12 @@ style={{display:'flex', justifyItems:'center'}}
     style={{ width: "45vw", zIndex: 1, maxWidth: "650px" }}
   >
     <div style={{ padding: "0.5rem" }}> </div>
-    {/* <div className="flex align-center"> */}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-        // src="https://www.youtube.com/embed/_fmgP4kvRlk?si=cWvrsFuy78losEc1&rel=0"
         src="https://www.youtube.com/embed/F0DwWNKuL9I?si=H_yvQk4WO9MaGHcM&rel=0" 
         allowFullScreen
       ></iframe>
-    {/* </div> */}
     <div style={{ padding: "0.5rem" }} />
   </div>
 
@@ -727,11 +650,6 @@ style={{display:'flex', justifyItems:'center'}}
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        {/* <ExpandableButton 
-style={{display:'flex', justifyItems:'center'}}
->
-  {codeBlock3()}
-</ExpandableButton> */}
 
         <motion.div className="">
           <div className="p-3 container mx-auto">
@@ -764,7 +682,6 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
 <div className="flex flex-row">
-{/* <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "> */}
 <div className={styles.linkContainerCCSandbox}
           style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
           }}
@@ -792,7 +709,6 @@ style={{display:'flex', justifyItems:'center'}}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-        // src="https://www.youtube.com/embed/kRxCXPPyuQI?si=Cc1JBPQw8IKZ5F1c&rel=0" 
         src="https://www.youtube.com/embed/aX9ngBGPKLA?si=edOVv03Gp22W_xQO&rel=0" 
         allowFullScreen
       ></iframe>
@@ -806,13 +722,6 @@ style={{display:'flex', justifyItems:'center'}}
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        {/* <div className="flex flex-row space-x-4"> */}
-
-        {/* <ExpandableButton 
-style={{display:'flex', justifyItems:'center'}}
->
-  {codeBlock4()}
-</ExpandableButton> */}
 
         <motion.div className="">
           <div className="p-3 container mx-auto">
@@ -844,10 +753,7 @@ style={{display:'flex', justifyItems:'center'}}
         <div stlye={{ padding: "0.5rem" }} />
 
 <div className="flex flex-row">
-{/* <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "> */}
 <div className={styles.linkContainerCCSandboxSmall}
-          // style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
-          // }}
           >
             <div style={{ padding: "0.5rem" }}> </div>
             <div className="flex align-center">
@@ -872,7 +778,6 @@ style={{display:'flex', justifyItems:'center'}}
       <iframe
         className={styles.iframevideoSmall}
         style={{ zIndex: selectedImage ? 1 : 52, position: "relative" }}
-        // src="https://www.youtube.com/embed/Gh7pxNVKmbU?si=HzZlicGcsVRbgFyw&rel=0" 
         src="https://www.youtube.com/embed/cQY-fGIULjA?si=wpl6wyj8CXX2_E0Z&rel=0" 
         allowFullScreen
       ></iframe>
@@ -884,7 +789,6 @@ style={{display:'flex', justifyItems:'center'}}
 
 <div style={{ padding: "1.5rem" }} />
 
-        {/* </div> */}
       </div>
 
       <div style={{ padding: "2rem" }}> </div>

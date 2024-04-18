@@ -4,6 +4,7 @@ ___
 ## Page performance:
 - [x] RequestAnimationFrames bad --> fixed by empty array after useEffect hook.
 - [ ] If really bored --> delete all comments from the code
+    - [ ] Currently done up to creativecoding
 
 ## Loading times:
 - [ ] Look into lazy loading

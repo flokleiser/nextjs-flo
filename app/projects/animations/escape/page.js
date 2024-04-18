@@ -81,21 +81,11 @@ export default function escape() {
         )}
       </AnimatePresence>
 
-      {/* <div
-        className={styles.backbutton}
-        style={{ position: "fixed", zIndex: 9999 }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects/animations">Back to Animations</Link>{" "}
-        </h1>
-      </div> */}
 
       <div style={{paddingTop:'1rem'}} />
 
       <div className={styles.linkContainerAnimationsBackground} >
 
-      {/* <h1 className={styles.title}>Escape</h1> */}
       <h1 className={styles.titleWithoutPadding}>Escape</h1>
 
       <div className={styles.subtitledescription}>
@@ -107,7 +97,6 @@ export default function escape() {
 
       <div style={{ padding: "1rem", scrollMargin: "50px" }} id="escape" />
 
-      {/* <div className={styles.linkContainer}> */}
       <div className={styles.linkContainerAnimationsVideo}>
         <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex">
@@ -149,7 +138,6 @@ export default function escape() {
             allowFullScreen
           ></iframe>
         </div>
-        {/* <div style={{ padding: "1.25rem" }}> </div> */}
         <div style={{padding:"0.8rem"}} />
       </div>
 

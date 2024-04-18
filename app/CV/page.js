@@ -8,14 +8,6 @@ export default function cv() {
     document.title = 'CV';
     }, []);
 
-    // const handleScroll = (e) => {
-    //     e.preventDefault();
-    //     const href = e.currentTarget.href;
-    //     const targetId = href.replace(/.*\#/, "");
-    //     const elem = document.getElementById(targetId);
-    //     elem?.scrollIntoView({ behavior: "smooth" });
-    //   };
-
     return( 
         <main className={styles.main}>
         <div className="relative 
@@ -53,9 +45,7 @@ z-[-1]">
         </div>
 
         <iframe 
-        // src="https://drive.google.com/file/d/1dG7y59mddTFC_tMWaYHcGHHzMeyTrJ2t/preview" 
         src="https://drive.google.com/file/d/1lIIg2R4wxiSsuzoMy4FEkMyLVUHstxet/preview"
-        // style={{width:"100vw", height:"95vh"}}
         style={{width:"100vw", height:"96vh"}}
         width="640" height="480" >
 

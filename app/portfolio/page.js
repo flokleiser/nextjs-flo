@@ -8,14 +8,6 @@ export default function portfolio () {
     document.title = 'Portfolio';
     }, []);
 
-    // const handleScroll = (e) => {
-    //     e.preventDefault();
-    //     const href = e.currentTarget.href;
-    //     const targetId = href.replace(/.*\#/, "");
-    //     const elem = document.getElementById(targetId);
-    //     elem?.scrollIntoView({ behavior: "smooth" });
-    //   };
-
     return( 
         <main className={styles.main}>
         <div className="relative 
@@ -52,26 +44,13 @@ before:lg:h-[360px]
 z-[-1]">
         </div>
 
-        {/* <div className={styles.backbutton}
-       style={{position:'fixed', zIndex:9999}}
-       >
-        <h1>
-          {" "}
-          <Link href="#environments">Test</Link>{" "}
-        </h1>
-      </div> */}
 
         <iframe 
-        // src="https://drive.google.com/file/d/1b4mRdDAdqGD0KS4nlxXLnif71r8ayYdB/preview" 
-        // src="https://drive.google.com/file/d/14PnzzDMOzSfJ7xMbp5O3WNXJfA1RE3rh/preview"
         src="https://drive.google.com/file/d/1idQPlX3VKanj_9xHR1MJJktuJ0rJPzIH/preview"
-        // style={{width:'100vw', height: '95vh'}} 
         style={{width:'100vw', height: '96vh'}} 
         width="640" height="480" 
         ></iframe>
 
-{/* <div id='environment'
-style={{padding:'3rem'}} /> */}
 
     </main>
     

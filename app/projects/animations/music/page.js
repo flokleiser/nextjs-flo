@@ -88,37 +88,14 @@ export default function music() {
       )}
       </AnimatePresence>
 
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects/animations">Back to Animations</Link> </h1>
-            </div> */}
 
             <div style={{paddingTop:'1rem'}} />
 
 <div className={styles.linkContainerAnimationsBackground} >
 <h1 className={styles.titleWithoutPadding}>
 
-            {/* <h1 className={styles.title}> */}
               Animations to Music
             </h1>
-            {/* <div className={styles.subtitledescription}>
-            <p>
-                placeholder
-            </p>
-            </div> */}
-
-            {/* <video
-            src="https://drive.google.com/uc?id=16sVUVFGcCh9B5xtfMXyjT8JG6CnF7dug" controls>
-            </video>
-
-            <video
-            src="https://drive.google.com/uc?id=17JQFnplhl78hUX6wIcvRLMOEZu-8t9xH" controls>
-            </video>
-
-            <video
-            src="https://drive.google.com/uc?id=1sy4U3cpGvj3lQL_jCDiVZgU4gIA2s9eV" controls>
-            </video>     */}
 
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
@@ -134,11 +111,9 @@ export default function music() {
             </p>
             </div>
             <div style={{ padding: '1rem', scrollMargin:'50px' }} id="publictransport"> </div> 
-            {/* <div className={styles.linkContainer}> */}
             <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
-          {/* place-self-start */}
 
 <DimTooltip>
           <button
@@ -173,7 +148,6 @@ export default function music() {
             src="https://www.youtube.com/embed/5ZsrPtQ01cg?si=XeVfF4ous5El3Tv0&rel=0"allowFullScreen >
             </iframe>
             </div>
-            {/* <div style={{ padding: "1.25rem" }}> </div> */}
             <div style={{padding:"0.8rem"}} />
             </div>
 
@@ -195,11 +169,9 @@ export default function music() {
             </div>
             <div style={{ padding: '1rem', scrollMargin:'60px' }}id="piano"> </div> 
 
-            {/* <div className={styles.linkContainer}> */}
             <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
-          {/* place-self-start */}
 
           <DimTooltip>
           <button
@@ -234,7 +206,6 @@ export default function music() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/kZaQkFeOdw4?si=nFUKzEiwlIvUnQlx&rel=0"allowFullScreen >
             </iframe>
             </div>
-            {/* <div style={{ padding: "1.25rem" }}> </div> */}
             <div style={{padding:"0.8rem"}} />
 </div>
 <div style={{padding:'1rem'}} />
@@ -255,11 +226,9 @@ export default function music() {
             </div>
             <div style={{ padding: '1rem', scrollMargin:'60px'}} id="blurry"> </div> 
 
-            {/* <div className={styles.linkContainer}> */}
             <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex  ">
-          {/* place-self-start */}
 
           <DimTooltip>
           <button
@@ -294,10 +263,8 @@ export default function music() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/dn2mIvCeUao?si=mh78ivAMsSzBrlB5&rel=0" allowFullScreen>
            </iframe>
            </div>
-           {/* <div style={{ padding: "1.25rem" }}> </div> */}
            <div style={{padding:"0.8rem"}} />
             </div>
-            {/* <div style={{padding:'1rem'}}/> */}
             
            <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 
