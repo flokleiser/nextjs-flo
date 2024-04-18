@@ -18,21 +18,6 @@ export default function Home() {
   const [animationClass, setAnimationClass] = useState("");
   const [animationClass2, setAnimationClass2] = useState("");
 
-  // useEffect(() => {
-  //   if (isHoveringPortfolio) {
-  //     setAnimationClass(styles.animationClassHalf1);
-  //   } else if (animationClass === styles.animationClassHalf1) {
-  //     setAnimationClass(styles.animationClassHalf2);
-  //   }
-  // }, [isHoveringPortfolio]);
-
-  // useEffect(() => {
-  //   if (isHoveringProjects) {
-  //     setAnimationClass2(styles.animationTestClassHalf1);
-  //   } else if (animationClass2 === styles.animationTestClassHalf1) {
-  //     setAnimationClass2(styles.animationTestClassHalf2);
-  //   }
-  // }, [isHoveringProjects]);
 
   if (isHoveringPortfolio) {
     console.log('portfolio')
@@ -42,12 +27,10 @@ export default function Home() {
   }
 
   const handleHoverProjects = (e) => {
-    // e.stopPropagation();
     setIsHoveringProjects(!isHoveringProjects);
   };
 
   const handleHoverPortfolio = (e) => {
-    // e.stopPropagation();
     setIsHoveringPortfolio(!isHoveringPortfolio);
   };
 
