@@ -179,28 +179,16 @@ useEffect(() => {
    z-[-1]">
           </div>
  
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects">Back to Projects </Link> </h1>
-            </div> */}
 
             <div style={{paddingTop:'1rem'}} />
             <div className={styles.linkContainerSketches} >
-            {/* <div className={styles.linkContainerMomentfulness} > */}
-            {/* <div className={styles.linkContainerIllustrator} > */}
       
               <h1 className={styles.titleWithoutPadding}>
-              {/* <h1 className={styles.titleWithoutPaddingDark}> */}
              Sketches
             </h1>
 
-            {/* <h1 className={styles.title}>
-             Sketches
-            </h1> */}
 
             <div className={styles.subtitledescription}
-            // style={{color:'rgb(55,55,55)'}}
             >
               
             <p>
@@ -211,7 +199,6 @@ useEffect(() => {
 
             <div style={{padding:'1rem'}} />
             <div style={{ padding: "0.5rem" }} />
-      {/* <hr className={styles.pageDividerDark} /> */}
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
          
@@ -256,7 +243,6 @@ useEffect(() => {
               <IoIosArrowBack style={{ fontSize: '2rem' }}/>
             </button>
             </div>
-            {/* <div className="absolute right-5"> */}
             <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="rightButton"
@@ -359,7 +345,6 @@ useEffect(() => {
    
                      
         </main>
-        // {/* </RootLayout> */}
 
     )
 }

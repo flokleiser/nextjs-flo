@@ -211,21 +211,12 @@ export default function skylands() {
    z-[-1]"
       ></div>
 
-      {/* <div className={styles.backbutton}
-       style={{position:'fixed', zIndex:9999}}
-       >
-        <h1>
-          {" "}
-          <Link href="/projects">Back to Projects </Link>{" "}
-        </h1>
-      </div> */}
 
       <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerSkylands}>
 
       <h1 className={styles.titleWithoutPadding}> Skylands </h1>
 
-      {/* <h1 className={styles.title}>Skylands</h1> */}
 
       <div className={styles.subtitledescription}>
         <p>
@@ -233,14 +224,6 @@ export default function skylands() {
           and Blender. <br />
           This page contains gameplay videos, screenshots, and the downloadable .apk file.
         </p>
-        {/* <p>
-        A VR game/experience for the Meta Quest 2 Headset.
-Built in Unity, C# and Blender.
-This project was focused on creating an immersive and
-interactive experience, exploring the capabilities and tools
-used to create virtual reality worlds. It features 8 islands
-with a variety of interactive objects to explore.
-        </p> */}
       </div>
 
       <div style={{padding:'1rem'}} />
@@ -313,7 +296,6 @@ with a variety of interactive objects to explore.
               >
                 <PiXCircle style={{ fontSize: "2rem" }} />
               </button>
-              {/* prev and next buttons */}
               <div className="absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
                 <button
                   id="leftButton"
@@ -324,7 +306,6 @@ with a variety of interactive objects to explore.
                   <IoIosArrowBack style={{ fontSize: "2rem" }} />
                 </button>
               </div>
-              {/* <div className="absolute right-5"> */}
               <div className="absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
                 <button
                   id="rightButton"
@@ -343,7 +324,6 @@ with a variety of interactive objects to explore.
 
 
       <div className="" 
-      // style={{width:'80vw'}}
       >
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
@@ -369,7 +349,6 @@ with a variety of interactive objects to explore.
             ))}
           </div>
         </div>
-      {/* </div> */}
       </div>
 
       <div style={{ padding: "0.5rem" }} />
@@ -382,7 +361,6 @@ with a variety of interactive objects to explore.
 
       <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='interactables' />
 
-      {/* <div className={styles.linkContainer}> */}
       <div className={styles.linkContainerSkylandsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex">
@@ -427,7 +405,6 @@ with a variety of interactive objects to explore.
         ></iframe>
 
       </div>
-      {/* <div style={{ padding: "1.25rem" }}> </div> */}
       <div style={{padding:"0.8rem"}}/>
     </div>
 
@@ -493,11 +470,9 @@ with a variety of interactive objects to explore.
       </div>
       <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='environment' />
 
-      {/* <div className={styles.linkContainer} > */}
       <div className={styles.linkContainerSkylandsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
-          {/* place-self-start */}
 
           <DimTooltip >
           <button
@@ -537,11 +512,9 @@ with a variety of interactive objects to explore.
             allowFullScreen
           ></iframe>
         </div>
-        {/* <div style={{ padding: "1.25rem" }}> </div> */}
         <div style={{padding:"0.8rem"}} />
       </div>
 
-      {/* <div className=""> */}
       <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
@@ -567,7 +540,6 @@ with a variety of interactive objects to explore.
             ))}
           </div>
         </div>
-      {/* </div> */}
       </motion.div>
       <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
@@ -594,7 +566,6 @@ with a variety of interactive objects to explore.
             ))}
           </div>
         </div>
-      {/* </div> */}
       </motion.div>
 
       <div style={{ padding: "0.5rem" }} />
@@ -606,11 +577,9 @@ with a variety of interactive objects to explore.
       </div>
       <div style={{paddingBottom:'1rem', scrollMargin:'50px'}} id='boat' />
 
-      {/* <div className={styles.linkContainer}> */}
       <div className={styles.linkContainerSkylandsVideo}>
       <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
-          {/* place-self-start */}
 
           <DimTooltip>
           <button
@@ -651,11 +620,9 @@ with a variety of interactive objects to explore.
             allowFullScreen
           ></iframe>
         </div>
-        {/* <div style={{ padding: "1.25rem" }}> </div> */}
         <div style={{padding:"0.8rem"}} />
       </div>
 
-      {/* <div className=""> */}
       <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
@@ -681,7 +648,6 @@ with a variety of interactive objects to explore.
             ))}
           </div>
         </div>
-      {/* </div> */}
       </motion.div>
 
       <div style={{ padding: "0.5rem" }} />

@@ -38,13 +38,7 @@ export default function notfound () {
    z-[-1]">
           </div>
     
-            {/* <div className={styles.titleHomepage}> */}
             <div className={styles.titleHomepage} style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
-                {/* <Image
-                src={"/images/happysad.png"}
-                width={75}
-                height={75}
-                /> */}
                  404
                 <div className={styles.subtitleHomepage} style={{marginLeft:'4rem'}}>
                     page not found

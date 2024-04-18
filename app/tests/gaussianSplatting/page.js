@@ -13,7 +13,6 @@ export default function gaussianSplatting() {
     <main className={styles.main}>
 
 <iframe 
-// className={styles.iframeMomentfulness} 
 style={{width:'100vw', height:'96vh'}}
 src="https://flokleiser.github.io/gaussianFlo/"></iframe> 
 

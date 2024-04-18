@@ -16,7 +16,6 @@ import { DiGoogleDrive } from "react-icons/di";
 import { FaLock } from "react-icons/fa";
 import TestPage from "app/tests/testpage.js"
 
-// const testPage = () => { 
 export default function testPage() {
 
   useEffect(() => {
@@ -33,11 +32,6 @@ export default function testPage() {
     }
   };
 
-  // const handleShowInput = (event) => {
-  //   if (setShowContents) {
-  //     setShowInput(false);
-  //   }
-  // }
 
   return (
     
@@ -79,9 +73,6 @@ z-[-1]"
  
       <h1 className={styles.title}>Tests</h1>
 
-      {/* <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} /> */}
 
       <div>
       {showInput && 

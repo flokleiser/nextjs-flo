@@ -105,47 +105,6 @@ z-[-1]"
             opacity: 0.5}}
       />
       </motion.div>
-
-
-
-
-      {/* <div style={{ padding: "1rem" }} />
-      <hr className={styles.pageDivider} />
-      <div style={{ padding: "1rem" }} />
-
-      <motion.div className={styles.linkContainerLinks} style={{opacity:0}} 
-      whileInView={{opacity:1}} transition={{duration:1}}
-      >
-     
-     <motion.div whileInView={{translateX:0, filter:'blur(0px)'}} transition={{duration:0.5}}
-          className={styles.linkContainerImage}
-          style={{
-            filter:'blur(20px)',
-            translateX:-100,
-            backgroundImage: "url(/images/links/googledrive2.png)", 
-            opacity:0.5}}
-            />
- <div className="flex-col mx-11">
-        <div
-          className={styles.buttonLinksPage}
-        >
-          <div className={styles.subtitledescription}>
-            <p>
-              <a href="https://drive.google.com/file/d/11xHBkBRG7_Pd09JAGvIO95ByETWax14b/view?usp=drive_link" target="_blank">
-                Mappe Print leaflet
-              </a>
-            </p>
-          </div>
-        </div>
-        <div style={{padding:'0.5rem'}}/>
-      <div className="max-w-prose ">
-        <p className={styles.subtitledescription}>
-            .ai file
-        </p>
-      </div>
-        </div>
-      </motion.div> */}
-
       <div style={{ padding: "2rem" }} />
     </main>
   );

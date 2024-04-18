@@ -159,18 +159,12 @@ return () => {
    z-[-1]">
           </div>
 
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects">Back to Projects </Link> </h1>
-            </div> */}
 
             <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerVoxel} >
 
       <h1 className={styles.titleWithoutPadding}>
 
-            {/* <h1 className={styles.title}> */}
              Voxel Art 
             </h1>
 
@@ -185,8 +179,6 @@ return () => {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-            {/* <Image src="/images/voxel/voxel room transparent.png"width={800} height={800}/> 
-            <Image src="/images/voxel/voxel space transparent.png"width={800} height={800}/>  */}
 
             
 <div className="">
@@ -233,7 +225,6 @@ return () => {
               <IoIosArrowBack style={{ fontSize: '2rem' }}/>
             </button>
             </div>
-            {/* <div className="absolute right-5"> */}
             <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="rightButton"

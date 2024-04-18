@@ -6,11 +6,6 @@ import { AnimatePresence, easeIn, motion } from "framer-motion";
 import { useEffect } from 'react';
 
 
-// export const metadata = {
-//     title: 'Projects',
-//     description: '-',
-// }
-
 export default function projects() {
 
     useEffect(() => {
@@ -77,7 +72,6 @@ export default function projects() {
             <Link
             href = '/projects/creative-coding'
             className={styles.card}
-            // style={{ backgroundImage: 'url("/images/cards/creative coding transparentwide.png")' ,
             style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.png")' ,
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
@@ -108,7 +102,6 @@ export default function projects() {
                 className={styles.card}
                 rel="noopener noreferrer"
                 href = '/projects/cad'
-                // style={{ backgroundImage: 'url("/images/cards/cad transparent2.png")',
                 style={{ backgroundImage: 'url("/images/cards/cadwhite.png")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
@@ -183,7 +176,6 @@ export default function projects() {
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
-            // style={{ backgroundImage: 'url("/images/cards/voxel transparentwide.png")',
             style={{ backgroundImage: 'url("/images/cards/voxelwhite5.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
