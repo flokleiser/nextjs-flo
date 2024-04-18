@@ -88,23 +88,14 @@ export default function plasticine() {
       )}
       </AnimatePresence>
                      
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects/animations">Back to Animations</Link> </h1>
-            </div> */}
 
             <div style={{paddingTop:'1rem'}} />
 
 <div className={styles.linkContainerAnimationsBackground} >
 <h1 className={styles.titleWithoutPadding}>
 
-            {/* <h1 className={styles.title}> */}
               Plasticine (A)live
             </h1>
-            {/* <video
-            src="https://drive.google.com/uc?id=10HFBj5xR9ua3ZoUBu_jcKjuKNO_S5TWi" controls>
-            </video> */}
            
            <div className={styles.subtitledescription}>
             <p>
@@ -123,11 +114,9 @@ export default function plasticine() {
 
             <div style={{padding:'1rem', scrollMargin:'50px'}} id="plasticine" />
 
-            {/* <div className={styles.linkContainer}> */}
             <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
-          {/* place-self-start */}
 
 <DimTooltip>
           <button
@@ -163,10 +152,8 @@ export default function plasticine() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/lacKuEDPn8U?si=oeuVk3JSX4XqK792&rel=0"allowFullScreen>
             </iframe>
             </div>
-            {/* <div style={{ padding: "1.25rem" }}> </div> */}
             <div style={{padding:"0.8rem"}} />
             </div>
-            {/* <div style={{padding:'1rem'}}/> */}
 
             <div className={styles.subtitledescription} >
             <div className=" transition duration-300 group transform hover:scale-[1.07] cursor-pointer"> 

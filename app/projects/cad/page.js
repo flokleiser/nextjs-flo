@@ -30,7 +30,6 @@ function Model({modelPath}) {
   </>
   );
 
-  // return <primitive ref={prim} object={copiedScene} />;
 }
 
 const data2 = [
@@ -113,15 +112,6 @@ export default function cad() {
    z-[-1]"
       ></div>
 
-      {/* <div
-        className={styles.backbutton}
-        style={{ position: "fixed", zIndex: 9999 }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects">Back to Projects </Link>{" "}
-        </h1>
-      </div> */}
       <div style={{ paddingTop: "1rem" }} />
 
       <div className={styles.linkContainerCad}>
@@ -141,8 +131,6 @@ export default function cad() {
 
           <div className={styles.linkContainerCADModel}>
             <Canvas>
-              {/* <ambientLight intensity={0.5} /> */}
-              {/* <spotLight position={[0, 0, 0]} /> */}
               <directionalLight color="white" position={[2, 0, 5]} />
               <OrbitControls />
               <Model modelPath={modelPath}/>
@@ -161,7 +149,6 @@ export default function cad() {
 
 
         <div style={{ padding: "2rem" }} />
-        {/* <hr className={styles.pageDivider} /> */}
         <hr className={styles.pageDividerCad} />
         <div style={{ padding: "1rem" }} />
 
@@ -218,7 +205,6 @@ export default function cad() {
         </motion.div>
 
         <div style={{ padding: "1rem" }} />
-        {/* <hr className={styles.pageDivider} /> */}
         <hr className={styles.pageDividerCad} />
         <div style={{ padding: "1rem" }} />
 
@@ -246,7 +232,6 @@ export default function cad() {
         <div styles={{ padding: "2rem" }}> </div>
 
         <div className={styles.pageDividerCad} />
-        {/* <div className={styles.pageDividerDark} /> */}
         <div style={{ padding: "1rem" }} />
 
         <div className={styles.subtitledescription}>

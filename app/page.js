@@ -4,9 +4,6 @@ import styles from "/app/page.module.css";
 import {
   CiGrid32,
   CiImageOn,
-  CiFileOn,
-  CiViewList,
-  CiStickyNote,
 } from "react-icons/ci";
 import Link from "next/link";
 import Image from "next/image";
@@ -36,13 +33,6 @@ export default function Home() {
     }
   }, [isHoveringProjects]);
 
-  if (isHoveringPortfolio) {
-    console.log('portfolio')
-  }
-  if (isHoveringProjects) {
-    console.log('projects')
-  }
-
   const handleHoverProjects = () => {
     setIsHoveringProjects(!isHoveringProjects);
   };
@@ -54,15 +44,6 @@ export default function Home() {
   useEffect(() => {
     document.title = "Florian Kleiser - Home";
   }, []);
-
-  const text= "Florian Kleiser".split("");
-  const projectstext= "Projects".split("");
-  const portfoliotext= "Portfolio".split('');
-
-  const titleVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  }
 
   return (
     <main className={styles.main}>

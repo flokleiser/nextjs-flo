@@ -87,39 +87,17 @@ export default function skate() {
         </motion.div>
       )}
       </AnimatePresence>
-
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects/animations">Back to Animations </Link> </h1>
-            </div>*/}
-
             <div style={{paddingTop:'1rem'}} />
 
 <div className={styles.linkContainerAnimationsBackground} >
 <h1 className={styles.titleWithoutPadding}>
 
-            {/* <h1 className={styles.title}> */}
               Skate Animations
             </h1>
 
             <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-          {/* <div className={styles.subtitledescription}>
-            <p>
-              placeholder
-            </p>
-          </div> */}
-
-
-          {/* <video
-            src="https://drive.google.com/uc?id=10vV_TqscYwc4Oru_dqNVzKM385Bs8O1E" controls height={10}>
-            </video>
-
-            <video
-            src="https://drive.google.com/uc?id=1Qc3XrH6i341jI5vEosjXbxfbixdFFfD0" controls>
-            </video> */}
         <div className = {styles.subtitle}>
               <p2>
                 Skate Loop
@@ -133,11 +111,9 @@ export default function skate() {
             </div>
             <div style={{ padding: '1rem', scrollMargin:'50px' }} id="loop"> </div> 
 
-            {/* <div className={styles.linkContainer}> */}
             <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex">
-          {/* place-self-start */}
 
           <DimTooltip>
           <button
@@ -172,7 +148,6 @@ export default function skate() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/e0uNApQ7UCU?si=eEiQ0psd4jvcLBxI&rel=0"allowFullScreen> 
             </iframe>
             </div>
-            {/* <div style={{ padding: "1.25rem" }}> </div> */}
             <div style={{padding:"0.8rem"}} />
             </div>
 
@@ -194,11 +169,9 @@ export default function skate() {
             </div>
             <div style={{ padding: '1rem', scrollMargin:'50px'}} id="doodle"> </div> 
       
-            {/* <div className={styles.linkContainer}> */}
             <div className={styles.linkContainerAnimationsVideo}>
             <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ml-1 ">
-          {/* place-self-start */}
 
 <DimTooltip>
           <button
@@ -233,7 +206,6 @@ export default function skate() {
             <iframe className={styles.iframevideo} style={{ zIndex: 48, position:'relative'}}  src="https://www.youtube.com/embed/umJCwoddDB0?si=9Z5XUmaWOWmykIHc&rel=0"allowFullScreen>
             </iframe>
             </div>
-            {/* <div style={{ padding: "1.25rem" }}> </div> */}
             <div style={{padding:"0.8rem"}} />
             </div>
 

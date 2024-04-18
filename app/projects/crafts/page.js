@@ -59,20 +59,12 @@ export default function crafts() {
    before:lg:h-[360px] 
    z-[-1]">
           </div>
-
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects">Back to Projects </Link> </h1>
-            </div> */}
-
             <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerCrafts} style={{minHeight:'93vh'}} >
 
       <h1 className={styles.titleWithoutPadding}>
 
            
-            {/* <h1 className={styles.title}> */}
              Crafts
             </h1>
             <div className={styles.subtitledescription}>
@@ -93,7 +85,6 @@ export default function crafts() {
       <ImageGallery data={data2} /> 
 
               </div>
-              {/* <div style={{padding:'2rem'}}/> */}
               <div style={{ padding: "0.4rem" }}> </div>
 
         </main>

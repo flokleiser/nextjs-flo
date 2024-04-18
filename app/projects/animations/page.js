@@ -54,16 +54,6 @@ export default function animations() {
    z-[-1]"
       ></div>
 
-      {/* <div
-        className={styles.backbutton}
-        style={{ position: "fixed", zIndex: 9999 }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects">Back to Projects </Link>{" "}
-        </h1>
-      </div> */}
-
       <AnimatePresence>
       {isHovering&& (
         <motion.div
@@ -84,7 +74,6 @@ export default function animations() {
       <div style={{paddingTop:'1rem'}} />
 
       <div className={styles.linkContainerAnimationsBackground} style={{minHeight:'93vh'}}>
-      {/* <h1 className={styles.title} style={{zIndex:'100'}}>Animations</h1> */}
       <h1 className={styles.titleWithoutPadding} style={{zIndex:'100'}}>Animations</h1>
 
       <div className={styles.subtitledescription} style={{zIndex:'100'}}>
@@ -98,7 +87,6 @@ export default function animations() {
 
       <div style={{ padding: "1rem" }} />
       <hr className={styles.pageDivider} style={{zIndex:'100', 
-      // maxWidth:'1400px'
       }}/>
       <div style={{ padding: "1rem" }} />
 

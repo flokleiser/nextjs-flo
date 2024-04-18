@@ -87,26 +87,12 @@ export default function kontakt() {
         </motion.div>
       )}
       </AnimatePresence>
-         
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1>
-          {" "}
-          <Link href="/projects/animations">Back to Animations</Link>{" "}
-          </h1>
-            </div> */}
-
             <div style={{paddingTop:'1rem'}} />
 
 <div className={styles.linkContainerAnimationsBackground} >
 <h1 className={styles.titleWithoutPadding}>
               Kontakt
             </h1>
-
-            {/* <h1 className={styles.title}>
-              Kontakt
-            </h1> */}
 
             <div className={styles.subtitledescription}>
               <p>
@@ -115,16 +101,10 @@ export default function kontakt() {
             </div>
 
             <div style={{ padding: '1rem', scrollMargin:'50px' }} id="kontakt"> </div> 
-{/*           
-            <video
-            src="https://drive.google.com/uc?id=1i1w_fS3-Os0GrAVs-5XcMHmMXpVzvapQ" controls>
-            </video> */}
          
-         {/* <div className={styles.linkContainer}> */}
          <div className={styles.linkContainerAnimationsVideo}>
          <div style={{ padding: "0.125rem" }}> </div>
         <div className="flex ">
-          {/* place-self-start */}
 
 <DimTooltip>
           <button
@@ -160,7 +140,6 @@ export default function kontakt() {
             src="https://www.youtube.com/embed/VAPNv4HEvw8?si=0Acev4IzeaTSiAZ3&rel=0" allowFullScreen> 
             </iframe>
             </div>
-            {/* <div style={{ padding: "1.25rem" }}> </div> */}
             <div style={{padding:"0.8rem"}} />
          </div>
 
