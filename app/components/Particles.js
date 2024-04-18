@@ -170,7 +170,7 @@ function onMouseUp() {
       particles[i].render();
     }
     // return () => cancelAnimationFrame(frame.current)
-    return () => cancelAnimationFrame(render)
+    // return () => cancelAnimationFrame(render)
   };
   
   window.addEventListener("resize", initScene);
