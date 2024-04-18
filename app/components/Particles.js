@@ -1,12 +1,21 @@
 "use client";
 import styles from "app/page.module.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Assistant } from 'next/font/google';  
 
 const assistant = Assistant({ 
     subsets: ['latin'],
 
 });
+
+const useAnimationFrame = (animationHandler) => {
+  const frame = useRef(0);
+  const animate = () => {
+    animationHandler();
+    frame.current = requestAnimationFrame(animate)
+  }
+}
+
 
 export default function TitleParticles() {
 
@@ -44,67 +53,69 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
   var ww = canvas.width = window.innerWidth;
   var wh = canvas.height = window.innerHeight;
   
-  function Particle(x,y){
-    this.x = x
-    this.y = y 
-    this.dest = {
-      x : x,
-      y: y
-    };
+  class Particle {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.dest = {
+        x: x,
+        y: y
+      };
 
-    this.r = ww/600 
+      this.r = ww / 600;
 
-    this.vx = 0;
-    this.vy = 0;
+      this.vx = 0;
+      this.vy = 0;
 
-    this.accX = 0;
-    this.accY = 0;
-    this.friction = 0.7 
+      this.accX = 0;
+      this.accY = 0;
+      this.friction = 0.7;
 
-    this.color = color 
- }
- 
-  
-  Particle.prototype.render = function() {
-  
-  
-    this.accX = (this.dest.x - this.x)/100;
-    this.accY = (this.dest.y - this.y)/100;
-    this.vx += this.accX;
-    this.vy += this.accY;
-    this.vx *= this.friction;
-    this.vy *= this.friction;
-  
-    this.x += this.vx;
-    this.y +=  this.vy;
-  
-    ctx.fillStyle = this.color;
-    ctx.beginPath();
+      this.color = color;
+    }
+    render() {
 
-    ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
 
-    ctx.fill();
-  
-    var a = this.x - mouse.x;
-    var b = this.y - mouse.y;
-  
-    var distance = Math.sqrt( a*a + b*b );
+      this.accX = (this.dest.x - this.x) / 100;
+      this.accY = (this.dest.y - this.y) / 100;
+      this.vx += this.accX;
+      this.vy += this.accY;
+      this.vx *= this.friction;
+      this.vy *= this.friction;
 
-    if(distance<(radius*60)){
+      this.x += this.vx;
+      this.y += this.vy;
+
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+
+      ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+
+      ctx.fill();
+
+      var a = this.x - mouse.x;
+      var b = this.y - mouse.y;
+
+      var distance = Math.sqrt(a * a + b * b);
+
+      if (distance < (radius * 60)) {
         this.accX = (this.x - mouse.x);
         this.accY = (this.y - mouse.y);
 
         this.vx += this.accX;
         this.vy += this.accY;
-    }
-    if(distance>(radius*250)){
-        this.accX = (this.dest.x - this.x)/10;
-        this.accY = (this.dest.y - this.y)/10;
+      }
+      if (distance > (radius * 250)) {
+        this.accX = (this.dest.x - this.x) / 10;
+        this.accY = (this.dest.y - this.y) / 10;
         this.vx += this.accX;
         this.vy += this.accY;
-    }
+      }
 
+    }
   }
+ 
+  
   
   function onMouseMove(e){
     mouse.x = e.clientX;
@@ -131,7 +142,8 @@ textImage.src = "/images/homepage/Florian Kleiser.png"
     ctx.font = `${(ww / 10)}px ${assistant.style.fontFamily}`;
 
     ctx.textAlign = "center";
-    ctx.fillText(displayText, ww/2, wh/2.5);
+    // ctx.fillText(displayText, ww/2, wh/2.5);
+    ctx.fillText(displayText, ww/2, wh/3);
   
     var data  = ctx.getImageData(0, 0, ww, wh).data;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -158,12 +170,15 @@ function onMouseUp() {
     radius = 0.5;
 }
   
-  function render(a) {
-    requestAnimationFrame(render);
+  function render() {
+    // frame.current = requestAnimationFrame(render);
+    requestAnimationFrame(render)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (var i = 0; i < amount; i++) {
       particles[i].render();
     }
+    // return () => cancelAnimationFrame(frame.current)
+    return () => cancelAnimationFrame(render)
   };
   
   window.addEventListener("resize", initScene);
@@ -174,7 +189,7 @@ function onMouseUp() {
   window.addEventListener("touchend", onTouchEnd);
   initScene();
   requestAnimationFrame(render);
-  })
+  }, []);
 
   return (
         <canvas style={{

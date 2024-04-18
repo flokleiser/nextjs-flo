@@ -102,7 +102,7 @@ export default function Home() {
       ></div>
 
 
-{/* <AnimatePresence>
+<AnimatePresence>
 <motion.div style={{
       position:'absolute', 
       top:0,
@@ -118,10 +118,10 @@ export default function Home() {
   >
   <TitleParticles />
   </motion.div>
-</AnimatePresence> */}
+</AnimatePresence>
 
       <div className={styles.titleHomepage}
-      // style={{opacity:0}}
+      style={{opacity:0}}
       >
        Florian Kleiser 
         </div>
