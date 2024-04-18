@@ -11,9 +11,16 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { Assistant } from 'next/font/google';  
 import TitleParticles from "@/app/components/Particles";
 
+const assistant = Assistant({ 
+  subsets: ['latin'],
+
+});
+
 export default function Home() {
+
   const [isHoveringProjects, setIsHoveringProjects] = useState(false);
   const [isHoveringPortfolio, setIsHoveringPortfolio] = useState(false);
 
@@ -63,6 +70,7 @@ export default function Home() {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   }
+
 
   return (
     <main className={styles.main}>
