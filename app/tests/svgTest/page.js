@@ -207,16 +207,6 @@ z-[-1]"
         </motion.button>
    
 
-      <AnimatePresence>
-        {testOpen &&  (
-          <motion.div className={styles.backbuttonTest}
-          // style={{ position:"fixed", zIndex: 9999, display: "flex", flexDirection:"column"}} 
-          >
-        <Link className={styles.subtitledescription}href="/projects/tests/svgTest" > SVG </Link>
-        <Link href="/projects/tests/imageTest" > IMAGES </Link>
-      </motion.div>
-        )}
-      </AnimatePresence>
 
       <h1 className={styles.title}>Testing</h1>
 
