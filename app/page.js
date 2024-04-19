@@ -104,7 +104,8 @@ export default function Home() {
       <div className={styles.titleHomepage}
       style={{opacity:0}}
       >
-       Florian Kleiser 
+       {/* Florian Kleiser  */}
+       f
         </div>
 
 
@@ -115,6 +116,8 @@ export default function Home() {
               src="/images/homepage/portfolio homepage4.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority
             />
           </div>
         </div>
@@ -130,6 +133,8 @@ export default function Home() {
               src="/images/homepage/new2/1.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority 
             />
           </div>
           <div
@@ -140,6 +145,8 @@ export default function Home() {
               src="/images/homepage/new2/2.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority 
             />
           </div>
           <div
@@ -150,6 +157,8 @@ export default function Home() {
               src="/images/homepage/new2/3.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority 
             />
           </div>
           <div
@@ -160,6 +169,8 @@ export default function Home() {
               src="/images/homepage/new2/4.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority 
             />
           </div>
           <div
@@ -170,6 +181,8 @@ export default function Home() {
               src="/images/homepage/new2/5.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority 
             />
           </div>
           <div
@@ -180,6 +193,8 @@ export default function Home() {
               src="/images/homepage/new2/6.png"
               width={1100}
               height={1000}
+              style={{ width: '100%', height: 'auto' }}
+              priority 
             />
           </div>
         </div>
