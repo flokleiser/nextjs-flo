@@ -446,6 +446,8 @@ background-color: rgba(254,51,135,0.2);
 
   position:absolute;
   margin-top:11rem;
+  width:auto;
+  /* height:auto; */
   }
 
 .cardHomepageTest {

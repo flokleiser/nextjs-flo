@@ -13,14 +13,17 @@ const navItems = [
   {
     path: "/",
     name: "Home",
+    key:"home"
   },
   {
     path: "/links",
     name: "Links/Info",
+    key:"links"
   },
   {
     path: "/projects",
     name: "Projects",
+    key:"projects"
   },
 ];
 
@@ -28,42 +31,52 @@ const navSubItems = [
   {
     path: "/projects/sketches",
     name: "Sketches",
+    key:"sketches"
   },
   {
     path: "/projects/creative-coding",
     name: "Creative Coding",
+    key:"coding"
   },
   {
     path: "/projects/skylands",
     name: "Skylands",
+    key:"skylands"
   },
   {
     path: "/projects/cad",
     name: "CAD",
+    key:"cad"
   },
   {
     path: "/projects/springFlowers",
     name: "Flowers",
+    key:"flowers"
   },
   {
     path: "/projects/momentfulness",
     name: "Momentfulness",
+    key:"momentfulness"
   },
   {
     path: "/projects/animations",
     name: "Animations",
+    key:"animations"
   },
   {
     path: "/projects/illustrator",
     name: "Illustrator",
+    key:"illustrator"
   },
   {
     path: "/projects/voxel",
     name: "Voxel Art",
+    key:"voxel"
   },
   {
     path: "/projects/crafts",
     name: "Crafts",
+    key:"crafts"
   },
 ];
 
@@ -267,9 +280,9 @@ export default function Navbar() {
               <nav className="flex justify-start items-center w-full z-9990">
                 {navItems.map((item) => {
                   return (
-                    <motion.div whileTap={{ scale: 0.8 }}>
+                    <motion.div key={item.path} whileTap={{ scale: 0.8 }}>
                       <Link
-                        key={item.path}
+                        // key={item.path}
                         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in"
                         href={item.path}
                         onMouseOver={() => setHoveringPath(item.path)}
@@ -364,9 +377,8 @@ export default function Navbar() {
                     <nav className="flex flex-row justify-start w-full z-9998">
                         {navSubItems.map((subItem) => {
                       return (
-                        <motion.div whileTap={{ scale: 0.8 }}>
+                        <motion.div key={subItem.path} whileTap={{ scale: 0.8 }}>
                           <Link
-                            key={subItem.path}
                             className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9998 no-underline duration-300 ease-in z-9998" 
                             href={subItem.path}
                             onMouseOver={() => setHoveringPath(subItem.path)}
