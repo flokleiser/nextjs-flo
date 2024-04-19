@@ -95,7 +95,8 @@ export default function Home() {
     animate={{ opacity: isHoveringProjects? 0:1, 
       y: isHoveringPortfolio ? -50:0
     }}
-    transition={{duration: 0.25, 
+    // transition={{duration: 0.25, 
+    transition={{duration: 0.3, 
     }}
   >
   <TitleParticles />
