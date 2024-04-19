@@ -22,8 +22,6 @@ mouse = {x:0,y:0},
 radius = 0.5;
 
 
-var textImage= new Image();
-textImage.src = "/images/homepage/Florian Kleiser.png"
         
   var colors= ["#6b106a",
   "#670e6b",
