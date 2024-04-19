@@ -221,7 +221,6 @@ z-[-1]"
       <div style={{ padding: "1rem" }} />
 
       <div className="flex-row" style={{ display: "flex" }}>
-        {/* V1 --> original from navbar */}
 
         <Tooltip
     content="test"

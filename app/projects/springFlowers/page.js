@@ -6,7 +6,6 @@ import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-// import ImageGallery from "@/app/components/ImageGallery";
 import dynamic from "next/dynamic";
 
 const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
@@ -105,15 +104,6 @@ export default function flowers() {
    z-[-1]"
       ></div>
 
-      {/* <div
-        className={styles.backbutton}
-        style={{ position: "fixed", zIndex: 9999 }}
-      >
-        <h1>
-          {" "}
-          <Link href="/projects">Back to Projects </Link>{" "}
-        </h1>
-      </div> */}
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerFlowers}>

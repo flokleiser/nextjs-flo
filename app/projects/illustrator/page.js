@@ -38,7 +38,6 @@ export default function illustrator() {
     document.body.style.overflow = 'auto';
   };
 
-  /* make image big */
   const handleImageClick = (imageSrc) => {
     const dataArray = [...data2, ...data3];
     const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
@@ -73,7 +72,6 @@ export default function illustrator() {
 
 
 
-/* handleoutsideclick*/
 useEffect(() => {
   const handleOutsideClick = (event) => {
     const imageElement = document.querySelector("#overlay img");
@@ -109,7 +107,6 @@ useEffect(() => {
   };
 }, []);
 
-/* handlekeydown*/
 useEffect(() => {
   const handleKeyDown = (event) => {
   if (event.key === 'Escape') {
@@ -168,23 +165,12 @@ return () => {
    z-[-1]">
           </div>
 
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects">All Projects </Link> </h1>
-            </div> */}
-           
-          {/* <div className={styles.backbutton}>
-            <h1> <Link href="/projects"> Back to Projects </Link> </h1>
-            </div> */}
 
 <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerIllustrator} >
 
-      {/* <h1 className={styles.titleWithoutPadding}> */}
       <h1 className={styles.titleWithoutPaddingDark} >
 
-            {/* <h1 className={styles.title}> */}
              Illustrator Artworks
             </h1>
 
@@ -202,8 +188,6 @@ return () => {
       <hr className={styles.pageDividerDark} />
       <div style={{ padding: "0.5rem" }} />
             
-            {/* <div className={styles.linkContainer}>
-        <div style={{ padding: "1rem" }}> </div> */}
 
             <div className={styles.subtitle} 
             style={{color:'rgb(55,55,55)'}}
@@ -217,7 +201,6 @@ return () => {
             style={{color:'rgb(55,55,55)'}}
             >
             <p>
-            {/* A project inspired by Ikea instructions, with a twist.            */}
             A series of "Ikea"-like instruction manuals, with a twist.
             </p>
             </div>
@@ -255,7 +238,6 @@ return () => {
           >
             <PiXCircle style={{ fontSize: '2rem' }} />
           </button>
-            {/* prev and next buttons */}
             <div className='absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="leftButton"
@@ -266,7 +248,6 @@ return () => {
               <IoIosArrowBack style={{ fontSize: '2rem' }}/>
             </button>
             </div>
-            {/* <div className="absolute right-5"> */}
             <div className= 'absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded'>
             <button
               id="rightButton"
@@ -306,15 +287,12 @@ return () => {
                   </div>
                 </div>
               </div>
-              {/* </div> */}
 
 
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDividerDark} />
       <div style={{ padding: "0.5rem" }} />
               
-            {/* <div className={styles.linkContainer}>
-            <div style={{ padding: "1rem" }}> </div> */}
 
             <div className={styles.subtitle} 
             style={{color:'rgb(55,55,55)'}}
@@ -357,7 +335,6 @@ return () => {
                   </div>
                 </div>
               </div>
-           {/* </div>  */}
            
            </div>
            <div style={{padding:'2rem'}}/>

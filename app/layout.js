@@ -39,7 +39,6 @@ export default function RootLayout({ children }) {
       <body className={assistant.className}>
         <Navbar />
 
-      {/* <Suspense fallback={<div>Loading...</div>}> */}
       <AnimatePresence mode="wait">
         <motion.div
         key={pathname}
@@ -58,7 +57,6 @@ export default function RootLayout({ children }) {
 
         </motion.div>
       </AnimatePresence>
-      {/* </Suspense> */}
 
       </body>
     </html>

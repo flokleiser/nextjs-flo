@@ -50,11 +50,6 @@ export default function momentfulness() {
    z-[-1]">
           </div>
 
-          {/* <div className={styles.backbutton}
-           style={{position:'fixed', zIndex:9999}}
-           >
-            <h1> <Link href="/projects">Back to Projects </Link> </h1>
-            </div> */}
 
             <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerMomentfulness}>
@@ -83,13 +78,10 @@ export default function momentfulness() {
       </div>
 
 
-      {/* </div> */}
             
 
-       {/* <div style={{ padding: "0.25rem" }} /> */}
        <div style={{ padding: "1rem" }} />
        </div>
-       {/* <div style={{ padding: "0.5rem" }} /> */}
        <div style={{ padding: "2rem" }} />
 
 
