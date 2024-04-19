@@ -5,7 +5,8 @@ ___
 - [x] RequestAnimationFrames bad --> fixed by empty array after useEffect hook.
 - [x] If really bored --> delete all comments from the code
 
-- [ ] Compress more images
+- [x] Compress more images
+
 
 ## Loading times:
 - [ ] Look into lazy loading
