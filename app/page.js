@@ -118,6 +118,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority
+              alt="Portfolio"
             />
           </div>
         </div>
@@ -135,6 +136,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority 
+              alt="Projects"
             />
           </div>
           <div
@@ -147,6 +149,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority 
+              alt="Projects"
             />
           </div>
           <div
@@ -159,6 +162,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority 
+              alt="Projects"
             />
           </div>
           <div
@@ -171,6 +175,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority 
+              alt="Projects"
             />
           </div>
           <div
@@ -183,6 +188,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority 
+              alt="Projects"
             />
           </div>
           <div
@@ -195,6 +201,7 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               priority 
+              alt="Projects"
             />
           </div>
         </div>
