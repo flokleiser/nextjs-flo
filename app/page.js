@@ -90,13 +90,14 @@ export default function Home() {
       left:0,
     }}
     
-    initial={{ opacity:1, y:0
+    initial={{ opacity:1, y:0,
     }}
     animate={{ opacity: isHoveringProjects? 0:1, 
-      y: isHoveringPortfolio ? -50:0
+      // y: isHoveringPortfolio ? -50:0
+      y: isHoveringPortfolio ? -75:0,
     }}
-    // transition={{duration: 0.25, 
-    transition={{duration: 0.3, 
+    transition={{duration: 0.5, 
+      type:"spring"
     }}
   >
   <TitleParticles />
@@ -115,7 +116,6 @@ export default function Home() {
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
           <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
             <Image
-              // src="/images/homepage/portfolio homepage4.png"
               src="/images/homepage/portfolio homepage2.png"
               width={1100}
               height={1000}
@@ -225,7 +225,9 @@ export default function Home() {
         <div className={styles.subtitleHomepage}>
            <motion.span
            initial={{ opacity: isHoveringPortfolio ? 1:1 }}
-           animate={{ opacity: isHoveringPortfolio ? 0:1 }} >
+           animate={{ opacity: isHoveringPortfolio ? 0:1 }} 
+           transition={{duration: 0.3}} 
+           >
             <div className="flex items-center">
             <CiGrid32 /> Projects
             </div>
@@ -249,6 +251,7 @@ export default function Home() {
           <motion.span 
           initial={{ opacity: isHoveringProjects ? 1:1 }}
           animate={{ opacity: isHoveringProjects ? 0:1 }}
+          transition={{duration: 0.5}} 
           >
             <div className="flex items-center">
             <CiImageOn /> Portfolio
