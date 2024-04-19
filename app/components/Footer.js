@@ -1,18 +1,29 @@
-"use client"
+"use client";
 import styles from "app/page.module.css";
 
 export default function Footer() {
+  return (
+    <footer className={styles.footerContainer}>
 
+<div className="flex justify-center flex-row">
+         
+         <h1> 
+           floriankleiser@gmail.com 
+           
+        </h1>
 
-    return(
-        <footer className={styles.footerContainer} />
-                                          
-    )
+        <h1> 
+           github.com/flokleiser
+           
+        </h1>
+      </div>
+
+    </footer>
+  );
 }
 
-
-
-{/* <footer class="relative flex flex-col items-center overflow-hidden bg-gray-50 dark:bg-gray-900 py-20 md:py-40">
+{
+  /* <footer class="relative flex flex-col items-center overflow-hidden bg-gray-50 dark:bg-gray-900 py-20 md:py-40">
 <div class="container relative z-[1] m-auto px-6 md:px-12">
   <div class="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
     <div class="flex flex-wrap items-center justify-between md:flex-nowrap">
@@ -173,4 +184,5 @@ export default function Footer() {
     </div>
   </div>
 </div>
-</footer> */}
+</footer> */
+}
