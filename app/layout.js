@@ -2,6 +2,7 @@
 import './globals.css';
 import { Assistant } from 'next/font/google';  
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import { Suspense, useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
@@ -58,6 +59,7 @@ export default function RootLayout({ children }) {
         </motion.div>
       </AnimatePresence>
 
+      <Footer />
       </body>
     </html>
   )

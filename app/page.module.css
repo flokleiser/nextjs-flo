@@ -5,6 +5,7 @@
   align-items: center;
 }
 
+
 .navbarContainer {
   display: flex; 
   position: fixed; 
@@ -42,7 +43,7 @@
 
 .footerContainer{
   display: flex; 
-  position: fixed; 
+  /* position: fixed;  */
   background-color: rgb(28 25 23 / 0.8); 
   border-color: rgb(28 25 23 / 0.8);
   margin-bottom: 0.25rem; 
@@ -51,6 +52,9 @@
   padding: 0.3rem;
   width:100vw;
   z-index: 9998;
+  bottom:0;
+  position: sticky;
+  top: 100vh;
 }
 
 
