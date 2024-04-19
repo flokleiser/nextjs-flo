@@ -90,9 +90,10 @@ export default function Home() {
       left:0,
     }}
     
-    initial={{ opacity:1, 
+    initial={{ opacity:1, y:0
     }}
     animate={{ opacity: isHoveringProjects? 0:1, 
+      y: isHoveringPortfolio ? -50:0
     }}
     transition={{duration: 0.25, 
     }}
@@ -113,7 +114,8 @@ export default function Home() {
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
           <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
             <Image
-              src="/images/homepage/portfolio homepage4.png"
+              // src="/images/homepage/portfolio homepage4.png"
+              src="/images/homepage/portfolio homepage2.png"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
