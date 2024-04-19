@@ -1,6 +1,9 @@
 # To-Do/Ideas List:
 ___
 
+## Footer
+- [ ] Make a website footer
+
 ## Page performance:
 - [x] RequestAnimationFrames bad --> fixed by empty array after useEffect hook.
 - [x] If really bored --> delete all comments from the code
