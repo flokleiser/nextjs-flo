@@ -22,9 +22,13 @@ export default function Footer() {
   <motion.footer className={styles.footerContainer}
   onMouseEnter={() => handleHoverFooter()}
   onMouseLeave={() => setIsHoveringFooter(false)} 
-  initial={{ height: '2.5rem'}}
-  animate={{ height: isHoveringFooter? '4.5rem':'2.5rem'}} 
-  transition={{duration: 0.3}} 
+  // initial={{ height: '2.5rem'}}
+  // animate={{ height: isHoveringFooter? '4.5rem':'2.5rem'}} 
+//   initial={{ paddingTop: '2.5rem',overflow: 'hidden',
+//   transform: 'translateY(0%)',
+// }}
+//   animate={{ transform: isHoveringFooter? 'translateY(-100%)':'translateY(0%)'}} 
+//   transition={{duration: 0.3}} 
   >
 
 
