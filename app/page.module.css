@@ -49,8 +49,8 @@
   top: 100vh;
   /* top: 97vh; */
   padding-top:2rem;
-  background-color: rgb(28 25 23 / 0.8); 
-  border-color: rgb(28 25 23 / 0.8);
+  /* background-color: rgb(28 25 23 / 0.8);  */
+  /* border-color: rgb(28 25 23 / 0.8); */
   /* margin-bottom: 0.25rem;  */
   width: 100%; 
   backdrop-filter: blur(12px); 
