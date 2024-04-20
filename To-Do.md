@@ -1,6 +1,11 @@
 # To-Do/Ideas List:
 ___
 
+## GENERAL NAVBAR & FOOTER STYLING:
+- [ ] either completely flat OR
+- [ ] **Wavy style, animated**
+
+
 ## Footer
 - [ ] Make a website footer
 
