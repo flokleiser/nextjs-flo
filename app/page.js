@@ -210,6 +210,7 @@ export default function Home() {
         </div>
       </AnimatePresence>
 
+      {/* <div style={{ margin: "4rem" }}> </div> */}
       <div style={{ margin: "5rem" }}> </div>
 
       <div
@@ -296,7 +297,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <div style={{ margin: "3.5rem" }}> </div>
+      {/* <div style={{ margin: "3.5rem" }}> </div> */}
     </main>
   );
 }

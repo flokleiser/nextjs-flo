@@ -7,6 +7,7 @@ ___
 - [ ] Fix footer scaling problems:
     - [ ] stop it from scaling the height
     - [ ] put the actual footer behind the text
+    - [ ] Footer animation from below when hovering
 
 
 
