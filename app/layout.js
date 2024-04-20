@@ -59,7 +59,7 @@ export default function RootLayout({ children }) {
         </motion.div>
       </AnimatePresence>
 
-      {/* <Footer /> */}
+      <Footer />
       </body>
     </html>
   )
