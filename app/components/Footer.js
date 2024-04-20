@@ -29,8 +29,8 @@ export default function Footer() {
 
 
 <div style={{ 
-  // position:'absolute',
-  position:'fixed',
+  position:'absolute',
+  // position:'fixed',
   display:'flex',
   right:0,
   bottom:'0.5rem'
@@ -68,7 +68,8 @@ export default function Footer() {
         </h1> */}
 
 <div style={{ 
-  position:'fixed',
+  // position:'fixed',
+  position:'absolute',
   display:'flex',
   left:0,
   bottom:'0.5rem'
