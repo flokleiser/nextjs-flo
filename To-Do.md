@@ -5,16 +5,8 @@ ___
 - [ ] Make a website footer
 
 ## Page performance:
-- [x] RequestAnimationFrames bad --> fixed by empty array after useEffect hook.
-- [x] If really bored --> delete all comments from the code
+- [ ] Look into why page transitions are lagging
 
-- [x] Compress more images
-
-
-## Loading times:
-- [ ] Look into lazy loading
-- [x] Look into dynamic imports
-- [ ] Look into what pages are slow to load
 
 ___
 ## Fun:
@@ -23,9 +15,6 @@ ___
     - [x] Change particle size
     - [x] Change particle shape
     - [x] Try on title page
-
-    - [ ] Uniformly scale on hoverportfolio
-
 
 ### Testing page
 - [x] Autofocus on password bar
