@@ -209,6 +209,21 @@ export default function Navbar() {
   return (
     <div className={styles.navbarContainer}>
 
+{/* <svg xmlns="http://www.w3.org/2000/svg" 
+        style={{position:'absolute',
+        width:'101vw',
+        zIndex:-1,
+        left:0,
+        top:'1.5rem'
+      }}
+      viewBox="0 0 379.8 20.32"
+        >
+        <path
+          style={{fill:'rgb(28 25 23 / 0.5)'}}
+         d="m.5,15.36c0-4.95.01-9.9.03-14.86h378.62c0,6.44.03,12.87.14,19.31-35.31-.82-65.34-7.15-101.48-6.39-26.98.56-53.04,3.58-80.33,3.3-21.46-.21-48.27-3.02-61.42-4.83-13.16-1.81-28.58-3.05-34.04-3.15-5.48-.11-9.85-.12-10.61-.12-1.57-.02-3.14-.02-4.71,0-.15,0-.29,0-.44,0-2,.02-4,.06-6,.13-.96.03-1.92.06-2.87.11-2.95.12-5.9.29-8.81.5h-.2c-.1.02-.2.02-.29.03-.39.03-.79.06-1.18.09-.61.05-1.21.1-1.81.15C43.59,11.39,23.27,14.83.5,15.36Z"
+        ></path>
+      </svg>  */}
+
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
             onClick={toggleNavbarVisibility} variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">

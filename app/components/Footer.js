@@ -17,19 +17,33 @@ export default function Footer() {
 
   return (
 
+
+    
+
 <AnimatePresence>
 
-  <motion.footer className={styles.footerContainer}
+ <motion.div className={styles.footerContainer}
   onMouseEnter={() => handleHoverFooter()}
   onMouseLeave={() => setIsHoveringFooter(false)} 
-  // initial={{ height: '2.5rem'}}
-  // animate={{ height: isHoveringFooter? '4.5rem':'2.5rem'}} 
-//   initial={{ paddingTop: '2.5rem',overflow: 'hidden',
-//   transform: 'translateY(0%)',
-// }}
-//   animate={{ transform: isHoveringFooter? 'translateY(-100%)':'translateY(0%)'}} 
-//   transition={{duration: 0.3}} 
+// initial={{ height: '2.5rem'}}
+// animate={{ height: isHoveringFooter? '4.5rem':'2.5rem'}} 
+// transition={{duration: 0.3}} 
   >
+
+
+{/* <svg xmlns="http://www.w3.org/2000/svg" 
+        style={{position:'absolute',
+        bottom:0,
+        width:'100vw',
+        zIndex:-1
+      }}
+      viewBox="0 0 379.8 20.32"
+        >
+        <path
+          style={{fill:'rgb(28 25 23 / 0.5)'}}
+          d="m379.3,4.96c0,4.95-.01,9.9-.03,14.86H.65c0-6.44-.03-12.87-.14-19.31,35.31.82,65.34,7.15,101.48,6.39,26.98-.56,53.04-3.58,80.33-3.3,21.46.21,48.27,3.02,61.42,4.83,13.16,1.81,28.58,3.05,34.04,3.15,5.48.11,9.85.12,10.61.12,1.57.02,3.14.02,4.71,0,.15,0,.29,0,.44,0,2-.02,4-.06,6-.13.96-.03,1.92-.06,2.87-.11,2.95-.12,5.9-.29,8.81-.5h.2c.1-.02.2-.02.29-.03.39-.03.79-.06,1.18-.09.61-.05,1.21-.1,1.81-.15,21.51-1.78,41.83-5.22,64.6-5.74Z"
+        ></path>
+      </svg>  */}
 
 
 <div style={{ 
@@ -39,6 +53,8 @@ export default function Footer() {
   right:0,
   bottom:'0.5rem'
 }}>
+
+
   <Link href="https://github.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingTop:'0.7rem'}}> 
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -51,6 +67,7 @@ export default function Footer() {
         />
     </svg>
     </Link>
+
 
   <Link href="https://instagram.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingTop:'0.7rem'}}>
     <svg
@@ -86,7 +103,8 @@ export default function Footer() {
         </Link>
         </div>
 
-    </motion.footer>
+    {/* </motion.footer> */}
+    </motion.div>
     </AnimatePresence>
   );
 }
