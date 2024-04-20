@@ -27,10 +27,13 @@ export default function Footer() {
   transition={{duration: 0.3}} 
   >
 
+
 <div style={{ 
-  position:'absolute',
+  // position:'absolute',
+  position:'fixed',
   display:'flex',
-  right:0
+  right:0,
+  bottom:'0.5rem'
 }}>
   <Link href="https://github.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingTop:'0.7rem'}}> 
     <svg
@@ -64,12 +67,19 @@ export default function Footer() {
           floriankleiser@gmail.com
         </h1> */}
 
+<div style={{ 
+  position:'fixed',
+  display:'flex',
+  left:0,
+  bottom:'0.5rem'
+}}>
         <Link href="mailto:floriankleiser@gmail.com">
         <h1 style={{paddingLeft:'1rem', paddingTop:'0.6rem'}}> 
           {/* Footer coming soon™️ */}
           floriankleiser@gmail.com
         </h1>
         </Link>
+        </div>
 
     </motion.footer>
     </AnimatePresence>
