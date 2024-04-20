@@ -6,7 +6,8 @@ export default function Footer() {
     <footer className={styles.footerContainer}>
 
       <svg xmlns="http://www.w3.org/2000/svg" 
-        style={{position:'absolute',bottom:0,width:'100vw'
+        style={{position:'absolute',bottom:0,width:'100vw',
+        zIndex:-1
         // marginBottom:'-5rem'
       }}
       viewBox="0 0 1346 110" 
