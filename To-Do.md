@@ -7,6 +7,8 @@ ___
 ## Page performance:
 - [ ] Look into why page transitions are lagging
 
+## 404 Page
+- [ ] Add particles to 404 page
 
 ___
 ## Fun:

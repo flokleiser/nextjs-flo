@@ -57,7 +57,7 @@ z-[-1]"
         <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link href="/tests/galleryTest">ImageGallery</Link>
+              <Link href="/tests/footerTest">Footer</Link>
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ z-[-1]"
         <div className={styles.buttonLinksPage}>
           <div className={styles.subtitledescription}>
             <p>
-              <Link href="/tests/canvasTest">3D</Link>
+              <Link href="/tests/canvasTest">Canvas</Link>
             </p>
           </div>
         </div>
