@@ -1,13 +1,9 @@
 # To-Do/Ideas List:
 ___
 
-## GENERAL NAVBAR & FOOTER STYLING:
-- [ ] either completely flat OR
-- [ ] **Wavy style, animated**
-
-
 ## Footer
-- [ ] Make a website footer
+- [x] Make a website footer
+- [ ] Footer animation onhover
 
 - [ ] Fix footer scaling problems:
     - [ ] stop it from scaling the height
@@ -15,6 +11,8 @@ ___
     - [ ] Footer animation from below when hovering
 
 
+## Navbar
+- [ ] Figure out clipPath for backdrop-filter:blur
 
 ## Page performance:
 - [ ] Look into why page transitions are lagging
