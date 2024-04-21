@@ -211,7 +211,8 @@ export default function Home() {
       </AnimatePresence>
 
       {/* <div style={{ margin: "4rem" }}> </div> */}
-      <div style={{ margin: "5rem" }}> </div>
+      <div style={{ margin: "5rem"}}> </div>
+      {/* <div style={{ margin: "6rem"}}> </div> */}
 
       <div
         className={styles.buttonGeneralHomepageProjects}
