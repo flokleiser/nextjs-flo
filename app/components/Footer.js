@@ -12,7 +12,7 @@ export default function Footer() {
 
   const handleHoverFooter= () => {
     setIsHoveringFooter(!isHoveringFooter);
-    console.log('hovering footer');
+    // console.log('hovering footer');
   };
 
   return (
