@@ -1,15 +1,13 @@
 # To-Do/Ideas List:
 ___
 
-
 ## Page performance:
 
 - [ ] Add analytics page:
 https://developer.chrome.com/docs/crux/guides/looker-studio-dashboard
 https://vercel.com/analytics
 
-- [ ] Look into why page transitions are laggin
-
+- [ ] Look into why page transitions are lagging
 
 ## Footer + Navbar
 - [ ] Fix not properly scaling 100vw
@@ -23,7 +21,6 @@ https://vercel.com/analytics
     - [x] Footer animation from below when hovering
 
 - [ ] Figure out clipPath for backdrop-filter:blur
-
 
 ## 404 Page
 - [ ] Add particles to 404 page
