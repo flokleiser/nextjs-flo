@@ -24,14 +24,15 @@ export default function Footer() {
 
  <motion.div className={styles.footerContainer}
 
-      initial={{ backgroundColor: 'rgb(28 25 23 / 0.8)'}}
-       animate={{ backgroundColor: isHoveringFooter? 'rgb(28 25 23 / 1)':'rgb(28 25 23 / 0.8)'}} 
-       transition={{duration: 0.3}} 
+
+//       initial={{ backgroundColor: 'rgb(28 25 23 / 0.8)'}}
+//        animate={{ backgroundColor: isHoveringFooter? 'rgb(28 25 23 / 1)':'rgb(28 25 23 / 0.8)'}} 
+//        transition={{duration: 0.3}} 
 
  
 
-onMouseEnter={() => handleHoverFooter()}
-onMouseLeave={() => setIsHoveringFooter(false)} 
+// onMouseEnter={() => handleHoverFooter()}
+// onMouseLeave={() => setIsHoveringFooter(false)} 
 
       //  initial={{ height: '4rem'}}
       //  animate={{ height: isHoveringFooter? '5.5rem':'4rem'}} 
@@ -69,7 +70,7 @@ onMouseLeave={() => setIsHoveringFooter(false)}
 
 
 
-  <motion.svg xmlns="http://www.w3.org/2000/svg" 
+  {/* <motion.svg xmlns="http://www.w3.org/2000/svg" 
 
         style={{
         position:'absolute',
@@ -84,12 +85,10 @@ onMouseLeave={() => setIsHoveringFooter(false)}
 
       initial={{ 
         opacity:0,
-        // y:0
         height:'0rem'
       }}
       animate={{ 
         opacity: isHoveringFooter? 1:0, 
-        // y: isHoveringFooter? -10 : 0
         height:isHoveringFooter? '6.5rem': '0rem'
       }}
       exit={{
@@ -102,7 +101,7 @@ onMouseLeave={() => setIsHoveringFooter(false)}
           style={{fill:'rgb(28 25 23)'}}
           d="m379.3,4.96c0,4.95-.01,9.9-.03,14.86H.65c0-6.44-.03-12.87-.14-19.31,35.31.82,65.34,7.15,101.48,6.39,26.98-.56,53.04-3.58,80.33-3.3,21.46.21,48.27,3.02,61.42,4.83,13.16,1.81,28.58,3.05,34.04,3.15,5.48.11,9.85.12,10.61.12,1.57.02,3.14.02,4.71,0,.15,0,.29,0,.44,0,2-.02,4-.06,6-.13.96-.03,1.92-.06,2.87-.11,2.95-.12,5.9-.29,8.81-.5h.2c.1-.02.2-.02.29-.03.39-.03.79-.06,1.18-.09.61-.05,1.21-.1,1.81-.15,21.51-1.78,41.83-5.22,64.6-5.74Z"
         ></path>
-      </motion.svg> 
+      </motion.svg>  */}
 
 
 <div style={{ 
