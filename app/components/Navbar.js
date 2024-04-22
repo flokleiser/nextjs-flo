@@ -216,14 +216,14 @@ export default function Navbar() {
   return (
     <div className={styles.navbarContainer}
     
-       onMouseEnter={() => handleHoverNavbar()}
-       onMouseLeave={() => setIsHoveringNavbar(false)} 
+      //  onMouseEnter={() => handleHoverNavbar()}
+      //  onMouseLeave={() => setIsHoveringNavbar(false)} 
     
     >
 
 
 {/* WAVY SVG */}
-<motion.svg xmlns="http://www.w3.org/2000/svg" 
+{/* <motion.svg xmlns="http://www.w3.org/2000/svg" 
        initial={{ opacity:0,height:'4rem'}}
        animate={{ opacity: isHoveringNavbar? 1:0, 
         height: isHoveringNavbar? '8.5rem' : '4rem'}}
@@ -244,7 +244,7 @@ export default function Navbar() {
           style={{fill:'rgb(28 25 23)'}}
           d="m.5,12.63c0-3.39.01-8.74.03-12.13h378.62c0,4.41.03,8.82.14,13.23-35.31-.56-65.34-4.9-101.48-4.38-26.98.39-56.56,2.93-83.84,3.54-22.91.51-44.65-.38-57.8-1.62-13.16-1.24-28.58-2.09-34.04-2.16-5.48-.07-9.85-.08-10.61-.08-1.57-.01-3.14-.01-4.71,0-.15,0-.29,0-.44,0-2,.01-4,.04-6,.09-.96.02-1.92.04-2.87.07-2.95.08-5.9.2-8.81.34h-.2c-.1.01-.2.02-.29.02-.39.02-.79.04-1.18.06-.61.03-1.21.07-1.81.1-21.51,1.22-41.94,2.56-64.71,2.92Z"
         ></path>
-      </motion.svg> 
+      </motion.svg>  */}
 
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
