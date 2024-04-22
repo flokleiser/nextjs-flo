@@ -229,12 +229,15 @@ export default function Navbar() {
         height: isHoveringNavbar? '8.5rem' : '4rem'}}
        transition={{duration: 0.2}} 
 
-        style={{position:'absolute',
-        width:'101vw',
-        zIndex:-1,
-        left:0,
-        top:-3.5,
-        height:'6.8rem',
+        style={{
+          position:'absolute',
+          width:'101vw',
+          // width:'105%',
+          zIndex:-1,
+          // left:-1,
+          left: '-1rem',
+          top:-3.5,
+          height:'6.8rem',
       }}
       viewBox="0 0 379.8 20.32"
       preserveAspectRatio="none"
