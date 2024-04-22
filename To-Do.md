@@ -1,18 +1,21 @@
 # To-Do/Ideas List:
 ___
 
-## Footer
+
+## Footer + Navbar
+
+- [ ] Fix not properly scaling 100vw
+
 - [x] Make a website footer
 - [ ] Footer animation onhover
 
-- [ ] Fix footer scaling problems:
-    - [ ] stop it from scaling the height
-    - [ ] put the actual footer behind the text
-    - [ ] Footer animation from below when hovering
+- [x] Fix footer scaling problems:
+    - [x] stop it from scaling the height
+    - [x] put the actual footer behind the text
+    - [x] Footer animation from below when hovering
 
-
-## Navbar
 - [ ] Figure out clipPath for backdrop-filter:blur
+
 
 ## Page performance:
 - [ ] Look into why page transitions are lagging

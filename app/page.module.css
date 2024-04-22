@@ -9,7 +9,7 @@
 .navbarContainer {
   display: flex; 
   position: fixed; 
-  /* background-color: rgb(28 25 23 / 0.8);  */
+  background-color: rgb(28 25 23 / 0.8); 
   border-color: rgb(28 25 23 / 0.8);
   margin-bottom: 0.25rem; 
   width: 100%; 
@@ -48,7 +48,7 @@
   /* position:fixed; */
   bottom:0;
   top: 100vh;
-  /* background-color: rgb(28 25 23 / 0.8);  */
+  background-color: rgb(28 25 23 / 0.8); 
   width:100vw;
   z-index: 9998;
   /* height:3rem; */
