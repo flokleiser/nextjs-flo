@@ -200,7 +200,22 @@ whileHover="end"
           floriankleiser@gmail.com
         </h1>
         </Link>
-        </div>
+</div>
+
+<div style={{ 
+  position:'absolute',
+  left:500,
+  bottom:'0.5rem'
+}}>
+  <h1 style={{opacity:0,paddingTop:'0.6rem', 
+  // paddingLeft:'50vw',
+  // justifyContent:'center'
+  // paddingRight:'50vw'
+  }}>
+  ©️ Florian Kleiser
+  </h1>
+
+</div>
 
     {/* </motion.footer> */}
     </motion.div>
