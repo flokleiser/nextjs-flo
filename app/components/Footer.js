@@ -154,7 +154,7 @@ whileHover="end"
 
 
 
-  <Link href="https://github.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingBottom:'0.2rem'}}> 
+  <Link href="https://github.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingBottom:'0.2rem', opacity:0.5}}> 
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -168,7 +168,7 @@ whileHover="end"
     </Link>
 
 
-  <Link href="https://instagram.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingBottom:'0.2rem'}}>
+  <Link href="https://instagram.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingBottom:'0.2rem', opacity:0.5}}>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -195,7 +195,7 @@ whileHover="end"
   bottom:'0.5rem'
 }}>
         <Link href="mailto:floriankleiser@gmail.com">
-        <h1 style={{paddingLeft:'1rem', paddingTop:'0.6rem'}}> 
+        <h1 style={{paddingLeft:'1rem', paddingTop:'0.6rem', opacity:0.5}}> 
           {/* Footer coming soon™️ */}
           floriankleiser@gmail.com
         </h1>
