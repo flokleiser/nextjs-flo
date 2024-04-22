@@ -52,12 +52,12 @@ onMouseLeave={() => setIsHoveringFooter(false)}
 <motion.h1 style={{
   position:'absolute', 
   bottom:'2.5rem',
-  paddingLeft:'1rem'
+  paddingLeft:'1rem',
   }}
   initial={{ opacity:0, 
     y:100}}
   animate={{ 
-    opacity: isHoveringFooter? 1:0,
+    opacity: isHoveringFooter? 0.5:0,
     y: isHoveringFooter? -5:0
   }} 
   transition={{duration: 0.2}}  
