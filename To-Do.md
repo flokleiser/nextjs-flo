@@ -1,6 +1,13 @@
 # To-Do/Ideas List:
 ___
 
+## Page performance:
+
+- [ ] Add analytics page:
+https://developer.chrome.com/docs/crux/guides/looker-studio-dashboard
+https://vercel.com/analytics
+
+- [ ] Look into why page transitions are lagging
 
 ## Footer + Navbar
 - [ ] Fix not properly scaling 100vw
