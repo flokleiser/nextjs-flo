@@ -1,13 +1,13 @@
 export default [
-  { previewImage: '/images/pagePreviews/new/homepageTest2.png', path: '/', title: 'Homepage', content: 'Homepage', category: 'Overview', keywords: ['homepage','start'] },
+  { previewImage: '/images/pagePreviews/new/homepageTest2.png', path: '/', title: 'Homepage', content: 'Homepage', category: 'Overview', keywords: ['homepage','start','home'] },
   
   { previewImage: '/images/pagePreviews/new/linksTest2.png', path: '/links', title: 'Links & Info', content: 'Portfolio, CV, Links & Info', category: 'Overview', keywords: ['links','info', 'CV','pdf','google drive','github'] },
-  { previewImage: '/images/pagePreviews/new/portfolioTest2.png', path: '/portfolio', title: 'Portfolio', content: 'PDF Portfolio 2024', category: 'PDF', keywords: ['portfolio','pdf']},
+  { previewImage: '/images/pagePreviews/new/portfolioTest2.png', path: '/portfolio', title: 'Portfolio', content: 'PDF Portfolio 2024', category: 'PDF', keywords: ['portfolio','pdf','mappe']},
   { previewImage: '/images/pagePreviews/new/cvTest2.png', path: '/CV', title: 'CV', content: 'CV Florian Kleiser', category: 'PDF', keywords: ['CV','Lebenslauf', 'pdf']},
   { previewImage: '/images/pagePreviews/new/googledriveTest2.png', path: 'https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea', title: 'Google Drive', content: 'Google Drive', category: 'External', keywords: ['google drive','drive']},
   { previewImage: '/images/pagePreviews/new/githubTest2.png', path: 'https://github.com/flokleiser', title: 'Github', content: 'Github', category: 'External', keywords: ['Github','Repo', 'source code','code']},
 
-  { previewImage: '/images/pagePreviews/new/projectsTest2.png', path: '/projects', title: 'Projects', content: 'Overview of my Projects', category: 'Projects', keywords: ['projects','list', 'overview']},
+  { previewImage: '/images/pagePreviews/new/projectsTest2.png', path: '/projects', title: 'Projects', content: 'Overview of my Projects', category: 'Projects', keywords: ['projects','list', 'overview','work']},
 
   { previewImage: '/images/pagePreviews/new/animationsTest2.png', path: '/projects/animations', title: 'Animations', content: 'Animations', category: 'Animations', keywords: ['animations','overview', 'animated']},
   { previewImage: '/images/pagePreviews/new/escapeTest2.png', path: '/projects/animations/escape', title: 'Escape', content: 'Escape Animation', category: 'Animations', keywords: ['animation','escape', 'animated','after effects']},
