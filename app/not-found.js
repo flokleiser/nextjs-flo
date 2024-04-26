@@ -11,173 +11,174 @@ const assistant = Assistant({
 
 export default function notfound () {
 
-    useEffect(() => {
-        var canvas = document.querySelector("#scene"),
-        ctx = canvas.getContext("2d", {willReadFrequently: true}),
-        particles = [],
-        amount = 0,
-        mouse = {x:0,y:0},
-        radius = 0.5;
+    // useEffect(() => {
+    //     var canvas = document.querySelector("#scene"),
+    //     ctx = canvas.getContext("2d", {willReadFrequently: true}),
+    //     particles = [],
+    //     amount = 0,
+    //     mouse = {x:0,y:0},
+    //     radius = 0.5;
         
         
                 
-          var colors= ["#6b106a",
-          "#670e6b",
-          "#640d6b",
-          "#600b6c",
-          "#5b0a6d", 
-          "#57096d",
-          "#57096d",
-          "#52096e",
-          "#52096e",
-          "#4e086f",
-          "#480870",
-          "#430970",
-          "#3d0971"]
-          var color = ["#ffffff"];
+    //       var colors= ["#6b106a",
+    //       "#670e6b",
+    //       "#640d6b",
+    //       "#600b6c",
+    //       "#5b0a6d", 
+    //       "#57096d",
+    //       "#57096d",
+    //       "#52096e",
+    //       "#52096e",
+    //       "#4e086f",
+    //       "#480870",
+    //       "#430970",
+    //       "#3d0971"]
+    //       var color = ["#ffffff"];
         
-          var displayText = '404'
+    //       var displayText = '404'
           
-          var ww = canvas.width = window.innerWidth;
-          var wh = canvas.height = window.innerHeight;
+    //       var ww = canvas.width = window.innerWidth;
+    //       var wh = canvas.height = window.innerHeight;
           
-          class Particle {
-            constructor(x, y) {
-              this.x = x;
-              this.y = y;
-              this.dest = {
-                x: x,
-                y: y
-              };
+    //       class Particle {
+    //         constructor(x, y) {
+    //           this.x = x;
+    //           this.y = y;
+    //           this.dest = {
+    //             x: x,
+    //             y: y
+    //           };
         
-              this.r = ww / 600;
+    //           this.r = ww / 600;
         
-              this.vx = 0;
-              this.vy = 0;
+    //           this.vx = 0;
+    //           this.vy = 0;
         
-              this.accX = 0;
-              this.accY = 0;
-              this.friction = 0.7;
+    //           this.accX = 0;
+    //           this.accY = 0;
+    //           this.friction = 0.7;
         
-              this.color = color;
-            }
-            render() {
+    //           this.color = color;
+    //         }
+    //         render() {
         
         
-              this.accX = (this.dest.x - this.x) / 100;
-              this.accY = (this.dest.y - this.y) / 100;
-              this.vx += this.accX;
-              this.vy += this.accY;
-              this.vx *= this.friction;
-              this.vy *= this.friction;
+    //           this.accX = (this.dest.x - this.x) / 100;
+    //           this.accY = (this.dest.y - this.y) / 100;
+    //           this.vx += this.accX;
+    //           this.vy += this.accY;
+    //           this.vx *= this.friction;
+    //           this.vy *= this.friction;
         
-              this.x += this.vx;
-              this.y += this.vy;
+    //           this.x += this.vx;
+    //           this.y += this.vy;
         
-              ctx.fillStyle = this.color;
-              ctx.beginPath();
+    //           ctx.fillStyle = this.color;
+    //           ctx.beginPath();
         
-              ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
+    //           ctx.arc(this.x, this.y, this.r, Math.PI * 2, false);
         
-              ctx.fill();
+    //           ctx.fill();
         
-              var a = this.x - mouse.x;
-              var b = this.y - mouse.y;
+    //           var a = this.x - mouse.x;
+    //           var b = this.y - mouse.y;
         
-              var distance = Math.sqrt(a * a + b * b);
+    //           var distance = Math.sqrt(a * a + b * b);
         
-              if (distance < (radius * 60)) {
-                this.accX = (this.x - mouse.x);
-                this.accY = (this.y - mouse.y);
+    //           if (distance < (radius * 60)) {
+    //             this.accX = (this.x - mouse.x);
+    //             this.accY = (this.y - mouse.y);
         
-                this.vx += this.accX;
-                this.vy += this.accY;
-              }
-              if (distance > (radius * 250)) {
-                this.accX = (this.dest.x - this.x) / 10;
-                this.accY = (this.dest.y - this.y) / 10;
-                this.vx += this.accX;
-                this.vy += this.accY;
-              }
+    //             this.vx += this.accX;
+    //             this.vy += this.accY;
+    //           }
+    //           if (distance > (radius * 250)) {
+    //             this.accX = (this.dest.x - this.x) / 10;
+    //             this.accY = (this.dest.y - this.y) / 10;
+    //             this.vx += this.accX;
+    //             this.vy += this.accY;
+    //           }
         
-            }
-          }
+    //         }
+    //       }
          
           
           
-          function onMouseMove(e){
-            mouse.x = e.clientX;
-            mouse.y = e.clientY;
-          }
+    //       function onMouseMove(e){
+    //         mouse.x = e.clientX;
+    //         mouse.y = e.clientY;
+    //       }
         
-          function onTouchMove(e){
-            if(e.touches.length > 0 ){
-              mouse.x = e.touches[0].clientX;
-              mouse.y = e.touches[0].clientY;
-            }
-          }
-          function onTouchEnd(e){
-          mouse.x = -9999;
-          mouse.y = -9999;
-          }
+    //       function onTouchMove(e){
+    //         if(e.touches.length > 0 ){
+    //           mouse.x = e.touches[0].clientX;
+    //           mouse.y = e.touches[0].clientY;
+    //         }
+    //       }
+    //       function onTouchEnd(e){
+    //       mouse.x = -9999;
+    //       mouse.y = -9999;
+    //       }
           
-          function initScene(){
-            ww = canvas.width = window.innerWidth;
-            wh = canvas.height = window.innerHeight/5 * 4;
+    //       function initScene(){
+    //         ww = canvas.width = window.innerWidth;
+    //         wh = canvas.height = window.innerHeight/5 * 4;
           
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
           
-            ctx.font = `bold ${(ww / 2)}px ${assistant.style.fontFamily}`;
+    //         ctx.font = `bold ${(ww / 2)}px ${assistant.style.fontFamily}`;
         
-            ctx.textAlign = "center";
-            // ctx.fillText(displayText, ww/2, wh/2.5);
-            ctx.fillText(displayText, ww/2, wh/1.5);
+    //         ctx.textAlign = "center";
+    //         // ctx.fillText(displayText, ww/2, wh/2.5);
+    //         // ctx.fillText(displayText, ww/2, wh/1.5);
+    //         ctx.fillText(displayText, ww/2, wh);
           
-            var data  = ctx.getImageData(0, 0, ww, wh).data;
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.globalCompositeOperation = "screen";
+    //         var data  = ctx.getImageData(0, 0, ww, wh).data;
+    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //         ctx.globalCompositeOperation = "screen";
         
-            var divider = 100
+    //         var divider = 100
           
-            particles = [];
-            for(var i=0;i<ww;i+=Math.round(ww/divider)){
-              for(var j=0;j<wh;j+=Math.round(ww/divider)){
-                if(data[((i + j*ww)*4) + 3] >divider){
-                  particles.push(new Particle(i,j));
-                }
-              }
-            }
-            amount = particles.length;
+    //         particles = [];
+    //         for(var i=0;i<ww;i+=Math.round(ww/divider)){
+    //           for(var j=0;j<wh;j+=Math.round(ww/divider)){
+    //             if(data[((i + j*ww)*4) + 3] >divider){
+    //               particles.push(new Particle(i,j));
+    //             }
+    //           }
+    //         }
+    //         amount = particles.length;
           
-          }
+    //       }
         
-        function onMouseDown() {
-            radius = 2;
-        }
-        function onMouseUp() {
-            radius = 0.5;
-        }
+    //     function onMouseDown() {
+    //         radius = 2;
+    //     }
+    //     function onMouseUp() {
+    //         radius = 0.5;
+    //     }
           
-          function render() {
-            // frame.current = requestAnimationFrame(render);
-            requestAnimationFrame(render)
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (var i = 0; i < amount; i++) {
-              particles[i].render();
-            }
-            // return () => cancelAnimationFrame(frame.current)
-            // return () => cancelAnimationFrame(render)
-          };
+    //       function render() {
+    //         // frame.current = requestAnimationFrame(render);
+    //         requestAnimationFrame(render)
+    //         ctx.clearRect(0, 0, canvas.width, canvas.height);
+    //         for (var i = 0; i < amount; i++) {
+    //           particles[i].render();
+    //         }
+    //         // return () => cancelAnimationFrame(frame.current)
+    //         // return () => cancelAnimationFrame(render)
+    //       };
           
-          window.addEventListener("resize", initScene);
-          window.addEventListener("mousemove", onMouseMove);
-          window.addEventListener("touchmove", onTouchMove);
-          window.addEventListener("mousedown", onMouseDown);
-          window.addEventListener("mouseup", onMouseUp);
-          window.addEventListener("touchend", onTouchEnd);
-          initScene();
-          requestAnimationFrame(render);
-          }, []);
+    //       window.addEventListener("resize", initScene);
+    //       window.addEventListener("mousemove", onMouseMove);
+    //       window.addEventListener("touchmove", onTouchMove);
+    //       window.addEventListener("mousedown", onMouseDown);
+    //       window.addEventListener("mouseup", onMouseUp);
+    //       window.addEventListener("touchend", onTouchEnd);
+    //       initScene();
+    //       requestAnimationFrame(render);
+    //       }, []);
 
     return( 
         <main className={styles.main}>
@@ -231,19 +232,19 @@ export default function notfound () {
 
       </div>
     
-            {/* <div className={styles.titleHomepage} style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <div className={styles.titleHomepage} style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
                  404
                 <div className={styles.subtitleHomepage} style={{marginLeft:'4rem'}}>
                     page not found
                 </div>
-            </div> */}
+            </div>
 
             {/* <div className={styles.buttonLinksPage} style={{paddingLeft:'2rem',paddingRight:'2rem',paddingBottom:'0.5rem',paddingTop:'0.5rem'}}> */}
             <div className={styles.buttonGeneralHomepage}>
             <div className={styles.subtitleHomepage}
             style={{zIndex:'9999', paddingTop:'5rem'}}
             >
-                <Link href="/"> <ins>Homepage</ins>
+                <Link href="/"> <ins>back to Home</ins>
                 </Link>
             </div>
             </div>
