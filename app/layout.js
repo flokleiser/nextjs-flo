@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import { Suspense, useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import SearchBar from './components/SearchBar';
 import pageIndex from './components/pageIndex';
