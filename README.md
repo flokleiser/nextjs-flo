@@ -26,6 +26,8 @@ ___
 
 - [Arts & Crafts (Cardboard)](https://floriankleiser.com/projects/crafts)
 
+- [Speed insights](https://vercel.com/flo-kleisers-projects/nextjs-flo/speed-insights)
+
 ## My Portfolio
 - PDF, made in Adobe Illustrator
 <https://floriankleiser.com/projects/portfolio>
