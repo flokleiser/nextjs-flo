@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
             <div className="pt-[50px]" >
               <main>
                 {children}
+                <SpeedInsights />
               </main>
             </div>
 
