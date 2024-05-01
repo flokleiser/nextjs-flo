@@ -752,8 +752,25 @@ export default function creativeCoding() {
 
         <div stlye={{ padding: "0.5rem" }} />
 
+{/* <div className="flex flex-row">
+<div className={styles.linkContainerCCSandbox}
+          >
+            <div style={{ padding: "0.5rem" }}> </div>
+            <div className="flex align-center">
+              <div
+                className={styles.iframevideoSmall}
+                style={{position:'relative'}}
+              >                
+              {codeBlock4()}
+              </div>
+            </div>
+            <div style={{ padding: "0.5rem" }} />
+          </div> */}
+
 <div className="flex flex-row">
-<div className={styles.linkContainerCCSandboxSmall}
+<div className={styles.linkContainerCCSandbox}
+          style={{ width: "45vw", zIndex: 1, maxWidth: "650px", 
+          }}
           >
             <div style={{ padding: "0.5rem" }}> </div>
             <div className="flex align-center">
