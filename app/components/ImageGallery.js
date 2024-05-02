@@ -8,21 +8,21 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import PropTypes from 'prop-types';
 
-const ImageGallery = ({data, w, h, desc, dColor}) => {
+const ImageGallery = ({data, w, h, desc, dColor, datas}) => {
 
 ImageGallery.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
-      description: PropTypes.string, // Make the description prop optional
+      description: PropTypes.string, 
     })
   ).isRequired,
   h: PropTypes.number.isRequired,
   w: PropTypes.number.isRequired,
   desc: PropTypes.bool.isRequired,
   dColor: PropTypes.string,
-
+  datas:PropTypes.array.isRequired
 };
 
 
@@ -37,7 +37,6 @@ const handleResetClick = () => {
   document.body.style.overflow = "auto";
 };
 
-/* make image big */
 const handleImageClick = (imageSrc) => {
   const dataArray = [...data];
   const selectedIndex = dataArray.findIndex(
@@ -56,9 +55,7 @@ const handleImageClick = (imageSrc) => {
 
 const handlePrevImage = () => {
   if (selectedImage !== null) {
-    const dataArray = [...data];
-    // const dataArray = [dataIndex]
-    // const dataArray = [...dataArray];
+    const dataArray = [...datas];
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
@@ -70,9 +67,7 @@ const handlePrevImage = () => {
 
 const handleNextImage = () => {
   if (selectedImage !== null) {
-    const dataArray = [...data];
-    // const dataArray = [dataIndex]
-    // const dataArray = [...dataArray]
+    const dataArray = [...datas];
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
@@ -179,7 +174,6 @@ return (
 </motion.div>
 ) : (
   <motion.img
-  // <Image
   src={selectedImage}
   initial={{ scale: 0.5 }}
   animate={{ scale: 1 }}
@@ -201,7 +195,6 @@ return (
               >
                 <PiXCircle style={{ fontSize: "2rem" }} />
               </button>
-              {/* prev and next buttons */}
               <div className="absolute left-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
                 <button
                   id="leftButton"
@@ -212,7 +205,6 @@ return (
                   <IoIosArrowBack style={{ fontSize: "2rem" }} />
                 </button>
               </div>
-              {/* <div className="absolute right-5"> */}
               <div className="absolute right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded">
                 <button
                   id="rightButton"

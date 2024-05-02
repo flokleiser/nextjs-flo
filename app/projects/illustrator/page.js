@@ -111,7 +111,7 @@ export default function illustrator() {
             </p>
             </div>
            
-            <ImageGallery data={data2}w={400}h={400} />
+            <ImageGallery data={data2}w={400}h={400}datas={[...data2,...data3]} />
            
           
 
@@ -137,7 +137,7 @@ export default function illustrator() {
             </p>
             </div>
 
-            <ImageGallery data={data3}w={400}h={400} />
+            <ImageGallery data={data3}w={400}h={400}datas={[...data2,...data3]} />
 
            
            </div>

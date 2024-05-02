@@ -151,7 +151,7 @@ export default function skylands() {
       )}
       </AnimatePresence>
             
-<ImageGallery data={data}w={1330}h={800}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+<ImageGallery data={data}w={1330}h={800}desc={true}dColor={'rgba(187, 188, 122, 0.6)'}datas={[...data,...data2,...data3,...data4,...data5,...data6]} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -212,10 +212,10 @@ export default function skylands() {
       <div style={{padding:"0.8rem"}}/>
     </div>
 
-   <ImageGallery data={data2}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+   <ImageGallery data={data2}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'}datas={[...data,...data2,...data3,...data4,...data5,...data6]} />
 
      
-<ImageGallery data={data3}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+<ImageGallery data={data3}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'}datas={[...data,...data2,...data3,...data4,...data5,...data6]} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -274,11 +274,11 @@ export default function skylands() {
 
  
 
-<ImageGallery data={data4}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+<ImageGallery data={data4}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'}datas={[...data,...data2,...data3,...data4,...data5,...data6]} />
 
 
 
-<ImageGallery data={data5}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+<ImageGallery data={data5}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'}datas={[...data,...data2,...data3,...data4,...data5,...data6]} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -337,7 +337,7 @@ export default function skylands() {
       </div>
 
       
-      <ImageGallery data={data6}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+      <ImageGallery data={data6}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'}datas={[...data,...data2,...data3,...data4,...data5,...data6]} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />

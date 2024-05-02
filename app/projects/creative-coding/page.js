@@ -338,7 +338,7 @@ export default function creativeCoding() {
         </div>
 
 
-<ImageGallery data={data}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'} />
+<ImageGallery data={data}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
 
         <div stlye={{ padding: "0.5rem" }} />
@@ -385,7 +385,7 @@ export default function creativeCoding() {
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        <ImageGallery data={data2}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'} />
+        <ImageGallery data={data2}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
 
         <div stlye={{ padding: "0.5rem" }} />
@@ -432,7 +432,7 @@ export default function creativeCoding() {
         <div style={{ padding: "0.5rem" }} />
 
 
-        <ImageGallery data={data3}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'} />
+        <ImageGallery data={data3}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
 
         <div stlye={{ padding: "0.5rem" }} />
@@ -478,7 +478,7 @@ export default function creativeCoding() {
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        <ImageGallery data={data4}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'} />
+        <ImageGallery data={data4}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
  
 

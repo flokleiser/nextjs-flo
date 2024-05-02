@@ -8,6 +8,7 @@ const ImageGallery = dynamic(() =>
   import( "@/app/components/ImageGallery")
 )
 
+
 const data = [
   {image: '/images/sketches/sketch test scan website2.webp', id: 0},
   {image: '/images/sketches/sketch test website.webp', id: 1},
@@ -97,9 +98,9 @@ useEffect(() => {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
       
-      <ImageGallery data={data}w={400}h={400} /> 
-      <ImageGallery data={data2}w={400}h={400} />
-      <ImageGallery data={data3}w={400}h={400} />
+      <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]} /> 
+      <ImageGallery data={data2}w={400}h={400}datas={[...data,...data2,...data3]} />
+      <ImageGallery data={data3}w={400}h={400}datas={[...data,...data2,...data3]} />
          
             
             </div>

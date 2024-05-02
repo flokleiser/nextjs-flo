@@ -3,20 +3,17 @@ ___
 
 ## Imagegallery
 
-- [ ] Figure out how to click over to all images
-
 - [ ] Blur placeholders for images?
+
+- [x] Figure out how to click over to all images
 - [x] Customizable height and width property
 - [x] Figure out how to add optional styling for image descriptions
 
 ## Page performance:
-
 - [ ] Look into Cumulative Layout Shift
 https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
 --> page contents, probably image gallery
-
 - [ ] Look into why page transitions are lagging
-
 
 ___
 
@@ -24,12 +21,10 @@ ___
 - [x] Fix Homepage mobile
 - [x] Fix cad page
 
-
 ## Footer + Navbar
 
 - [x] Make a website footer
 - [x] Footer animation onhover
-
 - [x] Fix footer scaling problems:
     - [x] stop it from scaling the height
     - [x] put the actual footer behind the text

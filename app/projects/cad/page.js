@@ -64,7 +64,6 @@ const data4 = [
 
 export default function cad() {
 
-  const dataArray = [...data2, ...data3,...data4]
 
 
   const [modelPath, setModelPath] = useState('/stl/butterfly_open.glb');
@@ -223,7 +222,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-<ImageGallery data={data2}w={400}h={400} />
+<ImageGallery data={data2}w={400}h={400}datas={[...data2,...data3,...data4]} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -236,7 +235,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data3}w={400}h={400} />
+        <ImageGallery data={data3}w={400}h={400}datas={[...data2,...data3,...data4]} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -249,7 +248,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data4}w={400}h={400} />
+        <ImageGallery data={data4}w={400}h={400}datas={[...data2,...data3,...data4]} />
 
       </div>
 
