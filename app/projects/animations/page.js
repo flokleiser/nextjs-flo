@@ -103,6 +103,7 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
+            priority={true}
           >
             <h2>Plasticine (A)life</h2>
             <p>Stop Motion</p>
@@ -119,6 +120,7 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
+            priority={true}
           >
             <h2>Skate</h2>
             <p>Rotoscoping, Drawing</p>
@@ -135,6 +137,7 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
+            priority={true}
           >
             <h2>Escape</h2>
             <p>Image animation</p>
@@ -151,6 +154,7 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
+            priority={true}
           >
             <h2>Kontakt</h2>
             <p>Animating physics</p>
@@ -167,6 +171,7 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
+            priority={true}
           >
             <h2>Logo</h2>
             <p>Variations of a Logo</p>
@@ -183,6 +188,7 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
+            priority={true}
           >
             <h2>Music</h2>
             <p>Music Visualizers</p>
