@@ -10,7 +10,7 @@ https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
 - [ ] Look into why page transitions are lagging
 
 ## Mobile:
-- [ ] Fix Homepage mobile
+- [x] Fix Homepage mobile
 - [ ] Fix cad page
 
 
