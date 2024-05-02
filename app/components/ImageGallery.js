@@ -40,6 +40,8 @@ const handleImageClick = (imageSrc) => {
 const handlePrevImage = () => {
   if (selectedImage !== null) {
     const dataArray = [...data];
+    // const dataArray = [dataIndex]
+    // const dataArray = [...dataArray];
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
@@ -50,6 +52,8 @@ const handlePrevImage = () => {
 const handleNextImage = () => {
   if (selectedImage !== null) {
     const dataArray = [...data];
+    // const dataArray = [dataIndex]
+    // const dataArray = [...dataArray]
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
