@@ -126,10 +126,17 @@ radius = 0.5;
   function initScene(){
     ww = canvas.width = window.innerWidth;
     wh = canvas.height = window.innerHeight/5 * 4;
+
+    if (ww < 500) {
+      ctx.font = `${(ww / 7)}px ${assistant.style.fontFamily}`;
+    }
+
+    else {
   
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   
     ctx.font = `${(ww / 10)}px ${assistant.style.fontFamily}`;
+    }
 
     ctx.textAlign = "center";
     // ctx.fillText(displayText, ww/2, wh/2.5);
