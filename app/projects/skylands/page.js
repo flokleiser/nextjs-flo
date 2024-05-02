@@ -14,6 +14,10 @@ import {Tooltip} from "@nextui-org/tooltip";
 import CenterTooltip from "@/app/components/CenterTooltip";
 import DimTooltip from "@/app/components/DimTooltip";
 
+import dynamic from "next/dynamic";
+
+const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
+
 const data = [
   { image: "/images/skylands/skylandsnew8.png", id: 1, description:'Birds eye view of the islands' }, 
 ];
@@ -51,6 +55,8 @@ const data6 = [
 
 export default function skylands() {
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const [isDim, setDim] = useState(false);
   const handleToggleClick = () => {
     setDim(!isDim);
@@ -64,111 +70,111 @@ export default function skylands() {
     elem?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedDescription, setSelectedDescription] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [selectedImage, setSelectedImage] = useState(null);
+  // const [selectedDescription, setSelectedDescription] = useState(null);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleResetClick = () => {
-    setSelectedImage(null);
-    setCurrentIndex(0);
-    document.documentElement.style.overflow = "auto";
-    document.body.style.overflow = "auto";
-  };
+  // const handleResetClick = () => {
+  //   setSelectedImage(null);
+  //   setCurrentIndex(0);
+  //   document.documentElement.style.overflow = "auto";
+  //   document.body.style.overflow = "auto";
+  // };
 
-  /* make image big */
-  const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
-    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
-    if (selectedIndex !== -1) {
-      setSelectedImage(imageSrc);
-      setCurrentIndex(dataArray[selectedIndex].id);
-      document.documentElement.style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
+  // /* make image big */
+  // const handleImageClick = (imageSrc) => {
+  //   const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+  //   const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
+  //   if (selectedIndex !== -1) {
+  //     setSelectedImage(imageSrc);
+  //     setCurrentIndex(dataArray[selectedIndex].id);
+  //     document.documentElement.style.overflow = "hidden";
+  //     document.body.style.overflow = "hidden";
 
-      setSelectedDescription(dataArray[selectedIndex].description);
+  //     setSelectedDescription(dataArray[selectedIndex].description);
 
-      setCurrentIndex(dataArray[selectedIndex].id);
-      console.log('test');
-    }
-  };
+  //     setCurrentIndex(dataArray[selectedIndex].id);
+  //     console.log('test');
+  //   }
+  // };
 
-  const handlePrevImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
-      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
+  // const handlePrevImage = () => {
+  //   if (selectedImage !== null) {
+  //     const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+  //     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
+  //     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
+  //     setCurrentIndex(dataArray[newIndex].id);
+  //     setSelectedImage(dataArray[newIndex].image);
 
-      setSelectedDescription(dataArray[newIndex].description);
-    }
-  };
+  //     setSelectedDescription(dataArray[newIndex].description);
+  //   }
+  // };
 
-  const handleNextImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
-      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
+  // const handleNextImage = () => {
+  //   if (selectedImage !== null) {
+  //     const dataArray = [...data, ...data2, ...data3,...data4,...data5,...data6];
+  //     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
+  //     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
+  //     setCurrentIndex(dataArray[newIndex].id);
+  //     setSelectedImage(dataArray[newIndex].image);
 
-      setSelectedDescription(dataArray[newIndex].description);
-    }
-  };
+  //     setSelectedDescription(dataArray[newIndex].description);
+  //   }
+  // };
 
-  /* handleoutsideclick*/
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      const imageElement = document.querySelector("#overlay img");
-      const leftButton = document.querySelector("#leftButton");
-      const rightButton = document.querySelector("#rightButton");
+  // /* handleoutsideclick*/
+  // useEffect(() => {
+  //   const handleOutsideClick = (event) => {
+  //     const imageElement = document.querySelector("#overlay img");
+  //     const leftButton = document.querySelector("#leftButton");
+  //     const rightButton = document.querySelector("#rightButton");
 
-      if (imageElement) {
-        const imageRect = imageElement.getBoundingClientRect();
+  //     if (imageElement) {
+  //       const imageRect = imageElement.getBoundingClientRect();
 
-        if (
-          event.clientX < imageRect.left ||
-          event.clientX > imageRect.right ||
-          event.clientY < imageRect.top ||
-          event.clientY > imageRect.bottom
-        ) {
-          if (
-            event.target !== leftButton &&
-            event.target !== rightButton &&
-            !leftButton.contains(event.target) &&
-            !rightButton.contains(event.target)
-          ) {
-            handleResetClick();
-          }
-        }
-      }
-    };
+  //       if (
+  //         event.clientX < imageRect.left ||
+  //         event.clientX > imageRect.right ||
+  //         event.clientY < imageRect.top ||
+  //         event.clientY > imageRect.bottom
+  //       ) {
+  //         if (
+  //           event.target !== leftButton &&
+  //           event.target !== rightButton &&
+  //           !leftButton.contains(event.target) &&
+  //           !rightButton.contains(event.target)
+  //         ) {
+  //           handleResetClick();
+  //         }
+  //       }
+  //     }
+  //   };
 
-    document.addEventListener("mouseup", handleOutsideClick);
+  //   document.addEventListener("mouseup", handleOutsideClick);
 
-    return () => {
-      document.removeEventListener("mouseup", handleOutsideClick);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("mouseup", handleOutsideClick);
+  //   };
+  // }, []);
 
-  /* handlekeydown*/
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === "Escape") {
-        handleResetClick();
-      } else if (event.key === "ArrowLeft") {
-        handlePrevImage();
-      } else if (event.key === "ArrowRight") {
-        handleNextImage();
-      }
-    };
+  // /* handlekeydown*/
+  // useEffect(() => {
+  //   const handleKeyDown = (event) => {
+  //     if (event.key === "Escape") {
+  //       handleResetClick();
+  //     } else if (event.key === "ArrowLeft") {
+  //       handlePrevImage();
+  //     } else if (event.key === "ArrowRight") {
+  //       handleNextImage();
+  //     }
+  //   };
 
-    window.addEventListener("keydown", handleKeyDown);
+  //   window.addEventListener("keydown", handleKeyDown);
 
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [handleResetClick, handlePrevImage, handleNextImage]);
+  //   return () => {
+  //     window.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, [handleResetClick, handlePrevImage, handleNextImage]);
 
   useEffect(() => {
     document.title = "Projects - Skylands";
@@ -251,7 +257,7 @@ export default function skylands() {
       )}
       </AnimatePresence>
             
-            <div className="">
+            {/* <div className="">
         <AnimatePresence>
           {selectedImage && (
             <motion.div
@@ -350,7 +356,9 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
+
+<ImageGallery data={data}w={1330}h={800}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -409,7 +417,7 @@ export default function skylands() {
       <div style={{padding:"0.8rem"}}/>
     </div>
 
-    <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+    {/* <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
       <div className="p-1 container mx-auto">
         <div className="py-2"></div>
         <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
@@ -434,8 +442,11 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </motion.div>
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+      </motion.div> */}
+
+<ImageGallery data={data2}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+
+      {/* <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
       <div className="p-1 container mx-auto">
         <div className="py-2"></div>
         <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -460,7 +471,9 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
+
+<ImageGallery data={data3}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -516,7 +529,7 @@ export default function skylands() {
         <div style={{padding:"0.8rem"}} />
       </div>
 
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+      {/* <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
@@ -541,8 +554,11 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </motion.div>
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+      </motion.div> */}
+
+<ImageGallery data={data4}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
+
+      {/* <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -567,7 +583,9 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
+
+<ImageGallery data={data5}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
@@ -624,7 +642,7 @@ export default function skylands() {
         <div style={{padding:"0.8rem"}} />
       </div>
 
-      <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
+      {/* <motion.div className="" style={{filter:'blur(10px)'}} whileInView={{filter:'blur(0px)'}} transition={{duration:0.5}}>
         <div className="p-1 container mx-auto">
           <div className="py-2"></div>
           <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 mb-12">
@@ -649,7 +667,9 @@ export default function skylands() {
             ))}
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
+      
+      <ImageGallery data={data6}w={400}h={400}desc={true}dColor={'rgba(187, 188, 122, 0.6)'} />
 
       <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
