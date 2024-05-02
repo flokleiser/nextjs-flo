@@ -140,7 +140,8 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               // priority 
-              priority={true}
+              // priority={true}
+              priority="true"
               alt="Projects"
             />
           </div>
@@ -154,7 +155,8 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               // priority 
-              priority={true}
+              // priority={true}
+              priority="true"
               alt="Projects"
             />
           </div>
@@ -168,7 +170,8 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               // priority 
-              priority={true}
+              // priority={true}
+              priority="true"
               alt="Projects"
             />
           </div>
@@ -182,7 +185,8 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               // priority 
-              priority={true}
+              // priority={true}
+              priority="true"
               alt="Projects"
             />
           </div>
@@ -196,7 +200,8 @@ export default function Home() {
               height={1000}
               style={{ width: '100%', height: 'auto' }}
               // priority 
-              priority={true}
+              // priority={true}
+              priority="true"
               alt="Projects"
             />
           </div>
@@ -209,7 +214,9 @@ export default function Home() {
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
-              priority={true}
+              // priority
+              // priority={true}
+              priority="true"
               alt="Projects"
             />
           </div>
