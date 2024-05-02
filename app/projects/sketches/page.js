@@ -2,36 +2,31 @@
 import React, {useState, useEffect, Suspense} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
-import Link from 'next/link';
-import { PiXCircle } from "react-icons/pi"; 
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { AnimatePresence, motion} from 'framer-motion';
 import dynamic from 'next/dynamic';
-
 
 const ImageGallery = dynamic(() => 
   import( "@/app/components/ImageGallery")
 )
 
 const data = [
-  {image: '/images/sketches/sketch test scan website2.png', id: 0},
-  {image: '/images/sketches/sketch test website.png', id: 1},
-  {image: '/images/sketches/sketch test scan website3.png', id: 2},
-  {image: '/images/sketches/sketch test scan website4.png', id: 3},
-  {image: '/images/sketches/sketch test scan website6.png', id: 4},
+  {image: '/images/sketches/sketch test scan website2.webp', id: 0},
+  {image: '/images/sketches/sketch test website.webp', id: 1},
+  {image: '/images/sketches/sketch test scan website3.webp', id: 2},
+  {image: '/images/sketches/sketch test scan website4.webp', id: 3},
+  {image: '/images/sketches/sketch test scan website6.webp', id: 4},
 ];
 
 const data2 = [
-  {image: '/images/sketches/metal.png', id: 5},
-  {image: '/images/sketches/cat3.png', id: 6},
-  {image: '/images/sketches/dragon2.png', id: 7},
-  {image: '/images/sketches/illusions.png', id: 8},
+  {image: '/images/sketches/metal.webp', id: 5},
+  {image: '/images/sketches/cat3.webp', id: 6},
+  {image: '/images/sketches/dragon2.webp', id: 7},
+  {image: '/images/sketches/illusions.webp', id: 8},
 ];
 
 const data3 = [
-{ image: '/images/sketches/cartoon2.png', id: 9 },
-{ image: '/images/sketches/corona memory3.png', id: 10 },
-{ image: '/images/sketches/spaceship sketch2.png', id: 11 },
+{ image: '/images/sketches/cartoon2.webp', id: 9 },
+{ image: '/images/sketches/corona memory3.webp', id: 10 },
+{ image: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
 export default function sketches() {

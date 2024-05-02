@@ -3,16 +3,12 @@ ___
 
 ## Imagegallery
 
+- [ ] Figure out how to make component use <Image>
+
 - [ ] Figure out how to click over to all images
 
-- [ ] Look into imagegallery using "i1" as key prop, instead of a unique index
 - [x] Customizable height and width property
 - [x] Figure out how to add optional styling for image descriptions
-
-## Random fixes:
-
-- [ ] Edit all bottom padding to 0.3 rem
-
 
 ## Page performance:
 

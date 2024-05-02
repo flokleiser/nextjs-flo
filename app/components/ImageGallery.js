@@ -164,11 +164,12 @@ return (
    transition={{ duration: 0.3 }}>
 
               <motion.img
+              //<Image 
                 src={selectedImage}
                 alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
                 style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
-              />
+               />
 
 <div className={styles.imageDescription} style={{  backgroundColor: dColor}}>
           <p>
@@ -178,27 +179,20 @@ return (
 </motion.div>
 ) : (
   <motion.img
+  // <Image
   src={selectedImage}
   initial={{ scale: 0.5 }}
   animate={{ scale: 1 }}
   exit={{ scale: 0.45 }}
   transition={{ duration: 0.3 }}
   alt=""
+
   style={{
     maxHeight: "80vh",
     zIndex: 9998,
     borderRadius: "24px",
   }}
 />)}
-
-
-
-
-
-
-
-
-
 
               <button
                 className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
@@ -252,6 +246,7 @@ return (
 
                       width={w}
                       height={h}
+                      priority="true"
 
 
                       className={`max-h-1500 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
