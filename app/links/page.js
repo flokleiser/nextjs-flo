@@ -115,7 +115,7 @@ export default function links() {
           style={{
             filter:'blur(20px)',
             translateX:100,
-            backgroundImage: "url(/images/links/portfolio3.png)", 
+            backgroundImage: "url(/images/links/portfolio3.webp)", 
             opacity: 0.5}}
             />
 
@@ -133,7 +133,7 @@ export default function links() {
           style={{
             filter:'blur(20px)',
             translateX:-100,
-            backgroundImage: "url(/images/links/cv3.png)", 
+            backgroundImage: "url(/images/links/cv3.webp)", 
             opacity: 0.5}}
       />
            <motion.div className="flex-col mx-11" >
@@ -194,7 +194,7 @@ export default function links() {
           style={{
             filter:'blur(20px)',
             translateX:100,
-            backgroundImage: "url(/images/links/googledrive2.png)", 
+            backgroundImage: "url(/images/links/googledrive2.webp)", 
             opacity: 0.5}}
       />
       </motion.div>
@@ -213,7 +213,7 @@ export default function links() {
           style={{
             filter:'blur(20px)',
             translateX:-100,
-            backgroundImage: "url(/images/links/github2.png)", 
+            backgroundImage: "url(/images/links/github2.webp)", 
             opacity:0.5}}
             />
  <div className="flex-col mx-11">
@@ -279,7 +279,7 @@ export default function links() {
           style={{
             filter:'blur(20px)',
             translateX:100,
-            backgroundImage: "url(/images/links/flofinal.png)", 
+            backgroundImage: "url(/images/links/flofinal.webp)", 
             opacity: 0.5}} 
       />
       </motion.div>

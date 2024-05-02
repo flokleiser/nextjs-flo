@@ -14,12 +14,8 @@ const ImageGallery = dynamic(() =>
 )
 
   const data = [ 
-    { image : '/images/voxel/voxel room transparent.png', id: 0},
-    { image : '/images/voxel/voxel space transparent.png', id: 1},
-  ];
-
-  const data2 = [
-    { image : '/images/voxel/voxel space transparent.png', id: 1},
+    { image : '/images/voxel/voxel room transparent.webp', id: 0},
+    { image : '/images/voxel/voxel space transparent.webp', id: 1},
   ];
 
 export default function voxel() {

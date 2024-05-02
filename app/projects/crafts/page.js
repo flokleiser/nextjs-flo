@@ -15,14 +15,14 @@ const ImageGallery = dynamic(() =>
 
 
 const data = [
-{ image : '/images/crafts/crafts 1.png', id: 0},
-{ image : '/images/crafts/crafts 2.png', id: 1},
-{ image : '/images/crafts/crafts 3.png', id: 2},
+{ image : '/images/crafts/crafts 1.webp', id: 0},
+{ image : '/images/crafts/crafts 2.webp', id: 1},
+{ image : '/images/crafts/crafts 3.webp', id: 2},
 ]
 const data2 = [
-{ image : '/images/crafts/crafts 5.png', id: 3},
-{ image : '/images/crafts/crafts 6.png', id: 4},
-{ image : '/images/crafts/crafts 4.png', id: 5},
+{ image : '/images/crafts/crafts 5.webp', id: 3},
+{ image : '/images/crafts/crafts 6.webp', id: 4},
+{ image : '/images/crafts/crafts 4.webp', id: 5},
 ]
 
 export default function crafts() {

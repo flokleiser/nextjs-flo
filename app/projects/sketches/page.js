@@ -97,7 +97,7 @@ useEffect(() => {
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
-      
+
       <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]} /> 
       <ImageGallery data={data2}w={400}h={400}datas={[...data,...data2,...data3]} />
       <ImageGallery data={data3}w={400}h={400}datas={[...data,...data2,...data3]} />

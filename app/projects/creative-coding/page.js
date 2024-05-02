@@ -19,29 +19,29 @@ const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
 
 
 const data = [
-  { image: "/images/creative-coding/creativecoding white.png", id: 1, description:'NewCenterPoint2, Example 1'},
-  { image: "/images/creative-coding/creativecoding twocolor.png", id: 2, description:'NewCenterPoint2, Example 2'},
-  { image: "/images/creative-coding/creativecoding green.png", id: 3, description:'NewCenterPoint2, Example 3' },
+  { image: "/images/creative-coding/creativecoding white.webp", id: 1, description:'NewCenterPoint2, Example 1'},
+  { image: "/images/creative-coding/creativecoding twocolor.webp", id: 2, description:'NewCenterPoint2, Example 2'},
+  { image: "/images/creative-coding/creativecoding green.webp", id: 3, description:'NewCenterPoint2, Example 3' },
 ];
 
 const data2 = [
-  { image: "/images/creative-coding/creativecoding2.png", id: 4, description:'NewCenterPoint1, Example 1' },
-  { image: "/images/creative-coding/creativecoding3.png", id: 5, description:'NewCenterPoint1, Example 2' },
-  { image: "/images/creative-coding/creativecoding6.png", id: 6, description:'NewCenterPoint1, Example 3' },
+  { image: "/images/creative-coding/creativecoding2.webp", id: 4, description:'NewCenterPoint1, Example 1' },
+  { image: "/images/creative-coding/creativecoding3.webp", id: 5, description:'NewCenterPoint1, Example 2' },
+  { image: "/images/creative-coding/creativecoding6.webp", id: 6, description:'NewCenterPoint1, Example 3' },
 ];
 
 
 const data3 = [
-  { image: "/images/creative-coding/cc3.png", id: 7, description:'NewCenterPoint3, Example 1' },
-  { image: "/images/creative-coding/cc4.png", id: 8, description:'NewCenterPoint3, Example 2' },
-  { image: "/images/creative-coding/cc1.png", id: 9, description:'NewCenterPoint3, Example 3' },
-  { image: "/images/creative-coding/cc8.png", id: 10, description:'NewCenterPoint3, Example 4' },
+  { image: "/images/creative-coding/cc3.webp", id: 7, description:'NewCenterPoint3, Example 1' },
+  { image: "/images/creative-coding/cc4.webp", id: 8, description:'NewCenterPoint3, Example 2' },
+  { image: "/images/creative-coding/cc1.webp", id: 9, description:'NewCenterPoint3, Example 3' },
+  { image: "/images/creative-coding/cc8.webp", id: 10, description:'NewCenterPoint3, Example 4' },
 ];
 
 const data4 = [
-  { image: "/images/creative-coding/creativecoding5.png", id: 11, description:'NewCenterPoint7, Example 1' },
-  { image: "/images/creative-coding/cc6.png", id: 12, description:'NewCenterPoint7, Example 2' },
-  { image: "/images/creative-coding/cc5.png", id: 13, description:'NewCenterPoint7, Example 3' },
+  { image: "/images/creative-coding/creativecoding5.webp", id: 11, description:'NewCenterPoint7, Example 1' },
+  { image: "/images/creative-coding/cc6.webp", id: 12, description:'NewCenterPoint7, Example 2' },
+  { image: "/images/creative-coding/cc5.webp", id: 13, description:'NewCenterPoint7, Example 3' },
 ];
 
 function codeBlock1() {
