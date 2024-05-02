@@ -27,15 +27,14 @@ ___
 - [Arts & Crafts (Cardboard)](https://floriankleiser.com/projects/crafts)
 
 ## My Portfolio
-- PDF, made in Adobe Illustrator
-<https://floriankleiser.com/projects/portfolio>
+- [PDF](https://floriankleiser.com/projects/portfolio)
 
 ## About me & External Links
 - CV
 - Infos about me
 - Google Drive
 - Github
-- YouTube (for videos)
-<https://floriankleiser.com/projects/links>
+- [YouTube (for videos)](https://floriankleiser.com/projects/links)
 
-___
+## Speed insights
+https://vercel.com/flo-kleisers-projects/nextjs-flo/speed-insights

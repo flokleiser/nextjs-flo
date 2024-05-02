@@ -3,11 +3,16 @@ ___
 
 ## Page performance:
 
-- [ ] Add analytics page:
-https://developer.chrome.com/docs/crux/guides/looker-studio-dashboard
-https://vercel.com/analytics
+- [ ] Look into Cumulative Layout Shift
+https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
+--> page contents, probably image gallery
 
 - [ ] Look into why page transitions are lagging
+
+## Mobile:
+- [ ] Fix Homepage mobile
+- [ ] Fix cad page
+
 
 ## Footer + Navbar
 
