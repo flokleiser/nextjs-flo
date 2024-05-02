@@ -238,16 +238,9 @@ return (
                 >
                   <div className="relative rounded-2xl">
                     <Image
-
-
-                      // width={400}
-                      // height={400}
-
-
                       width={w}
                       height={h}
                       priority
-
                       className={`max-h-1500 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                         selectedImage ? "z-0" : ""
                       }`}
