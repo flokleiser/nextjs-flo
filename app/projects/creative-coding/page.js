@@ -527,7 +527,8 @@ export default function creativeCoding() {
 
       </div>
 
-      <div style={{ padding: "2rem" }}> </div>
+      {/* <div style={{ padding: "2rem" }}> </div> */}
+      <div style={{ padding: "0.5rem" }}> </div>
     </main>
   );
 }

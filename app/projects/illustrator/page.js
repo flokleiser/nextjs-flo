@@ -141,7 +141,8 @@ export default function illustrator() {
 
            
            </div>
-           <div style={{padding:'2rem'}}/>
+           {/* <div style={{padding:'2rem'}}/> */}
+           <div style={{ padding: "0.5rem" }}> </div>
 
         </main>
     )

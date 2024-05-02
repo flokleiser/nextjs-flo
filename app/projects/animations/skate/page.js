@@ -220,8 +220,7 @@ export default function skate() {
 
 </div>
 
-            {/* <div style={{ padding: 'rem' }}> </div> */}
-            <div style={{ padding: "0.3rem" }}> </div>
+            <div style={{ padding: "0.5rem" }}> </div>
         </main>
     )
 }

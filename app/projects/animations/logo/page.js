@@ -162,8 +162,7 @@ export default function logo() {
 
       </div>
 
-      {/* <div style={{ padding: "2rem" }}> </div> */}
-      <div style={{ padding: "0.3rem" }}> </div>
+      <div style={{ padding: "0.5rem" }}> </div>
     </main>
   );
 }

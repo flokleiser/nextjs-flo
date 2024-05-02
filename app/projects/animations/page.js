@@ -220,7 +220,8 @@ export default function animations() {
 
       </div>
 
-      <div style={{ padding: "0.3rem" }}> </div>
+      {/* <div style={{ padding: "0.3rem" }}> </div> */}
+      <div style={{ padding: "0.5rem" }}> </div>
     </main>
   );
 }

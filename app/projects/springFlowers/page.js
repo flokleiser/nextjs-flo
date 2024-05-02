@@ -177,7 +177,8 @@ export default function flowers() {
 
         <div style={{ padding: "1rem" }} />
       </div>
-      <div style={{ padding: "2rem" }} />
+      {/* <div style={{ padding: "2rem" }} /> */}
+      <div style={{ padding: "0.5rem" }}> </div>
     </main>
   );
 }

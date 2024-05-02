@@ -94,7 +94,8 @@ export default function crafts() {
       <ImageGallery data={data2} w={400} h={400} /> 
 
               </div>
-              <div style={{ padding: "0.4rem" }}> </div>
+              {/* <div style={{ padding: "0.4rem" }}> </div> */}
+              <div style={{ padding: "0.5rem" }}> </div>
 
         </main>
     )
