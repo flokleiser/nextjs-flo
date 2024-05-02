@@ -55,7 +55,8 @@ export default function momentfulness() {
       <div className={styles.linkContainerMomentfulness}>
 
 
-      <h1 className={styles.titleWithoutPadding}>
+      {/* <h1 className={styles.titleWithoutPadding}> */}
+      <h1 className={styles.title}>
 
              Momentfulness
             </h1>

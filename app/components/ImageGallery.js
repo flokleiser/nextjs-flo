@@ -6,12 +6,28 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import PropTypes from 'prop-types';
 
+const ImageGallery = ({data, w, h, desc, dColor}) => {
 
+ImageGallery.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      description: PropTypes.string, // Make the description prop optional
+    })
+  ).isRequired,
+  h: PropTypes.number.isRequired,
+  w: PropTypes.number.isRequired,
+  desc: PropTypes.bool.isRequired,
+  dColor: PropTypes.string,
 
-const ImageGallery = ({data}) => {
+};
+
 
 const [selectedImage, setSelectedImage] = useState(null);
+const [selectedDescription, setSelectedDescription] = useState(null);
 const [currentIndex, setCurrentIndex] = useState(0);
 
 const handleResetClick = () => {
@@ -32,26 +48,37 @@ const handleImageClick = (imageSrc) => {
     setCurrentIndex(dataArray[selectedIndex].id);
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
+
+    setSelectedDescription(dataArray[selectedIndex].description);
+
   }
 };
 
 const handlePrevImage = () => {
   if (selectedImage !== null) {
     const dataArray = [...data];
+    // const dataArray = [dataIndex]
+    // const dataArray = [...dataArray];
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
     setSelectedImage(dataArray[newIndex].image);
+
+    setSelectedDescription(dataArray[newIndex].description);
   }
 };
 
 const handleNextImage = () => {
   if (selectedImage !== null) {
     const dataArray = [...data];
+    // const dataArray = [dataIndex]
+    // const dataArray = [...dataArray]
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
     setSelectedImage(dataArray[newIndex].image);
+
+    setSelectedDescription(dataArray[newIndex].description);
   }
 };
 
@@ -126,20 +153,53 @@ return (
                 backgroundColor: "rgba(0, 0, 0, 0.75)",
               }}
             >
+
+
+
+{desc ? (
+<motion.div className="flex flex-col items-center mt-8"
+   initial={{ scale: 0.5 }}
+   animate={{ scale: 1 }}
+   exit={{ scale: 0.45 }}
+   transition={{ duration: 0.3 }}>
+
               <motion.img
                 src={selectedImage}
-                initial={{ scale: 0.5 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.45 }}
-                transition={{ duration: 0.3 }}
-                alt=""
+                alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
-                style={{
-                  maxHeight: "80vh",
-                  zIndex: 9990,
-                  borderRadius: "24px",
-                }}
+                style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
               />
+
+<div className={styles.imageDescription} style={{  backgroundColor: dColor}}>
+          <p>
+          {currentIndex + ")    "}  {selectedDescription}
+          </p>
+          </div>
+</motion.div>
+) : (
+  <motion.img
+  src={selectedImage}
+  initial={{ scale: 0.5 }}
+  animate={{ scale: 1 }}
+  exit={{ scale: 0.45 }}
+  transition={{ duration: 0.3 }}
+  alt=""
+  style={{
+    maxHeight: "80vh",
+    zIndex: 9990,
+    borderRadius: "24px",
+  }}
+/>)}
+
+
+
+
+
+
+
+
+
+
               <button
                 className="absolute top-16 right-5 bg-white text-black shadow-lg bg-opacity-50 px-2 py-1 rounded"
                 onClick={handleResetClick}
@@ -179,14 +239,22 @@ return (
             <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
               {data.map((x) => (
                 <article
-                  key="i1"
+                key="i1"
                   className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                 >
                   <div className="relative rounded-2xl">
                     <Image
-                      width={400}
-                      height={400}
-                      className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+
+
+                      // width={400}
+                      // height={400}
+
+
+                      width={w}
+                      height={h}
+
+
+                      className={`max-h-1500 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                         selectedImage ? "z-0" : ""
                       }`}
                       src={x.image}

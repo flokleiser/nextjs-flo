@@ -73,8 +73,11 @@ export default function animations() {
 
       <div style={{paddingTop:'1rem'}} />
 
-      <div className={styles.linkContainerAnimationsBackground} style={{minHeight:'93vh'}}>
-      <h1 className={styles.titleWithoutPadding} style={{zIndex:'100'}}>Animations</h1>
+      <div className={styles.linkContainerAnimationsBackground} 
+      // style={{minHeight:'93vh'}}
+      >
+      {/* <h1 className={styles.titleWithoutPadding} style={{zIndex:'100'}}>Animations</h1> */}
+      <h1 className={styles.title} style={{zIndex:'100'}}>Animations</h1>
 
       <div className={styles.subtitledescription} style={{zIndex:'100'}}>
         <p>
@@ -103,7 +106,8 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
-            priority={true}
+            // priority={true}
+            priority="true"
           >
             <h2>Plasticine (A)life</h2>
             <p>Stop Motion</p>
@@ -120,7 +124,8 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
-            priority={true}
+            // priority={true}
+            priority="true"
           >
             <h2>Skate</h2>
             <p>Rotoscoping, Drawing</p>
@@ -137,7 +142,8 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
-            priority={true}
+            // priority={true}
+            priority="true"
           >
             <h2>Escape</h2>
             <p>Image animation</p>
@@ -154,7 +160,8 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
-            priority={true}
+            // priority={true}
+            priority="true"
           >
             <h2>Kontakt</h2>
             <p>Animating physics</p>
@@ -171,7 +178,8 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
-            priority={true}
+            // priority={true}
+            priority="true"
           >
             <h2>Logo</h2>
             <p>Variations of a Logo</p>
@@ -188,7 +196,8 @@ export default function animations() {
             onMouseOver={() => {handleHover()}}
             onMouseMove={() => {setHovering(true)}}
             onMouseLeave={() => {setHovering(false)}}
-            priority={true}
+            // priority={true}
+            priority="true"
           >
             <h2>Music</h2>
             <p>Music Visualizers</p>
@@ -207,7 +216,7 @@ export default function animations() {
         </div>
       </div>
 
-      <div style={{ padding: "0.375rem" }}> </div>
+      {/* <div style={{ padding: "0.375rem" }}> </div> */}
 
       </div>
 

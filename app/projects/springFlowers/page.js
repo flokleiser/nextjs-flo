@@ -107,7 +107,8 @@ export default function flowers() {
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerFlowers}>
-        <h1 className={styles.titleWithoutPadding}>Flowers</h1>
+        {/* <h1 className={styles.titleWithoutPadding}>Flowers</h1> */}
+        <h1 className={styles.title}>Flowers</h1>
 
         <div className={styles.subtitledescription}>
           <p>
@@ -122,7 +123,7 @@ export default function flowers() {
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        <ImageGallery data={data} />
+        <ImageGallery data={data}w={400}h={400} />
 
         <div style={{ padding: "0.5rem" }} />
         <hr className={styles.pageDivider} />

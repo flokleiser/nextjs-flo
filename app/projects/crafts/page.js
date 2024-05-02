@@ -3,7 +3,14 @@ import React, {useState, useEffect} from 'react';
 import styles from 'app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
-import ImageGallery from '@/app/components/ImageGallery';
+// import ImageGallery from '@/app/components/ImageGallery';
+
+import dynamic from 'next/dynamic'
+
+
+const ImageGallery = dynamic(() => 
+  import( "@/app/components/ImageGallery")
+)
 
 
 
@@ -60,12 +67,14 @@ export default function crafts() {
    z-[-1]">
           </div>
             <div style={{paddingTop:'1rem'}} />
-      <div className={styles.linkContainerCrafts} style={{minHeight:'93vh'}} >
+      <div className={styles.linkContainerCrafts} 
+      // style={{minHeight:'93vh'}} 
+      >
 
-      <h1 className={styles.titleWithoutPadding}>
-
+      {/* <h1 className={styles.titleWithoutPadding}> */}
+      <h1 className={styles.title}>
            
-             Crafts
+            Crafts
             </h1>
             <div className={styles.subtitledescription}>
             <p>
@@ -78,11 +87,11 @@ export default function crafts() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
            
-      <ImageGallery data={data} /> 
+      <ImageGallery data={data} w={400} h={400} /> 
 
               
 
-      <ImageGallery data={data2} /> 
+      <ImageGallery data={data2} w={400} h={400} /> 
 
               </div>
               <div style={{ padding: "0.4rem" }}> </div>

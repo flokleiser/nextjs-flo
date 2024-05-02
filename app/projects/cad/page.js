@@ -9,9 +9,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import ImageGallery from "@/app/components/ImageGallery";
+// import ImageGallery from "@/app/components/ImageGallery";
+import dynamic from 'next/dynamic'
 
 
+const ImageGallery = dynamic(() => 
+  import( "@/app/components/ImageGallery")
+)
 
 function Model({modelPath}) {
   const {scene} = useLoader(GLTFLoader, modelPath)
@@ -34,31 +38,35 @@ function Model({modelPath}) {
 
 const data2 = [
   {
-    image: "/images/cad/cad parts2.png",
+    image: "/images/cad/cad parts2.webp",
     id: 1,
     description: "Individual parts nr. 1",
   },
   {
-    image: "/images/cad/cad parts1.png",
+    image: "/images/cad/cad parts1.webp",
     id: 2,
     description: "Individual parts nr. 2",
   },
-  { image: "/images/cad/cad parts3.png", id: 3, description: "Assembly" },
+  { image: "/images/cad/cad parts3.webp", id: 3, description: "Assembly" },
 ];
 
 const data3 = [
-  { image: "/images/cad/cadknife4.png", id: 4 },
-  { image: "/images/cad/cadknife2.png", id: 5 },
-  { image: "/images/cad/cadknife1.png", id: 6 },
-  { image: "/images/cad/cadknife3.png", id: 7 },
+  { image: "/images/cad/cadknife4.webp", id: 4 },
+  { image: "/images/cad/cadknife2.webp", id: 5 },
+  { image: "/images/cad/cadknife1.webp", id: 6 },
+  { image: "/images/cad/cadknife3.webp", id: 7 },
 ];
 
 const data4 = [
-  { image: "/images/cad/popsicle1.png", id: 8 },
-  { image: "/images/cad/popsicle2.png", id: 9 },
+  { image: "/images/cad/popsicle1.webp", id: 8 },
+  { image: "/images/cad/popsicle2.webp", id: 9 },
 ];
 
 export default function cad() {
+
+  const dataArray = [...data2, ...data3,...data4]
+
+
   const [modelPath, setModelPath] = useState('/stl/butterfly_open.glb');
   const [modelOpen, setModelOpen] = useState(false);
   const toggleModel= () => {
@@ -115,7 +123,8 @@ export default function cad() {
       <div style={{ paddingTop: "1rem" }} />
 
       <div className={styles.linkContainerCad}>
-        <h1 className={styles.titleWithoutPaddingCad}>Computer Aided Design</h1>
+        {/* <h1 className={styles.titleWithoutPaddingCad}>Computer Aided Design</h1> */}
+        <h1 className={styles.title}>Computer Aided Design</h1>
 
         <div style={{ padding: "1rem" }} />
 
@@ -169,7 +178,7 @@ export default function cad() {
             style={{
               filter: "blur(20px)",
               translateX: -100,
-              backgroundImage: "url('/images/cad/cadimage.png')",
+              backgroundImage: "url('/images/cad/cadimage.webp')",
               opacity: 1,
             }}
           />
@@ -214,7 +223,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-<ImageGallery data={data2} />
+<ImageGallery data={data2}w={400}h={400} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -227,7 +236,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data3} />
+        <ImageGallery data={data3}w={400}h={400} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -240,7 +249,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data4} />
+        <ImageGallery data={data4}w={400}h={400} />
 
       </div>
 
