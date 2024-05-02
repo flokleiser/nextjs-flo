@@ -8,7 +8,7 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import PropTypes from 'prop-types';
 
-const ImageGallery = ({data, w, h, desc, dColor, datas}) => {
+const ImageGallery = ({data, w, h, desc, dColor, datas, vertical}) => {
 
 ImageGallery.propTypes = {
   data: PropTypes.arrayOf(
@@ -22,7 +22,8 @@ ImageGallery.propTypes = {
   w: PropTypes.number.isRequired,
   desc: PropTypes.bool.isRequired,
   dColor: PropTypes.string,
-  datas:PropTypes.array.isRequired
+  datas:PropTypes.array.isRequired,
+  vertical:PropTypes.bool
 };
 
 
@@ -222,7 +223,10 @@ return (
         <div className="">
           <div className="p-3 container mx-auto">
             <div className="py-2"></div>
-            <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
+            <div 
+            className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 "
+            style={{flexDirection: vertical ? "column" : "row"}} 
+            >
               {data.map((x) => (
                 <article
                 key="i1"
@@ -232,7 +236,6 @@ return (
                     <Image
                       width={w}
                       height={h}
-                      // priority
                       priority="true"
                       className={`max-h-1500 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                         selectedImage ? "z-0" : ""

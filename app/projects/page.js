@@ -162,7 +162,8 @@ export default function projects() {
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/illustrator2.webp")',
+            // style={{ backgroundImage: 'url("/images/cards/illustrator2.webp")',
+            style={{ backgroundImage: 'url("/images/cards/illustratorcard.png")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >

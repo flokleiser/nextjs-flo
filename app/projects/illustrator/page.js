@@ -10,7 +10,21 @@ import dynamic from 'next/dynamic'
 
 const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
 
-const data2 = [
+const data = [
+  {image: '/images/illustrator/wallpaper/full.webp', id:1},
+]
+
+const data2= [
+  {image: '/images/illustrator/wallpaper/zoom center.webp', id:2},
+  {image: '/images/illustrator/wallpaper/zoom right.webp', id:3},
+]
+
+const data3= [
+  {image: '/images/illustrator/wallpaper/zoom middle.webp', id:4},
+  {image: '/images/illustrator/wallpaper/zoom left.webp', id:5},
+]
+
+const data4 = [
   { image: '/images/illustrator/howtont/howtont2.png', id: 6},
   { image: '/images/illustrator/howtont/howtont3.png', id: 7},
   { image: '/images/illustrator/howtont/howtont4.png', id: 8},
@@ -18,7 +32,7 @@ const data2 = [
   { image: '/images/illustrator/howtont/howtont6.png', id: 10},
 ];
 
-const data3 = [
+const data5 = [
   { image: '/images/illustrator/reduce to the max/reduce5.png', id: 11},
   { image: '/images/illustrator/reduce to the max/reduce4.png', id: 12},
   { image: '/images/illustrator/reduce to the max/reduce3.png', id: 13},
@@ -93,6 +107,36 @@ export default function illustrator() {
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDividerDark} />
       <div style={{ padding: "0.5rem" }} />
+
+      <div className={styles.subtitle} 
+            style={{color:'rgb(55,55,55)'}}
+            >
+            <p>
+            Space   
+            </p>
+            </div>
+
+            <div className={styles.subtitledescription} 
+            style={{color:'rgb(55,55,55)'}}
+            >
+            <p>
+            A stylized wallpaper, inspired by artwork from Tyler Pate (@thecreativepain)
+            </p>
+            </div>
+           
+
+           <div className='flex flex-row items-center'>
+            <ImageGallery data={data}w={900}h={900}datas={[...data,...data2,...data3,...data4,...data5]} />
+            <ImageGallery data={data2}w={250}h={250}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
+            <ImageGallery data={data3}w={250}h={250}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
+           
+           </div>
+          
+
+
+            <div style={{ padding: "0.5rem" }} />
+      <hr className={styles.pageDividerDark} />
+      <div style={{ padding: "0.5rem" }} />
             
 
             <div className={styles.subtitle} 
@@ -111,7 +155,7 @@ export default function illustrator() {
             </p>
             </div>
            
-            <ImageGallery data={data2}w={400}h={400}datas={[...data2,...data3]} />
+            <ImageGallery data={data4}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]} />
            
           
 
@@ -137,7 +181,7 @@ export default function illustrator() {
             </p>
             </div>
 
-            <ImageGallery data={data3}w={400}h={400}datas={[...data2,...data3]} />
+            <ImageGallery data={data5}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]} />
 
            
            </div>
