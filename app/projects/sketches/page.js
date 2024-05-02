@@ -6,10 +6,12 @@ import Link from 'next/link';
 import { PiXCircle } from "react-icons/pi"; 
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
-// import RootLayout from '@/app/layout'; 
 import dynamic from 'next/dynamic';
 
 
+const ImageGallery = dynamic(() => 
+  import( "@/app/components/ImageGallery")
+)
 
 const data = [
   {image: '/images/sketches/sketch test scan website2.png', id: 0},
@@ -20,10 +22,10 @@ const data = [
 ];
 
 const data2 = [
-  {image: '/images/sketches/metal2.png', id: 5},
+  {image: '/images/sketches/metal.png', id: 5},
   {image: '/images/sketches/cat3.png', id: 6},
   {image: '/images/sketches/dragon2.png', id: 7},
-  {image: '/images/sketches/illusions2.png', id: 8},
+  {image: '/images/sketches/illusions.png', id: 8},
 ];
 
 const data3 = [
@@ -34,105 +36,102 @@ const data3 = [
 
 export default function sketches() {
 
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+//   const [selectedImage, setSelectedImage] = useState(null);
+//   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleResetClick = () => {
-    setSelectedImage(null);
-    setCurrentIndex(0);
-    document.documentElement.style.overflow = 'auto';
-    document.body.style.overflow = 'auto';
-  };
+//   const handleResetClick = () => {
+//     setSelectedImage(null);
+//     setCurrentIndex(0);
+//     document.documentElement.style.overflow = 'auto';
+//     document.body.style.overflow = 'auto';
+//   };
 
-  /* make image big */
-  const handleImageClick = (imageSrc) => {
-    const dataArray = [...data, ...data2, ...data3];
-    const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
-    if (selectedIndex !== -1) {
-      setSelectedImage(imageSrc);
-      setCurrentIndex(dataArray[selectedIndex].id);
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.overflow = 'hidden';
-    }
-  };
+//   const handleImageClick = (imageSrc) => {
+//     const dataArray = [...data, ...data2, ...data3];
+//     const selectedIndex = dataArray.findIndex((item) => item.image === imageSrc);
+//     if (selectedIndex !== -1) {
+//       setSelectedImage(imageSrc);
+//       setCurrentIndex(dataArray[selectedIndex].id);
+//       document.documentElement.style.overflow = 'hidden';
+//       document.body.style.overflow = 'hidden';
+//     }
+//   };
 
-  const handlePrevImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
-      const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
-    }
-  };
-
-
-  const handleNextImage = () => {
-    if (selectedImage !== null) {
-      const dataArray = [...data, ...data2, ...data3];
-      const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
-      const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
-      setCurrentIndex(dataArray[newIndex].id);
-      setSelectedImage(dataArray[newIndex].image);
-    }
-  };
+//   const handlePrevImage = () => {
+//     if (selectedImage !== null) {
+//       const dataArray = [...data, ...data2, ...data3];
+//       const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
+//       const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
+//       setCurrentIndex(dataArray[newIndex].id);
+//       setSelectedImage(dataArray[newIndex].image);
+//     }
+//   };
 
 
+//   const handleNextImage = () => {
+//     if (selectedImage !== null) {
+//       const dataArray = [...data, ...data2, ...data3];
+//       const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
+//       const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
+//       setCurrentIndex(dataArray[newIndex].id);
+//       setSelectedImage(dataArray[newIndex].image);
+//     }
+//   };
 
-/* handleoutsideclick*/
-useEffect(() => {
-  const handleOutsideClick = (event) => {
-    const imageElement = document.querySelector("#overlay img");
-    const leftButton = document.querySelector("#leftButton");
-    const rightButton = document.querySelector("#rightButton");
+
+
+// useEffect(() => {
+//   const handleOutsideClick = (event) => {
+//     const imageElement = document.querySelector("#overlay img");
+//     const leftButton = document.querySelector("#leftButton");
+//     const rightButton = document.querySelector("#rightButton");
  
 
-    if (imageElement) {
-       const imageRect = imageElement.getBoundingClientRect();
+//     if (imageElement) {
+//        const imageRect = imageElement.getBoundingClientRect();
 
-      if (
-        event.clientX < imageRect.left ||
-        event.clientX > imageRect.right ||
-        event.clientY < imageRect.top ||
-        event.clientY > imageRect.bottom
-        ) {
-        if (
-          event.target !== leftButton &&
-          event.target !== rightButton &&
-          !leftButton.contains(event.target) &&
-          !rightButton.contains(event.target)
-        ) {
-        handleResetClick();
-        }
-      }
-    }
-  };
+//       if (
+//         event.clientX < imageRect.left ||
+//         event.clientX > imageRect.right ||
+//         event.clientY < imageRect.top ||
+//         event.clientY > imageRect.bottom
+//         ) {
+//         if (
+//           event.target !== leftButton &&
+//           event.target !== rightButton &&
+//           !leftButton.contains(event.target) &&
+//           !rightButton.contains(event.target)
+//         ) {
+//         handleResetClick();
+//         }
+//       }
+//     }
+//   };
 
-  document.addEventListener("mouseup", handleOutsideClick);
+//   document.addEventListener("mouseup", handleOutsideClick);
 
-  return () => {
-    document.removeEventListener("mouseup", handleOutsideClick);
-  };
-}, []);
+//   return () => {
+//     document.removeEventListener("mouseup", handleOutsideClick);
+//   };
+// }, []);
 
-/* handlekeydown*/
-useEffect(() => {
-  const handleKeyDown = (event) => {
-  if (event.key === 'Escape') {
-      handleResetClick();
-  } else if (event.key === 'ArrowLeft') {
-    handlePrevImage();
-  } else if (event.key === 'ArrowRight') {
-    handleNextImage();
-  }
-};
+// useEffect(() => {
+//   const handleKeyDown = (event) => {
+//   if (event.key === 'Escape') {
+//       handleResetClick();
+//   } else if (event.key === 'ArrowLeft') {
+//     handlePrevImage();
+//   } else if (event.key === 'ArrowRight') {
+//     handleNextImage();
+//   }
+// };
 
-window.addEventListener('keydown', handleKeyDown);
+// window.addEventListener('keydown', handleKeyDown);
 
-return () => {
-  window.removeEventListener('keydown', handleKeyDown);
-};
-}, [handleResetClick, handlePrevImage, handleNextImage]);
+// return () => {
+//   window.removeEventListener('keydown', handleKeyDown);
+// };
+// }, [handleResetClick, handlePrevImage, handleNextImage]);
 
 
 
@@ -143,7 +142,6 @@ useEffect(() => {
 
     return (
 
-      // <RootLayout>
       <main className={styles.main}>
               <div className="relative 
    flex 
@@ -202,8 +200,12 @@ useEffect(() => {
             <div style={{ padding: "0.5rem" }} />
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
+      
+      <ImageGallery data={data}w={400}h={400} /> 
+      <ImageGallery data={data2}w={400}h={400} />
+      <ImageGallery data={data3}w={400}h={400} />
          
-            <AnimatePresence>
+            {/* <AnimatePresence>
               {selectedImage && (
                <motion.div
                 id="overlay" 
@@ -337,7 +339,7 @@ useEffect(() => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
             
             </div>
             

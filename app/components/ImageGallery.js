@@ -6,11 +6,24 @@ import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import PropTypes from 'prop-types';
 
 
 
 
 const ImageGallery = ({data, w, h}) => {
+
+ImageGallery.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+      description: PropTypes.string, // Make the description prop optional
+    })
+  ).isRequired,
+  h: PropTypes.number.isRequired,
+  w: PropTypes.number.isRequired,
+};
 
 
 const [selectedImage, setSelectedImage] = useState(null);

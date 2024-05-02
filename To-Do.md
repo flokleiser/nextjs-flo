@@ -3,10 +3,11 @@ ___
 
 ## Imagegallery
 
-- [ ] Customizable height and width property
-- [ ] Figure out how to click over to all images
 - [ ] Figure out how to add optional styling for image descriptions
+
 - [ ] Look into imagegallery using "i1" as key prop, instead of a unique index
+- [x] Customizable height and width property
+- [ ] Figure out how to click over to all images
 
 
 ## Page performance:

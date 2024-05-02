@@ -223,7 +223,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-<ImageGallery data={data2}w={400}h={400}dataIndex={[...data2, ...data3, ...data4]} />
+<ImageGallery data={data2}w={400}h={400} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
