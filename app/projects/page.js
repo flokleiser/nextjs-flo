@@ -58,7 +58,7 @@ export default function projects() {
             className={styles.card}
             href = '/projects/sketches'
             style={{ 
-                    backgroundImage: 'url("/images/cards/sketch1.png")',
+                    backgroundImage: 'url("/images/cards/sketch1.webp")',
                     backgroundSize: '102%',
                     backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export default function projects() {
             <Link
             href = '/projects/creative-coding'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.png")' ,
+            style={{ backgroundImage: 'url("/images/cards/creativecodingwhite3.webp")' ,
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function projects() {
             <Link
            href='/projects/skylands'
            className={styles.card}
-           style={{ backgroundImage: 'url("/images/cards/skylandslogo5 transparentwide.png")',
+           style={{ backgroundImage: 'url("/images/cards/skylandslogo5 transparentwide.webp")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center',
           }}
@@ -102,7 +102,7 @@ export default function projects() {
                 className={styles.card}
                 rel="noopener noreferrer"
                 href = '/projects/cad'
-                style={{ backgroundImage: 'url("/images/cards/cadwhite.png")',
+                style={{ backgroundImage: 'url("/images/cards/cadwhite.webp")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
             >
@@ -116,7 +116,7 @@ export default function projects() {
             href = '/projects/springFlowers'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/flowercardWhite.png")',
+            style={{ backgroundImage: 'url("/images/cards/flowercardWhite.webp")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -129,7 +129,7 @@ export default function projects() {
             <Link
             href = '/projects/momentfulness'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/momentfulness card test 4.png")' ,
+            style={{ backgroundImage: 'url("/images/cards/momentfulness card test 4.webp")' ,
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -147,7 +147,7 @@ export default function projects() {
             <Link
             href = '/projects/animations'
             className={styles.card}
-            style={{ backgroundImage: 'url("/images/cards/animlogo transparent5.png")',
+            style={{ backgroundImage: 'url("/images/cards/animlogo transparent5.webp")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             rel="noopener noreferrer"
@@ -162,7 +162,7 @@ export default function projects() {
             href = '/projects/illustrator'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/illustrator2.png")',
+            style={{ backgroundImage: 'url("/images/cards/illustrator2.webp")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -176,7 +176,7 @@ export default function projects() {
             href = '/projects/voxel'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/voxelwhite5.png")',
+            style={{ backgroundImage: 'url("/images/cards/voxelwhite5.webp")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
@@ -192,7 +192,7 @@ export default function projects() {
             href = '/projects/crafts'
             className={styles.card}
             rel="noopener noreferrer"
-            style={{ backgroundImage: 'url("/images/cards/craft card 4.png")',
+            style={{ backgroundImage: 'url("/images/cards/craft card 4.webp")',
             backgroundSize: '102%',
             backgroundPosition: 'center'}}
             >
