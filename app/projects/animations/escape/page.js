@@ -86,7 +86,8 @@ export default function escape() {
 
       <div className={styles.linkContainerAnimationsBackground} >
 
-      <h1 className={styles.titleWithoutPadding}>Escape</h1>
+      {/* <h1 className={styles.titleWithoutPadding}>Escape</h1> */}
+      <h1 className={styles.title}>Escape</h1>
 
       <div className={styles.subtitledescription}>
         <p>
@@ -153,7 +154,8 @@ export default function escape() {
       </div>
       </div>
 
-      <div style={{ padding: "2rem" }}> </div>
+      {/* <div style={{ padding: "2rem" }}> </div> */}
+      <div style={{ padding: "0.3rem" }}> </div>
     </main>
   );
 }

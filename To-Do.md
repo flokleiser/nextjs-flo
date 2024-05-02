@@ -1,6 +1,16 @@
 # To-Do/Ideas List:
 ___
 
+
+## IMPORTANT
+- [ ] Fix title heights
+- [ ] Add lazy loading to imagegallery-components
+
+
+## Imagegallery
+- [ ] Figure out how to click over to all images
+
+
 ## Page performance:
 
 - [ ] Look into Cumulative Layout Shift

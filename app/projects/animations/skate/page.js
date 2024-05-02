@@ -90,7 +90,8 @@ export default function skate() {
             <div style={{paddingTop:'1rem'}} />
 
 <div className={styles.linkContainerAnimationsBackground} >
-<h1 className={styles.titleWithoutPadding}>
+{/* <h1 className={styles.titleWithoutPadding}> */}
+<h1 className={styles.title}>
 
               Skate Animations
             </h1>
@@ -219,7 +220,8 @@ export default function skate() {
 
 </div>
 
-            <div style={{ padding: '2rem' }}> </div>
+            {/* <div style={{ padding: 'rem' }}> </div> */}
+            <div style={{ padding: "0.3rem" }}> </div>
         </main>
     )
 }

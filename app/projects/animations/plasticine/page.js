@@ -92,7 +92,8 @@ export default function plasticine() {
             <div style={{paddingTop:'1rem'}} />
 
 <div className={styles.linkContainerAnimationsBackground} >
-<h1 className={styles.titleWithoutPadding}>
+{/* <h1 className={styles.titleWithoutPadding}> */}
+<h1 className={styles.title}>
 
               Plasticine (A)live
             </h1>
@@ -165,7 +166,8 @@ export default function plasticine() {
 
 </div>
 
-            <div style={{ padding: '2rem' }}> </div>
+            {/* <div style={{ padding: '2rem' }}> </div> */}
+            <div style={{ padding: "0.3rem" }}> </div>
 
         </main>
 

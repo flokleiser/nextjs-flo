@@ -169,7 +169,8 @@ return () => {
 <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerIllustrator} >
 
-      <h1 className={styles.titleWithoutPaddingDark} >
+      {/* <h1 className={styles.titleWithoutPaddingDark} > */}
+      <h1 className={styles.title} style={{color:'rgba(50,50,50,1)', textDecoration:'underline 5px rgba(var(--background-start-rgb), 0.5)' }} >
 
              Illustrator Artworks
             </h1>

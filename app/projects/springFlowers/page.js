@@ -107,7 +107,8 @@ export default function flowers() {
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerFlowers}>
-        <h1 className={styles.titleWithoutPadding}>Flowers</h1>
+        {/* <h1 className={styles.titleWithoutPadding}>Flowers</h1> */}
+        <h1 className={styles.title}>Flowers</h1>
 
         <div className={styles.subtitledescription}>
           <p>

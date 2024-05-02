@@ -163,7 +163,8 @@ return () => {
             <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerVoxel} >
 
-      <h1 className={styles.titleWithoutPadding}>
+      {/* <h1 className={styles.titleWithoutPadding}> */}
+      <h1 className={styles.title}>
 
              Voxel Art 
             </h1>

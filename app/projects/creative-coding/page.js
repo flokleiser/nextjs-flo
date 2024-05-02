@@ -368,7 +368,8 @@ export default function creativeCoding() {
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerCC}>
-        <h1 className={styles.titleWithoutPadding}> Creative Coding </h1>
+        {/* <h1 className={styles.titleWithoutPadding}> Creative Coding </h1> */}
+        <h1 className={styles.title}> Creative Coding </h1>
 
         <div className={styles.subtitledescription}>
           <p>
@@ -434,9 +435,9 @@ export default function creativeCoding() {
           <p2>Examples</p2>
         </div>
 
-        <div style={{ padding: "0.5rem" }} />
+        {/* <div style={{ padding: "0.5rem" }} />
         <hr className={styles.pageDivider} />
-        <div style={{ padding: "0.5rem" }} />
+        <div style={{ padding: "0.5rem" }} /> */}
 
         <AnimatePresence>
           {selectedImage && (

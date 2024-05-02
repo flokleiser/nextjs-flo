@@ -215,7 +215,8 @@ export default function skylands() {
       <div style={{paddingTop:'1rem'}} />
       <div className={styles.linkContainerSkylands}>
 
-      <h1 className={styles.titleWithoutPadding}> Skylands </h1>
+      {/* <h1 className={styles.titleWithoutPadding}> Skylands </h1> */}
+      <h1 className={styles.title}> Skylands </h1>
 
 
       <div className={styles.subtitledescription}>
