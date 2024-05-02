@@ -116,7 +116,7 @@ export default function Home() {
         <div className={styles.homepagePortfolio} style={{ zIndex: -700 }}>
           <div className={`${styles.cardHomepagePortfolio} ${animationClass}`}>
             <Image
-              src="/images/homepage/portfolio homepage2.png"
+              src="/images/homepage/portfolio homepage2.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
@@ -134,7 +134,7 @@ export default function Home() {
             style={{ animationDelay: "0s" }}
           >
             <Image
-              src="/images/homepage/new2/1.png"
+              src="/images/homepage/new2/1.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
@@ -147,7 +147,7 @@ export default function Home() {
             style={{ animationDelay: "0.1s" }}
           >
             <Image
-              src="/images/homepage/new2/2.png"
+              src="/images/homepage/new2/2.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
@@ -160,7 +160,7 @@ export default function Home() {
             style={{ animationDelay: "0.2s" }}
           >
             <Image
-              src="/images/homepage/new2/3.png"
+              src="/images/homepage/new2/3.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
@@ -173,7 +173,7 @@ export default function Home() {
             style={{ animationDelay: "0.3s" }}
           >
             <Image
-              src="/images/homepage/new2/4.png"
+              src="/images/homepage/new2/4.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
@@ -186,7 +186,7 @@ export default function Home() {
             style={{ animationDelay: "0.4s" }}
           >
             <Image
-              src="/images/homepage/new2/5.png"
+              src="/images/homepage/new2/5.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
@@ -199,7 +199,7 @@ export default function Home() {
             style={{ animationDelay: "0.5s" }}
           >
             <Image
-              src="/images/homepage/new2/6.png"
+              src="/images/homepage/new2/6.webp"
               width={1100}
               height={1000}
               style={{ width: '100%', height: 'auto' }}
