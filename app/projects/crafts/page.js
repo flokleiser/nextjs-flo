@@ -87,11 +87,11 @@ export default function crafts() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
            
-      <ImageGallery data={data} /> 
+      <ImageGallery data={data} w={400} h={400} /> 
 
               
 
-      <ImageGallery data={data2} /> 
+      <ImageGallery data={data2} w={400} h={400} /> 
 
               </div>
               <div style={{ padding: "0.4rem" }}> </div>

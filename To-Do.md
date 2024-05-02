@@ -1,14 +1,12 @@
 # To-Do/Ideas List:
 ___
 
-
-## IMPORTANT
-- [ ] Fix title heights
-- [ ] Add lazy loading to imagegallery-components
-
-
 ## Imagegallery
+
+- [ ] Customizable height and width property
 - [ ] Figure out how to click over to all images
+- [ ] Figure out how to add optional styling for image descriptions
+- [ ] Look into imagegallery using "i1" as key prop, instead of a unique index
 
 
 ## Page performance:
@@ -19,9 +17,12 @@ https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
 
 - [ ] Look into why page transitions are lagging
 
+
+___
+
 ## Mobile:
 - [x] Fix Homepage mobile
-- [ ] Fix cad page
+- [x] Fix cad page
 
 
 ## Footer + Navbar
@@ -34,7 +35,6 @@ https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
     - [x] put the actual footer behind the text
     - [x] Footer animation from below when hovering
 
-___
 ## Fun:
 - [x] Interactive Logo
     - [x] Change font

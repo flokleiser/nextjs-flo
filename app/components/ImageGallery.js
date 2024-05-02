@@ -9,7 +9,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 
-const ImageGallery = ({data}) => {
+
+const ImageGallery = ({data, w, h}) => {
+
 
 const [selectedImage, setSelectedImage] = useState(null);
 const [currentIndex, setCurrentIndex] = useState(0);
@@ -179,14 +181,22 @@ return (
             <div className="md:flex md:gap-2 md:grid-cols-2 lg:grid-cols-3 ">
               {data.map((x) => (
                 <article
-                  key="i1"
+                key="i1"
                   className="p-3 mb-6  transition duration-300 group transform hover:-translate-y-2 hover:shadow-2xl rounded-2xl cursor-pointer"
                 >
                   <div className="relative rounded-2xl">
                     <Image
-                      width={400}
-                      height={400}
-                      className={`max-h-80 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
+
+
+                      // width={400}
+                      // height={400}
+
+
+                      width={w}
+                      height={h}
+
+
+                      className={`max-h-1000 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                         selectedImage ? "z-0" : ""
                       }`}
                       src={x.image}
