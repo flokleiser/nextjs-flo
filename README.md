@@ -30,10 +30,9 @@ ___
 - [PDF](https://floriankleiser.com/projects/portfolio)
 
 ## About me & External Links
-- CV
-- Infos about me
-- Google Drive
-- Github
+- [CV](https://floriankleiser.com/CV)
+- [Google Drive](https://drive.google.com/drive/folders/1KUPLIgeu3yFQvicrqMEfe6qayze_X2ea)
+- [Github](https://github.com/flokleiser)
 - [YouTube (for videos)](https://floriankleiser.com/projects/links)
 
 ## Speed insights
