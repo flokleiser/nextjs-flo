@@ -232,7 +232,8 @@ return (
                     <Image
                       width={w}
                       height={h}
-                      priority
+                      // priority
+                      priority="true"
                       className={`max-h-1500 rounded-2xl w-full object-cover transition-transform duration-300 transform group-hover:scale-105 ${
                         selectedImage ? "z-0" : ""
                       }`}
