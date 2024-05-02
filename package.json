@@ -24,7 +24,6 @@
     "react-loader-spinner": "^6.1.6",
     "react-spinners": "^0.13.8",
     "react-syntax-highlighter": "^15.5.0",
-    "sharp": "^0.33.3",
     "three": "^0.157.0",
     "use-debounce": "^10.0.0"
   },
