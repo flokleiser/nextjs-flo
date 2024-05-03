@@ -2,7 +2,7 @@
 import styles from "@/app/page.module.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { AnimatePresence, motion, stagger } from "framer-motion";
 
 import SearchBar from "@/app/components/SearchBar";
@@ -466,8 +466,11 @@ export default function Navbar() {
             </motion.div>
           )}
         </AnimatePresence>
+          
+      <Suspense>
       <SearchBar onSearch={handleSearch} style={{zIndex:'-100'}}/>
       {showSearchResults}
+      </Suspense>
     </div>
   );
 }
