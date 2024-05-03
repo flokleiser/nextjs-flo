@@ -25,8 +25,8 @@ const data2 = [
 ];
 
 const data3 = [
-{ image: '/images/sketches/cartoon2.webp', id: 9 },
-{ image: '/images/sketches/corona memory3.webp', id: 10 },
+  { image: '/images/sketches/corona memory3.webp', id: 10 },
+  { image: '/images/sketches/cartoon.webp', id: 9 },
 { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
@@ -105,7 +105,6 @@ useEffect(() => {
             
             </div>
             
-            {/* <div style={{ padding: '2rem' }}> </div> */}
             <div style={{ padding: "0.5rem" }}> </div>
         
    
