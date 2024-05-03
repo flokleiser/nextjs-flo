@@ -25,9 +25,9 @@ const data2 = [
 ];
 
 const data3 = [
-{ image: '/images/sketches/cartoon2.webp', id: 9 },
-{ image: '/images/sketches/corona memory3.webp', id: 10 },
-{ image: '/images/sketches/spaceship sketch2.webp', id: 11 },
+  { image: '/images/sketches/corona memory3.webp', id: 10 },
+  { image: '/images/sketches/cartoon.webp', id: 9 },
+  { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
 export default function sketches() {
@@ -98,14 +98,13 @@ useEffect(() => {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-      <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]} /> 
-      <ImageGallery data={data2}w={400}h={400}datas={[...data,...data2,...data3]} />
-      <ImageGallery data={data3}w={400}h={400}datas={[...data,...data2,...data3]} />
+      <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} /> 
+      <ImageGallery data={data2}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} />
+      <ImageGallery data={data3}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} />
          
             
             </div>
             
-            {/* <div style={{ padding: '2rem' }}> </div> */}
             <div style={{ padding: "0.5rem" }}> </div>
         
    
