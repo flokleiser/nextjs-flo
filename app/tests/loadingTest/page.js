@@ -1,5 +1,5 @@
 "use client";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { Puff } from "react-loader-spinner";
 import { Grid } from "react-loader-spinner";
 import { Hourglass } from "react-loader-spinner";

@@ -1,6 +1,6 @@
 'use client'
 import React, {useState, useEffect} from 'react';
-import styles from 'app/page.module.css'
+import styles from '@/app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { PiXCircle } from "react-icons/pi"; 

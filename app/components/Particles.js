@@ -1,5 +1,5 @@
 "use client";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { useEffect, useRef } from "react";
 import { Assistant } from 'next/font/google';  
 

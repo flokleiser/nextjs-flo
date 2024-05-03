@@ -1,5 +1,5 @@
 "use client";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { BiSolidFileBlank, BiLink, BiLinkExternal } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";

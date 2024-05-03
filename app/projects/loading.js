@@ -1,5 +1,5 @@
 'use client'
-import styles from 'app/page.module.css'
+import styles from '@/app/page.module.css'
 import LoadingScreen from '../components/loadingScreen'
 
 

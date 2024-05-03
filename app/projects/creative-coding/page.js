@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { DiGit, DiGithubBadge } from "react-icons/di";
 import Link from "next/link";
 import Image from "next/image";

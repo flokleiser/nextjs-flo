@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import styles from "/app/page.module.css";
+import styles from "@//app/page.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useCycle } from "framer-motion";

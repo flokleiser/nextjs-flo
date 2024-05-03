@@ -1,5 +1,5 @@
 "use client";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { DiGithubBadge, DiGoogleDrive } from "react-icons/di";
 import { CiStickyNote, CiViewTimeline, CiImageOn } from "react-icons/ci";
 import { React, useState, useEffect } from "react";

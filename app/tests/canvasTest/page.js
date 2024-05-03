@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, Suspense } from "react";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { SpotLight, AmbientLight, PointLight, DirectionalLight } from "three";

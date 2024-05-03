@@ -1,6 +1,6 @@
 'use client'
 import {Tooltip} from "@nextui-org/tooltip";
-import styles from 'app/page.module.css'
+import styles from '@/app/page.module.css'
 
 export default function CenterTooltip({children}) {
 return (

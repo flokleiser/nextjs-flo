@@ -2,7 +2,7 @@
 import React from 'react';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { useState } from "react";
-import styles from 'app/page.module.css'
+import styles from '@/app/page.module.css'
 import {AnimatePresence, motion} from "framer-motion";
 import {Tooltip} from "@nextui-org/tooltip";
 

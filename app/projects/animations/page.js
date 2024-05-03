@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from "react";
-import styles from "app/page.module.css";
+import styles from "@/app/page.module.css";
 import { DiGoogleDrive } from "react-icons/di";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
