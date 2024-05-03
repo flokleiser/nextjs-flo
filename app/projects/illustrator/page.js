@@ -15,13 +15,13 @@ const data = [
 ]
 
 const data2= [
-  {image: '/images/illustrator/wallpaper/zoom center.webp', id:2},
-  {image: '/images/illustrator/wallpaper/zoom right.webp', id:3},
+  {image: '/images/illustrator/wallpaper/center 1.webp', id:2},
+  {image: '/images/illustrator/wallpaper/vehicles.webp', id:3},
 ]
 
 const data3= [
-  {image: '/images/illustrator/wallpaper/zoom middle.webp', id:4},
-  {image: '/images/illustrator/wallpaper/zoom left.webp', id:5},
+  {image: '/images/illustrator/wallpaper/skyline.webp', id:4},
+  {image: '/images/illustrator/wallpaper/buildings.webp', id:5},
 ]
 
 const data4 = [
@@ -127,8 +127,8 @@ export default function illustrator() {
 
            <div className='flex flex-row items-center'>
             <ImageGallery data={data}w={900}h={900}datas={[...data,...data2,...data3,...data4,...data5]} />
-            <ImageGallery data={data2}w={250}h={250}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
-            <ImageGallery data={data3}w={250}h={250}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
+            <ImageGallery data={data2}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
+            <ImageGallery data={data3}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
            
            </div>
           
