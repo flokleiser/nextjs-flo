@@ -126,9 +126,9 @@ export default function illustrator() {
            
 
            <div className='flex flex-row items-center'>
-            <ImageGallery data={data}w={900}h={900}datas={[...data,...data2,...data3,...data4,...data5]} />
-            <ImageGallery data={data2}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
-            <ImageGallery data={data3}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true} />
+            <ImageGallery data={data}w={900}h={900}datas={[...data,...data2,...data3,...data4,...data5]}desc={false} />
+            <ImageGallery data={data2}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true}desc={false} />
+            <ImageGallery data={data3}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true}desc={false} />
            
            </div>
           
@@ -155,7 +155,7 @@ export default function illustrator() {
             </p>
             </div>
            
-            <ImageGallery data={data4}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]} />
+            <ImageGallery data={data4}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]}desc={false} />
            
           
 
@@ -181,7 +181,7 @@ export default function illustrator() {
             </p>
             </div>
 
-            <ImageGallery data={data5}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]} />
+            <ImageGallery data={data5}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]}desc={false} />
 
            
            </div>

@@ -222,7 +222,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-<ImageGallery data={data2}w={400}h={400}datas={[...data2,...data3,...data4]} />
+<ImageGallery data={data2}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -235,7 +235,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data3}w={400}h={400}datas={[...data2,...data3,...data4]} />
+        <ImageGallery data={data3}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -248,7 +248,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data4}w={400}h={400}datas={[...data2,...data3,...data4]} />
+        <ImageGallery data={data4}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
 
       </div>
 
