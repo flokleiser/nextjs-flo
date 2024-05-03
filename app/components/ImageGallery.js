@@ -134,7 +134,9 @@ useEffect(() => {
 
 return ( 
 
-    <div>
+    <div
+    priority="true"
+    >
     <AnimatePresence>
           {selectedImage && (
             <motion.div
