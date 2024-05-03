@@ -26,7 +26,7 @@ const data2 = [
 
 const data3 = [
   { image: '/images/sketches/corona memory3.webp', id: 10 },
-  { image: '/images/sketches/cartoon.webp', id: 9 },
+  { image: '/images/sketches/cartoon new.webp', id: 9 },
   { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
@@ -100,7 +100,7 @@ useEffect(() => {
 
       <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} /> 
       <ImageGallery data={data2}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} />
-      <ImageGallery data={data3}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} />
+      <ImageGallery data={data3}w={500}h={500}datas={[...data,...data2,...data3]}desc={false} />
          
             
             </div>
