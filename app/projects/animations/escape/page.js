@@ -1,7 +1,7 @@
 "use client";
 import styles from "@/app/page.module.css";
 import Link from "next/link";
-import LightButton from "app/components/LightButton.js";
+import LightButton from "@/app/components/LightButton.js";
 import { DiGoogleDrive } from "react-icons/di";
 import { AnimatePresence, motion } from "framer-motion";
 import { LuLightbulbOff, LuLightbulb } from "react-icons/lu";
