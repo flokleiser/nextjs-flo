@@ -14,7 +14,7 @@ import {
 } from "framer-motion";
 import { DiGoogleDrive } from "react-icons/di";
 import { FaLock } from "react-icons/fa";
-import TestPage from "app/tests/testpage.js"
+import TestPage from "@/app/tests/testpage.js"
 
 export default function testPage() {
 
