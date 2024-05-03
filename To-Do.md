@@ -14,6 +14,7 @@ ___
 - [ ] Look into Cumulative Layout Shift
 https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
 --> page contents, probably image gallery
+
 - [ ] Look into why page transitions are lagging
 
 ___
