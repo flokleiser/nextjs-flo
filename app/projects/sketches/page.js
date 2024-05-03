@@ -27,7 +27,7 @@ const data2 = [
 const data3 = [
   { image: '/images/sketches/corona memory3.webp', id: 10 },
   { image: '/images/sketches/cartoon.webp', id: 9 },
-{ image: '/images/sketches/spaceship sketch2.webp', id: 11 },
+  { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
 export default function sketches() {
