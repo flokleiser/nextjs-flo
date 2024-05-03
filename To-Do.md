@@ -1,15 +1,6 @@
 # To-Do/Ideas List:
 ___
 
-## Imagegallery
-
-- [ ] Blur placeholders for images?
-
-- [x] Priority true for whole visual side of component
-- [x] Figure out how to click over to all images
-- [x] Customizable height and width property
-- [x] Figure out how to add optional styling for image descriptions
-
 ## Page performance:
 - [ ] Look into Cumulative Layout Shift
 https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
@@ -18,6 +9,13 @@ https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
 - [ ] Look into why page transitions are lagging
 
 ___
+
+## Imagegallery
+
+- [x] Priority true for whole visual side of component
+- [x] Figure out how to click over to all images
+- [x] Customizable height and width property
+- [x] Figure out how to add optional styling for image descriptions
 
 ## Mobile:
 - [x] Fix Homepage mobile
