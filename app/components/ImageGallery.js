@@ -136,6 +136,7 @@ return (
 
     <div
     priority="true"
+    fetchpriority="high"
     >
     <AnimatePresence>
           {selectedImage && (

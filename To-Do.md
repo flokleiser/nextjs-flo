@@ -5,6 +5,7 @@ ___
 
 - [ ] Blur placeholders for images?
 
+- [x] Priority true for whole visual side of component
 - [x] Figure out how to click over to all images
 - [x] Customizable height and width property
 - [x] Figure out how to add optional styling for image descriptions
