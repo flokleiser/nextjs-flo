@@ -8,20 +8,27 @@ import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import dynamic from "next/dynamic";
 // import ModelViewer from "@/app/components/ModelViewer"
+import handleModelChange from "@/app/components/ModelViewer"
 
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
 
-const modelPaths = 
-[
-  "/stl/butterfly_open.glb"
+const modelPaths = [
+  "/stl/butterfly_open.glb",
+  "/stl/flowers/tulip_both.glb",
 ];
 
 export default function flowers() {
   useEffect(() => {
     document.title = "Projects - Spring Flowers";
   }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const handleModelChange = (index) => {
+    setCurrentIndex(index);
+    console.log(index, modelPaths[index])
+  };
 
 
 
@@ -75,10 +82,37 @@ export default function flowers() {
         <div style={{ display: "flex" }}>
           <div className={styles.linkContainerFlowerModel}>
 
-
-<ModelViewer modelPaths={modelPaths}intensity={1}/>
+<ModelViewer modelPaths={modelPaths[currentIndex]}intensity={1}/>
 
           </div>
+
+          <div className={styles.flowerButtonDiv}>
+
+<button className={styles.flowerButton} onClick={() => handleModelChange(0)}>
+  <h1> Snowdrop</h1>
+</button>
+
+<button className={styles.flowerButton} onClick={() => handleModelChange(1)}>
+  <h1> Tulip </h1>
+</button>
+
+<button className={styles.flowerButton} onClick={() => handleModelChange(2)}>
+  <h1> Daffodil</h1>
+</button>
+
+<button className={styles.flowerButton} onClick={() => handleModelChange(3)}>
+  <h1> Rose </h1>
+</button>
+
+<button className={styles.flowerButton} onClick={() => handleModelChange(4)}>
+  <h1> Sunflower</h1>
+</button>
+
+<button className={styles.flowerButton} onClick={() => handleModelChange(5)}>
+  <h1> Ivy</h1>
+</button>
+
+</div>
 
         </div>
 

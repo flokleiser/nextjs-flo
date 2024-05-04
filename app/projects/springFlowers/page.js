@@ -9,7 +9,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import dynamic from "next/dynamic";
 
 const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
-
+const ModelViewer = dynamic(() => import( "@/app/components/ModelViewer"))
 
 const data = [
   { image: "/images/illustrator/flowers/snowdrop.png", id: 0 },
@@ -30,28 +30,6 @@ const modelPaths = [
 ];
 
 modelPaths.onload = console.log('loaded');
-
-
-function Model({modelPath}) {
-  const {scene} = useLoader(GLTFLoader, modelPath)
-  const copiedScene = useMemo(() => scene.clone(),[scene]);
-  const prim = useRef();
-  const light = useRef();
-
-
-  useFrame(({ camera }) => {
-    light.current.position.copy(camera.position);
-    light.current.rotation.copy(camera.rotation);
-  });
-
-  return (
-    <>
-  <primitive ref={prim} object={copiedScene}  />
-  <spotLight ref={light} position={[0,0,15]} intensity={20} distance={10} angle={Math.PI / 4} penumbra={0.5} />
-  </>
-  );
-}
-
 
 export default function flowers() {
   useEffect(() => {
@@ -107,7 +85,6 @@ export default function flowers() {
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerFlowers}>
-        {/* <h1 className={styles.titleWithoutPadding}>Flowers</h1> */}
         <h1 className={styles.title}>Flowers</h1>
 
         <div className={styles.subtitledescription}>
@@ -131,12 +108,8 @@ export default function flowers() {
 
         <div style={{ display: "flex" }}>
           <div className={styles.linkContainerFlowerModel}>
-            <Canvas>
-              <directionalLight color="white" position={[2, 0, 5]} />
-              <ambientLight intensity={0.3}/>
-              <OrbitControls />
-              <Model modelPath={modelPaths[currentIndex]}/>
-            </Canvas>
+          
+          <ModelViewer modelPaths={modelPaths[currentIndex]}intensity={20}/>
           </div>
 
           <div className={styles.flowerButtonDiv}>

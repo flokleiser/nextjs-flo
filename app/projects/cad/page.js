@@ -9,32 +9,19 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-// import ImageGallery from "@/app/components/ImageGallery";
 import dynamic from 'next/dynamic'
 
 
 const ImageGallery = dynamic(() => 
   import( "@/app/components/ImageGallery")
 )
+const ModelViewer = dynamic(() => import("@/app/components/ModelViewer"))
 
-function Model({modelPath}) {
-  const {scene} = useLoader(GLTFLoader, modelPath)
-  const copiedScene = useMemo(() => scene.clone(),[scene]);
-  const prim = useRef();
-  const light = useRef();
 
-  useFrame(({ camera }) => {
-    light.current.position.copy(camera.position);
-    light.current.rotation.copy(camera.rotation);
-  });
-  return (
-    <>
-  <primitive ref={prim} object={copiedScene}  />
-  <spotLight ref={light} position={[0,0,15]} intensity={1} distance={10} angle={Math.PI / 4} penumbra={0.5} />
-  </>
-  );
-
-}
+const modelPaths = [
+  "/stl/butterfly_open.glb",
+  "/stl/butterfly_closed.glb"
+]
 
 const data2 = [
   {
@@ -66,15 +53,11 @@ export default function cad() {
 
 
 
-  const [modelPath, setModelPath] = useState('/stl/butterfly_open.glb');
-  const [modelOpen, setModelOpen] = useState(false);
-  const toggleModel= () => {
-    setModelPath(currentPath => 
-      currentPath === "/stl/butterfly_open.glb" ? "/stl/butterfly_closed.glb" : "/stl/butterfly_open.glb"
-    );
-    setModelOpen(!modelOpen);
-    console.log(modelOpen)
-    console.log(modelPath)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const handleModelChange = (index) => {
+    setCurrentIndex(index);
+    console.log(index, modelPaths[index])
   };
 
 
@@ -122,7 +105,6 @@ export default function cad() {
       <div style={{ paddingTop: "1rem" }} />
 
       <div className={styles.linkContainerCad}>
-        {/* <h1 className={styles.titleWithoutPaddingCad}>Computer Aided Design</h1> */}
         <h1 className={styles.title}>Computer Aided Design</h1>
 
         <div style={{ padding: "1rem" }} />
@@ -138,19 +120,15 @@ export default function cad() {
           <div style={{ padding: "1rem" }} />
 
           <div className={styles.linkContainerCADModel}>
-            <Canvas>
-              <directionalLight color="white" position={[2, 0, 5]} />
-              <OrbitControls />
-              <Model modelPath={modelPath}/>
-            </Canvas>
+            <ModelViewer modelPaths={modelPaths[currentIndex]}intensity={1}/>
 
             <div className={styles.cadModelButtons}>
-              <button className={styles.buttonCad} onClick={toggleModel}>
-              {modelOpen? (
-                <h1> Open</h1>
-                  ) : (
-                    <h1> Close</h1>
-                  )}
+              <button className={styles.buttonCad} onClick={() => handleModelChange(0)}>                 
+                <h1> Open</h1> 
+              </button>
+
+              <button className={styles.buttonCad} onClick={() => handleModelChange(1)}>
+                <h1> Closed </h1>
               </button>
             </div>
           </div>

@@ -12,8 +12,8 @@ function Model({modelPath, i}){
     const copiedScene = useMemo(() => scene.clone(),[scene]);
     const prim = useRef();
     const light = useRef();
-  
-  
+
+
     useFrame(({ camera }) => {
       light.current.position.copy(camera.position);
       light.current.rotation.copy(camera.rotation);
@@ -22,32 +22,27 @@ function Model({modelPath, i}){
     return (
       <>
     <primitive ref={prim} object={copiedScene}  />
-    {/* <primitive ref={prim} object={[scene]}  /> */}
     <spotLight ref={light} position={[0,0,15]} intensity={i} distance={10} angle={Math.PI / 4} penumbra={0.5} />
     </>
     );
-  }
+}
 
 
-export default function ModelViewer({modelPaths, intensity}) {
-
-    const [currentIndex, setCurrentIndex] = useState(0)
-
-    ModelViewer.onload = console.log(modelPaths, currentIndex)
+const ModelViewer = ({modelPaths, intensity}) => {
 
     ModelViewer.propTypes = {
         modelPaths: PropTypes.array.isRequired,
         intensity: PropTypes.number.isRequired
-        // modelPaths: PropTypes.string.isRequired,
     }
+
         return( 
         <Canvas>
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
             <OrbitControls />
-            <Model modelPath={modelPaths[currentIndex]}i={intensity} />
+            <Model modelPath={modelPaths}i={intensity}/>
         </Canvas>
         )
 
     }
-
+export default ModelViewer
