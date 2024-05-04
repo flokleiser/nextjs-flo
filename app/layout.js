@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body className={assistant.className}>
         <Navbar />
 
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait"> */}
         <motion.div
         key={pathname}
          variants={pageVariants}
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
             </div>
 
         </motion.div>
-      </AnimatePresence>
+      {/* </AnimatePresence> */}
 
       <Footer />
       </body>

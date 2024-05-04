@@ -3,8 +3,10 @@ ___
 
 
 ## Page Transitions
+
 - [ ] Look into why its loading the page before the transition
 https://www.youtube.com/watch?v=eUvzrCDc9FE
+--> the issue was animatepresence mode="wait"
 
     
 - [ ] Look into why page transitions are lagging
