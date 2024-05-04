@@ -10,9 +10,18 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const assistant = Assistant({ subsets: ['latin'] })
 
 const pageVariants = {
-  initial: { opacity: 0, x: -500 },
-  animate: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: 500 },
+  // initial: { opacity: 0, x: -500 },
+  // animate: { opacity: 1, x: 0 },
+  // exit: { opacity: 0, x: 500 },
+
+  // initial: { opacity: 0, y: -500 },
+  // animate: { opacity: 1, y: 0 },
+  // exit: { opacity: 0, y: 500 },
+
+  initial: { opacity: 0, y: 250 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -250 },
+
   transition: {duration:0.5, type:'tween', ease:'anticipate'}
 };
 
