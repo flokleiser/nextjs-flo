@@ -81,7 +81,7 @@ export default function voxel() {
       <div style={{ padding: "0.5rem" }} />
 
 
-      <ImageGallery data={data} w={1000} h={1000}desc={false} /> 
+      <ImageGallery data={data} w={1000} h={1000}desc={false}datas={[...data]} /> 
        </div>
 
        <div style={{ padding: "0.5rem" }}> </div>

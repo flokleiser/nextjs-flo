@@ -100,7 +100,7 @@ export default function flowers() {
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        <ImageGallery data={data}w={400}h={400}desc={false} />
+        <ImageGallery data={data}w={400}h={400}desc={false}datas={[...data]} />
 
         <div style={{ padding: "0.5rem" }} />
         <hr className={styles.pageDivider} />
