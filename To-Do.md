@@ -1,11 +1,9 @@
 # To-Do/Ideas List:
 ___
 
-## Page performance:
-- [ ] Look into Cumulative Layout Shift
-https://vercel.com/docs/speed-insights/metrics#cumulative-layout-shift-cls
---> page contents, probably image gallery
 
+## Page Transitions
+- [ ] Look into why its loading the page before the transition
 - [ ] Look into why page transitions are lagging
 
 ___
