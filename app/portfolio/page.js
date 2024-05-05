@@ -2,6 +2,9 @@
 import styles from '@/app/page.module.css'
 import { useEffect } from "react"
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+
+const IFrameViever = dynamic (() => import("@/app/components/IframeViewer"))
 
 export default function portfolio () {
     useEffect(() => {
@@ -50,6 +53,7 @@ z-[-1]">
         style={{width:'100vw', height: '96vh'}} 
         width="640" height="480" 
         ></iframe>
+        {/* <IFrameViever src={"https://drive.google.com/file/d/1idQPlX3VKanj_9xHR1MJJktuJ0rJPzIH/preview"} /> */}
 
 
     </main>
