@@ -94,7 +94,7 @@ export default function Home() {
     }}
     animate={{ opacity: isHoveringProjects? 0:1, 
       // y: isHoveringPortfolio ? -50:0
-      y: isHoveringPortfolio ? -75:0,
+      y: isHoveringPortfolio ? -25:0
     }}
     transition={{duration: 0.5, 
       type:"spring"
