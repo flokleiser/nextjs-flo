@@ -17,7 +17,7 @@ export default [
   { previewImage: '/images/pagePreviews/new/plasticineTest2.png', path: '/projects/animations/plasticine', title: 'Plasticine', content: 'Plasticine Animations', category: 'Animations', keywords: ['animation','clay', 'animated','after effects', 'stop motion', 'plasticine']},
   { previewImage: '/images/pagePreviews/new/skateTest2.png', path: '/projects/animations/skate', title: 'Skate', content: 'Skate Animations', category: 'Animations', keywords: ['animation','skate', 'animated','after effects', 'rotoscope', 'stop motion']},
 
-  { previewImage: '/images/pagePreviews/new/cadTest2.png', path: '/projects/cad', title: 'CAD', content: 'CAD Butterfly Knife', category: 'Projects', keywords: ['cad','butterfly', 'knife','blender']},
+  { previewImage: '/images/pagePreviews/new/cadTest2.png', path: '/projects/butterfly', title: 'Butterfly Cad', content: 'CAD Butterfly Knife', category: 'Projects', keywords: ['cad','butterfly', 'knife','blender']},
   { previewImage: '/images/pagePreviews/new/craftsTest2.png', path: '/projects/crafts', title: 'Crafts', content: 'Cardboard Crafts', category: 'Projects', keywords: ['crafts','spacecraft', 'cardboard','scrap']},
   { previewImage: '/images/pagePreviews/new/creativecodingTest2.png', path: '/projects/creative-coding', title: 'Creative Coding', content: 'Creative Coding with p5js', category: 'Projects', keywords: ['creative coding','p5js', 'processing','javascript']},
   { previewImage: '/images/pagePreviews/new/illustratorTest2.png', path: '/projects/illustrator', title: 'Illustrator', content: 'Illustrator Projects', category: 'Projects', keywords: ['illustrator','graphic design', 'comic','adobe']},

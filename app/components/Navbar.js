@@ -44,9 +44,9 @@ const navSubItems = [
     key:"skylands"
   },
   {
-    path: "/projects/cad",
-    name: "CAD",
-    key:"cad"
+    path: "/projects/butterfly",
+    name: "Butterfly",
+    key:"butterfly"
   },
   {
     path: "/projects/springFlowers",
@@ -87,7 +87,7 @@ const colorMap = {
   "/projects/sketches" :"#A9A9A9", 
   "/projects/creative-coding" :"#A9A9A9", 
   "/projects/skylands" :"#A9A9A9", 
-  "/projects/cad" :"#A9A9A9", 
+  "/projects/butterfly" :"#A9A9A9", 
   "/projects/springFlowers" :"#A9A9A9", 
   "/projects/momentfulness" :"#A9A9A9", 
   "/projects/animations" :"#A9A9A9", 
@@ -106,7 +106,7 @@ const borderColorMap = {
   "/projects/springFlowers" : "#FFFFFF",
   "/projects/momentfulness" : "#FFFFFF",
   "/projects/voxel" :"#FFFFFF", 
-  "/projects/cad" : "#FFFFFF",
+  "/projects/butterfly" : "#FFFFFF",
   "/projects/animations" : "#FFFFFF",
   "/projects/crafts" : "#FFFFFF",
   "/projects/illustrator" : "#FFFFFF",

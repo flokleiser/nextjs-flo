@@ -35,8 +35,17 @@ const ModelViewer = ({modelPaths, intensity}) => {
         intensity: PropTypes.number.isRequired
     }
 
+    const cameraProps = {
+        fov: 25, 
+        position: [0, 0, 14],
+        near: 0.1,
+        far: 1000
+    };
+
         return( 
-        <Canvas>
+        <Canvas 
+        camera={cameraProps}
+        >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
             <OrbitControls />

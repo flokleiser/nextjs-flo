@@ -101,15 +101,15 @@ export default function projects() {
             <Link
                 className={styles.card}
                 rel="noopener noreferrer"
-                href = '/projects/cad'
+                href = '/projects/butterfly'
                 style={{ backgroundImage: 'url("/images/cards/cadwhite.webp")',
                 backgroundSize: '102%',
                 backgroundPosition: 'center'}}
             >
             <h2>
-                CAD
+               Butterfly
             </h2>
-            <p>Modeling, OnShape</p>
+            <p>CAD, OnShape</p>
             </Link>
 
             <Link

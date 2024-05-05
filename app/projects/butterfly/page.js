@@ -105,9 +105,9 @@ export default function cad() {
       <div style={{ paddingTop: "1rem" }} />
 
       <div className={styles.linkContainerCad}>
-        <h1 className={styles.title}>Computer Aided Design</h1>
+        <h1 className={styles.title}>Butterfly CAD</h1>
 
-        <div style={{ padding: "1rem" }} />
+        {/* <div style={{ padding: "1rem" }} /> */}
 
         <div className={styles.subtitledescription}>
           <p>
@@ -120,7 +120,7 @@ export default function cad() {
           <div style={{ padding: "1rem" }} />
 
           <div className={styles.linkContainerCADModel}>
-            <ModelViewer modelPaths={modelPaths[currentIndex]}intensity={1}/>
+            <ModelViewer modelPaths={modelPaths[currentIndex]}intensity={5}/>
 
             <div className={styles.cadModelButtons}>
               <button className={styles.buttonCad} onClick={() => handleModelChange(0)}>                 
@@ -135,7 +135,8 @@ export default function cad() {
 
 
         <div style={{ padding: "2rem" }} />
-        <hr className={styles.pageDividerCad} />
+        {/* <hr className={styles.pageDividerCad} /> */}
+        <hr className={styles.pageDivider} />
         <div style={{ padding: "1rem" }} />
 
         <div styles={{ padding: "2rem" }}> </div>
@@ -191,7 +192,8 @@ export default function cad() {
         </motion.div>
 
         <div style={{ padding: "1rem" }} />
-        <hr className={styles.pageDividerCad} />
+        {/* <hr className={styles.pageDividerCad} /> */}
+        <hr className={styles.pageDivider} />
         <div style={{ padding: "1rem" }} />
 
         <div className={styles.subtitledescription}>
@@ -204,11 +206,12 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <div className={styles.pageDividerCad} />
+        {/* <div className={styles.pageDividerCad} /> */}
+        <hr className={styles.pageDivider} />
         <div style={{ padding: "1rem" }} />
 
         <div className={styles.subtitledescription}>
-          <p>Completed CAD design:</p>
+          <p>Completed CAD design</p>
         </div>
 
         <div styles={{ padding: "2rem" }}> </div>
@@ -217,7 +220,8 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <div className={styles.pageDividerCad} />
+        {/* <div className={styles.pageDividerCad} /> */}
+        <hr className={styles.pageDivider} />
         <div style={{ padding: "1rem" }} />
 
         <div className={styles.subtitledescription}>
