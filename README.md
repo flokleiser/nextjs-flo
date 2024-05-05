@@ -24,7 +24,7 @@ ___
 
 - [Voxel Art (MagicaVoxel)](https://floriankleiser.com/projects/voxel)
 
-- [Arts & Crafts (Cardboard)](https://floriankleiser.com/projects/crafts target=_blank)
+- [Arts & Crafts (Cardboard)](https://floriankleiser.com/projects/crafts)
 
 ## My Portfolio
 - [PDF](https://floriankleiser.com/portfolio)
