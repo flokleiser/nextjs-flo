@@ -12,7 +12,7 @@ ___
 
 - [Sketches (Analogue)](https://floriankleiser.com/projects/sketches)
 
-- [Butterfly (CAD)](https://floriankleiser.com/projects/cad)
+- [Butterfly (CAD)](https://floriankleiser.com/projects/butterfly)
 
 - [Flowers (3D Prints](https://floriankleiser.com/projects/springFlowers)
 
@@ -27,7 +27,7 @@ ___
 - [Arts & Crafts (Cardboard)](https://floriankleiser.com/projects/crafts)
 
 ## My Portfolio
-- [PDF](https://floriankleiser.com/projects/portfolio)
+- [PDF](https://floriankleiser.com/portfolio)
 
 ## About me & External Links
 - [CV](https://floriankleiser.com/CV)
