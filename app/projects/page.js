@@ -52,7 +52,8 @@ export default function projects() {
             Projects
             </h1>
 
-        <div className={styles.grid}>
+        <div className={styles.grid}
+        >
 
         <Link
             className={styles.card}
@@ -60,9 +61,15 @@ export default function projects() {
             style={{ 
                     backgroundImage: 'url("/images/cards/sketch1.webp")',
                     backgroundSize: '102%',
-                    backgroundPosition: 'center'}}
+                    backgroundPosition: 'center'
+                }}
             rel="noopener noreferrer"
             >
+            {/* <Image
+            src="/images/cards/sketch1.webp"
+            width={1000}
+            height={1000}
+            /> */}
             <h2>
                 Sketches
             </h2>
