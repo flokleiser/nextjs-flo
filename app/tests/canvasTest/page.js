@@ -113,6 +113,14 @@ export default function flowers() {
             maxPolarAngle={1.5}
             minAzimuthAngle={0}
             maxAzimuthAngle={1}
+            panSpeed={0.5}
+            // enableDamping="true"
+            // dampingFactor={0.075}
+
+//implement maxZoom, minZoom
+//implement panSpeed
+//implement dampingFactor
+
             />
             <Model modelPath={modelPaths[currentIndex]} />
             </Canvas>
