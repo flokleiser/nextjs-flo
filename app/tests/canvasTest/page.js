@@ -15,6 +15,7 @@ const ModelViewer = dynamic(() =>
 )
 
 const modelPaths = [
+  "/stl/3dVisualisation new.glb",
   "/stl/butterfly_open.glb",
   "/stl/flowers/tulip_both.glb",
 ];
@@ -111,8 +112,8 @@ export default function flowers() {
             <OrbitControls
             minPolarAngle={1}
             maxPolarAngle={1.5}
-            minAzimuthAngle={0}
-            maxAzimuthAngle={1}
+            minAzimuthAngle={-0.5}
+            maxAzimuthAngle={0.5}
             panSpeed={0.5}
             // enableDamping="true"
             // dampingFactor={0.075}
