@@ -121,6 +121,8 @@ export default function flowers() {
 //implement panSpeed
 //implement dampingFactor
 
+//check out https://drei.pmnd.rs/?path=/docs/gizmos-gizmohelper--docs
+
             />
             <Model modelPath={modelPaths[currentIndex]} />
             </Canvas>
