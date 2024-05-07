@@ -109,8 +109,8 @@ export default function flowers() {
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
             <OrbitControls
-            minPolarAngle={0}
-            maxPolarAngle={0.5}
+            minPolarAngle={1}
+            maxPolarAngle={1.5}
             minAzimuthAngle={0}
             maxAzimuthAngle={1}
             />
