@@ -19,6 +19,27 @@ const modelPaths = [
   "/stl/flowers/tulip_both.glb",
 ];
 
+function Model({modelPath}){
+  const {scene} = useLoader(GLTFLoader, modelPath)
+  const copiedScene = useMemo(() => scene.clone(),[scene]);
+  const prim = useRef();
+  const light = useRef();
+
+
+
+  useFrame(({ camera }) => {
+    light.current.position.copy(camera.position);
+    light.current.rotation.copy(camera.rotation);
+  });
+
+  return (
+    <>
+  <primitive ref={prim} object={copiedScene}  />
+  <spotLight ref={light} position={[0,0,15]} intensity={5} distance={10} angle={Math.PI / 4} penumbra={0.5} />
+  </>
+  );
+}
+
 export default function flowers() {
   useEffect(() => {
     document.title = "Projects - Spring Flowers";
@@ -82,7 +103,19 @@ export default function flowers() {
         <div style={{ display: "flex" }}>
           <div className={styles.linkContainerFlowerModel}>
 
-<ModelViewer modelPaths={modelPaths[currentIndex]}intensity={1}/>
+{/* <ModelViewer modelPaths={modelPaths[currentIndex]}intensity={1}/> */}
+        <Canvas 
+        >
+            <directionalLight color="white" position={[2, 0, 5]} />
+            <ambientLight intensity={0.3}/>
+            <OrbitControls
+            minPolarAngle={0}
+            maxPolarAngle={0.5}
+            minAzimuthAngle={0}
+            maxAzimuthAngle={1}
+            />
+            <Model modelPath={modelPaths[currentIndex]} />
+            </Canvas>
 
           </div>
 
