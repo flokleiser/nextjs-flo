@@ -5,9 +5,9 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
+import { OrthographicCamera } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import dynamic from "next/dynamic";
-// import ModelViewer from "@/app/components/ModelViewer"
 import handleModelChange from "@/app/components/ModelViewer"
 
 const ModelViewer = dynamic(() => 
@@ -15,16 +15,19 @@ const ModelViewer = dynamic(() =>
 )
 
 const modelPaths = [
-  "/stl/3dVisualisation.glb",
-  // "/stl/butterfly_open.glb",
-  // "/stl/flowers/tulip_both.glb",
+  "/stl/3dVisualisation2.glb",
 ];
+
 
 function Model({modelPath}){
   const {scene} = useLoader(GLTFLoader, modelPath)
   const copiedScene = useMemo(() => scene.clone(),[scene]);
   const prim = useRef();
   const light = useRef();
+
+  camera = new THREE.OrthographicCamera
+
+  // cameraOrtho = new THREE.OrthographicCamera( 0.5 * frustumSize * aspect / - 2, 0.5 * frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 150, 1000 );
 
 
 
@@ -35,9 +38,7 @@ function Model({modelPath}){
 
   return (
     <>
-  <primitive ref={prim} object={copiedScene} 
-  position={[0,-15,-5]} 
-  rotation={[0,0.7,0]} />
+  <primitive ref={prim} object={copiedScene} position={[0,-15,-5]} rotation={[0,0.7,0]} />
   <spotLight ref={light} position={[0,0,15]} intensity={5} distance={10} angle={Math.PI / 4} penumbra={0.5} />
   </>
   );
@@ -96,7 +97,6 @@ export default function flowers() {
 
       <div style={{ paddingTop: "1rem" }} />
       <div className={styles.linkContainerFlowers}>
-        {/* <h1 className={styles.titleWithoutPadding}>Flowers</h1> */}
         <h1 className={styles.title}>Canvas Test</h1>
 
         <div style={{ padding: "0.5rem" }} />
@@ -106,11 +106,11 @@ export default function flowers() {
         <div style={{ display: "flex" }}>
           <div className={styles.linkContainerFlowerModel}>
 
-{/* <ModelViewer modelPaths={modelPaths[currentIndex]}intensity={1}/> */}
         <Canvas 
         >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
+            <camera/>
             <OrbitControls
             minPolarAngle={1}
             maxPolarAngle={1.5}
@@ -132,33 +132,8 @@ export default function flowers() {
 
           </div>
 
-          <div className={styles.flowerButtonDiv}>
 
-<button className={styles.flowerButton} onClick={() => handleModelChange(0)}>
-  <h1> Snowdrop</h1>
-</button>
 
-<button className={styles.flowerButton} onClick={() => handleModelChange(1)}>
-  <h1> Tulip </h1>
-</button>
-
-<button className={styles.flowerButton} onClick={() => handleModelChange(2)}>
-  <h1> Daffodil</h1>
-</button>
-
-<button className={styles.flowerButton} onClick={() => handleModelChange(3)}>
-  <h1> Rose </h1>
-</button>
-
-<button className={styles.flowerButton} onClick={() => handleModelChange(4)}>
-  <h1> Sunflower</h1>
-</button>
-
-<button className={styles.flowerButton} onClick={() => handleModelChange(5)}>
-  <h1> Ivy</h1>
-</button>
-
-</div>
 
         </div>
 
