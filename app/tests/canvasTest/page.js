@@ -15,9 +15,9 @@ const ModelViewer = dynamic(() =>
 )
 
 const modelPaths = [
-  "/stl/3dVisualisation new.glb",
-  "/stl/butterfly_open.glb",
-  "/stl/flowers/tulip_both.glb",
+  "/stl/3dVisualisation.glb",
+  // "/stl/butterfly_open.glb",
+  // "/stl/flowers/tulip_both.glb",
 ];
 
 function Model({modelPath}){
@@ -35,7 +35,9 @@ function Model({modelPath}){
 
   return (
     <>
-  <primitive ref={prim} object={copiedScene}  />
+  <primitive ref={prim} object={copiedScene} 
+  position={[0,-15,-5]} 
+  rotation={[0,0.7,0]} />
   <spotLight ref={light} position={[0,0,15]} intensity={5} distance={10} angle={Math.PI / 4} penumbra={0.5} />
   </>
   );
