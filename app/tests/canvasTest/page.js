@@ -8,70 +8,38 @@ import { OrbitControls } from "@react-three/drei";
 import { OrthographicCamera } from "@react-three/drei";
 import { AnimationMixer } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { Stats } from "@react-three/drei";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import dynamic from "next/dynamic";
-import handleModelChange from "@/app/components/ModelViewer"
+import { Orbit } from "next/font/google";
 
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
 
-const modelPaths = [
-  "/stl/3dVisualisation Animation test.glb",
-];
-
-
-// Animations not working, check out --> https://stackoverflow.com/questions/76082603/react-three-fiber-and-three-js-doesnt-play-animation-correctly-in-react
+const modelPath = "/stl/SciFi-Animation.glb"
 
 function Model({modelPath}){
   const {scene} = useLoader(GLTFLoader, modelPath)
-  const copiedScene = useMemo(() => scene.clone(),[scene]);
+
   const prim = useRef();
   const light = useRef();
 
-  const gltf = useLoader(GLTFLoader, modelPath);
-  const mixerRef = useRef();
-
-  useEffect(() => {
-    if (gltf.animations.length > 0) {
-      console.log(gltf.animations);
-      console.log('animations present')
-      mixerRef.current = new THREE.AnimationMixer(gltf.scene);
-      const action = mixerRef.current.clipAction(gltf.animations[1]); 
-      action.play();
-    }
-  }, [gltf]);
-
-
-  useFrame((state, delta) => {
-    if (mixerRef.current) {
-      mixerRef.current.update(delta);
-    }
-  });
-
-
-  useFrame(({ camera }) => {
-    light.current.position.copy(camera.position);
-    light.current.rotation.copy(camera.rotation);
-  });
-
   return (
     <>
-  <primitive ref={prim} object={copiedScene} position={[0,-15,-5]} rotation={[0,0.7,0]} />
+  <primitive ref={prim} object={scene} position={[0,-17,0]}  />
   <spotLight ref={light} position={[0,0,15]} intensity={5} distance={10} angle={Math.PI / 4} penumbra={0.5} />
   </>
   );
 }
 
-export default function flowers() {
+ 
+
+export default function canvasTest() {
   useEffect(() => {
     document.title = "Projects - Spring Flowers";
   }, []);
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const handleModelChange = (index) => {
-    setCurrentIndex(index);
-    console.log(index, modelPaths[index])
-  };
 
 
 
@@ -112,38 +80,14 @@ export default function flowers() {
    z-[-1]"
       ></div>
 
-
-      <div style={{ paddingTop: "1rem" }} />
-        <h1 className={styles.title}>Canvas Test</h1>
-
-
-        <Canvas style={{width:'100vw', height:'80vh'}}
+        <Canvas style={{width:'100vw', height:'89.5vh'}}
+        //  orthographic camera={{ zoom: 50, position: [0, 0, 100], far: 5000 }}
         >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
-            <camera/>
-            <OrbitControls
-            minPolarAngle={1}
-            maxPolarAngle={1.5}
-            minAzimuthAngle={-0.5}
-            maxAzimuthAngle={0.5}
-            panSpeed={0.5}
-            // enableDamping="true"
-            // dampingFactor={0.075}
-
-//implement maxZoom, minZoom
-//implement panSpeed
-//implement dampingFactor
-
-//check out https://drei.pmnd.rs/?path=/docs/gizmos-gizmohelper--docs
-
-            />
-            <Model modelPath={modelPaths[currentIndex]} />
-            </Canvas>
-
-
-        <div style={{ padding: "1rem" }} />
-      <div style={{ padding: "0.5rem" }}> </div>
+            <OrbitControls />
+            <Model modelPath={modelPath}/>
+        </Canvas>
     </main>
   );
 }
