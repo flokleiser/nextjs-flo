@@ -6,6 +6,7 @@ import * as THREE from "three";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { OrthographicCamera } from "@react-three/drei";
+import { AnimationMixer } from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import dynamic from "next/dynamic";
 import handleModelChange from "@/app/components/ModelViewer"
@@ -15,9 +16,11 @@ const ModelViewer = dynamic(() =>
 )
 
 const modelPaths = [
-  "/stl/3dVisualisation2.glb",
+  "/stl/3dVisualisation Animation test.glb",
 ];
 
+
+// Animations not working, check out --> https://stackoverflow.com/questions/76082603/react-three-fiber-and-three-js-doesnt-play-animation-correctly-in-react
 
 function Model({modelPath}){
   const {scene} = useLoader(GLTFLoader, modelPath)
@@ -25,10 +28,25 @@ function Model({modelPath}){
   const prim = useRef();
   const light = useRef();
 
-  camera = new THREE.OrthographicCamera
+  const gltf = useLoader(GLTFLoader, modelPath);
+  const mixerRef = useRef();
 
-  // cameraOrtho = new THREE.OrthographicCamera( 0.5 * frustumSize * aspect / - 2, 0.5 * frustumSize * aspect / 2, frustumSize / 2, frustumSize / - 2, 150, 1000 );
+  useEffect(() => {
+    if (gltf.animations.length > 0) {
+      console.log(gltf.animations);
+      console.log('animations present')
+      mixerRef.current = new THREE.AnimationMixer(gltf.scene);
+      const action = mixerRef.current.clipAction(gltf.animations[1]); 
+      action.play();
+    }
+  }, [gltf]);
 
+
+  useFrame((state, delta) => {
+    if (mixerRef.current) {
+      mixerRef.current.update(delta);
+    }
+  });
 
 
   useFrame(({ camera }) => {
@@ -96,17 +114,10 @@ export default function flowers() {
 
 
       <div style={{ paddingTop: "1rem" }} />
-      <div className={styles.linkContainerFlowers}>
         <h1 className={styles.title}>Canvas Test</h1>
 
-        <div style={{ padding: "0.5rem" }} />
-        <hr className={styles.pageDivider} />
-        <div style={{ padding: "1.5rem" }} />
 
-        <div style={{ display: "flex" }}>
-          <div className={styles.linkContainerFlowerModel}>
-
-        <Canvas 
+        <Canvas style={{width:'100vw', height:'80vh'}}
         >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
@@ -130,16 +141,8 @@ export default function flowers() {
             <Model modelPath={modelPaths[currentIndex]} />
             </Canvas>
 
-          </div>
-
-
-
-
-        </div>
 
         <div style={{ padding: "1rem" }} />
-      </div>
-      {/* <div style={{ padding: "2rem" }} /> */}
       <div style={{ padding: "0.5rem" }}> </div>
     </main>
   );
