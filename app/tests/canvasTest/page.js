@@ -16,18 +16,35 @@ import { Orbit } from "next/font/google";
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
+const modelPath = "/stl/SciFi-Animation3.glb"
+// const modelPath = "/stl/SciFi-Animation2.glb"
+// const modelPath = "/stl/SciFi-Animation.glb"
 
-const modelPath = "/stl/SciFi-Animation.glb"
 
 function Model({modelPath}){
-  const {scene} = useLoader(GLTFLoader, modelPath)
+  // const {scene} = useLoader(GLTFLoader, modelPath)
+  const gltf = useLoader(GLTFLoader, modelPath)
+  const mixer = useRef();
+
+  useEffect(() => {
+    mixer.current = new AnimationMixer(gltf.scene);
+    gltf.animations.forEach((clip) => {
+      mixer.current.clipAction(clip).play();
+    });
+  }, [gltf]);
+
+  useFrame((state, delta) => mixer.current?.update(delta));
 
   const prim = useRef();
   const light = useRef();
 
+  console.log(gltf.animations)
+
   return (
     <>
-  <primitive ref={prim} object={scene} position={[0,-17,0]}  />
+
+  <primitive object={gltf.scene} position={[0, -17, 0]} />;
+  {/* <primitive ref={prim} object={scene} position={[0,-17,0]}  /> */}
   <spotLight ref={light} position={[0,0,15]} intensity={5} distance={10} angle={Math.PI / 4} penumbra={0.5} />
   </>
   );
@@ -39,9 +56,6 @@ export default function canvasTest() {
   useEffect(() => {
     document.title = "Projects - Spring Flowers";
   }, []);
-
-
-
 
   return (
     <main className={styles.main}>
@@ -81,7 +95,7 @@ export default function canvasTest() {
       ></div>
 
         <Canvas style={{width:'100vw', height:'89.5vh'}}
-        //  orthographic camera={{ zoom: 50, position: [0, 0, 100], far: 5000 }}
+         orthographic camera={{ zoom: 50, position: [0, 0, 100], far: 5000 }}
         >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={0.3}/>
