@@ -16,9 +16,8 @@ import { Orbit } from "next/font/google";
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
-const modelPath = "/stl/SciFi-Animation3.glb"
-// const modelPath = "/stl/SciFi-Animation2.glb"
-// const modelPath = "/stl/SciFi-Animation.glb"
+// const modelPath = "/stl/SciFi-Animation4.glb"
+const modelPath = "/stl/SciFi-Animation noclouds.glb"
 
 
 function Model({modelPath}){
