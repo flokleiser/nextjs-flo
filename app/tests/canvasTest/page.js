@@ -16,10 +16,8 @@ import { Orbit } from "next/font/google";
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
-// const modelPath = "/stl/SciFi-Animation noclouds.glb"
-const modelPath = "/stl/SciFi-Animation5.glb"
 
-// const modelPath = "/stl/uv testing.glb"
+const modelPath = "/stl/SciFi-Animation5.glb"
 
 
 // ANIMATED TEXTURES MAYBE: 
@@ -27,7 +25,6 @@ const modelPath = "/stl/SciFi-Animation5.glb"
 // https://stackoverflow.com/questions/35610406/how-to-modify-uv-coordinates-with-three-js
 
 function Model({modelPath}){
-  // const {scene} = useLoader(GLTFLoader, modelPath)
   const gltf = useLoader(GLTFLoader, modelPath)
   const mixer = useRef();
 
@@ -50,8 +47,6 @@ function Model({modelPath}){
 
   <primitive object={gltf.scene} position={[0, -17, 0]} rotation={[0,0.8,0]}/>;
 
-  {/* <primitive ref={prim} object={scene} position={[0,-17,0]}  /> */}
-  {/* <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} angle={Math.PI / 4} penumbra={0.5} rotation={[0,0.8,0]} /> */}
   <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} />
   </>
   );
@@ -105,7 +100,7 @@ export default function canvasTest() {
          orthographic camera={{ zoom: 50, position: [0, 0, 100], far: 5000 }}
         >
             <directionalLight color="white" position={[2, 0, 5]} />
-            <ambientLight intensity={0.3}/>
+            <ambientLight intensity={1}/>
             <OrbitControls />
             <Model modelPath={modelPath}/>
         </Canvas>
