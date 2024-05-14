@@ -17,7 +17,7 @@ const ModelViewer = dynamic(() =>
   import( "@/app/components/ModelViewer")
 )
 
-const modelPath = "/stl/SciFi-Animation5.glb"
+const modelPath = "/stl/SciFi-Animation6.glb"
 
 
 // ANIMATED TEXTURES MAYBE: 
