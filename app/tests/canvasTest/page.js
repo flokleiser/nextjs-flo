@@ -16,9 +16,10 @@ import { Orbit } from "next/font/google";
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
-// const modelPath = "/stl/SciFi-Animation4.glb"
 const modelPath = "/stl/SciFi-Animation noclouds.glb"
 
+
+// ANIMATED TEXTURES MAYBE: https://stemkoski.github.io/Three.js/#model-animation
 
 function Model({modelPath}){
   // const {scene} = useLoader(GLTFLoader, modelPath)
@@ -42,9 +43,10 @@ function Model({modelPath}){
   return (
     <>
 
-  <primitive object={gltf.scene} position={[0, -17, 0]} />;
+  <primitive object={gltf.scene} position={[0, -17, 0]} rotation={[0,0.8,0]}/>;
   {/* <primitive ref={prim} object={scene} position={[0,-17,0]}  /> */}
-  <spotLight ref={light} position={[0,0,15]} intensity={5} distance={10} angle={Math.PI / 4} penumbra={0.5} />
+  {/* <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} angle={Math.PI / 4} penumbra={0.5} rotation={[0,0.8,0]} /> */}
+  <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} />
   </>
   );
 }
