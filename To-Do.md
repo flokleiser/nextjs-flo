@@ -2,6 +2,10 @@
 ___
 
 
+## GLTFLoader
+- [ ] Figure out how to animate uv mesh
+- [ ] Figure out if i can convert mesh animation to something else
+
 ## Projects cards
 - [ ] Make cards images load faster
 
