@@ -17,7 +17,9 @@ const ModelViewer = dynamic(() =>
   import( "@/app/components/ModelViewer")
 )
 // const modelPath = "/stl/SciFi-Animation noclouds.glb"
-const modelPath = "/stl/uv testing.glb"
+const modelPath = "/stl/SciFi-Animation5.glb"
+
+// const modelPath = "/stl/uv testing.glb"
 
 
 // ANIMATED TEXTURES MAYBE: 
@@ -38,11 +40,6 @@ function Model({modelPath}){
 
   useFrame((state, delta) => mixer.current?.update(delta));
 
-  const texture = new THREE.TextureLoader().load("/stl/billboard v4.png");
-  texture.wrapS = THREE.RepeatWrapping;
-  texture.wrapT = THREE.RepeatWrapping;
-  texture.repeat.set(4,4);
-
   const prim = useRef();
   const light = useRef();
 
@@ -51,9 +48,8 @@ function Model({modelPath}){
   return (
     <>
 
-  {/* <primitive object={gltf.scene} position={[0, -17, 0]} rotation={[0,0.8,0]}/>; */}
+  <primitive object={gltf.scene} position={[0, -17, 0]} rotation={[0,0.8,0]}/>;
 
-  <primitive object={gltf.scene} position={[0, 0, 0]} rotation={[0,0.8,0]}/>;
   {/* <primitive ref={prim} object={scene} position={[0,-17,0]}  /> */}
   {/* <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} angle={Math.PI / 4} penumbra={0.5} rotation={[0,0.8,0]} /> */}
   <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} />
