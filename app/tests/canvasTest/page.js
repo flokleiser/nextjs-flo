@@ -13,6 +13,9 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import dynamic from "next/dynamic";
 import { Orbit } from "next/font/google";
 
+import { Mesh, PlaneGeometry, MeshStandardMaterial } from 'three';
+import { Color } from 'three';
+
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
@@ -24,9 +27,12 @@ const modelPath = "/stl/SciFi-Animation6.glb"
 // https://stemkoski.github.io/Three.js/#model-animation
 // https://stackoverflow.com/questions/35610406/how-to-modify-uv-coordinates-with-three-js
 
+//https://medium.com/nerd-for-tech/adding-a-custom-star-field-background-with-three-js-79a1d18fd35d
+
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
   const mixer = useRef();
+  gltf.background = new Color("purple");
 
   useEffect(() => {
     mixer.current = new AnimationMixer(gltf.scene);
@@ -40,7 +46,9 @@ function Model({modelPath}){
   const prim = useRef();
   const light = useRef();
 
-  console.log(gltf.animations)
+
+  // const scene = new THREE.Scene();
+  // scene.background = new Color('skyblue');
 
   return (
     <>
@@ -103,6 +111,12 @@ export default function canvasTest() {
             <ambientLight intensity={1}/>
             <OrbitControls />
             <Model modelPath={modelPath}/>
+
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -20, 0]}>
+    <planeGeometry args={[100, 100]} />
+    <meshStandardMaterial color="green" />
+  </mesh>
+
         </Canvas>
     </main>
   );
