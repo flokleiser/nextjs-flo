@@ -13,6 +13,9 @@ import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 import dynamic from "next/dynamic";
 import { Orbit } from "next/font/google";
 
+import { Mesh, PlaneGeometry, MeshStandardMaterial } from 'three';
+import { Color } from 'three';
+
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
@@ -29,6 +32,7 @@ const modelPath = "/stl/SciFi-Animation6.glb"
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
   const mixer = useRef();
+  gltf.background = new Color("purple");
 
   useEffect(() => {
     mixer.current = new AnimationMixer(gltf.scene);
@@ -42,7 +46,9 @@ function Model({modelPath}){
   const prim = useRef();
   const light = useRef();
 
-  console.log(gltf.animations)
+
+  // const scene = new THREE.Scene();
+  // scene.background = new Color('skyblue');
 
   return (
     <>
