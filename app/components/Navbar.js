@@ -35,7 +35,8 @@ const navSubItems = [
   },
   {
     path: "/projects/creative-coding",
-    name: "Creative Coding",
+    // name: "Creative Coding",
+    name: "Coding",
     key:"coding"
   },
   {
@@ -44,9 +45,9 @@ const navSubItems = [
     key:"skylands"
   },
   {
-    path: "/projects/butterfly",
-    name: "Butterfly",
-    key:"butterfly"
+    path: "/projects/space",
+    name: "Space",
+    key:"space"
   },
   {
     path: "/projects/springFlowers",
@@ -72,6 +73,11 @@ const navSubItems = [
     path: "/projects/voxel",
     name: "Voxel Art",
     key:"voxel"
+  },
+  {
+    path: "/projects/butterfly",
+    name: "Butterfly",
+    key:"butterfly"
   },
   {
     path: "/projects/crafts",
