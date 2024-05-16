@@ -267,7 +267,7 @@
   position:relative;
   display: flex;
   z-index: 0;
-  width:75vw;
+  width:90vw;
   max-width:1500px;
   height: 65vh;
   flex-direction: column;
@@ -1103,7 +1103,7 @@ background-color: rgba(254,51,135,0.2);
     }
     .card:nth-child(10) {
       grid-column-start: 2;
-      grid-column-end: 4;
+      grid-column-end: 3;
     }
 
     

@@ -19,7 +19,22 @@ const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
 //   import( "@/app/components/ModelViewer")
 // )
 
-const modelPath = "/stl/SciFi-Animation6.glb"
+const data = [
+    {image: '/images/illustrator/wallpaper/full.webp', id:1},
+  ]
+  
+  const data2= [
+    {image: '/images/illustrator/wallpaper/center 1.webp', id:2},
+    {image: '/images/illustrator/wallpaper/vehicles.webp', id:3},
+  ]
+  
+  const data3= [
+    {image: '/images/illustrator/wallpaper/skyline.webp', id:4},
+    {image: '/images/illustrator/wallpaper/buildings.webp', id:5},
+  ]
+
+
+const modelPath = "/stl/SciFi-Animation7.glb"
 
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
@@ -113,10 +128,25 @@ export default function space() {
 <div style={{padding:'1rem'}} />
       <div style={{ padding: "0.5rem" }} />
 <hr className={styles.pageDivider} />
-<div style={{ padding: "0.5rem" }} />
+{/* <div style={{ padding: "0.5rem" }} /> */}
 
 
-<div className={styles.linkContainerFlowerModel}>
+
+<div className='flex flex-row items-center'>
+            <ImageGallery data={data}w={900}h={900}datas={[...data,...data2,...data3]}desc={false} />
+            <ImageGallery data={data2}w={175}h={175}datas={[...data,...data2,...data3]}vertical={true}desc={false} />
+            <ImageGallery data={data3}w={175}h={175}datas={[...data,...data2,...data3]}vertical={true}desc={false} />
+           
+           </div>
+          
+
+
+            {/* <div style={{ padding: "0.5rem" }} /> */}
+      <hr className={styles.pageDivider} />
+      <div style={{ padding: "1rem" }} />
+
+
+<div className={styles.linkContainerSpaceModel}>
         <Canvas 
         // style={{width:'100vw', height:'89.5vh'}}
          orthographic camera={{ zoom: 25, position: [0, 0, 100], far: 5000 }}
