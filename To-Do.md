@@ -3,9 +3,8 @@ ___
 
 
 ## New Project
-- [ ] Change Arts&Crafts to small one
-- [ ] 
-- [ ] Make subnavbar open below navbar
+- [x] Change Arts&Crafts to small one
+- [ ] Make subnavbar open below navbar --> ???
 
 ## GLTFLoader
 - [ ] Figure out how to animate uv mesh

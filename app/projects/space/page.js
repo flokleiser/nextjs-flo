@@ -34,7 +34,7 @@ const data = [
   ]
 
 
-const modelPath = "/stl/SciFi-Animation7.glb"
+const modelPath = "/stl/SciFi-Animation8.glb"
 
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
@@ -156,10 +156,10 @@ export default function space() {
             <OrbitControls />
             <Model modelPath={modelPath}/>
 
-            {/* <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -20, 0]}>
-            <planeGeometry args={[100, 100]} />
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -17, 0]}>
+            <planeGeometry args={[35, 35]} />
             <meshStandardMaterial color="purple" />
-            </mesh> */}
+            </mesh>
 
         </Canvas>
 
