@@ -22,7 +22,9 @@ import { TextureLoader } from 'three';
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
-const modelPath = "/stl/space/SciFi-Animation9.glb"
+// const modelPath = "/stl/space/SciFi-Animation10.glb"
+const modelPath = "/stl/space/SciFi-Animation11.glb"
+// const modelPath = "/stl/space/SciFi-Animation clouds.glb"
 
 function Clouds() {
   const cloudRef = useRef();
@@ -127,7 +129,7 @@ export default function canvasTest() {
             <ambientLight intensity={1}/>
             <OrbitControls />
             <Model modelPath={modelPath}/>
-            <Clouds />
+            {/* <Clouds /> */}
 
 
         </Canvas>
