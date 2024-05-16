@@ -106,17 +106,17 @@ export default function projects() {
             </Link>
 
             <Link
-                className={styles.card}
-                rel="noopener noreferrer"
-                href = '/projects/butterfly'
-                style={{ backgroundImage: 'url("/images/cards/cadwhite.webp")',
-                backgroundSize: '102%',
-                backgroundPosition: 'center'}}
+            href = '/projects/space'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("/images/cards/illustratorcard.png")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
             >
             <h2>
-               Butterfly
+               Space 
             </h2>
-            <p>CAD, OnShape</p>
+            <p>Artworks, 3D Model </p>
             </Link>
 
             <Link
@@ -166,19 +166,19 @@ export default function projects() {
             </Link>
 
             <Link
-            href = '/projects/illustrator'
-            className={styles.card}
-            rel="noopener noreferrer"
-            // style={{ backgroundImage: 'url("/images/cards/illustrator2.webp")',
-            style={{ backgroundImage: 'url("/images/cards/illustratorcard.png")',
-            backgroundSize: '102%',
-            backgroundPosition: 'center'}}
+                className={styles.card}
+                rel="noopener noreferrer"
+                href = '/projects/butterfly'
+                style={{ backgroundImage: 'url("/images/cards/cadwhite.webp")',
+                backgroundSize: '102%',
+                backgroundPosition: 'center'}}
             >
             <h2>
-                Illustrator
+               Butterfly
             </h2>
-            <p>Designs & Artworks </p>
+            <p>CAD, OnShape</p>
             </Link>
+
 
             <Link
             href = '/projects/voxel'
@@ -194,7 +194,20 @@ export default function projects() {
             <p>MagicaVoxel</p>
             </Link>
 
-         
+            <Link
+            href = '/projects/illustrator'
+            className={styles.card}
+            rel="noopener noreferrer"
+            style={{ backgroundImage: 'url("/images/cards/illustrator2.webp")',
+            backgroundSize: '102%',
+            backgroundPosition: 'center'}}
+            >
+            <h2>
+                Illustrator
+            </h2>
+            <p>Designs & Artworks </p>
+            </Link>
+
 
             <Link
             href = '/projects/crafts'
