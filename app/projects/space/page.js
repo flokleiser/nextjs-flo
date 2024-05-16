@@ -11,9 +11,13 @@ import dynamic from "next/dynamic";
 import { Mesh, PlaneGeometry, MeshStandardMaterial } from 'three';
 import { Color } from 'three';
 
-const ModelViewer = dynamic(() => 
-  import( "@/app/components/ModelViewer")
-)
+
+const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
+
+
+// const ModelViewer = dynamic(() => 
+//   import( "@/app/components/ModelViewer")
+// )
 
 const modelPath = "/stl/SciFi-Animation6.glb"
 
@@ -50,9 +54,9 @@ function Model({modelPath}){
 
  
 
-export default function canvasTest() {
+export default function space() {
   useEffect(() => {
-    document.title = "Projects - Spring Flowers";
+    document.title = "Projects - Space";
   }, []);
 
   return (
@@ -92,8 +96,30 @@ export default function canvasTest() {
    z-[-1]"
       ></div>
 
-        <Canvas style={{width:'100vw', height:'89.5vh'}}
-         orthographic camera={{ zoom: 50, position: [0, 0, 100], far: 5000 }}
+<div style={{paddingTop:'1rem'}} />
+      <div className={styles.linkContainerSpace}>
+
+      <h1 className={styles.title}> Space</h1>
+
+
+<div className={styles.subtitledescription}>
+  <p>
+    A wallpaper i designed in Adobe Illustrator, and afterwards recreated and  <br />
+    animated in Blender. 
+    Inspired by artwork from Tyler Pate (@thecreativepain)
+  </p>
+</div>
+
+<div style={{padding:'1rem'}} />
+      <div style={{ padding: "0.5rem" }} />
+<hr className={styles.pageDivider} />
+<div style={{ padding: "0.5rem" }} />
+
+
+<div className={styles.linkContainerFlowerModel}>
+        <Canvas 
+        // style={{width:'100vw', height:'89.5vh'}}
+         orthographic camera={{ zoom: 25, position: [0, 0, 100], far: 5000 }}
         >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={1}/>
@@ -106,6 +132,13 @@ export default function canvasTest() {
             </mesh> */}
 
         </Canvas>
+
+</div>
+
+<div style={{ padding: "0.5rem" }}> </div>
+
+        </div>
+        <div style={{ padding: "0.5rem" }}> </div>
     </main>
   );
 }
