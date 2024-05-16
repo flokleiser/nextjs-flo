@@ -12,7 +12,7 @@ ___
 
 - [Sketches (Analogue)](https://floriankleiser.com/projects/sketches)
 
-- [Butterfly (CAD)](https://floriankleiser.com/projects/butterfly)
+- [Space Wallpaper](https://floriankleiser.com/projects/space)
 
 - [Flowers (3D Prints](https://floriankleiser.com/projects/springFlowers)
 
@@ -21,6 +21,8 @@ ___
 - [Animations (Adobe After Effects)](https://floriankleiser.com/projects/animations)
 
 - [Reduce to the max & How To'nt (Adobe Illustrator)](https://floriankleiser.com/projects/illustrator)
+
+- [Butterfly (CAD)](https://floriankleiser.com/projects/butterfly)
 
 - [Voxel Art (MagicaVoxel)](https://floriankleiser.com/projects/voxel)
 
