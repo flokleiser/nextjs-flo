@@ -2,6 +2,11 @@
 ___
 
 
+## New Project
+- [ ] Change Arts&Crafts to small one
+- [ ] 
+- [ ] Make subnavbar open below navbar
+
 ## GLTFLoader
 - [ ] Figure out how to animate uv mesh
 - [ ] Figure out if i can convert mesh animation to something else
