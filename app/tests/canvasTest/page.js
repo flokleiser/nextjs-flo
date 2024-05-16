@@ -16,31 +16,45 @@ import { Orbit } from "next/font/google";
 import { Mesh, PlaneGeometry, MeshStandardMaterial } from 'three';
 import { Color } from 'three';
 
+import { TextureLoader } from 'three';
+
+
 const ModelViewer = dynamic(() => 
   import( "@/app/components/ModelViewer")
 )
+const modelPath = "/stl/space/SciFi-Animation9.glb"
 
-// const modelPath = "/stl/SciFi-Animation7.glb"
-const modelPath = "/stl/SciFi-Animation8.glb"
-// const modelPath = "/stl/test.glb"
+function Clouds() {
+  const cloudRef = useRef();
+  const cloudTexture = useLoader(TextureLoader, "/stl/space/cloud.png");
 
+  useEffect(() => {
+    if (cloudRef.current) {
+      cloudRef.current.material.transparent = true;
+    }
+  }, [cloudTexture]);
 
-// ANIMATED TEXTURES MAYBE: 
-// https://stemkoski.github.io/Three.js/#model-animation
-// https://stackoverflow.com/questions/35610406/how-to-modify-uv-coordinates-with-three-js
-
-//https://medium.com/nerd-for-tech/adding-a-custom-star-field-background-with-three-js-79a1d18fd35d
+  return (
+        <mesh
+          ref={cloudRef}
+          // position={[Math.random() * 100 - 50, -20, Math.random() * 100 - 50]}
+          rotation={[-Math.PI / 2, 0, 0]} position={[0, -17, 0]}>
+          <planeGeometry args={[50, 50]} />
+          <meshStandardMaterial map={cloudTexture} opacity={0.8} />
+        </mesh>
+  );
+}
 
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
   const mixer = useRef();
-  gltf.background = new Color("purple");
 
   useEffect(() => {
     mixer.current = new AnimationMixer(gltf.scene);
     gltf.animations.forEach((clip) => {
       mixer.current.clipAction(clip).play();
     });
+    gltf.scene.background = new Color('purple');
   }, [gltf]);
 
   useFrame((state, delta) => mixer.current?.update(delta));
@@ -113,11 +127,8 @@ export default function canvasTest() {
             <ambientLight intensity={1}/>
             <OrbitControls />
             <Model modelPath={modelPath}/>
+            <Clouds />
 
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -20, 0]}>
-    <planeGeometry args={[100, 100]} />
-    <meshStandardMaterial color="green" />
-  </mesh>
 
         </Canvas>
     </main>
