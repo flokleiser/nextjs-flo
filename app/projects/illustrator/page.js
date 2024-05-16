@@ -108,37 +108,6 @@ export default function illustrator() {
       <hr className={styles.pageDividerDark} />
       <div style={{ padding: "0.5rem" }} />
 
-      <div className={styles.subtitle} 
-            style={{color:'rgb(55,55,55)'}}
-            >
-            <p>
-            Space   
-            </p>
-            </div>
-
-            <div className={styles.subtitledescription} 
-            style={{color:'rgb(55,55,55)'}}
-            >
-            <p>
-            A stylized wallpaper, inspired by artwork from Tyler Pate (@thecreativepain)
-            </p>
-            </div>
-           
-
-           <div className='flex flex-row items-center'>
-            <ImageGallery data={data}w={900}h={900}datas={[...data,...data2,...data3,...data4,...data5]}desc={false} />
-            <ImageGallery data={data2}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true}desc={false} />
-            <ImageGallery data={data3}w={175}h={175}datas={[...data,...data2,...data3,...data4,...data5]}vertical={true}desc={false} />
-           
-           </div>
-          
-
-
-            <div style={{ padding: "0.5rem" }} />
-      <hr className={styles.pageDividerDark} />
-      <div style={{ padding: "0.5rem" }} />
-            
-
             <div className={styles.subtitle} 
             style={{color:'rgb(55,55,55)'}}
             >
