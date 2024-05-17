@@ -35,8 +35,8 @@ const navSubItems = [
   },
   {
     path: "/projects/creative-coding",
-    // name: "Creative Coding",
-    name: "Coding",
+    name: "Creative Coding",
+    // name: "Coding",
     key:"coding"
   },
   {
@@ -135,17 +135,17 @@ const menuButton = {
 
 const arrowButton = {
   open: {
-  transform:"translateX(-100%)"
+  transform:"translateY(-100%)"
 },
   closed: {
-  transform:"translateX(0%)"
+  transform:"translateY(0%)"
 }
 }
 
 const arrowButton2 = {
-  open: {  transform:"translateX(0%)"},
+  open: {  transform:"translateY(0%)"},
   closed: {
-    transform:"translateX(100%)"
+    transform:"translateY(100%)"
   }
 }
 
@@ -221,18 +221,15 @@ export default function Navbar() {
 
   return (
     <div className={styles.navbarContainer}
-    
-      //  onMouseEnter={() => handleHoverNavbar()}
-      //  onMouseLeave={() => setIsHoveringNavbar(false)} 
-    
     >
 
 
 {/* WAVY SVG */}
-{/* <motion.svg xmlns="http://www.w3.org/2000/svg" 
+<motion.svg xmlns="http://www.w3.org/2000/svg" 
        initial={{ opacity:0,height:'4rem'}}
-       animate={{ opacity: isHoveringNavbar? 1:0, 
-        height: isHoveringNavbar? '8.5rem' : '4rem'}}
+       animate={{ opacity: showSubNavbar? 1:0, 
+        height: showSubNavbar? '8.5rem' : '4rem'}}
+        // height: showSubNavbar? '12.5rem' : '4rem'}}
        transition={{duration: 0.2}} 
 
         style={{
@@ -240,7 +237,8 @@ export default function Navbar() {
           width:'105vw',
           zIndex:-1,
           left: '-1rem',
-          top:-3.5,
+          // top:-3.5,
+          top:'-0.5rem',
           height:'6.8rem',
       }}
       viewBox="0 0 379.8 20.32"
@@ -248,9 +246,14 @@ export default function Navbar() {
         >
         <path
           style={{fill:'rgb(28 25 23)'}}
-          d="m.5,12.63c0-3.39.01-8.74.03-12.13h378.62c0,4.41.03,8.82.14,13.23-35.31-.56-65.34-4.9-101.48-4.38-26.98.39-56.56,2.93-83.84,3.54-22.91.51-44.65-.38-57.8-1.62-13.16-1.24-28.58-2.09-34.04-2.16-5.48-.07-9.85-.08-10.61-.08-1.57-.01-3.14-.01-4.71,0-.15,0-.29,0-.44,0-2,.01-4,.04-6,.09-.96.02-1.92.04-2.87.07-2.95.08-5.9.2-8.81.34h-.2c-.1.01-.2.02-.29.02-.39.02-.79.04-1.18.06-.61.03-1.21.07-1.81.1-21.51,1.22-41.94,2.56-64.71,2.92Z"
+          // d="m.5,12.63c0-3.39.01-8.74.03-12.13h378.62c0,4.41.03,8.82.14,13.23-35.31-.56-65.34-4.9-101.48-4.38-26.98.39-56.56,2.93-83.84,3.54-22.91.51-44.65-.38-57.8-1.62-13.16-1.24-28.58-2.09-34.04-2.16-5.48-.07-9.85-.08-10.61-.08-1.57-.01-3.14-.01-4.71,0-.15,0-.29,0-.44,0-2,.01-4,.04-6,.09-.96.02-1.92.04-2.87.07-2.95.08-5.9.2-8.81.34h-.2c-.1.01-.2.02-.29.02-.39.02-.79.04-1.18.06-.61.03-1.21.07-1.81.1-21.51,1.22-41.94,2.56-64.71,2.92Z"
+          // d="m 0.5 12.63 c 0 -3.39 0.01 -8.74 0.03 -12.13 h 378.47 c 0 4.41 0.03 8.82 0 17.5 c -35.31 -0.56 -65.34 -4.9 -101.48 -4.38 c -26.98 0.39 -56.56 2.93 -83.84 3.54 c -22.91 0.51 -44.65 -0.38 -57.8 -1.62 c -13.16 -1.24 -28.58 -2.09 -34.04 -2.16 c -5.48 -0.07 -9.85 -0.08 -10.61 -0.08 c -1.57 -0.01 -3.14 -0.01 -4.71 0 c -0.15 0 -0.29 0 -0.44 0 c -2 0.01 -4 0.04 -6 0.09 c -0.96 0.02 -1.92 0.04 -2.87 0.07 c -2.95 0.08 -5.9 0.2 -8.81 0.34 h -0.2 c -0.1 0.01 -0.2 0.02 -0.29 0.02 c -0.39 0.02 -0.79 0.04 -1.18 0.06 c -0.61 0.03 -1.21 0.07 -1.81 0.1 c -21.51 1.22 -41.94 2.56 -64.71 2.92 Z"
+          // d="m 0.5 12.63 c 0 -3.39 0.01 -8.74 0.03 -12.13 h 378.47 c 0 4.41 0.03 8.82 0 15.5 c -35.31 -0.56 -65.34 -4.9 -101.48 -4.38 c -26.98 0.39 -56.56 2.93 -83.84 3.54 c -22.91 0.51 -44.65 -0.38 -57.8 -1.62 c -13.16 -1.24 -28.58 -2.09 -34.04 -2.16 c -5.48 -0.07 -9.85 -0.08 -10.61 -0.08 c -1.57 -0.01 -3.14 -0.01 -4.71 0 c -0.15 0 -0.29 0 -0.44 0 c -2 0.01 -4 0.04 -6 0.09 c -0.96 0.02 -1.92 0.04 -2.87 0.07 c -2.95 0.08 -5.9 0.2 -8.81 0.34 h -0.2 c -0.1 0.01 -0.2 0.02 -0.29 0.02 c -0.39 0.02 -0.79 0.04 -1.18 0.06 c -0.61 0.03 -1.21 0.07 -1.81 0.1 c -21.51 1.22 -41.94 2.56 -64.71 2.92 Z"
+          d="m 0.5 12.63 c 0 -3.39 0.01 -8.74 0.03 -12.13 h 378.47 c 0 4.41 0.03 8.82 0 19.5 c -35.31 -0.56 -65.34 -4.9 -101.48 -4.38 c -26.98 0.39 -56.56 2.93 -83.84 3.54 c -22.91 0.51 -44.65 -0.38 -57.8 -1.62 c -13.16 -1.24 -28.58 -2.09 -34.04 -2.16 c -5.48 -0.07 -9.85 -0.08 -10.61 -0.08 c -1.57 -0.01 -3.14 -0.01 -4.71 0 c -0.15 0 -0.29 0 -0.44 0 c -2 0.01 -4 0.04 -6 0.09 c -0.96 0.02 -1.92 0.04 -2.87 0.07 c -2.95 0.08 -5.9 0.2 -8.81 0.34 h -0.2 c -0.1 0.01 -0.2 0.02 -0.29 0.02 c -0.39 0.02 -0.79 0.04 -1.18 0.06 c -0.61 0.03 -1.21 0.07 -1.81 0.1 c -21.51 1.22 -41.94 2.56 -64.71 2.92 Z"
         ></path>
-      </motion.svg>  */}
+      </motion.svg> 
+
+
 
           <motion.button style={{zIndex:'9999'}}
             className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in-out  text-zinc-100 "
@@ -320,12 +323,12 @@ export default function Navbar() {
                 ease: "easeInOut",
               }}
             >
-              <nav className="flex justify-start items-center w-full z-9990">
+              {/* <nav className="flex justify-start items-center w-full z-9990"> */}
+              <nav className="flex justify-start items-center w-full h-full z-9990">
                 {navItems.map((item) => {
                   return (
                     <motion.div key={item.path} whileTap={{ scale: 0.8 }}>
                       <Link
-                        // key={item.path}
                         className="px-3 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in"
                         href={item.path}
                         onMouseOver={() => setHoveringPath(item.path)}
@@ -342,7 +345,6 @@ export default function Navbar() {
                               backgroundColor: boxBackgroundColor,
                               borderColor: boxBorderColor,
                               width: "100%",
-                              // opacity:0.5,
                             }}
                             variants={grayBoxVariant}
                             initial="initial" 
@@ -365,7 +367,7 @@ export default function Navbar() {
                 })}
 
                   <motion.button style={{zIndex:'9999'}}
-                    className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
+                    className={`${styles.subNavbarButton} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
                     onClick={toggleSubNavbarVisibility} 
                     variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
 
@@ -376,17 +378,23 @@ export default function Navbar() {
                 }}
                 >
 
-                  <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z"
+                  {/* <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z" */}
+                  <motion.path d="M 8 7.21 l -2.65 2.64 a 0.495 0.495 90 0 1 -0.7 -0.7 c 0.12 -0.13 0.24 -0.25 0.37 -0.38 c 0.87 -0.87 1.75 -1.75 2.63 -2.62 a 0.492 0.492 90 0 1 0.7 -0 l 3 3 a 0.495 0.495 90 0 1 -0.7 0.7 Z"
                   variants={arrowButton}
                   initial={showSubNavbar? "open" : "closed"} 
                   animate={showSubNavbar? "closed" : "open"}
-                  transition={{delay: showSubNavbar? 0.25:0}}
+                  // transition={{delay: showSubNavbar? 0.125:0}}
+                  transition={{duration:0.25, delay: showSubNavbar ? 0:0.125}}
+                  // transition={{delay: showSubNavbar ? 0:0.25}}
                   />
-                  <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z"
+                  {/* <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z" */}
+                  <motion.path d="M 8 8.79 l 2.65 -2.64 a 0.495 0.495 270 0 1 0.7 0.7 c -0.12 0.13 -0.24 0.25 -0.37 0.38 c -0.87 0.87 -1.75 1.75 -2.63 2.62 a 0.492 0.492 270 0 1 -0.7 0 l -3 -3 a 0.495 0.495 270 0 1 0.7 -0.7 Z"
                   variants={arrowButton2}
                   initial={showSubNavbar? "open" : "closed"} 
                   animate={showSubNavbar? "closed" : "open"}
-                  transition={{delay: showSubNavbar ? 0:0.25}}
+                  // transition={{duration:0.25, delay: showSubNavbar ? 0:0.125}}
+                  transition={{duration:0.25}}
+                  // transition={{delay: showSubNavbar ? 0:0.25}}
                   />
 
                 </motion.svg> 
@@ -394,35 +402,37 @@ export default function Navbar() {
 
 
 
-
                 <AnimatePresence>
                   {showSubNavbar && (
+                      <motion.div className={styles.subNavbarContainer}>
                        <motion.div
                         className={styles.subNavbar}
                         initial={{
                           opacity: 0,
-                          transform:"translateX(-100%)"
+                          transform:"translateY(-100%)"
                         }}
                         animate={{
                           opacity: 1,
-                          transform:"translateX(0%)"
+                          transform:"translateY(0%)"
                         }}
                         exit={{
                           opacity: 0,
-                          transform:"translateX(-100%)"
+                          transform:"translateY(-100%)"
                         }}
                         transition={{
-                          duration: 0.5,
+                          duration: 0.25,
                           ease: "easeInOut",
-                          staggerChildren:0.5
                         }}
                       >
-                    <nav className="flex flex-row justify-start w-full z-9998">
+
+                    {/* <nav className="flex flex-row justify-start w-full z-9998"> */}
+                    <nav className="flex justify-start items-center flex-row  w-full h-full z-9998">
+                    {/* <nav className="justify-start items-center w-full h-full z-9998"> */}
                         {navSubItems.map((subItem) => {
                       return (
                         <motion.div key={subItem.path} whileTap={{ scale: 0.8 }}>
                           <Link
-                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9998 no-underline duration-300 ease-in z-9998" 
+                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9998 no-underline duration-300 ease-in z-9997" 
                             href={subItem.path}
                             onMouseOver={() => setHoveringPath(subItem.path)}
                             onMouseMove={() => setHoveringPath(subItem.path)}
@@ -462,6 +472,8 @@ export default function Navbar() {
                             );
                         })}
                       </nav>
+                      </motion.div>
+
                   </motion.div>
                    )} 
                 </AnimatePresence>
