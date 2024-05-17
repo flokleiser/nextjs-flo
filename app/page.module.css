@@ -19,6 +19,9 @@
   z-index: 9998;
 }
 
+.subNavbar {
+  position:absolute;
+}
 
 .navbarBox {
   position:absolute;
