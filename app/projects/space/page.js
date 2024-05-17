@@ -41,7 +41,6 @@ const modelPath = "/stl/space/SciFi-Animation11.glb"
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
   const mixer = useRef();
-  gltf.background = new Color("purple");
 
   useEffect(() => {
     mixer.current = new AnimationMixer(gltf.scene);
@@ -55,15 +54,12 @@ function Model({modelPath}){
   const prim = useRef();
   const light = useRef();
 
-
-  // const scene = new THREE.Scene();
-  // scene.background = new Color('skyblue');
+  gltf.scene.background = new Color("purple");
 
   return (
     <>
 
   <primitive object={gltf.scene} position={[0, -17, 0]} rotation={[0,0.8,0]}/>;
-
   <spotLight ref={light} position={[0,0,0]} intensity={50} distance={10} />
   </>
   );
