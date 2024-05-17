@@ -11,7 +11,7 @@
   position: fixed; 
   background-color: rgb(28 25 23 / 0.8); 
   border-color: rgb(28 25 23 / 0.8);
-  /* margin-bottom: 0.25rem;  */
+  margin-bottom: 0.25rem; 
   width: 100%; 
   backdrop-filter: blur(12px); 
   padding: 0.3rem;
@@ -23,7 +23,7 @@
   /* position: fixed;  */
   top:2.85rem;
   position:absolute;
-  left:-3.3rem;
+  /* left:-3.3rem; */
   /* padding-left: 4rem; */
   width:100vw;
   z-index: 9997;
@@ -34,7 +34,7 @@
   position:relative;
    /* position:absolute;  */
    padding: 0.5rem;
-   background-color: rgb(28 25 23 / 0.8); 
+   /* background-color: rgb(28 25 23 / 0.8);  */
 }
 
 .navbarBox {

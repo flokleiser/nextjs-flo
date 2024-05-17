@@ -6,6 +6,8 @@ ___
 - [ ] Subnavbar background color
 - [ ] Only show search results on typing
 
+- [ ] Better wavy thing for showSubNavbar
+
 
 ## GLTFLoader
 - [ ] Figure out how to animate uv mesh
