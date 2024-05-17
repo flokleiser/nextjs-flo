@@ -37,7 +37,8 @@ const data = [
 // const modelPath = "/stl/SciFi-Animation8.glb"
 // const modelPath = "/stl/space/SciFi-Animation9.glb"
 // const modelPath = "/stl/space/SciFi-Animation11.glb"
-const modelPath = "/stl/space/SciFi-Animation solid.glb"
+// const modelPath = "/stl/space/SciFi-Animation solid.glb"
+const modelPath = "/stl/space/SciFi-Animation new.glb"
 
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
@@ -61,7 +62,7 @@ function Model({modelPath}){
     <>
 
   <primitive object={gltf.scene} position={[0, -15, 0]} rotation={[0,0.8,0]}/>;
-  <spotLight ref={light} position={[0,0,0]} intensity={50} distance={10} />
+  <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} />
   </>
   );
 }
@@ -151,7 +152,8 @@ export default function space() {
          orthographic camera={{ zoom: 25, position: [0, 0, 100], far: 5000 }}
         >
             <directionalLight color="white" position={[2, 0, 5]} />
-            <ambientLight intensity={1}/>
+            {/* <ambientLight intensity={2.5}/> */}
+            <ambientLight intensity={3}/>
             <OrbitControls />
             <Model modelPath={modelPath}/>
 
