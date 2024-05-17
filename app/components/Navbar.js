@@ -35,8 +35,8 @@ const navSubItems = [
   },
   {
     path: "/projects/creative-coding",
-    // name: "Creative Coding",
-    name: "Coding",
+    name: "Creative Coding",
+    // name: "Coding",
     key:"coding"
   },
   {
@@ -135,17 +135,17 @@ const menuButton = {
 
 const arrowButton = {
   open: {
-  transform:"translateX(-100%)"
+  transform:"translateY(-100%)"
 },
   closed: {
-  transform:"translateX(0%)"
+  transform:"translateY(0%)"
 }
 }
 
 const arrowButton2 = {
-  open: {  transform:"translateX(0%)"},
+  open: {  transform:"translateY(0%)"},
   closed: {
-    transform:"translateX(100%)"
+    transform:"translateY(100%)"
   }
 }
 
@@ -334,7 +334,7 @@ export default function Navbar() {
                 })}
 
                   <motion.button style={{zIndex:'9999'}}
-                    className={`${styles.subNavbar} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
+                    className={`${styles.subNavbarButton} px-2 py-2 rounded-md text-sm lg:text-base relative no-underline duration-300 ease-in text-zinc-100`}
                     onClick={toggleSubNavbarVisibility} 
                     variants={menuButton}   initial="rest" whileHover="hover" whileTap="pressed">
 
@@ -345,17 +345,23 @@ export default function Navbar() {
                 }}
                 >
 
-                  <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z"
+                  {/* <motion.path d="M 7.21 8 l 2.64 2.65 a 0.495 0.495 0 0 1 -0.7 0.7 c -0.13 -0.12 -0.25 -0.24 -0.38 -0.37 c -0.87 -0.87 -1.75 -1.75 -2.62 -2.63 a 0.492 0.492 0 0 1 0 -0.7 l 3 -3 a 0.495 0.495 0 0 1 0.7 0.7 Z" */}
+                  <motion.path d="M 8 7.21 l -2.65 2.64 a 0.495 0.495 90 0 1 -0.7 -0.7 c 0.12 -0.13 0.24 -0.25 0.37 -0.38 c 0.87 -0.87 1.75 -1.75 2.63 -2.62 a 0.492 0.492 90 0 1 0.7 -0 l 3 3 a 0.495 0.495 90 0 1 -0.7 0.7 Z"
                   variants={arrowButton}
                   initial={showSubNavbar? "open" : "closed"} 
                   animate={showSubNavbar? "closed" : "open"}
-                  transition={{delay: showSubNavbar? 0.25:0}}
+                  // transition={{delay: showSubNavbar? 0.125:0}}
+                  transition={{duration:0.25, delay: showSubNavbar ? 0:0.125}}
+                  // transition={{delay: showSubNavbar ? 0:0.25}}
                   />
-                  <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z"
+                  {/* <motion.path d="M 8.79 8 l -2.64 -2.65 a 0.495 0.495 180 0 1 0.7 -0.7 c 0.13 0.12 0.25 0.24 0.38 0.37 c 0.87 0.87 1.75 1.75 2.62 2.63 a 0.492 0.492 180 0 1 0 0.7 l -3 3 a 0.495 0.495 180 0 1 -0.7 -0.7 Z" */}
+                  <motion.path d="M 8 8.79 l 2.65 -2.64 a 0.495 0.495 270 0 1 0.7 0.7 c -0.12 0.13 -0.24 0.25 -0.37 0.38 c -0.87 0.87 -1.75 1.75 -2.63 2.62 a 0.492 0.492 270 0 1 -0.7 0 l -3 -3 a 0.495 0.495 270 0 1 0.7 -0.7 Z"
                   variants={arrowButton2}
                   initial={showSubNavbar? "open" : "closed"} 
                   animate={showSubNavbar? "closed" : "open"}
-                  transition={{delay: showSubNavbar ? 0:0.25}}
+                  // transition={{duration:0.25, delay: showSubNavbar ? 0:0.125}}
+                  transition={{duration:0.25}}
+                  // transition={{delay: showSubNavbar ? 0:0.25}}
                   />
 
                 </motion.svg> 
@@ -363,36 +369,37 @@ export default function Navbar() {
 
 
 
-
                 <AnimatePresence>
                   {showSubNavbar && (
+                      <motion.div className={styles.subNavbarContainer}>
                        <motion.div
                         className={styles.subNavbar}
                         initial={{
                           opacity: 0,
-                          transform:"translateX(-100%)"
+                          transform:"translateY(-100%)"
                         }}
                         animate={{
                           opacity: 1,
-                          transform:"translateX(0%)"
+                          transform:"translateY(0%)"
                         }}
                         exit={{
                           opacity: 0,
-                          transform:"translateX(-100%)"
+                          transform:"translateY(-100%)"
                         }}
                         transition={{
-                          duration: 0.5,
+                          duration: 0.25,
                           ease: "easeInOut",
-                          staggerChildren:0.5
                         }}
                       >
+
                     {/* <nav className="flex flex-row justify-start w-full z-9998"> */}
-                    <nav className="flex flex-row justify-start top-11 w-full z-9998">
+                    <nav className="flex justify-start items-center flex-row  w-full h-full z-9998">
+                    {/* <nav className="justify-start items-center w-full h-full z-9998"> */}
                         {navSubItems.map((subItem) => {
                       return (
                         <motion.div key={subItem.path} whileTap={{ scale: 0.8 }}>
                           <Link
-                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9998 no-underline duration-300 ease-in z-9998" 
+                            className="px-1.5 py-2 rounded-md text-xs lg:text-base relative z-9998 no-underline duration-300 ease-in z-9997" 
                             href={subItem.path}
                             onMouseOver={() => setHoveringPath(subItem.path)}
                             onMouseMove={() => setHoveringPath(subItem.path)}
@@ -432,6 +439,8 @@ export default function Navbar() {
                             );
                         })}
                       </nav>
+                      </motion.div>
+
                   </motion.div>
                    )} 
                 </AnimatePresence>

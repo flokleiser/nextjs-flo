@@ -1,10 +1,11 @@
 # To-Do/Ideas List:
 ___
 
+## Navbar & Searchbar
+- [x] Make subnavbar open below navbar --> ???
+- [ ] Subnavbar background color
+- [ ] Only show search results on typing
 
-## New Project
-- [x] Change Arts&Crafts to small one
-- [ ] Make subnavbar open below navbar --> ???
 
 ## GLTFLoader
 - [ ] Figure out how to animate uv mesh

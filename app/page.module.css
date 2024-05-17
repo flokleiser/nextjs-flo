@@ -11,7 +11,7 @@
   position: fixed; 
   background-color: rgb(28 25 23 / 0.8); 
   border-color: rgb(28 25 23 / 0.8);
-  margin-bottom: 0.25rem; 
+  /* margin-bottom: 0.25rem;  */
   width: 100%; 
   backdrop-filter: blur(12px); 
   padding: 0.3rem;
@@ -19,8 +19,22 @@
   z-index: 9998;
 }
 
-.subNavbar {
+.subNavbarContainer {
+  /* position: fixed;  */
+  top:2.85rem;
   position:absolute;
+  left:-3.3rem;
+  /* padding-left: 4rem; */
+  width:100vw;
+  z-index: 9997;
+}
+
+.subNavbar {
+  /* display:flex; */
+  position:relative;
+   /* position:absolute;  */
+   padding: 0.5rem;
+   background-color: rgb(28 25 23 / 0.8); 
 }
 
 .navbarBox {
@@ -1401,6 +1415,11 @@ background-color: rgba(254,51,135,0.2);
 
 @media (max-width: 900px) {
   .subNavbar {
+    opacity:0;
+    pointer-events: 'none';
+    z-index: -10;
+  }
+  .subNavbarButton {
     opacity:0;
     pointer-events: 'none';
     z-index: -10;
