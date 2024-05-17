@@ -64,7 +64,7 @@ function Model({modelPath}){
 
   <primitive object={gltf.scene} position={[0, -17, 0]} rotation={[0,0.8,0]}/>;
 
-  <spotLight ref={light} position={[0,0,0]} intensity={20} distance={10} />
+  <spotLight ref={light} position={[0,0,0]} intensity={50} distance={10} />
   </>
   );
 }
