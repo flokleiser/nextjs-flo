@@ -277,8 +277,8 @@
   /* border-width: 5px; */
   border-color: rgba(250, 250, 250, 0.5);
   /* background-color: rgba(0, 0, 0, 0.5); */
-  background-color: purple;
-  background-color: rgba(44,	29,	83, 0.5);
+  /* background-color: purple; */
+  /* background-color: rgba(44,	29,	83, 0.5); */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
 }
 
