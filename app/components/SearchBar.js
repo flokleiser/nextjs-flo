@@ -21,9 +21,10 @@ export default function SearchBar({ onSearch }) {
   const overlayRef = useRef(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    setShouldShowOverlay(false);
-  }, [pathname]);
+  // useEffect(() => {
+  //   setShouldShowOverlay(false);
+  // }, [pathname]);
+
 
   const { replace } = useRouter();
 
@@ -44,7 +45,7 @@ export default function SearchBar({ onSearch }) {
 
     setSearchResults(searchResults);
     onSearch(term);
-    setShouldShowOverlay(true);
+    // setShouldShowOverlay(true);
   }, 200);
 
   const handleFocus = () => {

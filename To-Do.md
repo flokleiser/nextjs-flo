@@ -2,10 +2,6 @@
 ___
 
 ## Navbar & Searchbar
-- [x] Make subnavbar open below navbar --> ???
-- [ ] Subnavbar background animatino
-
-
 - [ ] Only show search results on typing
 
 
