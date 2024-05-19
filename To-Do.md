@@ -3,10 +3,10 @@ ___
 
 ## Navbar & Searchbar
 - [x] Make subnavbar open below navbar --> ???
-- [ ] Subnavbar background color
-- [ ] Only show search results on typing
+- [ ] Subnavbar background animatino
 
-- [ ] Better wavy thing for showSubNavbar
+
+- [ ] Only show search results on typing
 
 
 ## GLTFLoader

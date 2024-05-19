@@ -17,23 +17,21 @@
   padding: 0.3rem;
   width:100vw;
   z-index: 9998;
+  align-items: flex-start
 }
 
 .subNavbarContainer {
-  /* position: fixed;  */
-  top:2.85rem;
-  position:absolute;
-  /* left:-3.3rem; */
-  /* padding-left: 4rem; */
+  /* top:2.85rem; */
+  /* position:absolute; */
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
   width:100vw;
   z-index: 9997;
 }
 
 .subNavbar {
-  /* display:flex; */
   position:relative;
-   /* position:absolute;  */
-   padding: 0.5rem;
+   /* padding: 0.5rem; */
    /* background-color: rgb(28 25 23 / 0.8);  */
 }
 
@@ -1428,6 +1426,8 @@ background-color: rgba(254,51,135,0.2);
     width:75px;
   }
 }
+
+/* @media (max-width:) */
 
 
 
