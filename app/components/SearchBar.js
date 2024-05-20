@@ -32,6 +32,10 @@ export default function SearchBar({ onSearch }) {
     setSearchTerm(term);
     console.log(term);
 
+    if (term != " ") {
+      setShouldShowOverlay(true)
+    }
+
     const searchResults = pageIndex.filter((page) => {
       const { title, content, keywords } = page;
       const searchTerm = term.toLowerCase();
@@ -50,7 +54,7 @@ export default function SearchBar({ onSearch }) {
 
   const handleFocus = () => {
     setIsFocused(true);
-    setShouldShowOverlay(true);
+    // setShouldShowOverlay(true);
   };
 
 
