@@ -433,7 +433,8 @@ export default function Navbar() {
                             onMouseOver={() => setHoveringPath(subItem.path)}
                             onMouseMove={() => setHoveringPath(subItem.path)}
                             onMouseLeave={() => setHoveringPath(false)}
-                            onClick={() => setActivePath(subItem.path)}
+                            onPointerDown={() => setActivePath(subItem.path)}
+                            onClick={() => setShowSubNavbar(false)}
 
                           >
                             <span>
