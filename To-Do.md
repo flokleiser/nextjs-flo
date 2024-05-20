@@ -2,7 +2,7 @@
 ___
 
 ## Navbar & Searchbar
-- [ ] Only show search results on typing
+- [x] Only show search results on typing
 
 
 ## GLTFLoader
