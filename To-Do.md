@@ -1,14 +1,6 @@
 # To-Do/Ideas List:
 ___
 
-## Navbar & Searchbar
-- [x] Only show search results on typing
-
-
-## GLTFLoader
-- [ ] Figure out how to animate uv mesh
-- [ ] Figure out if i can convert mesh animation to something else
-
 ## Projects cards
 - [ ] Make cards images load faster
 
@@ -16,8 +8,6 @@ ___
 - [ ] Look into why its loading the page before the transition
 https://www.youtube.com/watch?v=eUvzrCDc9FE
 --> the issue was animatepresence mode="wait"
-
-    
 - [ ] Look into why page transitions are lagging
 
 ___
@@ -79,6 +69,7 @@ ___
         - [x] Click outside for closing
         - [x] (x) Button to clear search field
         - [x] Page previews?
+    - [x] Only show search results on typing
 
 ### Suspense
 - [x] Figure out why layout.js isnt applying to child pages --> just use loading.js
