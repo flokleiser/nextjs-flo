@@ -4,12 +4,12 @@ import styles from '@/app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
 
-// import crafts1 from '/public/images/crafts/crafts 1.webp';
-// import crafts2 from '/public/images/crafts/crafts 2.webp';
-// import crafts3 from '/public/images/crafts/crafts 3.webp';
-// import crafts4 from '/public/images/crafts/crafts 4.webp';
-// import crafts5 from '/public/images/crafts/crafts 5.webp';
-// import crafts6 from '/public/images/crafts/crafts 6.webp';
+import crafts1 from '/public/images/crafts/crafts 1.webp';
+import crafts2 from '/public/images/crafts/crafts 2.webp';
+import crafts3 from '/public/images/crafts/crafts 3.webp';
+import crafts4 from '/public/images/crafts/crafts 4.webp';
+import crafts5 from '/public/images/crafts/crafts 5.webp';
+import crafts6 from '/public/images/crafts/crafts 6.webp';
 
 import dynamic from 'next/dynamic'
 
@@ -18,27 +18,27 @@ import dynamic from 'next/dynamic'
 //   import( "@/app/components/ImageGallery")
 // )
 
-const ImageGalleryNew = dynamic(() => 
-  import( "@/app/components/ImageGalleryNew")
+const ImageGalleryStatic = dynamic(() => 
+  import( "@/app/components/ImageGalleryStatic")
 )
 
 
 const data = [
-{ image : '/images/crafts/crafts 1.webp', id: 0},
-{ image : '/images/crafts/crafts 2.webp', id: 1},
-{ image : '/images/crafts/crafts 3.webp', id: 2}
-// { image : crafts1, imageBig:'/images/crafts/crafts 1.webp', id: 0},
-// { image : crafts2, imageBig:'/images/crafts/crafts 2.webp', id: 1},
-// { image : crafts3, imageBig:'/images/crafts/crafts 3.webp', id: 2},
+// { image : '/images/crafts/crafts 1.webp', id: 0},
+// { image : '/images/crafts/crafts 2.webp', id: 1},
+// { image : '/images/crafts/crafts 3.webp', id: 2}
+{ image : crafts1, imageBig:'/images/crafts/crafts 1.webp', id: 0},
+{ image : crafts2, imageBig:'/images/crafts/crafts 2.webp', id: 1},
+{ image : crafts3, imageBig:'/images/crafts/crafts 3.webp', id: 2},
 ]
 
 const data2 = [
-{ image : '/images/crafts/crafts 5.webp', id: 3},
-{ image : '/images/crafts/crafts 6.webp', id: 4},
-{ image : '/images/crafts/crafts 4.webp', id: 5},
-// { image : crafts4, imageBig:'/images/crafts/crafts 4.webp', id: 0,},
-// { image : crafts5, imageBig:'/images/crafts/crafts 5.webp', id: 1,},
-// { image : crafts6, imageBig:'/images/crafts/crafts 6.webp', id: 2,},
+// { image : '/images/crafts/crafts 5.webp', id: 3},
+// { image : '/images/crafts/crafts 6.webp', id: 4},
+// { image : '/images/crafts/crafts 4.webp', id: 5},
+{ image : crafts4, imageBig:'/images/crafts/crafts 4.webp', id: 3,},
+{ image : crafts5, imageBig:'/images/crafts/crafts 5.webp', id: 4,},
+{ image : crafts6, imageBig:'/images/crafts/crafts 6.webp', id: 5,},
 ]
 
 export default function crafts() {
@@ -103,11 +103,11 @@ export default function crafts() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
            
-      <ImageGalleryNew data={data} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
+      <ImageGalleryStatic data={data} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
 
               
 
-      <ImageGalleryNew data={data2} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
+      <ImageGalleryStatic data={data2} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
 
               </div>
               {/* <div style={{ padding: "0.4rem" }}> </div> */}

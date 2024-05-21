@@ -54,7 +54,7 @@ const handleImageClick = (imageSrc) => {
 
     const selectedItem = dataArray[selectedIndex];
 
-    setSelectedImage(selectedItem.hasOwnProperty('imageBig') ? selectedItem.imageBig : selectedItem.image);
+    setSelectedImage(selectedItem.imageBig)
     setCurrentIndex(dataArray[selectedIndex].id);
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
@@ -63,7 +63,8 @@ const handleImageClick = (imageSrc) => {
   }
 
 
-  console.log(selectedIndex, selectedImage, imageSrc.imageBig)
+//   console.log(selectedIndex, selectedImage, imageSrc.imageBig)
+  console.log(currentIndex)
 };
 
 const handlePrevImage = () => {
@@ -72,12 +73,9 @@ const handlePrevImage = () => {
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
-    // setSelectedImage(dataArray[newIndex].image);
-
-    const prevItem = dataArray[currentIndex];
-    setSelectedImage(prevItem.hasOwnProperty('imageBig') ? prevItem.imageBig : prevItem.image);
-
+    setSelectedImage(dataArray[newIndex].imageBig);
     setSelectedDescription(dataArray[newIndex].description);
+    console.log(newIndex)
   }
 };
 
@@ -87,13 +85,9 @@ const handleNextImage = () => {
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
-    // setSelectedImage(dataArray[newIndex].image);
-    // setSelectedImage(dataArray[newIndex].imageBig);
-
-    const nextItem = dataArray[currentIndex];
-    setSelectedImage(nextItem.hasOwnProperty('imageBig') ? nextItem.imageBig : nextItem.image);
-
+    setSelectedImage(dataArray[newIndex].imageBig);
     setSelectedDescription(dataArray[newIndex].description);
+    console.log(newIndex)
   }
 };
 
