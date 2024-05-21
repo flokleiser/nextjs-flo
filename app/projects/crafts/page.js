@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import styles from '@/app/page.module.css'
 import Image from 'next/image'
 import Link from 'next/link';
+
 import crafts1 from '/public/images/crafts/crafts 1.webp';
 import crafts2 from '/public/images/crafts/crafts 2.webp';
 import crafts3 from '/public/images/crafts/crafts 3.webp';

@@ -4,17 +4,31 @@ import styles from '@/app/page.module.css'
 import dynamic from 'next/dynamic';
 import { Image } from 'next/image';
 
+import sketch1 from '/public/images/sketches/sketch test scan website2.webp'
+import sketch2 from'/public/images/sketches/sketch test website.webp' 
+import sketch3 from'/public/images/sketches/sketch test scan website3.webp'
+import sketch4 from'/public/images/sketches/sketch test scan website4.webp'
+import sketch5 from'/public/images/sketches/sketch test scan website6.webp'
+
+
 const ImageGallery = dynamic(() => 
   import( "@/app/components/ImageGallery")
 )
 
 
 const data = [
-  {image: '/images/sketches/sketch test scan website2.webp', id: 0,},
-  {image: '/images/sketches/sketch test website.webp', id: 1},
-  {image: '/images/sketches/sketch test scan website3.webp', id: 2},
-  {image: '/images/sketches/sketch test scan website4.webp', id: 3},
-  {image: '/images/sketches/sketch test scan website6.webp', id: 4},
+  // {image: '/images/sketches/sketch test scan website2.webp', id: 0,},
+  // {image: '/images/sketches/sketch test website.webp', id: 1},
+  // {image: '/images/sketches/sketch test scan website3.webp', id: 2},
+  // {image: '/images/sketches/sketch test scan website4.webp', id: 3},
+  // {image: '/images/sketches/sketch test scan website6.webp', id: 4},
+
+  {image: sketch1, imageBig: '/images/sketches/sketch test scan website2.webp', id: 0,},
+  {image: sketch2,imageBig: '/images/sketches/sketch test website.webp', id: 1},
+  {image: sketch3,imageBig: '/images/sketches/sketch test scan website3.webp', id: 2},
+  {image: sketch4,imageBig: '/images/sketches/sketch test scan website4.webp', id: 3},
+  {image: sketch5,imageBig: '/images/sketches/sketch test scan website6.webp', id: 4},
+
 ];
 
 const data2 = [
