@@ -92,25 +92,36 @@ onMouseLeave={() => setIsHoveringFooter(false)}
   <motion.svg xmlns="http://www.w3.org/2000/svg" 
 
         style={{
-        position:'absolute',
-        bottom:-4,
-        width:'105%',
+        // position:'absolute',
+        position:'relative',
+        // bottom:-4,
+        // width:'105%',
+        width:'110%',
         zIndex:-1,
-        left:-5,
+        right:'0rem',
+        left:'-0.1rem',
+        // left:-2.5,
+        // left:-5,
         // maxHeight:'6.5rem',
         overflow:'hidden'
       }}
       viewBox="0 0 379.8 20.32"
+      // viewBox="0 0 378.8 19.32"
       preserveAspectRatio="none"
 
       initial={{ 
         opacity:0,
-        height:'0rem'
+        bottom:'0rem'
+        
+        //
+
       }}
-      animate={{ 
-        opacity: isHoveringFooter? 1:0, 
-        // height:isHoveringFooter? '6.5rem': '0rem'
-        height:isHoveringFooter? '6rem': '0rem'
+    animate={{ 
+        opacity: isHoveringFooter? 0.8:0, 
+        bottom: isHoveringFooter? '2.4rem': '0rem',
+
+        //
+
       }}
       exit={{
         opacity:0,
@@ -121,35 +132,13 @@ onMouseLeave={() => setIsHoveringFooter(false)}
         <path
           style={{fill:'rgb(28 25 23)', 
           // stroke:'rgb(255 255 255)'
+          left:0,
+          right:0,
         }}
-          d="m379.3,4.96c0,4.95-.01,9.9-.03,14.86H.65c0-6.44-.03-12.87-.14-19.31,35.31.82,65.34,7.15,101.48,6.39,26.98-.56,53.04-3.58,80.33-3.3,21.46.21,48.27,3.02,61.42,4.83,13.16,1.81,28.58,3.05,34.04,3.15,5.48.11,9.85.12,10.61.12,1.57.02,3.14.02,4.71,0,.15,0,.29,0,.44,0,2-.02,4-.06,6-.13.96-.03,1.92-.06,2.87-.11,2.95-.12,5.9-.29,8.81-.5h.2c.1-.02.2-.02.29-.03.39-.03.79-.06,1.18-.09.61-.05,1.21-.1,1.81-.15,21.51-1.78,41.83-5.22,64.6-5.74Z"
+          // d="m379.3,4.96c0,4.95-.01,9.9-.03,14.86H.65c0-6.44-.03-12.87-.14-19.31,35.31.82,65.34,7.15,101.48,6.39,26.98-.56,53.04-3.58,80.33-3.3,21.46.21,48.27,3.02,61.42,4.83,13.16,1.81,28.58,3.05,34.04,3.15,5.48.11,9.85.12,10.61.12,1.57.02,3.14.02,4.71,0,.15,0,.29,0,.44,0,2-.02,4-.06,6-.13.96-.03,1.92-.06,2.87-.11,2.95-.12,5.9-.29,8.81-.5h.2c.1-.02.2-.02.29-.03.39-.03.79-.06,1.18-.09.61-.05,1.21-.1,1.81-.15,21.51-1.78,41.83-5.22,64.6-5.74Z"
+          d="m 415 5 c 0 4.95 -0.01 9.9 -0.03 14.86 H 0.65 c 0 -6.44 -0.03 -12.87 -0.14 -19.31 c 35.31 0.82 65.34 7.15 101.48 6.39 c 26.98 -0.56 53.04 -3.58 80.33 -3.3 c 21.46 0.21 48.27 3.02 61.42 4.83 c 13.16 1.81 28.58 3.05 34.04 3.15 c 5.48 0.11 9.85 0.12 10.61 0.12 c 1.57 0.02 3.14 0.02 4.71 0 c 0.15 0 0.29 0 0.44 0 c 2 -0.02 4 -0.06 6 -0.13 c 0.96 -0.03 1.92 -0.06 2.87 -0.11 c 2.95 -0.12 5.9 -0.29 8.81 -0.5 h 0.2 c 0.1 -0.02 0.2 -0.02 0.29 -0.03 c 0.39 -0.03 0.79 -0.06 1.18 -0.09 c 0.61 -0.05 1.21 -0.1 1.81 -0.15 c 21.51 -1.78 41.83 -5.22 64.6 -5.74 Z"
         ></path>
       </motion.svg> 
-
-{/* <motion.svg xmlns="http://www.w3.org/2000/svg" 
-
-style={{
-  position:'absolute',
-  bottom:-4,
-  width:'105%',
-  zIndex:-1,
-  left:-5,
-  maxHeight:'6.5rem'
-  }}
-viewBox="0 0 379.8 20.32"
-preserveAspectRatio="none"
-
-initial="start"
-whileHover="end"
->
-<motion.path
-  style={{fill:'rgb(28 25 23)'}}
-  variants={pathVariants}
-  transition={{duration:2}}
->
-
-</motion.path>
-</motion.svg>  */}
 
 
 <div style={{ 
