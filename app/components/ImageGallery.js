@@ -8,6 +8,7 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import PropTypes from 'prop-types';
 
+
 const ImageGallery = ({data, w, h, desc, dColor, datas, vertical}) => {
 
 ImageGallery.propTypes = {
@@ -30,6 +31,7 @@ ImageGallery.propTypes = {
 const [selectedImage, setSelectedImage] = useState(null);
 const [selectedDescription, setSelectedDescription] = useState(null);
 const [currentIndex, setCurrentIndex] = useState(0);
+
 
 const handleResetClick = () => {
   setSelectedImage(null);
@@ -247,6 +249,8 @@ return (
                       src={x.image}
                       alt=""
                       onClick={() => handleImageClick(x.image)}
+                      placeholder="blur"
+                      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAgDBgf/xAAkEAACAgEEAQQDAAAAAAAAAAABAgMEEQAFBiESEyIxgUFRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERIRL/2gAMAwEAAhEDEQA/ALTsfEeQJx/d1v2Tbvt0iSTl4vId+39A9d/0aLfA91rbY8MFiKSWzIIfOLziaMM2fLOSeuvjWyU0Qw5KLkk561I0SMQCoxj41SzA43YKbY4jzOxIX2lblisC0fqNY7LoxRvrKn60aaFaVapmOrAkEZJcrGPEZJyTgfknRpC+2f/Z"
                     />
                   </div>
                 </article>
