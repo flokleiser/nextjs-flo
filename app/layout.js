@@ -45,7 +45,9 @@ export default function RootLayout({ children }) {
 
         </motion.div>
 
-      <Footer />
+      <Footer 
+      // style={{overflow:'hidden'}}
+      />
       </body>
     </html>
   )

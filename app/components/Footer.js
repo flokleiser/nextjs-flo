@@ -33,7 +33,7 @@ export default function Footer() {
 <AnimatePresence>
 
  <motion.div className={styles.footerContainer}
- style={{maxHeight:'90vh'}}
+ style={{maxHeight:'90vh',maxWidth:'100vw'}}
 
 //       initial={{ backgroundColor: 'rgb(28 25 23 / 0.8)'}}
 //        animate={{ backgroundColor: isHoveringFooter? 'rgb(28 25 23 / 1)':'rgb(28 25 23 / 0.8)'}} 
@@ -56,10 +56,11 @@ onMouseLeave={() => setIsHoveringFooter(false)}
   paddingLeft:'1rem',
   }}
   initial={{ opacity:0, 
-    y:100}}
+    // y:100
+  }}
   animate={{ 
     opacity: isHoveringFooter? 0.5:0,
-    y:0
+    // y:0
     // y: isHoveringFooter? -5:0
     // y: isHoveringFooter? -4:0
   }} 

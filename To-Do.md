@@ -9,7 +9,7 @@ ___
 - [x] Customizable height and width property
 - [x] Figure out how to add optional styling for image descriptions
 
-- [ ] Statically import images
+- [x] Statically import images
 
 ## Projects cards
 - [ ] Make cards images load faster

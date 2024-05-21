@@ -11,10 +11,30 @@ import { OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import dynamic from 'next/dynamic'
 
+import cad1 from "/public/images/cad/cad parts2.webp"
+import cad2 from "/public/images/cad/cad parts1.webp"
+import cad3 from "/public/images/cad/cad parts3.webp"
 
-const ImageGallery = dynamic(() => 
-  import( "@/app/components/ImageGallery")
+import cad4 from "/public/images/cad/cadknife4.webp"
+import cad5 from "/public/images/cad/cadknife2.webp"
+import cad6 from "/public/images/cad/cadknife1.webp"
+import cad7 from "/public/images/cad/cadknife3.webp"
+
+import cad8 from "/public/images/cad/popsicle1.webp"
+import cad9 from "/public/images/cad/popsicle2.webp"
+
+
+
+
+
+// const ImageGallery = dynamic(() => 
+//   import( "@/app/components/ImageGallery")
+// )
+const ImageGalleryStatic = dynamic(() => 
+  import( "@/app/components/ImageGalleryStatic")
 )
+
+
 const ModelViewer = dynamic(() => import("@/app/components/ModelViewer"))
 
 
@@ -24,29 +44,30 @@ const modelPaths = [
 ]
 
 const data2 = [
-  {
-    image: "/images/cad/cad parts2.webp",
-    id: 1,
-    description: "Individual parts nr. 1",
-  },
-  {
-    image: "/images/cad/cad parts1.webp",
-    id: 2,
-    description: "Individual parts nr. 2",
-  },
-  { image: "/images/cad/cad parts3.webp", id: 3, description: "Assembly" },
+  // { image: "/images/cad/cad parts2.webp", id: 1,description: "Individual parts nr. 1", },
+  // { image: "/images/cad/cad parts1.webp",id: 2,description: "Individual parts nr. 2",},
+  // { image: "/images/cad/cad parts3.webp", id: 3, description: "Assembly" },
+  {image:cad1, imageBig: "/images/cad/cad parts2.webp", id: 1,description: "Individual parts nr. 1", },
+  {image:cad2,imageBig: "/images/cad/cad parts1.webp",id: 2,description: "Individual parts nr. 2",},
+  {image:cad3,imageBig: "/images/cad/cad parts3.webp", id: 3, description: "Assembly" },
 ];
 
 const data3 = [
-  { image: "/images/cad/cadknife4.webp", id: 4 },
-  { image: "/images/cad/cadknife2.webp", id: 5 },
-  { image: "/images/cad/cadknife1.webp", id: 6 },
-  { image: "/images/cad/cadknife3.webp", id: 7 },
+  // { image: "/images/cad/cadknife4.webp", id: 4 },
+  // { image: "/images/cad/cadknife2.webp", id: 5 },
+  // { image: "/images/cad/cadknife1.webp", id: 6 },
+  // { image: "/images/cad/cadknife3.webp", id: 7 },
+  {image:cad4,imageBig: "/images/cad/cadknife4.webp", id: 4 },
+  {image:cad5,imageBig: "/images/cad/cadknife2.webp", id: 5 },
+  {image:cad6,imageBig: "/images/cad/cadknife1.webp", id: 6 },
+  {image:cad7,imageBig: "/images/cad/cadknife3.webp", id: 7 },
 ];
 
 const data4 = [
-  { image: "/images/cad/popsicle1.webp", id: 8 },
-  { image: "/images/cad/popsicle2.webp", id: 9 },
+  // { image: "/images/cad/popsicle1.webp", id: 8 },
+  // { image: "/images/cad/popsicle2.webp", id: 9 },
+  {image:cad8,imageBig: "/images/cad/popsicle1.webp", id: 8 },
+  {image:cad9,imageBig: "/images/cad/popsicle2.webp", id: 9 },
 ];
 
 export default function cad() {
@@ -202,7 +223,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-<ImageGallery data={data2}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
+<ImageGalleryStatic data={data2}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -216,7 +237,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data3}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
+        <ImageGalleryStatic data={data3}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
 
         <div styles={{ padding: "2rem" }}> </div>
 
@@ -230,7 +251,7 @@ export default function cad() {
 
         <div styles={{ padding: "2rem" }}> </div>
 
-        <ImageGallery data={data4}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
+        <ImageGalleryStatic data={data4}w={400}h={400}datas={[...data2,...data3,...data4]}desc={false} />
 
       </div>
 

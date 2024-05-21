@@ -15,33 +15,53 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import dynamic from "next/dynamic";
 
-const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
+import cc1 from "/public/images/creative-coding/creativecoding white.webp"
+import cc2 from "/public/images/creative-coding/creativecoding twocolor.webp"
+import cc3 from "/public/images/creative-coding/creativecoding green.webp" 
+
+import cc4 from "/public/images/creative-coding/creativecoding2.webp"
+import cc5 from "/public/images/creative-coding/creativecoding3.webp"
+import cc6 from "/public/images/creative-coding/creativecoding6.webp"
+
+import cc7 from "/public/images/creative-coding/cc3.webp"
+import cc8 from "/public/images/creative-coding/cc4.webp"
+import cc9 from "/public/images/creative-coding/cc1.webp"
+import cc10 from "/public/images/creative-coding/cc8.webp"
+
+import cc11 from "/public/images/creative-coding/creativecoding5.webp"
+import cc12 from "/public/images/creative-coding/cc6.webp"
+import cc13 from "/public/images/creative-coding/cc5.webp"
+
+
+
+// const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
+const ImageGalleryStatic = dynamic(() => import('@/app/components/ImageGalleryStatic'))
 
 
 const data = [
-  { image: "/images/creative-coding/creativecoding white.webp", id: 1, description:'NewCenterPoint2, Example 1'},
-  { image: "/images/creative-coding/creativecoding twocolor.webp", id: 2, description:'NewCenterPoint2, Example 2'},
-  { image: "/images/creative-coding/creativecoding green.webp", id: 3, description:'NewCenterPoint2, Example 3' },
+  {image:cc1, imageBig: "/images/creative-coding/creativecoding white.webp", id: 1, description:'NewCenterPoint2, Example 1'},
+  {image:cc2, imageBig: "/images/creative-coding/creativecoding twocolor.webp", id: 2, description:'NewCenterPoint2, Example 2'},
+  {image:cc3, imageBig: "/images/creative-coding/creativecoding green.webp", id: 3, description:'NewCenterPoint2, Example 3' },
 ];
 
 const data2 = [
-  { image: "/images/creative-coding/creativecoding2.webp", id: 4, description:'NewCenterPoint1, Example 1' },
-  { image: "/images/creative-coding/creativecoding3.webp", id: 5, description:'NewCenterPoint1, Example 2' },
-  { image: "/images/creative-coding/creativecoding6.webp", id: 6, description:'NewCenterPoint1, Example 3' },
+  {image:cc4, imageBig: "/images/creative-coding/creativecoding2.webp", id: 4, description:'NewCenterPoint1, Example 1' },
+  {image:cc5, imageBig: "/images/creative-coding/creativecoding3.webp", id: 5, description:'NewCenterPoint1, Example 2' },
+  {image:cc6, imageBig: "/images/creative-coding/creativecoding6.webp", id: 6, description:'NewCenterPoint1, Example 3' },
 ];
 
 
 const data3 = [
-  { image: "/images/creative-coding/cc3.webp", id: 7, description:'NewCenterPoint3, Example 1' },
-  { image: "/images/creative-coding/cc4.webp", id: 8, description:'NewCenterPoint3, Example 2' },
-  { image: "/images/creative-coding/cc1.webp", id: 9, description:'NewCenterPoint3, Example 3' },
-  { image: "/images/creative-coding/cc8.webp", id: 10, description:'NewCenterPoint3, Example 4' },
+  {image:cc7, imageBig: "/images/creative-coding/cc3.webp", id: 7, description:'NewCenterPoint3, Example 1' },
+  {image:cc8, imageBig: "/images/creative-coding/cc4.webp", id: 8, description:'NewCenterPoint3, Example 2' },
+  {image:cc9, imageBig: "/images/creative-coding/cc1.webp", id: 9, description:'NewCenterPoint3, Example 3' },
+  {image:cc10, imageBig: "/images/creative-coding/cc8.webp", id: 10, description:'NewCenterPoint3, Example 4' },
 ];
 
 const data4 = [
-  { image: "/images/creative-coding/creativecoding5.webp", id: 11, description:'NewCenterPoint7, Example 1' },
-  { image: "/images/creative-coding/cc6.webp", id: 12, description:'NewCenterPoint7, Example 2' },
-  { image: "/images/creative-coding/cc5.webp", id: 13, description:'NewCenterPoint7, Example 3' },
+  {image:cc11, imageBig: "/images/creative-coding/creativecoding5.webp", id: 11, description:'NewCenterPoint7, Example 1' },
+  {image:cc12, imageBig: "/images/creative-coding/cc6.webp", id: 12, description:'NewCenterPoint7, Example 2' },
+  {image:cc13, imageBig: "/images/creative-coding/cc5.webp", id: 13, description:'NewCenterPoint7, Example 3' },
 ];
 
 function codeBlock1() {
@@ -338,7 +358,7 @@ export default function creativeCoding() {
         </div>
 
 
-<ImageGallery data={data}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
+<ImageGalleryStatic data={data}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
 
         <div stlye={{ padding: "0.5rem" }} />
@@ -385,7 +405,7 @@ export default function creativeCoding() {
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        <ImageGallery data={data2}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
+        <ImageGalleryStatic data={data2}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
 
         <div stlye={{ padding: "0.5rem" }} />
@@ -432,7 +452,7 @@ export default function creativeCoding() {
         <div style={{ padding: "0.5rem" }} />
 
 
-        <ImageGallery data={data3}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
+        <ImageGalleryStatic data={data3}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
 
         <div stlye={{ padding: "0.5rem" }} />
@@ -478,7 +498,7 @@ export default function creativeCoding() {
         <hr className={styles.pageDivider} />
         <div style={{ padding: "0.5rem" }} />
 
-        <ImageGallery data={data4}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
+        <ImageGalleryStatic data={data4}w={400}h={400}desc={true}dColor={'rgb(50,50,50)'}datas={[...data,...data2,...data3,...data4]} />
 
  
 
