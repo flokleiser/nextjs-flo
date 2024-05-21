@@ -16,6 +16,8 @@ ImageGallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
+      // image: PropTypes.object.isRequired,
+      imageBig: PropTypes.string,
       description: PropTypes.string, 
     })
   ).isRequired,
@@ -44,9 +46,15 @@ const handleImageClick = (imageSrc) => {
   const dataArray = [...data];
   const selectedIndex = dataArray.findIndex(
     (item) => item.image === imageSrc
+    // data.imageBig === imageSrc
   );
   if (selectedIndex !== -1)  {
-    setSelectedImage(imageSrc);
+    // setSelectedImage(imageSrc);
+      // setSelectedImage(dataArray[selectedIndex].image);
+
+    const selectedItem = dataArray[selectedIndex];
+
+    setSelectedImage(selectedItem.hasOwnProperty('imageBig') ? selectedItem.imageBig : selectedItem.image);
     setCurrentIndex(dataArray[selectedIndex].id);
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
@@ -55,6 +63,7 @@ const handleImageClick = (imageSrc) => {
   }
 
 
+  console.log(selectedIndex, selectedImage, imageSrc.imageBig)
 };
 
 const handlePrevImage = () => {
@@ -63,7 +72,11 @@ const handlePrevImage = () => {
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
-    setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].image);
+
+    const prevItem = dataArray[currentIndex];
+    setSelectedImage(prevItem.hasOwnProperty('imageBig') ? prevItem.imageBig : prevItem.image);
+
     setSelectedDescription(dataArray[newIndex].description);
   }
 };
@@ -74,11 +87,17 @@ const handleNextImage = () => {
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
-    setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].imageBig);
+
+    const nextItem = dataArray[currentIndex];
+    setSelectedImage(nextItem.hasOwnProperty('imageBig') ? nextItem.imageBig : nextItem.image);
+
     setSelectedDescription(dataArray[newIndex].description);
   }
 };
 
+/* handleoutsideclick*/
 useEffect(() => {
   const handleOutsideClick = (event) => {
     const imageElement = document.querySelector("#overlay img");
@@ -113,6 +132,7 @@ useEffect(() => {
   };
 }, []);
 
+/* handlekeydown*/
 useEffect(() => {
   const handleKeyDown = (event) => {
     if (event.key === "Escape") {
@@ -162,7 +182,10 @@ return (
    transition={{ duration: 0.3 }}>
 
               <motion.img
+              //<Image 
+                // src={selectedImage.imageBig}
                 src={selectedImage}
+                // src={Image}
                 alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
                 style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
@@ -245,6 +268,7 @@ return (
                       src={x.image}
                       alt=""
                       onClick={() => handleImageClick(x.image)}
+                      // placeholder="blur"
                     />
                   </div>
                 </article>
@@ -258,5 +282,5 @@ return (
 
 }
 
-export default ImageGallery;
 
+export default ImageGallery

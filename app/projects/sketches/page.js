@@ -4,11 +4,22 @@ import styles from '@/app/page.module.css'
 import dynamic from 'next/dynamic';
 import { Image } from 'next/image';
 
-import sketch1 from '/public/images/sketches/sketch test scan website2.webp'
-import sketch2 from'/public/images/sketches/sketch test website.webp' 
-import sketch3 from'/public/images/sketches/sketch test scan website3.webp'
-import sketch4 from'/public/images/sketches/sketch test scan website4.webp'
-import sketch5 from'/public/images/sketches/sketch test scan website6.webp'
+// import sketch1 from '/public/images/sketches/sketch test scan website2.webp'
+// import sketch2 from'/public/images/sketches/sketch test website.webp' 
+// import sketch3 from'/public/images/sketches/sketch test scan website3.webp'
+// import sketch4 from'/public/images/sketches/sketch test scan website4.webp'
+// import sketch5 from'/public/images/sketches/sketch test scan website6.webp'
+
+// import sketch6 from '/public//images/sketches/metal.webp'
+// import sketch7 from '/public//images/sketches/cat3.webp'
+// import sketch8 from '/public//images/sketches/dragon2.webp'
+// import sketch9 from '/public//images/sketches/illusions.webp'
+
+// import sketch10 from '/public/images/sketches/corona memory3.webp'
+// import sketch11 from '/public/images/sketches/cartoon new.webp'
+// import sketch12 from '/public/images/sketches/spaceship sketch2.webp'
+
+
 
 
 const ImageGallery = dynamic(() => 
@@ -17,17 +28,17 @@ const ImageGallery = dynamic(() =>
 
 
 const data = [
-  // {image: '/images/sketches/sketch test scan website2.webp', id: 0,},
-  // {image: '/images/sketches/sketch test website.webp', id: 1},
-  // {image: '/images/sketches/sketch test scan website3.webp', id: 2},
-  // {image: '/images/sketches/sketch test scan website4.webp', id: 3},
-  // {image: '/images/sketches/sketch test scan website6.webp', id: 4},
+  {image: '/images/sketches/sketch test scan website2.webp', id: 0,},
+  {image: '/images/sketches/sketch test website.webp', id: 1},
+  {image: '/images/sketches/sketch test scan website3.webp', id: 2},
+  {image: '/images/sketches/sketch test scan website4.webp', id: 3},
+  {image: '/images/sketches/sketch test scan website6.webp', id: 4},
 
-  {image: sketch1, imageBig: '/images/sketches/sketch test scan website2.webp', id: 0,},
-  {image: sketch2,imageBig: '/images/sketches/sketch test website.webp', id: 1},
-  {image: sketch3,imageBig: '/images/sketches/sketch test scan website3.webp', id: 2},
-  {image: sketch4,imageBig: '/images/sketches/sketch test scan website4.webp', id: 3},
-  {image: sketch5,imageBig: '/images/sketches/sketch test scan website6.webp', id: 4},
+  // {image: sketch1, imageBig: '/images/sketches/sketch test scan website2.webp', id: 0,},
+  // {image: sketch2,imageBig: '/images/sketches/sketch test website.webp', id: 1},
+  // {image: sketch3,imageBig: '/images/sketches/sketch test scan website3.webp', id: 2},
+  // {image: sketch4,imageBig: '/images/sketches/sketch test scan website4.webp', id: 3},
+  // {image: sketch5,imageBig: '/images/sketches/sketch test scan website6.webp', id: 4},
 
 ];
 
@@ -36,12 +47,21 @@ const data2 = [
   {image: '/images/sketches/cat3.webp', id: 6},
   {image: '/images/sketches/dragon2.webp', id: 7},
   {image: '/images/sketches/illusions.webp', id: 8},
+
+  // {image:sketch6, imageBig: '/images/sketches/metal.webp', id: 5},
+  // {image:sketch7, imageBig: '/images/sketches/cat3.webp', id: 6},
+  // {image:sketch8, imageBig: '/images/sketches/dragon2.webp', id: 7},
+  // {image:sketch9, imageBig: '/images/sketches/illusions.webp', id: 8},
 ];
 
 const data3 = [
   { image: '/images/sketches/corona memory3.webp', id: 10 },
   { image: '/images/sketches/cartoon new.webp', id: 9 },
   { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
+
+  // {image: sketch10, imageBig: '/images/sketches/corona memory3.webp', id: 10 },
+  // {image: sketch11, imageBig: '/images/sketches/cartoon new.webp', id: 9 },
+  // {image:sketch12, imageBig: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
 export default function sketches() {
