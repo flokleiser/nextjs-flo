@@ -23,8 +23,9 @@ const ModelViewer = dynamic(() =>
   import( "@/app/components/ModelViewer")
 )
 // const modelPath = "/stl/space/SciFi-Animation10.glb"
-const modelPath = "/stl/space/SciFi-Animation11.glb"
+// const modelPath = "/stl/space/SciFi-Animation11.glb"
 // const modelPath = "/stl/space/SciFi-Animation clouds.glb"
+const modelPath = "/stl/space/AnimationTest2.glb"
 
 function Clouds() {
   const cloudRef = useRef();
@@ -127,9 +128,13 @@ export default function canvasTest() {
         >
             <directionalLight color="white" position={[2, 0, 5]} />
             <ambientLight intensity={1}/>
-            <OrbitControls />
+            <OrbitControls
+            maxPolarAngle={2}
+            minAzimuthAngle={-1}
+            maxAzimuthAngle={1}
+            minZoom={40}
+            />
             <Model modelPath={modelPath}/>
-            {/* <Clouds /> */}
 
 
         </Canvas>
