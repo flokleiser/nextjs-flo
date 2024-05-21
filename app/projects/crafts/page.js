@@ -14,28 +14,31 @@ import crafts6 from '/public/images/crafts/crafts 6.webp';
 import dynamic from 'next/dynamic'
 
 
-const ImageGallery = dynamic(() => 
-  import( "@/app/components/ImageGallery")
+// const ImageGallery = dynamic(() => 
+//   import( "@/app/components/ImageGallery")
+// )
+
+const ImageGalleryStatic = dynamic(() => 
+  import( "@/app/components/ImageGalleryStatic")
 )
 
-const blurData = "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAgDBgf/xAAkEAACAgEEAQQDAAAAAAAAAAABAgMEEQAFBiESEyIxgUFRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERIRL/2gAMAwEAAhEDEQA/ALTsfEeQJx/d1v2Tbvt0iSTl4vId+39A9d/0aLfA91rbY8MFiKSWzIIfOLziaMM2fLOSeuvjWyU0Qw5KLkk561I0SMQCoxj41SzA43YKbY4jzOxIX2lblisC0fqNY7LoxRvrKn60aaFaVapmOrAkEZJcrGPEZJyTgfknRpC+2f/Z"
 
 const data = [
-// { image : '/images/crafts/crafts 1.webp', id: 0,blurData: blurData},
-// { image : '/images/crafts/crafts 2.webp', id: 1,blurData: blurData},
-// { image : '/images/crafts/crafts 3.webp', id: 2,blurData: blurData},
+// { image : '/images/crafts/crafts 1.webp', id: 0},
+// { image : '/images/crafts/crafts 2.webp', id: 1},
+// { image : '/images/crafts/crafts 3.webp', id: 2}
 { image : crafts1, imageBig:'/images/crafts/crafts 1.webp', id: 0},
 { image : crafts2, imageBig:'/images/crafts/crafts 2.webp', id: 1},
 { image : crafts3, imageBig:'/images/crafts/crafts 3.webp', id: 2},
 ]
 
 const data2 = [
-// { image : '/images/crafts/crafts 5.webp', id: 3,blurData: blurData},
-// { image : '/images/crafts/crafts 6.webp', id: 4,blurData: blurData},
-// { image : '/images/crafts/crafts 4.webp', id: 5,blurData: blurData},
-{ image : crafts4, imageBig:'/images/crafts/crafts 4.webp', id: 0,},
-{ image : crafts5, imageBig:'/images/crafts/crafts 5.webp', id: 1,},
-{ image : crafts6, imageBig:'/images/crafts/crafts 6.webp', id: 2,},
+// { image : '/images/crafts/crafts 5.webp', id: 3},
+// { image : '/images/crafts/crafts 6.webp', id: 4},
+// { image : '/images/crafts/crafts 4.webp', id: 5},
+{ image : crafts4, imageBig:'/images/crafts/crafts 4.webp', id: 3,},
+{ image : crafts5, imageBig:'/images/crafts/crafts 5.webp', id: 4,},
+{ image : crafts6, imageBig:'/images/crafts/crafts 6.webp', id: 5,},
 ]
 
 export default function crafts() {
@@ -100,11 +103,11 @@ export default function crafts() {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
            
-      <ImageGallery data={data} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
+      <ImageGalleryStatic data={data} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
 
               
 
-      <ImageGallery data={data2} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
+      <ImageGalleryStatic data={data2} w={400} h={400}datas={[...data,...data2]}desc={false} /> 
 
               </div>
               {/* <div style={{ padding: "0.4rem" }}> </div> */}

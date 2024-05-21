@@ -10,9 +10,24 @@ import sketch3 from'/public/images/sketches/sketch test scan website3.webp'
 import sketch4 from'/public/images/sketches/sketch test scan website4.webp'
 import sketch5 from'/public/images/sketches/sketch test scan website6.webp'
 
+import sketch6 from '/public//images/sketches/metal.webp'
+import sketch7 from '/public//images/sketches/cat3.webp'
+import sketch8 from '/public//images/sketches/dragon2.webp'
+import sketch9 from '/public//images/sketches/illusions.webp'
 
-const ImageGallery = dynamic(() => 
-  import( "@/app/components/ImageGallery")
+import sketch10 from '/public/images/sketches/corona memory3.webp'
+import sketch11 from '/public/images/sketches/cartoon new.webp'
+import sketch12 from '/public/images/sketches/spaceship sketch2.webp'
+
+
+
+
+// const ImageGallery = dynamic(() => 
+//   import( "@/app/components/ImageGallery")
+// )
+
+const ImageGalleryStatic = dynamic(() => 
+  import( "@/app/components/ImageGalleryStatic")
 )
 
 
@@ -32,16 +47,25 @@ const data = [
 ];
 
 const data2 = [
-  {image: '/images/sketches/metal.webp', id: 5},
-  {image: '/images/sketches/cat3.webp', id: 6},
-  {image: '/images/sketches/dragon2.webp', id: 7},
-  {image: '/images/sketches/illusions.webp', id: 8},
+  // {image: '/images/sketches/metal.webp', id: 5},
+  // {image: '/images/sketches/cat3.webp', id: 6},
+  // {image: '/images/sketches/dragon2.webp', id: 7},
+  // {image: '/images/sketches/illusions.webp', id: 8},
+
+  {image:sketch6, imageBig: '/images/sketches/metal.webp', id: 5},
+  {image:sketch7, imageBig: '/images/sketches/cat3.webp', id: 6},
+  {image:sketch8, imageBig: '/images/sketches/dragon2.webp', id: 7},
+  {image:sketch9, imageBig: '/images/sketches/illusions.webp', id: 8},
 ];
 
 const data3 = [
-  { image: '/images/sketches/corona memory3.webp', id: 10 },
-  { image: '/images/sketches/cartoon new.webp', id: 9 },
-  { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
+  // { image: '/images/sketches/corona memory3.webp', id: 10 },
+  // { image: '/images/sketches/cartoon new.webp', id: 9 },
+  // { image: '/images/sketches/spaceship sketch2.webp', id: 11 },
+
+  {image: sketch10, imageBig: '/images/sketches/corona memory3.webp', id: 10 },
+  {image: sketch11, imageBig: '/images/sketches/cartoon new.webp', id: 9 },
+  {image:sketch12, imageBig: '/images/sketches/spaceship sketch2.webp', id: 11 },
 ]
 
 export default function sketches() {
@@ -112,9 +136,13 @@ useEffect(() => {
       <hr className={styles.pageDivider} />
       <div style={{ padding: "0.5rem" }} />
 
-      <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} /> 
+      {/* <ImageGallery data={data}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} /> 
       <ImageGallery data={data2}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} />
-      <ImageGallery data={data3}w={500}h={500}datas={[...data,...data2,...data3]}desc={false} />
+      <ImageGallery data={data3}w={500}h={500}datas={[...data,...data2,...data3]}desc={false} /> */}
+
+      <ImageGalleryStatic data={data}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} /> 
+      <ImageGalleryStatic data={data2}w={400}h={400}datas={[...data,...data2,...data3]}desc={false} />
+      <ImageGalleryStatic data={data3}w={500}h={500}datas={[...data,...data2,...data3]}desc={false} />
          
             
             </div>
