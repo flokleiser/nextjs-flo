@@ -6,7 +6,6 @@ import { useState, useEffect, Suspense } from "react";
 import { AnimatePresence, motion, stagger } from "framer-motion";
 
 import SearchBar from "@/app/components/SearchBar";
-import pageIndex from "./pageIndex";
 
 
 const navItems = [
@@ -178,21 +177,23 @@ export default function Navbar() {
   const [searchResults, setSearchResults] = useState([]);
   const [showSearchResults, setShowSearchResults] = useState(false);
 
-  const handleSearch = (term) => {
-    const results = pageIndex.filter((page) => {
-      const { title, content, keywords } = page;
-      const searchTerm = term.toLowerCase();
+  // const handleSearch = (term) => {
+  //   const results = pageIndex.filter((page) => {
+  //     const { title, content, keywords } = page;
+  //     const searchTerm = term.toLowerCase();
 
-      return (
-        title.toLowerCase().includes(searchTerm) ||
-        content.toLowerCase().includes(searchTerm) ||
-        keywords.some((keyword) => keyword.toLowerCase().includes(searchTerm))
-      );
-    });
+  //     return (
+  //       title.toLowerCase().includes(searchTerm) ||
+  //       content.toLowerCase().includes(searchTerm) ||
+  //       keywords.some((keyword) => keyword.toLowerCase().includes(searchTerm))
+  //     );
+  //   });
 
-    setSearchResults(results);
-    setShowSearchResults(true);
-  };
+  //   setSearchResults(results);
+  //   setShowSearchResults(true);
+  // };
+
+
   
   const pathname = usePathname() || "/";
 
@@ -484,7 +485,8 @@ export default function Navbar() {
         </AnimatePresence>
           
       <Suspense>
-      <SearchBar onSearch={handleSearch} style={{zIndex:'-100'}}/>
+      {/* <SearchBar onSearch={handleSearch} style={{zIndex:'-100'}}/> */}
+      <SearchBar style={{zIndex:'-100'}}/>
       {showSearchResults}
       </Suspense>
     </div>
