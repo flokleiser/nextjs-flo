@@ -262,7 +262,7 @@ return (
                       src={x.image}
                       alt=""
                       onClick={() => handleImageClick(x.image)}
-                      // placeholder="blur"
+                      placeholder="blur"
                     />
                   </div>
                 </article>
