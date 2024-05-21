@@ -47,6 +47,7 @@ export default function RootLayout({ children }) {
 
       <Footer 
       // style={{overflow:'hidden'}}
+      // style={{maxWidth:'100vw', overflow:'hidden'}}
       />
       </body>
     </html>

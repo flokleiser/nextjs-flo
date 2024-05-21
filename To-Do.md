@@ -2,6 +2,9 @@
 ___
 
 
+## Footer 
+- [ ] Make wave exact same color
+
 ## Imagegallery
 
 - [x] Priority true for whole visual side of component
