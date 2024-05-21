@@ -8,36 +8,49 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AnimatePresence, motion} from 'framer-motion';
 import dynamic from 'next/dynamic'
 
-const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
 
-const data = [
-  {image: '/images/illustrator/wallpaper/full.webp', id:1},
-]
+import ill6 from '/public/images/illustrator/howtont/howtont2.png'
+import ill7 from '/public/images/illustrator/howtont/howtont3.png'
+import ill8 from '/public/images/illustrator/howtont/howtont4.png'
+import ill9 from '/public/images/illustrator/howtont/howtont5.png'
+import ill10 from '/public/images/illustrator/howtont/howtont6.png'
+import ill11 from '/public/images/illustrator/reduce to the max/reduce5.png'
+import ill12 from '/public/images/illustrator/reduce to the max/reduce4.png'
+import ill13 from '/public/images/illustrator/reduce to the max/reduce3.png'
+import ill14 from '/public/images/illustrator/reduce to the max/reduce2.png'
+import ill15 from '/public/images/illustrator/reduce to the max/reduce1.png'
 
-const data2= [
-  {image: '/images/illustrator/wallpaper/center 1.webp', id:2},
-  {image: '/images/illustrator/wallpaper/vehicles.webp', id:3},
-]
 
-const data3= [
-  {image: '/images/illustrator/wallpaper/skyline.webp', id:4},
-  {image: '/images/illustrator/wallpaper/buildings.webp', id:5},
-]
+
+
+
+// const ImageGallery = dynamic(() => import('@/app/components/ImageGallery'))
+const ImageGalleryStatic = dynamic(() => import('@/app/components/ImageGalleryStatic'))
 
 const data4 = [
-  { image: '/images/illustrator/howtont/howtont2.png', id: 6},
-  { image: '/images/illustrator/howtont/howtont3.png', id: 7},
-  { image: '/images/illustrator/howtont/howtont4.png', id: 8},
-  { image: '/images/illustrator/howtont/howtont5.png', id: 9},
-  { image: '/images/illustrator/howtont/howtont6.png', id: 10},
+  // { image: '/images/illustrator/howtont/howtont2.png', id: 6},
+  // { image: '/images/illustrator/howtont/howtont3.png', id: 7},
+  // { image: '/images/illustrator/howtont/howtont4.png', id: 8},
+  // { image: '/images/illustrator/howtont/howtont5.png', id: 9},
+  // { image: '/images/illustrator/howtont/howtont6.png', id: 10},
+  {image:ill6, imageBig: '/images/illustrator/howtont/howtont2.png', id: 6},
+  {image:ill7,imageBig: '/images/illustrator/howtont/howtont3.png', id: 7},
+  {image:ill8,imageBig: '/images/illustrator/howtont/howtont4.png', id: 8},
+  {image:ill9,imageBig: '/images/illustrator/howtont/howtont5.png', id: 9},
+  {image:ill10,imageBig: '/images/illustrator/howtont/howtont6.png', id: 10},
 ];
 
 const data5 = [
-  { image: '/images/illustrator/reduce to the max/reduce5.png', id: 11},
-  { image: '/images/illustrator/reduce to the max/reduce4.png', id: 12},
-  { image: '/images/illustrator/reduce to the max/reduce3.png', id: 13},
-  { image: '/images/illustrator/reduce to the max/reduce2.png', id: 14},
-  { image: '/images/illustrator/reduce to the max/reduce1.png', id: 15},
+  // { image: '/images/illustrator/reduce to the max/reduce5.png', id: 11},
+  // { image: '/images/illustrator/reduce to the max/reduce4.png', id: 12},
+  // { image: '/images/illustrator/reduce to the max/reduce3.png', id: 13},
+  // { image: '/images/illustrator/reduce to the max/reduce2.png', id: 14},
+  // { image: '/images/illustrator/reduce to the max/reduce1.png', id: 15},
+  {image:ill11, imageBig: '/images/illustrator/reduce to the max/reduce5.png', id: 11},
+  {image:ill12,imageBig: '/images/illustrator/reduce to the max/reduce4.png', id: 12},
+  {image:ill13,imageBig: '/images/illustrator/reduce to the max/reduce3.png', id: 13},
+  {image:ill14,imageBig: '/images/illustrator/reduce to the max/reduce2.png', id: 14},
+  {image:ill15,imageBig: '/images/illustrator/reduce to the max/reduce1.png', id: 15},
 ];
 
 export default function illustrator() {
@@ -124,7 +137,7 @@ export default function illustrator() {
             </p>
             </div>
            
-            <ImageGallery data={data4}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]}desc={false} />
+            <ImageGalleryStatic data={data4}w={400}h={400}datas={[...data4,...data5]}desc={false} />
            
           
 
@@ -150,7 +163,7 @@ export default function illustrator() {
             </p>
             </div>
 
-            <ImageGallery data={data5}w={400}h={400}datas={[...data,...data2,...data3,...data4,...data5]}desc={false} />
+            <ImageGalleryStatic data={data5}w={400}h={400}datas={[...data4,...data5]}desc={false} />
 
            
            </div>
