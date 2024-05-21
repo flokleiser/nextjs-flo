@@ -1,8 +1,8 @@
 'use client'
 import React, {useState, useEffect, Suspense} from 'react';
 import styles from '@/app/page.module.css'
-import Image from 'next/image'
 import dynamic from 'next/dynamic';
+import { Image } from 'next/image';
 
 const ImageGallery = dynamic(() => 
   import( "@/app/components/ImageGallery")
@@ -10,7 +10,7 @@ const ImageGallery = dynamic(() =>
 
 
 const data = [
-  {image: '/images/sketches/sketch test scan website2.webp', id: 0},
+  {image: '/images/sketches/sketch test scan website2.webp', id: 0,},
   {image: '/images/sketches/sketch test website.webp', id: 1},
   {image: '/images/sketches/sketch test scan website3.webp', id: 2},
   {image: '/images/sketches/sketch test scan website4.webp', id: 3},

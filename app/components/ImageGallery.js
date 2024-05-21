@@ -8,6 +8,7 @@ import { PiXCircle } from "react-icons/pi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import PropTypes from 'prop-types';
 
+
 const ImageGallery = ({data, w, h, desc, dColor, datas, vertical}) => {
 
 ImageGallery.propTypes = {
@@ -15,6 +16,8 @@ ImageGallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
+      // image: PropTypes.object.isRequired,
+      imageBig: PropTypes.string,
       description: PropTypes.string, 
     })
   ).isRequired,
@@ -31,6 +34,7 @@ const [selectedImage, setSelectedImage] = useState(null);
 const [selectedDescription, setSelectedDescription] = useState(null);
 const [currentIndex, setCurrentIndex] = useState(0);
 
+
 const handleResetClick = () => {
   setSelectedImage(null);
   setCurrentIndex(0);
@@ -42,9 +46,12 @@ const handleImageClick = (imageSrc) => {
   const dataArray = [...data];
   const selectedIndex = dataArray.findIndex(
     (item) => item.image === imageSrc
+    // data.imageBig === imageSrc
   );
   if (selectedIndex !== -1) {
-    setSelectedImage(imageSrc);
+    // setSelectedImage(imageSrc);
+    setSelectedImage(dataArray[selectedIndex].imageBig);
+    // setSelectedImage(dataArray[selectedIndex].image);
     setCurrentIndex(dataArray[selectedIndex].id);
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
@@ -52,6 +59,7 @@ const handleImageClick = (imageSrc) => {
     setSelectedDescription(dataArray[selectedIndex].description);
 
   }
+  console.log(selectedIndex, selectedImage, imageSrc.imageBig)
 };
 
 const handlePrevImage = () => {
@@ -60,7 +68,9 @@ const handlePrevImage = () => {
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
-    setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].image);
+    setSelectedImage(dataArray[newIndex].imageBig);
+
 
     setSelectedDescription(dataArray[newIndex].description);
   }
@@ -72,7 +82,8 @@ const handleNextImage = () => {
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
-    setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].image);
+    setSelectedImage(dataArray[newIndex].imageBig);
 
     setSelectedDescription(dataArray[newIndex].description);
   }
@@ -164,7 +175,9 @@ return (
 
               <motion.img
               //<Image 
+                // src={selectedImage.imageBig}
                 src={selectedImage}
+                // src={Image}
                 alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
                 style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
@@ -247,6 +260,7 @@ return (
                       src={x.image}
                       alt=""
                       onClick={() => handleImageClick(x.image)}
+                      // placeholder="blur"
                     />
                   </div>
                 </article>

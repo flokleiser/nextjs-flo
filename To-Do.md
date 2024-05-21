@@ -1,13 +1,6 @@
 # To-Do/Ideas List:
 ___
 
-## Projects cards
-- [ ] Make cards images load faster
-
-## Page Transitions
-- [ ] Look into why page transitions are lagging
-
-___
 
 ## Imagegallery
 
@@ -15,6 +8,16 @@ ___
 - [x] Figure out how to click over to all images
 - [x] Customizable height and width property
 - [x] Figure out how to add optional styling for image descriptions
+
+- [ ] Statically import images
+
+## Projects cards
+- [ ] Make cards images load faster
+
+## Page Transitions
+- [ ] Look into why page transitions are lagging
+
+___
 
 ## Mobile:
 - [x] Fix Homepage mobile
