@@ -34,12 +34,6 @@ const data = [
   ]
 
 
-// const modelPath = "/stl/SciFi-Animation8.glb"
-// const modelPath = "/stl/space/SciFi-Animation9.glb"
-// const modelPath = "/stl/space/SciFi-Animation11.glb"
-// const modelPath = "/stl/space/SciFi-Animation solid.glb"
-// const modelPath = "/stl/space/SciFi-Animation new.glb"
-// const modelPath = "/stl/space/AnimationTest.glb"
 const modelPath = "/stl/space/AnimationTest2.glb"
 
 function Model({modelPath}){
@@ -156,7 +150,12 @@ export default function space() {
             <directionalLight color="white" position={[2, 0, 5]} />
             {/* <ambientLight intensity={2.5}/> */}
             <ambientLight intensity={3}/>
-            <OrbitControls />
+            <OrbitControls 
+              maxPolarAngle={2}
+              minAzimuthAngle={-1}
+              maxAzimuthAngle={1}
+              minZoom={20} 
+            />
             <Model modelPath={modelPath}/>
 
 

@@ -12,7 +12,8 @@ import { useRef } from "react";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { MdClear } from "react-icons/md";
 
-export default function SearchBar({ onSearch }) {
+// export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
   const [searchResults, setSearchResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -21,9 +22,9 @@ export default function SearchBar({ onSearch }) {
   const overlayRef = useRef(null);
   const pathname = usePathname();
 
-  // useEffect(() => {
-  //   setShouldShowOverlay(false);
-  // }, [pathname]);
+  useEffect(() => {
+    setShouldShowOverlay(false);
+  }, [pathname]);
 
 
   const { replace } = useRouter();
@@ -48,7 +49,7 @@ export default function SearchBar({ onSearch }) {
     });
 
     setSearchResults(searchResults);
-    onSearch(term);
+    // onSearch(term);
     // setShouldShowOverlay(true);
   }, 200);
 
@@ -90,7 +91,7 @@ export default function SearchBar({ onSearch }) {
           className={styles.searchBarStyle}
           onChange={(e) => {
             handleSearch(e.target.value);
-            onSearch(e.target.value);
+            // onSearch(e.target.value);
           }}
           onFocus={handleFocus}
           onBlur={handleBlur}
