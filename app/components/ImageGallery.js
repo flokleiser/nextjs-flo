@@ -48,17 +48,21 @@ const handleImageClick = (imageSrc) => {
     (item) => item.image === imageSrc
     // data.imageBig === imageSrc
   );
-  if (selectedIndex !== -1) {
+  if (selectedIndex !== -1)  {
     // setSelectedImage(imageSrc);
-    setSelectedImage(dataArray[selectedIndex].imageBig);
-    // setSelectedImage(dataArray[selectedIndex].image);
+      // setSelectedImage(dataArray[selectedIndex].image);
+
+    const selectedItem = dataArray[selectedIndex];
+
+    setSelectedImage(selectedItem.hasOwnProperty('imageBig') ? selectedItem.imageBig : selectedItem.image);
     setCurrentIndex(dataArray[selectedIndex].id);
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
 
     setSelectedDescription(dataArray[selectedIndex].description);
-
   }
+
+
   console.log(selectedIndex, selectedImage, imageSrc.imageBig)
 };
 
@@ -69,8 +73,9 @@ const handlePrevImage = () => {
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
     // setSelectedImage(dataArray[newIndex].image);
-    setSelectedImage(dataArray[newIndex].imageBig);
 
+    const prevItem = dataArray[prevIndex];
+    setSelectedImage(prevItem.hasOwnProperty('imageBig') ? prevItem.imageBig : prevItem.image);
 
     setSelectedDescription(dataArray[newIndex].description);
   }
@@ -83,7 +88,10 @@ const handleNextImage = () => {
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
     // setSelectedImage(dataArray[newIndex].image);
-    setSelectedImage(dataArray[newIndex].imageBig);
+    // setSelectedImage(dataArray[newIndex].imageBig);
+
+    const nextItem = dataArray[nextIndex];
+    setSelectedImage(nextItem.hasOwnProperty('imageBig') ? nextItem.imageBig : nextItem.image);
 
     setSelectedDescription(dataArray[newIndex].description);
   }
