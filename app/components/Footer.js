@@ -33,7 +33,7 @@ export default function Footer() {
 <AnimatePresence>
 
  <motion.div className={styles.footerContainer}
-
+ style={{maxHeight:'90vh'}}
 
 //       initial={{ backgroundColor: 'rgb(28 25 23 / 0.8)'}}
 //        animate={{ backgroundColor: isHoveringFooter? 'rgb(28 25 23 / 1)':'rgb(28 25 23 / 0.8)'}} 
@@ -50,6 +50,7 @@ onMouseLeave={() => setIsHoveringFooter(false)}
        >
 
 <motion.h1 style={{
+  overflow:'hidden',
   position:'absolute', 
   bottom:'2.5rem',
   paddingLeft:'1rem',
@@ -58,7 +59,9 @@ onMouseLeave={() => setIsHoveringFooter(false)}
     y:100}}
   animate={{ 
     opacity: isHoveringFooter? 0.5:0,
-    y: isHoveringFooter? -5:0
+    y:0
+    // y: isHoveringFooter? -5:0
+    // y: isHoveringFooter? -4:0
   }} 
   transition={{duration: 0.2}}  
   > 
@@ -93,7 +96,8 @@ onMouseLeave={() => setIsHoveringFooter(false)}
         width:'105%',
         zIndex:-1,
         left:-5,
-        maxHeight:'6.5rem'
+        // maxHeight:'6.5rem',
+        overflow:'hidden'
       }}
       viewBox="0 0 379.8 20.32"
       preserveAspectRatio="none"
@@ -104,7 +108,8 @@ onMouseLeave={() => setIsHoveringFooter(false)}
       }}
       animate={{ 
         opacity: isHoveringFooter? 1:0, 
-        height:isHoveringFooter? '6.5rem': '0rem'
+        // height:isHoveringFooter? '6.5rem': '0rem'
+        height:isHoveringFooter? '6rem': '0rem'
       }}
       exit={{
         opacity:0,
@@ -158,6 +163,7 @@ whileHover="end"
 
   <Link href="https://github.com/flokleiser" style={{right:0,paddingRight:'1rem', paddingBottom:'0.2rem', opacity:0.5}}> 
     <svg
+      
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       className="w-5"
