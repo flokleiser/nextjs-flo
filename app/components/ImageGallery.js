@@ -16,6 +16,8 @@ ImageGallery.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       image: PropTypes.string.isRequired,
+      // image: PropTypes.object.isRequired,
+      imageBig: PropTypes.string,
       description: PropTypes.string, 
     })
   ).isRequired,
@@ -44,9 +46,12 @@ const handleImageClick = (imageSrc) => {
   const dataArray = [...data];
   const selectedIndex = dataArray.findIndex(
     (item) => item.image === imageSrc
+    // data.imageBig === imageSrc
   );
   if (selectedIndex !== -1) {
-    setSelectedImage(imageSrc);
+    // setSelectedImage(imageSrc);
+    setSelectedImage(dataArray[selectedIndex].imageBig);
+    // setSelectedImage(dataArray[selectedIndex].image);
     setCurrentIndex(dataArray[selectedIndex].id);
     document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
@@ -54,6 +59,7 @@ const handleImageClick = (imageSrc) => {
     setSelectedDescription(dataArray[selectedIndex].description);
 
   }
+  console.log(selectedIndex, selectedImage, imageSrc.imageBig)
 };
 
 const handlePrevImage = () => {
@@ -62,7 +68,9 @@ const handlePrevImage = () => {
     const prevIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = prevIndex === 0 ? dataArray.length - 1 : prevIndex - 1;
     setCurrentIndex(dataArray[newIndex].id);
-    setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].image);
+    setSelectedImage(dataArray[newIndex].imageBig);
+
 
     setSelectedDescription(dataArray[newIndex].description);
   }
@@ -74,7 +82,8 @@ const handleNextImage = () => {
     const nextIndex = dataArray.findIndex((item) => item.id === currentIndex);
     const newIndex = nextIndex === dataArray.length - 1 ? 0 : nextIndex + 1;
     setCurrentIndex(dataArray[newIndex].id);
-    setSelectedImage(dataArray[newIndex].image);
+    // setSelectedImage(dataArray[newIndex].image);
+    setSelectedImage(dataArray[newIndex].imageBig);
 
     setSelectedDescription(dataArray[newIndex].description);
   }
@@ -166,7 +175,9 @@ return (
 
               <motion.img
               //<Image 
+                // src={selectedImage.imageBig}
                 src={selectedImage}
+                // src={Image}
                 alt={selectedImage.description}
                 className="max-w-4/5 max-h-4/5"
                 style={{ maxHeight: "80vh", zIndex: 9998, borderRadius:'24px 24px 0px 0px '}}
@@ -249,8 +260,7 @@ return (
                       src={x.image}
                       alt=""
                       onClick={() => handleImageClick(x.image)}
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAALABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAgDBgf/xAAkEAACAgEEAQQDAAAAAAAAAAABAgMEEQAFBiESEyIxgUFRcf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAERIRL/2gAMAwEAAhEDEQA/ALTsfEeQJx/d1v2Tbvt0iSTl4vId+39A9d/0aLfA91rbY8MFiKSWzIIfOLziaMM2fLOSeuvjWyU0Qw5KLkk561I0SMQCoxj41SzA43YKbY4jzOxIX2lblisC0fqNY7LoxRvrKn60aaFaVapmOrAkEZJcrGPEZJyTgfknRpC+2f/Z"
+                      // placeholder="blur"
                     />
                   </div>
                 </article>
