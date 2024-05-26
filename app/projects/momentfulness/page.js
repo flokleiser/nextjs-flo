@@ -63,7 +63,7 @@ export default function momentfulness() {
 
             <div className={styles.subtitledescription}>
             <p>
-            Design homework for the application to the ZHdK, with the theme of "im Moment. A series of 4 animated images, made with JavaScript and a HTML-canvas.
+            Design homework for the application to the ZHdK, with the theme of "im Moment". A series of 4 animated images, made with JavaScript and a HTML-canvas.
              </p>
             </div>
 
