@@ -35,7 +35,10 @@ const data = [
 
 
 // const modelPath = "/stl/space/AnimationTest2.glb"
-const modelPath = "/stl/space/New animation.glb"
+// const modelPath = "/stl/space/New animation.glb"
+// const modelPath = "/stl/space/New animation2.glb"
+// const modelPath = "/stl/space/New animation3.glb"
+const modelPath = "/stl/space/New animation4.glb"
 
 function Model({modelPath}){
   const gltf = useLoader(GLTFLoader, modelPath)
