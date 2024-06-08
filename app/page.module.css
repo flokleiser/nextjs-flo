@@ -296,7 +296,9 @@
   /* background-color: rgba(44,	29,	83, 0.5); */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
 
-  background-image: url("/stl/space/background.webp");
+  /* background-image: url("/stl/space/background.webp"); */
+  /* background-image: url("/stl/space/background2.png"); */
+  background-image: url("/stl/space/background4.png");
   /* background-image: url("/stl/space/background2.webp"); */
 
 
